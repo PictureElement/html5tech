@@ -4,17 +4,8 @@
 	Date: 23.02.2017
 -->
 
-<!--
-  The DOCTYPE sets the HTML version that the browser should use. If you not 
-  specify a version number, you're telling the browser to use the latest 
-  version
--->
 <!DOCTYPE html>
 <html>
-	<!-- 
-    Any code (i.e. CSS, JS) that has to be run before the page 
-    displays, goes inside the head tag
-  -->
 	<head>
 		<title>HTML5 New Features</title>
 	</head>
@@ -82,9 +73,249 @@
 			<li><p>Script tag (4.2): run integrated JS code.</p></li>
 		</ul>
 		<h2>New Elements</h2>
-
-
+		<h3>Section</h3>
+		<ul>
+			<li>
+				<p>
+					Description: a "section" represents a generic document or application 
+					section. A "div" has no semantic meaning, but a "section" element 
+					does. A "section" is used for grouping together thematically related 
+					content. You might want to replace some of your "div" elements with 
+					"section" elements, but remember to always ask yourself, "Is all of 
+					the content related?" If yes, a "section" element is an appropriate
+					choice.
+				</p>
+			</li>
+			<li>
+				<p>Example:</p> 
+				<p><u>HTML (Prior to HTML5)</u></p>
+				<p>&ltdiv class="section"&gt</p>
+				<p>&nbsp&nbsp&lth2&gtBlog&lt/h2&gt</p>
+				<p>&nbsp&nbsp&ltp&gtThis is the Art Gallery blog.&ltp&gt</p>
+				<p>&nbsp&nbsp...</p>
+				<p>&lt/div&gt</p>
+				<p><u>HTML5</u></p>
+				<p>&ltsection&gt</p>
+				<p>&nbsp&nbsp&lth2&gtBlog&lt/h2&gt</p>
+				<p>&nbsp&nbsp&ltp&gtThis is the Art Gallery blog.&ltp&gt</p>
+				<p>&nbsp&nbsp...</p>
+				<p>&lt/section&gt</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
+		<h3>Header</h3>
+		<ul>
+			<li>
+				<p>
+					Description: a "header" represents a group of introductory content 
+					(Name of the page, tagline) and/or navigational aids (clickable logo). 
+					You can include more than one header on your page. The "header" 
+					usually appears at the top of a document or section.
+				</p>
+			</li>
+			<li>
+				<p>Example:</p> 
+				<p><u>HTML (Prior to HTML5)</u></p>
+				<p>&ltdiv class="header"&gt</p>
+				<p>&nbsp&nbsp&lth1&gtArt Gallery Blog&lt/h1&gt</p>
+				<p>
+					&nbsp&nbsp&ltp&gtCovering all the Art Galleries across the globe&lt/p&gt
+				</p>
+				<p>&lt/div&gt</p>
+				<p><u>HTML5</u></p>
+				<p>&ltheader&gt</p>
+				<p>&nbsp&nbsp&lth1&gtArt Gallery Blog&lt/h1&gt</p>
+				<p>&nbsp&nbsp&ltp&gtCovering all the Art Galleries across the globe&lt/p&gt</p>
+				<p>&lt/header&gt</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
+		<h3>Footer</h3>
+		<ul>
+			<li>
+				<p>
+					Description: a "footer" represents a footer (About, Contact, 
+					Privacy Policy, Terms of Use, Trademarks, Advertise, Help Center, 
+					Subscribe, Follow) for its nearest ancestor sectioning content or
+					sectioning root element. Like the "header", the "footer" element is 
+					not position-dependent and can be put within other HTML5 elements.
+				</p>
+			</li>
+			<li>
+				<p>Example:</p> 
+				<p><u>HTML (Prior to HTML5)</u></p>
+				<p>&ltdiv class="footer"&gt</p>
+				<p>&nbsp&nbsp&ltp&gt&copy; Art Gallery 2017&lt/p&gt</p>
+				<p>&lt/div&gt</p>
+				<p><u>HTML5</u></p>
+				<p>&ltfooter&gt</p>
+				<p>&nbsp&nbsp&ltp&gt&copy; Art Gallery 2017&lt/p&gt</p>
+				<p>&lt/footer&gt</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
+		<h3>Aside</h3>
+		<ul>
+			<li>
+				<p>
+					Description: "aside" is not directly related to the content 
+					surrounding it but it expands upon it. Used to represent content that 
+					is not the primary focus of an article or page (secondary information)
+					. When used within an "article" element, its contents should be 
+					related to that particular "article". When used outside an "article" 
+					element, the "aside" contents should be specifically related to the 
+					site. 
+				</p>
+			</li>
+			<li>
+				<p>
+					Example: a page sidebar that includes filters(i.e. All, Recently 
+					Added, Recently Updated, Discontinued), about(i.e. Read more), and 
+					subscribe(i.e. Enter your email...) contents.
+				</p> 
+				<p><u>HTML (Prior to HTML5)</u></p>
+				<p>&ltdiv class="sidebar"&gt</p>
+				<p>&nbsp&nbsp...</p>
+				<p>&lt/div&gt</p>
+				<p><u>HTML5</u></p>
+				<p>&ltaside&gt</p>
+				<p>&nbsp&nbsp...</p>
+				<p>&lt/aside&gt</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
+		<h3>Nav</h3>
+		<ul>
+			<li>
+				<p>
+					Description: a "nav" represents a section of a page that links to other 
+					pages or to parts within the page. This element is intended for "major
+					navigation".
+				</p>
+			</li>
+			<li>
+				<p>
+					Example: a page navigation menu(i.e. Gear, Gaming, Culture, 
+					Entertainment, Science, Video, Reviews, International Edition).
+				</p> 
+				<p><u>HTML (Prior to HTML5)</u></p>
+				<p>&ltul class="nav"&gt</p>
+				<p>&nbsp&nbsp...</p>
+				<p>&lt/ul&gt</p>
+				<p><u>HTML5</u></p>
+				<p>&ltnav&gt</p>
+				<p>&nbsp&nbsp&ltul&gt</p>
+	 			<p>&nbsp&nbsp&nbsp&nbsp...</p>
+	 			<p>&nbsp&nbsp&lt/ul&gt</p>
+				<p>&lt/nav&gt</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
+		<h3>Article</h3>
+		<ul>
+			<li>
+				<p>
+					Description: an "article" represents a complete or self-contained part
+					of a document that is independently reusable or distributable. The 
+					"article" element is another type of "section" used for self-contained
+					related content. 
+				</p>
+			</li>
+			<li>
+				<p>Examples: blog post, news story, comment on a post, a review.</p>
+				<p><u>HTML (Prior to HTML5)</u></p>
+				<p>&ltdiv class="article"&gt</p>
+				<p>&nbsp&nbsp...</p>
+				<p>&lt/div&gt</p>
+				<p><u>HTML5</u></p>
+				<p>&ltarticle&gt</p>
+				<p>&nbsp&nbsp...</p>
+				<p>&lt/article&gt</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
+		<h3>Main</h3>
+		<ul>
+			<li>
+				<p>
+					Description: "main" represents the main content of the body of a 
+					document or application. Do not include more than one "main" element 
+					in a document. Do not include the "main" element inside of an 
+					"article", "aside", "footer", "header" or "nav" element.
+				</p>
+			</li>
+			<li>
+				<p>Example:</p> 
+				<p><u>HTML (Prior to HTML5)</u></p>
+				<p>&ltdiv class="main"&gt</p>
+				<p>&nbsp&nbsp....</p>
+				<p>&lt/div&gt</p>
+				<p><u>HTML5</u></p>
+				<p>&ltmain&gt</p>
+				<p>&nbsp&nbsp...</p>
+				<p>&lt/main&gt</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
+		<h3>Figure</h3>
+		<ul>
+			<li>
+				<p>
+					Description: a "figure" represents a unit of self-contained content 
+					and if removed from the flow of the document will not affect the 
+					document's meaning. A common use of the "figure" tag is for an image
+					within an article.  
+				</p>
+			</li>
+			<li>
+				<p>Example:</p> 
+				<p><u>HTML (Prior to HTML5)</u></p>
+				<p>&ltdiv class="image"&gt</p>
+				<p>&nbsp&nbsp&ltimg src="image.png" alt="My picture"&gt</p>
+				<p>&lt/div&gt</p>
+				<p><u>HTML5</u></p>
+				<p>&ltfigure&gt</p>
+				<p>&nbsp&nbsp&ltimg src="image.png" alt="My picture"&gt</p>
+				<p>&lt/figure&gt</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
+		<h3>Figcaption</h3>
+		<ul>
+			<li>
+				<p>
+					Description: a "figcaption" represents a caption or legend for a 
+					figure.
+				</p>
+			</li>
+			<li>
+				<p>Example:</p> 
+				<p><u>HTML5</u></p>
+				<p>&ltfigure&gt</p>
+				<p>&nbsp&nbsp&ltimg src="image.png" alt="My picture"&gt</p>
+				<p>&nbsp&nbsp&ltfigcaption&gtThis is a caption for the picture.&lt/figcaption&gt</p>
+				<p>&lt/figure&gt</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
+		<h3>Time</h3>
+		<ul>
+			<li>
+				<p>
+					Description: "time" represents either a time on a 24 hour clock, or a 
+					precise date.
+				</p>
+			</li>
+			<li>
+				<p>Example:</p> 
+				<p><u>HTML5</u></p>
+				<p>&lttime&gt2013-09-16&lt/time&gt</p>
+				<p><b>We can use the "datetime" attribute to get our desired format:</b></p>
+				<p>&lttime datetime="2013-09-16"&gt16/09/13&lt/time&gt</p>
+				<p>&lttime datetime="2013-09-16"&gtSeptember 16, 2013&lt/time&gt</p>
+				<p>...</p>
+				<p><b>*HTML5 makes the document more semantic!</b></p>
+			</li>
+		</ul>
 	</body>
 </html>
-
-
