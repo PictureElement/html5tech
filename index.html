@@ -317,5 +317,313 @@
 				<p><b>*HTML5 makes the document more semantic!</b></p>
 			</li>
 		</ul>
+		<h2>New Input Types</h2>
+		<p>
+			<i>Notice 1:</i> If a browser doesn't support a particular input type, it 
+			defaults to "text".
+		</p>
+		<p>
+			<i>Notice 2:</i> The &ltform&gt tag is used to create an HTML form for 
+			user input.
+		</p>
+		<h3>Search</h3>
+		<ul>
+			<li>
+				<p>
+					Description: &ltinput type="search"&gt is a one-line plain-text for 
+					entering one or more search terms.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspSearch Google:</p>
+				<p>&nbsp&nbsp&ltinput type="search" name="google-search"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Search Site:
+					<input type="search" name="google-search">
+				</form>
+			</li>
+		</ul>
+		<h3>Email</h3>
+		<ul>
+			<li>
+				<p>
+					Description: &ltinput type="email"&gt is a regular text input, but 
+					with added usability on mobile devices(i.e keyboard with email-related
+					keys <b>@ .</b>)
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspE-mail:</p>
+				<p>&nbsp&nbsp&ltinput type="email" name="email"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					E-mail:
+					<input type="email" name="email">
+				</form>
+			</li>
+		</ul>
+		<h3>URL</h3>
+		<ul>
+			<li>
+				<p>
+					Description: &ltinput type="url"&gt is a regular text input, but with 
+					added usability on mobile devices(i.e. keyboard with URL-related keys 
+					<b>/ . .com</b>)
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspAdd your homepage:</p>
+				<p>&nbsp&nbsp&ltinput type="url" name="homepage"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<form>
+					Add your homepage:
+					<input type="url" name="homepage">
+				</form>
+			</li>
+		</ul>
+		<h3>Tel</h3>
+		<ul>
+			<li>
+				<p>
+					Description: &ltinput type="tel"&gt is regular text input, but with 
+					added usability on mobile devices(keyboard with digits <b>0-9 * #</b>)
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspTelephone:</p>
+				<p>&nbsp&nbsp&ltinput type="tel" name="usrtel"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Telephone:
+					<input type="tel" name="usrtel">
+				</form>
+			</li>
+		</ul>
+		<h3>Number</h3>
+		<ul>
+			<li>
+				<p>
+					Description: &ltinput type="number"&gt represents a precise control 
+					for setting the element's value to a string representing a number. In 
+					the browser we get a convinient control to the right side of the input
+					that allows us to increase or decrease the value. The keyboard on 
+					mobile devices changes to have a row of number keys at the top.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspEnter a number (between 1 and 5):</p>
+				<p>&nbsp&nbsp&ltinput type="number" name="number" min="1" max="5"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Enter a number (between 1 and 5):
+					<input type="number" name="number" min="1" max="5">
+				</form>
+			</li>
+		</ul>
+		<h3>Range</h3>
+		<ul>
+			<li>
+				<p>
+					Description: &ltinput type="range"&gt defines an imprecise control for
+					setting the element's value to a string representing a number. In the 
+					browser we get a control that allows us to drag a slider to change the
+					number value.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbsp&ltp&gtRange (0-50):&lt/p&gt</p>
+				<p>&nbsp&nbsp&ltinput type="range" name="points" min="0" max="50"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					<p>Range (0-50):</p>
+					<input type="range" name="points" min="0" max="50">
+				</form>
+			</li>
+		</ul>
+		<h3>Month</h3>
+		<ul>
+			<li>
+				<p>
+					Description: &ltinput type="month"&gt allows the user to select a 
+					month and year. A date picker can show up in the input field.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspSelect a month:</p>
+				<p>&nbsp&nbsp&ltinput type="month" name="month-year"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Select a month:
+					<input type="month" name="month-year">
+				</form>
+			</li>
+		</ul>
+		<h3>Week</h3>
+		<ul>
+			<li>
+				<p>
+					Description: &ltinput type="week"&gt allows the user to select a week
+					and year. A date picker can show up in the input field.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspSelect a week:</p>
+				<p>&nbsp&nbsp&ltinput type="week" name="week-year"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Select a week:
+					<input type="week" name="week-year">
+				</form>
+			</li>
+		</ul>
+		<h3>Date</h3>
+		<ul>
+			<li>
+				<p>
+					Description: &ltinput type="date"&gt is used for input fields that 
+					should contain a date. A date picker can show up in the input field.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspBirthday:</p>
+				<p>&nbsp&nbsp&ltinput type="date" name="birthday"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Birthday:
+					<input type="date" name="birthday">
+				</form>
+			</li>
+		</ul>
+		<h3>Datetime-local</h3>
+		<ul>
+			<li>
+				<p>
+					Description: The &ltinput type="datetime-local"&gt specifies a date 
+					and time input field, with no time zone. A date picker can show up in 
+					the input field.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspExam (date and time):</p>
+				<p>&nbsp&nbsp&ltinput type="datetime-local" name="exam-time"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Exam (date and time):
+					<input type="datetime-local" name="exam-time">
+				</form>
+			</li>
+		</ul>
+		<h3>Datetime</h3>
+		<ul>
+			<li>
+				<p>
+					Description: The &ltinput type="datetime"&gt specifies a date and time
+					input field, with time zone. A date picker can show up in the input 
+					field.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspExam (date and time):</p>
+				<p>&nbsp&nbsp&ltinput type="datetime" name="exam-time"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Exam (date and time):
+					<input type="datetime" name="exam-time">
+				</form>
+				<p><b>As of Feb 23, 2017, "datetime" is not supported.</b></p>
+			</li>
+		</ul>
+		<h3>Time</h3>
+		<ul>
+			<li>
+				<p>
+					Description: The &ltinput type="time"&gt allows the user to select a
+					time (no timezone). A time picker can show up in the input field.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspSelect a time:</p>
+				<p>&nbsp&nbsp&ltinput type="time" name="usrtime"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Select a time:
+					<input type="time" name="usrtime">
+				</form>
+			</li>
+		</ul>
+		<h3>Color</h3>
+		<ul>
+			<li>
+				<p>
+					Description: The &ltinput type="color"&gt is used for input fields 
+					that should contain a color. A color picker can show up in the input 
+					field.
+				</p> 
+			</li>
+			<li>
+				<p>Example:</p>
+				<p><u>HTML5</u></p>
+				<p>&ltform&gt</p>
+				<p>&nbsp&nbspPick a color:</p>
+				<p>&nbsp&nbsp&ltinput type="color" name="usrcolor"&gt</p>
+				<p>&lt/form&gt</p>
+				<p><u>Result</u></p>
+				<form>
+					Pick a color:
+					<input type="color" name="usrcolor">
+				</form>
+			</li>
+		</ul>
 	</body>
 </html>
