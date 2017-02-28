@@ -1,0 +1,89 @@
+<!-- 
+	Author: Marios Sofokleous
+	Description: This page demonstrates some new features of HTML5 
+	Date: 28.02.2017
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>New Form Elements</title>
+	</head>
+	<body>
+		<header>
+			<h1>HTML5 New Features</h1>
+			<nav>
+      	<li><a href="home.html">Home</a></li>
+        <li><a href="updated-tags.html">Updated Tags</a></li>
+    		<li><a href="updated-elements.html">Updated Elements</a></li>
+    		<li><a href="new-elements.html">New Elements</a></li>
+    		<li><a href="new-input-types.html">New Input Types</a></li>
+    		<li><a href="new-input-attributes.html">New Input Attributes</a></li>
+    		<li><a href="new-form-elements.html">New Form Elements</a></li>
+			</nav>
+		</header>
+		<article>
+			<header>
+				<h2>New Form Elements</h2>
+				<p>Posted 28th February 2017</p>
+			</header>
+			<section>
+				<h3>Datalist</h3>
+			 	<h4>Description</h4>
+			 	<p>
+			 		The &ltdatalist&gt element specifies a list of pre-defined options for
+			 		an &ltinput&gt element. Users will see a drop-down list of pre-defined 
+			 		options and auto-complete suggestions as they input data.
+				</p> 
+				<h4>Example:</h4>
+				<h5>HTML5</h5>
+				<p>
+					&ltform&gt<br>
+					&nbsp&nbspChoose an OS:<br>
+					&nbsp&nbsp&ltinput list="operating systems"&gt<br>
+					&nbsp&nbsp&ltdatalist id="operating systems"&gt<br>
+					&nbsp&nbsp&nbsp&nbsp&ltoption value="Windows"&gt<br>
+					&nbsp&nbsp&nbsp&nbsp&ltoption value="macOS"&gt<br>
+					&nbsp&nbsp&nbsp&nbsp&ltoption value="Linux"&gt<br>
+					&nbsp&nbsp&nbsp&nbsp&ltoption value="Solaris"&gt<br>
+					&nbsp&nbsp&nbsp&nbsp&ltoption value="FreeBSD"&gt<br>
+					&nbsp&nbsp&lt/datalist&gt<br>
+					&lt/form&gt<br>
+				</p>
+				<p>
+					<i class="notice">Notice:</i> The "list" and "id" attributes need to 
+					be the same. The &ltinput&gt element needs to know about the 
+					&ltdatalist&gt options.
+				</p>
+				<h5>Result</h5>
+				<form>
+					Choose an OS:
+					<input list="operating systems">
+					<datalist id="operating systems">
+						<option value="Windows"></option>
+						<option value="macOS"></option>
+						<option value="Linux"></option>
+						<option value="Solaris"></option>
+						<option value="FreeBSD"></option>
+					</datalist>
+				</form>
+			</section>
+			<section>
+				<h3>Keygen</h3>
+				<h4>Description</h4>
+				<p>
+					The purpose of the &ltkeygen&gt element is to provide a secure way to 
+					authenticate users.
+				</p>
+			</section>
+			<section>
+				<h3>Output</h3>
+				<h4>Description</h4>
+				<p>
+					The &ltoutput&gt element represents the result of a 
+					calculation(like one performed by a script).
+				</p> 
+			</section>
+		</article>
+	</body>
+</html>
