@@ -5,625 +5,794 @@
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>HTML5 New Features</title>
 	</head>
 	<body>
+		
+		<h1>HTML5 New Features</h1>
+		
 		<h2>Updated Tags</h2>
+		
 		<h3>"i" tag</h3>
+		<h4>Description</h4>
+		<p>
+			Represents text in an "alternate voice", mood, foreign words, technical 
+			terms or fictional character thoughts. It is a good idea to use the 
+			"class" attribute to make "i" more semantic.
+		</p>
+		<h4>Examples</h4>
 		<ul>
+			<li><i class="thought">I hope this works</i>, he thought.</li>
 			<li>
-				<p>Description: represents text in an "alternate voice" or "mood".</p>
+				We ate different types of sushi last night such as 
+				<i class="sushi-type">Nigiri</i>, <i class="sushi-type">Sashimi</i> and 
+				<i class="sushi-type">Maki</i>.
 			</li>
 			<li>
-				<p>Example:</p> 
-				<p><i>I hope this works</i>, he thought.</p>
+				There are four variations of the <i class="brevity code">Fox</i> brevity
+				word, <i class="brevity word">Fox One</i> is one of them and indicates a
+				simulated or actual launch of a semi-active radar-guided missile.
 			</li>
 		</ul>
+	
 		<h3>"b" tag</h3>
+		<h4>Description</h4>
+		<p>
+			Represents "stylistically offset" text such as keywords and text that is 
+			bold by typographic convention(and not because is important). Also, the 
+			"b" tag can be used when you want to draw attention without increasing 
+			importance. It is a good practice to use the "class" attribute on the "b" 
+			tag in order to convey additional semantic information
+			(i.e. &ltb class="lead"&gt for the first sentence in a paragraph). The "b"
+			tag doesn't convey semantic information; use it only when no others fit. 
+			Do not mark titles and headings using the "b" tag.
+		</p>
+		<h4>Examples</h4>
 		<ul>
 			<li>
-				<p>Description: represents "stylistically offset" text.</p>
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><b class="lead">The event takes place this upcoming Saturday, and 
-				over 3,000 people have already registered.</b></p>
+				<b class="lead">The event takes place this upcoming Saturday, and over 
+				3,000 people have already registered.</b>
 			</li>
 		</ul>
-		<h3>"em" tag / "strong" tag</h3>
+		
+		<h3>"em" tag</h3>
+		<h4>Description</h4>
+		<p>
+			Stress emphasis. If spoken, this stress would be emphasised pronunciation 
+			on a word.
+		</p>
+		<h4>Examples</h4>
+		<ul>
+			<li>Call a doctor <em>now!</em></li>
+			<li>I <em>love</em> swimming</li>
+		</ul>
+			
+		<h3>"strong" tag</h3>
+		<h4>Description</h4> 
+		<p>Strong importance.</p>
+		<h4>Examples</h4>
 		<ul>
 			<li>
-				<p>Description ("em" tag): stress emphasis.</p>
-				<p>Description ("strong" tag): strong importance.</p>
-			</li>
-			<li>
-				<p>Example:</p>
-				<p>Make sure to sign up <em>before</em> the day of the event, <strong>
-				September 16, 2013</strong>.
-				</p>
+				<strong>Warning!</strong> This is <strong>very dangerous</strong>.
 			</li>
 		</ul>
+	
 		<h2>Updated Elements</h2>
 		<h3>Example:</h3>
-		<p>&lt!DOCTYPE html&gt (1)</p>
-		<p>&lthtml&gt</p>
-		<p>&nbsp&nbsp&lthead&gt</p>
-		<p>&nbsp&nbsp&nbsp&nbsp&ltmeta charset="UTF-8"&gt (2)</p>
-		<p>&nbsp&nbsp&nbsp&nbsp&ltlink rel="stylesheet" href="foo.css"&gt (3)</p>
-		<p>&nbsp&nbsp&nbsp&nbsp&ltscript src="foo.js"&gt&lt/script&gt (4.1)</p>
-		<p>&nbsp&nbsp&nbsp&nbsp&ltscript&gt<i>JS code</i>&lt/script&gt (4.2)</p>
-		<p>&nbsp&nbsp&nbsp&nbsp...</p>
-		<p>&nbsp&nbsp&lt/head&gt</p>
-		<p>&nbsp&nbsp...</p>
-		<p>&lt/html&gt</p>
+		<p>
+			&lt!DOCTYPE html&gt (1)<br>
+			&lthtml&gt<br>
+			&nbsp&nbsp&lthead&gt<br>
+			&nbsp&nbsp&nbsp&nbsp&ltmeta charset="UTF-8"&gt (2)<br>
+			&nbsp&nbsp&nbsp&nbsp&ltlink rel="stylesheet" href="foo.css"&gt (3)<br>
+			&nbsp&nbsp&nbsp&nbsp&ltscript src="foo.js"&gt&lt/script&gt (4.1)<br>
+			&nbsp&nbsp&nbsp&nbsp&ltscript&gt<i>JS code</i>&lt/script&gt (4.2)<br>
+			&nbsp&nbsp&nbsp&nbsp...<br>
+			&nbsp&nbsp&lt/head&gt<br>
+			&nbsp&nbsp...<br>
+			&lt/html&gt
+		</p>
 		<h3>Description:</h3>
 		<ul>
 			<li>
-				<p>
-					DOCTYPE (1): set the HTML version that the browser should use. If you 
-					not specify a version number, you're telling the browser to use the 
-					latest version.
-				</p>
+				DOCTYPE (1): set the HTML version that the browser should use. If you 
+				not specify a version number, you're telling the browser to use the 
+				latest version.
 			</li>
-			<li><p>Meta declaration (2): specify character encoding.</p></li>
-			<li><p>Link tag (3): reference external CSS files.</p></li>
-			<li><p>Script tag (4.1): reference external JS files.</p></li>
-			<li><p>Script tag (4.2): run integrated JS code.</p></li>
+			<li>Meta declaration (2): specify character encoding.</li>
+			<li>Link tag (3): reference external CSS files.</li>
+			<li>Script tag (4.1): reference external JS files.</li>
+			<li>Script tag (4.2): run integrated JS code.</li>
 		</ul>
+
 		<h2>New Elements</h2>
 		<h3>Section</h3>
-		<ul>
-			<li>
-				<p>
-					Description: a "section" represents a generic document or application 
-					section. A "div" has no semantic meaning, but a "section" element 
-					does. A "section" is used for grouping together thematically related 
-					content. You might want to replace some of your "div" elements with 
-					"section" elements, but remember to always ask yourself, "Is all of 
-					the content related?" If yes, a "section" element is an appropriate
-					choice.
-				</p>
-			</li>
-			<li>
-				<p>Example:</p> 
-				<p><u>HTML (Prior to HTML5)</u></p>
-				<p>&ltdiv class="section"&gt</p>
-				<p>&nbsp&nbsp&lth2&gtBlog&lt/h2&gt</p>
-				<p>&nbsp&nbsp&ltp&gtThis is the Art Gallery blog.&ltp&gt</p>
-				<p>&nbsp&nbsp...</p>
-				<p>&lt/div&gt</p>
-				<p><u>HTML5</u></p>
-				<p>&ltsection&gt</p>
-				<p>&nbsp&nbsp&lth2&gtBlog&lt/h2&gt</p>
-				<p>&nbsp&nbsp&ltp&gtThis is the Art Gallery blog.&ltp&gt</p>
-				<p>&nbsp&nbsp...</p>
-				<p>&lt/section&gt</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			A "section" represents a generic document or application section. A "div" 
+			has no semantic meaning, but a "section" element does. A "section" is used
+			for grouping together thematically related content. You might want to 
+			replace some of your "div" elements with "section" elements, but remember 
+			to always ask yourself, "Is all of the content related?" If yes, a 
+			"section" element is an appropriate choice.
+		</p>
+		<h4>Example</h4>
+		<h5>HTML (Prior to HTML5)</h5>
+		<p>
+			&ltdiv class="section"&gt<br>
+			&nbsp&nbsp&lth2&gtBlog&lt/h2&gt<br>
+			&nbsp&nbsp&ltp&gtThis is the Art Gallery blog.&ltp&gt<br>
+			&nbsp&nbsp...<br>
+			&lt/div&gt<br>
+		</p>
+		<h5>HTML5</h5>
+		<p>
+			&ltsection&gt<br>
+			&nbsp&nbsp&lth2&gtBlog&lt/h2&gt<br>
+			&nbsp&nbsp&ltp&gtThis is the Art Gallery blog.&ltp&gt<br>
+			&nbsp&nbsp...<br>
+			&lt/section&gt<br>
+		</p>
+		<p>
+			The HTML5 implementation makes the document more 
+			<strong>semantic</strong>.
+		<p>
+
 		<h3>Header</h3>
-		<ul>
-			<li>
-				<p>
-					Description: a "header" represents a group of introductory content 
-					(Name of the page, tagline) and/or navigational aids (clickable logo). 
-					You can include more than one header on your page. The "header" 
-					usually appears at the top of a document or section.
-				</p>
-			</li>
-			<li>
-				<p>Example:</p> 
-				<p><u>HTML (Prior to HTML5)</u></p>
-				<p>&ltdiv class="header"&gt</p>
-				<p>&nbsp&nbsp&lth1&gtArt Gallery Blog&lt/h1&gt</p>
-				<p>
-					&nbsp&nbsp&ltp&gtCovering all the Art Galleries across the globe&lt/p&gt
-				</p>
-				<p>&lt/div&gt</p>
-				<p><u>HTML5</u></p>
-				<p>&ltheader&gt</p>
-				<p>&nbsp&nbsp&lth1&gtArt Gallery Blog&lt/h1&gt</p>
-				<p>&nbsp&nbsp&ltp&gtCovering all the Art Galleries across the globe&lt/p&gt</p>
-				<p>&lt/header&gt</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4> 
+		<p>
+			A "header" represents a group of introductory content (name of the page, 
+			tagline) and/or navigational aids (clickable logo). You can include more 
+			than one header on your page. The "header" usually appears at the top of a
+			document or section.
+		</p>
+		<h4>Example:</h4>
+		<h5>HTML (Prior to HTML5)</h5>
+		<p>
+			&ltdiv class="header"&gt<br>
+			&nbsp&nbsp&lth1&gtArt Gallery Blog&lt/h1&gt<br>
+			&nbsp&nbsp&ltp&gtCovering all the Art Galleries across the globe&lt/p&gt<br>
+			&lt/div&gt<br>
+		</p>
+		<h5>HTML5</h5>
+		<p>
+			&ltheader&gt<br>
+			&nbsp&nbsp&lth1&gtArt Gallery Blog&lt/h1&gt<br>
+			&nbsp&nbsp&ltp&gtCovering all the Art Galleries across the globe&lt/p&gt<br>
+			&lt/header&gt<br>
+		</p>
+		<p>
+			The HTML5 implementation makes the document more <strong>semantic</strong>.
+		<p>
+
 		<h3>Footer</h3>
-		<ul>
-			<li>
-				<p>
-					Description: a "footer" represents a footer (About, Contact, 
-					Privacy Policy, Terms of Use, Trademarks, Advertise, Help Center, 
-					Subscribe, Follow) for its nearest ancestor sectioning content or
-					sectioning root element. Like the "header", the "footer" element is 
-					not position-dependent and can be put within other HTML5 elements.
-				</p>
-			</li>
-			<li>
-				<p>Example:</p> 
-				<p><u>HTML (Prior to HTML5)</u></p>
-				<p>&ltdiv class="footer"&gt</p>
-				<p>&nbsp&nbsp&ltp&gt&copy; Art Gallery 2017&lt/p&gt</p>
-				<p>&lt/div&gt</p>
-				<p><u>HTML5</u></p>
-				<p>&ltfooter&gt</p>
-				<p>&nbsp&nbsp&ltp&gt&copy; Art Gallery 2017&lt/p&gt</p>
-				<p>&lt/footer&gt</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			A "footer" represents a footer (About, Contact, Privacy Policy, Terms of 
+			Use, Trademarks, Advertise, Help Center, Subscribe, Follow) for its 
+			nearest ancestor sectioning content or sectioning root element. Like the 
+			"header", the "footer" element is not position-dependent and can be put 
+			within other HTML5 elements.
+		</p>
+		<h4>Example</h4>
+		<h5>HTML (Prior to HTML5)</h5>
+		<p>
+			&ltdiv class="footer"&gt<br>
+			&nbsp&nbsp&ltp&gt&copy; Art Gallery 2017&lt/p&gt<br>
+			&lt/div&gt<br>
+		</p>
+		<h5>HTML5</h5>
+		<p>
+			&ltfooter&gt<br>
+			&nbsp&nbsp&ltp&gt&copy; Art Gallery 2017&lt/p&gt<br>
+			&lt/footer&gt<br>
+		</p>
+		<p>
+			The HTML5 implementation makes the document more <strong>semantic</strong>.
+		<p>
+
 		<h3>Aside</h3>
-		<ul>
-			<li>
-				<p>
-					Description: "aside" is not directly related to the content 
-					surrounding it but it expands upon it. Used to represent content that 
-					is not the primary focus of an article or page (secondary information)
-					. When used within an "article" element, its contents should be 
-					related to that particular "article". When used outside an "article" 
-					element, the "aside" contents should be specifically related to the 
-					site. 
-				</p>
-			</li>
-			<li>
-				<p>
-					Example: a page sidebar that includes filters(i.e. All, Recently 
-					Added, Recently Updated, Discontinued), about(i.e. Read more), and 
-					subscribe(i.e. Enter your email...) contents.
-				</p> 
-				<p><u>HTML (Prior to HTML5)</u></p>
-				<p>&ltdiv class="sidebar"&gt</p>
-				<p>&nbsp&nbsp...</p>
-				<p>&lt/div&gt</p>
-				<p><u>HTML5</u></p>
-				<p>&ltaside&gt</p>
-				<p>&nbsp&nbsp...</p>
-				<p>&lt/aside&gt</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			An "aside" is not directly related to the content surrounding it but it 
+			expands upon it. Used to represent content that is not the primary focus 
+			of an article or page (secondary information). When used within an 
+			"article" element, its contents should be related to that particular 
+			"article". When used outside an "article" element, the "aside" contents 
+			should be specifically related to the site. 
+		</p>
+		<h4>Example</h4>
+		<p>
+			A page sidebar that includes filters(i.e. All, Recently Added, Recently 
+			Updated, Discontinued), about(i.e. Read more), and subscribe(i.e. Enter 
+			your email...) contents.
+		</p> 
+		<h5>HTML (Prior to HTML5)</h5>
+		<p>
+			&ltdiv class="sidebar"&gt<br>
+			&nbsp&nbsp...<br>
+			&lt/div&gt<br>
+		</p>
+		<h5>HTML5</h5>
+		<p>
+			&ltaside&gt<br>
+			&nbsp&nbsp...<br>
+			&lt/aside&gt<br>
+		</p>
+		<p>
+			The HTML5 implementation makes the document more <strong>semantic</strong>.
+		<p>
+
 		<h3>Nav</h3>
-		<ul>
-			<li>
-				<p>
-					Description: a "nav" represents a section of a page that links to other 
-					pages or to parts within the page. This element is intended for "major
-					navigation".
-				</p>
-			</li>
-			<li>
-				<p>
-					Example: a page navigation menu(i.e. Gear, Gaming, Culture, 
-					Entertainment, Science, Video, Reviews, International Edition).
-				</p> 
-				<p><u>HTML (Prior to HTML5)</u></p>
-				<p>&ltul class="nav"&gt</p>
-				<p>&nbsp&nbsp...</p>
-				<p>&lt/ul&gt</p>
-				<p><u>HTML5</u></p>
-				<p>&ltnav&gt</p>
-				<p>&nbsp&nbsp&ltul&gt</p>
-	 			<p>&nbsp&nbsp&nbsp&nbsp...</p>
-	 			<p>&nbsp&nbsp&lt/ul&gt</p>
-				<p>&lt/nav&gt</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			A "nav" represents a section of a page that links to other pages or to 
+			parts within the page. This element is intended for "major navigation".
+		</p>
+		<h4>Example</h4>
+		<p>
+			A page navigation menu(i.e. Gear, Gaming, Culture, Entertainment, Science,
+			Video, Reviews, International Edition).
+		</p> 
+		<h5>HTML (Prior to HTML5)</h5>
+		<p>
+			&ltul class="nav"&gt<br>
+			&nbsp&nbsp...<br>
+			&lt/ul&gt<br>
+		</p>
+		<h5>HTML5</h5>
+		<p>
+			&ltnav&gt<br>
+			&nbsp&nbsp&ltul&gt<br>
+	 		&nbsp&nbsp&nbsp&nbsp...<br>
+	 		&nbsp&nbsp&lt/ul&gt<br>
+			&lt/nav&gt<br>
+		</p>
+		<p>
+			The HTML5 implementation makes the document more <strong>semantic</strong>.
+		<p>
+		
 		<h3>Article</h3>
-		<ul>
-			<li>
-				<p>
-					Description: an "article" represents a complete or self-contained part
-					of a document that is independently reusable or distributable. The 
-					"article" element is another type of "section" used for self-contained
-					related content. 
-				</p>
-			</li>
-			<li>
-				<p>Examples: blog post, news story, comment on a post, a review.</p>
-				<p><u>HTML (Prior to HTML5)</u></p>
-				<p>&ltdiv class="article"&gt</p>
-				<p>&nbsp&nbsp...</p>
-				<p>&lt/div&gt</p>
-				<p><u>HTML5</u></p>
-				<p>&ltarticle&gt</p>
-				<p>&nbsp&nbsp...</p>
-				<p>&lt/article&gt</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			An "article" represents a complete or self-contained part of a document 
+			that is independently reusable or distributable. The "article" element is 
+			another type of "section" used for self-contained related content. 
+		</p>
+		<h4>Examples</h4>
+		<p>Blog post, news story, comment on a post, a review.</p>
+		<h5>HTML (Prior to HTML5)</h5>
+		<p>
+			&ltdiv class="article"&gt<br>
+			&nbsp&nbsp...<br>
+			&lt/div&gt<br>
+		</p>
+		<h5>HTML5</h5>
+		<p>
+			&ltarticle&gt<br>
+			&nbsp&nbsp...<br>
+			&lt/article&gt<br>
+		</p>
+		<p>
+			The HTML5 implementation makes the document more <strong>semantic</strong>.
+		<p>
+	
 		<h3>Main</h3>
-		<ul>
-			<li>
-				<p>
-					Description: "main" represents the main content of the body of a 
-					document or application. Do not include more than one "main" element 
-					in a document. Do not include the "main" element inside of an 
-					"article", "aside", "footer", "header" or "nav" element.
-				</p>
-			</li>
-			<li>
-				<p>Example:</p> 
-				<p><u>HTML (Prior to HTML5)</u></p>
-				<p>&ltdiv class="main"&gt</p>
-				<p>&nbsp&nbsp....</p>
-				<p>&lt/div&gt</p>
-				<p><u>HTML5</u></p>
-				<p>&ltmain&gt</p>
-				<p>&nbsp&nbsp...</p>
-				<p>&lt/main&gt</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			"main" represents the main content of the body of a document or 
+			application. Do not include more than one "main" element in a document. Do
+			not include the "main" element inside of an "article", "aside", "footer", 
+			"header" or "nav" element.
+		</p>
+		<h4>Example</h4>
+		<h5>HTML (Prior to HTML5)</h5>
+		<p>
+			&ltdiv class="main"&gt<br>
+			&nbsp&nbsp....<br>
+			&lt/div&gt<br>
+		</p>
+		<h5>HTML5</h5>
+		<p>	
+			&ltmain&gt<br>
+			&nbsp&nbsp...<br>
+			&lt/main&gt<br>
+		</p>
+		<p>
+			The HTML5 implementation makes the document more <strong>semantic</strong>.
+		<p>
+	
 		<h3>Figure</h3>
-		<ul>
-			<li>
-				<p>
-					Description: a "figure" represents a unit of self-contained content 
-					and if removed from the flow of the document will not affect the 
-					document's meaning. A common use of the "figure" tag is for an image
-					within an article.  
-				</p>
-			</li>
-			<li>
-				<p>Example:</p> 
-				<p><u>HTML (Prior to HTML5)</u></p>
-				<p>&ltdiv class="image"&gt</p>
-				<p>&nbsp&nbsp&ltimg src="image.png" alt="My picture"&gt</p>
-				<p>&lt/div&gt</p>
-				<p><u>HTML5</u></p>
-				<p>&ltfigure&gt</p>
-				<p>&nbsp&nbsp&ltimg src="image.png" alt="My picture"&gt</p>
-				<p>&lt/figure&gt</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			A "figure" represents a unit of self-contained content and if removed from
+			the flow of the document will not affect the document's meaning. A common 
+			use of the "figure" tag is for an image within an article.  
+		</p>
+		<h4>Example</h4>
+		<h5>HTML (Prior to HTML5)</h5>
+		<p>
+			&ltdiv class="image"&gt<br>
+			&nbsp&nbsp&ltimg src="image.png" alt="My picture"&gt<br>
+			&lt/div&gt<br>
+		</p>
+		<h5>HTML5</h5>
+		<p>
+			&ltfigure&gt<br>
+			&nbsp&nbsp&ltimg src="image.png" alt="My picture"&gt<br>
+			&lt/figure&gt<br>
+		</p>
+		<p>
+			The HTML5 implementation makes the document more <strong>semantic</strong>.
+		<p>
+
 		<h3>Figcaption</h3>
-		<ul>
-			<li>
-				<p>
-					Description: a "figcaption" represents a caption or legend for a 
-					figure.
-				</p>
-			</li>
-			<li>
-				<p>Example:</p> 
-				<p><u>HTML5</u></p>
-				<p>&ltfigure&gt</p>
-				<p>&nbsp&nbsp&ltimg src="image.png" alt="My picture"&gt</p>
-				<p>&nbsp&nbsp&ltfigcaption&gtThis is a caption for the picture.&lt/figcaption&gt</p>
-				<p>&lt/figure&gt</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			A "figcaption" represents a caption or legend for a figure.
+		</p>
+		<h4>Example</h4> 
+		<h5>HTML5</h5>
+		<p>
+			&ltfigure&gt<br>
+			&nbsp&nbsp&ltimg src="image.png" alt="My picture"&gt<br>
+			&nbsp&nbsp&ltfigcaption&gtThis is a caption for the picture.
+			&lt/figcaption&gt<br>
+			&lt/figure&gt<br>
+		</p>
+		<p>
+			The HTML5 implementation makes the document more <strong>semantic</strong>.
+		<p>
+		
 		<h3>Time</h3>
-		<ul>
-			<li>
-				<p>
-					Description: "time" represents either a time on a 24 hour clock, or a 
-					precise date.
-				</p>
-			</li>
-			<li>
-				<p>Example:</p> 
-				<p><u>HTML5</u></p>
-				<p>&lttime&gt2013-09-16&lt/time&gt</p>
-				<p><b>We can use the "datetime" attribute to get our desired format:</b></p>
-				<p>&lttime datetime="2013-09-16"&gt16/09/13&lt/time&gt</p>
-				<p>&lttime datetime="2013-09-16"&gtSeptember 16, 2013&lt/time&gt</p>
-				<p>...</p>
-				<p><b>*HTML5 makes the document more semantic!</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4> 
+		<p>
+			"time" represents either a time on a 24 hour clock, or a precise date.
+		</p>
+		<h4>Example</h4> 
+		<h5>HTML5</h5>
+		<p>&lttime&gt2013-09-16&lt/time&gt</p>
+		<p>
+			We can use the "datetime" attribute to get our desired format:<br>
+			&lttime datetime="2013-09-16"&gt16/09/13&lt/time&gt<br>
+			&lttime datetime="2013-09-16"&gtSeptember 16, 2013&lt/time&gt<br>
+			...
+		</p>
+		<p>
+			The HTML5 implementation makes the document more <strong>semantic</strong>.
+		<p>
+
 		<h2>New Input Types</h2>
 		<p>
-			<i>Notice 1:</i> If a browser doesn't support a particular input type, it 
-			defaults to "text".
+			<i class="notice">Notice 1:</i> If a browser doesn't support a particular 
+			input type, it defaults to "text".
 		</p>
 		<p>
-			<i>Notice 2:</i> The &ltform&gt tag is used to create an HTML form for 
-			user input.
+			<i class="notice">Notice 2:</i> The &ltform&gt tag is used to create an 
+			HTML form for user input.
 		</p>
+
 		<h3>Search</h3>
-		<ul>
-			<li>
-				<p>
-					Description: &ltinput type="search"&gt is a one-line plain-text for 
-					entering one or more search terms.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspSearch Google:</p>
-				<p>&nbsp&nbsp&ltinput type="search" name="google-search"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Search Site:
-					<input type="search" name="google-search">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			&ltinput type="search"&gt is a one-line plain-text for entering one or 
+			more search terms.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspSearch Google:<br>
+			&nbsp&nbsp&ltinput type="search" name="google-search"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Search Google:
+			<input type="search" name="google-search">
+		</form>
+
 		<h3>Email</h3>
-		<ul>
-			<li>
-				<p>
-					Description: &ltinput type="email"&gt is a regular text input, but 
-					with added usability on mobile devices(i.e keyboard with email-related
-					keys <b>@ .</b>)
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspE-mail:</p>
-				<p>&nbsp&nbsp&ltinput type="email" name="email"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					E-mail:
-					<input type="email" name="email">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			&ltinput type="email"&gt is a regular text input, but with added usability 
+			on mobile devices(i.e keyboard with email-related keys).
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspE-mail:<br>
+			&nbsp&nbsp&ltinput type="email" name="email"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>		
+		<form>
+			E-mail:
+			<input type="email" name="email">
+		</form>
+
 		<h3>URL</h3>
-		<ul>
-			<li>
-				<p>
-					Description: &ltinput type="url"&gt is a regular text input, but with 
-					added usability on mobile devices(i.e. keyboard with URL-related keys 
-					<b>/ . .com</b>)
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspAdd your homepage:</p>
-				<p>&nbsp&nbsp&ltinput type="url" name="homepage"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<form>
-					Add your homepage:
-					<input type="url" name="homepage">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			&ltinput type="url"&gt is a regular text input, but with added usability 
+			on mobile devices(i.e. keyboard with URL-related keys).
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspAdd your homepage:<br>
+			&nbsp&nbsp&ltinput type="url" name="homepage"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Add your homepage:
+			<input type="url" name="homepage">
+		</form>
+	
 		<h3>Tel</h3>
-		<ul>
-			<li>
-				<p>
-					Description: &ltinput type="tel"&gt is regular text input, but with 
-					added usability on mobile devices(keyboard with digits <b>0-9 * #</b>)
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspTelephone:</p>
-				<p>&nbsp&nbsp&ltinput type="tel" name="usrtel"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Telephone:
-					<input type="tel" name="usrtel">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4> 
+		<p>
+			&ltinput type="tel"&gt is regular text input, but with added usability on 
+			mobile devices(keyboard with digits).
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspTelephone:<br>
+			&nbsp&nbsp&ltinput type="tel" name="usrtel"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Telephone:
+			<input type="tel" name="usrtel">
+		</form>
+
 		<h3>Number</h3>
-		<ul>
-			<li>
-				<p>
-					Description: &ltinput type="number"&gt represents a precise control 
-					for setting the element's value to a string representing a number. In 
-					the browser we get a convinient control to the right side of the input
-					that allows us to increase or decrease the value. The keyboard on 
-					mobile devices changes to have a row of number keys at the top.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspEnter a number (between 1 and 5):</p>
-				<p>&nbsp&nbsp&ltinput type="number" name="number" min="1" max="5"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Enter a number (between 1 and 5):
-					<input type="number" name="number" min="1" max="5">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			&ltinput type="number"&gt represents a precise control for setting the 
+			element's value to a string representing a number. In the browser we get a
+			convinient control to the right side of the input that allows us to 
+			increase or decrease the value. The keyboard on mobile devices changes to 
+			have a row of number keys at the top.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspEnter a number (between 1 and 5):<br>
+			&nbsp&nbsp&ltinput type="number" name="number" min="1" max="5"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Enter a number (between 1 and 5):
+			<input type="number" name="number" min="1" max="5">
+		</form>
+
 		<h3>Range</h3>
-		<ul>
-			<li>
-				<p>
-					Description: &ltinput type="range"&gt defines an imprecise control for
-					setting the element's value to a string representing a number. In the 
-					browser we get a control that allows us to drag a slider to change the
-					number value.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbsp&ltp&gtRange (0-50):&lt/p&gt</p>
-				<p>&nbsp&nbsp&ltinput type="range" name="points" min="0" max="50"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					<p>Range (0-50):</p>
-					<input type="range" name="points" min="0" max="50">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			&ltinput type="range"&gt defines an imprecise control for setting the 
+			element's value to a string representing a number. In the browser we get a
+			control that allows us to drag a slider to change the number value.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbsp&ltp&gtRange (0-50):&lt/p&gt<br>
+			&nbsp&nbsp&ltinput type="range" name="points" min="0" max="50"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Range (0-50):
+			<input type="range" name="points" min="0" max="50">
+		</form>
+
 		<h3>Month</h3>
-		<ul>
-			<li>
-				<p>
-					Description: &ltinput type="month"&gt allows the user to select a 
-					month and year. A date picker can show up in the input field.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspSelect a month:</p>
-				<p>&nbsp&nbsp&ltinput type="month" name="month-year"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Select a month:
-					<input type="month" name="month-year">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			&ltinput type="month"&gt allows the user to select a month and year. A 
+			date picker can show up in the input field.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspSelect a month:<br>
+			&nbsp&nbsp&ltinput type="month" name="month-year"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Select a month:
+			<input type="month" name="month-year">
+		</form>
+	
 		<h3>Week</h3>
-		<ul>
-			<li>
-				<p>
-					Description: &ltinput type="week"&gt allows the user to select a week
-					and year. A date picker can show up in the input field.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspSelect a week:</p>
-				<p>&nbsp&nbsp&ltinput type="week" name="week-year"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Select a week:
-					<input type="week" name="week-year">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			&ltinput type="week"&gt allows the user to select a week and year. A date 
+			picker can show up in the input field.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspSelect a week:<br>
+			&nbsp&nbsp&ltinput type="week" name="week-year"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Select a week:
+			<input type="week" name="week-year">
+		</form>
+	
 		<h3>Date</h3>
-		<ul>
-			<li>
-				<p>
-					Description: &ltinput type="date"&gt is used for input fields that 
-					should contain a date. A date picker can show up in the input field.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspBirthday:</p>
-				<p>&nbsp&nbsp&ltinput type="date" name="birthday"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Birthday:
-					<input type="date" name="birthday">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			&ltinput type="date"&gt is used for input fields that should contain a 
+			date. A date picker can show up in the input field.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspBirthday:<br>
+			&nbsp&nbsp&ltinput type="date" name="birthday"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Birthday:
+			<input type="date" name="birthday">
+		</form>
+
 		<h3>Datetime-local</h3>
-		<ul>
-			<li>
-				<p>
-					Description: The &ltinput type="datetime-local"&gt specifies a date 
-					and time input field, with no time zone. A date picker can show up in 
-					the input field.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspExam (date and time):</p>
-				<p>&nbsp&nbsp&ltinput type="datetime-local" name="exam-time"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Exam (date and time):
-					<input type="datetime-local" name="exam-time">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			The &ltinput type="datetime-local"&gt specifies a date and time input 
+			field, with no time zone. A date picker can show up in the input field.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspExam (date and time):<br>
+			&nbsp&nbsp&ltinput type="datetime-local" name="exam-time"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Exam (date and time):
+			<input type="datetime-local" name="exam-time">
+		</form>
+		
 		<h3>Datetime</h3>
-		<ul>
-			<li>
-				<p>
-					Description: The &ltinput type="datetime"&gt specifies a date and time
-					input field, with time zone. A date picker can show up in the input 
-					field.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspExam (date and time):</p>
-				<p>&nbsp&nbsp&ltinput type="datetime" name="exam-time"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Exam (date and time):
-					<input type="datetime" name="exam-time">
-				</form>
-				<p><b>As of Feb 23, 2017, "datetime" is not supported.</b></p>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			The &ltinput type="datetime"&gt specifies a date and time input field, 
+			with time zone. A date picker can show up in the input field.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspExam (date and time):<br>
+			&nbsp&nbsp&ltinput type="datetime" name="exam-time"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Exam (date and time):
+			<input type="datetime" name="exam-time">
+		</form>
+		<p>
+			<i class="notice">Notice:</i> As of Feb 23, 2017, "datetime" is not 
+			supported.
+		</p>
+	
 		<h3>Time</h3>
-		<ul>
-			<li>
-				<p>
-					Description: The &ltinput type="time"&gt allows the user to select a
-					time (no timezone). A time picker can show up in the input field.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspSelect a time:</p>
-				<p>&nbsp&nbsp&ltinput type="time" name="usrtime"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Select a time:
-					<input type="time" name="usrtime">
-				</form>
-			</li>
-		</ul>
+		<h4>Description</h4>
+		<p>
+			The &ltinput type="time"&gt allows the user to select a time(no timezone).
+			A time picker can show up in the input field.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspSelect a time:<br>
+			&nbsp&nbsp&ltinput type="time" name="usrtime"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Select a time:
+			<input type="time" name="usrtime">
+		</form>
+		
 		<h3>Color</h3>
+		<h4>Description</h4>
+		<p>
+			The &ltinput type="color"&gt is used for input fields that should contain 
+			a color. A color picker can show up in the input field.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspPick a color:<br>
+			&nbsp&nbsp&ltinput type="color" name="usrcolor"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Pick a color:
+			<input type="color" name="usrcolor">
+		</form>
+
+		<h2>New Form Elements</h2>
+		
+		<h3>Datalist</h3>
+	 	<h4>Description</h4>
+	 	<p>
+	 		The &ltdatalist&gt element specifies a list of pre-defined options for an 
+	 		&ltinput&gt element. Users will see a drop-down list of pre-defined 
+	 		options and auto-complete suggestions as they input data.
+		</p> 
+		<h4>Example:</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspChoose an OS:<br>
+			&nbsp&nbsp&ltinput list="operating systems"&gt<br>
+			&nbsp&nbsp&ltdatalist id="operating systems"&gt<br>
+			&nbsp&nbsp&nbsp&nbsp&ltoption value="Windows"&gt<br>
+			&nbsp&nbsp&nbsp&nbsp&ltoption value="macOS"&gt<br>
+			&nbsp&nbsp&nbsp&nbsp&ltoption value="Linux"&gt<br>
+			&nbsp&nbsp&nbsp&nbsp&ltoption value="Solaris"&gt<br>
+			&nbsp&nbsp&nbsp&nbsp&ltoption value="FreeBSD"&gt<br>
+			&nbsp&nbsp&lt/datalist&gt<br>
+			&lt/form&gt<br>
+		<p>
+		<p>
+			<i class="notice">Notice:</i> The "list" and "id" attributes need to be 
+			the same. The &ltinput&gt element needs to know about the &ltdatalist&gt 
+			options.
+		</p>
+		<h5>Result</h5>
+		<form>
+			Choose an OS:
+			<input list="operating systems">
+			<datalist id="operating systems">
+				<option value="Windows">
+				<option value="macOS">
+				<option value="Linux">
+				<option value="Solaris">
+				<option value="FreeBSD">
+			</datalist>
+		</form>
+
+		<h3>Keygen</h3>
+		<h4>Description</h4>
+		<p>
+			The purpose of the &ltkeygen&gt element is to provide a secure way to 
+			authenticate users.
+		</p>
+
+		<h3>Output</h3>
+		<h4>Description</h4>
+		<p>
+			The &ltoutput&gt element represents the result of a calculation (like one 
+			performed by a script).
+		</p> 
+
+		<h2>New Input Attributes</h2>
+		<p>HTML5 added the following attributes for the &ltinput&gt element:</p>
 		<ul>
-			<li>
-				<p>
-					Description: The &ltinput type="color"&gt is used for input fields 
-					that should contain a color. A color picker can show up in the input 
-					field.
-				</p> 
-			</li>
-			<li>
-				<p>Example:</p>
-				<p><u>HTML5</u></p>
-				<p>&ltform&gt</p>
-				<p>&nbsp&nbspPick a color:</p>
-				<p>&nbsp&nbsp&ltinput type="color" name="usrcolor"&gt</p>
-				<p>&lt/form&gt</p>
-				<p><u>Result</u></p>
-				<form>
-					Pick a color:
-					<input type="color" name="usrcolor">
-				</form>
-			</li>
+			<li>autocomplete</li>
+			<li><b class="covered">autofocus</b></li>
+			<li>form</li>
+			<li>formaction</li>
+			<li>formenctype</li>
+			<li>formmethod</li>
+			<li>formnovalidate</li>
+			<li>formtarget</li>
+			<li>height</li>
+			<li>width</li>
+			<li>list</li>
+			<li>min</li>
+			<li>max</li>
+			<li>multiple</li>
+			<li><b class="covered">pattern</b></li>
+			<li><b class="covered">placeholder</b></li>
+			<li><b class="covered">required</b></li>
+			<li>step</li>
 		</ul>
+		<p>HTML5 added the following attributes for the &ltform&gt element:</p>
+		<ul>
+			<li>autocomplete</li>
+			<li>novalidate</li>
+		</ul>
+
+		<h3>Placeholder</h3>
+		<h4>Description</h4>
+		<p>
+			The "placeholder" attribute specifies a hint that describes the expected 
+			value of an input field. The hint is shown inside the input field and 
+			hidden when the user starts typing.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltinput type="text" name="first-name" placeholder="First name"&gt<br>
+			&ltinput type="text" name="last-name" placeholder="Last name"&gt<br>
+			&ltinput type="text" name="email" placeholder="email"&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			<input type="text" name="first-name" placeholder="First name">
+			<input type="text" name="last-name" placeholder="Last name">
+			<input type="text" name="email" placeholder="email">
+		</form>
+
+		<h3>Autofocus</h3>
+		<h4>Description</h4>
+		<p>
+			The "autofocus" attribute specifies that the input field should 
+			automatically get focus(active cursor) when the page loads.
+		</p> 
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+			&nbsp&nbspUsername:&ltinput type="text" name="username" autofocus&gt<br>
+			&nbsp&nbspPassword:&ltinput type="password" name=:"psw"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+			Username:<input type="text" name="username" autofocus>
+			Password:<input type="password" name="userpsw">
+		</form>
+
+		<h3>Required</h3>
+		<h4>Description</h4>
+		<p>
+			The "required" attribute specifies that an input field must be filled out
+			before submitting the form. It works with the following input types: 
+			"text", "search", "url", "tel", "email", "password", "date pickers", 
+			"number", "checkbox", "radio" and "file".
+		<h4>Example</h4>
+		<h5>HTML5</h5>
+		<p>
+			&ltform&gt<br>
+  		&nbsp&nbspUsername: &ltinput type="text" name="username" required&gt<br>
+  		&nbsp&nbsp&ltinput type="submit"&gt<br>
+  		&nbsp&nbspPassword: &ltinput type="password" name="userpsw" required&gt<br>
+  		&nbsp&nbsp&ltinput type="submit"&gt<br>
+			&lt/form&gt<br>
+		</p>
+		<h5>Result</h5>
+		<form>
+  		Username: <input type="text" name="username" required>
+  		<input type="submit">
+  		Password: <input type="password" name="userpsw" required>
+  		<input type="submit">
+		</form>
+		<p>...</p>
+		<p>...</p>
+		<p>...</p>
 	</body>
 </html>
