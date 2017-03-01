@@ -1,0 +1,11 @@
+/* Reset browser defaults */
+html, body, header, nav, main,
+footer, article, section, div, 
+h1, h2, h3, h4,h5, p, ul, li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
