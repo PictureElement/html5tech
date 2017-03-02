@@ -27,74 +27,76 @@
 	    	</ul>
 			</nav>
 		</header>
-		<article>
-			<header>
-				<h2>New Form Elements</h2>
-				<img src="HTML5.png" alt="HTML5 logo" width="50px">
-				<p>Created Feb 28, 2017 by <a href="mailto:marios.sofokleous@yandex.com">Marios Sofokleous</a></p>
-			</header>
-			<section>
-				<h3>Datalist</h3>
-			 	<h4>Description</h4>
-			 	<p>
-			 		The &ltdatalist&gt element specifies a list of pre-defined options for
-			 		an &ltinput&gt element. Users will see a drop-down list of pre-defined 
-			 		options and auto-complete suggestions as they input data.
-				</p> 
-				<h4>Example:</h4>
-				<h5>HTML5</h5>
-				<div class="code">
+		<main role="main">
+			<article>
+				<header>
+					<h2>New Form Elements</h2>
+					<img src="HTML5.png" alt="HTML5 logo" width="50px">
+					<p>Created Feb 28, 2017 by <a href="mailto:marios.sofokleous@yandex.com">Marios Sofokleous</a></p>
+				</header>
+				<section>
+					<h3>Datalist</h3>
+				 	<h4>Description</h4>
+				 	<p>
+				 		The &ltdatalist&gt element specifies a list of pre-defined options for
+				 		an &ltinput&gt element. Users will see a drop-down list of pre-defined 
+				 		options and auto-complete suggestions as they input data.
+					</p> 
+					<h4>Example:</h4>
+					<h5>HTML5</h5>
+					<div class="code">
+						<p>
+							&ltform&gt<br>
+							&nbsp&nbspChoose an OS:<br>
+							&nbsp&nbsp&ltinput list="operating systems"&gt<br>
+							&nbsp&nbsp&ltdatalist id="operating systems"&gt<br>
+							&nbsp&nbsp&nbsp&nbsp&ltoption value="Windows"&gt<br>
+							&nbsp&nbsp&nbsp&nbsp&ltoption value="macOS"&gt<br>
+							&nbsp&nbsp&nbsp&nbsp&ltoption value="Linux"&gt<br>
+							&nbsp&nbsp&nbsp&nbsp&ltoption value="Solaris"&gt<br>
+							&nbsp&nbsp&nbsp&nbsp&ltoption value="FreeBSD"&gt<br>
+							&nbsp&nbsp&lt/datalist&gt<br>
+							&lt/form&gt<br>
+						</p>
+					</div>
 					<p>
-						&ltform&gt<br>
-						&nbsp&nbspChoose an OS:<br>
-						&nbsp&nbsp&ltinput list="operating systems"&gt<br>
-						&nbsp&nbsp&ltdatalist id="operating systems"&gt<br>
-						&nbsp&nbsp&nbsp&nbsp&ltoption value="Windows"&gt<br>
-						&nbsp&nbsp&nbsp&nbsp&ltoption value="macOS"&gt<br>
-						&nbsp&nbsp&nbsp&nbsp&ltoption value="Linux"&gt<br>
-						&nbsp&nbsp&nbsp&nbsp&ltoption value="Solaris"&gt<br>
-						&nbsp&nbsp&nbsp&nbsp&ltoption value="FreeBSD"&gt<br>
-						&nbsp&nbsp&lt/datalist&gt<br>
-						&lt/form&gt<br>
+						<i class="notice">Notice:</i> The "list" and "id" attributes need to 
+						be the same. The &ltinput&gt element needs to know about the 
+						&ltdatalist&gt options.
 					</p>
-				</div>
-				<p>
-					<i class="notice">Notice:</i> The "list" and "id" attributes need to 
-					be the same. The &ltinput&gt element needs to know about the 
-					&ltdatalist&gt options.
-				</p>
-				<h5>Result</h5>
-				<div class="result">
-					<form>
-						Choose an OS:
-						<input list="operating systems">
-						<datalist id="operating systems">
-							<option value="Windows"></option>
-							<option value="macOS"></option>
-							<option value="Linux"></option>
-							<option value="Solaris"></option>
-							<option value="FreeBSD"></option>
-						</datalist>
-					</form>
-				</div>
-			</section>
-			<section>
-				<h3>Keygen</h3>
-				<h4>Description</h4>
-				<p>
-					The purpose of the &ltkeygen&gt element is to provide a secure way to 
-					authenticate users.
-				</p>
-			</section>
-			<section>
-				<h3>Output</h3>
-				<h4>Description</h4>
-				<p>
-					The &ltoutput&gt element represents the result of a 
-					calculation(like one performed by a script).
-				</p> 
-			</section>
-		</article>
+					<h5>Result</h5>
+					<div class="result">
+						<form>
+							Choose an OS:
+							<input list="operating systems">
+							<datalist id="operating systems">
+								<option value="Windows"></option>
+								<option value="macOS"></option>
+								<option value="Linux"></option>
+								<option value="Solaris"></option>
+								<option value="FreeBSD"></option>
+							</datalist>
+						</form>
+					</div>
+				</section>
+				<section>
+					<h3>Keygen</h3>
+					<h4>Description</h4>
+					<p>
+						The purpose of the &ltkeygen&gt element is to provide a secure way to 
+						authenticate users.
+					</p>
+				</section>
+				<section>
+					<h3>Output</h3>
+					<h4>Description</h4>
+					<p>
+						The &ltoutput&gt element represents the result of a 
+						calculation(like one performed by a script).
+					</p> 
+				</section>
+			</article>
+		</main>
 		<footer>
   		<address>
     		&copy 2017 <a href="mailto:marios.sofokleous@yandex.com" >Marios Sofokleous</a>
