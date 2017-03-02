@@ -9,3 +9,171 @@ h1, h2, h3, h4,h5, p, ul, li {
 	font-size: 100%;
 	vertical-align: baseline;
 }
+
+body {
+	background-color: #666666;
+}
+
+h1 {
+	font-size: 55px;
+	font-weight: 900;
+	font-family: Helvetica, Arial; 
+	color: #ff0000;
+	text-align: center;
+	padding: 30px 0 30px 0;
+}
+
+h2 {
+	font-size: 40px;
+	font-weight: 800;
+	font-family: Helvetica, Arial; 
+	color: #000000;
+	margin-left: 10px;
+}
+
+h3 {
+	font-size: 30px;
+	font-weight: 700;
+	font-style: italic;
+	font-family: Helvetica, Arial; 
+	color: #000000;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 300;
+	font-family: Helvetica, Arial; 
+	color: #000000;
+	margin-top: 15px;
+	margin-bottom: 5px;
+
+}
+
+h5 {
+	font-size: 15px;
+	font-weight: 100;
+	font-style: italic;
+	font-family: Helvetica, Arial; 
+	color: #000000;
+	margin-top: 10px;
+	margin-bottom: 5px;
+
+}
+
+p {
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Times, "Times New Roman";
+	color: #000000;
+	margin-top: 5px;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	background-color: #000000; 
+	width: 1000px;
+	/*background-image: url(background.jpg);*/
+	margin: 0 auto 0 auto;
+}
+
+article {
+	width: 1000px;
+	margin: 0 auto 0 auto;
+}
+
+footer {
+	background-color: #000000;
+	width: 1000px;
+	margin: 10px auto 0 auto;
+}
+
+/*OK*/
+section {
+	background-color: #cccccc;
+	margin-top: 10px;
+	border: 1px solid #000000;
+	padding: 10px 10px 10px 10px;
+}
+
+/*OK*/
+.code {
+	background-color: #aaaaaa;
+}
+
+.result {
+	background-color: #aaaaaa;
+}
+
+li {
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Times, "Times New Roman";
+	color: #000000;
+}
+
+ul {
+
+}
+
+/*============================================================================*/
+
+header nav {
+
+}
+
+footer p {
+	color: #ffffff;
+	text-align: center;
+}
+
+.code p{
+	font-family: Courier, "Courier New";
+}
+
+.result {
+	font-family: Courier, "Courier New";
+}
+
+.code li {
+	font-family: Courier, "Courier New";
+}
+
+article header {
+	background-color: #ffffff; 
+	padding: 10px 0 10px 0;
+}
+
+article header p {
+	font-weight: 100;
+	font-style: italic;
+	color: #666666;
+	padding-left: 10px;
+}
+
+article ul {
+
+}
+
+nav ul {
+	list-style-type: none;
+	text-align: center;
+	background-color: #ff0000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+nav li {
+	display: inline;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+nav a {
+	font-family: Helvetica, Arial; 
+	font-size: 16px;
+	color: #666666;	
+	font-weight: 900;
+}
