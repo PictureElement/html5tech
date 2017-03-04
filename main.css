@@ -117,10 +117,14 @@ section {
 
 .code {
 	background-color: #aaaaaa;
+	border-radius: 10px;
+	padding-left: 5px;
 }
 
 .result {
 	background-color: #aaaaaa;
+	border-radius: 10px;
+	padding-left: 5px;
 }
 
 li {
