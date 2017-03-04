@@ -1,7 +1,8 @@
 /* Reset browser defaults */
 html, body, header, nav, main,
 footer, article, section, div, 
-h1, h2, h3, h4,h5, p, ul, li {
+h1, h2, h3, h4,h5, p, ul, li, 
+figure, img, a, time {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -30,7 +31,6 @@ h2 {
 	font-family: Helvetica, Arial; 
 	color: #000000;
 	margin-left: 10px;
-	display: inline;
 }
 
 h3 {
@@ -71,6 +71,25 @@ p {
 
 a {
 	text-decoration: none;
+	font-style: italic;
+	font-size: 12px;
+	font-weight: 100;
+	font-family: Times, "Times New Roman";
+	color: #666666;
+}
+
+address {
+	font-size: 12px;
+	font-weight: 100;
+	font-family: Times, "Times New Roman";
+	color: #666666;
+}
+
+time {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 100;
+	font-family: Times, "Times New Roman";
 	color: #666666;
 }
 
@@ -143,14 +162,20 @@ address {
 	color: #666666;
 }
 
-figure {
-	display: inline;
+#author-date {
+	padding-left: 10px;
 }
 
-img {
+#author-date img {
+	float: left;
+	border-radius: 50%;
+	box-shadow: 0 1px 1px #000;
+}
+
+#author-date p {
 	float: right;
-	margin-right: 10px;
-	margin-top: 10px;
+	margin-right: 845px;
+	margin-top: 5px;
 }
 
 /*============================================================================*/
@@ -173,20 +198,12 @@ footer a:hover {
 
 article header {
 	background-color: #ffffff; 
-	padding: 10px 0 10px 0;
+	padding: 10px 0 55px 0;
 	border-radius: 10px;
-}
-
-article header p {
-	font-weight: 100;
-	font-style: italic;
-	color: #666666;
-	padding-left: 10px;
 }
 
 article header a:hover {
 	color: #000000;
-	font-weight: 900;
 }  
 
 nav ul {
@@ -196,19 +213,21 @@ nav ul {
 	padding-bottom: 10px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+	text-align: center;
 }
 
 nav li {
 	display: inline;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 nav a {
+	font-style: normal;
 	font-family: Helvetica, Arial; 
 	font-size: 15px;
 	color: #666666;	
-	font-weight: 900;
+	font-weight: 100;
 }
 
 nav a:hover {
