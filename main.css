@@ -78,14 +78,14 @@ a {
 	font-size: 12px;
 	font-weight: 100;
 	font-family: Times, "Times New Roman";
-	color: #8c8c90;
+	color: rgba(255, 255, 255, 0.65);
 }
 
 address {
 	font-size: 12px;
 	font-weight: 100;
 	font-family: Times, "Times New Roman";
-	color: #8c8c90;
+	color: rgba(255, 255, 255, 0.65);
 }
 
 time {
@@ -93,7 +93,7 @@ time {
 	font-style: italic;
 	font-weight: 100;
 	font-family: Times, "Times New Roman";
-	color: #8c8c90;
+	color: rgba(255, 255, 255, 0.65);
 }
 
 header {
@@ -111,7 +111,7 @@ article {
 }
 
 footer {
-	background-color: #2b2d32;
+	background: linear-gradient(to bottom, #2b2d32, #000000);
 	margin: 10px auto 0 auto;
 	color: #8c8c90;
 	text-align: center;
@@ -152,10 +152,6 @@ ul {
 	padding-right: 30px;
 }
 
-address {
-	color: #8c8c90;
-}
-
 #author-date {
 	padding-left: 10px;
 }
@@ -191,7 +187,7 @@ footer a:hover {
 }
 
 article header {
-	background-color: #2b2d32; 
+	background: linear-gradient(to bottom, #2b2d32, #000000);
 	padding: 10px 0 55px 0;
 	border-radius: 10px;
 }
@@ -202,7 +198,8 @@ article header a:hover {
 
 nav ul {
 	list-style-type: none;
-	background-color: #2b2d32;
+	background: linear-gradient(to bottom, #2b2d32, #000000);
+	/*background-color: #2b2d32;*/
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: center;
@@ -218,7 +215,7 @@ nav a {
 	font-style: normal;
 	font-family: Helvetica, Arial; 
 	font-size: 17px;
-	color: #8c8c90;
+	color: rgba(255, 255, 255, 0.65);
 	font-weight: 100;
 	text-shadow: 0 1px 1px black;
 }
