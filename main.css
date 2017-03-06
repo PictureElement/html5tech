@@ -100,20 +100,30 @@ header {
 	background: radial-gradient(circle 800px, #ffffff, #f0f0f0);
 	background-color: white; 
 	/*background-image: url(background.jpg);*/
-	margin: 0 auto 0 auto;
 	border: 1px solid #000000;
 	box-shadow: 0 1px 1px black;
+	/* header in fixed position (following 3 properties)*/
+	position: fixed; 
+	width: 100%;
+	top: 0;
+}
+
+main {
+	/* 
+		216px top margin from start of the page
+		30px top margin from header 
+	*/
+	margin-top: 216px;
 }
 
 article {
 	width: 1000px;
 	margin: 0 auto 0 auto;
-	margin-top: 10px;
 }
 
 footer {
 	background: linear-gradient(to top, #2b2d32, #3b3d42);
-	margin: 10px auto 0 auto;
+	margin: 30px auto 0 auto;
 	color: #8c8c90;
 	text-align: center;
 	padding: 20px 0 20px 0;
@@ -160,7 +170,6 @@ ul {
 #author-date img {
 	float: left;
 	border-radius: 50%;
-	border: 2px solid white;
 }
 
 #author-date p {
@@ -191,6 +200,7 @@ article header {
 	background: linear-gradient(to bottom, #2b2d32, #2b2d32);
 	padding: 10px 0 55px 0;
 	border-radius: 10px;
+	position: static;
 }
 
 article header a:hover {
@@ -222,5 +232,10 @@ nav a {
 }
 
 nav a:hover {
+	color: white;	
+}
+
+/* highlight current navigation link */
+nav #current {
 	color: white;	
 }
