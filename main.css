@@ -97,7 +97,7 @@ time {
 }
 
 header {
-	background: radial-gradient(circle, #ffffff, #e8e8e8);
+	background: radial-gradient(circle 800px, #ffffff, #f0f0f0);
 	background-color: white; 
 	/*background-image: url(background.jpg);*/
 	margin: 0 auto 0 auto;
