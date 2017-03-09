@@ -5,14 +5,14 @@
 /* Monoscape */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-/* Reset browser defaults */
+/* Reset browser defaults ("em", "i", "b", and "strong" tags not included) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, 
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, 
-tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, 
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, 
+ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, 
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, 
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, 
+audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -37,6 +37,7 @@ h1 {
 }
 
 h2 {
+	padding-top: 0;
 	font-size: 40px;
 	font-weight: 800;
 	font-family: Arvo, Times, "Times New Roman"; 
@@ -93,26 +94,10 @@ a {
 	transition: color 0.2s ease-in-out 0.1s;
 }
 
-address {
-	font-size: 12px;
-	font-weight: 100;
-	font-family: Lato, Helvetica, Arial;
-	color: rgba(255, 255, 255, 0.65);
-}
-
-time {
-	font-size: 12px;
-	font-style: italic;
-	font-weight: 100;
-	font-family: Lato, Helvetica, Arial;
-	color: rgba(255, 255, 255, 0.65);
-}
-
 header {
 	background: radial-gradient(circle 800px, #ffffff, #f0f0f0);
 	background-color: white; 
 	/*background-image: url(background.jpg);*/
-	border: 1px solid #000000;
 	box-shadow: 0 1px 1px black;
 	/* header in fixed position (following 3 properties)*/
 	position: fixed; 
@@ -133,15 +118,6 @@ article {
 	margin: 0 auto 0 auto;
 }
 
-footer {
-	background: linear-gradient(to top, #2b2d32, #3b3d42);
-	margin: 30px auto 0 auto;
-	color: #8c8c90;
-	text-align: center;
-	padding: 20px 0 20px 0;
-	box-shadow: 0 1px 1px black;
-}
-
 section {
 	background-color: #f0f0f0;
 	margin-top: 10px;
@@ -151,16 +127,39 @@ section {
 	box-shadow: 0 1px 1px black;
 }
 
-.code {
-	background-color: #ffffff;
-	border-radius: 10px;
-	padding-left: 5px;
+footer {
+	background: linear-gradient(to top, #2b2d32, #3b3d42);
+	margin: 30px auto 0 auto;
+	color: #8c8c90;
+	text-align: center;
+	padding: 20px 0 20px 0;
+	box-shadow: 0 1px 1px black;
 }
 
-.result {
-	background-color: #ffffff;
-	border-radius: 10px;
-	padding-left: 5px;
+address {
+	font-size: 12px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.65);
+}
+
+time {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.65);
+}
+
+nav {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: linear-gradient(to bottom, #2b2d32, #3b3d42);
+}
+
+ul {
+	padding-left: 20px;
+	padding-right: 5px;
 }
 
 li {
@@ -168,64 +167,66 @@ li {
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: #8c8c90;
-}
-
-ul {
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-#author-date {
-	padding-left: 10px;
-}
-
-#author-date img {
-	float: left;
-	border-radius: 50%;
-}
-
-#author-date p {
-	float: right;
-	margin-right: 845px;
 	margin-top: 5px;
 }
 
-/*============================================================================*/
+/*----------------------------------------------------------------------------*/
 
-footer a:hover {
+a:hover {
 	color: white;
 }
 
-.code p{
+.code-wrapper {
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.code-wrapper p{
 	font-family: 'Roboto Mono', Courier, "Courier New";
 }
 
-.result {
+.code-wrapper li {
 	font-family: 'Roboto Mono', Courier, "Courier New";
 }
 
-.code li {
+.result-wrapper {
+	font-size: 15px;
+	font-weight: 100;
 	font-family: 'Roboto Mono', Courier, "Courier New";
+	color: #8c8c90;
+	margin-top: 5px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.byline-wrapper {
+	padding-left: 10px;
+	margin-bottom: 10px;
+
+}
+
+.byline-wrapper img {
+	float: left;
+	border-radius: 50%;
+	margin-right: 5px;
 }
 
 article header {
-	background: linear-gradient(to bottom, #2b2d32, #2b2d32);
-	padding: 10px 0 55px 0;
+	background: #2b2d32;
+	padding: 10px 0 10px 0;
 	border-radius: 10px;
 	position: static;
 }
 
-article header a:hover {
-	color: white;
-}  
-
 nav ul {
 	list-style-type: none;
-	background: linear-gradient(to bottom, #2b2d32, #3b3d42);
-	/*background-color: #2b2d32;*/
-	padding-top: 20px;
-	padding-bottom: 20px;
 	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 nav li {
@@ -238,13 +239,7 @@ nav a {
 	font-style: normal;
 	font-family: Arvo, Times, "Times New Roman"; 
 	font-size: 17px;
-	color: rgba(255, 255, 255, 0.65);
-	font-weight: 100;
 	text-shadow: 0 1px 1px black;
-}
-
-nav a:hover {
-	color: white;	
 }
 
 /* highlight current navigation link */
