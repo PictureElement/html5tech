@@ -1,3 +1,10 @@
+/* Sans Serif */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/* Serif */
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+/* Monoscape */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 /* Reset browser defaults */
 html, body, header, nav, main,
 footer, article, section, div, 
@@ -19,7 +26,7 @@ h1 {
 	font-size: 55px;
 	font-weight: 900;
 	text-align: center;
-	font-family: Helvetica, Arial; 
+	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -29,7 +36,7 @@ h1 {
 h2 {
 	font-size: 40px;
 	font-weight: 800;
-	font-family: Helvetica, Arial; 
+	font-family: Arvo, Times, "Times New Roman"; 
 	color: white;
 	margin-left: 10px;
 	text-shadow: 0 1px 1px black;
@@ -39,7 +46,7 @@ h3 {
 	font-size: 30px;
 	font-weight: 700;
 	font-style: italic;
-	font-family: Helvetica, Arial; 
+	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
 	text-shadow: 0 1px 1px #8c8c90;
 }
@@ -47,7 +54,7 @@ h3 {
 h4 {
 	font-size: 20px;
 	font-weight: 300;
-	font-family: Helvetica, Arial; 
+	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
 	margin-top: 15px;
 	margin-bottom: 5px;
@@ -58,7 +65,7 @@ h5 {
 	font-size: 15px;
 	font-weight: 100;
 	font-style: italic;
-	font-family: Helvetica, Arial; 
+	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
 	margin-top: 10px;
 	margin-bottom: 5px;
@@ -67,7 +74,7 @@ h5 {
 p {
 	font-size: 15px;
 	font-weight: 100;
-	font-family: Times, "Times New Roman";
+	font-family: Lato, Helvetica, Arial;
 	color: #8c8c90;
 	margin-top: 5px;
 }
@@ -77,14 +84,14 @@ a {
 	font-style: italic;
 	font-size: 12px;
 	font-weight: 100;
-	font-family: Times, "Times New Roman";
+	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.65);
 }
 
 address {
 	font-size: 12px;
 	font-weight: 100;
-	font-family: Times, "Times New Roman";
+	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.65);
 }
 
@@ -92,7 +99,7 @@ time {
 	font-size: 12px;
 	font-style: italic;
 	font-weight: 100;
-	font-family: Times, "Times New Roman";
+	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.65);
 }
 
@@ -154,7 +161,7 @@ section {
 li {
 	font-size: 15px;
 	font-weight: 100;
-	font-family: Times, "Times New Roman";
+	font-family: Lato, Helvetica, Arial;
 	color: #8c8c90;
 }
 
@@ -185,15 +192,15 @@ footer a:hover {
 }
 
 .code p{
-	font-family: Courier, "Courier New";
+	font-family: 'Roboto Mono', Courier, "Courier New";
 }
 
 .result {
-	font-family: Courier, "Courier New";
+	font-family: 'Roboto Mono', Courier, "Courier New";
 }
 
 .code li {
-	font-family: Courier, "Courier New";
+	font-family: 'Roboto Mono', Courier, "Courier New";
 }
 
 article header {
@@ -224,7 +231,7 @@ nav li {
 
 nav a {
 	font-style: normal;
-	font-family: Helvetica, Arial; 
+	font-family: Arvo, Times, "Times New Roman"; 
 	font-size: 17px;
 	color: rgba(255, 255, 255, 0.65);
 	font-weight: 100;
