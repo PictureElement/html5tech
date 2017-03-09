@@ -86,6 +86,7 @@ a {
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.65);
+	transition: color 0.2s ease-in-out 0.1s;
 }
 
 address {
