@@ -1,8 +1,8 @@
-/* Sans Serif */
+/* Google Web Fonts: Sans Serif type */
 @import url('https://fonts.googleapis.com/css?family=Lato');
-/* Serif */
+/* Google Web Fonts: Serif type */
 @import url('https://fonts.googleapis.com/css?family=Arvo');
-/* Monoscape */
+/* Google Web Fonts: Monoscape type */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 /* Reset browser defaults ("em", "i", "b", and "strong" tags not included) */
@@ -151,10 +151,12 @@ time {
 	color: rgba(255, 255, 255, 0.65);
 }
 
+/* Navigation bar */
 nav {
-	padding-top: 20px;
-	padding-bottom: 20px;
 	background: linear-gradient(to bottom, #2b2d32, #3b3d42);
+	overflow: hidden;
+	/* center navigation menu items */
+	text-align: center;
 }
 
 ul {
@@ -222,27 +224,79 @@ article header {
 	position: static;
 }
 
-nav ul {
-	list-style-type: none;
-	text-align: center;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-nav li {
-	display: inline;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
+/* Links inside navigation bar */
 nav a {
+	padding: 14px 16px;
 	font-style: normal;
-	font-family: Arvo, Times, "Times New Roman"; 
-	font-size: 17px;
-	text-shadow: 0 1px 1px black;
+	font-size: 16px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.65);
+	background-color: inherit;
 }
 
-/* highlight current navigation link */
-nav #current {
-	color: white;	
+.dropdown {
+	/* 
+		The inside of element with a  class name of "dropdown" is formatted as 
+		block-level box, and the element itself is formatted as an inline-level box.
+	*/
+	display: inline-block;
+}
+
+/* Dropdown button styling */
+.dropbtn {
+	padding: 14px 16px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.65);
+	background-color: inherit;
+}
+
+/* 
+	Change the background color of links inside the navigation bar. Change the 
+	background color of the dropdown button  when you hover the mouse over the 
+	dropdown container (that includes the dropbutton & dropdown content)
+*/
+nav a:hover, .dropdown:hover .dropbtn {
+	background-color: red;
+}
+
+/* Dropdown content */
+.dropdown-content {
+	/* hidden by default */
+	display: none;
+	position: absolute;
+	background-color: #00ff00;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	/* 
+		An element with gretaer stack order is always in front of an element with a
+	 	lower stack order.
+	*/
+	z-index: 1;
+}
+
+/* Links inside dropdown content */
+.dropdown-content a {
+	color: red;
+	padding: 10px 16px;
+	/* Links are inline by default */
+	display: block;
+	text-align: left;
+}
+
+/* 
+	Change the background color of links that are inside the dropdown content on
+	hover.
+*/   
+.dropdown-content a:hover {
+	background-color: #0000ff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
 }
