@@ -234,6 +234,7 @@ nav a {
 	color: rgba(255, 255, 255, 0.65);
 	background-color: inherit;
 	transition: .3s background-color;
+	text-shadow: 0px 1px 0px black;
 }
 
 .dropdown {
@@ -255,6 +256,7 @@ nav a {
 	color: rgba(255, 255, 255, 0.65);
 	background-color: inherit;
 	transition: .3s background-color;
+	text-shadow: 0px 1px 0px black;
 }
 
 /* 
@@ -265,6 +267,7 @@ nav a {
 nav a:hover, .dropdown:hover .dropbtn {
 	background-color: #005f5f;
 	cursor: pointer;
+	color: white;
 }
 
 /* Dropdown content */
@@ -272,7 +275,6 @@ nav a:hover, .dropdown:hover .dropbtn {
 	/* hidden by default */
 	display: none;
 	position: absolute;
-	background-color: #00ff00;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	/* 
@@ -284,12 +286,15 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 /* Links inside dropdown content */
 .dropdown-content a {
-	color: red;
+	color: rgba(255, 255, 255, 0.65);
+	background-color: #005f5f;
 	padding: 10px 16px;
 	/* Links are inline by default */
 	display: block;
 	text-align: left;
 	font-size: 15px;
+	transition: .3s background-color;
+	text-shadow: none;
 }
 
 /* 
@@ -297,7 +302,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 	hover.
 */   
 .dropdown-content a:hover {
-	background-color: #0000ff;
+	background-color: #007f7f;
 }
 
 /* Show the dropdown menu on hover */
