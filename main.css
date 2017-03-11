@@ -261,7 +261,7 @@ nav a {
 	dropdown container (that includes the dropbutton & dropdown content)
 */
 nav a:hover, .dropdown:hover .dropbtn {
-	background-color: red;
+	background-color: #005f5f;
 }
 
 /* Dropdown content */
