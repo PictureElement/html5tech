@@ -276,7 +276,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 	display: none;
 	position: absolute;
 	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	/* 
 		An element with gretaer stack order is always in front of an element with a
 	 	lower stack order.
@@ -312,4 +312,9 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 .arrow {
 	font-size: 11px;
+}
+
+/* Highlight current navigation link (Home, HTML, CSS, ...) */
+nav #current {
+	color: white;
 }
