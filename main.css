@@ -91,7 +91,7 @@ a {
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.65);
 	/* Add transition to links when they're hovered over */
-	transition: color 0.2s ease-in-out 0.1s;
+	transition: .3s color;
 }
 
 header {
