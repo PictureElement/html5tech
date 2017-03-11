@@ -228,7 +228,7 @@ article header {
 nav a {
 	padding: 14px 16px;
 	font-style: normal;
-	font-size: 16px;
+	font-size: 19px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.65);
@@ -249,7 +249,7 @@ nav a {
 	padding: 14px 16px;
 	border: none;
 	outline: none;
-	font-size: 16px;
+	font-size: 19px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.65);
@@ -289,6 +289,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 	/* Links are inline by default */
 	display: block;
 	text-align: left;
+	font-size: 15px;
 }
 
 /* 
@@ -302,4 +303,8 @@ nav a:hover, .dropdown:hover .dropbtn {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
 	display: block;
+}
+
+.arrow {
+	font-size: 11px;
 }
