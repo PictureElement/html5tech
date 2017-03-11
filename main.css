@@ -233,6 +233,7 @@ nav a {
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.65);
 	background-color: inherit;
+	transition: .3s background-color;
 }
 
 .dropdown {
@@ -253,6 +254,7 @@ nav a {
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.65);
 	background-color: inherit;
+	transition: .3s background-color;
 }
 
 /* 
