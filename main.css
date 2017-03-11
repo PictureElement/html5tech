@@ -266,6 +266,10 @@ nav a:hover, .dropdown:hover .dropbtn {
 	background-color: #005f5f;
 }
 
+nav a:active {
+	color: white;
+}
+
 /* Dropdown content */
 .dropdown-content {
 	/* hidden by default */
