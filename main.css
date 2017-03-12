@@ -178,6 +178,16 @@ a:hover {
 	color: white;
 }
 
+/* Social icon's default opacity */
+.social-icon {
+	opacity: 0.5;
+}
+
+/* Social icon's opacity on hover */
+a:hover .social-icon {
+	opacity: 1;
+}
+
 .code-wrapper {
 	background-color: #ffffff;
 	border-radius: 10px;
