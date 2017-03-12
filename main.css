@@ -89,7 +89,7 @@ a {
 	font-size: 12px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(255, 255, 255, 0.5);
 	/* Add transition to links when they're hovered over */
 	transition: .3s color;
 }
@@ -140,7 +140,7 @@ address {
 	font-size: 12px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(255, 255, 255, 0.5);
 }
 
 time {
@@ -148,7 +148,7 @@ time {
 	font-style: italic;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(255, 255, 255, 0.5);
 }
 
 /* Navigation bar */
@@ -236,7 +236,7 @@ nav a {
 	font-size: 19px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(255, 255, 255, 0.5);
 	background-color: inherit;
 	transition: .3s background-color;
 	text-shadow: 0px 1px 0px black;
@@ -258,7 +258,7 @@ nav a {
 	font-size: 19px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(255, 255, 255, 0.5);
 	background-color: inherit;
 	transition: .3s background-color;
 	text-shadow: 0px 1px 0px black;
@@ -291,7 +291,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 /* Links inside dropdown content */
 .dropdown-content a {
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(255, 255, 255, 0.5);
 	background-color: #005f5f;
 	padding: 10px 16px;
 	/* Links are inline by default */
