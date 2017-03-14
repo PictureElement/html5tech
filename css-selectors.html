@@ -1,0 +1,190 @@
+<!-- 
+	Author: Marios Sofokleous
+	Description: This page demonstrates some new features of HTML5 
+	Date: 14.03.2017
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  	<link rel="stylesheet" href="main.css">
+		<title>Home</title>
+	</head>
+	<body>
+		<header>
+			<h1>Front-end Web Development</h1>
+			<nav>
+      	<a id="current" href="home.html">Home</a>
+      	<div class="dropdown">
+      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+				<div class="dropdown">
+      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="updated-tags.html">Updated Tags</a>
+      			<a href="updated-elements.html">Updated Elements</a>
+      			<a href="new-elements.html">New Elements</a>
+      			<a href="new-input-types.html">New Input Types</a>
+      			<a href="new-input-attributes.html">New Input Attributes</a>
+      			<a href="new-form-elements.html">New Form Elements</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="css-selectors.html">CSS Selectors</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">CSS3<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+  		</nav>
+		</header>
+    <main role="main">
+      <article>
+        <header>
+          <h2>CSS Selectors</h2>
+          <div class="byline-wrapper">
+            <img src="images/avatar.png" alt="avatar" width="40px">
+            <p>
+              <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+              <br>
+              <time datetime="2017-03-14">Mar 14, 2017</time>
+            </p>
+          </div>
+        </header>
+        <section>
+          <h3>CSS Descendant Selector</h3>
+          <h4>Description</h4>
+          <p>
+            To apply a CSS rule to a single tag or a subset of tags we use a 
+            descendant selector.
+          </p>
+          <h4>Example</h4>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              ul li {<br>
+                font-size: 24px;<br>
+              }<br>
+            </p>
+          </div>
+          <p>
+            The CSS rule above selects only &ltli&gt tags that are children of 
+            &ltul&gt tags.
+          </p>
+        </section>
+        <section>
+          <h3>CSS Pseudo-selector</h3>
+          <h4>Description</h4>
+          <p>
+            A modifier that can be added to a selector to select a tag only when
+            a certain condition has occured.
+          </p>
+          <h4>Example #1</h4>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              a {<br>
+                text-decoration: none;<br>
+              }<br>
+            </p>
+            <p>
+              a:hover {<br>
+                text-decoration: underline;<br>
+                color: darkred;<br>
+              }<br>
+            </p>
+          </div>
+          <p>
+            The "hover" pseudo-selector is used. The rule is only going to be 
+            applied when the mouse is hovering over the link.
+          </p> 
+          <h4>Example #2</h4>
+          <h5>HTML</h5>
+          <div class="code-wrapper">
+            <p>
+              ...<br>
+              &ltul&gt<br>
+                &ltli&gt2 egss&lt/li&gt<br>
+                &ltli&gt1 pound of sugar&lt/li&gt<br>
+              &lt/ul&gt<br>
+              ...<br>
+            </p>
+          </div>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              ul li:first-child {<br>
+                color: red;<br>
+              }<br>
+            </p>
+          </div>
+          <p>
+            The "first-child" pseudo-selector is applied to narrow down the 
+            amount of child tags selected. The style is applied only on the "2 
+            eggs" line.
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <a href="">
+        <img src="images/googleplus-logo.png" alt="google plus logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/fb-logo.png" alt="facebook logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/instagram-logo.png" alt="instagram logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/twitter-logo.png" alt="twitter logo" width="30px" class="social-icon">
+      </a>
+      <address>
+        &copy 2017 <a href="pictureelement@yandex.com">PictureElement</a>
+      </address>
+    </footer>
+  </body>
+</html>
+
+
+
+		
