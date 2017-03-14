@@ -164,6 +164,11 @@ ul {
 	padding-right: 5px;
 }
 
+ol {
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
 li {
 	font-size: 15px;
 	font-weight: 100;
