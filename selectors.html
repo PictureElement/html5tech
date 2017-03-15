@@ -115,52 +115,163 @@
             A modifier that can be added to a selector to select a tag only when
             a certain condition has occured.
           </p>
-          <h4>Example #1</h4>
-          <h5>CSS</h5>
-          <div class="code-wrapper">
-            <p>
-              a {<br>
-                text-decoration: none;<br>
-              }<br>
-            </p>
-            <p>
-              a:hover {<br>
-                text-decoration: underline;<br>
-                color: darkred;<br>
-              }<br>
-            </p>
-          </div>
-          <p>
-            The "hover" pseudo-selector is used. The rule is only going to be 
-            applied when the mouse is hovering over the link.
-          </p> 
-          <h4>Example #2</h4>
-          <h5>HTML</h5>
-          <div class="code-wrapper">
-            <p>
-              ...<br>
-              &lt;ul&gt;<br>
-                &lt;li&gt;2 egss&lt;/li&gt;<br>
-                &lt;li&gt;1 pound of sugar&lt;/li&gt;<br>
-              &lt;/ul&gt;<br>
-              ...<br>
-            </p>
-          </div>
-          <h5>CSS</h5>
-          <div class="code-wrapper">
-            <p>
-              ul li:first-child {<br>
-                color: red;<br>
-              }<br>
-            </p>
-          </div>
-          <p>
-            The "first-child" pseudo-selector is applied to narrow down the 
-            amount of child tags selected. The style is applied only on the "2 
-            eggs" line.
-          </p>
+          <h4>Examples</h4>
+          <ol>
+          	<li>
+          		A "hover" pseudo-selector is used. The rule is only going to be 
+            	applied when the mouse is hovering over the link.
+            </li>
+	          <h5>CSS</h5>
+	          <div class="code-wrapper">
+	            <p>
+	              a {<br>
+	                text-decoration: none;<br>
+	              }<br>
+	            </p>
+	            <p>
+	              a:hover {<br>
+	                text-decoration: underline;<br>
+	                color: darkred;<br>
+	              }<br>
+	            </p>
+	         	</div>
+	         	<li>
+	         		The "first-child" pseudo-selector is applied to narrow down the 
+            	amount of child tags selected. The style is applied only on the "2 
+            	eggs" line.
+            </li>
+        		<h5>HTML</h5>
+          	<div class="code-wrapper">
+	            <p>
+	              ...<br>
+	              &lt;ul&gt;<br>
+	                &lt;li&gt;2 egss&lt;/li&gt;<br>
+	                &lt;li&gt;1 pound of sugar&lt;/li&gt;<br>
+	              &lt;/ul&gt;<br>
+	              ...<br>
+	            </p>
+          	</div>
+          	<h5>CSS</h5>
+	          <div class="code-wrapper">
+	            <p>
+	              ul li:first-child {<br>
+	                color: red;<br>
+	              }<br>
+	            </p>
+	          </div>
         </section>
-      </article>
+        <section>
+          <h3>Class selector</h3>
+          <h4>Description</h4>
+          <p>
+          	The <i>.class</i> selector selects elements with a specific class attribute.
+          </p>
+          <h4>Syntax</h4>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+          	<p>
+          		<i>.class</i> {<br>
+          		&nbsp;&nbsp;<i>declarations;</i><br>
+          		}
+          	</p>
+          </div>
+          <h4>Examples</h4>
+       		<ol>
+     				<li>Select and style only one &lt;ul&gt;.</li>
+     				<h5>HTML</h5>
+     				<div class="code-wrapper">
+		        	<p>
+			          &lt;ul class="nav"&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;&lt;a href="recipes.html"&gt;Recipes&lt;/a&gt;&lt;/li&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
+				  			&lt;/ul&gt;
+				  		</p>
+				  	</div>
+			  		<h5>CSS</h5>
+			  		<div class="code-wrapper">
+			  			<p>
+			  				.nav {<br>
+			  				&nbsp;&nbsp;<i>declarations;</i><br>
+			  				}
+			  			</p>
+		  			</div>
+		  			<li>
+		  				Change the style of only &lt;a&gt; tags that are inside of a 
+		  				&lt;ul&gt; tag with a class of <i>nav</i>.
+		  			</li>
+		  			<h5>HTML</h5>
+     				<div class="code-wrapper">
+		        	<p>
+			          &lt;ul class="nav"&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;&lt;a href="recipes.html"&gt;Recipes&lt;/a&gt;&lt;/li&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
+				  			&lt;/ul&gt;
+				  		</p>
+				  	</div>
+				  	<h5>CSS</h5>
+			  		<div class="code-wrapper">
+			  			<p>
+			  				.nav a {<br>
+							 	&nbsp;&nbsp;<i>declarations;</i><br>
+								}
+							</p>
+						</div>
+						<li>We want only the navigation list to display inline.</li>
+						<h5>HTML</h5>
+     				<div class="code-wrapper">
+		        	<p>
+			          &lt;ul class="nav"&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;&lt;a href="recipes.html"&gt;Recipes&lt;/a&gt;&lt;/li&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
+				  			&lt;/ul&gt;
+				  		</p>
+				  		<p>
+								&lt;ul&gt;<br>
+								&nbsp;&nbsp;&lt;li&gt;2 eggs&lt;/li&gt;<br>
+	  						&nbsp;&nbsp;&lt;li&gt;1 pound of brown sugar&lt;/li&gt;<br>
+      					&nbsp;&nbsp;&lt;li&gt;3 sticks of butter&lt;/li&gt;<br>
+								&lt;/ul&gt;
+							</p>
+						</div>
+						<h5>CSS</h5>
+     				<div class="code-wrapper">
+		        	<p>
+		        		/*<br> 
+		        		Select &lt;li&gt; elements that are children of &lt;ul&gt; 
+		        		elements with a class of <i>nav</i> and make them display 
+		        		inline.<br> 
+		        		*/<br>
+		        		.nav li {<br>
+					      &nbsp;&nbsp;display: inline;<br>
+					    	}
+					    </p>
+					  </div>
+					  <li>
+					  	We need a way to access the creator paragraph tag in our page in
+					  	order to add some specific properties. To achieve that we have to 
+					  	add a class called <i>creator</i> to each paragraph tag that 
+					  	contains the creator name.
+					  </li>
+					  <h5>HTML</h5>
+     				<div class="code-wrapper">
+     					<p>
+		        		&lt;p class="creator"&gt;creator: Marios Sofokleous&lt;/p&gt;
+		        	</p>
+		        </div>
+		        <h5>CSS</h5>
+     				<div class="code-wrapper">
+		        	<p>
+		        		.creator {<br>
+								&nbsp;&nbsp;<i>declarations;</i><br>
+								}
+							</p>
+						</div>
+					</ol>
+				</section>
+			</article>
     </main>
     <footer>
       <a href="">
@@ -184,7 +295,3 @@
     </footer>
   </body>
 </html>
-
-
-
-		
