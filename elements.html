@@ -1,7 +1,7 @@
 <!-- 
 	Author: PictureElement
 	Description: This page demonstrates some new features of HTML5 
-	Date: 28.02.2017
+	Date: 15.03.2017
 -->
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 		<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
   	<link rel="stylesheet" href="main.css">
-		<title>HTML5/New Form Elements</title>
+		<title>HTML/Elements</title>
 	</head>
 	<body>
 		<header>
@@ -77,7 +77,7 @@
 		<main role="main">
 			<article>
 				<header>
-					<h2>New Form Elements</h2>
+					<h2>Elements</h2>
 					<div class="byline-wrapper">
 						<img src="images/avatar.png" alt="avatar" width="40px">
 						<p>
@@ -88,65 +88,47 @@
 					</div>
 				</header>
 				<section>
-					<h3>Datalist</h3>
-				 	<h4>Description</h4>
-				 	<p>
-				 		The &lt;datalist&gt; element specifies a list of pre-defined options for
-				 		an &lt;input&gt; element. Users will see a drop-down list of pre-defined 
-				 		options and auto-complete suggestions as they input data.
-					</p> 
-					<h4>Example:</h4>
-					<h5>HTML5</h5>
+					<h3>Division</h3>
+					<h4>Description</h4>
+					<p>
+						The &lt;div&gt; element is a generic block-level container used to 
+						group related content. This element does not inherently represent 
+						anything, in other words it hasn't got any semantic meaning. The 
+						&lt;div&gt; element should be used <em>only</em> when no other 
+						semantic element(i.e. &lt;article&gt;, &lt;section&gt;, ...) is 
+						appropriate. This element is mainly used for styling purposes.
+					</p>
+					<h4>Example</h4>
+					<p>Style the byline(author, date, avatar) of an article:</p>
+					<h5>HTML</h5>
 					<div class="code-wrapper">
 						<p>
-							&lt;form&gt;<br>
-							&nbsp;&nbsp;Choose an OS:<br>
-							&nbsp;&nbsp;&lt;input list="operating systems"&gt;<br>
-							&nbsp;&nbsp;&lt;datalist id="operating systems"&gt;<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Windows"&gt;<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="macOS"&gt;<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Linux"&gt;<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Solaris"&gt;<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="FreeBSD"&gt;<br>
-							&nbsp;&nbsp;&lt;/datalist&gt;<br>
-							&lt;/form&gt;<br>
+							&lt;div class="byline-wrapper"&gt;<br>
+							&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="40px"&gt;<br>
+							&nbsp;&nbsp;&lt;p><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="mailto:pictureelement@yandex.com">PictureElement&lt;/a&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;time datetime="2017-02-28">Feb 28, 2017&lt;/time&gt;<br>
+							&nbsp;&nbsp;&lt;/p&gt;<br>
+							&lt;/div&gt;
 						</p>
 					</div>
-					<p>
-						<i class="notice">Notice:</i> The "list" and "id" attributes need to 
-						be the same. The &lt;input&gt; element needs to know about the 
-						&lt;datalist&gt; options.
-					</p>
-					<h5>Result</h5>
-					<div class="result-wrapper">
-						<form>
-							Choose an OS:
-							<input list="operating systems">
-							<datalist id="operating systems">
-								<option value="Windows"></option>
-								<option value="macOS"></option>
-								<option value="Linux"></option>
-								<option value="Solaris"></option>
-								<option value="FreeBSD"></option>
-							</datalist>
-						</form>
+					<h5>CSS</h5>
+					<div class="code-wrapper">
+						<p>
+							.byline-wrapper {<br>
+							&nbsp;&nbsp;<i>declarations;</i><br>
+							}<br>
+							<br>
+							.byline-wrapper img {<br>
+							&nbsp;&nbsp;<i>declarations;</i><br>
+							}<br>
+							<br>
+							.byline-wrapper p {<br>
+							&nbsp;&nbsp;<i>declarations;</i><br>
+							}
+						</p>
 					</div>
-				</section>
-				<section>
-					<h3>Keygen</h3>
-					<h4>Description</h4>
-					<p>
-						The purpose of the &lt;keygen&gt; element is to provide a secure way to 
-						authenticate users.
-					</p>
-				</section>
-				<section>
-					<h3>Output</h3>
-					<h4>Description</h4>
-					<p>
-						The &lt;output&gt; element represents the result of a 
-						calculation(like one performed by a script).
-					</p> 
 				</section>
 			</article>
 		</main>
@@ -167,7 +149,7 @@
 				<img src="images/twitter-logo.png" alt="twitter logo" width="30px" class="social-icon">
 			</a>
   		<address>
-    		&copy 2017 <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+    		&copy 2017 <a href="pictureelement@yandex.com">PictureElement</a>
   		</address>
 		</footer>
 	</body>
