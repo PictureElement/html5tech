@@ -1,0 +1,291 @@
+<!-- 
+	Author: Marios Sofokleous
+	Description: This page demonstrates some new features of HTML5 
+	Date: 15.03.2017
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  	<link rel="stylesheet" href="main.css">
+		<title>CSS/Box Model</title>
+	</head>
+	<body>
+		<header>
+			<h1>Front-end Web Development</h1>
+			<nav>
+      	<a id="current" href="home.html">Home</a>
+      	<div class="dropdown">
+      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+				<div class="dropdown">
+      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="updated-tags.html">Updated Tags</a>
+      			<a href="updated-elements.html">Updated Elements</a>
+      			<a href="new-elements.html">New Elements</a>
+      			<a href="new-input-types.html">New Input Types</a>
+      			<a href="new-input-attributes.html">New Input Attributes</a>
+      			<a href="new-form-elements.html">New Form Elements</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="selectors.html">Selectors</a>
+      			<a href="color.html">Color</a>
+      			<a href="box-model.html">Box Model</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">CSS3<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+  		</nav>
+		</header>
+    <main role="main">
+      <article>
+        <header>
+          <h2>The Box Model</h2>
+          <div class="byline-wrapper">
+            <img src="images/avatar.png" alt="avatar" width="40px">
+            <p>
+              <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+              <br>
+              <time datetime="2017-03-14">Mar 15, 2017</time>
+            </p>
+          </div>
+        </header>
+        <section>
+          <h3>Description</h3>
+          <p>
+            Every tag shown in the body is contained in an invisible rectangle 
+            called the box. The box model is a way to describe the borders and 
+            spacing in between the boxes of each tag. The box model allows us to
+            add a border around elements, and to define space between elements.
+          </p>
+        </section>
+        <section>
+          <h3>Properties</h3>
+          <ol>
+            <li>
+              <b>Content area:</b> actual content of the box, where text and 
+              images appear.
+            </li>
+            <li>
+              <b>Padding:</b> added to the top, right, bottom, or left of the 
+              content area independently. The padding clears an area around the 
+              content and is transparent.
+            </li>
+            <li>
+              <b>Border:</b> added around the top, right, bottom, or left of the
+              padding independently.
+            </li>
+            <li>
+              <b>Margin:</b> added to the top, right, bottom, or left of the 
+              border. The margin is transparent.
+            </li>
+          </ol>
+          <img src="images/box.png" alt="Box model" width="600px">
+          <h4>When should you use padding and margin?</h4>
+          <p>
+            Padding is used to control the size of a box without adjusting the 
+            size of the content inside the box.
+          </p>
+          <p>Margin is used to control the space between boxes.</p>
+          <h4>Calculate the box size</h4>
+          <p>
+            <b>box width</b> =<br>
+            content area width +<br>
+            (padding left + padding right) +<br>
+            (border left + border right) +<br>
+            (margin left + margin right)<br>
+            <br>
+            <b>box height</b> =<br>
+            content area height +<br>
+            (padding top + padding bottom) +<br>
+            (border top + border bottom) +<br>
+            (margin top + margin bottom)
+          </p>
+          <h4>Apply box model properties</h4>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              h1 {<br>
+              &nbsp;&nbsp;padding-top: 6px;<br>
+              &nbsp;&nbsp;padding-right: 3px;<br>
+              &nbsp;&nbsp;padding-bottom: 1px;<br>
+              &nbsp;&nbsp;padding-left: 0;<br>
+              }
+            </p>
+          </div>
+          <div class="code-wrapper">
+            <p>
+              h1 {<br>
+              &nbsp;&nbsp;padding: 6px 3px 1px 0;<br>
+              }
+            </p>
+          </div>
+          <div class="code-wrapper">
+            <p>
+              h1 {<br>
+              &nbsp;&nbsp;border-width: 6px;<br>
+              &nbsp;&nbsp;border-style: solid;<br>
+              &nbsp;&nbsp;border-color: black;<br>
+              }
+            </p>
+          </div>
+          <div class="code-wrapper">
+            <p>
+              h1 {<br>
+              &nbsp;&nbsp;border: 6px solid black;<br>
+              }
+            </p>
+          </div>
+          <div class="code-wrapper">
+            <p>
+              h1 {<br>
+              &nbsp;&nbsp;margin-top: 6px;<br>
+              &nbsp;&nbsp;margin-right: 2px;<br>
+              &nbsp;&nbsp;margin-bottom: 3px;<br>
+              &nbsp;&nbsp;margin-left: 0;<br>
+              }
+            </p>
+          </div>
+          <div class="code-wrapper">
+            <p>
+              h1 {<br>
+              &nbsp;&nbsp;margin: 6px 2px 3px 0;<br>
+              }
+            </p>
+          </div>
+        </section>
+        <section>
+          <h3>Browser defaults</h3>
+          <h4>Description</h4>
+          <p>
+            Browsers actually have a default styleheet for when no custom styles
+            are set. To reset default styles (padding, border, margin) in order 
+            to set the box model properties by yourself include each tag you 
+            want to reset in CSS as shown below.
+          </p>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              /* Reset browser defaults */<br>
+              html, body, div, span, applet, object, iframe, h1, h2, h3, h4,<br> 
+              h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,<br> 
+              cite, code, del, dfn, img, ins, kbd, q, s, samp, small,<br> 
+              strike, sub, sup, tt, var, u, dl, dt, dd, ol, ul, li,<br> 
+              fieldset, form, label, legend, table, caption, tbody, tfoot,<br>
+              thead, tr, th, td, article, aside, canvas, details, embed,<br>
+              figure, figcaption, footer, header, hgroup, menu, nav, output,<br> 
+              ruby, section, summary, time, mark, audio, video, em, i, b,<br> 
+              strong {<br>
+              &nbsp;&nbsp;margin: 0;<br>
+              &nbsp;&nbsp;padding: 0;<br>
+              &nbsp;&nbsp;border: 0;<br>
+              &nbsp;&nbsp;font-size: 100%;<br>
+              &nbsp;&nbsp;font: inherit;<br>
+              &nbsp;&nbsp;vertical-align: baseline;<br>
+              }
+            </p>
+          </div>
+          <p>
+            It's important to start from a baseline and not let the browser 
+            determine what your defaults are. You need to be sure that the CSS 
+            you're writting is affecting the layout.
+          </p>
+        </section>
+        <section>
+          <h3>Block-level & Inline-level Tags</h3>
+          <h4>Block-level Tags</h4>
+          <p>
+            Their content takes up the entire width of the container that they
+            are in. Examples of block-level tags are &lt;p&gt;, &lt;ul&gt;, 
+            &lt;ol&gt;, &lt;li&gt;, &lt;h1&gt;, ..., &lt;h6&gt;.
+          </p>
+          <h4>Inline-level Tags</h4>
+          <p>
+            Their content does not take up more width that it needs. Examples of 
+            inline-level tags are &lt;span&gt;, &lt;a&gt;, &lt;img&gt;, &lt;input&gt;, 
+            &lt;label&gt;.
+          </p>
+          <h4>Turning block-level into inline-level and vice versa</h4>
+          <p>
+            The <b>display</b> property specifies the type of box used for an 
+            HTML element.
+          </p>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              /* Display an element as an inline element */<br>
+              <i>element</i> {<br>
+              &nbsp;&nbsp;display: inline;<br>
+              }
+            </p>
+          </div>
+          <div class="code-wrapper">
+            <p>
+              /* Display an element as a block element */<br>
+              <i>element</i> {<br>
+              &nbsp;&nbsp;display: block;<br>
+              }
+            </p>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <a href="">
+        <img src="images/googleplus-logo.png" alt="google plus logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/fb-logo.png" alt="facebook logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/instagram-logo.png" alt="instagram logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/twitter-logo.png" alt="twitter logo" width="30px" class="social-icon">
+      </a>
+      <address>
+        &copy 2017 <a href="pictureelement@yandex.com">PictureElement</a>
+      </address>
+    </footer>
+  </body>
+</html>
