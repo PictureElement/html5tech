@@ -1,0 +1,421 @@
+<!-- 
+	Author: PictureElement
+	Description: This page demonstrates some new features of HTML5 
+	Date: 16.03.2017
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  	<link rel="stylesheet" href="main.css">
+		<title>HTML/Images</title>
+	</head>
+	<body>
+		<header>
+			<h1>Front-end Web Development</h1>
+			<nav>
+      	<a href="home.html">Home</a>
+      	<div class="dropdown">
+      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="elements.html">Elements</a>
+      			<a href="images.html">Images</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+				<div class="dropdown">
+      		<button id="current" class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="updated-tags.html">Updated Tags</a>
+      			<a href="updated-elements.html">Updated Elements</a>
+      			<a href="new-elements.html">New Elements</a>
+      			<a href="new-input-types.html">New Input Types</a>
+      			<a href="new-input-attributes.html">New Input Attributes</a>
+      			<a href="new-form-elements.html">New Form Elements</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="selectors.html">Selectors</a>
+      			<a href="color.html">Color</a>
+      			<a href="box-model.html">Box Model</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">CSS3<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+  		</nav>
+		</header>
+		<main role="main">
+			<article>
+				<header>
+					<h2>Images</h2>
+					<div class="byline-wrapper">
+						<img src="images/avatar.png" alt="avatar" width="40px">
+						<p>
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-03-16">Mar 16, 2017</time>
+						</p>
+					</div>
+				</header>
+				<section>
+          <h3>Image Types</h3>
+          <ol>
+            <li>
+              <b>Content images:</b> just as necessary to the page as all of the 
+              text(i.e. product images).
+            </li>
+            <li>
+              <b>Layout images:</b> not necessary to understand the content of 
+              the page(i.e. background images).
+            </li>
+            <li>
+              <b>User interface images:</b> assist with the interface of the web
+              page, but are not required to understand the content of the page.
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h3>Content Images</h3>
+          <h4>Description</h4>
+          <p>
+            The &lt;img&gt; element represents an image in the document. This 
+            element has two required attributes: src and alt. Most browsers will 
+            display the &lt;img&gt; element as <i>inline-block</i>.
+          </p>
+          <h4>Basic Syntax</h4>
+          <h5>HTML</h5>
+          <div class="code-wrapper">
+            <p>
+              &lt;img src="images/logo.png" alt="logo" height="50" width="50"&gt;
+            </p>
+          </div>
+          <p>
+            It is recommended to place the image files in a separate folder, not
+            in the main site folder which includes all of our HTML and CSS.
+          </p>
+          <p>
+            where:
+            <ul>
+              <li>
+                <i>src</i>: specify the URL of an image.
+              </li>
+              <li>
+                <i>alt</i>: specify an alternate text for an image for 
+                accessibility reasons.
+              </li>
+              <li>
+                <i>height/width</i>: specify the height/width of an image in 
+                pixels.
+              </li>
+            </ul>
+          </p>
+          <h4>Examples</h4>
+          <ol>
+            <li>Insert an image</li>
+            <h5>HTML</h5>
+            <div class="code-wrapper">
+              <p>
+                &lt;img src="youtube-logo.png" alt="YouTube"&gt;
+              </p>
+            </div>
+            <h5>Result</h5>
+            <img src="images/youtube-logo.png" alt="YouTube" width="30">
+            <li>Insert an image link</li>
+            <h5>HTML</h5>
+            <div class="code-wrapper">
+              <p>
+                &lt;a href="https://youtube.com&gt;YouTube&lt;img 
+                src="youtube-logo.png" alt="YouTube"&gt;&lt;/a&gt;
+              </p>
+            </div>
+            <h5>Result</h5>
+            <a href="https://youtube.com"><img src="images/youtube-logo.png" alt="YouTube" width="30"></a>
+            <li>Side-by-side images</li>
+            <h5>HTML</h5>
+            <div class="code-wrapper">
+              <p>
+                &lt;ul class="images"&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;&lt;img src="images/google-logo.png" alt="Google logo"&gt;&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;&lt;img src="images/yandex-logo.png" alt="Yandex logo"&gt;&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;&lt;img src="images/amazon-logo.jpg" alt="Amazon logo"&gt;&lt;/li&gt;<br>
+                &lt;/ul&gt;
+              </p>
+            </div>
+            <p>
+              Without CSS, each one of the images displays on top of each other 
+              and has a bullet point. To make the images display side-by-side 
+              and remove the bullets, we need to jump over CSS.
+            </p>
+            <h5>CSS</h5>
+            <div class="code-wrapper">
+              <p>
+                .images {<br>
+                &nbsp;&nbsp;/* Remove bullets */<br>
+                &nbsp;&nbsp;list-style-type: none;<br>
+                &nbsp;&nbsp;/* Remove padding */<br>
+                &nbsp;&nbsp;padding: 0;<br>
+                }<br>
+                <br>
+                .images li {<br>
+                &nbsp;&nbsp;/* Display images inline */<br>
+                &nbsp;&nbsp;display: inline;<br>
+                &nbsp;&nbsp;/* Add a padding on the left so all images aren't 
+                just pushed right against each other. */<br>
+                &nbsp;&nbsp;padding-left: 10px;<br>
+                }
+              </p>
+            </div>
+            <h5>Result</h5>
+            <ul class="images">
+              <li><img src="images/google-logo.png" alt="Google logo" width="60"></li>
+              <li><img src="images/yandex-logo.png" alt="Yandex logo" width="60"></li>
+              <li><img src="images/amazon-logo.jpg" alt="Amazon logo" width="60"></li>
+            </ul>
+          </ol>
+        </section>
+        <section>
+          <h3>Layout Images</h3>
+          <h4>Description</h4>
+          <p>
+            Unlike content images, layout/background images are not added in 
+            HTML but only in CSS.
+          </p>
+          <h4>Background Properties</h4>
+          <ol>
+            <li><b>background-color</b></li>
+            <h5>CSS</h5>
+            <div class="code-wrapper">
+              <p>
+                body {<br>
+                &nbsp;&nbsp;background-color: #5f5f5f;<br>
+                }
+              </p>
+            </div>
+            <p>
+              Tip: you should always set a background color in case the 
+              background image fails to load. If the background image is dark, 
+              set the background to a dark color as well.
+            </p>
+            <li><b>background-image</b></li>
+            <h5>CSS</h5>
+            <div class="code-wrapper">
+              <p>
+                body {<br>
+                &nbsp;&nbsp;background-image: url(images/foo.png);<br>
+                }
+              </p>
+            </div>
+            <p>
+              Tip: check 
+              <a href="https://www.toptal.com/designers/subtlepatterns/">here</a>
+              for free background images/patterns.
+            </p>
+            <li><b>background-position</b></li>
+            <h5>CSS</h5>
+            <div class="code-wrapper">
+              <p>
+                body {<br>
+                &nbsp;&nbsp;background-position: <i>value</i>;<br>
+                }
+              </p>
+            </div>
+            <p>
+              where:
+              <ul>
+                <li>
+                  <i>value</i> = <i>keyword/x% y%/xpos ypos</i>
+                </li>
+                <li>
+                  <i>keyword</i> = left top, left center, left bottom, 
+                  right top, right center, right bottom, center top, 
+                  center center, center bottom.
+                </li>
+                <li>
+                  <i>x% y%</i>: top left corner is 0% 0%, right bottom corner is 
+                  100% 100%.
+                </li>
+                <li>
+                  <i>xpos ypos</i>: top left corner is 0 0, units can be any CSS 
+                  units(i.e. px, em, etc.).
+                </li>
+              </ul>
+            </p>
+            <li><b>background-repeat</b></li>
+            <h5>CSS</h5>
+            <div class="code-wrapper">
+              <p>
+                body {<br>
+                &nbsp;&nbsp;background-position: top left;<br>
+                &nbsp;&nbsp;background-repeat: repeat/repeat-x/repeat-y/no-repeat;<br>
+                }
+              </p>
+            </div>
+            <p>
+              where:
+              <ul>
+                <li>
+                  <i>repeat</i>: repeat background image both vertically and 
+                  horizontally(default).
+                </li>
+                <li>
+                  <i>repeat-x</i>: repeat background image just in the 
+                  x-directon.
+                </li>
+                <li>
+                  <i>repeat-y</i>: repeat background image just in the 
+                  y-directon.
+                </li>
+                <li>
+                  <i>no-repeat</i>: don't repeat at all.
+                </li>
+              </ul>
+            </p>
+            <li><b>background-size</b></li>
+            <h5>CSS</h5>
+            <div class="code-wrapper">
+              <p>
+                body {<br>
+                &nbsp;&nbsp;background-size: <i>width height</i> | cover | contain;<br>
+                }
+              </p>
+            </div>
+            <p>
+              where:
+              <ul>
+                <li>
+                  <i>width height</i>: set the image dimensions.</li>
+                </li>
+                <li>
+                  cover: scale the background image to be as large as possible 
+                  so that the background area is completely covered by the 
+                  background image.
+                </li>
+                <li>
+                  contain: scale the image to the largest size such that both 
+                  its width and its height can fit inside the content area.
+                </li>
+              </ul>
+          </ol>
+          <h4>Background Shorthand Property</h4>
+          <p>
+            Background properties can be shortened into a single background 
+            property:
+          </p>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              body {<br>
+              &nbsp;&nbsp;background: <i>bg-color</i> <i>bg-image</i> <i>bg-position</i>/<i>bg-size</i> <i>bg-repeat</i>;<br>
+              }
+            </p>
+          </div>
+          <p>
+            <b>Note</b>: If one of the properties in the shorthand declaration 
+            is the <i>bg-size</i> property, you must use a / (slash) to separate
+            it from the <i>bg-position</i> property.
+          </p>
+          <h4>Writing on Top of Background Images</h4>
+          <p>
+            Setup containers that display backgrounds/layout images and then add
+            text tags on top of them.
+          </p>
+          <p>  
+            One way to do this, is to create a &lt;div&gt; container that completely 
+            contains a background image, and put text tags inside of it:
+          </p>
+          <h5>HTML</h5>
+          <div class="code-wrapper">
+            <p>
+              &lt;div class="featured-image"&gt;<br>
+              &nbsp;&nbsp;&lt;!-- Add a text tag of your choice on top of the 
+              featured image --&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt;Sneakers up to 30% off&lt;/p&gt;<br>
+              &lt;/div&gt;
+            </p>
+          </div>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              .featured-image {<br>
+              &nbsp;&nbsp;/* Actual width of the &lt;div&gt; container */<br>
+              &nbsp;&nbsp;width: 200px;<br>
+              &nbsp;&nbsp;/* Actual height of the &lt;div&gt; container */<br>
+              &nbsp;&nbsp;height: 100px;<br>
+              &nbsp;&nbsp;/* Background image properties */<br>
+              &nbsp;&nbsp;background: #ffffff url(images/sneakers.jpg) 0 0/200px 100px no-repeat;<br>
+              }
+            </p>
+            <br>
+            <p>
+              /* Style the &lt;p&gt; tag by setting various properties */<br>
+              .featured-image p {<br>
+              &nbsp;&nbsp;/* Pink background color */<br>
+              &nbsp;&nbsp;background-color: #ffc0cb;<br>
+              &nbsp;&nbsp;/* Green font color */<br>
+              &nbsp;&nbsp;color: #008000;<br>
+              &nbsp;&nbsp;/* Adjust the padding */<br>
+              &nbsp;&nbsp;padding: 5px 0 5px 0;<br>
+              &nbsp;&nbsp;/* Make the text all uppercase */<br>
+              &nbsp;&nbsp;text-transform: uppercase;<br>
+              }
+            </p>
+          </div>
+          <h5>Result</h5>
+          <div class="featured-image">
+            <p>Sneakers up to 30% off</p>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <a href="">
+        <img src="images/googleplus-logo.png" alt="google plus logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/fb-logo.png" alt="facebook logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/instagram-logo.png" alt="instagram logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30px" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/twitter-logo.png" alt="twitter logo" width="30px" class="social-icon">
+      </a>
+      <address>
+        &copy 2017 <a href="pictureelement@yandex.com">PictureElement</a>
+      </address>
+    </footer>
+  </body>
+</html>
