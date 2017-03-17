@@ -325,6 +325,7 @@
                   its width and its height can fit inside the content area.
                 </li>
               </ul>
+             </p>
           </ol>
           <h4>Background Shorthand Property</h4>
           <p>
@@ -395,7 +396,75 @@
             <p>Sneakers up to 30% off</p>
           </div>
         </section>
-      </article>
+        <section>
+          <h3>Floating Images</h3>
+          <h4>Description</h4>
+          <p>
+          	To display an image to the side of block level tags, in other words 
+          	to have an image sitting to the left/right of some text we use the 
+          	<i>float</i> property.
+          </p>
+          <h4>Example</h4>
+          <h5>HTML</h5>
+          <div class="code-wrapper">
+	          <p>
+	          	&lt;ul class="cakes"&gt;<br>
+							&nbsp;&nbsp;&lt;li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/strawberry-cake.jpg" alt="strawberry cake" height="90"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Strawberry Cake&lt;/h2&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Description: This is a dangerously delicious cake!&lt;/p&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Creator: Marios Sofokleous&lt;/p&gt;<br>
+							&nbsp;&nbsp;&lt;/li&gt;<br>
+							&nbsp;&nbsp;&lt;li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/unknown-cake.jpg" alt="unknown cake" height="90"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Unknown Cake&lt;/h2&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Description: Chocolate, strawberry, cookies, maltesers ... you name it!&lt;/p&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Creator: Marios Sofokleous&lt;/p&gt;<br>
+							&nbsp;&nbsp;&lt;/li&gt;<br>
+							&lt;/ul&gt;
+						</p>
+					</div>
+					<h5>CSS</h5>
+          <div class="code-wrapper">
+ 						<p>
+ 							.cakes {<br>
+							&nbsp;&nbsp;/* Remove bullets */<br>
+							&nbsp;&nbsp;list-style-type: none;<br>
+							}
+						</p>
+						<p>
+ 							.cakes img {<br>
+ 							&nbsp;&nbsp;/* Float image to the left in order to wrap text around it */<br>
+							&nbsp;&nbsp;float: left;<br>
+							&nbsp;&nbsp;margin-top: 2px;<br>
+  						&nbsp;&nbsp;border-radius: 50%;<br>
+  						&nbsp;&nbsp;border: 1px solid black;<br>
+ 							}
+ 						</p>
+ 					</div>
+ 					<h5>Result</h5>
+ 					<div class="result-wrapper">
+	 					<ul class="cakes">
+						  <li>
+						    <img src="images/strawberry-cake.jpg" alt="strawberry cake" height="90">
+						    <h2>Strawberry Cake</h2>
+						    <p>Description: This is a dangerously delicious cake!</p>
+						    <p>Creator: Marios Sofokleous</p>
+						  </li>
+						  <li>
+						    <img src="images/unknown-cake.jpg" alt="unknown cake" height="90">
+						    <h2>Unknown Cake</h2>
+						    <p>Description: Chocolate, strawberry, cookies, maltesers ... you name it!</p>
+						    <p>Creator: Marios Sofokleous</p>
+						  </li>
+						</ul>
+					</div>
+					<p>
+						<b>Note:</b> in reality <i>float</i> is a tricky property, and is 
+						covered in much greater detail <a href="">here</a>.
+					</p> 
+				</section>
+			</article>
     </main>
     <footer>
       <a href="">
