@@ -400,3 +400,16 @@ nav a:hover, .dropdown:hover .dropbtn {
 nav #current {
 	color: white;
 }
+
+.green-box {
+  line-height: 1.5;
+  border: solid green;
+  display: inline-block;
+  vertical-align: top;
+}
+.red-box {
+  line-height: 20px;
+  border: solid red;
+  display: inline-block;
+  vertical-align: top;
+}
