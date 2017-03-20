@@ -30,10 +30,9 @@ h1 {
 	font-weight: 900;
 	text-align: center;
 	font-family: Arvo, Times, "Times New Roman"; 
-	color: #2b2d32;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	color: #de1b1b;
 	text-shadow: 0 1px 1px #8c8c90;
+	margin-top: 20px;
 }
 
 h2 {
@@ -407,9 +406,16 @@ nav #current {
   display: inline-block;
   vertical-align: top;
 }
+
 .red-box {
   line-height: 20px;
   border: solid red;
   display: inline-block;
   vertical-align: top;
+}
+
+.tagline h4 {
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0 0 20px 0;
 }
