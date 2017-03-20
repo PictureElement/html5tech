@@ -2,7 +2,7 @@
 
 This project is an ever-changing web page dedicated to front-end fundamentals. 
 The primary use of this page is to demonstrate major topics/concepts in HTML, 
-CSS, and JacaScript in the form of mini tutorials.
+CSS, and JacaScript.
 
 ## Example
 
@@ -51,9 +51,9 @@ Each topic/concept is an HTML document by itself organized as follows:
 
 ## Contribution
 
-Feel free to be part of this project. Create now your own page (mini tutorial) 
-regarding a specific topic/concept in HTML, CSS or JS. Just remember to be 
-consistent with the site's structure. 
+Feel free to be part of this project. Create now your own page regarding a 
+specific topic/concept in HTML, CSS or JS. Just remember to be consistent with 
+the site's structure. 
 
 ## Disclaimer 
 
