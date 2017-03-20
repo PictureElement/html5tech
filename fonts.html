@@ -360,6 +360,117 @@
             </div>
           </div>
         </section>
+        <section>
+          <h3>Web Fonts</h3>
+          <h4>Description</h4>
+          <p>
+            <i>Adobe Typekit</i> and <i>Google Fonts</i> are examples of web 
+            font embedding services, which allow the use of fonts hosted on 
+            their servers.
+          </p>
+          <h4>Method #1: @import</h4>
+          <p>
+            To embed a selected font from <i>Google Fonts</i> into a webpage, 
+            use the <i>@import</i> method as follows:
+          </p>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              /* Google Web Fonts: Sans Serif type */<br>
+              @import url('https://fonts.googleapis.com/css?family=Lato');
+            </p>
+            <p>
+              /* Google Web Fonts: Serif type */<br>
+              @import url('https://fonts.googleapis.com/css?family=Arvo');
+            </p>
+            <p>
+              /* Google Web Fonts: Monoscape type */<br>
+              @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+            </p>
+          </div>
+          <p>
+            <b>Note:</b> <i>@import</i> rules <strong>must</strong> be placed at the top
+            of a stylesheet, before any other rules.
+          </p> 
+          <h4>Method #2: @font-face</h4>
+          <p>
+            <i>@font-face</i> allows us to specify downloadable fonts for use on 
+            our website.
+          </p>
+          <p>
+            The first step is to decide which font we want to use and download
+            it. In this example, we're going to use <i>Lato</i> from <i>Google 
+            Fonts</i>. Once the font is downloaded, we need to upload the font's 
+            files within the website's main directory.
+          </p>
+          <p>
+            The next thing we need to do, is to modify the CSS file with the 
+            <i>@font-face</i> decalarations.
+          </p>
+          <p>
+            To add the regular version of "MySansSerif" in our stylesheet, we 
+            have to create a new <i>@font-face</i> declaration :
+          </p>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              @font-face {<br>
+              &nbsp;&nbsp;font-family: MySansSerif;<br>
+              &nbsp;&nbsp;src: url("fonts/Lato/Lato-Regular.ttf");<br>
+              &nbsp;&nbsp;font-style: normal;<br>
+              &nbsp;&nbsp;font-weight: normal;<br>
+              }
+            </p>
+            <p>
+              <i>element</i> {<br>
+              &nbsp;&nbsp;font-family: "MySansSerif", Helvetica, Arial;<br>
+              }
+            </p>
+          </div>
+          <p><b>Note:</b> *Helvetica, Arial are used as fallbacks.</p>
+          <p>
+            To add the bold version of "MySansSerif" in our stylesheet, we have 
+            to create a new <i>@font-face</i> declaration :
+          </p>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              @font-face {<br>
+              &nbsp;&nbsp;font-family: MySansSerif;<br>
+              &nbsp;&nbsp;src: url("fonts/Lato/Lato-Bold.ttf");<br>
+              &nbsp;&nbsp;font-style: normal;<br>
+              &nbsp;&nbsp;font-weight: bold;<br>
+              }
+            </p>
+            <p>
+              <i>element</i> {<br>
+              &nbsp;&nbsp;font-family: "MySansSerif", Helvetica, Arial;<br>
+              &nbsp;&nbsp;font-weight: bold;<br>
+              }
+            </p>
+          </div>
+          <p>
+            To add the italic version of "MySansSerif" in our stylesheet, we 
+            have to create a new <i>@font-face</i> declaration :
+          </p>
+          <h5>CSS</h5>
+          <div class="code-wrapper">
+            <p>
+              @font-face {<br>
+              &nbsp;&nbsp;font-family: MySansSerif;<br>
+              &nbsp;&nbsp;src: url("fonts/Lato/Lato-Italic.ttf");<br>
+              &nbsp;&nbsp;font-style: italic;<br>
+              &nbsp;&nbsp;font-weight: normal;<br>
+              }
+            </p>
+            <p>
+              <i>element</i> {<br>
+              &nbsp;&nbsp;font-family: "MySansSerif", Helvetica, Arial;<br>
+              &nbsp;&nbsp;font-style: italic;<br>
+              }
+            </p>
+          </div>
+        </section>
       </article>
     </main>
     <footer>
