@@ -62,5 +62,6 @@ improvement is more than welcomed.
 
 ## License
 
-&#169 2017 Marios Sofokleous
+&copy; 2017 Marios Sofokleous
+
 Licensed under the [GNU General Public License v3.0](LICENSE) 
