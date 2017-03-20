@@ -34,7 +34,7 @@
 			<nav>
       	<a href="home.html">Home</a>
       	<div class="dropdown">
-      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+      		<button id="current" class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
       		<div class="dropdown-content">
       			<a href="elements.html">Elements</a>
       			<a href="images.html">Images</a>
@@ -45,7 +45,7 @@
       		</div>
       	</div>
 				<div class="dropdown">
-      		<button id="current" class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
       		<div class="dropdown-content">
       			<a href="updated-tags.html">Updated Tags</a>
       			<a href="updated-elements.html">Updated Elements</a>
@@ -108,11 +108,11 @@
           <ol>
             <li>
               <b>Content images:</b> just as necessary to the page as all of the 
-              text(i.e. product images).
+              text(e.g. product images).
             </li>
             <li>
               <b>Layout images:</b> not necessary to understand the content of 
-              the page(i.e. background images).
+              the page(e.g. background images).
             </li>
             <li>
               <b>User interface images:</b> assist with the interface of the web
@@ -200,8 +200,9 @@
                 &nbsp;&nbsp;list-style-type: none;<br>
                 &nbsp;&nbsp;/* Remove padding */<br>
                 &nbsp;&nbsp;padding: 0;<br>
-                }<br>
-                <br>
+                }
+              </p>
+             	<p>
                 .images li {<br>
                 &nbsp;&nbsp;/* Display images inline */<br>
                 &nbsp;&nbsp;display: inline;<br>
@@ -282,7 +283,7 @@
                 </li>
                 <li>
                   <i>xpos ypos</i>: top left corner is 0 0, units can be any CSS 
-                  units(i.e. px, em, etc.).
+                  units(e.g. px, em, etc.).
                 </li>
               </ul>
             </p>
@@ -392,7 +393,6 @@
               &nbsp;&nbsp;background: #ffffff url(images/sneakers.jpg) 0 0/200px 100px no-repeat;<br>
               }
             </p>
-            <br>
             <p>
               /* Style the &lt;p&gt; tag by setting various properties */<br>
               .featured-image p {<br>
