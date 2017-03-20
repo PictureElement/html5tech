@@ -59,3 +59,8 @@ consistent with the site's structure.
 
 Keep in mind that I am a beginner in this field. Any advice for personal/site
 improvement is more than welcomed. 
+
+## License
+
+&#169 2017 Marios Sofokleous
+Licensed under the [GNU General Public License v3.0](LICENSE) 
