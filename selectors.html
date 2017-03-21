@@ -90,12 +90,12 @@
       	</div>
   		</nav>
 		</header>
-    <main role="main">
+    <main>
       <article>
         <header>
           <h2>Selectors</h2>
           <div class="byline-wrapper">
-            <img src="images/avatar.png" alt="avatar" width="40px">
+            <img src="images/avatar.png" alt="avatar" width="40">
             <p>
               <a href="mailto:pictureelement@yandex.com">PictureElement</a>
               <br>
@@ -134,47 +134,52 @@
           <h4>Examples</h4>
           <ol>
           	<li>
-          		A "hover" pseudo-selector is used. The rule is only going to be 
-            	applied when the mouse is hovering over the link.
-            </li>
-	          <h5>CSS</h5>
-	          <div class="code-wrapper">
-	            <p>
-	              a {<br>
-	              &nbsp;&nbsp;text-decoration: none;<br>
-	              }
-	            </p>
-	            <p>
-	              a:hover {<br>
-	              &nbsp;&nbsp;text-decoration: underline;<br>
-	              &nbsp;&nbsp;color: darkred;<br>
-	              }
-	            </p>
-	         	</div>
+          		<p>
+          			A "hover" pseudo-selector is used. The rule is only going to be 
+            		applied when the mouse is hovering over the link:
+            	</p>
+            	<h5>CSS</h5>
+     					<div class="code-wrapper">
+		            <p>
+		              a {<br>
+		              &nbsp;&nbsp;text-decoration: none;<br>
+		              }
+		            </p>
+		            <p>
+		              a:hover {<br>
+		              &nbsp;&nbsp;text-decoration: underline;<br>
+		              &nbsp;&nbsp;color: darkred;<br>
+		              }
+		            </p>
+		         	</div>
+		        </li>
 	         	<li>
-	         		The "first-child" pseudo-selector is applied to narrow down the 
-            	amount of child tags selected. The style is applied only on the "2 
-            	eggs" line.
-            </li>
-        		<h5>HTML</h5>
-          	<div class="code-wrapper">
-	            <p>
-	              ...<br>
-	              &lt;ul&gt;<br>
-	              &nbsp;&nbsp;&lt;li&gt;2 egss&lt;/li&gt;<br>
-	              &nbsp;&nbsp;&lt;li&gt;1 pound of sugar&lt;/li&gt;<br>
-	              &lt;/ul&gt;<br>
-	              ...
-	            </p>
-          	</div>
-          	<h5>CSS</h5>
-	          <div class="code-wrapper">
-	            <p>
-	              ul li:first-child {<br>
-	              &nbsp;&nbsp;color: red;<br>
-	              }
-	            </p>
-	          </div>
+	         		<p>
+	         			The "first-child" pseudo-selector is applied to narrow down the 
+            		amount of child tags selected. The style is applied only on the 
+            		"2 eggs" line:
+            	</p>
+          		<h5>HTML</h5>
+	          	<div class="code-wrapper">
+		            <p>
+		              ...<br>
+		              &lt;ul&gt;<br>
+		              &nbsp;&nbsp;&lt;li&gt;2 egss&lt;/li&gt;<br>
+		              &nbsp;&nbsp;&lt;li&gt;1 pound of sugar&lt;/li&gt;<br>
+		              &lt;/ul&gt;<br>
+		              ...
+		            </p>
+	          	</div>
+							<h5>CSS</h5>
+		          <div class="code-wrapper">
+		            <p>
+		              ul li:first-child {<br>
+		              &nbsp;&nbsp;color: red;<br>
+		              }
+		            </p>
+		          </div>
+		        </li>
+		      </ol>
         </section>
         <section>
           <h3>Class selector</h3>
@@ -193,121 +198,130 @@
           </div>
           <h4>Examples</h4>
        		<ol>
-     				<li>Select and style only one &lt;ul&gt;.</li>
-     				<h5>HTML</h5>
-     				<div class="code-wrapper">
-		        	<p>
-			          &lt;ul class="nav"&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;&lt;a href="recipes.html"&gt;Recipes&lt;/a&gt;&lt;/li&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
-				  			&lt;/ul&gt;
-				  		</p>
-				  	</div>
-			  		<h5>CSS</h5>
-			  		<div class="code-wrapper">
-			  			<p>
-			  				.nav {<br>
-			  				&nbsp;&nbsp;<i>declarations;</i><br>
-			  				}
-			  			</p>
-		  			</div>
+     				<li>
+     					<p>Select and style only one &lt;ul&gt;:</p>
+	     				<h5>HTML</h5>
+	     				<div class="code-wrapper">
+			        	<p>
+				          &lt;ul class="nav"&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;&lt;a href="recipes.html"&gt;Recipes&lt;/a&gt;&lt;/li&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
+					  			&lt;/ul&gt;
+					  		</p>
+					  	</div>
+				  		<h5>CSS</h5>
+				  		<div class="code-wrapper">
+				  			<p>
+				  				.nav {<br>
+				  				&nbsp;&nbsp;<i>declarations;</i><br>
+				  				}
+				  			</p>
+			  			</div>
+			  		</li>
 		  			<li>
-		  				Change the style of only &lt;a&gt; tags that are inside of a 
-		  				&lt;ul&gt; tag with a class of <i>nav</i>.
-		  			</li>
-		  			<h5>HTML</h5>
-     				<div class="code-wrapper">
-		        	<p>
-			          &lt;ul class="nav"&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;&lt;a href="recipes.html"&gt;Recipes&lt;/a&gt;&lt;/li&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
-				  			&lt;/ul&gt;
-				  		</p>
-				  	</div>
-				  	<h5>CSS</h5>
-			  		<div class="code-wrapper">
-			  			<p>
-			  				.nav a {<br>
-							 	&nbsp;&nbsp;<i>declarations;</i><br>
-								}
-							</p>
-						</div>
-						<li>We want only the navigation list to display inline.</li>
-						<h5>HTML</h5>
-     				<div class="code-wrapper">
-		        	<p>
-			          &lt;ul class="nav"&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;&lt;a href="recipes.html"&gt;Recipes&lt;/a&gt;&lt;/li&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
-				  			&lt;/ul&gt;
-				  		</p>
-				  		<p>
-								&lt;ul&gt;<br>
-								&nbsp;&nbsp;&lt;li&gt;2 eggs&lt;/li&gt;<br>
-	  						&nbsp;&nbsp;&lt;li&gt;1 pound of brown sugar&lt;/li&gt;<br>
-      					&nbsp;&nbsp;&lt;li&gt;3 sticks of butter&lt;/li&gt;<br>
-								&lt;/ul&gt;
-							</p>
-						</div>
-						<h5>CSS</h5>
-     				<div class="code-wrapper">
-		        	<p>
-		        		/*<br> 
-		        		Select &lt;li&gt; elements that are children of &lt;ul&gt; 
-		        		elements with a class of <i>nav</i> and make them display 
-		        		inline.<br> 
-		        		*/<br>
-		        		.nav li {<br>
-					      &nbsp;&nbsp;display: inline;<br>
-					    	}
-					    </p>
-					  </div>
+		  				<p>
+		  					Change the style of only &lt;a&gt; tags that are inside of a 
+		  					&lt;ul&gt; tag with a class of <i>nav</i>:
+		  				</p>
+			  			<h5>HTML</h5>
+	     				<div class="code-wrapper">
+			        	<p>
+				          &lt;ul class="nav"&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;&lt;a href="recipes.html"&gt;Recipes&lt;/a&gt;&lt;/li&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
+					  			&lt;/ul&gt;
+					  		</p>
+					  	</div>
+					  	<h5>CSS</h5>
+				  		<div class="code-wrapper">
+				  			<p>
+				  				.nav a {<br>
+								 	&nbsp;&nbsp;<i>declarations;</i><br>
+									}
+								</p>
+							</div>
+						</li>
+						<li>
+							<p>We want only the navigation list to display inline:</p>
+							<h5>HTML</h5>
+	     				<div class="code-wrapper">
+			        	<p>
+				          &lt;ul class="nav"&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;&lt;a href="recipes.html"&gt;Recipes&lt;/a&gt;&lt;/li&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
+					  			&lt;/ul&gt;
+					  		</p>
+					  		<p>
+									&lt;ul&gt;<br>
+									&nbsp;&nbsp;&lt;li&gt;2 eggs&lt;/li&gt;<br>
+		  						&nbsp;&nbsp;&lt;li&gt;1 pound of brown sugar&lt;/li&gt;<br>
+	      					&nbsp;&nbsp;&lt;li&gt;3 sticks of butter&lt;/li&gt;<br>
+									&lt;/ul&gt;
+								</p>
+							</div>
+							<h5>CSS</h5>
+	     				<div class="code-wrapper">
+			        	<p>
+			        		/*<br> 
+			        		Select &lt;li&gt; elements that are children of &lt;ul&gt; 
+			        		elements with a class of <i>nav</i> and make them display 
+			        		inline.<br> 
+			        		*/<br>
+			        		.nav li {<br>
+						      &nbsp;&nbsp;display: inline;<br>
+						    	}
+						    </p>
+						  </div>
+						</li>
 					  <li>
-					  	We need a way to access the creator paragraph tag in our page in
-					  	order to add some specific properties. To achieve that we have to 
-					  	add a class called <i>creator</i> to each paragraph tag that 
-					  	contains the creator name.
-					  </li>
-					  <h5>HTML</h5>
-     				<div class="code-wrapper">
-     					<p>
-		        		&lt;p class="creator"&gt;creator: Marios Sofokleous&lt;/p&gt;
-		        	</p>
-		        </div>
-		        <h5>CSS</h5>
-     				<div class="code-wrapper">
-		        	<p>
-		        		.creator {<br>
-								&nbsp;&nbsp;<i>declarations;</i><br>
-								}
-							</p>
-						</div>
+					  	<p>
+						  	We need a way to access the creator paragraph tag in our page in
+						  	order to add some specific properties. To achieve that we have to 
+						  	add a class called <i>creator</i> to each paragraph tag that 
+						  	contains the creator name:
+						  </p>
+						  <h5>HTML</h5>
+	     				<div class="code-wrapper">
+	     					<p>
+			        		&lt;p class="creator"&gt;creator: Marios Sofokleous&lt;/p&gt;
+			        	</p>
+			        </div>
+			        <h5>CSS</h5>
+	     				<div class="code-wrapper">
+			        	<p>
+			        		.creator {<br>
+									&nbsp;&nbsp;<i>declarations;</i><br>
+									}
+								</p>
+							</div>
+						</li>
 					</ol>
 				</section>
 			</article>
     </main>
     <footer>
       <a href="">
-        <img src="images/googleplus-logo.png" alt="google plus logo" width="30px" class="social-icon">
+        <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
       </a>
       <a href="">
-        <img src="images/fb-logo.png" alt="facebook logo" width="30px" class="social-icon">
+        <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
       </a>
       <a href="">
-        <img src="images/instagram-logo.png" alt="instagram logo" width="30px" class="social-icon">
+        <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
       </a>
       <a href="">
-        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30px" class="social-icon">
+        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
       </a>
       <a href="">
-        <img src="images/twitter-logo.png" alt="twitter logo" width="30px" class="social-icon">
+        <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
       </a>
       <address>
-        &copy 2017 <a href="pictureelement@yandex.com">PictureElement</a>
+      	&copy; 2017 <a href="pictureelement@yandex.com">PictureElement</a>
       </address>
+      <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"> 
     </footer>
   </body>
 </html>

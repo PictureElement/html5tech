@@ -159,6 +159,7 @@ address {
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
+	margin: 20px 0;
 }
 
 time {

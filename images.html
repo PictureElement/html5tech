@@ -90,12 +90,12 @@
       	</div>
   		</nav>
 		</header>
-		<main role="main">
+		<main>
 			<article>
 				<header>
 					<h2>Images</h2>
 					<div class="byline-wrapper">
-						<img src="images/avatar.png" alt="avatar" width="40px">
+						<img src="images/avatar.png" alt="avatar" width="40">
 						<p>
 							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
 							<br>
@@ -139,85 +139,89 @@
             It is recommended to place the image files in a separate folder, not
             in the main site folder which includes all of our HTML and CSS.
           </p>
-          <p>
-            where:
-            <ul>
-              <li>
-                <i>src</i>: specify the URL of an image.
-              </li>
-              <li>
-                <i>alt</i>: specify an alternate text for an image for 
-                accessibility reasons.
-              </li>
-              <li>
-                <i>height/width</i>: specify the height/width of an image in 
-                pixels.
-              </li>
-            </ul>
-          </p>
+          <p>where:</p>
+          <ul>
+            <li>
+              <i>src</i>: specify the URL of an image.
+            </li>
+            <li>
+              <i>alt</i>: specify an alternate text for an image for 
+              accessibility reasons.
+            </li>
+            <li>
+              <i>height/width</i>: specify the height/width of an image in 
+              pixels.
+            </li>
+          </ul>
           <h4>Examples</h4>
           <ol>
-            <li>Insert an image</li>
-            <h5>HTML</h5>
-            <div class="code-wrapper">
+            <li>
+              Insert an image
+              <h5>HTML</h5>
+              <div class="code-wrapper">
+                <p>
+                  &lt;img src="youtube-logo.png" alt="YouTube"&gt;
+                </p>
+              </div>
+              <h5>Result</h5>
+              <img src="images/youtube-logo.png" alt="YouTube" width="30">
+            </li>
+            <li>
+              Insert an image link
+              <h5>HTML</h5>
+              <div class="code-wrapper">
+                <p>
+                  &lt;a href="https://youtube.com&gt;YouTube&lt;img 
+                  src="youtube-logo.png" alt="YouTube"&gt;&lt;/a&gt;
+                </p>
+              </div>
+              <h5>Result</h5>
+              <a href="https://youtube.com"><img src="images/youtube-logo.png" alt="YouTube" width="30"></a>
+            </li>
+            <li>
+              Side-by-side images
+              <h5>HTML</h5>
+              <div class="code-wrapper">
+                <p>
+                  &lt;ul class="images"&gt;<br>
+                  &nbsp;&nbsp;&lt;li&gt;&lt;img src="images/google-logo.png" alt="Google logo"&gt;&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&lt;li&gt;&lt;img src="images/yandex-logo.png" alt="Yandex logo"&gt;&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&lt;li&gt;&lt;img src="images/amazon-logo.jpg" alt="Amazon logo"&gt;&lt;/li&gt;<br>
+                  &lt;/ul&gt;
+                </p>
+              </div>
               <p>
-                &lt;img src="youtube-logo.png" alt="YouTube"&gt;
+                Without CSS, each one of the images displays on top of each other 
+                and has a bullet point. To make the images display side-by-side 
+                and remove the bullets, we need to jump over CSS.
               </p>
-            </div>
-            <h5>Result</h5>
-            <img src="images/youtube-logo.png" alt="YouTube" width="30">
-            <li>Insert an image link</li>
-            <h5>HTML</h5>
-            <div class="code-wrapper">
-              <p>
-                &lt;a href="https://youtube.com&gt;YouTube&lt;img 
-                src="youtube-logo.png" alt="YouTube"&gt;&lt;/a&gt;
-              </p>
-            </div>
-            <h5>Result</h5>
-            <a href="https://youtube.com"><img src="images/youtube-logo.png" alt="YouTube" width="30"></a>
-            <li>Side-by-side images</li>
-            <h5>HTML</h5>
-            <div class="code-wrapper">
-              <p>
-                &lt;ul class="images"&gt;<br>
-                &nbsp;&nbsp;&lt;li&gt;&lt;img src="images/google-logo.png" alt="Google logo"&gt;&lt;/li&gt;<br>
-                &nbsp;&nbsp;&lt;li&gt;&lt;img src="images/yandex-logo.png" alt="Yandex logo"&gt;&lt;/li&gt;<br>
-                &nbsp;&nbsp;&lt;li&gt;&lt;img src="images/amazon-logo.jpg" alt="Amazon logo"&gt;&lt;/li&gt;<br>
-                &lt;/ul&gt;
-              </p>
-            </div>
-            <p>
-              Without CSS, each one of the images displays on top of each other 
-              and has a bullet point. To make the images display side-by-side 
-              and remove the bullets, we need to jump over CSS.
-            </p>
-            <h5>CSS</h5>
-            <div class="code-wrapper">
-              <p>
-                .images {<br>
-                &nbsp;&nbsp;/* Remove bullets */<br>
-                &nbsp;&nbsp;list-style-type: none;<br>
-                &nbsp;&nbsp;/* Remove padding */<br>
-                &nbsp;&nbsp;padding: 0;<br>
-                }
-              </p>
-             	<p>
-                .images li {<br>
-                &nbsp;&nbsp;/* Display images inline */<br>
-                &nbsp;&nbsp;display: inline;<br>
-                &nbsp;&nbsp;/* Add a padding on the left so all images aren't 
-                just pushed right against each other. */<br>
-                &nbsp;&nbsp;padding-left: 10px;<br>
-                }
-              </p>
-            </div>
-            <h5>Result</h5>
-            <ul class="images">
-              <li><img src="images/google-logo.png" alt="Google logo" width="60"></li>
-              <li><img src="images/yandex-logo.png" alt="Yandex logo" width="60"></li>
-              <li><img src="images/amazon-logo.jpg" alt="Amazon logo" width="60"></li>
-            </ul>
+              <h5>CSS</h5>
+              <div class="code-wrapper">
+                <p>
+                  .images {<br>
+                  &nbsp;&nbsp;/* Remove bullets */<br>
+                  &nbsp;&nbsp;list-style-type: none;<br>
+                  &nbsp;&nbsp;/* Remove padding */<br>
+                  &nbsp;&nbsp;padding: 0;<br>
+                  }
+                </p>
+               	<p>
+                  .images li {<br>
+                  &nbsp;&nbsp;/* Display images inline */<br>
+                  &nbsp;&nbsp;display: inline;<br>
+                  &nbsp;&nbsp;/* Add a padding on the left so all images aren't 
+                  just pushed right against each other. */<br>
+                  &nbsp;&nbsp;padding-left: 10px;<br>
+                  }
+                </p>
+              </div>
+              <h5>Result</h5>
+              <ul class="images">
+                <li><img src="images/google-logo.png" alt="Google logo" width="60"></li>
+                <li><img src="images/yandex-logo.png" alt="Yandex logo" width="60"></li>
+                <li><img src="images/amazon-logo.jpg" alt="Amazon logo" width="60"></li>
+              </ul>
+            </li>
           </ol>
         </section>
         <section>
@@ -229,45 +233,49 @@
           </p>
           <h4>Background Properties</h4>
           <ol>
-            <li><b>background-color</b></li>
-            <h5>CSS</h5>
-            <div class="code-wrapper">
+            <li>
+              <b>background-color</b>
+              <h5>CSS</h5>
+              <div class="code-wrapper">
+                <p>
+                  body {<br>
+                  &nbsp;&nbsp;background-color: #5f5f5f;<br>
+                  }
+                </p>
+              </div>
               <p>
-                body {<br>
-                &nbsp;&nbsp;background-color: #5f5f5f;<br>
-                }
+                Tip: you should always set a background color in case the 
+                background image fails to load. If the background image is dark, 
+                set the background to a dark color as well.
               </p>
-            </div>
-            <p>
-              Tip: you should always set a background color in case the 
-              background image fails to load. If the background image is dark, 
-              set the background to a dark color as well.
-            </p>
-            <li><b>background-image</b></li>
-            <h5>CSS</h5>
-            <div class="code-wrapper">
+            </li>
+            <li>
+              <b>background-image</b>
+              <h5>CSS</h5>
+              <div class="code-wrapper">
+                <p>
+                  body {<br>
+                  &nbsp;&nbsp;background-image: url(images/foo.png);<br>
+                  }
+                </p>
+              </div>
               <p>
-                body {<br>
-                &nbsp;&nbsp;background-image: url(images/foo.png);<br>
-                }
+                Tip: check 
+                <a href="https://www.toptal.com/designers/subtlepatterns/">here</a>
+                for free background images/patterns.
               </p>
-            </div>
-            <p>
-              Tip: check 
-              <a href="https://www.toptal.com/designers/subtlepatterns/">here</a>
-              for free background images/patterns.
-            </p>
-            <li><b>background-position</b></li>
-            <h5>CSS</h5>
-            <div class="code-wrapper">
-              <p>
-                body {<br>
-                &nbsp;&nbsp;background-position: <i>value</i>;<br>
-                }
-              </p>
-            </div>
-            <p>
-              where:
+            </li>
+            <li>
+              <b>background-position</b>
+              <h5>CSS</h5>
+              <div class="code-wrapper">
+                <p>
+                  body {<br>
+                  &nbsp;&nbsp;background-position: <i>value</i>;<br>
+                  }
+                </p>
+              </div>
+              <p>where:</p>
               <ul>
                 <li>
                   <i>value</i> = <i>keyword/x% y%/xpos ypos</i>
@@ -286,19 +294,19 @@
                   units(e.g. px, em, etc.).
                 </li>
               </ul>
-            </p>
-            <li><b>background-repeat</b></li>
-            <h5>CSS</h5>
-            <div class="code-wrapper">
-              <p>
-                body {<br>
-                &nbsp;&nbsp;background-position: top left;<br>
-                &nbsp;&nbsp;background-repeat: repeat/repeat-x/repeat-y/no-repeat;<br>
-                }
-              </p>
-            </div>
-            <p>
-              where:
+            </li>
+            <li>
+              <b>background-repeat</b>
+              <h5>CSS</h5>
+              <div class="code-wrapper">
+                <p>
+                  body {<br>
+                  &nbsp;&nbsp;background-position: top left;<br>
+                  &nbsp;&nbsp;background-repeat: repeat/repeat-x/repeat-y/no-repeat;<br>
+                  }
+                </p>
+              </div>
+              <p>where:</p>
               <ul>
                 <li>
                   <i>repeat</i>: repeat background image both vertically and 
@@ -316,21 +324,21 @@
                   <i>no-repeat</i>: don't repeat at all.
                 </li>
               </ul>
-            </p>
-            <li><b>background-size</b></li>
-            <h5>CSS</h5>
-            <div class="code-wrapper">
-              <p>
-                body {<br>
-                &nbsp;&nbsp;background-size: <i>width height</i> | cover | contain;<br>
-                }
-              </p>
-            </div>
-            <p>
-              where:
+            </li>
+            <li>
+              <b>background-size</b>
+              <h5>CSS</h5>
+              <div class="code-wrapper">
+                <p>
+                  body {<br>
+                  &nbsp;&nbsp;background-size: <i>width height</i> | cover | contain;<br>
+                  }
+                </p>
+              </div>
+              <p>where:</p>
               <ul>
                 <li>
-                  <i>width height</i>: set the image dimensions.</li>
+                  <i>width height</i>: set the image dimensions.
                 </li>
                 <li>
                   cover: scale the background image to be as large as possible 
@@ -342,7 +350,7 @@
                   its width and its height can fit inside the content area.
                 </li>
               </ul>
-             </p>
+            </li>
           </ol>
           <h4>Background Shorthand Property</h4>
           <p>
@@ -484,23 +492,24 @@
     </main>
     <footer>
       <a href="">
-        <img src="images/googleplus-logo.png" alt="google plus logo" width="30px" class="social-icon">
+        <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
       </a>
       <a href="">
-        <img src="images/fb-logo.png" alt="facebook logo" width="30px" class="social-icon">
+        <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
       </a>
       <a href="">
-        <img src="images/instagram-logo.png" alt="instagram logo" width="30px" class="social-icon">
+        <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
       </a>
       <a href="">
-        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30px" class="social-icon">
+        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
       </a>
       <a href="">
-        <img src="images/twitter-logo.png" alt="twitter logo" width="30px" class="social-icon">
+        <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
       </a>
       <address>
-        &copy 2017 <a href="pictureelement@yandex.com">PictureElement</a>
+        &copy; 2017 <a href="pictureelement@yandex.com">PictureElement</a>
       </address>
+      <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"> 
     </footer>
   </body>
 </html>
