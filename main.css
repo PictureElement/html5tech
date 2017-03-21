@@ -441,18 +441,15 @@ nav #current {
 
 .serif p {
 	font-family: Arvo, Times, "Times New Roman"; 
-	font-size: 20px;
-	color: red;
+	font-size: 30px;
 }
 
 .sans-serif p {
 	font-family: Lato, Helvetica, Arial;
-	font-size: 20px;
-	color: red;
+	font-size: 30px;
 }
 
 .monospace p {
 	font-family: 'Roboto Mono', Courier, "Courier New";
-	font-size: 20px;
-	color: red;
+	font-size: 30px;
 }
