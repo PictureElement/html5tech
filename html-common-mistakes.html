@@ -1,0 +1,186 @@
+<!--
+	html-common-mistakes.html
+ 	Copyright (C) 2017  Marios Sofokleous
+  
+  This program is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  This program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <link rel="stylesheet" href="main.css">
+    <title>HTML/Common Mistakes</title>
+  </head>
+  <body>
+    <header>
+      <h1>HTML5Tech</h1>
+      <div class="tagline">
+        <h4>Fundamental resources about HTML5 &amp; friends</h4>
+      </div>
+      <nav>
+        <a href="home.html">Home</a>
+        <div class="dropdown">
+          <button id="current" class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="elements.html">Elements</a>
+            <a href="images.html">Images</a>
+            <a href="html-common-mistakes.html">Common Mistakes</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="updated-tags.html">Updated Tags</a>
+            <a href="updated-elements.html">Updated Elements</a>
+            <a href="new-elements.html">New Elements</a>
+            <a href="new-input-types.html">New Input Types</a>
+            <a href="new-input-attributes.html">New Input Attributes</a>
+            <a href="new-form-elements.html">New Form Elements</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="selectors.html">Selectors</a>
+            <a href="color.html">Color</a>
+            <a href="box-model.html">Box Model</a>
+            <a href="fonts.html">Fonts</a>
+            <a href="">5</a>
+            <a href="">6</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">CSS3<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <header>
+          <h2>Common Mistakes</h2>
+          <div class="byline-wrapper">
+            <img src="images/avatar.png" alt="avatar" width="40">
+            <p>
+              <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+              <br>
+              <time datetime="2017-03-21">Mar 21, 2017</time>
+            </p>
+          </div>
+        </header>
+        <section>
+          <h3>Using an element other than &lt;li&gt; inside a &lt;ul&gt; element.</h3>
+          <h5>HTML</h5>
+          <div class="code-wrapper">
+            <p>
+              &lt;ul&gt;<br>
+              &nbsp;&nbsp;&lt;h2&gt;...&lt;/h2&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt;...&lt;/p&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+              &lt;/ul&gt;
+            </p>
+          </div>
+          <p>You can however, put any element inside &lt;li&gt;, like so:</p>
+          <h5>HTML</h5>
+          <div class="code-wrapper">
+            <p>
+              &lt;ul&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;h2&gt;...&lt;/h2&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;p&gt;...&lt;/p&gt;<br>
+              &nbsp;&nbsp;&lt;/li&gt;<br>
+              &nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+              &lt;/ul&gt;
+            </p>
+          </div>
+        </section>
+        <section>
+          <h3>Nesting a block-level element inside a &lt;p&gt; tag.</h3>
+          <h5>HTML</h5>
+          <div class="code-wrapper">
+            <p>
+              &lt;p><br>
+              &nbsp;&nbsp;&lt;ul><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+              &nbsp;&nbsp;&lt;/ul><br>
+              &lt;/p>
+            </p>
+          </div>
+          <h5>HTML</h5>
+          <div class="code-wrapper">
+            <p>
+              &lt;p><br>
+              &nbsp;&nbsp;&lt;div><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+              &nbsp;&nbsp;&lt;/div><br>
+              &lt;/p>
+            </p>
+          </div>
+          <p>
+            You can only nest inline elements such as &lt;span&gt;, &lt;a&gt;, 
+            &lt;b&gt;, &lt;strong&gt;, and &lt;img&gt; inside &lt;p&gt; tag. The
+            &lt;p&gt; tag represents a paragraph. It cannot contain block-level
+            elements including &lt;p&gt; itself.
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <a href="">
+        <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
+      </a>
+      <a href="">
+        <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
+      </a>
+      <address>
+        &copy; 2017 <a href="pictureelement@yandex.com">PictureElement</a>
+      </address>
+      <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"> 
+    </footer>
+  </body>
+</html>
