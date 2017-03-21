@@ -368,7 +368,7 @@
             font embedding services, which allow the use of fonts hosted on 
             their servers.
           </p>
-          <h4>Method #1: @import</h4>
+          <h4>Method #1: <i>@import</i></h4>
           <p>
             To embed a selected font from <i>Google Fonts</i> into a webpage, 
             use the <i>@import</i> method as follows:
@@ -384,15 +384,15 @@
               @import url('https://fonts.googleapis.com/css?family=Arvo');
             </p>
             <p>
-              /* Google Web Fonts: Monoscape type */<br>
+              /* Google Web Fonts: Monospace type */<br>
               @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
             </p>
           </div>
           <p>
-            <b>Note:</b> <i>@import</i> rules <strong>must</strong> be placed at the top
-            of a stylesheet, before any other rules.
+            <b>Note:</b> <i>@import</i> rules <strong>must</strong> be placed at 
+            the top of a stylesheet, before any other rules.
           </p> 
-          <h4>Method #2: @font-face</h4>
+          <h4>Method #2: <i>@font-face</i></h4>
           <p>
             <i>@font-face</i> allows us to specify downloadable fonts for use on 
             our website.
@@ -469,6 +469,50 @@
               &nbsp;&nbsp;font-style: italic;<br>
               }
             </p>
+          </div>
+        </section>
+        <section>
+          <h3>Font Types</h3>
+          <h4>Serif fonts</h4>
+          <p>
+          	Serif fonts(e.g. Times) have little hooks on the ends of the 
+          	letters/characters. These fonts are more suitable for 
+          	headlines and printing than body text because the 
+          	little serifs(hooks) can blur together and start making the 
+          	text harder to read. However, this is not true as much now, because 
+          	monitors have much better resolution now. Therefore Serif fonts can 
+          	be used for body text as well. If you have print friendly versions 
+          	of your website, use Serif fonts. Prints have higher resolution than 
+          	displays thus Serif fonts can be seen more clearly.
+          </p>
+          <h5>Example:</h5>
+          <div class="serif">
+          	<p>This is a Serif font.</p>
+          </div>
+          <h4>Sans Serif fonts</h4>
+          <p>
+          	Sans Serif fonts(e.g. Arial) haven't got any hooks on the ends of 
+          	the letters/characters like Serif fonts do. They are often used to 
+          	convey simplicity or minimalism. These fonts are ideal for display 
+          	of text on digital displays.
+          </p>
+          <h5>Example:</h5>
+          <div class="sans-serif">
+          	<p>This is a Sans Serif font.</p>
+          </div>
+          <h4>Monospaced fonts</h4>
+          <p>
+          	A Monospaced font(e.g. Courier, Monaco) is a font whose 
+          	letters/characters each occupy the same amount of horizontal space.
+          	The majority of IDEs and text editors use a monospaced font as the 
+          	default typeface. This increases the readability of source code. In 
+          	technical manuals and resources for programming languages, a 
+          	monospaced font is often used to distinguish code from 
+          	natural-language text. 
+          </p>
+          <h5>Example:</h5>
+          <div class="monospace">
+          	<p>This is a Monospaced font.</p>
           </div>
         </section>
       </article>

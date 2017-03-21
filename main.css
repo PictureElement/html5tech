@@ -21,7 +21,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 /* Google Web Fonts: Serif type */
 @import url('https://fonts.googleapis.com/css?family=Arvo');
-/* Google Web Fonts: Monoscape type */
+/* Google Web Fonts: Monospace type */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 /* Reset browser defaults ("em", "i", "b", and "strong" tags not included) */
@@ -437,4 +437,22 @@ nav #current {
 	text-align: center;
 	text-transform: uppercase;
 	margin: 0 0 20px 0;
+}
+
+.serif p {
+	font-family: Arvo, Times, "Times New Roman"; 
+	font-size: 20px;
+	color: red;
+}
+
+.sans-serif p {
+	font-family: Lato, Helvetica, Arial;
+	font-size: 20px;
+	color: red;
+}
+
+.monospace p {
+	font-family: 'Roboto Mono', Courier, "Courier New";
+	font-size: 20px;
+	color: red;
 }
