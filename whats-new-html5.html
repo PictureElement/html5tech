@@ -1,5 +1,5 @@
 <!--
-	updated-tags.html
+	whats-new-html5.html
  	Copyright (C) 2017  Marios Sofokleous
   
   This program is free software; you can redistribute it and/or modify it under 
@@ -23,7 +23,7 @@
 		<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
   	<link rel="stylesheet" href="main.css">
-		<title>HTML5/Updated Tags</title>
+		<title>HTML5/What's New</title>
 	</head>
 	<body>
 		<header>
@@ -32,7 +32,7 @@
 				<h4>Fundamental resources about HTML5 &amp; friends</h4>
 			</div>
 			<nav>
-      	<a href="home.html">Home</a>
+      	<a id="current" href="home.html">Home</a>
       	<div class="dropdown">
       		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
       		<div class="dropdown-content">
@@ -45,7 +45,7 @@
       		</div>
       	</div>
 				<div class="dropdown">
-      		<button id="current" class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
       		<div class="dropdown-content">
       			<a href="whats-new-html5.html">What's New</a>
       			<a href="updated-tags.html">Updated Tags</a>
@@ -94,94 +94,69 @@
 		<main>
 			<article>
 				<header>
-					<h2>Updated Tags</h2>
+					<h2>What's New</h2>
 					<div class="byline-wrapper">
 						<img src="images/avatar.png" alt="avatar" width="40">
 						<p>
 							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
 							<br>
-							<time datetime="2017-02-28">Feb 28, 2017</time>
+							<time datetime="2017-03-24">Mar 24, 2017</time>
 						</p>
 					</div>
 				</header>
 				<section>
-					<h3>&lt;i&gt;</h3>
-					<h4>Description</h4>
-					<p>
-						Represents text in an "alternate voice", mood, foreign words, 
-						technical terms or fictional character thoughts. It is a good idea to 
-						use the "class" attribute to make "i" more semantic.
-					</p>
-					<h4>Examples</h4>
-					<div class="code-wrapper">
-						<ul>
-							<li><i class="thought">I hope this works</i>, he thought.</li>
-							<li>
-								We ate different types of sushi last night such as 
-								<i class="sushi-type">Nigiri</i>, 
-								<i class="sushi-type">Sashimi</i> and 
-								<i class="sushi-type">Maki</i>.
-							</li>
-							<li>
-								There are four variations of the <i class="brevity code">Fox</i> 
-								brevity word, <i class="brevity word">Fox One</i> is one of them 
-								and indicates a simulated or actual launch of a semi-active 
-								radar-guided missile.
-							</li>
-						</ul>
-					</div>
+					<h3>New Features</h3>
+					<ul>
+						<li>New elements & attributes</li>
+						<li>Full CSS3 support</li>
+						<li>Video & audio elements</li>
+						<li>2D/3D graphics</li>
+						<li>Local storage</li>
+						<li>Local SQL database</li>
+					</ul>
+				</section>
 				</section>
 				<section>
-					<h3>&lt;b&gt;</h3>
+					<h3>Improved Element Semantics</h3>
 					<h4>Description</h4>
 					<p>
-						Represents "stylistically offset" text such as keywords and text that 
-						is bold by typographic convention(and not because is important). Also,
-						the "b" tag can be used when you want to draw attention without 
-						increasing importance. It is a good practice to use the "class" 
-						attribute on the "b" tag in order to convey additional semantic 
-						information(e.g. &lt;b class="lead"&gt; for the first sentence in a 
-						paragraph). The "b" tag doesn't convey semantic information; use it 
-						only when no others fit.Do not mark titles and headings using the "b" 
-						tag.
+						HTML5 provides better-defined semantic roles for existing elements 
+						and adds new elements with useful semantics. Therefore the use of
+						&lt;div&gt; elements is kept at minimum, making the page a bit more 
+						semantic, but more importantly, easier to read.
 					</p>
-					<h4>Examples</h4>
-					<div class="code-wrapper">
-						<ul>
-							<li>
-								<b class="lead">The event takes place this upcoming Saturday, and 
-								over 3,000 people have already registered.</b>
-							</li>
-						</ul>
-					</div>
 				</section>
 				<section>
-					<h3>&lt;em&gt;</h3>
+					<h3>Web Application Features</h3>
 					<h4>Description</h4>
 					<p>
-						Stress emphasis. If spoken, this stress would be emphasised 
-						pronunciation on a word.
+						Features that previously were only availbale through JS have been 
+						added directly to HTML5, such as &lt;canvas&gt;, &lt;video&gt;, and 
+						&lt;audio&gt;. Local storage and new input types for which the browser 
+						can expose easy user interfaces (no JS code required) have also been
+						added. HTML5 also allows JS and browser interface to run in separate 
+						threads. Furthermore unlike its predecessor, HTML5 made it extremely
+						easy to get the user's location. These and other features made the 
+						process of developing web applications simpler and faster.     
 					</p>
-					<h4>Examples</h4>
-					<div class="code-wrapper">
-						<ul>
-							<li>Call a doctor <em>now!</em></li>
-							<li>I <em>love</em> swimming</li>
-						</ul>
-					</div>
-				</section>
+				</section>	
 				<section>
-					<h3>&lt;strong&gt;</h3>
-					<h4>Description</h4> 
-					<p>Strong importance.</p>
-					<h4>Examples</h4>
-					<div class="code-wrapper">
-						<ul>
-							<li>
-								<strong>Warning!</strong> This is <strong>very dangerous</strong>.
-							</li>
-						</ul>
-					</div>
+					<h3>Consistency in Handling Malformed Documents</h3>
+					<h4>Description</h4>
+					<p>
+						HTML supports "tag soup"(e.g. &lt;p&gt;This is a malformed fragment of
+						&lt;em&gt;HTML.&lt;/p&gt;&lt;/em&gt;) or the ability to write malformed 
+						code that is syntactically or structurally incorrect. Prior to 
+						HTML5, there was no standard way to correct malformed code in order 
+						to be displayed correclty in the browser. Before, new browser 
+						developers had to test malformed documents in various browsers and 
+						reverse engineer their error-handling. Fortunately, HTML5 
+						acknowledges that badly formed HTML code already exists in large 
+						quantities and will probably continue to be used and describes 
+						exactly how "badly formed code" should be treated. In other words,
+						the handling of badly formed code now has a place in the 
+						specification itself.
+					</p>
 				</section>
 			</article>
 		</main>
