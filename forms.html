@@ -126,7 +126,7 @@
           <h5>HTML</h5>
           <div class="code-wrapper">
             <p>
-              &lt;form action="/handler-page" method="post"&gt;<br>
+              &lt;form class="myform" action="/handler-page" method="post"&gt;<br>
               &nbsp;&nbsp;&lt;fieldset&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Contact Us&lt;/legend&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
@@ -258,7 +258,7 @@
           <h5>CSS</h5>
           <div class="code-wrapper">
             <p>
-							fieldset {<br>
+							.myform fieldset {<br>
 							&nbsp;&nbsp;<i>/* Form width */</i><br>
 							&nbsp;&nbsp;width: 400px;<br>
 							&nbsp;&nbsp;<i>/* Outline of the form */</i><br>
@@ -269,12 +269,12 @@
 						</p>
 						<p>
 							<i>/* Add space between inputs */</i><br>
-							fieldset div + div {<br>
+							.myform fieldset div + div {<br>
 							&nbsp;&nbsp;margin-top: 20px;<br>
 							}
 						</p>
 						<p>
-							label {<br>
+							.myform label {<br>
 							&nbsp;&nbsp;<i>/* Set to inline-block in order to set a width */</i><br>
 							&nbsp;&nbsp;display: inline-block;<br>
 							&nbsp;&nbsp;<i>/* Same size for all labels */</i><br>
@@ -284,7 +284,7 @@
 							}
 						</p>
 						<p>
-							input, textarea {<br>
+							.myform input, .myform textarea {<br>
 							&nbsp;&nbsp;<i>/*<br> 
 							&nbsp;&nbsp;&nbsp;&nbsp;By default &lt;input&gt; fields use a sans-serif font and<br> 
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea&gt; fields use a monospace font. Make sure that all<br>
@@ -304,12 +304,12 @@
 						</p>
 						<p>
 							<i>/* Select and style input field when it get focus */</i><br>
-							input:focus, textarea:focus {<br>
+							.myform input:focus, .myform textarea:focus {<br>
 							&nbsp;&nbsp;background-color: #ccc;<br>
 							}
 						</p>
 						<p>
-							textarea {<br>
+							.myform textarea {<br>
 							&nbsp;&nbsp;<i>/*<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;Align the top of the textarea with the top of the tallest element<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;on the line(i.e. label)<br>
@@ -330,7 +330,7 @@
 					</div>
 					<h5>Result</h5>
           <div class="result-wrapper">
-          	<form action="handler-page" method="post">
+          	<form class="myform" action="handler-page" method="post">
              	<fieldset>
 	             	<legend>Contact Us</legend>
 	             	<div>

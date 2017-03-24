@@ -196,49 +196,6 @@ li {
 	margin-top: 5px;
 }
 
-fieldset {
-	/* Form width */
-	width: 400px;
-	/* Outline of the form */
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	padding: 20px;
-}
-
-label {
-	/* set to inline-block in order to set a width */
-	display: inline-block;
-	/* same size for all labels */
-	width: 90px;
-	/* align label to the right */
-	text-align: right;
-}
-
-input, textarea {
-	/* 
-		By default <input> fields use a sans-serif font and <textarea> fields use a 
-		monospace font. Make sure that all text fields use the same font.
-	*/
-	font-family: Lato, Helvetica, Arial;
-	/* Make sure all text fields are the same size */
-	width: 300px;
-	/* 
-		The width & height properties includes content, padding and border, but not 
-		the margin.
-	*/
-	box-sizing: border-box; 
-	/* Set the same border style as the outline of the form */
-	border: 1px solid #ccc;
-}
-
-textarea {
-	/* 
-		Align the top of the textarea with the top of the tallest element on the 
-		line(i.e. label).
-	*/
-	vertical-align: top;
-	height: 100px;
-}
 
 /*----------------------------------------------------------------------------*/
 
@@ -499,13 +456,57 @@ nav #current {
 	font-size: 30px;
 }
 
+.myform fieldset {
+	/* Form width */
+	width: 400px;
+	/* Outline of the form */
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.myform label {
+	/* set to inline-block in order to set a width */
+	display: inline-block;
+	/* same size for all labels */
+	width: 90px;
+	/* align label to the right */
+	text-align: right;
+}
+
+.myform input, .myform textarea {
+	/* 
+		By default <input> fields use a sans-serif font and <textarea> fields use a 
+		monospace font. Make sure that all text fields use the same font.
+	*/
+	font-family: Lato, Helvetica, Arial;
+	/* Make sure all text fields are the same size */
+	width: 300px;
+	/* 
+		The width & height properties includes content, padding and border, but not 
+		the margin.
+	*/
+	box-sizing: border-box; 
+	/* Set the same border style as the outline of the form */
+	border: 1px solid #ccc;
+}
+
+.myform textarea {
+	/* 
+		Align the top of the textarea with the top of the tallest element on the 
+		line(i.e. label).
+	*/
+	vertical-align: top;
+	height: 100px;
+}
+
 /* Add space between inputs */
-fieldset div + div {
+.myform fieldset div + div {
 	margin-top: 20px;
 }
 
 /* Select and style input field when it get focus */
-input:focus, textarea:focus {
+.myform input:focus, .myform textarea:focus {
 	background-color: #ccc;
 }
 

@@ -147,7 +147,7 @@
 							&lt;input type="text" name="first-name" 
 							placeholder="First name"&gt;<br>
 							&lt;input type="text" name="last-name" placeholder="Last name"&gt;<br>
-							&lt;input type="text" name="email" placeholder="email"&gt;
+							&lt;input type="text" name="mail" placeholder="E-mail"&gt;
 						</p>
 					</div>
 					<h5>Result</h5>
@@ -155,7 +155,7 @@
 						<form>
 							<input type="text" name="first-name" placeholder="First name">
 							<input type="text" name="last-name" placeholder="Last name">
-							<input type="text" name="email" placeholder="email">
+							<input type="text" name="mail" placeholder="E-mail">
 						</form>
 					</div>
 				</section>
@@ -217,6 +217,38 @@
 				  		<input type="submit">
 						</form>
 					</div>
+				</section>
+				<section>
+					<h3>Pattern</h3>
+					<h4>Description</h4>
+					<p>
+						Accepts a JS regular expression that can be used to validate a form 
+						field to match the pattern.
+					</p>
+					<h4>Example #1</h4>
+					<h5>HTML5</h5>
+					<div class="code-wrapper">
+						<p>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Country code: &lt;input type="text" name="two-letter_country_code" pattern="[A-Za-z]{2}" title="Two-letter country code"&gt;<br>
+							&nbsp;&nbsp;Telephone: &lt;input type="tel" name="tel_number" pattern="[0-9]{10}" title="10-digit tel. number"&gt;<br>
+							&lt;/form&gt;
+						</p>
+					</div>
+					<h5>Result</h5>
+					<div class="result-wrapper">
+						<form>
+							Country code: <input type="text" name="country_code" pattern="[A-Za-z]{2}" title="Two-letter country code">
+							<input type="submit">
+							Telephone: <input type="tel" name="tel_number" pattern="[0-9]{10}" title="10-digit tel. number">
+							<input type="submit">
+						</form>
+					</div>
+					<p>
+						When the form is submitted and the user's entry doesn't match the 
+						pattern, the user gets notified with an error message(i.e. "Please 
+						match the requested format").
+					</p>
 				</section>
 			</article>
 		</main>
