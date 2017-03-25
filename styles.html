@@ -23,7 +23,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
     <link rel="stylesheet" href="main.css">
-    <title>CSS3/New Styles</title>
+    <title>CSS/Styles</title>
   </head>
   <body>
     <header>
@@ -83,7 +83,7 @@
     <main>
       <article>
         <header>
-          <h2>New Styles</h2>
+          <h2>Styles</h2>
           <div class="byline-wrapper">
             <img src="images/avatar.png" alt="avatar" width="40">
             <p>
@@ -94,6 +94,281 @@
           </div>
         </header>
         <section>
-          <h3>Section</h3>
+          <h3>Border Radius</h3>
           <h4>Description</h4>
           <p>
+          	The <i>border-radius</i> property is used to add rounded corners to 
+          	an element's border.
+          </p>
+          <h4>Examples</h4>
+          <ol>
+          	<li>
+          		<p>top-left&bottom-right&top-right&bottom-left</p>
+		          <h5>HTML</h5>
+		          <div class="code-wrapper">
+		          	<p>
+				          &lt;div class="border-radius-1"&gt;<br>
+					      	&lt;/div&gt;
+				      	</p>
+				      </div>
+				      <h5>CSS</h5>
+				      <div class="code-wrapper">
+				      	<p>
+				      		.border-radius-1 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 25px;<br>
+									}
+								</p>
+							</div>
+		          <h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div class="border-radius-1">
+				      	</div>
+				      </div>
+				    </li>
+				    <li>
+				    	<p>top-left&bottom-right | top-right&bottom-left</p>
+		          <h5>HTML</h5>
+		          <div class="code-wrapper">
+		          	<p>
+				          &lt;div class="border-radius-2"&gt;<br>
+					      	&lt;/div&gt;
+				      	</p>
+				      </div>
+				      <h5>CSS</h5>
+				      <div class="code-wrapper">
+				      	<p>
+				      		.border-radius-2 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 25px 50px;<br>
+									}
+								</p>
+							</div>
+							<h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div class="border-radius-2">
+				      	</div>
+				      </div>
+				    </li>
+				    <li>
+				    	<p>top-left | top-right&bottom-left | bottom-right</p>
+		          <h5>HTML</h5>
+		          <div class="code-wrapper">
+		          	<p>
+				          &lt;div class="border-radius-3"&gt;<br>
+					      	&lt;/div&gt;
+				      	</p>
+				      </div>
+				      <h5>CSS</h5>
+				      <div class="code-wrapper">
+				      	<p>
+				      		.border-radius-3 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 20px 40px 60px;<br>
+									}
+								</p>
+							</div>
+							<h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div class="border-radius-3">
+				      	</div>
+				      </div>
+				    </li>
+				    <li>
+				    	<p>top-left | top-right | bottom-right | bottom-left</p>
+		          <h5>HTML</h5>
+		          <div class="code-wrapper">
+		          	<p>
+				          &lt;div class="border-radius-4"&gt;<br>
+					      	&lt;/div&gt;
+				      	</p>
+				      </div>
+				      <h5>CSS</h5>
+				      <div class="code-wrapper">
+				      	<p>
+				      		.border-radius-4 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 10px 20px 30px 40px;<br>
+									}
+								</p>
+								<p><b>equivalent to:</b></p>
+								<p>
+									.border-radius-4 {<br>
+									&nbsp;&nbsp;border-top-left-radius: 10px;<br>
+									&nbsp;&nbsp;border-top-right-radius: 20px;<br>
+									&nbsp;&nbsp;border-bottom-right-radius: 30px;<br>
+									&nbsp;&nbsp;border-bottom-left-radius: 40px;<br>
+									}
+								</p>
+							</div>
+							<h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div class="border-radius-4">
+				      	</div>
+				      </div>
+				    </li>
+				    <li>
+				    	<p>
+				    		top-left&bottom-right&top-right&bottom-left<b>(horizontal radii)</b>/
+				    		top-left&bottom-right&top-right&bottom-left<b>(vertical radii)</b>
+				    	</p>
+				    	<img src="images/30-60.png" alt="border-radius slash syntax 1" width="300">
+		          <h5>HTML</h5>
+		          <div class="code-wrapper">
+		          	<p>
+				          &lt;div class="border-radius-5"&gt;<br>
+					      	&lt;/div&gt;
+				      	</p>
+				      </div>
+				      <h5>CSS</h5>
+				      <div class="code-wrapper">
+				      	<p>
+				      		.border-radius-5 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 30px/60px;<br>
+									}
+								</p>
+								<p><b>equivalent to:</b></p>
+								<p>
+									.border-radius-5 {<br>
+									&nbsp;&nbsp;border-top-left-radius: 30px 60px;<br>
+									&nbsp;&nbsp;border-top-right-radius: 30px 60px;<br>
+									&nbsp;&nbsp;border-bottom-right-radius: 30px 60px;<br>
+									&nbsp;&nbsp;border-bottom-left-radius: 30px 60px;<br>
+									}
+								</p>
+							</div>
+							<h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div class="border-radius-5">
+				      	</div>
+				      </div>
+				    </li>
+				    <li>
+				    	<p>
+				    		top-left&bottom-right&top-right&bottom-left<b>(horizontal radii)</b>/
+				    		top-left&bottom-right&top-right&bottom-left<b>(vertical radii)</b>
+				    	</p>
+				    	 <img src="images/60-30.png" alt="border-radius slash syntax 2" width="300">
+		          <h5>HTML</h5>
+		          <div class="code-wrapper">
+		          	<p>
+				          &lt;div class="border-radius-6"&gt;<br>
+					      	&lt;/div&gt;
+				      	</p>
+				      </div>
+				      <h5>CSS</h5>
+				      <div class="code-wrapper">
+				      	<p>
+				      		.border-radius-6 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 60px/30px;<br>
+									}
+								</p>
+								<p><b>equivalent to:</b></p>
+								<p>
+									.border-radius-6 {<br>
+									&nbsp;&nbsp;border-top-left-radius: 60px 30px;<br>
+									&nbsp;&nbsp;border-top-right-radius: 60px 30px;<br>
+									&nbsp;&nbsp;border-bottom-right-radius: 60px 30px;<br>
+									&nbsp;&nbsp;border-bottom-left-radius: 60px 30px;<br>
+									}
+								</p>
+							</div>
+							<h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div class="border-radius-6">
+				      	</div>
+				      </div>
+				    </li>
+				    <li>
+				    	<p>Oval shape</p>
+		          <h5>HTML</h5>
+		          <div class="code-wrapper">
+		          	<p>
+				          &lt;div class="border-radius-7"&gt;<br>
+					      	&lt;/div&gt;
+				      	</p>
+				      </div>
+				      <h5>CSS</h5>
+				      <div class="code-wrapper">
+				      	<p>
+				      		.border-radius-7 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 50%;<br>
+									}
+								</p>
+							</div>
+							<h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div class="border-radius-7">
+				      	</div>
+				      </div>
+				    </li>
+				    <li>
+				    	<p>Circle shape</p>
+		          <h5>HTML</h5>
+		          <div class="code-wrapper">
+		          	<p>
+				          &lt;div class="border-radius-8"&gt;<br>
+					      	&lt;/div&gt;
+				      	</p>
+				      </div>
+				      <h5>CSS</h5>
+				      <div class="code-wrapper">
+				      	<p>
+				      		.border-radius-8 {<br>
+									&nbsp;&nbsp;height: 200px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 50%;<br>
+									}
+								</p>
+							</div>
+							<h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div class="border-radius-8">
+				      	</div>
+				      </div>
+				    </li>
+				  </ol>
+				</section>
+			</article>
+		</main>
+		<footer>
+			<a href="">
+				<img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
+			</a>
+			<a href="">
+				<img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
+			</a>
+			<a href="">
+				<img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
+			</a>
+			<a href="">
+				<img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
+			</a>
+			<a href="">
+				<img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
+			</a>
+  		<address>
+    		&copy; 2017 <a href="">Marios Sofokleous</a>
+  		</address>
+  		<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"> 
+		</footer>
+	</body>
+</html>
