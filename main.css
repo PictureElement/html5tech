@@ -98,7 +98,7 @@ p {
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: #8c8c90;
-	margin-top: 5px;
+	margin-top: 20px;
 }
 
 a {
@@ -574,3 +574,67 @@ nav #current {
 	border-radius: 50%;
 }
 
+.box-shadow-1, .box-shadow-2, .box-shadow-3, .box-shadow-4, .box-shadow-5, 
+.box-shadow-6, .box-shadow-7, .box-shadow-8, .box-shadow-9, .box-shadow-10 {
+	border: 1px solid black;
+	font-family: 'Roboto Mono', Courier, "Courier New";
+	padding-left: 10px;
+	width: 400px;
+	height: 50px;
+	/* align text in the center both vertically and horizontally(following 3 rules) */
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
+	margin-top: 10px;
+}
+
+.box-shadow-1 {
+	box-shadow: 5px 10px #000;
+}
+
+.box-shadow-2 {
+	box-shadow: -5px 10px #000;
+}
+
+.box-shadow-3 {
+	box-shadow: 5px -10px #000;
+}
+
+.box-shadow-4 {
+	box-shadow: -5px -10px #000;
+}
+
+.box-shadow-5 {
+	box-shadow: 5px 10px 5px #000;
+}
+
+.box-shadow-6 {
+	box-shadow: 5px 10px 5px 5px #000;
+}
+
+.box-shadow-7 {
+	box-shadow: 5px 10px 5px -5px #000;
+}
+
+.box-shadow-8 {
+	box-shadow: 5px 10px 0 5px #000;
+}
+
+.box-shadow-9 {
+	box-shadow: 
+		inset 5px 10px 5px gray,
+		5px 10px 5px black;
+}
+
+.box-shadow-10 {
+	box-shadow: 
+		0 0 10px black,
+		/* x: right, y: down */
+		10px 5px yellow,
+		/* x: left, y: down */
+		-10px 5px red,
+		/* x: left, y: up */
+		-10px -5px blue,
+		/* x: right, y: up */
+		10px -5px lime;
+}

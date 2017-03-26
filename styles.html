@@ -347,7 +347,134 @@
 				    </li>
 				  </ol>
 				</section>
-			</article>
+				<section>
+          <h3>Box Shadow</h3>
+          <h4>Description</h4>
+          <p>
+          	The <i>box-shadow</i> property enables you to cast one or more 
+          	shadows from the frame of almost any element.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code-wrapper">
+          	<p>
+          		box-shadow: inset <i>offset-x offset-y blur-radius spread-radius color</i>
+          	</p>
+          </div>
+          <p>where:</p>
+          <ul>
+          	<li>
+          		inset (optional): if not specified (default), a drop shadow is 
+          		created rather than an inset shadow.
+          	</li>
+          	<li>
+          		<i>offset-x</i>: moves the shadow along the x-axis (left & right).
+          	</li>
+          	<li>
+          		<i>offset-y</i>: moves the shadow along the y-axis (up & down).
+          	</li>
+          	<li>
+          		<i>blur-radius</i> (optional): changes the blur amount of the 
+          		shadow. The larger the value, the bigger the blur, so the shadow 
+          		becomes bigger and lighter. Negative values are not allowed. If 
+          		not specified the value will be 0 (shadow's edge is sharp).
+          	</li>
+          	<li>
+          		<i>spread-radius</i> (optional): causes the shadow to expand 
+          		(grow bigger) or shrink. In other words, it changes the size of 
+          		the shadow.
+          	</li>
+          	<li>
+          		<i>color</i> (optional): specifies the color of the shadow.
+          	</li>
+          </ul>
+          <h4>Examples</h4>
+          <ol>
+          	<li>
+          		<p>Sharp shadow edge (no blur):</p>
+          		<div class="box-shadow-1">
+          			box-shadow: 5px 10px #000;
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow edge (no blur):</p>
+          		<div class="box-shadow-2">
+          			box-shadow: -5px 10px #000;
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow edge (no blur):</p>
+          		<div class="box-shadow-3">
+          			box-shadow: 5px -10px #000;
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow edge (no blur):</p>
+          		<div class="box-shadow-4">
+          			box-shadow: -5px -10px #000;
+          		</div>
+          	</li>
+          	<li>
+          		<p>Specify a blur radius:</p>
+          		<div class="box-shadow-5">
+          			box-shadow: 5px 10px 5px #000;
+          		</div>
+          	</li>
+          	<li>
+          		<p>Specify a spread radius (expand shadow):</p>
+          		<div class="box-shadow-6">
+          			box-shadow: 5px 10px 5px 5px #000;
+          		</div>
+          	</li>
+          	<li>
+          		<p>Specify a spread radius (shrink shadow):</p>
+          		<div class="box-shadow-7">
+          			box-shadow: 5px 10px 5px -5px #000;
+          		</div>
+          	</li>
+          	<li>
+          		<p>Specify a spread radius instead of blur-radius:</p>
+          		<div class="box-shadow-8">
+          			box-shadow: 5px 10px 0 5px #000;
+          		</div>
+          	</li>
+          	<li>
+          		<p>
+          			Inset and outset/drop shadow combination:
+          		</p>
+          		<div class="code-wrapper">
+          			<p>
+          				box-shadow:<br>
+									&nbsp;&nbsp;inset 5px 10px 5px gray,<br>
+									&nbsp;&nbsp;5px 10px 5px black;
+								</p>
+							</div>
+          		<div class="box-shadow-9">
+          		</div>
+          	</li>
+          	<li>
+          		<p>
+          			Specify multiple box shadows:
+          		</p>
+          		<div class="code-wrapper">
+          			<p>
+          				box-shadow:<br>
+          				&nbsp;&nbsp;0 0 10px black,<br>
+									&nbsp;&nbsp;/* x: right, y: down */<br>
+									&nbsp;&nbsp;10px 5px yellow,<br>
+									&nbsp;&nbsp;/* x: left, y: down */<br>
+									&nbsp;&nbsp;-10px 5px red,<br>
+									&nbsp;&nbsp;/* x: left, y: up */<br>
+									&nbsp;&nbsp;-10px -5px blue,<br>
+									&nbsp;&nbsp;/* x: right, y: up */<br>
+									&nbsp;&nbsp;10px -5px lime;
+								</p>
+							</div>
+          		<div class="box-shadow-10">
+          		</div>
+          	</li>
+          </ol>
+        </section>
+      </article>
 		</main>
 		<footer>
 			<a href="">
