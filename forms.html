@@ -113,30 +113,28 @@
           <img src="images/form1.png" alt="html-form" width="300">
           <h4>Implementation</h4>
           <h5>HTML</h5>
-          <div class="code-wrapper">
-            <p>
-              &lt;form class="myform" action="/handler-page" method="post"&gt;<br>
-              &nbsp;&nbsp;&lt;fieldset&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Contact Us&lt;/legend&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name">Name:&lt;/label&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="name" name="user-name"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="mail">E-mail:&lt;/label&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="mail" name="user-mail"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="msg">Message:&lt;/label&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea id="msg" name="user-message"&gt;&lt;/textarea&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="button"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&lt;button type="submit"&gt;SEND EMAIL&lt;/button&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&lt;/fieldset&gt;<br>
-              &lt;/form&gt;
-            </p>
-          </div>
+         	<code>
+          	&lt;form class="myform" action="/handler-page" method="post"&gt;<br>
+            &nbsp;&nbsp;&lt;fieldset&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Contact Us&lt;/legend&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name">Name:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="name" name="user-name"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="mail">E-mail:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="mail" name="user-mail"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="msg">Message:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea id="msg" name="user-message"&gt;&lt;/textarea&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="button"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&lt;button type="submit"&gt;SEND EMAIL&lt;/button&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&lt;/fieldset&gt;<br>
+            &lt;/form&gt;
+          </code>
           <ul>
           	<li>
           		The <b>&lt;form&gt;</b> element defines a form for collecting user 
@@ -245,78 +243,70 @@
         <section>
         	<h4>Form Styling</h4>
           <h5>CSS</h5>
-          <div class="code-wrapper">
-            <p>
-							.myform fieldset {<br>
-							&nbsp;&nbsp;<i>/* Form width */</i><br>
-							&nbsp;&nbsp;width: 400px;<br>
-							&nbsp;&nbsp;<i>/* Outline of the form */</i><br>
-							&nbsp;&nbsp;border: 1px solid #ccc;<br>
-							&nbsp;&nbsp;border-radius: 10px;<br>
-							&nbsp;&nbsp;padding: 20px;<br>
-							}
-						</p>
-						<p>
-							<i>/* Add space between inputs */</i><br>
-							.myform fieldset div + div {<br>
-							&nbsp;&nbsp;margin-top: 20px;<br>
-							}
-						</p>
-						<p>
-							.myform label {<br>
-							&nbsp;&nbsp;<i>/* Set to inline-block in order to set a width */</i><br>
-							&nbsp;&nbsp;display: inline-block;<br>
-							&nbsp;&nbsp;<i>/* Same size for all labels */</i><br>
-							&nbsp;&nbsp;width: 90px;<br>
-							&nbsp;&nbsp;<i>/* Align label to the right */</i><br>
-							&nbsp;&nbsp;text-align: right;<br>
-							}
-						</p>
-						<p>
-							.myform input, .myform textarea {<br>
-							&nbsp;&nbsp;<i>/*<br> 
-							&nbsp;&nbsp;&nbsp;&nbsp;By default &lt;input&gt; fields use a sans-serif font and<br> 
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea&gt; fields use a monospace font. Make sure that all<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;text fields use the same font<br>
-							&nbsp;&nbsp;*/</i><br>
-							&nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
-							&nbsp;&nbsp;<i>/* Make sure all text fields are the same size */</i><br>
-							&nbsp;&nbsp;width: 300px;<br>
-							&nbsp;&nbsp;<i>*/<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;With border-box, the width & height properties includes content,<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;padding and border, but not the margin<br>
-							&nbsp;&nbsp;*/</i><br>
-							&nbsp;&nbsp;box-sizing: border-box;<br>
-							&nbsp;&nbsp;<i>/* Set the same border style as the outline of the form */</i><br>
-							&nbsp;&nbsp;border: 1px solid #ccc;<br>
-							}
-						</p>
-						<p>
-							<i>/* Select and style input field when it get focus */</i><br>
-							.myform input:focus, .myform textarea:focus {<br>
-							&nbsp;&nbsp;background-color: #ccc;<br>
-							}
-						</p>
-						<p>
-							.myform textarea {<br>
-							&nbsp;&nbsp;<i>/*<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;Align the top of the textarea with the top of the tallest element<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;on the line(i.e. label)<br>
-							&nbsp;&nbsp;*/</i><br>
-							&nbsp;&nbsp;vertical-align: top;<br>
-							&nbsp;&nbsp;height: 100px;<br>
-							}
-						</p>
-						<p>
-							<i>/* Align button with text fields */</i><br>
-							.button {<br>
-							&nbsp;&nbsp;<i>/* Same size as the width of the labels */</i><br>
-							&nbsp;&nbsp;padding-left: 90px;<br>
-							&nbsp;&nbsp;<i>/* Represents the space between a label and the text field */</i><br>
-							&nbsp;&nbsp;margin-left: .5em;<br>
-							}
-						</p>
-					</div>
+          <code>
+						.myform fieldset {<br>
+						&nbsp;&nbsp;<i>/* Form width */</i><br>
+						&nbsp;&nbsp;width: 400px;<br>
+						&nbsp;&nbsp;<i>/* Outline of the form */</i><br>
+						&nbsp;&nbsp;border: 1px solid #ccc;<br>
+						&nbsp;&nbsp;border-radius: 10px;<br>
+						&nbsp;&nbsp;padding: 20px;<br>
+						}<br>
+						<br>
+						<i>/* Add space between inputs */</i><br>
+						.myform fieldset div + div {<br>
+						&nbsp;&nbsp;margin-top: 20px;<br>
+						}<br>
+						<br>
+						.myform label {<br>
+						&nbsp;&nbsp;<i>/* Set to inline-block in order to set a width */</i><br>
+						&nbsp;&nbsp;display: inline-block;<br>
+						&nbsp;&nbsp;<i>/* Same size for all labels */</i><br>
+						&nbsp;&nbsp;width: 90px;<br>
+						&nbsp;&nbsp;<i>/* Align label to the right */</i><br>
+						&nbsp;&nbsp;text-align: right;<br>
+						}<br>
+						<br>
+						.myform input, .myform textarea {<br>
+						&nbsp;&nbsp;<i>/*<br> 
+						&nbsp;&nbsp;&nbsp;&nbsp;By default &lt;input&gt; fields use a sans-serif font and<br> 
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea&gt; fields use a monospace font. Make sure that all<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;text fields use the same font<br>
+						&nbsp;&nbsp;*/</i><br>
+						&nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+						&nbsp;&nbsp;<i>/* Make sure all text fields are the same size */</i><br>
+						&nbsp;&nbsp;width: 300px;<br>
+						&nbsp;&nbsp;<i>*/<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;With border-box, the width & height properties includes content,<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;padding and border, but not the margin<br>
+						&nbsp;&nbsp;*/</i><br>
+						&nbsp;&nbsp;box-sizing: border-box;<br>
+						&nbsp;&nbsp;<i>/* Set the same border style as the outline of the form */</i><br>
+						&nbsp;&nbsp;border: 1px solid #ccc;<br>
+						}<br>
+						<br>
+						<i>/* Select and style input field when it get focus */</i><br>
+						.myform input:focus, .myform textarea:focus {<br>
+						&nbsp;&nbsp;background-color: #ccc;<br>
+						}<br>
+						<br>
+						.myform textarea {<br>
+						&nbsp;&nbsp;<i>/*<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;Align the top of the textarea with the top of the tallest element<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;on the line(i.e. label)<br>
+						&nbsp;&nbsp;*/</i><br>
+						&nbsp;&nbsp;vertical-align: top;<br>
+						&nbsp;&nbsp;height: 100px;<br>
+						}<br>
+						<br>
+						<i>/* Align button with text fields */</i><br>
+						.button {<br>
+						&nbsp;&nbsp;<i>/* Same size as the width of the labels */</i><br>
+						&nbsp;&nbsp;padding-left: 90px;<br>
+						&nbsp;&nbsp;<i>/* Represents the space between a label and the text field */</i><br>
+						&nbsp;&nbsp;margin-left: .5em;<br>
+						}<br>
+					</code>
 					<h5>Result</h5>
           <div class="result-wrapper">
           	<form class="myform" action="handler-page" method="post">
