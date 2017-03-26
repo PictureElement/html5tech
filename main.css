@@ -196,6 +196,18 @@ li {
 	margin-top: 5px;
 }
 
+code {
+	font-size: 15px;
+	font-weight: 100;
+	font-family: 'Roboto Mono', Courier, "Courier New";
+	color: #8c8c90;
+	margin-top: 5px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 10px;
+	border-left: 5px solid red;
+	display: block;
+}
 
 /*----------------------------------------------------------------------------*/
 
@@ -213,21 +225,6 @@ a:hover .social-icon {
 	opacity: 1;
 }
 
-.code-wrapper {
-	background-color: #ffffff;
-	border-radius: 10px;
-	padding: 10px;
-	border-left: 5px solid #007f7f;
-}
-
-.code-wrapper p{
-	font-family: 'Roboto Mono', Courier, "Courier New";
-}
-
-.code-wrapper li {
-	font-family: 'Roboto Mono', Courier, "Courier New";
-}
-
 .result-wrapper {
 	font-size: 15px;
 	font-weight: 100;
@@ -237,7 +234,7 @@ a:hover .social-icon {
 	background-color: #ffffff;
 	border-radius: 10px;
 	padding: 10px;
-	border-left: 5px solid #007f7f;
+	border-left: 5px solid lime;
 }
 
 .cakes {
