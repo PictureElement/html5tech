@@ -52,7 +52,7 @@ Each topic/concept is an HTML document by itself organized as follows:
 ## Contribution
 
 Feel free to be part of this project. Create now your own page regarding a 
-specific topic/concept in HTML, CSS or JS. Just remember to be consistent with 
+specific topic/concept or update an existing page by adding a new section. Just remember to be consistent with 
 the site's structure. 
 
 ## Disclaimer 
