@@ -153,14 +153,6 @@ footer {
 	box-shadow: 0 1px 1px black;
 }
 
-address {
-	font-size: 12px;
-	font-weight: 100;
-	font-family: Lato, Helvetica, Arial;
-	color: rgba(255, 255, 255, 0.5);
-	margin: 20px 0;
-}
-
 time {
 	font-size: 12px;
 	font-style: italic;
@@ -169,7 +161,7 @@ time {
 	color: rgba(255, 255, 255, 0.5);
 }
 
-/* Navigation bar */
+/* Header navigation bar */
 nav {
 	background: linear-gradient(to bottom, #2b2d32, #3b3d42);
 	overflow: hidden;
@@ -358,8 +350,8 @@ section a:hover {
 }
 
 /* 
-	Change the background color of links inside the navigation bar. Change the 
-	background color of the dropdown button  when you hover the mouse over the 
+	Change the background color of links inside the navigation bar. Change 
+	the background color of the dropdown button  when you hover the mouse over the 
 	dropdown container (that includes the dropbutton & dropdown content)
 */
 nav a:hover, .dropdown:hover .dropbtn {
@@ -634,4 +626,15 @@ nav #current {
 		-10px -5px blue,
 		/* x: right, y: up */
 		10px -5px lime;
+}
+
+.footer-nav a {
+	font-style: normal;
+}
+
+.copyright {
+	font-size: 12px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.5);
 }
