@@ -776,6 +776,91 @@
           	creativity and the possibilties are endless!
           </p>
        	</section>
+       	<section>
+          <h3>Box Sizing</h3>
+          <h4>Description</h4>
+          <p>
+          	The <i>box-sizing</i> property changes the default CSS box model, 
+          	which is used to calculate widths and heights of given elements.
+          </p>
+   				<h4>Content-box(default)</h4>
+          <h5>HTML</h5>
+          <code>
+	        	&lt;div class="content-box"&gt;<br>
+	          &lt;/div&gt;
+	        </code>
+          <h5>CSS</h5>
+          <code>
+	         	.content-box {<br>
+	          &nbsp;&nbsp;border: 10px solid black;<br>
+	          &nbsp;&nbsp;margin: 20px;<br>
+						&nbsp;&nbsp;padding: 30px;<br>
+	          &nbsp;&nbsp;width: 200px;<br>
+	          &nbsp;&nbsp;height: 100px;
+	          }
+	        </code>
+          <h5>Result</h5>
+          <div class="content-box">
+          	<p>CONTENT</p>
+          </div>
+          <p>
+	        	<b>rendered box width</b> = 200px(content) + 60px(padding) + 20px(border) = 280px
+	        </p>
+	        <p>
+	        	<b>rendered box height</b> = 100px(content) + 60px(padding) + 20px(border) = 180px
+	        </p>
+          <h4>Padding-box*</h4>
+          <code>
+	        	&lt;div class="padding-box"&gt;<br>
+	          &lt;/div&gt;
+	        </code>
+	        <code>
+	         	.padding-box {<br>
+	          &nbsp;&nbsp;border: 10px solid black;<br>
+	          &nbsp;&nbsp;margin: 20px;<br>
+						&nbsp;&nbsp;padding: 30px;<br>
+						&nbsp;&nbsp;box-sizing: padding-box;<br>
+	          &nbsp;&nbsp;width: 200px;<br>
+	          &nbsp;&nbsp;height: 100px;<br>
+	          }
+	        </code>
+	        <h5>Result</h5>
+	        <div class="padding-box">
+          	<p>CONTENT</p>
+          </div>
+          <p>
+	        	<b>rendered box width</b> = 200px[140px(content)+60px(padding)] + 20px(border) = 220px
+	        </p>
+	        <p>
+	        	<b>rendered box height</b> = 100px[40px(content)+60px(padding)] + 20px(border) = 120px
+	        </p>
+	        <p>*This API has not been standardized</p>
+					<h4>Border-box</h4>
+          <code>
+	        	&lt;div class="border-box"&gt;<br>
+	          &lt;/div&gt;
+	        </code>
+	        <code>
+	         	.border-box {<br>
+	          &nbsp;&nbsp;border: 10px solid black;<br>
+	          &nbsp;&nbsp;margin: 20px;<br>
+						&nbsp;&nbsp;padding: 30px;<br>
+						&nbsp;&nbsp;box-sizing: border-box;<br>
+	          &nbsp;&nbsp;width: 200px;<br>
+	          &nbsp;&nbsp;height: 100px;<br>
+	          }
+	        </code>
+	        <h5>Result</h5>
+	        <div class="border-box">
+          	<p>CONTENT</p>
+          </div>
+          <p>
+	        	<b>rendered box width</b> = 200px[120px(content)+60px(padding)+20px(border)] = 200px
+	        </p>
+	        <p>
+	        	<b>rendered box height</b> = 100px[20px(content)+60px(padding)+20px(border)] = 100px
+	        </p>
+       	</section>
       </article>
 		</main>
 		<footer>
