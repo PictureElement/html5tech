@@ -793,3 +793,25 @@ nav #current {
 	width: 200px;
 	height: 100px;
 }
+
+/*
+.mult-bg-1 {
+	border: 5px solid black;
+	height: 300px;
+	background-image: 
+	 	url(images/avatar.png), 
+	 	url(images/lightning.svg), 
+	 	linear-gradient(to left, #dc2424, #4a569d);
+	background-position: 50% 20%, center, center;
+	background-size: 150px, contain, contain;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+}
+*/
+.mult-bg-1 {
+	border: 5px solid black;
+	height: 300px;
+	background:
+		url(images/avatar.png) 50% 20%/150px no-repeat,
+		url(images/lightning.svg) center/contain no-repeat,
+		linear-gradient(to left, #dc2424, #4a569d) center/contain no-repeat;
+}

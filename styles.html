@@ -861,6 +861,81 @@
 	        	<b>rendered box height</b> = 100px[20px(content)+60px(padding)+20px(border)] = 100px
 	        </p>
        	</section>
+       	<section>
+          <h3>Multiple Backgrounds</h3>
+          <h4>Description</h4>
+          <p>
+            CSS3 allows you to apply multiple backgrounds to an element. 
+            Backgrounds are stacked on top of each other. The first background 
+            you provide is on top of the stack and the last background listed in 
+            the back.
+          </p>
+          <h4>Syntax</h4>
+          <ol>
+          	<li>
+							Specify individual properties:
+							<h5>CSS</h5>
+							<code>
+								<i>.myclass</i> {<br>
+								&nbsp;&nbsp;background-image: <i>value1, ..., valueN;</i><br>
+								&nbsp;&nbsp;background-position: <i>value1, ..., valueN;</i><br>
+								&nbsp;&nbsp;background-size: <i>value1, ..., valueN;</i><br>
+								&nbsp;&nbsp;background-repeat: <i>value1, ..., valueN;</i><br>
+								}
+							</code>
+						</li>
+						<li>
+							Shorthand:
+							<h5>CSS</h5>
+							<code>
+								<i>.myclass</i> {<br>
+								&nbsp;&nbsp; background:<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<i>bg-image1 bg-position1 bg-size1 bg-repeat1 bg-color1,</i><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<i>bg-imageN bg-positionN/bg-sizeN bg-repeatN bg-colorN;</i><br>
+								}
+							</code>
+              <p>
+                <b>Note:</b> If one of the properties in the shorthand syntax is 
+                the <i>bg-size</i> property, you must use a slash(/) to separate
+                it from the <i>bg-position</i> property (e.g. 10px 20px/50px 
+                40px, top/cover, etc.)
+              </p>
+						</li>
+					</ol>
+          <h4>Example</h4>
+         	<h5>HTML</h5>
+       		<code>
+       			&lt;div class="mult-bg-1"&gt;<br>
+       			&lt;/div&gt;
+       		</code>
+       		<h5>CSS</h5>
+       		<code>
+            .mult-bg-1 {<br>
+            &nbsp;&nbsp;border: 5px solid black;<br>
+            &nbsp;&nbsp;height: 300px;<br>
+            &nbsp;&nbsp;background-image:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;url(images/avatar.png),<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;url(images/lightning.svg),<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;linear-gradient(to left, #dc2424, #4a569d);<br>
+            &nbsp;&nbsp;background-position: 50% 20%, center, center;<br>
+            &nbsp;&nbsp;background-size: 150px, contain, contain;<br>
+            &nbsp;&nbsp;background-repeat: no-repeat, no-repeat, no-repeat;<br>
+            }<br>
+						/* OR (Shorthand) */<br>
+						.mult-bg-1 {<br>
+            &nbsp;&nbsp;border: 5px solid black;<br>
+            &nbsp;&nbsp;height: 300px;<br>
+            &nbsp;&nbsp;background:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;url(images/avatar.png) 50% 20%/150px no-repeat,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;url(images/lightning.svg) center/contain no-repeat,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;linear-gradient(to left, #dc2424, #4a569d) center/contain no-repeat;<br>
+            }
+       		</code>
+       		<h5>Result</h5>
+       		<div class="mult-bg-1">
+       		</div>
+       	</section>
       </article>
 		</main>
 		<footer>
