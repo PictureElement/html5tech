@@ -27,7 +27,7 @@
   </head>
   <body>
     <header>
-      <img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="400">
+      <img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
       <!--
       <div class="tagline">
         <h5>Fundamental resources about HTML5 &amp; friends</h5>
@@ -452,6 +452,330 @@
           	</li>
           </ol>
         </section>
+        <section>
+          <h3>Text Shadow</h3>
+          <h4>Description</h4>
+          <p>The <i>text-shadow</i> property adds shadows to text.</p>
+          <h4>Syntax</h4>
+          <code>
+         		text-shadow: <i>offset-x offset-y blur-radius color</i><br>
+         		/* OR */<br>
+         		text-shadow: <i>color offset-x offset-y blur-radius</i>
+          </code>
+          <p>where:</p>
+          <ul>
+          	<li>
+          		<i>offset-x</i>: position of horizontal shadow.
+          	</li>
+          	<li>
+          		<i>offset-y</i>: position of vertical shadow.
+          	</li>
+          	<li>
+          		<i>blur-radius</i> (optional): controls the blur amount. The 
+          		higher this value, the bigger the blur and the shadow becomes 
+          		wider and lighter.
+          	</li>
+          	<li>
+          		<i>color</i> (optional): specifies the color of the shadow. This 
+          		value can be specified either before or after the offset values.
+          	</li>
+          </ul>
+          <p>
+          	<b>Note:</b> You can apply multiple text shadows, using a 
+          	comma-separated list.
+          </p>
+          <h4>Examples</h4>
+          <ol>
+          	<li>
+          		<p>Sharp shadow (no blur):</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow: 5px 5px #a0a0a0;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-1">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow (no blur):</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow: -5px 5px #a0a0a0;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-2">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow (no blur):</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow: 5px -5px #a0a0a0;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-3">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow (no blur):</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow: -5px -5px #a0a0a0;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-4">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow (no blur):</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow: 0 5px #a0a0a0;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-5">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow (no blur):</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow: 0 -5px #a0a0a0;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-6">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow (no blur):</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow: 5px 0 #a0a0a0;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-7">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Sharp shadow (no blur):</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow: -5px 0 #a0a0a0;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-8">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Shadow with a blur effect:</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow: -5px 0 10px #a0a0a0;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-9">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Multiple shadows:</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;h1&gt;Testing&lt;/h1&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: black;<br>
+          			&nbsp;&nbsp;text-shadow:<br>
+          			&nbsp;&nbsp;&nbsp;&nbsp;-5px 5px #505050,<br>
+          			&nbsp;&nbsp;&nbsp;&nbsp;-10px 10px #707070,<br>
+          			&nbsp;&nbsp;&nbsp;&nbsp;-15px 15px #909090;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-10">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Complex shadow (multiple shadows, blur effect):</p>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;div class="text-shadow"&gt;<br>
+          			&lt;h1&gt;Testing&lt;/h1&gt;<br>
+          			&lt;/div&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			.text-shadow {<br>
+								&nbsp;&nbsp;background: #0e8dbc;<br>
+								}<br>
+								<br>
+          			.text-shadow h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+          			&nbsp;&nbsp;color: white;<br>
+          			&nbsp;&nbsp;text-shadow:<br>
+          			&nbsp;&nbsp;&nbsp;&nbsp;/* Shades of gray (make the character feel 3D) */<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;0 1px 0 #d0d0d0,<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;0 2px 0 #c0c0c0,<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;0 3px 0 #b0b0b0,<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;0 4px 0 #a0a0a0,<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;0 5px 0 #909090,<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;/* Black shadows (cast character shadows) */<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;0 6px 1px rgba(0,0,0,.1),<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;0 5px  10px  rgba(0,0,0,.25),<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;0 10px 10px rgba(0,0,0,.2),<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;0 20px 20px rgba(0,0,0,.15);<br>
+								}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-11">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Inset Text:</p>
+          		<h5>HTML</h5>
+          		<code>
+	          		&lt;div class="text-shadow"&gt;<br>
+	          		&nbsp;&nbsp;&lt;h1&gt;Testing&lt;/h1&gt;<br>
+	          		&lt;/div&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			.text-shadow {<br>
+								&nbsp;&nbsp;background: #404040;<br>
+								}<br>
+								<br>
+          			.text-shadow h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: rgba(0,0,0,.3);<br>
+								&nbsp;&nbsp;text-shadow: 2px 2px 2px rgba(255,255,255,.1);<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-12">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          	<li>
+          		<p>Inset Text:</p>
+          		<h5>HTML</h5>
+          		<code>
+	          		&lt;div class="text-shadow"&gt;<br>
+	          		&nbsp;&nbsp;&lt;h1&gt;Testing&lt;/h1&gt;<br>
+	          		&lt;/div&gt;
+          		</code>
+          		<h5>CSS</h5>
+          		<code>
+          			.text-shadow {<br>
+								&nbsp;&nbsp;background: aqua;<br>
+								}<br>
+								<br>
+          			.text-shadow h1 {<br>
+          			&nbsp;&nbsp;font-weight: bold;<br>
+								&nbsp;&nbsp;color: white;<br>
+								&nbsp;&nbsp;text-shadow:<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;-5px 5px #00eeee,<br>
+   							&nbsp;&nbsp;&nbsp;&nbsp;-10px 10px #00dddd,<br>
+   							&nbsp;&nbsp;&nbsp;&nbsp;-15px 15px #00cccc;<br>
+          			}
+          		</code>
+          		<h5>Result</h5>
+          		<div class="text-shadow-13">
+          			<h1>Testing</h1>
+          		</div>
+          	</li>
+          </ol>
+          <h4>Conclusion</h4>
+          <p>
+          	Using a comma separated list you can stack multiple shadows on top 
+          	of each other and create some remarkable effects. Just use your 
+          	creativity and the possibilties are endless!
+          </p>
+       	</section>
       </article>
 		</main>
 		<footer>
