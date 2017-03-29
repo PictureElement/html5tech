@@ -124,13 +124,14 @@
           </p>
           <h5>Functional Notation</h5>
           <p>
-            <b>rgb(r,g,b)</b><br>
-            <b>rgb(pctr,pctg,pctb)</b><br>
+            <b>rgb(<i>r,g,b</i>)</b><br>
+            <b>rgb(<i>pctr,pctg,pctb</i>)</b><br>
           </p>
-          <p>
-            where:<br>
-            0 &le; r,g,b &le; 255, r,g,b &isin; &#8469;<br>
-            pctr,pctg,pctb: 0-100%
+          <p>where:</p>
+          <ul>
+          	<li>0 &le; <i>r,g,b</i> &le; 255, <i>r,g,b</i> &isin; &#8469;</li>
+            <li><i>pctr,pctg,pctb</i>: 0-100%</li>
+          </ul>
           </p>
           <h4>rgba()</h4>
           <h5>Hexadecimal Notation</h5>
@@ -154,12 +155,16 @@
           </p>
           <h5>Functional Notation</h5>
           <p>
-            <b>rgba(r,g,b,a)</b>
+            <b>rgba(<i>r,g,b,a</i>)</b>
           </p>
-          <p>
-            where:<br>
-            0 &le; r,g,b &le; 255, r,g,b &isin; &#8469;<br>
-            0 &le; a &le; 1, a &isin; &real;
+          <p>where:</p>
+          <ul>
+          	<li>0 &le; <i>r,g,b</i> &le; 255, <i>r,g,b</i> &isin; &#8469;</li>
+            <li>
+            	0 &le; <i>a</i> &le; 1, <i>a</i> &isin; &real;, 
+            	<i>a</i> means opacity: 0=transparent, 1=opaque
+            </li>
+          </ul>
           </p>
           <h4>Examples</h4>
           <ol>
@@ -217,7 +222,62 @@
         </section>
         <section>
           <h3>HSL Color Model</h3>
-        </section>
+          <h4>Description</h4>
+          <p>
+          	Colors can also be defined via HUE, SATURATION, and LIGHTNESS, or HSL. Hue is represented as an angle of the color circle. By definition pure red=0(or 360), pure green=120, pure blue=240. Saturation and lightness are represented as percentages. 100% is full saturation, and 0% is a shade of gray. 100% ligthness is white, 0% lightness is black, and 50% lightness is normal. 
+          </p>
+          <h4>hsl()</h4>
+         	<p><b>hsl(<i>hue,saturation,lightness</i>)</b></p>
+         	<p>where:</p>
+         	<ul>
+         		<li>0 &le; <i>hue</i> &le; 360</li>
+         		<li><i>saturation:</i> 0-100%</li>
+         		<li>
+         			<i>lightness:</i> 0-100%
+         		</li>
+         	</ul>
+         	<h4>hsla()</h4>
+         	<p><b>hsl(<i>hue,saturation,lightness,a</i>)</b></p>
+         	<p>where:</p>
+         	<ul>
+         		<li>0 &le; <i>hue</i> &le; 360</li>
+         		<li><i>saturation:</i> 0-100%</li>
+         		<li><i>lightness:</i> 0-100%</li>
+         		<li>
+            	0 &le; <i>a</i> &le; 1, <i>a</i> &isin; &real;, 
+            	<i>a</i> means opacity: 0=transparent, 1=opaque
+            </li>
+         	</ul>
+         	<h4>Color Wheel</h4>
+         	<img src="images/color-wheel.svg" alt="color wheel" width="300">
+         	<h4>Examples</h4>
+         	<ol>
+            <li>
+            	<b>hsl(0, 100%, 50%)</b><br>
+            	*The color is red
+            </li>
+            <li>
+            	<b>hsl(60, 100%, 50%)</b><br>
+            	*The color is yellow
+            </li>
+            <li>
+            	<b>hsl(120, 100%, 50%)</b><br>
+            	*The colors is green.
+            </li>
+            <li>
+            	<b>hsl(180, 100%, 50%)</b><br>
+            	*The colors is cyan.
+            </li>
+            <li>
+            	<b>hsl(240, 100%, 50%)</b><br>
+            	*The colors is blue.
+            </li>
+            <li>
+            	<b>hsl(300, 100%, 50%)</b><br>
+            	*The colors is magenta.
+            </li>
+          </ol>
+     		</section>
       </article>
     </main>
     <footer>
