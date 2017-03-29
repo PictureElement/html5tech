@@ -815,3 +815,50 @@ nav #current {
 		url(images/lightning.svg) center/contain no-repeat,
 		linear-gradient(to left, #dc2424, #4a569d) center/contain no-repeat;
 }
+
+.opacity-1 img {
+	opacity: 0.1;
+}
+
+.opacity-2 img {
+	opacity: 0.5;
+}
+
+.opacity-3 img {
+	opacity: 1.0;
+}
+
+.opacity-4 p {
+	padding: 0;
+	margin: 0;
+}
+
+.opacity-4 .first {
+	background-color: #007f7f;
+	opacity: 0.2;
+	padding: 10px;
+}
+
+.opacity-4 .second {
+	background-color: #007f7f;
+	opacity: 0.4;
+	padding: 10px;
+}
+
+.opacity-4 .third {
+	background-color: #007f7f;
+	opacity: 0.6;
+	padding: 10px;
+}
+
+.opacity-4 .fourth {
+	background-color: #007f7f;
+	opacity: 0.8;
+	padding: 10px;
+}
+
+.opacity-4 .fifth {
+	background-color: #007f7f;
+	opacity: 1.0;
+	padding: 10px;
+}

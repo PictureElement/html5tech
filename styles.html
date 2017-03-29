@@ -936,7 +936,159 @@
        		<div class="mult-bg-1">
        		</div>
        	</section>
-      </article>
+       	<section>
+          <h3>Opacity</h3>
+          <h4>Description</h4>
+          <p>
+          	The <i>opacity</i> property specifies the opacity/transparency of an 
+          	element.
+          </p>
+          <h4>Syntax</h4>
+          <h5>CSS</h5>
+					<code>
+						<i>.myclass</i> {<br>
+						&nbsp;&nbsp;opacity: value;<br>
+						}
+					</code>
+					<p>where: 0 &le; <i>value</i> &le; 1, <i>value</i> &isin; &real;</p>
+					<p>
+						<b>Note:</b> when using the <i>opacity</i> property on an element, 
+						all of its child elements inherit the same transparency. If you want
+						a transparent box but you don't want to apply opacity to text isnide 
+						that box, use <b>rgba()</b>.
+					</p>
+					<h4>Examples</h4>
+					<ol>
+						<li>
+							<h5>HTML</h5>
+							<code>
+								&lt;div class="opacity-1"&gt;<br>
+								&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"&gt;<br>
+								&lt;/div&gt;
+							</code>
+							<h5>CSS</h5>
+							<code>
+								.opacity-1 img {<br>
+								&nbsp;&nbsp;opacity: 0.1;<br>
+								}
+							</code>
+							<h5>Result</h5>
+							<div class="opacity-1">
+								<img src="images/avatar.png" alt="avatar" width="200">
+							</div>
+							<h5>HTML</h5>
+							<code>
+								&lt;div class="opacity-2"&gt;<br>
+								&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"&gt;<br>
+								&lt;/div&gt;
+							</code>
+							<h5>CSS</h5>
+							<code>
+								.opacity-2 img {<br>
+								&nbsp;&nbsp;opacity: 0.5;<br>
+								}
+							</code>
+							<h5>Result</h5>
+							<div class="opacity-2">
+								<img src="images/avatar.png" alt="avatar" width="200">
+							</div>
+							<h5>HTML</h5>
+							<code>
+								&lt;div class="opacity-3"&gt;<br>
+								&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"&gt;<br>
+								&lt;/div&gt;
+							</code>
+							<h5>CSS</h5>
+							<code>
+								.opacity-3 img {<br>
+								&nbsp;&nbsp;opacity: 1.0;<br>
+								}
+							</code>
+							<h5>Result</h5>
+							<div class="opacity-3">
+								<img src="images/avatar.png" alt="avatar" width="200">
+							</div>
+						</li>
+						<li>
+							<h5>HTML</h5>
+							<code>
+								&lt;div class="opacity-4"&gt;<br>
+								&nbsp;&nbsp;&lt;div class="first"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 0.2&lt;/p&gt;<br>
+								&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&lt;div class="second"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 0.4&lt;/p&gt;<br>
+								&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&lt;div class="third"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 0.6&lt;/p&gt;<br>
+								&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&lt;div class="fourth"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 0.8&lt;/p&gt;<br>
+								&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&lt;div class="fifth"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 1.0&lt;/p&gt;<br>
+								&nbsp;&nbsp;&lt;/div&gt;<br>
+								&lt;div&gt;
+							</code>
+							<h5>CSS</h5>
+							<code>
+								.opacity-4 p {<br>
+								&nbsp;&nbsp;padding: 0;<br>
+								&nbsp;&nbsp;margin: 0;<br>
+								}<br>
+								<br>
+								.opacity-4 .first {<br>
+								&nbsp;&nbsp;background-color: #007f7f;<br>
+								&nbsp;&nbsp;opacity: 0.2;<br>
+								&nbsp;&nbsp;padding: 10px;<br>
+								}<br>
+								<br>
+								.opacity-4 .second {<br>
+								&nbsp;&nbsp;background-color: #007f7f;<br>
+								&nbsp;&nbsp;opacity: 0.4;<br>
+								&nbsp;&nbsp;padding: 10px;<br>
+								}<br>
+								<br>
+								.opacity-4 .third {<br>
+								&nbsp;&nbsp;background-color: #007f7f;<br>
+								&nbsp;&nbsp;opacity: 0.6;<br>
+								&nbsp;&nbsp;padding: 10px;<br>
+								}<br>
+								<br>
+								.opacity-4 .fourth {<br>
+								&nbsp;&nbsp;background-color: #007f7f;<br>
+								&nbsp;&nbsp;opacity: 0.8;<br>
+								&nbsp;&nbsp;padding: 10px;<br>
+								}<br>
+								<br>
+								.opacity-4 .fifth {<br>
+								&nbsp;&nbsp;background-color: #007f7f;<br>
+								&nbsp;&nbsp;opacity: 1.0;<br>
+								&nbsp;&nbsp;padding: 10px;<br>
+								}
+							</code>
+							<h5>Result</h5>
+							<div class="opacity-4">
+								<div class="first">
+									<p>opacity = 0.2</p>
+								</div>
+								<div class="second">
+									<p>opacity = 0.4</p>
+								</div>
+								<div class="third">
+									<p>opacity = 0.6</p>
+								</div>
+								<div class="fourth">
+									<p>opacity = 0.8</p>
+								</div>
+								<div class="fifth">
+									<p>opacity = 1.0</p>
+								</div>
+							</div>
+						</li>
+					</ol>
+				</section>
+			</article>
 		</main>
 		<footer>
 			<div class="follow-us">
