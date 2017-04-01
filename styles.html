@@ -929,81 +929,539 @@
 							<code>
 								&lt;div class="opacity-4"&gt;<br>
 								&nbsp;&nbsp;&lt;div class="first"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 0.2&lt;/p&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.2<br>
 								&nbsp;&nbsp;&lt;/div&gt;<br>
 								&nbsp;&nbsp;&lt;div class="second"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 0.4&lt;/p&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.4<br>
 								&nbsp;&nbsp;&lt;/div&gt;<br>
 								&nbsp;&nbsp;&lt;div class="third"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 0.6&lt;/p&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.6<br>
 								&nbsp;&nbsp;&lt;/div&gt;<br>
 								&nbsp;&nbsp;&lt;div class="fourth"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 0.8&lt;/p&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.8<br>
 								&nbsp;&nbsp;&lt;/div&gt;<br>
 								&nbsp;&nbsp;&lt;div class="fifth"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;opacity = 1.0&lt;/p&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 1.0<br>
 								&nbsp;&nbsp;&lt;/div&gt;<br>
 								&lt;div&gt;
 							</code>
 							<h5>CSS</h5>
 							<code>
-								.opacity-4 p {<br>
-								&nbsp;&nbsp;padding: 0;<br>
-								&nbsp;&nbsp;margin: 0;<br>
-								}<br>
+								.opacity-4 {<br>
+                &nbsp;&nbsp;color: white;<br>
+                &nbsp;&nbsp;font-size: 15px;<br>
+                &nbsp;&nbsp;font-weight: 100;<br>
+                &nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+                }<br>
+                <br>
+                .opacity-4 .first, .opacity-4 .second, .opacity-4 .third,<br>
+                .opacity-4 .fourth, .opacity-4 .fifth {<br>
+                &nbsp;&nbsp;background-color: #007f7f;<br>
+                &nbsp;&nbsp;padding: 20px;<br>
+                }<br>
 								<br>
 								.opacity-4 .first {<br>
-								&nbsp;&nbsp;background-color: #007f7f;<br>
 								&nbsp;&nbsp;opacity: 0.2;<br>
-								&nbsp;&nbsp;padding: 10px;<br>
 								}<br>
 								<br>
 								.opacity-4 .second {<br>
-								&nbsp;&nbsp;background-color: #007f7f;<br>
 								&nbsp;&nbsp;opacity: 0.4;<br>
-								&nbsp;&nbsp;padding: 10px;<br>
 								}<br>
 								<br>
 								.opacity-4 .third {<br>
-								&nbsp;&nbsp;background-color: #007f7f;<br>
 								&nbsp;&nbsp;opacity: 0.6;<br>
-								&nbsp;&nbsp;padding: 10px;<br>
 								}<br>
 								<br>
 								.opacity-4 .fourth {<br>
-								&nbsp;&nbsp;background-color: #007f7f;<br>
 								&nbsp;&nbsp;opacity: 0.8;<br>
-								&nbsp;&nbsp;padding: 10px;<br>
 								}<br>
 								<br>
 								.opacity-4 .fifth {<br>
-								&nbsp;&nbsp;background-color: #007f7f;<br>
 								&nbsp;&nbsp;opacity: 1.0;<br>
-								&nbsp;&nbsp;padding: 10px;<br>
 								}
 							</code>
 							<h5>Result</h5>
 							<div class="opacity-4">
 								<div class="first">
-									<p>opacity = 0.2</p>
+								  opacity = 0.2
 								</div>
 								<div class="second">
-									<p>opacity = 0.4</p>
+								  opacity = 0.4
 								</div>
 								<div class="third">
-									<p>opacity = 0.6</p>
+								  opacity = 0.6
 								</div>
 								<div class="fourth">
-									<p>opacity = 0.8</p>
+							    opacity = 0.8
 								</div>
 								<div class="fifth">
-									<p>opacity = 1.0</p>
+								  opacity = 1.0
 								</div>
 							</div>
 						</li>
 					</ol>
 				</section>
-			</article>
+				<section>
+	        <h3>Gradients</h3>
+	        <h4>Description</h4>
+	        <p>
+	        	Gradients let us create smooth transitions between two or more 
+	        	specified colors. There are two types of gradients: linear gradients 
+	        	and radial gradients.
+	        </p>
+	        <h4>Linear gradients</h4>
+	        <p>A linear gradient is a straight/linear progression.</p>
+	        <h5>CSS</h5>
+	        <code>
+	          background: linear-gradient(<i>direction, color-stop1, ..., 
+	          color-stopN</i>);
+	        </code>
+	        <p>where:</p>
+	        <ul>
+	        	<li>
+	        	  <i>direction</i> describes the direction of the gradient and can be 
+	            specified by a <i>side-or-corner</i> or an <i>angle</i>.
+	        	</li>
+	        	<li>
+	        	  <i>color-stop</i> is a point along the gradient line that has a 
+	            specific color at that location. A color-stop value is comprised of 
+	            a <i>color</i> value, followed by an optional <i>stop position</i>.
+	        	</li>
+	        </ul>
+	       	<p>where:</p>
+	       	<ul>
+	        	<li>
+	            <i>side-or-corner</i> is optional and equals to:
+	        		<ul>
+	        			<li><b>to right</b> (gradients runs from left to right)</li>
+	        			<li><b>to left</b> (gradients runs from right to left)</li>
+	        			<li><b>to top</b> (gradients runs from bottom to top)</li>
+	        			<li><b>to bottom</b> (gradients runs from top to bottom)</li>
+	        			<li><b>to top left</b> (gradient runs diagonally)</li>
+	        			<li><b>to top right</b> (gradient runs diagonally)</li>
+	        			<li><b>to bottom left</b> (gradient runs diagonally)</li>
+	        			<li><b>to bottom right</b> (gradient runs diagonally)</li>
+	        		</ul>
+	            <div class="note">
+	              <b>Note:</b> The order is not relevant(e.g. to top left = to left top)
+	            </div>
+	          </li>
+	        	<li>
+	        	  <i>angle</i> is optional and  is specified as an angle between a 
+	            vertical line and the gradient line. Some examples are:
+	        		<ul>
+	        			<li><b>90deg</b> (similar to: to right)</li>
+	        			<li><b>-90deg</b> (similar to: to left)</li>
+	        			<li><b>0</b> (similar to: to top)</li>
+	        			<li><b>180deg</b> (similar to: to bottom)</li>
+	        		</ul>
+	        	</li>
+	        	<li>
+	            <i>color</i> can be specified in any of the following ways:
+	        		<ul>
+	        			<li><b><i>#RRGGBB</i></b></li>
+	        			<li><b><i>#RGB</i></b></li>
+	        			<li><b><i>#RRGGBBaa</i></b></li>
+	        			<li><b><i>#RGBa</i></b></li>
+	        			<li><b>rgb(<i>r,g,b</i>)</b></li>
+	        			<li><b>rgb(<i>pctr,pctg,pctb</i>)</b></li>
+	        			<li><b>rgba(<i>r,g,b,a</i>)</b></li>
+	        			<li><b>hsl(<i>hue,saturation,lightness</i>)</b></li>
+	        			<li><b>hsla(<i>hue,saturation,lightness,a</i>)</b></li>
+	        		</ul>
+	        	</li>
+	        	<li>
+	            <i>stop position</i> is optional and can be specified as either a 
+	            percentage, or as a length. For example, the starting point is 
+	            represented with 0% (or a length of 0) and the ending point with 
+	            100%.
+	        	</li> 
+	        </ul>
+	        <h4>Example</h4>
+	        <h5>HTML</h5>
+	        <code>
+	          &lt;div class="linear-gradient"><br>
+	          &nbsp;&nbsp;&lt;div class="first"><br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;1. Gradient runs from left to right 
+	          (stop positions: darkblue-0%,darkmagenta-100%)<br>
+	          &nbsp;&nbsp;&lt;/div><br>
+	          &nbsp;&nbsp;&lt;div class="second"><br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;2. Gradient runs from bottom to top 
+	          (stop positions: palegreen-0%, crimson-100%)<br>
+	          &nbsp;&nbsp;&lt;/div><br>
+	          &nbsp;&nbsp;&lt;div class="third"><br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;3. Gradient runs diagonally 
+	          (stop positions: orangered-0%, slateblue-100%)<br>
+	          &nbsp;&nbsp;&lt;/div><br>
+	          &nbsp;&nbsp;&lt;div class="fourth"><br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;4. Gradient runs from top to bottom 
+	          (stop positions: lightcoral-0%, cyan-100%)<br>
+	          &nbsp;&nbsp;&lt;/div><br>
+	          &nbsp;&nbsp;&lt;div class="fifth"><br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;5. Three color stops (stop positions: 
+	          lightseagreen-0%, black-80%, mediumorchid-100%)<br>
+	          &nbsp;&nbsp;&lt;/div><br>
+	          &nbsp;&nbsp;&lt;div class="sixth"><br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;6. Evenly spaced color stops<br>
+	          &nbsp;&nbsp;&lt;/div><br>
+	          &nbsp;&nbsp;&lt;div class="seventh"><br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;7. Using transparency 
+	          (stop positions: black-0%, transparent-100%)<br>
+	          &nbsp;&nbsp;&lt;/div><br>
+	          &nbsp;&nbsp;&lt;div class="eighth"><br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;8. Using transparency 
+	          (stop positions: 0%_transparent_image-0%, 
+	          full_transparent_image-100%)<br>
+	          &nbsp;&nbsp;&lt;/div><br>
+	          &lt;/div>
+	        </code>
+	        <h5>CSS</h5>
+	        <code>
+	          .linear-gradient {<br>
+	          &nbsp;&nbsp;color: white;<br>
+	          &nbsp;&nbsp;font-size: 15px;<br>
+	          &nbsp;&nbsp;font-weight: 100;<br>
+	          &nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+	          }<br>
+	          <br>
+	          .note {<br>
+	          &nbsp;&nbsp;color: #8c8c90;<br>
+	          }<br>
+	          <br>
+	          .linear-gradient .first, .linear-gradient .second, .linear-gradient 
+	          .third,<br>
+	          .linear-gradient .fourth,.linear-gradient .fifth, .linear-gradient 
+	          .sixth,<br>
+	          .linear-gradient .seventh, .linear-gradient .eighth {<br>
+	          &nbsp;&nbsp;border: 1px solid black;<br>
+	          &nbsp;&nbsp;padding: 20px;<br>
+	          &nbsp;&nbsp;margin-bottom: 10px;<br>
+	          }<br>
+	          <br>
+	          .linear-gradient .first {<br>
+	          &nbsp;&nbsp;background: linear-gradient(to right, darkblue, 
+	          darkmagenta);<br>
+	          }<br>
+	          <br>
+	          .linear-gradient .second {<br>
+	          &nbsp;&nbsp;background: linear-gradient(to top, palegreen, 
+	          crimson);<br>
+	          }<br>
+	          <br>
+	          .linear-gradient .third {<br>
+	          &nbsp;&nbsp;background: linear-gradient(to bottom left, orangered, 
+	          slateblue);<br>
+	          }<br>
+	          <br>
+	          .linear-gradient .fourth {<br>
+	          &nbsp;&nbsp;background: linear-gradient(180deg, lightcoral, cyan);<br>
+	          }<br>
+	          <br>
+	          .linear-gradient .fifth {<br>
+	          &nbsp;&nbsp;background: linear-gradient(to left, lightseagreen, 
+	          black 80%, mediumorchid);<br>
+	          }<br>
+	          <br>
+	          .linear-gradient .sixth {<br>
+	          &nbsp;&nbsp;background: linear-gradient(to left, red, orange, yellow, 
+	          green, blue, indigo, violet);<br>
+	          }<br>
+	          <br>
+	          .linear-gradient .seventh {<br>
+	          &nbsp;&nbsp;background: linear-gradient(to right, black, 
+	          transparent);<br>
+	          }<br>
+	          <br>
+	          .linear-gradient .eighth {<br>
+	          &nbsp;&nbsp;background:<br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)),<br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;url("images/wallpaper.jpg") top left/cover no-repeat;<br>
+	          }
+	        </code>
+	        <h5>Result</h5>
+	        <div class="linear-gradient">
+	          <div class="first">
+	            1. Gradient runs from left to right (stop positions: darkblue-0%, 
+	            darkmagenta-100%)
+	          </div>
+	          <div class="second">
+	            2. Gradient runs from bottom to top (stop positions: palegreen-0%, 
+	            crimson-100%)
+	          </div>
+	          <div class="third">
+	            3. Gradient runs diagonally (stop positions: orangered-0%, 
+	            slateblue-100%)
+	          </div>
+	          <div class="fourth">
+	            4. Gradient runs from top to bottom (stop positions: lightcoral-0%, 
+	            cyan-100%)
+	          </div>
+	          <div class="fifth">
+	            5. Three color stops (stop positions: lightseagreen-0%, black-80%, 
+	            mediumorchid-100%)
+	          </div>
+	          <div class="sixth">
+	            6. Evenly spaced color stops
+	          </div>
+	          <div class="seventh">
+	            7. Using transparency (stop positions: black-0%, transparent-100%)
+	          </div>
+	          <div class="eighth">
+	            8. Using transparency (stop positions: 0%_transparent_image-0%, 
+	            full_transparent_image-100%)
+	          </div>
+	          <div class="note">
+	            <b>Note:</b> The <i>transparent</i> keyword represents a fully 
+	            transparent color and is a shortcut for rgba(0,0,0,0).
+	          </div>
+	        </div>
+	        <h4>Radial gradients</h4>
+	        <p>
+	          A radial gradient is a circular or elliptic progression. This type of 
+	          gradient, creates a gradient that extends from an origin 
+	          (i.e.the center of the element), extending outward in a circular or 
+	          elliptical pattern.
+	        </p>
+	        <h5>CSS</h5>
+	        <code>
+	          background: radial-gradient(<i>&lt;shape&gt; &lt;size&gt;</i> &lt;at <i>position&gt;, color-stop1, 
+	          ..., color-stopN</i>);
+	        </code>
+	        <p>where:</p>
+	        <ul>
+	          <li>
+	            <i>shape</i> is optional, defines the shape of the gradient, and 
+	            equals to:
+	            <ul>
+	              <li><b>circle</b></li>
+	              <li><b>ellipse</b> (default)</li>
+	            </ul>
+	          </li>
+	          <li>
+	            <i>size</i> is optional, defines the size of the ending shape, and 
+	            equals to:
+	            <ul>
+	              <li><b>closest-side</b></li>
+	              <li><b>farthest-side</b></li>
+	              <li><b>closest-corner</b></li>
+	              <li><b>farthest-corner</b> (default)</li>
+	            </ul>
+	          </li>
+	          <li>
+	            <i>position</i> is optional, defines the position of the gradient, 
+	            and equals to:
+	            <ul>
+	              <li><b>left</b></li>
+	              <li><b>center</b> (default)</li>
+	              <li><b>right</b></li>
+	              <li><b>top</b></li>
+	              <li><b>bottom</b></li>
+	              <li><b>left top</b></li>
+	              <li><b>left center</b></li>
+	              <li><b>left bottom</b></li>
+	              <li><b>center top</b></li>
+	              <li><b>center center</b></li>
+	              <li><b>center bottom</b></li>
+	              <li><b>right top</b></li>
+	              <li><b>right center</b></li>
+	              <li><b>right bottom</b></li>
+	              <li><b>top left</b></li>
+	              <li><b>top center</b></li>
+	              <li><b>top right</b></li>
+	              <li><b>bottom left</b></li>
+	              <li><b>bottom center</b></li>
+	              <li><b>bottom right</b></li>
+	            </ul>
+	            <div class="note">
+	              <b>Note:</b> left, center, right, top, and bottom are identical to 
+	              left center, center center, right center, top center, and bottom 
+	              center respectively.
+	            </div>
+	          </li>
+	          <li>
+	            <i>color-stop</i> is a point along the gradient line that has a 
+	            specific color at that location. A color-stop value is comprised of 
+	            a <i>color</i> value, followed by an optional <i>stop position</i>
+	          </li>
+	        </ul>
+	        <p>where:</p>
+	        <ul>
+	          <li>
+	            <i>color</i> can be specified in any of the following ways:
+	            <ul>
+	              <li><b><i>#RRGGBB</i></b></li>
+	              <li><b><i>#RGB</i></b></li>
+	              <li><b><i>#RRGGBBaa</i></b></li>
+	              <li><b><i>#RGBa</i></b></li>
+	              <li><b>rgb(<i>r,g,b</i>)</b></li>
+	              <li><b>rgb(<i>pctr,pctg,pctb</i>)</b></li>
+	              <li><b>rgba(<i>r,g,b,a</i>)</b></li>
+	              <li><b>hsl(<i>hue,saturation,lightness</i>)</b></li>
+	              <li><b>hsla(<i>hue,saturation,lightness,a</i>)</b></li>
+	            </ul>
+	          </li>
+	          <li>
+	            <i>stop position</i> is optional and can be specified as either a 
+	            percentage, or as a length. For example, the center of the gradient
+	            is represented with 0% (or a length of 0).
+	          </li> 
+	        </ul>
+	        <h4>Example</h4>
+	        <h5>HTML</h5>
+	        <code>
+		        &lt;div class="radial-gradient"><br>
+		        &nbsp;&nbsp;&lt;div class="first"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;1. Evenly spaced color stops, &lt;i>shape:&lt;/i> circle<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="second"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;2. Evenly spaced color stops, &lt;i>shape:&lt;/i> ellipse<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="third"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;3. Differently spaced color stops (baseline)<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="fourth"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;4. Differently spaced color stops<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="fifth"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;5. Differently spaced color stops<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="sixth"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;6. Differently spaced color stops<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="seventh"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;7. &lt;i>size:&lt;/i> closest-side<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="eighth"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;8. &lt;i>size:&lt;/i> closest-corner<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="ninth"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;9. &lt;i>size:&lt;/i> farthest-side<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="tenth"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;10. &lt;i>size:&lt;/i> farthest-corner<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="eleventh"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;11. &lt;i>position:&lt;/i> top left<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &nbsp;&nbsp;&lt;div class="twelfth"><br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;12. &lt;i>position:&lt;/i> 50% 0%<br>
+		        &nbsp;&nbsp;&lt;/div><br>
+		        &lt;/div>
+		      </code>
+		      <h5>CSS</h5>
+		      <code>
+			      .radial-gradient {<br>
+						&nbsp;&nbsp;color: black;<br>
+						&nbsp;&nbsp;font-size: 15px;<br>
+						&nbsp;&nbsp;font-weight: 100;<br>
+						&nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+						}<br>
+						<br>
+						.radial-gradient .first, .radial-gradient .second, .radial-gradient .third,<br>
+						.radial-gradient .fourth, .radial-gradient .fifth, .radial-gradient .sixth,<br> 
+						.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth,<br> 
+						.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {<br>
+						&nbsp;&nbsp;border: 1px solid black;<br>
+						&nbsp;&nbsp;height: 200px;<br>
+						&nbsp;&nbsp;padding: 20px;<br>
+						&nbsp;&nbsp;margin-bottom: 10px;<br>
+						}<br>
+						<br>
+						.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth,<br> 
+						.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {<br>
+						&nbsp;&nbsp;border: 1px solid black;<br>
+						&nbsp;&nbsp;width: 200px;<br>
+						}<br>
+						<br>
+						.radial-gradient .first {<br>
+						&nbsp;&nbsp;background: radial-gradient(circle, red, yellow, green);<br>
+						}<br>
+						<br>
+						.radial-gradient .second {<br>
+						&nbsp;&nbsp;background: radial-gradient(red, yellow, green);<br>
+						}<br>
+						<br>
+						.radial-gradient .third {<br>
+						&nbsp;&nbsp;background: radial-gradient(blue 5%, cyan 30%, magenta 60%);<br>
+						}<br>
+						<br>
+						.radial-gradient .fourth {<br>
+						&nbsp;&nbsp;background: radial-gradient(blue 15%, cyan 30%, magenta 60%);<br>
+						}<br>
+						<br>
+						.radial-gradient .fifth {<br>
+						&nbsp;&nbsp;background: radial-gradient(blue 5%, cyan 40%, magenta 60%);<br>
+						}<br>
+						<br>
+						.radial-gradient .sixth {<br>
+						&nbsp;&nbsp;background: radial-gradient(blue 5%, cyan 30%, magenta 70%);<br>
+						}<br>
+						<br>
+						.radial-gradient .seventh {<br>
+						&nbsp;&nbsp;background: radial-gradient(circle closest-side at 30% 40%, black 5%, yellow 30%, red 70%);<br>
+						}<br>
+						<br>
+						.radial-gradient .eighth {<br>
+						&nbsp;&nbsp;background: radial-gradient(circle closest-corner at 30% 40%, black 5%, yellow 30%, red 70%);<br>
+						}<br>
+						<br>
+						.radial-gradient .ninth {<br>
+						&nbsp;&nbsp;background: radial-gradient(circle farthest-side at 30% 40%, black 5%, yellow 30%, red 70%);<br>
+						}<br>
+						<br>
+						.radial-gradient .tenth {<br>
+						&nbsp;&nbsp;background: radial-gradient(circle farthest-corner at 30% 40%, black 5%, yellow 30%, red 70%);<br>
+						}<br>
+						<br>
+						.radial-gradient .eleventh {<br>
+						&nbsp;&nbsp;background: radial-gradient(circle at top left, blue, greenyellow, tomato);<br>
+						}<br>
+						<br>
+						.radial-gradient .twelfth {<br>
+						&nbsp;&nbsp;background: radial-gradient(circle at 50% 0%, blue, greenyellow, tomato);<br>
+						}
+					</code>
+	        <h5>Result</h5>
+	        <div class="radial-gradient">
+	          <div class="first">
+	            1. Evenly spaced color stops, <i>shape:</i> circle
+	          </div>
+	          <div class="second">
+	            2. Evenly spaced color stops, <i>shape:</i> ellipse
+	          </div>
+	          <div class="third">
+	            3. Differently spaced color stops (baseline)
+	          </div>
+	          <div class="fourth">
+	            4. Differently spaced color stops
+	          </div>
+	          <div class="fifth">
+	            5. Differently spaced color stops
+	          </div>
+	          <div class="sixth">
+	            6. Differently spaced color stops
+	          </div>
+	          <div class="seventh">
+	            7. <i>size:</i> closest-side
+	          </div>
+	          <div class="eighth">
+	            8. <i>size:</i> closest-corner
+	          </div>
+	          <div class="ninth"> 
+	            9. <i>size:</i> farthest-side
+	          </div>
+	          <div class="tenth">
+	            10. <i>size:</i> farthest-corner
+	          </div>
+	          <div class="eleventh">
+	            11. <i>position:</i> top left
+	          </div>
+	          <div class="twelfth">
+	            12. <i>position:</i> 50% 0%
+	          </div>
+	        </div>
+      	</section>
+    	</article>
 		</main>
 		<footer>
 			<div class="follow-us">

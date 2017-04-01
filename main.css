@@ -828,37 +828,169 @@ nav #current {
 	opacity: 1.0;
 }
 
-.opacity-4 p {
-	padding: 0;
-	margin: 0;
+.opacity-4 {
+	color: white;
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+}
+
+.opacity-4 .first, .opacity-4 .second, .opacity-4 .third, .opacity-4 .fourth, 
+.opacity-4 .fifth {
+	background-color: #007f7f;
+	padding: 20px;
 }
 
 .opacity-4 .first {
-	background-color: #007f7f;
 	opacity: 0.2;
-	padding: 10px;
 }
 
 .opacity-4 .second {
-	background-color: #007f7f;
 	opacity: 0.4;
-	padding: 10px;
 }
 
 .opacity-4 .third {
-	background-color: #007f7f;
 	opacity: 0.6;
-	padding: 10px;
 }
 
 .opacity-4 .fourth {
-	background-color: #007f7f;
 	opacity: 0.8;
-	padding: 10px;
 }
 
 .opacity-4 .fifth {
-	background-color: #007f7f;
 	opacity: 1.0;
-	padding: 10px;
+}
+
+.linear-gradient {
+	color: white;
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+}
+
+.note {
+	color: #8c8c90;
+	margin-top: 5px;
+}
+
+.linear-gradient .first, .linear-gradient .second, .linear-gradient .third, 
+.linear-gradient .fourth, .linear-gradient .fifth, .linear-gradient .sixth,
+.linear-gradient .seventh, .linear-gradient .eighth {
+	border: 1px solid black;
+	height: 200px;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+.linear-gradient .first {
+	background: linear-gradient(to right, darkblue, darkmagenta);
+}
+
+.linear-gradient .second {
+	background: linear-gradient(to top, palegreen, crimson);
+}
+
+.linear-gradient .third {
+	background: linear-gradient(to bottom left, orangered, slateblue);
+}
+
+.linear-gradient .fourth {
+	background: linear-gradient(180deg, lightcoral, cyan);
+}
+
+.linear-gradient .fifth {
+	background: linear-gradient(to left, lightseagreen, black 80%, mediumorchid);
+}
+
+.linear-gradient .sixth {
+	background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.linear-gradient .seventh {
+	background: linear-gradient(to right, black, transparent);
+}
+
+.linear-gradient .eighth {
+	background: 
+		linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), 
+		url("images/wallpaper.jpg") top left/cover no-repeat;
+}
+
+.radial-gradient {
+	color: black;
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+}
+
+.radial-gradient .first, .radial-gradient .second, .radial-gradient .third, 
+.radial-gradient .fourth, .radial-gradient .fifth, .radial-gradient .sixth, 
+.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth, 
+.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {
+	border: 1px solid black;
+	height: 200px;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth, 
+.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {
+	border: 1px solid black;
+	width: 200px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.radial-gradient .first {
+	background: radial-gradient(circle, red, yellow, green);
+}
+
+.radial-gradient .second {
+	background: radial-gradient(red, yellow, green);
+}
+
+/*----------------------------------------------------------------------------*/
+
+.radial-gradient .third {
+	background: radial-gradient(blue 5%, cyan 30%, magenta 60%);
+}
+
+.radial-gradient .fourth {
+	background: radial-gradient(blue 15%, cyan 30%, magenta 60%);
+}
+
+.radial-gradient .fifth {
+	background: radial-gradient(blue 5%, cyan 40%, magenta 60%);
+}
+
+.radial-gradient .sixth {
+	background: radial-gradient(blue 5%, cyan 30%, magenta 70%);
+}
+
+/*----------------------------------------------------------------------------*/
+
+.radial-gradient .seventh {
+	background: radial-gradient(circle closest-side at 30% 40%, black 5%, yellow 30%, red 70%);
+}
+
+.radial-gradient .eighth {
+	background: radial-gradient(circle closest-corner at 30% 40%, black 5%, yellow 30%, red 70%);
+}
+
+.radial-gradient .ninth {
+	background: radial-gradient(circle farthest-side at 30% 40%, black 5%, yellow 30%, red 70%);
+}
+
+.radial-gradient .tenth {
+	background: radial-gradient(circle farthest-corner at 30% 40%, black 5%, yellow 30%, red 70%);
+}
+
+/*----------------------------------------------------------------------------*/
+
+.radial-gradient .eleventh {
+	background: radial-gradient(circle at top left, blue, greenyellow, tomato);
+}
+
+.radial-gradient .twelfth {
+	background: radial-gradient(circle at 50% 0%, blue, greenyellow, tomato);
 }
