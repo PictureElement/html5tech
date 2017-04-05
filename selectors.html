@@ -94,6 +94,90 @@
 					</div>
         </header>
         <section>
+          <h3>Element Selector</h3>
+          <h4>Description</h4>
+          <p>
+          	This selector directly matches one or more elements based on the 
+          	type of the element.
+          </p>
+          <h4>Example</h4>
+          <h5>CSS</h5>
+          <code>
+	          p {<br>
+	          &nbsp;&nbsp;color: black;<br>
+	          }
+	        </code>
+        </section>
+        <section>
+        	<h3>Attribute Selector</h3>
+          <h4>Description</h4>
+          <p>
+          	This type of selector matches elements based on their attributes and 
+          	attributes values.
+          </p>
+          <h4>Example</h4>
+          <h5>HTML</h5>
+          <code>
+	          &lt;ul><br>
+	          &nbsp;&nbsp;&lt;li taxonomy-class>Arachnida&lt;/li><br>
+	          &nbsp;&nbsp;&lt;li>Araneae&lt;/li><br>
+	          &nbsp;&nbsp;&lt;li>Scorpiones&lt;/li><br>
+	          &nbsp;&nbsp;&lt;li>Theraphosidae&lt;/li><br>
+	          &nbsp;&nbsp;&lt;li>Buthidae&lt;/li><br>
+						&nbsp;&nbsp;&lt;li>Brachypelma&lt;/li><br>
+						&nbsp;&nbsp;&lt;li>Androctonus&lt;/li><br>
+						&nbsp;&nbsp;&lt;li taxonomy-species="Mexican terrestrial redknee">B. smithi&lt;/li><br>
+	          &nbsp;&nbsp;&lt;li taxonomy-species="Fat-tailed potent man-killer">A. australis&lt;/li><br>
+	          &lt;/ul>
+	        </code>
+	        <h5>CSS</h5>
+	        <code>
+	        	[taxonomy-class] {<br>
+						&nbsp;&nbsp;color: blue;<br>
+						}<br>
+						<br>
+						[taxonomy-species="redknee"] {<br>
+						&nbsp;&nbsp;background-color: green;<br>
+						}<br>
+						<br>
+						[taxonomy-species~="man-killer"] {<br>
+						&nbsp;&nbsp;background-color: red;<br>
+						}
+					</code>
+	        <h5>Result</h5>
+	        <ul>
+	        	<li taxonomy-class>Arachnida</li>
+	        	<li>Araneae</li>
+	        	<li>Scorpiones</li>
+	       		<li>Theraphosidae</li>
+	   				<li>Buthidae</li>
+						<li>Brachypelma</li>
+						<li>Androctonus</li>
+						<li taxonomy-species="redknee">B. smithi</li>
+	          <li taxonomy-species="Fat-tailed potent man-killer">A. australis</li>
+	        </ul>
+        </section>
+        <section>
+        	<h3>Multiple Selector</h3>
+        	<h4>Description</h4>
+          <p>
+          	This type of selector is used to apply the same rule to multiple 
+          	sets of selected elements at once.
+          </p>
+          <h4>Example</h4>
+          <h5>CSS</h5>
+          <code>
+	          p, a {<br>
+	          &nbsp;&nbsp;font-size: 12px;<br>
+	          &nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+	          }<br>
+						<br>
+	          h1, h2, h3 {<br>
+	          &nbsp;&nbsp;font-family: Arvo, Times, "Times New Roman";<br>
+	          }
+	        </code>
+	      </section>
+        <section>
           <h3>Descendant Selector</h3>
           <h4>Description</h4>
           <p>

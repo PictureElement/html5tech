@@ -1141,3 +1141,21 @@ nav #current {
 	font-weight: normal;
 	font-style: italic;
 }
+
+/* Attribute selector showcase */
+[taxonomy-class] {
+	color: blue;
+}
+
+[taxonomy-species="redknee"] {
+	background-color: green;
+}
+
+[taxonomy-species~="man-killer"] {
+	background-color: red;
+}
+
+
+
+
+
