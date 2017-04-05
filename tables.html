@@ -1,0 +1,532 @@
+<!--
+	tables.html
+ 	Copyright (C) 2017  Marios Sofokleous
+  
+  This program is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  This program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <link rel="stylesheet" href="main.css">
+    <title>HTML/Tables</title>
+  </head>
+  <body>
+    <header>
+      <img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
+      <!--
+      <div class="tagline">
+        <h5>Fundamental resources about HTML5 &amp; friends</h5>
+      </div>
+      -->
+      <nav>
+        <a href="home.html">Home</a>
+        <div class="dropdown">
+          <button id="current" class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="elements.html">Elements</a>
+            <a href="images.html">Images</a>
+            <a href="html-common-mistakes.html">Common Mistakes</a>
+            <a href="forms.html">Forms</a>
+            <a href="tables.html">Tables</a>
+            <a href="">6</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="whats-new.html">What's New</a>
+            <a href="updated-tags.html">Updated Tags</a>
+            <a href="updated-elements.html">Updated Elements</a>
+            <a href="new-elements.html">New Elements</a>
+            <a href="new-input-types.html">New Input Types</a>
+            <a href="new-input-attributes.html">New Input Attributes</a>
+            <a href="new-form-elements.html">New Form Elements</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="selectors.html">Selectors</a>
+            <a href="color.html">Color</a>
+            <a href="box-model.html">Box Model</a>
+            <a href="fonts.html">Fonts</a>
+            <a href="styles.html">Styles</a>
+            <a href="">6</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <header>
+          <h2>Tables</h2>
+          <div class="byline-wrapper">
+            <img src="images/avatar.png" alt="avatar" width="40">
+            <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+            <br>
+            <time datetime="2017-04-02">Apr. 02, 2017</time>
+          </div>
+        </header>
+        <section>
+          <h3>A typical table</h3>
+          <h4>HTML</h4>
+          <code>
+            &lt;table class="table-1" summary="Comparison of various 
+            implementation schemes"><br>
+            &nbsp;&nbsp;&lt;caption><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Eigen::Matrix&lt;br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span>Median value metrics originated 
+            from a set of measurements produced by a script&lt;/span><br>
+            &nbsp;&nbsp;&lt;/caption><br>
+            &nbsp;&nbsp;&lt;thead><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col">OPT level&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col">Vector size&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col">CPU time(s)&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col">MFLOPS&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&lt;/thead><br>
+            &nbsp;&nbsp;&lt;tbody><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="2">O0&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>10^3&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>0.0001244585&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>24.1048&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>10^7&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>1.21053&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>24.7841&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="2">O1&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>10^3&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>5.78312E-006&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>518.751&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>10^7&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>0.0651177&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>461.6375&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="2">O2&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>10^3&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>5.65031E-006&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>530.944&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>10^7&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>0.06525005&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>460.5925&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="2">O3&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>10^3&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>5.726875E-006&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>523.846&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>10^7&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>0.06531235&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>460.1665&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&lt;/tbody><br>
+            &nbsp;&nbsp;&lt;tfoot><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="row" colspan="2">Min CPU time(10^3)&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2">5.65031E-006&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="row" colspan="2">Max CPU time(10^3)&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2">0.0001244585&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="row" colspan="2">Min CPU time(10^7)&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2">0.0651177&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="row" colspan="2">Max CPU time(10^7)&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2">1.21053&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&lt;/tfoot><br>
+            &lt;/table><br>
+          </code>
+          <p>where:</p>
+          <ul>
+          	<li>
+          		<b>&lt;caption>:</b> A table caption element that provides information 
+          		about the table.
+          	</li>
+          	<li>
+          		<b>&lt;span>:</b> A generic inline element that does not represent 
+          		anything and is often used to style a part of a text. It should be 
+          		used only when no other semantic element is appropriate 
+          		(just like &lt;div>).
+          	</li>
+          	<li><b>&lt;thead>:</b> Groups the header content in a table.</li>
+          	<li><b>&lt;tfoot>:</b> Groups the footer content in a table.</li>
+          	<li><b>&lt;tbody>:</b> Groups the body content in a table.</li>
+          	<li><b>&lt;tr>:</b> Defines a table row.</li>
+          	<li>
+          		<b>&lt;th>:</b> Defines a header cell that contains header information.
+          	</li>
+          	<li><b>&lt;td>:</b> Defines a standard cell that contains data.</li>
+          	<li>
+          		<b>scope:</b> This attribute specifies whether a header cell 
+          		refers to a column, row, or group of columns or rows.
+          	</li>
+          	<li>
+          		<b>rowspan</b>: This attribute specifies the number of rows a cell 
+          		should extend.
+          	</li> 
+          	<li>
+          		<b>colspan</b>: This attribute specifies the number of columns a 
+          		cell should extend.
+          	</li> 
+          </ul>
+          <h4>Result</h4>
+          <table summary="Comparison of various implementation schemes">
+            <caption>
+              Eigen::Matrix<br>
+              <span>Median value metrics originated from a set of measurements 
+              produced by a script</span>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">OPT level</th>
+                <th scope="col">Vector size</th>
+                <th scope="col">CPU time(s)</th>
+                <th scope="col">MFLOPS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">O0</td>
+                <td>10^3</td>
+                <td>0.0001244585</td>
+                <td>24.1048</td>
+              </tr>
+              <tr>
+                <td>10^7</td>
+                <td>1.21053</td>
+                <td>24.7841</td>
+              </tr>
+              <tr>
+                <td rowspan="2">O1</td>
+                <td>10^3</td>
+                <td>5.78312E-006</td>
+                <td>518.751</td>
+              </tr>
+              <tr>
+                <td>10^7</td>
+                <td>0.0651177</td>
+                <td>461.6375</td>
+              </tr>
+              <tr>
+                <td rowspan="2">O2</td>
+                <td>10^3</td>
+                <td>5.65031E-006</td>
+                <td>530.944</td>
+              </tr>
+              <tr>
+                <td>10^7</td>
+                <td>0.06525005</td>
+                <td>460.5925</td>
+              </tr>
+              <tr>
+                <td rowspan="2">O3</td>
+                <td>10^3</td>
+                <td>5.726875E-006</td>
+                <td>523.846</td>
+              </tr>
+              <tr>
+                <td>10^7</td>
+                <td>0.06531235</td>
+                <td>460.1665</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="2" scope="row">Min CPU time(10^3)</th>
+                <td colspan="2">5.65031E-006</td>
+              </tr>
+              <tr>
+                <th colspan="2" scope="row">Max CPU time(10^3)</th>
+                <td colspan="2">0.0001244585</td>
+              </tr>
+              <tr>
+                <th colspan="2" scope="row">Min CPU time(10^7)</th>
+                <td colspan="2">0.0651177</td>
+              </tr>
+              <tr>
+                <th colspan="2" scope="row">Max CPU time(10^7)</th>
+                <td colspan="2">1.21053</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+        <section>
+          <h3>Styling our table</h3>
+          <h4>CSS</h4>
+          <code>
+          	<span style="color: blue;">/* Spacing & layout styling */</span><br>
+						.table-1 {<br>
+						&nbsp;&nbsp;table-layout: fixed;<br>
+						&nbsp;&nbsp;width: 100%;<br>
+						&nbsp;&nbsp;border-collapse: collapse;<br>
+						&nbsp;&nbsp;border: 2px solid black;<br>
+						}<br>
+						<br>
+						.table-1 thead th:nth-child(1) {<br>
+						&nbsp;&nbsp;width: 25%;<br>
+						}<br>
+						<br>
+						.table-1 thead th:nth-child(2) {<br>
+						&nbsp;&nbsp;width: 25%;<br>
+						}<br>
+						<br>
+						.table-1 thead th:nth-child(3) {<br>
+						&nbsp;&nbsp;width: 25%;<br>
+						}<br>
+						<br>
+						.table-1 thead th:nth-child(4) {<br>
+						&nbsp;&nbsp;width: 25%;<br>
+						}<br>
+						<br>
+						.table-1 th, .table-1 td {<br>
+						&nbsp;&nbsp;padding: 10px;<br>
+						}<br>
+						<br>
+						<span style="color: blue;">/* Font styling & text alignment */</span><br>
+						.table-1 {<br>
+						&nbsp;&nbsp;color: black;<br>
+						&nbsp;&nbsp;font-size: 15px;<br>
+						&nbsp;&nbsp;font-weight: 100;<br>
+						&nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+						&nbsp;&nbsp;margin-top: 20px;<br>
+						}<br>
+						<br>
+						.table-1 thead {<br>
+						&nbsp;&nbsp;color: white;<br>
+						&nbsp;&nbsp;font-size: 20px;<br>
+						&nbsp;&nbsp;font-weight: bold;<br>
+						&nbsp;&nbsp;font-family: Arvo, Times, "Times New Roman";<br>
+						&nbsp;&nbsp;letter-spacing: 2px;<br>
+						}<br>
+						<br>
+						.table-1 tfoot th {<br>
+						&nbsp;&nbsp;color: black;<br>
+						&nbsp;&nbsp;font-size: 20px;<br>
+						&nbsp;&nbsp;font-weight: bold;<br>
+						&nbsp;&nbsp;font-family: Arvo, Times, "Times New Roman";<br>
+						&nbsp;&nbsp;letter-spacing: 2px;<br>
+						}<br>
+						<br>
+						.table-1 td {<br>
+						&nbsp;&nbsp;letter-spacing: 1px;<br>
+						}<br>
+						<br>
+						.table-1 tbody td {<br>
+						&nbsp;&nbsp;text-align: center;<br>
+						&nbsp;&nbsp;vertical-align: middle;<br>
+						}<br>
+						<br>
+						.table-1 tfoot th {<br>
+						&nbsp;&nbsp;text-align: center;<br>
+						}<br>
+						<br>
+						.table-1 tfoot td {<br>
+						&nbsp;&nbsp;text-align: center;<br>
+						}<br>
+						<br>
+						<span style="color: blue;">/* Borders */</span><br>
+						.table-1 thead th {<br>
+						&nbsp;&nbsp;border: 2px solid black;<br>
+						}<br>
+						<br>
+						.table-1 tbody td {<br>
+						&nbsp;&nbsp;border: 2px solid black;<br>
+						}<br>
+						<br>
+						.table-1 tfoot th {<br>
+						&nbsp;&nbsp;border: 2px solid black;<br>
+						}<br>
+						<br>
+						.table-1 tfoot td {<br>
+						&nbsp;&nbsp;border: 2px solid black;<br>
+						}<br>
+						<br>
+						<span style="color: blue;">/* Backgrounds & text shadows */</span><br>
+						.table-1 thead {<br>
+						&nbsp;&nbsp;background: linear-gradient(to bottom, royalblue, steelblue);<br>
+						&nbsp;&nbsp;text-shadow: 1px 1px 1px black;<br>
+						}<br>
+						<br>
+						.table-1 tbody tr:nth-child(odd) {<br>
+						&nbsp;&nbsp;background-color: gainsboro;<br>
+						}<br>
+						<br>
+						.table-1 tbody tr:nth-child(even) {<br>
+						&nbsp;&nbsp;background-color: gray;<br>
+						}<br>
+						<br>
+						.table-1 tfoot tr:nth-child(even) {<br>
+						&nbsp;&nbsp;background-color: red;<br>
+						}<br>
+						<br>
+						.table-1 tfoot tr:nth-child(odd) {<br>
+						&nbsp;&nbsp;background-color: green;<br>
+						}<br>
+						<br>
+						<span style="color: blue;">/* Caption styling */</span><br>
+						.table-1 caption {<br>
+						&nbsp;&nbsp;font-family: Arvo, Times, "Times New Roman";<br>
+						&nbsp;&nbsp;font-weight: bold;<br>
+						&nbsp;&nbsp;font-size: 12px;<br>
+						&nbsp;&nbsp;caption-side: bottom;<br>
+						&nbsp;&nbsp;letter-spacing: 1px;<br>
+						&nbsp;&nbsp;text-align: left;<br>
+						&nbsp;&nbsp;margin: 10px;<br>
+						}<br>
+						<br>
+						.table-1 caption span {<br>
+						&nbsp;&nbsp;font-weight: normal;<br>
+						&nbsp;&nbsp;font-style: italic;<br>
+						}<br>
+					</code>
+					<p>Notes:</p>
+					<ul>
+						<li>
+							<b>table-layout: fixed</b> makes the table behave more predictable 
+							by preventing table columns to be sized according to their 
+							content. With table-layout: fixed we can size the columns 
+							manually.
+						</li>
+						<li>
+							<b>border-collapse: collapse</b> eliminate spacing between table 
+							borders and make the borders collapse down into one.
+						</li>
+						<li>
+							<b>letter-spacing</b> specifies spacing behavior between text 
+							characters. Letter spacing aids readability.
+						</li>
+						<li>
+							<b>vertical-align</b> specifies the vertical alignment of text 
+							inside table cells.
+						</li>
+						<li>
+							<b>text-shadow</b> specifies a text shadow which makes text to
+							contrast well with backgrounds(i.e. images, gradients).
+						</li>
+						<li>
+							<b>:nth-child(n)</b> is a pseudo-class that matches every element 
+							that is the nth child of its parent. <i>n</i> can be a number, a 
+							keyword(e.g. odd, even), or a formula(e.g. 2n, 2n-1)
+						</li>
+					</ul>
+          <h4>Result</h4>
+          <table class="table-1" summary="Comparison of various implementation schemes">
+            <caption>
+              Eigen::Matrix<br>
+              <span>Median value metrics originated from a set of measurements produced by a script</span>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">OPT level</th>
+                <th scope="col">Vector size</th>
+                <th scope="col">CPU time(s)</th>
+                <th scope="col">MFLOPS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">O0</td>
+                <td>10^3</td>
+                <td>0.0001244585</td>
+                <td>24.1048</td>
+              </tr>
+              <tr>
+                <td>10^7</td>
+                <td>1.21053</td>
+                <td>24.7841</td>
+              </tr>
+              <tr>
+                <td rowspan="2">O1</td>
+                <td>10^3</td>
+                <td>5.78312E-006</td>
+                <td>518.751</td>
+              </tr>
+              <tr>
+                <td>10^7</td>
+                <td>0.0651177</td>
+                <td>461.6375</td>
+              </tr>
+              <tr>
+                <td rowspan="2">O2</td>
+                <td>10^3</td>
+                <td>5.65031E-006</td>
+                <td>530.944</td>
+              </tr>
+              <tr>
+                <td>10^7</td>
+                <td>0.06525005</td>
+                <td>460.5925</td>
+              </tr>
+              <tr>
+                <td rowspan="2">O3</td>
+                <td>10^3</td>
+                <td>5.726875E-006</td>
+                <td>523.846</td>
+              </tr>
+              <tr>
+                <td>10^7</td>
+                <td>0.06531235</td>
+                <td>460.1665</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="2" scope="row">Min CPU time(10^3)</th>
+                <td colspan="2">5.65031E-006</td>
+              </tr>
+              <tr>
+                <th colspan="2" scope="row">Max CPU time(10^3)</th>
+                <td colspan="2">0.0001244585</td>
+              </tr>
+              <tr>
+                <th colspan="2" scope="row">Min CPU time(10^7)</th>
+                <td colspan="2">0.0651177</td>
+              </tr>
+              <tr>
+                <th colspan="2" scope="row">Max CPU time(10^7)</th>
+                <td colspan="2">1.21053</td>
+              </tr>
+            </tfoot>
+          </table>

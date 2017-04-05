@@ -329,6 +329,8 @@ section a:hover {
   text-align: center;
 }
 
+/*------------------------------ navigation bar ------------------------------*/
+
 .dropdown {
 	/* 
 		The inside of element with a  class name of "dropdown" is formatted as 
@@ -411,6 +413,8 @@ nav #current {
 	color: white;
 }
 
+/*----------------------------------------------------------------------------*/
+
 .green-box {
   line-height: 1.5;
   border: solid green;
@@ -425,12 +429,16 @@ nav #current {
   vertical-align: top;
 }
 
+/*----------------------------------------------------------------------------*/
+
 .website-logo {
 	display: block;
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+/*----------------------------------------------------------------------------*/
 
 .serif p {
 	font-family: Arvo, Times, "Times New Roman"; 
@@ -446,6 +454,8 @@ nav #current {
 	font-family: 'Roboto Mono', Courier, "Courier New";
 	font-size: 30px;
 }
+
+/*------------------------------- form example -------------------------------*/
 
 .myform fieldset {
 	/* Form width */
@@ -509,6 +519,8 @@ nav #current {
 	margin-left: .5em;
 }
 
+/*-------------------------- border radius examples --------------------------*/
+
 .border-radius-1 {
 	height: 100px;
 	width: 200px;
@@ -564,6 +576,8 @@ nav #current {
 	border: 5px solid red;
 	border-radius: 50%;
 }
+
+/*--------------------------- box shadow examples ----------------------------*/
 
 .box-shadow-1, .box-shadow-2, .box-shadow-3, .box-shadow-4, .box-shadow-5, 
 .box-shadow-6, .box-shadow-7, .box-shadow-8, .box-shadow-9, .box-shadow-10 {
@@ -623,6 +637,8 @@ nav #current {
 		10px -5px lime;
 }
 
+/*----------------------------------------------------------------------------*/
+
 .footer-nav a {
 	font-style: normal;
 }
@@ -633,6 +649,8 @@ nav #current {
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
 }
+
+/*--------------------------- text shadow examples ---------------------------*/
 
 .text-shadow-1 h1 {
 	font-size: 100px;
@@ -768,6 +786,8 @@ nav #current {
    	-15px 15px #00cccc;
 }
 
+/*--------------------------- box sizing examples ----------------------------*/
+
 .content-box {
 	border: 10px solid black;
 	margin: 20px;
@@ -794,6 +814,8 @@ nav #current {
 	height: 100px;
 }
 
+/*----------------------- multiple backgrounds example -----------------------*/
+
 /*
 .mult-bg-1 {
 	border: 5px solid black;
@@ -815,6 +837,8 @@ nav #current {
 		url(images/lightning.svg) center/contain no-repeat,
 		linear-gradient(to left, #dc2424, #4a569d) center/contain no-repeat;
 }
+
+/*----------------------------- opacity examples -----------------------------*/
 
 .opacity-1 img {
 	opacity: 0.1;
@@ -860,6 +884,8 @@ nav #current {
 .opacity-4 .fifth {
 	opacity: 1.0;
 }
+
+/*------------------------- linear gradient examples -------------------------*/
 
 .linear-gradient {
 	color: white;
@@ -916,6 +942,8 @@ nav #current {
 		url("images/wallpaper.jpg") top left/cover no-repeat;
 }
 
+/*------------------------- radial gradient examples -------------------------*/
+
 .radial-gradient {
 	color: black;
 	font-size: 15px;
@@ -939,8 +967,6 @@ nav #current {
 	width: 200px;
 }
 
-/*----------------------------------------------------------------------------*/
-
 .radial-gradient .first {
 	background: radial-gradient(circle, red, yellow, green);
 }
@@ -948,8 +974,6 @@ nav #current {
 .radial-gradient .second {
 	background: radial-gradient(red, yellow, green);
 }
-
-/*----------------------------------------------------------------------------*/
 
 .radial-gradient .third {
 	background: radial-gradient(blue 5%, cyan 30%, magenta 60%);
@@ -967,8 +991,6 @@ nav #current {
 	background: radial-gradient(blue 5%, cyan 30%, magenta 70%);
 }
 
-/*----------------------------------------------------------------------------*/
-
 .radial-gradient .seventh {
 	background: radial-gradient(circle closest-side at 30% 40%, black 5%, yellow 30%, red 70%);
 }
@@ -985,12 +1007,137 @@ nav #current {
 	background: radial-gradient(circle farthest-corner at 30% 40%, black 5%, yellow 30%, red 70%);
 }
 
-/*----------------------------------------------------------------------------*/
-
 .radial-gradient .eleventh {
 	background: radial-gradient(circle at top left, blue, greenyellow, tomato);
 }
 
 .radial-gradient .twelfth {
 	background: radial-gradient(circle at 50% 0%, blue, greenyellow, tomato);
+}
+
+/*------------------------------- table example ------------------------------*/
+
+/* Spacing & layout styling */
+.table-1 {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+
+.table-1 thead th:nth-child(1) {
+	width: 25%;
+}
+
+.table-1 thead th:nth-child(2) {
+	width: 25%;
+}
+
+.table-1 thead th:nth-child(3) {
+	width: 25%;
+}
+
+.table-1 thead th:nth-child(4) {
+	width: 25%;
+}
+
+.table-1 th, .table-1 td {
+	padding: 10px;
+}
+
+/* Font styling & text alignment */
+.table-1 {
+	color: black;
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	margin-top: 20px;
+}
+
+.table-1 thead {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arvo, Times, "Times New Roman"; 
+	letter-spacing: 2px;
+}
+
+.table-1 tfoot th {
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arvo, Times, "Times New Roman"; 
+	letter-spacing: 2px;
+}
+
+.table-1 td {
+	letter-spacing: 1px;
+}
+
+.table-1 tbody td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.table-1 tfoot th {
+	text-align: center;
+}
+
+.table-1 tfoot td {
+	text-align: center;
+}
+
+/* Borders */
+.table-1 thead th {
+	border: 2px solid black;
+}
+
+.table-1 tbody td {
+	border: 2px solid black;
+}
+
+.table-1 tfoot th {
+	border: 2px solid black;
+}
+
+.table-1 tfoot td {
+	border: 2px solid black;
+}
+
+/* Backgrounds & text shadows */
+.table-1 thead {
+	background: linear-gradient(to bottom, royalblue, steelblue);
+	text-shadow: 1px 1px 1px black;
+}
+
+.table-1 tbody tr:nth-child(odd) {
+	background-color: gainsboro;
+}
+
+.table-1 tbody tr:nth-child(even) {
+	background-color: gray;
+}
+
+.table-1 tfoot tr:nth-child(even) {
+	background-color: red;
+}
+
+.table-1 tfoot tr:nth-child(odd) {
+	background-color: green;
+}
+
+/* Caption styling */
+.table-1 caption {
+	font-family: Arvo, Times, "Times New Roman"; 
+	font-weight: bold;
+	font-size: 12px;
+	caption-side: bottom;
+	letter-spacing: 1px;
+	text-align: left;
+	margin: 10px;
+}
+
+.table-1 caption span {
+	font-weight: normal;
+	font-style: italic;
 }
