@@ -48,6 +48,13 @@ Each topic/concept is an HTML document by itself organized as follows:
   </body>
 </html>
 ```
+## Page Samples
+
+As of Apr. 05, 2017 the web page looks like:
+
+![sample1 page](samples/sample1.png)
+
+![sample2 page](samples/sample2.png)
 
 ## Contribution
 
