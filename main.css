@@ -443,16 +443,19 @@ nav #current {
 .serif p {
 	font-family: Arvo, Times, "Times New Roman"; 
 	font-size: 30px;
+	background-color: yellow;
 }
 
 .sans-serif p {
 	font-family: Lato, Helvetica, Arial;
 	font-size: 30px;
+	background-color: yellow;
 }
 
 .monospace p {
 	font-family: 'Roboto Mono', Courier, "Courier New";
 	font-size: 30px;
+	background-color: yellow;
 }
 
 /*------------------------------- form example -------------------------------*/
