@@ -94,11 +94,12 @@
 					</div>
         </header>
         <section>
-          <h3>Element Selector</h3>
+          <h3>Type Selector</h3>
           <h4>Description</h4>
           <p>
           	This selector directly matches one or more elements based on the 
-          	type of the element.
+          	type of the element. A type selector for a particular node name 
+          	selects all elements of that type.
           </p>
           <h4>Example</h4>
           <h5>CSS</h5>
@@ -197,19 +198,23 @@
           </p>
         </section>
         <section>
-          <h3>Pseudo-selector</h3>
+          <h3>Pseudo-Class</h3>
           <h4>Description</h4>
           <p>
-            A modifier that can be added to a selector to select a tag only when
-            a certain condition has occured.
+            A <i>pseudo-class</i> is a keyword that can be added to selectors to 
+            match an element in a certain state. 
           </p>
           <h4>Examples</h4>
           <ol>
           	<li>
           		<p>
-          			A "hover" pseudo-selector is used. The rule is only going to be 
-            		applied when the mouse is hovering over the link:
+          			The <i>:hover</i> pseudo-class is used. The rule is only going 
+          			to be applied when the mouse hovers over the link:
             	</p>
+            	<h5>HTML</h5>
+            	<code>
+            		&lt;a href="mailto:pictureelement@yandex.com">PictureElement&lt;/a>
+            	</code>
             	<h5>CSS</h5>
      					<code>
 		  					a {<br>
@@ -218,24 +223,26 @@
 		            <br>
 		          	a:hover {<br>
 		           	&nbsp;&nbsp;text-decoration: underline;<br>
-		           	&nbsp;&nbsp;color: darkred;<br>
+		           	&nbsp;&nbsp;color: red;<br>
 		            }
 		          </code>
+		          <h5>Result</h5>
+		          <div class="result-wrapper">
+		          	<a id="hover" href="mailto:pictureelement@yandex.com">PictureElement</a>
+		          </div>
 		        </li>
 	         	<li>
 	         		<p>
-	         			The "first-child" pseudo-selector is applied to narrow down the 
-            		amount of child tags selected. The style is applied only on the 
-            		"2 eggs" line:
+	         			The <i>:first-child</i> pseudo-class is applied to narrow down 
+	         			the amount of child tags selected. The style is applied only on 
+	         			the "2 eggs" line:
             	</p>
           		<h5>HTML</h5>
 	          	<code>
-		      			...<br>
 		            &lt;ul&gt;<br>
 		            &nbsp;&nbsp;&lt;li&gt;2 egss&lt;/li&gt;<br>
 		            &nbsp;&nbsp;&lt;li&gt;1 pound of sugar&lt;/li&gt;<br>
-		            &lt;/ul&gt;<br>
-		            ...
+		            &lt;/ul&gt;
 		         	</code>
 							<h5>CSS</h5>
 		          <code>
@@ -243,9 +250,154 @@
 		           	&nbsp;&nbsp;color: red;<br>
 		        		}
 		          </code>
+		          <h5>Result</h5>
+		          <div class="result-wrapper">
+			       		<ul id="first-child">
+			          	<li>2 egss</li>
+			           	<li>1 pound of sugar</li>
+			          </ul>
+			        </div>
 		        </li>
 		      </ol>
+		      <p>
+		      	<b>Note:</b> There are more pseudo-classes available and you can 
+		      	learn more <a href="https://developer.mozilla.org/en/docs/Web/CSS/Pseudo-classes">here</a>.
+		      </p>
         </section>
+        <section>
+        	<h3>Pseudo-Elements</h3>
+       		<h4>Description</h4>
+       		<p>
+            A <i>pseudo-element</i> is a keyword that can be added to selectors 
+            and allows you to style certain parts of an element.
+          </p>
+          <h4>Examples</h4>
+          <ol>
+          	<li>
+          		<p>
+          			The <i>::first-letter</i> pseudo-element matches the first 
+          			letter of the first line of an element.
+          		</p>
+          		<h5>HTML</h5>
+          		<code>
+	          		&lt;p><br>
+	          		&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut<br> 
+	          		&nbsp;&nbsp;labore et dolore<br>
+	          		&lt;/p>
+	          	</code>
+	          	<h5>CSS</h5>
+	          	<code>
+	          		p::first-letter {<br>
+	          		&nbsp;&nbsp;font-size: 25px;<br>
+	          		&nbsp;&nbsp;color: red;<br>
+	          		}
+	          	</code>
+	          	<h5>Result</h5>
+	          	<div class="result-wrapper">
+								<p id="first-letter">
+	          			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+	          			eiusmod tempor incididunt ut labore et dolore
+	          		</p>
+	          	</div>
+	          </li>
+	          <li>
+	          	<p>
+          			The <i>::first-line</i> pseudo-element matches the first line 
+          			of an element.
+          		</p>
+          		<h5>HTML</h5>
+          		<code>
+	          		&lt;p><br>
+	          		&nbsp;&nbsp;Line 1&lt;br><br>
+	          		&nbsp;&nbsp;Line 2&lt;br><br>
+	          		&nbsp;&nbsp;Line 3<br>
+	          		&lt;/p>
+	          	</code>
+	          	<h5>CSS</h5>
+	          	<code>
+	          		p::first-line {<br>
+	          		&nbsp;&nbsp;background-color: yellow;<br>
+	          		}
+	          	</code>
+          		<h5>Result</h5>
+          		<div class="result-wrapper">
+	          		<p id="first-line">
+	          			Line 1<br>
+	          			Line 2<br>
+	          			Line 3
+	          		</p>
+	          	</div>
+	          </li>
+	          <li>
+	          	<p>
+          			The <i>::after/::before</i> pseudo-elements insert something 
+          			after/before the content of the selected element.
+          		</p>
+          		<h5>HTML</h5>
+          		<code>
+	          		&lt;p id="product">Product symbol:&lt;/p><br>
+		          	&lt;p id="sum">: Sum symbol&lt;/p>
+		          </code>
+		          <h5>CSS</h5>
+		          <code>
+		          	#product::after {<br>
+		          	&nbsp;&nbsp;content: " \220F";<br>
+		          	}<br>
+								<br>
+		          	#sum::before {<br>
+		          	&nbsp;&nbsp;content: "\2211";<br>
+		          	}
+		          </code>
+          		<h5>Result</h5>
+          		<div class="result-wrapper">
+	          		<p id="product">Product symbol:</p>
+	          		<p id="sum">: Sum symbol</p>
+	          	</div>
+	          </li>
+	          <li>
+	          	<p>
+          			The <i>::after/::before</i> pseudo-elements insert something 
+          			after/before the content of the selected element. In this 
+          			example we'll add delimiters between navigation items, using 
+          			the <i>::after/::before</i> pseudo-elements.
+          		</p>
+          		<h5>HTML</h5>
+          		<code>
+	          		&lt;nav id="nav-delimiter"><br>
+	          		&nbsp;&nbsp;&lt;button class="dropbtn">Item#1&lt;/button><br>
+	          		&nbsp;&nbsp;&lt;button class="dropbtn">Item#2&lt;/button><br>
+	          		&nbsp;&nbsp;&lt;button class="dropbtn">Item#3&lt;/button><br>
+	          		&nbsp;&nbsp;&lt;button class="dropbtn">Item#4&lt;/button><br>
+	          		&lt;/nav>
+	          	</code>
+	          	<h5>CSS</h5>
+		          <code>
+		         		#nav-delimiter button {<br>
+								&nbsp;&nbsp;padding: 14px 16px;<br>
+								}<br>
+								<br>
+								/*<br>
+								&nbsp;&nbsp;Select all &lt;button> elements except the first and add a "|" delimiter before the content of the 
+								&nbsp;&nbsp;selected elements.<br>
+								*/<br>
+								#nav-delimiter button:not(:first-child)::before {<br>
+								&nbsp;&nbsp;content: "|";<br>
+								&nbsp;&nbsp;position: relative;<br>
+								&nbsp;&nbsp;left: -15px;<br>
+								}
+							</code>
+	          	<h5>Result</h5>
+          		<div class="result-wrapper">
+	          		<nav id="nav-delimiter">
+	          			<button class="dropbtn">Item#1</button>
+	          			<button class="dropbtn">Item#2</button>
+	          			<button class="dropbtn">Item#3</button>
+	          			<button class="dropbtn">Item#4</button>
+	          		</nav>
+	          	</div>
+	          </li>
+	        </ol>
+       	</section>
         <section>
         	<h3>ID selector</h3>
           <h4>Description</h4>

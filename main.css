@@ -1163,6 +1163,67 @@ nav #current {
 	background-color: yellow;
 }
 
+/* Pseudo-class showcase */
+#hover {
+	/* inherit any inheritable values from the parent. */
+	all: unset;	
+}
+
+#hover:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+#first-child li:first-child {
+  color: red;
+}
+
+/* Pseudo-element showcase */
+#first-letter::first-letter {
+	font-family: Arvo, Times, "Times New Roman"; 
+  font-size: 30px;
+  color: red;
+}
+
+#first-line::first-line {
+  background-color: yellow;
+}
+
+#product::after {
+  content: " \220F";
+}
+
+#sum::before {
+  content: "\2211";
+}
+
+.ropbtn::before {
+	content: "|";
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.5);
+	position: relative;
+	right: 15px;
+}
+
+#nav-delimiter, #nav-delimiter button {
+	/* inherit any inheritable values from the parent. */
+	all: unset;	
+}
+
+#nav-delimiter button {
+	padding: 14px 16px;
+}
+
+/* 
+	Select all <button> elements except the first and add a "|" delimiter before 
+	the content of the selected elements.
+*/
+#nav-delimiter button:not(:first-child)::before {
+	content: "|";
+	position: relative;
+	left: -15px;
+}
+
 
 
 
