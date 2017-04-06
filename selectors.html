@@ -247,6 +247,59 @@
 		      </ol>
         </section>
         <section>
+        	<h3>ID selector</h3>
+          <h4>Description</h4>
+          <p>An ID selector matches the element with the specified id.</p>
+          <h4>Syntax</h4>
+          <h5>CSS</h5>
+          <code>
+          	#<i>id</i> {<br>
+          	&nbsp;&nbsp;<i>properties</i><br>
+          	}
+          </code>
+          <h4>Example</h4>
+          <h5>HTML</h5>
+          <code>
+	          &lt;p><br>
+	          &nbsp;&nbsp;This is a basic example of ID selectors.<br>
+	          &nbsp;&nbsp;&lt;span id="highlight">This sentence is highlighted.&lt;/span><br>
+	          &lt;p>
+	        </code>
+	        <h5>CSS</h5>
+	        <code>
+		        #highlight {<br>
+		        &nbsp;&nbsp;background-color: yellow;<br>
+		        }<br>
+		        <br>
+		        /* This is also equivalent to the following attribute selector: */<br>
+		        <br>
+		        [id="highlight"] {<br>
+		        &nbsp;&nbsp;background-color: yellow;<br>
+		        }
+		      </code>
+		      <h5>Result</h5>
+					<p>
+          	This is a basic example of ID selectors. 
+          	<span id="highlight">This sentence is highlighted.</span>
+          </p>
+          <h4>ID's and Classes</h4>
+					<ul>
+						<li>Each element can have only one ID, unique to the page.</li>
+						<li>
+							If a style needs to be applied to only one element, an id selector 
+							should be used.
+						</li>
+						<li>
+							Each element can have multiple classes and the same class can be 
+							used on multiple elements.
+						</li>
+						<li>
+							If a style needs to be applied to multiple elements, a class 
+							selector should be used.
+						</li>
+					</ul>
+        </section>
+        <section>
           <h3>Class selector</h3>
           <h4>Description</h4>
           <p>
@@ -345,6 +398,22 @@
 							</code>
 						</li>
 					</ol>
+					<h4>ID's and Classes</h4>
+					<ul>
+						<li>Each element can have only one ID, unique to the page.</li>
+						<li>
+							If a style needs to be applied to only one element, an id selector 
+							should be used.
+						</li>
+						<li>
+							Each element can have multiple classes and the same class can be 
+							used on multiple elements.
+						</li>
+						<li>
+							If a style needs to be applied to multiple elements, a class 
+							selector should be used.
+						</li>
+					</ul>
 				</section>
 			</article>
     </main>

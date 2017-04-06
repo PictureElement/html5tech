@@ -1155,6 +1155,11 @@ nav #current {
 	background-color: red;
 }
 
+/* ID selectors showcase */
+#highlight {
+	background-color: yellow;
+}
+
 
 
 
