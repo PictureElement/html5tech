@@ -146,17 +146,19 @@
 						}
 					</code>
 	        <h5>Result</h5>
-	        <ul>
-	        	<li taxonomy-class>Arachnida</li>
-	        	<li>Araneae</li>
-	        	<li>Scorpiones</li>
-	       		<li>Theraphosidae</li>
-	   				<li>Buthidae</li>
-						<li>Brachypelma</li>
-						<li>Androctonus</li>
-						<li taxonomy-species="redknee">B. smithi</li>
-	          <li taxonomy-species="Fat-tailed potent man-killer">A. australis</li>
-	        </ul>
+	        <div class="result-wrapper">
+		        <ul>
+		        	<li taxonomy-class>Arachnida</li>
+		        	<li>Araneae</li>
+		        	<li>Scorpiones</li>
+		       		<li>Theraphosidae</li>
+		   				<li>Buthidae</li>
+							<li>Brachypelma</li>
+							<li>Androctonus</li>
+							<li taxonomy-species="redknee">B. smithi</li>
+		          <li taxonomy-species="Fat-tailed potent man-killer">A. australis</li>
+		        </ul>
+		      </div>
         </section>
         <section>
         	<h3>Multiple Selector</h3>
@@ -193,7 +195,7 @@
             }
           </code>
           <p>
-            This type of selector matches &lt;li&gt; elements inside &lt;ul> 
+            This type of selector matches all &lt;li&gt; elements inside &lt;ul> 
             elements.
           </p>
         </section>
@@ -694,6 +696,45 @@
 						</li>
 					</ul>
 				</section>
+				<section>
+          <h3>Cascade order</h3>
+          <ol>
+          	<li>
+          		<h5>HTML</h5>
+          		<code>
+          			<i>element</i> {<br>
+          			&nbsp;&nbsp;color: blue;<br>
+          			}<br>
+          			<br>
+          			<i>element</i> {<br>
+          			&nbsp;&nbsp;color: red;<br>
+          			}
+          		</code>
+          		<p>The second color definition(red) overrides the first(blue).</p>
+          	</li>
+          	<li>
+          		<h5>HTML</h5>
+          		<code>
+          			<i>element</i> {<br>
+          			&nbsp;&nbsp;color: cyan;<br>
+          			}<br>
+          			<br>
+          			<i>element</i> {<br>
+          			&nbsp;&nbsp;font-size: 20px;<br>
+          			}
+          		</code>
+          		<p>Non-conflicting properties will be combined.
+          		The code section above is equivalent to the one below:</p>
+          		<h5>HTML</h5>
+          		<code>
+          			<i>element</i> {<br>
+          			&nbsp;&nbsp;color: cyan;<br>
+          			&nbsp;&nbsp;font-size: 20px;<br>
+          			}
+          		</code>
+          	</li>
+          </ol>
+        </section>
 			</article>
     </main>
     <footer>
