@@ -72,3 +72,9 @@ improvement is more than welcomed.
 &copy; 2017 Marios Sofokleous
 
 Licensed under the [GNU General Public License v3.0](LICENSE) 
+
+Please note that the files in the following directories have their own copyright and license information:
+- fonts/Arvo
+- fonts/Lato
+- fonts/Roboto_Mono
+

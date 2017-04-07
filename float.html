@@ -1,0 +1,155 @@
+<!--
+	This file is part of HTML5Tech.
+ 	
+  HTML5Tech is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  HTML5Tech program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with HTML5Tech; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <link rel="stylesheet" href="main.css">
+    <title>CSS/Float Property</title>
+  </head>
+  <body>
+    <header>
+      <img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
+      <!--
+      <div class="tagline">
+        <h5>Fundamental resources about HTML5 &amp; friends</h5>
+      </div>
+      -->
+      <nav>
+        <a href="home.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="elements.html">Elements</a>
+            <a href="images.html">Images</a>
+            <a href="html-common-mistakes.html">Common Mistakes</a>
+            <a href="forms.html">Forms</a>
+            <a href="tables.html">Tables</a>
+            <a href="">6</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="whats-new.html">What's New</a>
+            <a href="updated-tags.html">Updated Tags</a>
+            <a href="updated-elements.html">Updated Elements</a>
+            <a href="new-elements.html">New Elements</a>
+            <a href="new-input-types.html">New Input Types</a>
+            <a href="new-input-attributes.html">New Input Attributes</a>
+            <a href="new-form-elements.html">New Form Elements</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button id="current" class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="selectors.html">Selectors</a>
+            <a href="color.html">Color</a>
+            <a href="box-model.html">Box Model</a>
+            <a href="fonts.html">Fonts</a>
+            <a href="styles.html">Styles</a>
+            <a href="float.html">Float Property</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+          <div class="dropdown-content">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <header>
+          <h2>Float Property</h2>
+          <div class="byline-wrapper">
+            <img src="images/avatar.png" alt="avatar" width="40">
+            <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+            <br>
+            <time datetime="2017-04-17">Apr 07, 2017</time>
+          </div>
+        </header>
+        <section>
+          <h3>Summary</h3>
+          <p>
+            With <i>float</i> you can place block elements along the left or 
+            right side of their container and make inline elements(and text) to 
+            wrap around it.  
+          </p>  
+          <h4>Example</h4>
+          <h5>HTML</h5>
+          <code>
+            &lt;div><br>
+            &nbsp;&nbsp;&lt;p>Paragraph 1&lt;/p><br>
+            &nbsp;&nbsp;&lt;p>Paragraph 2&lt;/p><br>
+            &nbsp;&nbsp;&lt;p>Paragraph 3&lt;/p><br>
+            &nbsp;&nbsp;&lt;img src="images/avatar.png"alt="avatar" width="100"><br>
+            &nbsp;&nbsp;&lt;p>Paragraph 4&lt;/p><br>
+            &nbsp;&nbsp;&lt;p>Paragraph 5&lt;/p><br>
+            &nbsp;&nbsp;&lt;p>Paragraph 6&lt;/p><br>
+            &lt;/div>
+          </code>
+          <p>a)</p>
+          <code>
+            <h5>CSS</h5>
+            div {<br>
+            &nbsp;&nbsp;border: 5px solid green;<br>
+            }
+          </code>
+          <h5>Result</h5>
+          <div id="float-1">
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <p>Paragraph 3</p>
+            <img src="images/avatar.png"alt="avatar" width="100">
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+          </div>
+          <p>b)</p>
+          <h5>CSS</h5>
+          <code>
+            div {<br>
+            &nbsp;&nbsp;border: 5px solid green;<br>
+            }<br>
+            <br>
+            img {<br>
+            &nbsp;&nbsp;float: left;<br>
+            }
+          </code>
+          <h5>Result</h5>
+          <div id="float-2">
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <p>Paragraph 3</p>
+            <img id="float-image-1" src="images/avatar.png"alt="avatar" width="100">
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+          </div>
+        </section>
+       
+
