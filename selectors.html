@@ -179,11 +179,11 @@
 	        </code>
 	      </section>
         <section>
-          <h3>Descendant Selector</h3>
+          <h3>A B Combinator (a.k.a Descendant Selector)</h3>
           <h4>Description</h4>
           <p>
-            To apply a CSS rule to a single tag or a subset of tags we use a 
-            descendant selector.
+            This type of selector, selects any element matching B that is inside 
+            of an element matching A.
           </p>
           <h4>Example</h4>
           <h5>CSS</h5>
@@ -193,10 +193,137 @@
             }
           </code>
           <p>
-            The CSS rule above selects only &lt;li&gt; tags that are children of 
-            &lt;ul&gt; tags.
+            This type of selector matches &lt;li&gt; elements inside &lt;ul> 
+            elements.
           </p>
         </section>
+        <section>
+        	<h3>A + B Combinator (a.k.a Adjacent Sibling Selector)</h3>
+        	<h4>Description</h4>
+        	<p>
+        		This type of selector, selects <em>only</em> the element matching B 
+        		that immediately follows elements matching A.
+        	</p>
+        	<h4>Examples</h4>
+        	<ol>
+        		<li>
+		        	<h5>HTML</h5>
+		        	<code>
+		        		&lt;ul><br>
+		        		&nbsp;&nbsp;&lt;li>First child&lt;/li><br>
+		        		&nbsp;&nbsp;&lt;li>Second child&lt;/li><br>
+		        		&nbsp;&nbsp;&lt;li>Third child&lt;/li><br>
+		        		&lt;/ul>
+		        	</code>
+		        	<h5>CSS</h5>
+		        	<code>
+			        	li:first-of-type + li {<br>
+			        	&nbsp;&nbsp;color: red;<br>
+			        	}
+			        </code>
+			        <h5>Result</h5>
+			        <div class="result-wrapper">
+				        <ul>
+								  <li id="adj-sibling-1">First child</li>
+								  <li>Second child</li>
+								  <li>Third child</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<h5>HTML</h5>
+							<code>
+								&lt;div><br>
+								&nbsp;&nbsp;&lt;p>paragraph 1&lt;/p><br>
+								&nbsp;&nbsp;&lt;p>paragraph 2&lt;/p><br>
+								&lt;/div><br>
+								&lt;p>paragraph 3&lt;/p><br>
+								&lt;p>paragraph 4&lt;/p>
+							</code>
+							<h5>CSS</h5>
+							<code>
+								div + p {<br>
+								&nbsp;&nbsp;color: red;<br>
+								}
+							</code>
+							<h5>Result</h5>
+							<div class="result-wrapper">
+								<div id="adj-sibling-2">
+								  <p>paragraph 1</p>
+								  <p>paragraph 2</p>
+								</div>
+								<p>paragraph 3</p>
+								<p>paragraph 4</p>
+							</div>
+						</li>
+					</ol>
+				</section>
+				<section>
+        	<h3>A > B Combinator (a.k.a Child Selector)</h3>
+        	<h4>Description</h4>
+        	<p>
+        		This type of selector, selects <em>all</em> elements matching B that 
+        		are immediate children of elements matching A.
+        	</p>
+        	<h4>Example</h4>
+        	<h5>HTML</h5>
+        	<code>
+						&lt;div><br>
+						&nbsp;&nbsp;&lt;p>paragraph 1&lt;/p><br>
+						&nbsp;&nbsp;&lt;p>paragraph 2&lt;/p><br>
+						&lt;/div><br>
+						&lt;p>paragraph 3&lt;/p><br>
+						&lt;p>paragraph 4&lt;/p>
+					</code>
+					<h5>CSS</h5>
+					<code>
+						div > p {<br>
+							&nbsp;&nbsp;color: red;<br>
+						}
+					</code>
+					<h5>Result</h5>
+					<div class="result-wrapper">
+						<div id="child">
+							<p>paragraph 1</p>
+							<p>paragraph 2</p>
+						</div>
+						<p>paragraph 3</p>
+						<p>paragraph 4</p>
+					</div>
+				</section>
+				<section>
+        	<h3>A ~ B Combinator (a.k.a General Sibling Selector)</h3>
+        	<h4>Description</h4>
+        	<p>
+        		This type of selector, selects <em>all</em> elements matching B that 
+        		are siblings of elements matching A.
+        	</p>
+        	<h4>Example</h4>
+        	<h5>HTML</h5>
+   				<code>
+						&lt;div><br>
+						&nbsp;&nbsp;&lt;p>paragraph 1&lt;/p><br>
+						&nbsp;&nbsp;&lt;p>paragraph 2&lt;/p><br>
+						&lt;/div><br>
+						&lt;p>paragraph 3&lt;/p><br>
+						&lt;p>paragraph 4&lt;/p>
+					</code>
+					<h5>CSS</h5>
+					<code>
+						div ~ p {<br>
+						&nbsp;&nbsp;color: red;<br>
+						}
+					</code>
+					<h5>Result</h5>
+					<div class="result-wrapper">
+						<div id="gen-sibling">
+						  <p>paragraph 1</p>
+						  <p>paragraph 2</p>
+						</div>
+						<p>paragraph 3</p>
+						<p>paragraph 4</p>
+					</div>
+				</section>
         <section>
           <h3>Pseudo-Class</h3>
           <h4>Description</h4>

@@ -329,7 +329,7 @@ section a:hover {
   text-align: center;
 }
 
-/*------------------------------ navigation bar ------------------------------*/
+/*------------------------------ Navigation bar ------------------------------*/
 
 .dropdown {
 	/* 
@@ -458,7 +458,7 @@ nav #current {
 	background-color: yellow;
 }
 
-/*------------------------------- form example -------------------------------*/
+/*------------------------------- Form example -------------------------------*/
 
 .myform fieldset {
 	/* Form width */
@@ -522,7 +522,7 @@ nav #current {
 	margin-left: .5em;
 }
 
-/*-------------------------- border radius examples --------------------------*/
+/*-------------------------- Border radius examples --------------------------*/
 
 .border-radius-1 {
 	height: 100px;
@@ -580,7 +580,7 @@ nav #current {
 	border-radius: 50%;
 }
 
-/*--------------------------- box shadow examples ----------------------------*/
+/*--------------------------- Box shadow examples ----------------------------*/
 
 .box-shadow-1, .box-shadow-2, .box-shadow-3, .box-shadow-4, .box-shadow-5, 
 .box-shadow-6, .box-shadow-7, .box-shadow-8, .box-shadow-9, .box-shadow-10 {
@@ -653,7 +653,7 @@ nav #current {
 	color: rgba(255, 255, 255, 0.5);
 }
 
-/*--------------------------- text shadow examples ---------------------------*/
+/*--------------------------- Text shadow examples ---------------------------*/
 
 .text-shadow-1 h1 {
 	font-size: 100px;
@@ -789,7 +789,7 @@ nav #current {
    	-15px 15px #00cccc;
 }
 
-/*--------------------------- box sizing examples ----------------------------*/
+/*--------------------------- Box sizing examples ----------------------------*/
 
 .content-box {
 	border: 10px solid black;
@@ -817,7 +817,7 @@ nav #current {
 	height: 100px;
 }
 
-/*----------------------- multiple backgrounds example -----------------------*/
+/*----------------------- Multiple backgrounds example -----------------------*/
 
 /*
 .mult-bg-1 {
@@ -841,7 +841,7 @@ nav #current {
 		linear-gradient(to left, #dc2424, #4a569d) center/contain no-repeat;
 }
 
-/*----------------------------- opacity examples -----------------------------*/
+/*----------------------------- Opacity examples -----------------------------*/
 
 .opacity-1 img {
 	opacity: 0.1;
@@ -888,7 +888,7 @@ nav #current {
 	opacity: 1.0;
 }
 
-/*------------------------- linear gradient examples -------------------------*/
+/*------------------------- Linear gradient examples -------------------------*/
 
 .linear-gradient {
 	color: white;
@@ -945,7 +945,7 @@ nav #current {
 		url("images/wallpaper.jpg") top left/cover no-repeat;
 }
 
-/*------------------------- radial gradient examples -------------------------*/
+/*------------------------- Radial gradient examples -------------------------*/
 
 .radial-gradient {
 	color: black;
@@ -1018,7 +1018,7 @@ nav #current {
 	background: radial-gradient(circle at 50% 0%, blue, greenyellow, tomato);
 }
 
-/*------------------------------- table example ------------------------------*/
+/*------------------------------- Table example ------------------------------*/
 
 /* Spacing & layout styling */
 .table-1 {
@@ -1145,7 +1145,7 @@ nav #current {
 	font-style: italic;
 }
 
-/* Attribute selector showcase */
+/*------------------------- Attribute selector example -----------------------*/
 [taxonomy-class] {
 	color: blue;
 }
@@ -1158,14 +1158,14 @@ nav #current {
 	background-color: red;
 }
 
-/* ID selectors showcase */
+/*-------------------------- ID selectors example ----------------------------*/
 #highlight {
 	background-color: yellow;
 }
 
-/* Pseudo-class showcase */
+/*-------------------------- Pseudo-class example ----------------------------*/
+/* Inherit any inheritable values from the parent. */
 #hover {
-	/* inherit any inheritable values from the parent. */
 	all: unset;	
 }
 
@@ -1178,7 +1178,7 @@ nav #current {
   color: red;
 }
 
-/* Pseudo-element showcase */
+/*-------------------------- Pseudo-element example --------------------------*/
 #first-letter::first-letter {
 	font-family: Arvo, Times, "Times New Roman"; 
   font-size: 30px;
@@ -1205,8 +1205,8 @@ nav #current {
 	right: 15px;
 }
 
+/* Inherit any inheritable values from the parent. */
 #nav-delimiter, #nav-delimiter button {
-	/* inherit any inheritable values from the parent. */
 	all: unset;	
 }
 
@@ -1224,7 +1224,21 @@ nav #current {
 	left: -15px;
 }
 
+/*------------------- Adjacent sibling combinator example --------------------*/
+#adj-sibling-1 + li {
+  color: red;
+}
 
+#adj-sibling-2 + p {
+  color: red;
+}
 
+/*------------------------- Child combinator example -------------------------*/
+#child > p {
+  color: red;
+}
 
-
+/*-------------------- General Sibling combinator example --------------------*/
+#gen-sibling ~ p {
+  color: red;
+}
