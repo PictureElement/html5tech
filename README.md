@@ -77,4 +77,3 @@ Please note that the files in the following directories have their own copyright
 - fonts/Arvo
 - fonts/Lato
 - fonts/Roboto_Mono
-
