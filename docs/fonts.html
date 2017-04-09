@@ -1,0 +1,510 @@
+<!--
+	This file is part of HTML5Tech.
+ 	
+  HTML5Tech is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  HTML5Tech program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with HTML5Tech; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  	<link rel="stylesheet" href="main.css">
+		<title>CSS/Fonts</title>
+	</head>
+	<body>
+		<header>
+			<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
+      <!--
+      <div class="tagline">
+        <h5>Fundamental resources about HTML5 &amp; friends</h5>
+      </div>
+      -->
+			<nav>
+      	<a href="home.html">Home</a>
+      	<div class="dropdown">
+      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="elements.html">Elements</a>
+      			<a href="images.html">Images</a>
+      			<a href="html-common-mistakes.html">Common Mistakes</a>
+      			<a href="forms.html">Forms</a>
+      			<a href="tables.html">Tables</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+				<div class="dropdown">
+      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+            <a href="whats-new.html">What's New</a>
+      			<a href="updated-tags.html">Updated Tags</a>
+      			<a href="updated-elements.html">Updated Elements</a>
+      			<a href="new-elements.html">New Elements</a>
+      			<a href="new-input-types.html">New Input Types</a>
+      			<a href="new-input-attributes.html">New Input Attributes</a>
+      			<a href="new-form-elements.html">New Form Elements</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button id="current" class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="selectors.html">Selectors</a>
+      			<a href="color.html">Color</a>
+      			<a href="box-model.html">Box Model</a>
+      			<a href="fonts.html">Fonts</a>
+      			<a href="styles.html">Styles</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+  		</nav>
+		</header>
+    <main>
+      <article>
+        <header>
+          <h2>Fonts</h2>
+          <div class="byline-wrapper">
+						<img src="images/avatar.png" alt="avatar" width="40">
+						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+						<br>
+						<time datetime="2017-03-17">Mar 17, 2017</time>
+					</div>
+        </header>
+        <section>
+          <h3>font-family property</h3>
+          <h4>Description</h4>
+          <p>
+            font-style changes can be applied with CSS. The <i>font-family</i> 
+            property is used to specify a list of fonts that should be used for 
+            an element. The property can hold several font names as a "fallback" 
+            system.
+          </p>
+          <h4>Example</h4>
+          <h5>CSS</h5>
+          <code>
+          	<i>element</i> {<br>
+            &nbsp;&nbsp;font-family: Helvetica, Arial, "Times New Roman", sans-serif;<br>
+            }
+          </code>
+          <p>
+            The first font in the list(i.e. <i>Helvetica</i>) represents the 
+            ideal font that the browser will try to load first. The 
+            <i>Arial</i>, <i>Times New Roman</i>, and <i>sans-serif</i> fonts 
+            are fallback fonts. If the browser can't find the ideal font, it 
+            will try to load the second font in the list and so on. 
+          </p>
+          <p><b>Notes:</b></p> 
+          <ul>
+            <li>Use quotes("") if fonts are multi-word.</li>
+            <li>Not all browsers and OS have all fonts installed by default.</li>
+          </ul>
+          <p>
+            After applying a main font to the <i>element</i>, the browser still 
+            uses default font styles. Just like we do with padding, borders, and 
+            margins, we can reset our font styles to a baseline default level in
+            order for us to improve upon:
+          </p>
+          <h5>CSS</h5>
+          <code>
+         		<i>element</i> {<br>
+            &nbsp;&nbsp;font-size: 100%;<br>
+            &nbsp;&nbsp;font: inherit;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h3>font-style property</h3>
+          <h4>Description</h4>
+          <p>
+            The <i>font-style</i> property is mostly used to specify italic 
+            text.
+          </p>
+          <h4>Usage</h4>
+          <h5>CSS</h5>
+          <code>
+          	<i>element</i> {<br>
+            &nbsp;&nbsp;font-style: <i>value</i>;<br>
+            }
+          </code>
+          <p>where <i>value</i> equals:</p>
+          <ul>
+          	<li><b>normal</b> - text is shown normally</li>
+            <li><b>italic</b> - text is shown in italics</li>
+          </ul>
+        </section>
+        <section>
+          <h3>font-weight property</h3>
+          <h4>Description</h4>
+          <p>The <i>font-weight</i> property specifies the weight of a font.</p>
+          <h4>Usage</h4>
+          <h5>CSS</h5>
+          <code>
+          	<i>element</i> {<br>
+           	&nbsp;&nbsp;font-weight: <i>value</i>;<br>
+            }
+          </code>
+          <p>where <i>value</i> equals:</p>
+          <ul>
+            <li><b>normal</b> - standard weight(i.e. 400)</li>
+            <li><b>bold</b> - bold weight(i.e. 700)</li>
+            <li><b>bolder</b> - bolder than the inherited font weight</li>
+            <li><b>lighter</b> - lighter than the inherited font weight</li>
+            <li><b>100(lightest)-900(boldest)</b> - in multiples of 100</li>        
+          </ul>
+        </section>
+        <section>
+          <h3>font-size property</h3>
+          <h4>Description</h4>
+          <p>The <i>font-size</i> property specifies the size of the font.</p>
+          <h4>Usage</h4>
+          <h5>CSS</h5>
+         	<code>
+          	<i>element</i> {<br>
+           	&nbsp;&nbsp;font-size: <i>keyword</i> | <i>length</i> | <i>percentage</i>;<br>
+            }
+          </code>
+          <p>where:</p>
+         	<ul>
+          	<li>
+          		<i>keyword</i> equals:
+		          <ul>
+		          	<li><b>medium</b> - medium font size(default).</li>
+		          	<li><b>xx-small</b> - xx-small font size.</li>
+		          	<li><b>x-small</b> - x-small font size.</li>
+		          	<li><b>small</b> - small font size.</li>
+		          	<li><b>large</b> - large font size.</li>
+		          	<li><b>x-large</b> - x-large font size.</li>
+		          	<li><b>xx-large</b> - xx-large font size.</li>
+		          	<li><b>smaller</b> - smaller size than the parent element.</li> 
+		          	<li><b>larger</b> - larger size than the parent element.</li> 
+								<li><b>inherit</b> - inherit font size from parent element.</li> 
+							</ul>
+						</li>
+       			<li>
+          		<i>length</i> equals:
+		          <ul>
+		          	<li><b><i>x</i>px</b></li>
+		          	<li><b><i>x</i>mm</b></li>
+		          	<li><b><i>x</i>em</b></li>
+		          	<li><b><i>x</i>ex</b></li>
+		          </ul>
+          	</li>
+          	<li>
+      				<i>percentage</i> equals to <b><i>x</i>%</b> and refers to the 
+      				parent element's font size.
+          	</li>
+          </ul>
+				</section>
+        <section>
+          <h3>text-transform property</h3>
+          <h4>Description</h4>
+          <p>
+            The <i>text-transform</i> property controls the capitalization of 
+            text.
+          </p>
+          <h4>Usage</h4>
+          <h5>CSS</h5>
+          <code>
+          	<i>element</i> {<br>
+           	&nbsp;&nbsp;text-transform: <i>value</i>;<br>
+            }
+          </code>
+          <p>where <i>value</i> equals:</p>
+          <ul>
+          	<li><b>none</b> - no capitalization, text renders as it is(default).</li>
+            <li><b>capitalize</b> - transform the first character of each word to uppercase.</li>
+            <li><b>uppercase</b> - transform all characters to uppercase.</li>
+            <li><b>lowercase</b> - transform all characters to lowercase.</li>
+            <li><b>inherit</b> - inherits this property from its parent element.</li>    
+         	</ul>s
+        </section>
+        <section>
+          <h3>line-height property</h3>
+          <h4>Description</h4>
+          <p>The <i>line-height</i> property specifies the line height.</p>
+          <h4>Usage</h4>
+          <h5>CSS</h5>
+          <code>
+          	<i>element</i> {<br>
+           	&nbsp;&nbsp;line-height: <i>value</i>;<br>
+            }
+          </code>
+          <p>where <i>value</i> equals:</p>
+          <ul>
+          	<li><b>normal</b> - normal line height(default).</li>
+           	<li>
+            	<b><i>number</i></b> - a number that will be multiplied with the
+            	current font size to set the line height.
+            </li>
+            <li>
+            	<b><i>length</i></b> - a fixed line height in px, em, etc.
+           	</li>
+         	</ul>
+          <p>
+            <b>Note:</b> The <i>number</i> value is the preferred way to set 
+            <i>line-height</i> instead of <i>length</i>. There are no unexpected 
+            results in case of inheritance when using unitless numbers.
+          </p> 
+          <h4>Example</h4>
+          <h5>HTML</h5>
+          <code>
+            &lt;div class="green-box"&gt;<br>
+            &nbsp;&nbsp;&lt;h3&gt;Name: Marios Sofokleous&lt;/h3&gt;<br>
+            &nbsp;&nbsp;&lt;h3&gt;Date: Mar 17, 2017&lt;/h3&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;This is line number 1&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;This is line number 2&lt;/p&gt;<br>
+            &lt;/div&gt;<br>
+            <br>
+           	&lt;div class="red-box"&gt;<br>
+            &nbsp;&nbsp;&lt;h3&gt;Name: Marios Sofokleous&lt;/h3&gt;<br>
+            &nbsp;&nbsp;&lt;h3&gt;Date: Mar 17, 2017&lt;/h3&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;This is line number 1&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;This is line number 2&lt;/p&gt;<br>
+            &lt;/div&gt;
+          </code>
+          <h5>CSS</h5>
+          <code>
+          	/* Unitless number(preferred method) */<br>
+            .green-box {<br>
+            &nbsp;&nbsp;line-height: 1.5;<br>
+            &nbsp;&nbsp;border: solid green;<br>
+            &nbsp;&nbsp;display: inline-block;<br>
+            &nbsp;&nbsp;vertical-align: top;<br>
+            }<br>
+            <br>
+            .red-box {<br>
+            &nbsp;&nbsp;line-height: 20px;<br>
+            &nbsp;&nbsp;border: solid red;<br>
+            &nbsp;&nbsp;display: inline-block;<br>
+            &nbsp;&nbsp;vertical-align: top;<br>
+            }
+          </code>
+          <h5>Result</h5>
+          <div class="result-wrapper">
+            <div class="green-box">
+              <h3>Name: Marios Sofokleous</h3>
+              <h3>Date: Mar 17, 2017</h3>
+              <p>This is line number 1</p>
+              <p>This is line number 2</p>
+            </div>
+            <div class="red-box">
+              <h3>Name: Marios Sofokleous</h3>
+              <h3>Date: Mar 17, 2017</h3>
+              <p>This is line number 1</p>
+              <p>This is line number 2</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Web Fonts</h3>
+          <h4>Description</h4>
+          <p>
+            <i>Adobe Typekit</i> and <i>Google Fonts</i> are examples of web 
+            font embedding services, which allow the use of fonts hosted on 
+            their servers.
+          </p>
+          <h4>Method #1: <i>@import</i></h4>
+          <p>
+            To embed a selected font from <i>Google Fonts</i> into a webpage, 
+            use the <i>@import</i> method as follows:
+          </p>
+          <h5>CSS</h5>
+          <code>
+          	/* Google Web Fonts: Sans Serif type */<br>
+            @import url('https://fonts.googleapis.com/css?family=Lato');<br>
+            <br>
+            /* Google Web Fonts: Serif type */<br>
+            @import url('https://fonts.googleapis.com/css?family=Arvo');<br>
+            <br>
+            /* Google Web Fonts: Monospace type */<br>
+            @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+         	</code>
+          <p>
+            <b>Note:</b> <i>@import</i> rules <strong>must</strong> be placed at 
+            the top of a stylesheet, before any other rules.
+          </p> 
+          <h4>Method #2: <i>@font-face</i></h4>
+          <p>
+            <i>@font-face</i> allows us to specify downloadable fonts for use on 
+            our website.
+          </p>
+          <p>
+            The first step is to decide which font we want to use and download
+            it. In this example, we're going to use <i>Lato</i> from <i>Google 
+            Fonts</i>. Once the font is downloaded, we need to upload the font's 
+            files within the website's main directory.
+          </p>
+          <p>
+            The next thing we need to do, is to modify the CSS file with the 
+            <i>@font-face</i> decalarations.
+          </p>
+          <p>
+            To add the regular version of "MySansSerif" in our stylesheet, we 
+            have to create a new <i>@font-face</i> declaration :
+          </p>
+          <h5>CSS</h5>
+          <code>
+          	@font-face {<br>
+            &nbsp;&nbsp;font-family: MySansSerif;<br>
+            &nbsp;&nbsp;src: url("fonts/Lato/Lato-Regular.ttf");<br>
+            &nbsp;&nbsp;font-style: normal;<br>
+            &nbsp;&nbsp;font-weight: normal;<br>
+            }<br>
+            <br>
+            <i>element</i> {<br>
+            &nbsp;&nbsp;font-family: "MySansSerif", Helvetica, Arial;<br>
+            }
+          </code>
+          <p><b>Note:</b> *Helvetica, Arial are used as fallbacks.</p>
+          <p>
+            To add the bold version of "MySansSerif" in our stylesheet, we have 
+            to create a new <i>@font-face</i> declaration :
+          </p>
+          <h5>CSS</h5>
+          <code>
+           	@font-face {<br>
+            &nbsp;&nbsp;font-family: MySansSerif;<br>
+            &nbsp;&nbsp;src: url("fonts/Lato/Lato-Bold.ttf");<br>
+            &nbsp;&nbsp;font-style: normal;<br>
+            &nbsp;&nbsp;font-weight: bold;<br>
+            }<br>
+            <br>
+           	<i>element</i> {<br>
+            &nbsp;&nbsp;font-family: "MySansSerif", Helvetica, Arial;<br>
+            &nbsp;&nbsp;font-weight: bold;<br>
+            }
+          </code>
+          <p>
+            To add the italic version of "MySansSerif" in our stylesheet, we 
+            have to create a new <i>@font-face</i> declaration :
+          </p>
+          <h5>CSS</h5>
+          <code>
+           	@font-face {<br>
+           	&nbsp;&nbsp;font-family: MySansSerif;<br>
+            &nbsp;&nbsp;src: url("fonts/Lato/Lato-Italic.ttf");<br>
+            &nbsp;&nbsp;font-style: italic;<br>
+            &nbsp;&nbsp;font-weight: normal;<br>
+            }<br>
+           	<br>
+          	<i>element</i> {<br>
+            &nbsp;&nbsp;font-family: "MySansSerif", Helvetica, Arial;<br>
+            &nbsp;&nbsp;font-style: italic;<br>
+            }
+         	</code>
+        </section>
+        <section>
+          <h3>Font Types</h3>
+          <h4>Serif</h4>
+          <p>
+          	Serif fonts(e.g. Times) have little hooks on the ends of the 
+          	letters/characters. These fonts are more suitable for 
+          	headlines and printing than body text because the 
+          	little serifs(hooks) can blur together and start making the 
+          	text harder to read. However, this is not true as much now, because 
+          	monitors have much better resolution now. Therefore Serif fonts can 
+          	be used for body text as well. If you have print friendly versions 
+          	of your website, use Serif fonts. Prints have higher resolution than 
+          	displays thus Serif fonts can be seen more clearly.
+          </p>
+          <h5>Example:</h5>
+          <div class="serif">
+          	<p>This is a Serif font.</p>
+          </div>
+          <h4>Sans Serif</h4>
+          <p>
+          	Sans Serif fonts(e.g. Arial) haven't got any hooks on the ends of 
+          	the letters/characters like Serif fonts do. They are often used to 
+          	convey simplicity or minimalism. These fonts are ideal for display 
+          	of text on digital displays.
+          </p>
+          <h5>Example:</h5>
+          <div class="sans-serif">
+          	<p>This is a Sans Serif font.</p>
+          </div>
+          <h4>Monospace</h4>
+          <p>
+          	A Monospaced font(e.g. Courier, Monaco) is a font whose 
+          	letters/characters each occupy the same amount of horizontal space.
+          	The majority of IDEs and text editors use a monospaced font as the 
+          	default typeface. This increases the readability of source code. In 
+          	technical manuals and resources for programming languages, a 
+          	monospaced font is often used to distinguish code from 
+          	natural-language text. 
+          </p>
+          <h5>Example:</h5>
+          <div class="monospace">
+          	<p>This is a Monospaced font.</p>
+          </div>
+          <h4>Safe fonts</h4>
+          <p>The fonts that are most safe to use are:</p>
+          <ul>
+						<li><b>Serif:</b> Times New Roman (Windows) / Times (Mac, Unix)</li>
+						<li><b>Sans Serif:</b> Arial (Windows) / Helvetica (Mac, Unix)</li>
+						<li><b>Monospace:</b> Courier New (Windows, Mac) / Courier (Mac, Unix)</li>
+					</ul>
+        </section>
+	    </article>
+    </main>
+    <footer>
+			<div class="follow-us">
+	      <a href="">
+	        <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
+	      </a>
+	    </div>
+      <div class="footer-nav">
+     		<a href="credits.html">Credits</a>
+      	<a href="terms.html">Terms of Use</a>
+      	<a href="privacy.html">Privacy Policy</a>
+      	<a href="advertise.html">Advertise</a>
+      </div>
+      <div class="copyright">
+	    	&copy; 2017 <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+	    </div>
+	    <div class="page-conformity">
+	      <img 
+	      	src="images/valid-css.svg"
+	      	alt="valid CSS logo"
+	      	width="100">
+	      <img 
+	      	src="images/GPLv3-logo.svg"
+	      	alt="GPLv3 license logo"
+	      	width="100">
+	    </div>
+    </footer>
+  </body>
+</html>

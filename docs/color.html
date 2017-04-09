@@ -1,0 +1,342 @@
+<!--
+	This file is part of HTML5Tech.
+ 	
+  HTML5Tech is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  HTML5Tech program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with HTML5Tech; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  	<link rel="stylesheet" href="main.css">
+		<title>CSS/Color</title>
+	</head>
+	<body>
+		<header>
+			<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
+      <!--
+      <div class="tagline">
+        <h5>Fundamental resources about HTML5 &amp; friends</h5>
+      </div>
+      -->
+			<nav>
+      	<a href="home.html">Home</a>
+      	<div class="dropdown">
+      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="elements.html">Elements</a>
+      			<a href="images.html">Images</a>
+      			<a href="html-common-mistakes.html">Common Mistakes</a>
+      			<a href="forms.html">Forms</a>
+      			<a href="tables.html">Tables</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+				<div class="dropdown">
+      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+            <a href="whats-new.html">What's New</a>
+      			<a href="updated-tags.html">Updated Tags</a>
+      			<a href="updated-elements.html">Updated Elements</a>
+      			<a href="new-elements.html">New Elements</a>
+      			<a href="new-input-types.html">New Input Types</a>
+      			<a href="new-input-attributes.html">New Input Attributes</a>
+      			<a href="new-form-elements.html">New Form Elements</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button id="current" class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="selectors.html">Selectors</a>
+      			<a href="color.html">Color</a>
+      			<a href="box-model.html">Box Model</a>
+      			<a href="fonts.html">Fonts</a>
+      			<a href="styles.html">Styles</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
+      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+  		</nav>
+		</header>
+    <main>
+      <article>
+        <header>
+          <h2>Color</h2>
+          <div class="byline-wrapper">
+						<img src="images/avatar.png" alt="avatar" width="40">
+						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+						<br>
+						<time datetime="2017-03-14">Mar 14, 2017</time>
+					</div>
+        </header>
+        <section>
+          <h3>RGB Color Model</h3>
+          <h4>Description</h4>
+          <p>
+            The RGB color model adds red, green, and blue together in various 
+            ways to reproduce a broad array of colors. In this model, a color is
+            described by indicating how much of each of the red, green, and blue
+            is included. The color is expressed as an RGB triplet (r,g,b). 
+            In computers, the red, green, and blue component values are stored 
+            as integer numbers in the range 0-255. These are often represented 
+            as either decimal or hexadecimal numbers. 
+          </p>
+          <h4>rgb()</h4>
+          <h5>Hexadecimal Notation</h5>
+          <p>
+            <b>#RRGGBB: six-digit RGB hex notation</b><br>
+            First two digits set the amount of red.<br>
+            Next two digits set the amount of green.<br>
+            Last two digits set the amount of blue.
+          </p>
+          <p>
+            <b>#RGB: three-digit RGB hex notation</b><br>
+            First digit sets the amount of red.<br>
+            Second digit sets the amount of green.<br>
+            Last digit sets the amount of blue.
+          </p>
+          <p>
+            #0ff and #00ffff represent the same color (Cyan).
+          </p>
+          <h5>Functional Notation</h5>
+          <p>
+            <b>rgb(<i>r,g,b</i>)</b><br>
+            <b>rgb(<i>pctr,pctg,pctb</i>)</b><br>
+          </p>
+          <p>where:</p>
+          <ul>
+          	<li>0 &le; <i>r,g,b</i> &le; 255, <i>r,g,b</i> &isin; &#8469;</li>
+            <li><i>pctr,pctg,pctb</i>: 0-100%</li>
+          </ul>
+          </p>
+          <h4>rgba()</h4>
+          <h5>Hexadecimal Notation</h5>
+          <p>
+            <b>#RRGGBBaa: eight-digit RGB hex notation</b><br>
+            First two digits set the amount of red.<br>
+            Second two digits set the amount of green.<br>
+            Third two digits set the amount of blue.<br>
+            Last two digits set the transparency.
+          </p>
+          <p>
+            <b>#RGBa: four-digit RGB hex notation</b><br>
+            First digit sets the amount of red.<br>
+            Second digit sets the amount of green.<br>
+            Third digit sets the amount of blue.<br>
+            Last digit sets the transparency.
+          </p>
+          <p>
+            #0ff0 and #00ffff00 represent the same color (0% opaque Cyan).<br>
+            #0fff and #00ffffff represent the same color (full opaque Cyan).
+          </p>
+          <h5>Functional Notation</h5>
+          <p>
+            <b>rgba(<i>r,g,b,a</i>)</b>
+          </p>
+          <p>where:</p>
+          <ul>
+          	<li>0 &le; <i>r,g,b</i> &le; 255, <i>r,g,b</i> &isin; &#8469;</li>
+            <li>
+            	0 &le; <i>a</i> &le; 1, <i>a</i> &isin; &real;, 
+            	<i>a</i> means opacity: 0=transparent, 1=opaque
+            </li>
+          </ul>
+          </p>
+          <h4>Examples</h4>
+          <ol>
+            <li>
+              <b>#7403ab</b><br>
+              Red: 7x16 + 4x1 = 112(DEC)<br>
+              Green: 0x16 + 3x1 = 3(DEC)<br>
+              Blue: 10x16 + 11x1 = 171(DEC)<br>
+              *The color is some red, almost no green and more blue than red. 
+              The color is purplish. 
+            </li>
+            <li>
+              <b>#fff = #ffffff</b><br>
+              Red: 255(DEC)<br>
+              Green: 255(DEC)<br>
+              Blue: 255(DEC)<br>
+              *The color is white.
+            </li>
+            <li>
+              <b>rgb(255,255,255)</b><br>
+              *The color is white.
+            </li>
+            <li>
+              <b>rgb(100%,100%,100%)</b><br>
+              *The color is white.
+            </li>
+            <li>
+              <b>rgba(255,255,255,1)</b><br>
+              *The color is full opaque white.
+            </li>
+            <li>
+              <b>rgba(255,255,255,0.2)</b><br>
+              *The color is 20% opaque white.
+            </li>
+          </ol>
+          <h4>Usefull Info</h4>
+          <ul>
+            <li><b>Primary colors:</b> Red, Green, Blue</li>
+            <li>
+              <b>Colors on the web:</b> 256 possible combinations for each color 
+              channel => 256 * 256 * 256 = 16777216 available colors
+            </li>
+            <li><b>Magenta(ff00ff):</b> Red + Blue</li>
+            <li><b>Yellow(ffff00):</b> Red + Green</li>
+            <li><b>Cyan(00ffff):</b> Green + Blue</li>
+            <li><b>Black(000000):</b> Absense of color</li>
+            <li>
+              <b>White(ffffff):</b> All three primary colors at maximum 
+              intensities
+            </li>
+            <li><b>Light gray:</b> #D3D3D3</li>
+            <li><b>Gray:</b> #808080</li>
+            <li><b>Dark gray:</b> #A9A9A9</li>
+          </ul>
+        </section>
+        <section>
+          <h3>HSL Color Model</h3>
+          <h4>Description</h4>
+          <p>
+          	Colors can also be defined via HUE, SATURATION, and LIGHTNESS, or 
+            HSL. Hue is represented as an angle of the color circle. By 
+            definition pure red=0(or 360), pure green=120, pure blue=240. 
+            Saturation and lightness are represented as percentages. 100% is 
+            full saturation, and 0% is a shade of gray. 100% ligthness is white, 
+            0% lightness is black, and 50% lightness is normal. 
+          </p>
+          <h4>hsl()</h4>
+         	<p><b>hsl(<i>hue,saturation,lightness</i>)</b></p>
+         	<p>where:</p>
+         	<ul>
+         		<li>0 &le; <i>hue</i> &le; 360</li>
+         		<li><i>saturation:</i> 0-100%</li>
+         		<li>
+         			<i>lightness:</i> 0-100%
+         		</li>
+         	</ul>
+         	<h4>hsla()</h4>
+         	<p><b>hsla(<i>hue,saturation,lightness,a</i>)</b></p>
+         	<p>where:</p>
+         	<ul>
+         		<li>0 &le; <i>hue</i> &le; 360</li>
+         		<li><i>saturation:</i> 0-100%</li>
+         		<li><i>lightness:</i> 0-100%</li>
+         		<li>
+            	0 &le; <i>a</i> &le; 1, <i>a</i> &isin; &real;, 
+            	<i>a</i> means opacity: 0=transparent, 1=opaque
+            </li>
+         	</ul>
+         	<h4>Color Wheel</h4>
+         	<img src="images/color-wheel.svg" alt="color wheel" width="300">
+         	<h4>Examples</h4>
+         	<ol>
+            <li>
+            	<b>hsl(0, 100%, 50%)</b><br>
+            	*The color is red
+            </li>
+            <li>
+            	<b>hsl(60, 100%, 50%)</b><br>
+            	*The color is yellow
+            </li>
+            <li>
+            	<b>hsl(120, 100%, 50%)</b><br>
+            	*The color is green.
+            </li>
+            <li>
+            	<b>hsl(180, 100%, 50%)</b><br>
+            	*The color is cyan.
+            </li>
+            <li>
+            	<b>hsl(240, 100%, 50%)</b><br>
+            	*The color is blue.
+            </li>
+            <li>
+            	<b>hsl(300, 100%, 50%)</b><br>
+            	*The color is magenta.
+            </li>
+            <li>
+            	<b>hsla(300, 100%, 50%, 0.05)</b><br>
+            	*The color is 5% opaque magenta.
+            </li>
+            <li>
+            	<b>hsla(300, 100%, 50%, 0.5)</b><br>
+            	*The color is 50% opaque magenta.
+            </li>
+            <li>
+            	<b>hsla(300, 100%, 50%, 1)</b><br>
+            	*The color is full opaque magenta.
+            </li>
+          </ol>
+     		</section>
+      </article>
+    </main>
+    <footer>
+			<div class="follow-us">
+	      <a href="">
+	        <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
+	      </a>
+	    </div>
+      <div class="footer-nav">
+     		<a href="credits.html">Credits</a>
+      	<a href="terms.html">Terms of Use</a>
+      	<a href="privacy.html">Privacy Policy</a>
+      	<a href="advertise.html">Advertise</a>
+      </div>
+      <div class="copyright">
+	    	&copy; 2017 <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+	    </div>
+	    <div class="page-conformity">
+	      <img 
+	      	src="images/valid-css.svg"
+	      	alt="valid CSS logo"
+	      	width="100">
+	      <img 
+	      	src="images/GPLv3-logo.svg"
+	      	alt="GPLv3 license logo"
+	      	width="100">
+	    </div>
+    </footer>
+  </body>
+</html>
+
+
+
+          

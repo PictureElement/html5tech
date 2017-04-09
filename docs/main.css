@@ -1,0 +1,1260 @@
+/**
+	This file is part of HTML5Tech.
+ 	
+  HTML5Tech is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  HTML5Tech program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with HTML5Tech; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+*/
+
+/* Google Web Fonts: Sans Serif type */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/* Google Web Fonts: Serif type */
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+/* Google Web Fonts: Monospace type */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+/* Reset browser defaults ("em", "i", "b", and "strong" tags not included) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, 
+ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, 
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, 
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, 
+audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	background-color: #ffffff;
+}
+
+/*
+h1 {
+	font-size: 55px;
+	font-weight: 900;
+	text-align: center;
+	font-family: Arvo, Times, "Times New Roman"; 
+	color: #007f7f;
+	text-shadow: 0 1px 1px #8c8c90;
+	margin-top: 20px;
+}
+*/
+
+h2 {
+	padding-top: 0;
+	font-size: 40px;
+	font-weight: 800;
+	font-family: Arvo, Times, "Times New Roman"; 
+	color: white;
+	margin-left: 10px;
+	text-shadow: 0 1px 1px black;
+}
+
+h3 {
+	font-size: 30px;
+	font-weight: 700;
+	font-style: italic;
+	font-family: Arvo, Times, "Times New Roman"; 
+	color: #2b2d32;
+	text-shadow: 0 1px 1px #8c8c90;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 300;
+	font-family: Arvo, Times, "Times New Roman"; 
+	color: #2b2d32;
+	margin-top: 15px;
+	margin-bottom: 5px;
+
+}
+
+h5 {
+	font-size: 15px;
+	font-weight: 100;
+	font-style: italic;
+	font-family: Arvo, Times, "Times New Roman"; 
+	color: #2b2d32;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+p {
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: #8c8c90;
+	margin-top: 20px;
+}
+
+a {
+	text-decoration: none;
+	font-style: italic;
+	font-size: 12px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.5);
+	/* Add transition to links when they're hovered over */
+	transition: .3s color;
+}
+
+header {
+	background: radial-gradient(circle, gainsboro 20%, lightgray 40%, silver 60%, darkgray 80%, gray 100%);
+	/*background-image: url(background.jpg);*/
+	box-shadow: 0 1px 1px black;
+	/* header in fixed position (following 3 properties)*/
+	position: fixed; 
+	width: 100%;
+	top: 0;
+}
+
+main {
+	/* 
+		216px top margin from start of the page
+		30px top margin from header 
+	*/
+	margin-top: 216px;
+}
+
+article {
+	width: 960px;
+	margin: 0 auto 0 auto;
+}
+
+section {
+	background-color: #f0f0f0;
+	margin-top: 10px;
+	border: 1px solid #000000;
+	padding: 10px 10px 10px 10px;
+	border-radius: 10px;
+	box-shadow: 0 1px 1px black;
+}
+
+footer {
+	background: linear-gradient(to top, #2b2d32, #3b3d42);
+	margin: 30px auto 0 auto;
+	color: #8c8c90;
+	text-align: center;
+	padding: 20px 0 20px 0;
+	box-shadow: 0 1px 1px black;
+}
+
+time {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/* Header navigation bar */
+nav {
+	background: linear-gradient(to bottom, #2b2d32, #3b3d42);
+	overflow: hidden;
+	/* center navigation menu items */
+	text-align: center;
+}
+
+ul {
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
+ol {
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
+li {
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: #8c8c90;
+	margin-top: 5px;
+}
+
+code {
+	font-size: 15px;
+	font-weight: 100;
+	font-family: 'Roboto Mono', Courier, "Courier New";
+	color: #8c8c90;
+	margin-top: 5px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 10px;
+	border-left: 5px solid #007f7f;
+	display: block;
+}
+
+/*----------------------------------------------------------------------------*/
+
+a:hover {
+	color: white;
+}
+
+/* Social icon's default opacity */
+.social-icon {
+	opacity: 0.5;
+}
+
+/* Social icon's opacity on hover */
+a:hover .social-icon {
+	opacity: 1;
+}
+
+.result-wrapper {
+	font-size: 15px;
+	font-weight: 100;
+	font-family: 'Roboto Mono', Courier, "Courier New";
+	color: #8c8c90;
+	margin-top: 5px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 10px;
+	border-left: 5px solid #007f7f;
+}
+
+.cakes {
+	/* Remove bullets */
+	list-style-type: none;
+}
+
+.cakes img {
+  float: left;
+  margin-top: 2px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.images {
+	/* Remove bullets */
+	list-style-type: none;
+	padding: 0;
+}
+
+.images li {
+	/* Display images inline */
+	display: inline;
+	/* 
+		Add a padding on the left so all images aren't just pushed right against 
+		each other. 
+	*/
+	padding-left: 10px;
+}
+
+.byline-wrapper {
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+.byline-wrapper img {
+	float: left;
+	border-radius: 50%;
+	margin-right: 5px;
+	border: 2px solid white;
+}
+
+.byline-wrapper p {
+	padding-top: 3px;
+}
+
+article header {
+	background: #2b2d32;
+	padding: 10px 0 10px 0;
+	border-radius: 10px;
+	position: static;
+}
+
+/* Links inside navigation bar */
+nav a {
+	padding: 14px 16px;
+	font-style: normal;
+	font-size: 19px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.5);
+	background-color: inherit;
+	transition: .3s background-color;
+	text-shadow: 0px 1px 0px black;
+}
+
+section a {
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(0,173, 239, 0.5);
+	margin-top: 5px;
+	font-style: normal;
+}
+
+section a:hover {
+	text-decoration: underline;
+	color: rgba(0,173, 239, 1);
+}
+
+.featured-image {
+  /* Actual width of the <div> container */
+  width: 200px;
+  /* Actual height of the <div> container */
+  height: 100px;
+  /* Background image properties */
+  background: #ffffff url(images/sneakers.jpg) 0 0/200px 100px no-repeat;
+}
+
+.featured-image p {
+  /* Pink background color */
+  background-color: #ffc0cb;
+  /* Green font color */
+  color: #008000;
+  /* Adjust the padding */
+  padding: 5px 0 5px 0;
+  /* Make the text all uppercase */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*------------------------------ Navigation bar ------------------------------*/
+
+.dropdown {
+	/* 
+		The inside of element with a  class name of "dropdown" is formatted as 
+		block-level box, and the element itself is formatted as an inline-level box.
+	*/
+	display: inline-block;
+}
+
+/* Dropdown button styling */
+.dropbtn {
+	padding: 14px 16px;
+	border: none;
+	outline: none;
+	font-size: 19px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.5);
+	background-color: inherit;
+	transition: .3s background-color;
+	text-shadow: 0px 1px 0px black;
+}
+
+/* 
+	Change the background color of links inside the navigation bar. Change 
+	the background color of the dropdown button  when you hover the mouse over the 
+	dropdown container (that includes the dropbutton & dropdown content)
+*/
+nav a:hover, .dropdown:hover .dropbtn {
+	background-color: #005f5f;
+	cursor: pointer;
+	color: white;
+}
+
+/* Dropdown content */
+.dropdown-content {
+	/* hidden by default */
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	/* 
+		An element with gretaer stack order is always in front of an element with a
+	 	lower stack order.
+	*/
+	z-index: 1;
+}
+
+/* Links inside dropdown content */
+.dropdown-content a {
+	color: rgba(255, 255, 255, 0.5);
+	background-color: #005f5f;
+	padding: 10px 16px;
+	/* Links are inline by default */
+	display: block;
+	text-align: left;
+	font-size: 15px;
+	transition: .3s background-color;
+	text-shadow: none;
+}
+
+/* 
+	Change the background color of links that are inside the dropdown content on
+	hover.
+*/   
+.dropdown-content a:hover {
+	background-color: #007f7f;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.arrow {
+	font-size: 11px;
+}
+
+/* Highlight current navigation link (Home, HTML, CSS, ...) */
+nav #current {
+	color: white;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.green-box {
+  line-height: 1.5;
+  border: solid green;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.red-box {
+  line-height: 20px;
+  border: solid red;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.website-logo {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.serif p {
+	font-family: Arvo, Times, "Times New Roman"; 
+	font-size: 30px;
+	background-color: yellow;
+}
+
+.sans-serif p {
+	font-family: Lato, Helvetica, Arial;
+	font-size: 30px;
+	background-color: yellow;
+}
+
+.monospace p {
+	font-family: 'Roboto Mono', Courier, "Courier New";
+	font-size: 30px;
+	background-color: yellow;
+}
+
+/*------------------------------- Form example -------------------------------*/
+
+.myform fieldset {
+	/* Form width */
+	width: 400px;
+	/* Outline of the form */
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.myform label {
+	/* set to inline-block in order to set a width */
+	display: inline-block;
+	/* same size for all labels */
+	width: 90px;
+	/* align label to the right */
+	text-align: right;
+}
+
+.myform input, .myform textarea {
+	/* 
+		By default <input> fields use a sans-serif font and <textarea> fields use a 
+		monospace font. Make sure that all text fields use the same font.
+	*/
+	font-family: Lato, Helvetica, Arial;
+	/* Make sure all text fields are the same size */
+	width: 300px;
+	/* 
+		The width & height properties includes content, padding and border, but not 
+		the margin.
+	*/
+	box-sizing: border-box; 
+	/* Set the same border style as the outline of the form */
+	border: 1px solid #ccc;
+}
+
+.myform textarea {
+	/* 
+		Align the top of the textarea with the top of the tallest element on the 
+		line(i.e. label).
+	*/
+	vertical-align: top;
+	height: 100px;
+}
+
+/* Add space between inputs */
+.myform fieldset div + div {
+	margin-top: 20px;
+}
+
+/* Select and style input field when it get focus */
+.myform input:focus, .myform textarea:focus {
+	background-color: #ccc;
+}
+
+/* Align button with text fields */
+.button {
+	/* Same size as the width of the labels */
+	padding-left: 90px;
+	/* Represents the space between a label and the text field. */
+	margin-left: .5em;
+}
+
+/*-------------------------- Border radius examples --------------------------*/
+
+.border-radius-1 {
+	height: 100px;
+	width: 200px;
+	border: 5px solid red;
+	border-radius: 25px;
+}
+
+.border-radius-2 {
+	height: 100px;
+	width: 200px;
+	border: 5px solid red;
+	border-radius: 25px 50px;
+}
+
+.border-radius-3 {
+	height: 100px;
+	width: 200px;
+	border: 5px solid red;
+	border-radius: 20px 40px 60px;
+}
+
+.border-radius-4 {
+	height: 100px;
+	width: 200px;
+	border: 5px solid red;
+	border-radius: 10px 20px 30px 40px;
+}
+
+.border-radius-5 {
+	height: 100px;
+	width: 200px;
+	border: 5px solid red;
+	border-radius: 30px/60px;
+}
+
+.border-radius-6 {
+	height: 100px;
+	width: 200px;
+	border: 5px solid red;
+	border-radius: 60px/30px;
+}
+
+.border-radius-7 {
+	height: 100px;
+	width: 200px;
+	border: 5px solid red;
+	border-radius: 50%;
+}
+
+.border-radius-8 {
+	height: 200px;
+	width: 200px;
+	border: 5px solid red;
+	border-radius: 50%;
+}
+
+/*--------------------------- Box shadow examples ----------------------------*/
+
+.box-shadow-1, .box-shadow-2, .box-shadow-3, .box-shadow-4, .box-shadow-5, 
+.box-shadow-6, .box-shadow-7, .box-shadow-8, .box-shadow-9, .box-shadow-10 {
+	border: 1px solid black;
+	width: 400px;
+	height: 50px;
+}
+
+.box-shadow-1 {
+	box-shadow: 5px 10px #000;
+}
+
+.box-shadow-2 {
+	box-shadow: -5px 10px #000;
+}
+
+.box-shadow-3 {
+	box-shadow: 5px -10px #000;
+}
+
+.box-shadow-4 {
+	box-shadow: -5px -10px #000;
+}
+
+.box-shadow-5 {
+	box-shadow: 5px 10px 5px #000;
+}
+
+.box-shadow-6 {
+	box-shadow: 5px 10px 5px 5px #000;
+}
+
+.box-shadow-7 {
+	box-shadow: 5px 10px 5px -5px #000;
+}
+
+.box-shadow-8 {
+	box-shadow: 5px 10px 0 5px #000;
+}
+
+.box-shadow-9 {
+	box-shadow: 
+		inset 5px 10px 5px gray,
+		5px 10px 5px black;
+}
+
+.box-shadow-10 {
+	box-shadow: 
+		0 0 10px black,
+		/* x: right, y: down */
+		10px 5px yellow,
+		/* x: left, y: down */
+		-10px 5px red,
+		/* x: left, y: up */
+		-10px -5px blue,
+		/* x: right, y: up */
+		10px -5px lime;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.footer-nav a {
+	font-style: normal;
+}
+
+.copyright {
+	font-size: 12px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/*--------------------------- Text shadow examples ---------------------------*/
+
+.text-shadow-1 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow: 5px 5px #a0a0a0;
+}
+
+.text-shadow-2 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow: -5px 5px #a0a0a0;
+}
+
+.text-shadow-3 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow: 5px -5px #a0a0a0;
+}
+
+.text-shadow-4 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow: -5px -5px #a0a0a0;
+}
+
+.text-shadow-5 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow: 0 5px #a0a0a0;
+}
+
+.text-shadow-6 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow: 0 -5px #a0a0a0;
+}
+
+.text-shadow-7 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow: 5px 0 #a0a0a0;
+}
+
+.text-shadow-8 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow: -5px 0 #a0a0a0;
+}
+
+.text-shadow-9 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow: -5px 0 10px #a0a0a0;
+  	
+}
+
+.text-shadow-10 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: black;
+	text-shadow:
+		-5px 5px #505050,
+   	-10px 10px #707070,
+   	-15px 15px #909090;
+}
+
+.text-shadow-11 {
+	background: #0e8dbc;
+}
+
+.text-shadow-11 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: white;
+	text-shadow:	
+		/* Shades of gray (make the character 3D) */
+		0 1px 0 #d0d0d0,
+		0 2px 0 #c0c0c0,
+		0 3px 0 #b0b0b0,
+		0 4px 0 #a0a0a0,
+		0 5px 0 #909090,
+		/* Black shadows (character shadows) */
+		0 6px 1px rgba(0,0,0,.1),
+		0 5px  10px  rgba(0,0,0,.25),
+		0 10px 10px rgba(0,0,0,.2),
+		0 20px 20px rgba(0,0,0,.15);
+}
+
+.text-shadow-12 {
+	background: #404040;
+}
+
+.text-shadow-12 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: rgba(0,0,0,.3);
+	text-shadow: 2px 2px 2px rgba(255,255,255,.1);
+}
+
+.text-shadow-13 {
+	background: aqua;
+}
+
+.text-shadow-13 h1 {
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Lato, Helvetica, Arial;
+	color: white;
+	text-shadow:
+		-5px 5px #00eeee,
+   	-10px 10px #00dddd,
+   	-15px 15px #00cccc;
+}
+
+/*--------------------------- Box sizing examples ----------------------------*/
+
+.content-box {
+	border: 10px solid black;
+	margin: 20px;
+	padding: 30px; 
+  width: 200px;
+  height: 100px;
+}
+
+.padding-box {
+	border: 10px solid black;
+	margin: 20px;
+	padding: 30px; 
+	box-sizing: padding-box;
+	width: 200px;
+	height: 100px;
+}
+
+.border-box {
+	border: 10px solid black;
+	margin: 20px;
+	padding: 30px; 
+	box-sizing: border-box;
+	width: 200px;
+	height: 100px;
+}
+
+/*----------------------- Multiple backgrounds example -----------------------*/
+
+/*
+.mult-bg-1 {
+	border: 5px solid black;
+	height: 300px;
+	background-image: 
+	 	url(images/avatar.png), 
+	 	url(images/lightning.svg), 
+	 	linear-gradient(to left, #dc2424, #4a569d);
+	background-position: 50% 20%, center, center;
+	background-size: 150px, contain, contain;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+}
+*/
+.mult-bg-1 {
+	border: 5px solid black;
+	height: 300px;
+	background:
+		url(images/avatar.png) 50% 20%/150px no-repeat,
+		url(images/lightning.svg) center/contain no-repeat,
+		linear-gradient(to left, #dc2424, #4a569d) center/contain no-repeat;
+}
+
+/*----------------------------- Opacity examples -----------------------------*/
+
+.opacity-1 img {
+	opacity: 0.1;
+}
+
+.opacity-2 img {
+	opacity: 0.5;
+}
+
+.opacity-3 img {
+	opacity: 1.0;
+}
+
+.opacity-4 {
+	color: white;
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+}
+
+.opacity-4 .first, .opacity-4 .second, .opacity-4 .third, .opacity-4 .fourth, 
+.opacity-4 .fifth {
+	background-color: #007f7f;
+	padding: 20px;
+}
+
+.opacity-4 .first {
+	opacity: 0.2;
+}
+
+.opacity-4 .second {
+	opacity: 0.4;
+}
+
+.opacity-4 .third {
+	opacity: 0.6;
+}
+
+.opacity-4 .fourth {
+	opacity: 0.8;
+}
+
+.opacity-4 .fifth {
+	opacity: 1.0;
+}
+
+/*------------------------- Linear gradient examples -------------------------*/
+
+.linear-gradient {
+	color: white;
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+}
+
+.note {
+	color: #8c8c90;
+	margin-top: 5px;
+}
+
+.linear-gradient .first, .linear-gradient .second, .linear-gradient .third, 
+.linear-gradient .fourth, .linear-gradient .fifth, .linear-gradient .sixth,
+.linear-gradient .seventh, .linear-gradient .eighth {
+	border: 1px solid black;
+	height: 200px;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+.linear-gradient .first {
+	background: linear-gradient(to right, darkblue, darkmagenta);
+}
+
+.linear-gradient .second {
+	background: linear-gradient(to top, palegreen, crimson);
+}
+
+.linear-gradient .third {
+	background: linear-gradient(to bottom left, orangered, slateblue);
+}
+
+.linear-gradient .fourth {
+	background: linear-gradient(180deg, lightcoral, cyan);
+}
+
+.linear-gradient .fifth {
+	background: linear-gradient(to left, lightseagreen, black 80%, mediumorchid);
+}
+
+.linear-gradient .sixth {
+	background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.linear-gradient .seventh {
+	background: linear-gradient(to right, black, transparent);
+}
+
+.linear-gradient .eighth {
+	background: 
+		linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), 
+		url("images/wallpaper.jpg") top left/cover no-repeat;
+}
+
+/*------------------------- Radial gradient examples -------------------------*/
+
+.radial-gradient {
+	color: black;
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+}
+
+.radial-gradient .first, .radial-gradient .second, .radial-gradient .third, 
+.radial-gradient .fourth, .radial-gradient .fifth, .radial-gradient .sixth, 
+.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth, 
+.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {
+	border: 1px solid black;
+	height: 200px;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth, 
+.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {
+	border: 1px solid black;
+	width: 200px;
+}
+
+.radial-gradient .first {
+	background: radial-gradient(circle, red, yellow, green);
+}
+
+.radial-gradient .second {
+	background: radial-gradient(red, yellow, green);
+}
+
+.radial-gradient .third {
+	background: radial-gradient(blue 5%, cyan 30%, magenta 60%);
+}
+
+.radial-gradient .fourth {
+	background: radial-gradient(blue 15%, cyan 30%, magenta 60%);
+}
+
+.radial-gradient .fifth {
+	background: radial-gradient(blue 5%, cyan 40%, magenta 60%);
+}
+
+.radial-gradient .sixth {
+	background: radial-gradient(blue 5%, cyan 30%, magenta 70%);
+}
+
+.radial-gradient .seventh {
+	background: radial-gradient(circle closest-side at 30% 40%, black 5%, yellow 30%, red 70%);
+}
+
+.radial-gradient .eighth {
+	background: radial-gradient(circle closest-corner at 30% 40%, black 5%, yellow 30%, red 70%);
+}
+
+.radial-gradient .ninth {
+	background: radial-gradient(circle farthest-side at 30% 40%, black 5%, yellow 30%, red 70%);
+}
+
+.radial-gradient .tenth {
+	background: radial-gradient(circle farthest-corner at 30% 40%, black 5%, yellow 30%, red 70%);
+}
+
+.radial-gradient .eleventh {
+	background: radial-gradient(circle at top left, blue, greenyellow, tomato);
+}
+
+.radial-gradient .twelfth {
+	background: radial-gradient(circle at 50% 0%, blue, greenyellow, tomato);
+}
+
+/*------------------------------- Table example ------------------------------*/
+
+/* Spacing & layout styling */
+.table-1 {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+
+.table-1 thead th:nth-child(1) {
+	width: 25%;
+}
+
+.table-1 thead th:nth-child(2) {
+	width: 25%;
+}
+
+.table-1 thead th:nth-child(3) {
+	width: 25%;
+}
+
+.table-1 thead th:nth-child(4) {
+	width: 25%;
+}
+
+.table-1 th, .table-1 td {
+	padding: 10px;
+}
+
+/* Font styling & text alignment */
+.table-1 {
+	color: black;
+	font-size: 15px;
+	font-weight: 100;
+	font-family: Lato, Helvetica, Arial;
+	margin-top: 20px;
+}
+
+.table-1 thead {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arvo, Times, "Times New Roman"; 
+	letter-spacing: 2px;
+}
+
+.table-1 tfoot th {
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arvo, Times, "Times New Roman"; 
+	letter-spacing: 2px;
+}
+
+.table-1 td {
+	letter-spacing: 1px;
+}
+
+.table-1 tbody td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.table-1 tfoot th {
+	text-align: center;
+}
+
+.table-1 tfoot td {
+	text-align: center;
+}
+
+/* Borders */
+.table-1 thead th {
+	border: 2px solid black;
+}
+
+.table-1 tbody td {
+	border: 2px solid black;
+}
+
+.table-1 tfoot th {
+	border: 2px solid black;
+}
+
+.table-1 tfoot td {
+	border: 2px solid black;
+}
+
+/* Backgrounds & text shadows */
+.table-1 thead {
+	background: linear-gradient(to bottom, royalblue, steelblue);
+	text-shadow: 1px 1px 1px black;
+}
+
+.table-1 tbody tr:nth-child(odd) {
+	background-color: gainsboro;
+}
+
+.table-1 tbody tr:nth-child(even) {
+	background-color: gray;
+}
+
+.table-1 tfoot tr:nth-child(even) {
+	background-color: red;
+}
+
+.table-1 tfoot tr:nth-child(odd) {
+	background-color: green;
+}
+
+/* Caption styling */
+.table-1 caption {
+	font-family: Arvo, Times, "Times New Roman"; 
+	font-weight: bold;
+	font-size: 12px;
+	caption-side: bottom;
+	letter-spacing: 1px;
+	text-align: left;
+	margin: 10px;
+}
+
+.table-1 caption span {
+	font-weight: normal;
+	font-style: italic;
+}
+
+/*------------------------- Attribute selector example -----------------------*/
+[taxonomy-class] {
+	color: blue;
+}
+
+[taxonomy-species="redknee"] {
+	background-color: green;
+}
+
+[taxonomy-species~="man-killer"] {
+	background-color: red;
+}
+
+/*-------------------------- ID selectors example ----------------------------*/
+#highlight {
+	background-color: yellow;
+}
+
+/*-------------------------- Pseudo-class example ----------------------------*/
+/* Inherit any inheritable values from the parent. */
+#hover {
+	all: unset;	
+}
+
+#hover:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+#first-child li:first-child {
+  color: red;
+}
+
+/*-------------------------- Pseudo-element example --------------------------*/
+#first-letter::first-letter {
+	font-family: Arvo, Times, "Times New Roman"; 
+  font-size: 30px;
+  color: red;
+}
+
+#first-line::first-line {
+  background-color: yellow;
+}
+
+#product::after {
+  content: " \220F";
+}
+
+#sum::before {
+  content: "\2211";
+}
+
+.ropbtn::before {
+	content: "|";
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.5);
+	position: relative;
+	right: 15px;
+}
+
+/* Inherit any inheritable values from the parent. */
+#nav-delimiter, #nav-delimiter button {
+	all: unset;	
+}
+
+#nav-delimiter button {
+	padding: 14px 16px;
+}
+
+/* 
+	Select all <button> elements except the first and add a "|" delimiter before 
+	the content of the selected elements.
+*/
+#nav-delimiter button:not(:first-child)::before {
+	content: "|";
+	position: relative;
+	left: -15px;
+}
+
+/*------------------- Adjacent sibling combinator example --------------------*/
+#adj-sibling-1 + li {
+  color: red;
+}
+
+#adj-sibling-2 + p {
+  color: red;
+}
+
+/*------------------------- Child combinator example -------------------------*/
+#child > p {
+  color: red;
+}
+
+/*-------------------- General Sibling combinator example --------------------*/
+#gen-sibling ~ p {
+  color: red;
+}
+
+
+
+
+
+
+
+#float-1 {
+	border: 5px solid green;
+}
+#float-2 {
+	border: 5px solid green;
+}
+
+#float-image-1 {
+	float: left;	
+}
