@@ -1242,19 +1242,49 @@ nav #current {
   color: red;
 }
 
-
-
-
-
-
-
-#float-1 {
-	border: 5px solid green;
-}
-#float-2 {
+/*------------------------------ Float examples ------------------------------*/
+#float-1, #float-2 {
+	padding: 0;
+	margin: 0;
+	height: 200px;
 	border: 5px solid green;
 }
 
-#float-image-1 {
-	float: left;	
+#float-1 p, #float-2 p {
+	padding: 0;
+	margin: 0;
+}
+
+#float-2 img {
+	float: left;
+}
+
+#float-3 {
+	padding: 0;
+	margin: 0;
+	height: 150px;
+	border: 5px solid green;
+	list-style-type: none;
+}
+
+#float-4 {
+	padding: 0;
+	margin: 0;
+	width: 100px;
+	height: 150px;
+	border: 5px solid green;
+	list-style-type: none;
+}
+
+#float-3 li, #float-4 li, #float-5 li {
+  float: left;
+}
+
+#float-5 {
+	padding: 0;
+	margin: 0;
+	width: 100px;
+	height: 150px;
+	border: 5px solid green;
+	list-style-type: none;
 }

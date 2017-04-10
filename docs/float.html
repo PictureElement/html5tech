@@ -96,60 +96,206 @@
           <h3>Summary</h3>
           <p>
             With <i>float</i> you can place block elements along the left or 
-            right side of their container and make inline elements(and text) to 
+            right side of their container and make inline elements (and text) to 
             wrap around it.  
           </p>  
-          <h4>Example</h4>
-          <h5>HTML</h5>
-          <code>
-            &lt;div><br>
-            &nbsp;&nbsp;&lt;p>Paragraph 1&lt;/p><br>
-            &nbsp;&nbsp;&lt;p>Paragraph 2&lt;/p><br>
-            &nbsp;&nbsp;&lt;p>Paragraph 3&lt;/p><br>
-            &nbsp;&nbsp;&lt;img src="images/avatar.png"alt="avatar" width="100"><br>
-            &nbsp;&nbsp;&lt;p>Paragraph 4&lt;/p><br>
-            &nbsp;&nbsp;&lt;p>Paragraph 5&lt;/p><br>
-            &nbsp;&nbsp;&lt;p>Paragraph 6&lt;/p><br>
-            &lt;/div>
-          </code>
-          <p>a)</p>
-          <code>
-            <h5>CSS</h5>
-            div {<br>
-            &nbsp;&nbsp;border: 5px solid green;<br>
-            }
-          </code>
-          <h5>Result</h5>
-          <div id="float-1">
-            <p>Paragraph 1</p>
-            <p>Paragraph 2</p>
-            <p>Paragraph 3</p>
-            <img src="images/avatar.png"alt="avatar" width="100">
-            <p>Paragraph 4</p>
-            <p>Paragraph 5</p>
-            <p>Paragraph 6</p>
-          </div>
-          <p>b)</p>
-          <h5>CSS</h5>
-          <code>
-            div {<br>
-            &nbsp;&nbsp;border: 5px solid green;<br>
-            }<br>
-            <br>
-            img {<br>
-            &nbsp;&nbsp;float: left;<br>
-            }
-          </code>
-          <h5>Result</h5>
-          <div id="float-2">
-            <p>Paragraph 1</p>
-            <p>Paragraph 2</p>
-            <p>Paragraph 3</p>
-            <img id="float-image-1" src="images/avatar.png"alt="avatar" width="100">
-            <p>Paragraph 4</p>
-            <p>Paragraph 5</p>
-            <p>Paragraph 6</p>
-          </div>
+          <h4>Examples</h4>
+          <ol>
+            <li>
+              <p>
+                The image is float to the left and the rest of the content is 
+                wrap around it.
+              </p>
+              <h5>HTML</h5>
+              <code>
+                &lt;div><br>
+                &nbsp;&nbsp;&lt;p>Paragraph 1&lt;/p><br>
+                &nbsp;&nbsp;&lt;p>Paragraph 2&lt;/p><br>
+                &nbsp;&nbsp;&lt;p>Paragraph 3&lt;/p><br>
+                &nbsp;&nbsp;&lt;img src="images/avatar.png"alt="avatar" width="50"><br>
+                &nbsp;&nbsp;&lt;p>Paragraph 4&lt;/p><br>
+                &nbsp;&nbsp;&lt;p>Paragraph 5&lt;/p><br>
+                &nbsp;&nbsp;&lt;p>Paragraph 6&lt;/p><br>
+                &lt;/div>
+              </code>
+              <ul>
+                <li>
+                  <h5>CSS</h5>
+                  <code>
+                    div {<br>
+                    &nbsp;&nbsp;border: 5px solid green;<br>
+                    &nbsp;&nbsp;height: 200px;<br>
+                    }
+                  </code>
+                  <h5>Result</h5>
+                  <div id="float-1">
+                    <p>Paragraph 1</p>
+                    <p>Paragraph 2</p>
+                    <p>Paragraph 3</p>
+                    <img src="images/avatar.png"alt="avatar" width="50">
+                    <p>Paragraph 4</p>
+                    <p>Paragraph 5</p>
+                    <p>Paragraph 6</p>
+                  </div>
+                </li>
+                <li>
+                  <h5>CSS</h5>
+                  <code>
+                    div {<br>
+                    &nbsp;&nbsp;border: 5px solid green;<br>
+                    &nbsp;&nbsp;height: 200px;<br>
+                    }<br>
+                    <br>
+                    img {<br>
+                    &nbsp;&nbsp;float: left;<br>
+                    }
+                  </code>
+                  <h5>Result</h5>
+                  <div id="float-2">
+                    <p>Paragraph 1</p>
+                    <p>Paragraph 2</p>
+                    <p>Paragraph 3</p>
+                    <img src="images/avatar.png"alt="avatar" width="50">
+                    <p>Paragraph 4</p>
+                    <p>Paragraph 5</p>
+                    <p>Paragraph 6</p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>
+                Floated elements (in this case &lt;li> elements) stack up to 
+                their parent's edge. If the parent's width becomes too small to 
+                contain all of the list items, the third list item is going to 
+                break down to a new line.
+              </p>
+              <h5>HTML</h5>
+              <code>
+                &lt;ul><br>
+                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png"alt="avatar" width="50">&lt;/li><br>
+                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png"alt="avatar" width="50">&lt;/li><br>
+                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png"alt="avatar" width="50">&lt;/li><br>
+                &lt;/ul>
+              </code>
+              <ul>
+                <li>
+                  <h5>CSS</h5>
+                  <code>
+                    ul {<br>
+                    &nbsp;&nbsp;height: 150px;<br>
+                    &nbsp;&nbsp;border: 5px solid green;<br>
+                    &nbsp;&nbsp;list-style-type: none;<br>
+                    }<br>
+                    <br>
+                    li {<br>
+                    &nbsp;&nbsp;float: left;<br>
+                    }
+                  </code>
+                  <h5>Result</h5>
+                  <ul id="float-3">
+                    <li><img src="images/avatar.png"alt="avatar" width="50"></li>
+                    <li><img src="images/avatar.png"alt="avatar" width="50"></li>
+                    <li><img src="images/avatar.png"alt="avatar" width="50"></li>
+                  </ul>
+                </li>
+                <li>
+                  <h5>CSS</h5>
+                  <code>
+                    ul {<br>
+                    &nbsp;&nbsp;width: 100px;<br>
+                    &nbsp;&nbsp;height: 150px;<br>
+                    &nbsp;&nbsp;border: 5px solid green;<br>
+                    &nbsp;&nbsp;list-style-type: none;<br>
+                    }<br>
+                    <br>
+                    li {<br>
+                    &nbsp;&nbsp;float: left;<br>
+                    }
+                  </code>
+                  <h5>Result</h5>
+                  <ul id="float-4">
+                    <li><img src="images/avatar.png"alt="avatar" width="50"></li>
+                    <li><img src="images/avatar.png"alt="avatar" width="50"></li>
+                    <li><img src="images/avatar.png"alt="avatar" width="50"></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>
+                Take care with elements that have different heights - the first 
+                available edge isn't always exactly below.
+              </p>
+              <h5>HTML</h5>
+              <code>
+                &lt;ul><br>
+                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png"alt="avatar" width="50">&lt;/li><br>
+                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png"alt="avatar" width="50">&lt;/li><br>
+                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png"alt="avatar" width="90">&lt;/li><br>
+                &lt;/ul>
+              </code>
+              <h5>CSS</h5>
+              <code>
+                ul {<br>
+                &nbsp;&nbsp;width: 100px;<br>
+                &nbsp;&nbsp;height: 150px;<br>
+                &nbsp;&nbsp;border: 5px solid green;<br>
+                &nbsp;&nbsp;list-style-type: none;<br>
+                }<br>
+                <br>
+                li {<br>
+                &nbsp;&nbsp;float: left;<br>
+                }
+              </code>
+              <h5>Result</h5>
+              <ul id="float-5">
+                <li><img src="images/avatar.png"alt="avatar" width="50"></li>
+                <li><img src="images/avatar.png"alt="avatar" width="50"></li>
+                <li><img src="images/avatar.png"alt="avatar" width="90"></li>
+              </ul>
+            </li>
+          </ol>
         </section>
-       
-
+      </article>
+    </main>
+    <footer>
+      <div class="follow-us">
+        <a href="">
+          <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
+        </a>
+        <a href="">
+          <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
+        </a>
+        <a href="">
+          <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
+        </a>
+        <a href="">
+          <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
+        </a>
+        <a href="">
+          <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
+        </a>
+      </div>
+      <div class="footer-nav">
+        <a href="credits.html">Credits</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="advertise.html">Advertise</a>
+      </div>
+      <div class="copyright">
+        &copy; 2017 <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+      </div>
+      <div class="page-conformity">
+        <img 
+          src="images/valid-css.svg"
+          alt="valid CSS logo"
+          width="100">
+        <img 
+          src="images/GPLv3-logo.svg"
+          alt="GPLv3 license logo"
+          width="100">
+      </div>
+    </footer>
+  </body>
+</html>
