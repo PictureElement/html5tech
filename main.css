@@ -1259,7 +1259,8 @@ nav #current {
 	border: 5px solid green;
 }
 
-#float-1 p, #float-2 p {
+#float-1 p, #float-2 p, #float-7 p, #float-8 p, #float-9 p, #float-10 p, 
+#float-11 p, #float-12 p, #group p {
 	padding: 0;
 	margin: 0;
 }
@@ -1325,10 +1326,35 @@ nav #current {
 	float: right;
 }
 
-#float-8 p {
+#float-8 p, #float-11 p {
 		clear: left;
 }
 
 #float-9 p {
 		clear: right;
+}
+
+#float-10, #float-11, #float-12, #group {
+	padding: 0;
+	margin: 0;
+	border: 5px solid green;
+}
+
+#float-image-7, #float-image-8, #float-image-9, #float-image-10 {
+	float: left;
+}
+
+#clear-1 {
+	border: 5px solid red;
+	clear: both;
+}
+
+.target {
+	margin-top: 80px;
+}
+
+#group::after {
+	content: "[SPACE]";
+	display: table;
+	clear: both;
 }
