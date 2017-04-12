@@ -94,7 +94,7 @@ h5 {
 	margin-bottom: 5px;
 }
 
-p {
+p, #hover {
 	font-size: 15px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
@@ -654,7 +654,8 @@ nav #current {
 
 /*--------------------------- Text shadow examples ---------------------------*/
 
-.text-shadow-1 h1 {
+.text-shadow-1 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -662,7 +663,8 @@ nav #current {
 	text-shadow: 5px 5px #a0a0a0;
 }
 
-.text-shadow-2 h1 {
+.text-shadow-2 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -670,7 +672,8 @@ nav #current {
 	text-shadow: -5px 5px #a0a0a0;
 }
 
-.text-shadow-3 h1 {
+.text-shadow-3 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -678,7 +681,8 @@ nav #current {
 	text-shadow: 5px -5px #a0a0a0;
 }
 
-.text-shadow-4 h1 {
+.text-shadow-4 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -686,7 +690,8 @@ nav #current {
 	text-shadow: -5px -5px #a0a0a0;
 }
 
-.text-shadow-5 h1 {
+.text-shadow-5 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -694,7 +699,8 @@ nav #current {
 	text-shadow: 0 5px #a0a0a0;
 }
 
-.text-shadow-6 h1 {
+.text-shadow-6 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -702,7 +708,8 @@ nav #current {
 	text-shadow: 0 -5px #a0a0a0;
 }
 
-.text-shadow-7 h1 {
+.text-shadow-7 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -710,7 +717,8 @@ nav #current {
 	text-shadow: 5px 0 #a0a0a0;
 }
 
-.text-shadow-8 h1 {
+.text-shadow-8 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -718,7 +726,8 @@ nav #current {
 	text-shadow: -5px 0 #a0a0a0;
 }
 
-.text-shadow-9 h1 {
+.text-shadow-9 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -727,7 +736,8 @@ nav #current {
   	
 }
 
-.text-shadow-10 h1 {
+.text-shadow-10 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -742,7 +752,8 @@ nav #current {
 	background: #0e8dbc;
 }
 
-.text-shadow-11 h1 {
+.text-shadow-11 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -765,7 +776,8 @@ nav #current {
 	background: #404040;
 }
 
-.text-shadow-12 h1 {
+.text-shadow-12 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -777,7 +789,8 @@ nav #current {
 	background: aqua;
 }
 
-.text-shadow-13 h1 {
+.text-shadow-13 p {
+	margin: 0;
 	font-size: 100px;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
@@ -802,7 +815,11 @@ nav #current {
 	border: 10px solid black;
 	margin: 20px;
 	padding: 30px; 
-	box-sizing: padding-box;
+	/* 
+	 padding-box has not been standardized. This depricated API should no longer 
+	 be used. 
+	*/
+	/*box-sizing: padding-box;*/
 	width: 200px;
 	height: 100px;
 }
@@ -1145,15 +1162,15 @@ nav #current {
 }
 
 /*------------------------- Attribute selector example -----------------------*/
-[taxonomy-class] {
+[data-taxonomy-class] {
 	color: blue;
 }
 
-[taxonomy-species="redknee"] {
+[data-taxonomy-species="redknee"] {
 	background-color: green;
 }
 
-[taxonomy-species~="man-killer"] {
+[data-taxonomy-species~="man-killer"] {
 	background-color: red;
 }
 
@@ -1163,11 +1180,6 @@ nav #current {
 }
 
 /*-------------------------- Pseudo-class example ----------------------------*/
-/* Inherit any inheritable values from the parent. */
-#hover {
-	all: unset;	
-}
-
 #hover:hover {
 	text-decoration: underline;
 	color: red;
@@ -1204,7 +1216,7 @@ nav #current {
 	right: 15px;
 }
 
-/* Inherit any inheritable values from the parent. */
+/*Inherit any inheritable values from the parent. */
 #nav-delimiter, #nav-delimiter button {
 	all: unset;	
 }
@@ -1259,7 +1271,8 @@ nav #current {
 	border: 5px solid green;
 }
 
-#float-1 p, #float-2 p {
+#float-1 p, #float-2 p, #float-7 p, #float-8 p, #float-9 p, #float-10 p, 
+#float-11 p, #float-12 p, #group p {
 	padding: 0;
 	margin: 0;
 }
@@ -1325,10 +1338,35 @@ nav #current {
 	float: right;
 }
 
-#float-8 p {
+#float-8 p, #float-11 p {
 		clear: left;
 }
 
 #float-9 p {
 		clear: right;
+}
+
+#float-10, #float-11, #float-12, #group {
+	padding: 0;
+	margin: 0;
+	border: 5px solid green;
+}
+
+#float-image-7, #float-image-8, #float-image-9, #float-image-10 {
+	float: left;
+}
+
+#clear-1 {
+	border: 5px solid red;
+	clear: both;
+}
+
+.target {
+	margin-top: 80px;
+}
+
+#group::after {
+	content: "[SPACE]";
+	display: table;
+	clear: both;
 }
