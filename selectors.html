@@ -119,43 +119,54 @@
           <h5>HTML</h5>
           <code>
 	          &lt;ul><br>
-	          &nbsp;&nbsp;&lt;li taxonomy-class>Arachnida&lt;/li><br>
+	          &nbsp;&nbsp;&lt;li data-taxonomy-class>Arachnida&lt;/li><br>
 	          &nbsp;&nbsp;&lt;li>Araneae&lt;/li><br>
 	          &nbsp;&nbsp;&lt;li>Scorpiones&lt;/li><br>
 	          &nbsp;&nbsp;&lt;li>Theraphosidae&lt;/li><br>
 	          &nbsp;&nbsp;&lt;li>Buthidae&lt;/li><br>
 						&nbsp;&nbsp;&lt;li>Brachypelma&lt;/li><br>
 						&nbsp;&nbsp;&lt;li>Androctonus&lt;/li><br>
-						&nbsp;&nbsp;&lt;li taxonomy-species="Mexican terrestrial redknee">B. smithi&lt;/li><br>
-	          &nbsp;&nbsp;&lt;li taxonomy-species="Fat-tailed potent man-killer">A. australis&lt;/li><br>
+						&nbsp;&nbsp;&lt;li data-taxonomy-species="Mexican terrestrial redknee">B. smithi&lt;/li><br>
+	          &nbsp;&nbsp;&lt;li data-taxonomy-species="Fat-tailed potent man-killer">A. australis&lt;/li><br>
 	          &lt;/ul>
+	        </code>
+	        <p>
+	        	<b>Note:</b> There is a defined set of attributes for each HTML 
+	        	element. You may choose to omit some but you cannot choose to add 
+	        	further attributes beyond those defined, unless you consider using a 
+	        	HTML5 custom data attribute:
+	        </p>
+	        <code>
+	        	&lt;<i>element</i> <b>data-</b><i>attributename</i>="<i>value</i>"><br>
+	        	&nbsp;&nbsp;...<br>
+	        	&lt;/<i>element</i>>
 	        </code>
 	        <h5>CSS</h5>
 	        <code>
-	        	[taxonomy-class] {<br>
+	        	[data-taxonomy-class] {<br>
 						&nbsp;&nbsp;color: blue;<br>
 						}<br>
 						<br>
-						[taxonomy-species="redknee"] {<br>
+						[data-taxonomy-species="redknee"] {<br>
 						&nbsp;&nbsp;background-color: green;<br>
 						}<br>
 						<br>
-						[taxonomy-species~="man-killer"] {<br>
+						[data-taxonomy-species~="man-killer"] {<br>
 						&nbsp;&nbsp;background-color: red;<br>
 						}
 					</code>
 	        <h5>Result</h5>
 	        <div class="result-wrapper">
 		        <ul>
-		        	<li taxonomy-class>Arachnida</li>
+		        	<li data-taxonomy-class>Arachnida</li>
 		        	<li>Araneae</li>
 		        	<li>Scorpiones</li>
 		       		<li>Theraphosidae</li>
 		   				<li>Buthidae</li>
 							<li>Brachypelma</li>
 							<li>Androctonus</li>
-							<li taxonomy-species="redknee">B. smithi</li>
-		          <li taxonomy-species="Fat-tailed potent man-killer">A. australis</li>
+							<li data-taxonomy-species="redknee">B. smithi</li>
+		          <li data-taxonomy-species="Fat-tailed potent man-killer">A. australis</li>
 		        </ul>
 		      </div>
         </section>
