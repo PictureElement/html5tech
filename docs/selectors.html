@@ -747,6 +747,192 @@
           	</li>
           </ol>
         </section>
+        <section>
+          <h3>Inheritance</h3>
+          <h4>Description</h4>
+          <p>
+          	Some nested elements inherit parent styles by default others aren't. 
+          	However, inheritance is controllable. Which properties are inherited 
+          	by default and which aren't is down to common sense and to be sure 
+          	you can check the 
+          	<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">
+          	CSS reference</a>.
+          </p>
+          <p>Inherited properties:</p>
+          <ul>
+          	<li><i>color</i></li>
+          	<li><i>font-family</i></li>
+          	<li>font-related properties</li>
+          	<li><i>text-align</i></li>
+          	<li><i>text-shadow</i></li>
+          </ul>
+          <p>Uninherited properties:</p>
+          <ul>
+          	<li><i>background</i></li>
+          	<li>background-related properties</li>
+          	<li><i>border</i></li>
+          	<li>border-related properties</li>
+          	<li><i>box-sizing</i></li>
+          	<li><i>box-shadow</i></li>
+          	<li><i>height</i></li>
+          	<li><i>width</i></li>
+          	<li><i>margin</i></li>
+          	<li><i>padding</i></li>
+          	<li><i>opacity</i></li>
+          </ul>
+          <h4>Examples</h4>
+          <ol>
+          	<li>
+		          <h5>HTML</h5>
+		          <code>
+		          	&lt;div><br>
+		          	&nbsp;&nbsp;&lt;p><br>
+		          	&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur 
+		          	adipiscing elit, sed do eiusmod tempor incididunt<br> 
+		          	&nbsp;&nbsp;&nbsp;&nbsp;ut labore et dolore magna aliqua.<br>
+		          	&nbsp;&nbsp;&lt;/p><br>
+		          	&lt;/div>
+		          </code>
+		          <p>
+		          	a) The &lt;p> element inherits the <i>text-shadow</i> property 
+		          	from its parent (&lt;div> element). This is the default 
+		          	behaviour:
+		          </p>
+		          <h5>CSS</h5>
+		          <code>
+		          	div {<br>
+		          	&nbsp;&nbsp;text-shadow: 0 1px 1px black;<br>
+		          	}
+		          </code>
+		          <h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div id="inheritance-1">
+			          	<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+										do eiusmod tempor incididunt ut labore et dolore magna 
+										aliqua.
+									 </p>
+								</div>
+							</div>
+							<p>
+								b) The &lt;p> element inherits the <i>text shadow</i> property 
+								defined in the browser's default style sheet:
+		          </p>
+		          <h5>CSS</h5>
+		          <code>
+		          	div {<br>
+		          	&nbsp;&nbsp;text-shadow: 0 1px 1px black;<br>
+		          	}<br>
+		          	<br>
+		          	<span style="color: blue;">
+		          	/*<br>
+		          	&nbsp;&nbsp;The <i>text-shadow</i> property is inherited by 
+		          	default. We need a way to control inheritance. The<br> 
+		          	&nbsp;&nbsp;<i>initial</i> keyword sets the property value 
+		          	applied to a selected element to be the same as the<br>
+		          	&nbsp;&nbsp;value set for that element in the browser's default 
+		          	style sheet.<br>
+		          	*/<br>
+		          	</span>
+		          	div p {<br>
+		          	&nbsp;&nbsp;text-shadow: initial;<br>
+		          	}
+		          </code>
+		          <h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div id="inheritance-2">
+			          	<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+										do eiusmod tempor incididunt ut labore et dolore magna 
+										aliqua.
+									 </p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h5>HTML</h5>
+							<code>
+		          	&lt;div id="inheritance"><br>
+								&nbsp;&nbsp;&lt;p><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur 
+								adipiscing elit, sed do eiusmod tempor incididunt ut<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;labore et dolore magna aliqua.<br>
+								&nbsp;&nbsp;&lt;/p><br>
+								&nbsp;&nbsp;&lt;div><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;p><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, 
+								consectetur adipiscing elit, sed do eiusmod tempor 
+								incididunt<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ut labore et dolore magna 
+								aliqua.<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p><br>
+								&nbsp;&nbsp;&lt;/div><br>
+								&lt;/div>
+		          </code>
+		          <p>
+		          	a) The innner &lt;div> element does not inherit the 
+		          	<i>border</i> property from its parent (outer &lt;div> element). 
+		          	This is the default behaviour:
+		          </p>
+		          <h5>CSS</h5>
+		          <code>
+		          	#inheritance {<br>
+		          	&nbsp;&nbsp;border: 1px solid red;<br>
+		          	}
+		        	</code>
+		        	<h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div id="inheritance-3">
+			          	<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+										do eiusmod tempor incididunt ut labore et dolore magna 
+										aliqua.
+									 </p>
+								</div>
+							</div>
+							<p>
+		          	b) The innner &lt;div> element inherits the <i>border</i> 
+		          	property from its parent (outer &lt;div> element):
+		          </p>
+		          <h5>CSS</h5>
+		          <code>
+		          	#inheritance {<br>
+		          	&nbsp;&nbsp;border: 1px solid red;<br>
+		          	}<br>
+		          	<br>
+		          	<span style="color: blue;">
+		          	/*<br>
+								&nbsp;&nbsp;The <i>border</i> property is not inherited by 
+								default. We need a way to control inheritance. The<br>
+								&nbsp;&nbsp;<i>inherit</i> keyword sets the property value 
+								applied to a selected element to be the same as the<br>
+								&nbsp;&nbsp;value set for its parent element.<br>
+								*/<br>
+								</span>
+		          	#inheritance div {<br>
+		          	&nbsp;&nbsp;border: inherit;<br>
+		          	}
+		        	</code>
+		        	<h5>Result</h5>
+		          <div class="result-wrapper">
+			          <div id="inheritance-4">
+			          	<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+										do eiusmod tempor incididunt ut labore et dolore magna 
+										aliqua.
+									</p>
+									<div>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna 
+											aliqua.
+										</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ol>
+				</section>
 			</article>
     </main>
     <footer>

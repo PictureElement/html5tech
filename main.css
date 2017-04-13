@@ -1370,3 +1370,20 @@ nav #current {
 	display: table;
 	clear: both;
 }
+
+/*--------------------------- Inheritance examples ---------------------------*/
+#inheritance-1, #inheritance-2 {
+  text-shadow: 0 1px 1px black;
+}
+
+#inheritance-2 p {
+	text-shadow: initial;
+}
+
+#inheritance-3, #inheritance-4 {
+  border: 1px solid red;
+}
+
+#inheritance-4 div {
+	border: inherit;
+}
