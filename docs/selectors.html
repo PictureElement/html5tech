@@ -933,6 +933,152 @@
 						</li>
 					</ol>
 				</section>
+				<section>
+          <h3>Specificity</h3>
+          <h4>Description</h4>
+          <p>Specificity refers to the priority of a particular selector.</p>
+          <h4>Calculation</h4>
+          <p>
+          	Specificity is a weight that is applied to a given CSS declaration. 
+          	The following list of selector types increases in specificity:
+          </p>
+          <ol>
+          	<li><b>Type</b> selectors and <b>Pseudo-Elements</b></li>
+          	<li>
+          		<b>Class</b> selectors, <b>Attribute</b> selectors, and 
+          		<b>Pseudo-Classes</b>
+          	</li>
+          	<li><b>ID</b> selectors</li>
+          	<li><b>Inline styles</b></li>
+          </ol>
+          <p>
+          	<b>Note:</b> Universal selector(*), Combinators(+, >, ~, '') and 
+          	Negation Pseudo-Class(:not()) have no effect on specificity.
+          </p>
+          <img id="specificity" src="images/specificity.png" alt="specificity-value" width="800">
+          <h4>Examples</h4>
+          <ol>
+          	<li>
+          		<code>
+          			p { ... }  -  <span style="color: blue;">Weight: 0,0,0,1</span>
+          		</code>
+          	</li>
+          	<li>
+          		<code>
+          			<i>.class</i> { ... }  -  <span style="color: blue;">Weight: 0,0,1,0</span>
+          		</code>
+          	</li>
+          	<li>
+          		<code>
+          			<i>#id</i> { ... }  -  <span style="color: blue;">Weight: 0,1,0,0</span>
+          		</code>
+          	</li>
+          	<li>
+          		<code>
+          			&lt;p style="color: red;">content&lt;/p>  -  <span style="color: blue;">Weight: 1,0,0,0</span>
+          		</code>
+          	</li>
+          	<li>
+          		<code>
+          			ul#nav li:active a { ... }  -  <span style="color: blue;">Weight: 0,1,1,3</span>
+          		</code>
+          	</li>
+          	<li>
+          		<code>
+          			ul > li ul li ol li:first-letter { ... }  -  <span style="color: blue;">Weight: 0,0,0,7</span>
+          		</code>
+          	</li>
+          	<li>
+          		<code>
+          			p { color: red !important; }  -  <span style="color: blue;">Weight: Highest priority</span>
+          		</code>
+          		<p>
+          			<b>Note:</b>The <i>!important</i> rule on a style declaration, 
+          			overrides any other declarations (even inline styles). The only 
+          			way that can be overridden is with another <i>!important</i> 
+          			rule declared later in CSS.
+          		</p>
+          	</li>
+          	<li>
+          		<code>
+          			div:not(.outer) p { ... }  -  <span style="color: blue;">Weight: 0,0,1,2</span>
+          		</code>
+          		<p>
+          			<b>Note:</b> The negation pseudo-class <i>:not</i> is not taken 
+          			into consideration in the specificity calculation. However, any 
+          			selectors placed into it are.
+          		</p>
+          	</li>
+          	<li>
+          		<h5>HTML</h5>
+          		<code>
+          			&lt;div id="content" class="featured"><br>
+								&nbsp;&nbsp;&lt;p>Break out the cocoa.&lt;p><br>
+								&lt;/div>
+							</code>
+							<h5>CSS</h5>
+							<code>
+								<span style="color: blue;">/* Weight: 0,1,0,0 */</span><br>
+								#content {<br>
+								&nbsp;&nbsp;color: #000;<br>
+								}<br>
+								<br>
+								<span style="color: blue;">/* Weight: 0,0,1,0 */</span><br>
+								.featured {<br>
+								&nbsp;&nbsp;color: #fff;<br>
+								}
+							</code>
+							<p>
+								The first style declaration is the one that wins. The 
+								paragraph's font color is set to black. 
+							</p>
+						</li>
+						<li>
+							<p>
+								Give a black color to the section's content and a red color to 
+								Paragraph#1:
+							</p>
+							<h5>HTML</h5>
+          		<code>
+								&lt;section id="content"><br>
+								&nbsp;&nbsp;&lt;p class="featured">Paragraph #1.&lt;/p><br>
+								&nbsp;&nbsp;&lt;p>Paragraph #2.&lt;/p><br>
+								&nbsp;&nbsp;&lt;p>Paragraph #3.&lt;/p><br>
+								&lt;/section>
+							</code>
+							<ul>
+								<li>
+									<h5>CSS (Wrong way)</h5>
+									<code>
+										#content p { color: black; }  -  <span style="color: blue;">Weight: 0,1,0,1</span><br>
+										<br>
+										.featured { color: red; }  -  <span style="color: blue;">Weight: 0,0,1,0</span>
+									</code>
+								</li>
+								<li>
+									<h5>CSS (Method #1)</h5>
+									<code>
+										#content p { color: black; }  -  <span style="color: blue;">Weight: 0,1,0,1</span><br>
+										<br>
+										.featured { color: red !important; }  -  <span style="color: blue;">Weight: Highest priority</span>
+									</code>
+									<p>
+										<b>Note:</b>Always look for a way to use specificity before 
+										even considering <i>!important</i>.
+									</p>
+								</li>
+								<li>
+									<h5>CSS (Method #2)</h5>
+									<code>
+										#content p { color: black; }  -  <span style="color: blue;">Weight: 0,1,0,1</span><br>
+										<br>
+										#content .featured { color: red; }  -  <span style="color: blue;">Weight: 0,1,1,0</span>
+									</code>
+								</li>
+							</ul>
+						</li>
+					</ol>
+				</section>
 			</article>
     </main>
     <footer>

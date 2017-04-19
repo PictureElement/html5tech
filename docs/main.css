@@ -1387,3 +1387,12 @@ nav #current {
 #inheritance-4 div {
 	border: inherit;
 }
+
+
+/*------------------------ Specificity section image -------------------------*/
+#specificity {
+	display: block;
+	margin: 0 auto 0 auto;
+	margin-top: 20px;
+	border: 5px solid black;
+}
