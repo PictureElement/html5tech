@@ -366,7 +366,180 @@
             <b>rendered box height</b> = 100px[20px(content)+60px(padding)+20px(border)] = 100px
           </p>
         </section>
-			</article>
+        <section>
+          <h3>Overflow property</h3>
+          <h4>Syntax</h4>
+          <h5>CSS</h5>
+          <code>
+            overflow: visible / auto / hidden / scroll
+          </code>
+          <p>where:</p>
+          <ul>
+            <li>
+              <b>visible (default):</b> Allows content to extend beyond 
+              container boundaries.
+            </li>
+            <li>
+              <b>auto:</b> The container stays the size that we set and adds a 
+              scrollbar as needed when content overflows.
+            </li>
+            <li>
+              <b>hidden:</b> Hides content that extends beyond container 
+              boundaries.
+            </li>
+            <li>
+              <b>scroll:</b> Adds a scrollbar at all times, even if it isn't 
+              needed.
+            </li>
+          </ul>
+          <h4>Example</h4>
+          <h5>HTML</h5>
+          <code>
+            &lt;div><br>
+            &nbsp;&nbsp;&lt;p><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Sed ut perspiciatis, unde omnis iste natus 
+            error sit oluptatem accusantium doloremque laudantium,
+            &nbsp;&nbsp;&nbsp;&nbsp;totam rem aperiam eaque ipsa, quae ab illo 
+            inventore veritatis et quasi architecto beatae vitae 
+            &nbsp;&nbsp;&nbsp;&nbsp;dicta sunt, explicabo. Nemo enim ipsam 
+            voluptatem, quia voluptas sit, aspernatur aut odit aut
+            &nbsp;&nbsp;&nbsp;&nbsp;fugit, sed quia consequuntur magni dolores 
+            eos, qui ratione voluptatem sequi nesciunt, neque
+            &nbsp;&nbsp;&nbsp;&nbsp;poro quisquam est, qui dolorem ipsum, quia 
+            dolor sit amet consectetur adipisci[ng] velit, sed
+            &nbsp;&nbsp;&nbsp;&nbsp;quia non numquam [do] eius modi tempora 
+            inci[di]dunt, ut labore et dolore magnam aliquam quaerat 
+            &nbsp;&nbsp;&nbsp;&nbsp;voluptatem. Ut enim ad minima veniam, quis 
+            nostrum exercitationem ullam corporis suscipit 
+            &nbsp;&nbsp;&nbsp;&nbsp;laboriosam, nisi ut aliquid ex ea commodi 
+            consequatur?<br>
+            &nbsp;&nbsp;&lt;/p><br>
+            &lt;/div>
+          </code>
+          <ol id="overflow-list">
+            <li>
+              <p><i>visible</i></p>
+              <h5>CSS</h5>
+              <code>
+                div {<br>
+                &nbsp;&nbsp;border: 1px solid red;<br>
+                &nbsp;&nbsp;width: 300px;<br>
+                &nbsp;&nbsp;height: 300px;<br>
+                &nbsp;&nbsp;overflow: visible;<br>
+                }
+              </code>
+              <h5>Result</h5>
+              <div id="visible">
+                <p>
+                  Sed ut perspiciatis, unde omnis iste natus error sit 
+                  voluptatem accusantium doloremque laudantium, totam rem 
+                  aperiam eaque ipsa, quae ab illo inventore veritatis et quasi 
+                  architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam 
+                  voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, 
+                  sed quia consequuntur magni dolores eos, qui ratione 
+                  voluptatem sequi nesciunt, neque porro quisquam est, qui 
+                  dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] 
+                  velit, sed quia non numquam [do] eius modi tempora 
+                  inci[di]dunt, ut labore et dolore magnam aliquam quaerat 
+                  voluptatem. Ut enim ad minima veniam, quis nostrum 
+                  exercitationem ullam corporis suscipit laboriosam, nisi ut 
+                  aliquid ex ea commodi consequatur?
+                </p>
+              </div>
+            </li>
+            <li>
+              <p><i>auto</i></p>
+              <h5>CSS</h5>
+              <code>
+                div {<br>
+                &nbsp;&nbsp;border: 1px solid red;<br>
+                &nbsp;&nbsp;width: 300px;<br>
+                &nbsp;&nbsp;height: 300px;<br>
+                &nbsp;&nbsp;overflow: auto;<br>
+                }
+              </code>
+              <h5>Result</h5>
+              <div id="auto">
+                <p>
+                  Sed ut perspiciatis, unde omnis iste natus error sit 
+                  voluptatem accusantium doloremque laudantium, totam rem 
+                  aperiam eaque ipsa, quae ab illo inventore veritatis et quasi 
+                  architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam 
+                  voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, 
+                  sed quia consequuntur magni dolores eos, qui ratione 
+                  voluptatem sequi nesciunt, neque porro quisquam est, qui 
+                  dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] 
+                  velit, sed quia non numquam [do] eius modi tempora 
+                  inci[di]dunt, ut labore et dolore magnam aliquam quaerat 
+                  voluptatem. Ut enim ad minima veniam, quis nostrum 
+                  exercitationem ullam corporis suscipit laboriosam, nisi ut 
+                  aliquid ex ea commodi consequatur?
+                </p>
+              </div>
+            </li>
+            <li>
+              <p><i>hidden</i></p>
+              <h5>CSS</h5>
+              <code>
+                div {<br>
+                &nbsp;&nbsp;border: 1px solid red;<br>
+                &nbsp;&nbsp;width: 300px;<br>
+                &nbsp;&nbsp;height: 300px;<br>
+                &nbsp;&nbsp;overflow: hidden;<br>
+                }
+              </code>
+              <h5>Result</h5>
+              <div id="hidden">
+                <p>
+                  Sed ut perspiciatis, unde omnis iste natus error sit 
+                  voluptatem accusantium doloremque laudantium, totam rem 
+                  aperiam eaque ipsa, quae ab illo inventore veritatis et quasi 
+                  architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam 
+                  voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, 
+                  sed quia consequuntur magni dolores eos, qui ratione 
+                  voluptatem sequi nesciunt, neque porro quisquam est, qui 
+                  dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] 
+                  velit, sed quia non numquam [do] eius modi tempora 
+                  inci[di]dunt, ut labore et dolore magnam aliquam quaerat 
+                  voluptatem. Ut enim ad minima veniam, quis nostrum 
+                  exercitationem ullam corporis suscipit laboriosam, nisi ut 
+                  aliquid ex ea commodi consequatur? 
+                </p>
+              </div>
+            </li>
+            <li>
+              <p><i>scroll</i></p>
+              <h5>CSS</h5>
+              <code>
+                #scroll {<br>
+                &nbsp;&nbsp;border: 1px solid red;<br>
+                &nbsp;&nbsp;width: 300px;<br>
+                &nbsp;&nbsp;height: 500px;<br>
+                &nbsp;&nbsp;overflow: scroll;<br>
+                }
+              </code>
+              <h5>Result</h5>
+              <div id="scroll">
+                <p>
+                  Sed ut perspiciatis, unde omnis iste natus error sit 
+                  voluptatem accusantium doloremque laudantium, totam rem 
+                  aperiam eaque ipsa, quae ab illo inventore veritatis et quasi 
+                  architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam 
+                  voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, 
+                  sed quia consequuntur magni dolores eos, qui ratione 
+                  voluptatem sequi nesciunt, neque porro quisquam est, qui 
+                  dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] 
+                  velit, sed quia non numquam [do] eius modi tempora 
+                  inci[di]dunt, ut labore et dolore magnam aliquam quaerat 
+                  voluptatem. Ut enim ad minima veniam, quis nostrum 
+                  exercitationem ullam corporis suscipit laboriosam, nisi ut 
+                  aliquid ex ea commodi consequatur?
+                </p>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </article>
     </main>
     <footer>
 			<div class="follow-us">

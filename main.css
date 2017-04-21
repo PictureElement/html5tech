@@ -1396,3 +1396,36 @@ nav #current {
 	margin-top: 20px;
 	border: 5px solid black;
 }
+
+/*------------------------ Overflow property example -------------------------*/
+#overflow-list li + li {
+	margin-top: 50px;
+}
+
+#visible {
+	border: 1px solid red;
+	width: 300px;
+	height: 300px;
+	overflow: visible;
+}
+
+#auto {
+	border: 1px solid red;
+	width: 300px;
+	height: 300px;
+	overflow: auto;
+}
+
+#hidden {
+	border: 1px solid red;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+
+#scroll {
+	border: 1px solid red;
+	width: 300px;
+	height: 500px;
+	overflow: scroll;
+}
