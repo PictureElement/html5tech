@@ -539,7 +539,242 @@
             </li>
           </ol>
         </section>
-      </article>
+        <section>
+          <h3>Position property</h3>
+          <h4>Syntax</h4>
+          <h5>CSS</h5>
+          <code>
+            position: static / relative / absolute / fixed 
+          </code>
+          <p>where:</p>
+          <ul>
+            <li>
+              <b>static (default):</b> Normal behavior, the element is laid out 
+              in its current position in the normal flow.
+            </li>
+            <li>
+              <b>relative:</b> The element is laid out in its current position 
+              in the normal flow and then shifted via top/right/bottom/left.
+            </li>
+            <li>
+              <b>absolute:</b> The element is taken out of the normal flow for 
+              manual positioning relative to its closest <em>positioned</em> 
+              ancestor if any, or otherwise relative to the initial containing 
+              block.
+            </li>
+            <li>
+              <b>fixed:</b> The element is positioned to a specific place in the 
+              window, and does not move when scrolled.
+            </li>
+          </ul>
+          <p>
+            <b>Note:</b> A <b>positioned</b> element is an element whose is 
+            either in relative, absolute, or fixed position. 
+          </p>
+          <h4>Examples</h4>
+          <ol>
+            <li>
+              <p><i>relative</i></p>
+              <h5>HTML</h5>
+              <code>
+                &lt;div><br>
+                &nbsp;&nbsp;&lt;p><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Pythagorean equation: a&lt;sup>2&lt;/sup> + b&lt;sup>2&lt;/sup> = c&lt;sup>2&lt;/sup><br>
+                &nbsp;&nbsp;&lt;/p><br>
+                &lt;/div>
+              </code>
+              <p><b>Note:</b> The &lt;sup> tag defines superscript text.</p>
+              <h5>CSS</h5>
+              <code>
+              div sup {<br>
+              &nbsp;&nbsp;font-size: 75%;<br>
+              &nbsp;&nbsp;position: relative;<br>
+              &nbsp;&nbsp;top: -5px;<br>
+              }
+              </code>
+              <h5>Result</h5>
+              <div class="result-wrapper">
+                <div id="relative">
+                  <p>
+                    Pythagorean equation: a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <p><i>absolute</i></p>
+              <h5>HTML</h5>
+              <code>
+                &lt;div><br>
+                &nbsp;&nbsp;&lt;h2>Samsung Galaxy S8 and S8+ Review&lt;/h2><br>
+                &nbsp;&nbsp;&lt;img src="images/samsung-galaxy-s8.png" alt="samsung-galaxy-s8" width="50"><br>
+                &nbsp;&nbsp;&lt;p><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;The Samsung Galaxy S8’s beautiful hardware deserves a more unified software experience. At
+                &nbsp;&nbsp;&nbsp;&nbsp;675.99€ for the S8 and 769.23€ for the S8+, the device is, as ever, a premium product with
+                &nbsp;&nbsp;&nbsp;&nbsp;a premium price tag. Indeed, with the Infinity display, next-gen 
+                processor and already
+                &nbsp;&nbsp;&nbsp;&nbsp;solid camera experience, there’s plenty to like, keeping Samsung toward the front of the
+                &nbsp;&nbsp;&nbsp;&nbsp;Android handset race [Source: TechCrunch].<br>
+                &nbsp;&nbsp;&lt;/p><br>
+                &lt;/div>
+              </code>
+              <h5>CSS</h5>
+              <code>
+                div {<br>
+                &nbsp;&nbsp;position: relative;<br>
+                &nbsp;&nbsp;border: 1px solid red;<br>
+                }<br>
+                <br>
+                div img {<br>
+                &nbsp;&nbsp;border: 1px solid black;<br>
+                &nbsp;&nbsp;position: absolute;<br>
+                &nbsp;&nbsp;right: 10px;<br>
+                &nbsp;&nbsp;top: 5px;<br>
+                }
+              </code>
+              <h5>Result</h5>
+              <div id="absolute">
+                <h2>Samsung Galaxy S8 and S8+ Review</h2>
+                <img src="images/samsung-galaxy-s8.png" alt="samsung-galaxy-s8" width="50">
+                <p>
+                  The Samsung Galaxy S8’s beautiful hardware deserves a more 
+                  unified software experience. At 675.99€ for the S8 and 769.23€ 
+                  for the S8+, the device is, as ever, a premium product with a 
+                  premium price tag. Indeed, with the Infinity display, next-gen 
+                  processor and already solid camera experience, there’s plenty 
+                  to like, keeping Samsung toward the front of the Android 
+                  handset race [Source: TechCrunch].
+                </p>
+              </div>
+              <p>
+                <b>Note:</b> Absolute positioning takes an item outside of 
+                normal document flow and allows us to manually position it 
+                within the document. The image above has been moved relatively 
+                to its closest <em>positioned</em> ancestor 
+                (i.e. &lt;div> element).
+              </p>
+            </li>
+           	<li>
+             	<p><i>fixed</i></p>
+              <h5>HTML</h5>
+              <code>
+	              &lt;header><br>
+								&nbsp;&nbsp;&lt;img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500"><br>
+								&nbsp;&nbsp;&lt;nav><br>
+						    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+						  	&nbsp;&nbsp;&lt;/nav><br>
+								&lt;/header>
+							</code>
+							<h5>CSS</h5>
+							<code>
+								header {<br>
+								&nbsp;&nbsp;background:<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;radial-gradient(circle, gainsboro 20%, lightgray 40%, silver 60%, darkgray 80%, gray 100%);<br>
+								&nbsp;&nbsp;box-shadow: 0 1px 1px black;<br>
+								&nbsp;&nbsp;<span style="color:blue;">/* header in fixed position (following 4 properties) */</span><br>
+								&nbsp;&nbsp;position: fixed;<br>
+								&nbsp;&nbsp;width: 100%;<br>
+								&nbsp;&nbsp;top: 0;<br>
+								&nbsp;&nbsp;<span style="color:blue;">/*<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;Give header a z-index value to make it appear on top of any other <i>positioned</i> element (see
+								&nbsp;&nbsp;&nbsp;&nbsp;next section for more details)<br> 
+								&nbsp;&nbsp;*/</span><br>
+								&nbsp;&nbsp;z-index: 1;<br>
+								}
+							</code>
+							<p>
+                <b>Note:</b> The result of this example, can be seen at the top 
+                of the window. The &lt;header> element of this page that 
+                includes the logo and navigation menu has a fixed position.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h3>Z-index</h3>
+          <h4>Description</h4>
+          <p>
+          	By default an element that appears later in HTML, is rendered above 
+          	an earlier element (cascade order). However if the earlier element 
+          	has a larger z-index value, it will be the one on top. The z-index 
+          	<em>only</em> works on <i>positioned</i> elements 
+          	(absolute, relative, fixed). 
+          </p>
+          <h4>Syntax</h4>
+          <h5>CSS</h5>
+          <code>
+          	z-index: <i>integer</i>
+          </code>
+          <h4>Example</h4>
+          <h5>HTML</h5>
+          <code>
+          	&lt;div id="z-index"><br>
+	          &nbsp;&nbsp;&lt;img id="img-1" src="images/number-1.png" alt="number-1" width="300"><br>
+	        	&nbsp;&nbsp;&lt;img id="img-2" src="images/number-2.png" alt="number-2" width="300"><br>
+	        	&lt;div>
+	        </code>
+	        <ul>
+	        	<li>
+	        		<h5>CSS</h5>
+	        		<code>
+		        		#z-index {<br>
+								&nbsp;&nbsp;position: relative;<br>
+								&nbsp;&nbsp;border: 5px solid red;<br>
+								&nbsp;&nbsp;height: 500px;<br>
+								}<br>
+								<br>
+								#img-1 {<br>
+								&nbsp;&nbsp;position: absolute;<br>
+								&nbsp;&nbsp;left: 200px;<br>
+								&nbsp;&nbsp;top: 20px;<br>
+								&nbsp;&nbsp;z-index: 0;<br>
+								}<br>
+								<br>
+								#img-2 {<br>
+								&nbsp;&nbsp;position: absolute;<br>
+								&nbsp;&nbsp;left: 400px;<br>
+								&nbsp;&nbsp;top: 50px;<br>
+								&nbsp;&nbsp;z-index: 0;<br>
+								}
+							</code>
+							<h5>Result</h5>
+							<div id="z-index-1">
+			        	<img id="img-1" src="images/number-1.png" alt="number-1" width="300">
+			        	<img id="img-2" src="images/number-2.png" alt="number-2" width="300">
+			        </div>
+		        </li>
+		        <li>
+		        	<h5>CSS</h5>
+		        	<code>
+		        		#z-index {<br>
+								&nbsp;&nbsp;position: relative;<br>
+								&nbsp;&nbsp;border: 5px solid red;<br>
+								&nbsp;&nbsp;height: 500px;<br>
+								}<br>
+								<br>
+								#img-1 {<br>
+								&nbsp;&nbsp;position: absolute;<br>
+								&nbsp;&nbsp;left: 200px;<br>
+								&nbsp;&nbsp;top: 20px;<br>
+								&nbsp;&nbsp;z-index: 1;<br>
+								}<br>
+								<br>
+								#img-2 {<br>
+								&nbsp;&nbsp;position: absolute;<br>
+								&nbsp;&nbsp;left: 400px;<br>
+								&nbsp;&nbsp;top: 50px;<br>
+								&nbsp;&nbsp;z-index: 0;<br>
+								}
+							</code>
+        			<h5>Result</h5>
+        			<div id="z-index-2">
+			        	<img id="img-3" src="images/number-1.png" alt="number-1" width="300">
+			        	<img id="img-4" src="images/number-2.png" alt="number-2" width="300">
+			        </div>
+		        </li>
+		      </ul>
+		    </section>
+			</article>
     </main>
     <footer>
 			<div class="follow-us">

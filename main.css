@@ -89,7 +89,7 @@ h5 {
 	font-weight: 100;
 	font-style: italic;
 	font-family: Arvo, Times, "Times New Roman"; 
-	color: #2b2d32;
+	color: #8c8c90;
 	margin-top: 10px;
 	margin-bottom: 5px;
 }
@@ -121,6 +121,7 @@ header {
 	position: fixed; 
 	width: 100%;
 	top: 0;
+	z-index: 1;
 }
 
 main {
@@ -1428,4 +1429,58 @@ nav #current {
 	width: 300px;
 	height: 500px;
 	overflow: scroll;
+}
+
+/*------------------------ Position property example -------------------------*/
+#relative sup {
+	font-size: 75%;
+	position: relative;
+	top: -5px;
+}
+
+#absolute {
+	position: relative;
+	border: 1px solid red;
+}
+
+#absolute img {
+	border: 1px solid black;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+/*------------------------------ Z-index example -----------------------------*/
+#z-index-1, #z-index-2 {
+	position: relative;
+	border: 5px solid red;
+	height: 500px;
+}
+
+#img-1 {
+	position: absolute;
+	left: 200px;
+	top: 20px;
+	z-index: 0;
+}
+
+#img-2 {
+	position: absolute;
+	left: 400px;
+	top: 50px;
+	z-index: 0;
+}
+
+#img-3 {
+	position: absolute;
+	left: 200px;
+	top: 20px;
+	z-index: 1;
+}
+
+#img-4 {
+	position: absolute;
+	left: 400px;
+	top: 50px;
+	z-index: 0;
 }
