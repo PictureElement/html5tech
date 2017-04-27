@@ -216,36 +216,46 @@
           </p>
         </section>
         <section>
-          <h3>Block-level & Inline-level Tags</h3>
-          <h4>Block-level Tags</h4>
+          <h3>Display Types</h3>
+          <h4>Description</h4>
           <p>
-            Their content takes up the entire width of the container that they
-            are in. Examples of block-level tags are &lt;p&gt;, &lt;ul&gt;, 
-            &lt;ol&gt;, &lt;li&gt;, &lt;h1&gt;, ..., &lt;h6&gt;.
+            The <i>display</i> property specifies the type of box used for an 
+            element.
           </p>
-          <h4>Inline-level Tags</h4>
-          <p>
-            Their content does not take up more width that it needs. Examples of 
-            inline-level tags are &lt;span&gt;, &lt;a&gt;, &lt;img&gt;, &lt;input&gt;, 
-            &lt;label&gt;.
-          </p>
-          <h4>Turning block-level into inline-level and vice versa</h4>
-          <p>
-            The <b>display</b> property specifies the type of box used for an 
-            HTML element.
-          </p>
+          <h4>Syntax</h4>
           <h5>CSS</h5>
           <code>
-            /* Display an element as an inline element */<br>
             <i>element</i> {<br>
-            &nbsp;&nbsp;display: inline;<br>
-            }<br>
-            <br>
-            /* Display an element as a block element */<br>
-            <i>element</i> {<br>
-            &nbsp;&nbsp;display: block;<br>
+            &nbsp;&nbsp;display: none | inline | block | inline-block<br>
             }
           </code>
+          <h4>Block Elements</h4>
+          <p>
+            Their content takes up the entire width of the container that they 
+            are in. These type of elements can have a width and height set on 
+            them and they respect top, right, bottom, and left margin/padding.
+            Examples of block-level tags are &lt;div>, &lt;p>, &lt;ul>, 
+            &lt;ol>, &lt;li>, &lt;h1>, ..., &lt;h6>.
+          </p>
+          <h4>Inline Elements</h4>
+          <p>
+            Their content does not take up more width that it needs. These 
+            elements are typically found within block-level elements. Inline 
+            elements cannot have a width and height set on them. Also these 
+            type of elements allow other elements to sit to their left and 
+            right. Inline elements respect <strong>only</strong> left & right 
+            margin/padding. Examples of inline-level elements are &lt;span>, 
+            &lt;a>, &lt;img>, &lt;input>, &lt;label>, &lt;strong>, &lt;em>. 
+          </p>
+          <h4>Inline-block Elements</h4>
+          <p>
+            Their content does not take up more width that it needs and they 
+            allow other elements to sit to their left and right (same flow as 
+            inline elements). However, unlike inline elements they behave the 
+            same as block elements. For example they can have a width and height 
+            set on them and they respect not only left & right margin/padding 
+            but also top & bottom margin/padding.
+          </p> 
         </section>
         <section>
           <h3>Centering Content</h3>
