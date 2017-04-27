@@ -1484,3 +1484,24 @@ nav #current {
 	top: 50px;
 	z-index: 0;
 }
+
+/*----------------------------- Centering examples ---------------------------*/
+#centering-1 {
+  border: 5px solid red;
+}
+
+#centering-1 h2 {
+	color: blue;
+	text-align: center;
+}
+
+#centering-2 {
+	border: 5px solid red;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#centering-3 {
+  border: 5px solid red;
+  text-align: center;
+}

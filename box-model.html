@@ -259,38 +259,79 @@
         </section>
         <section>
           <h3>Centering Content</h3>
-          <h4>Center an entire block-level tag</h4>
+          <h4>Centering an entire block element</h4>
           <p>
-          	If you want to center an entire block-level tag and that tag is 
-          	fixed width, then you can set the left and right margins of that tag
-          	to <i>auto</i>.
+          	If you want to center an entire block-level <b>heading content</b>
+          	element(e.g. h1-h6) you just need to set <i>text-align</i> to 
+          	<i>center</i>.
           </p>
+          <h5>HTML</h5>
+          <code>
+          	&lt;div><br>
+          	&nbsp;&nbsp;&lt;h2>HEADING&lt;/h2><br>
+          	&lt;/div>
+          </code>	
           <h5>CSS</h5>
           <code>
-            <i>.class</i> {<br>
-      			&nbsp;&nbsp;margin: 0 auto 0 auto;<br>
-   					}<br>
-   					<br>
-   					<i>element</i> {<br>
-   					&nbsp;&nbsp;margin: 0 auto 0 auto;<br>
-   					}<br>
-   					<br>
-   					h1 {<br>
-        		&nbsp;&nbsp;margin: 0 auto 0 auto;<br>
+          	div {<br>
+          	&nbsp;&nbsp;border: 5px solid red;<br>
+          	}<br>
+          	<br>
+          	div h2 {<br>
+          	&nbsp;&nbsp;color: blue;<br>
+        		&nbsp;&nbsp;text-align: center;<br>
        			}
        		</code>
-   				<h4>Center the content that's inside of a block-level tag</h4>
+       		<h5>Result</h5>
+       		<div id=centering-1>
+       			<h2>HEADING</h2>
+       		</div>
+       		<p>
+          	If you want to center an entire block-level <b>sectioning 
+          	content</b> element(e.g. &lt;div>, &lt;section>), then you need to 
+          	set the left and right margins of that element to <i>auto</i>. Be 
+          	aware that center aligning has no effect if the width property is 
+          	not set (or set to 100%).
+          </p>
+          <h5>HTML</h5>
+          <code>
+          	&lt;div><br>
+          	&nbsp;&nbsp;&amp;nbsp;<br>
+          	&lt;/div>
+          </code>	
+          <h5>CSS</h5>
+          <code>
+          	div {<br>
+          	&nbsp;&nbsp;width: 50%;<br>
+          	&nbsp;&nbsp;margin: 0 auto;<br>
+          	}
+          </code>
+          <h5>Result</h5>
+          <div id=centering-2>
+						&nbsp;
+					</div>
+   				<h4>Centering inline and inline-block elements</h4>
    				<p>
-   					If you want to center the content that's inside of a block-level 
-   					tag, then you want to set the <i>text-align</i> property to 
-   					<i>center</i>.
+   					You can center inline and inline-block elements within a block-level 
+   					parent element by setting <i>text-align</i> to <i>center</i>.
    				</p>
+   				<h5>HTML</h5>
+   				<code>
+   					&lt;div><br>
+						&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width=50><br>
+						&lt;/div>
+					</code>
    				<h5>CSS</h5>
           <code>
-            h1 {<br>
-        		&nbsp;&nbsp;text-align: center;<br>
-            }
+          	div {<br>
+						&nbsp;&nbsp;border: 5px solid red;<br>
+						&nbsp;&nbsp;text-align: center;<br>
+						}
        	  </code>
+       	  <h5>Result</h5>
+       		<div id=centering-3>
+  					<img src="images/avatar.png" alt="avatar" width=100>
+					</div>
        	</section>
         <section>
           <h3>Box Sizing</h3>
