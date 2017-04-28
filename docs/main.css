@@ -1505,3 +1505,94 @@ nav #current {
   border: 5px solid red;
   text-align: center;
 }
+
+/*------------------------- Margin collapsing examples -----------------------*/
+#margin-collapsing-1 p {
+	background-color: green;
+	text-align: center;
+	color: white;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+#margin-collapsing-2, #margin-collapsing-3, #margin-collapsing-4, 
+#margin-collapsing-5, #margin-collapsing-6, #margin-collapsing-7,
+#margin-collapsing-8, #margin-collapsing-9, #margin-collapsing-10 {
+	margin: 20px 0;
+}
+
+#margin-collapsing-2, #margin-collapsing-5, #margin-collapsing-8 {
+	background-color: red;
+}
+
+#margin-collapsing-3, #margin-collapsing-6, #margin-collapsing-9 {
+	background-color: green;
+}
+
+#margin-collapsing-4, #margin-collapsing-7, #margin-collapsing-10 {
+	background-color: blue;
+}
+
+#margin-collapsing-4 p, #margin-collapsing-7 p, #margin-collapsing-10 p {
+	padding: 0;
+	text-align: center;
+	color: white;
+}
+
+#margin-collapsing-5, #margin-collapsing-6 {
+	border: 1px solid black;
+}
+
+#margin-collapsing-8, #margin-collapsing-9 {
+	padding: 1px 0;
+}
+
+/*-------------------------- Image cropping examples -------------------------*/
+#image-crop {
+	border: 1px solid red;
+	height: 400px;
+	width: 200px;
+}
+
+#crop-1, #crop-2, #crop-3 {
+	border: 1px solid red;
+	height: 400px;
+	width: 200px;
+	overflow: hidden;
+}
+
+#crop-1 img {
+	position: relative;
+  left: -2500px;
+  top: -1800px;
+}
+
+#crop-2 img {
+	height: 100%;
+	width: auto;
+	position: relative;
+  left: -170px;
+}
+
+#crop-3 img {
+	height: auto;
+	width: 100%;
+}
+
+#crop-4 {
+	width: 300px;
+	height: 300px;
+	/* resize image to fill the entire bg but keep ratio */
+	background-size: cover;
+	/* position the subject to the center */
+	background-position: 35% 0;
+}
+
+#crop-5 {
+	width: 300px;
+	height: 300px;
+	/* resize image to fill the entire bg but keep ratio */
+	background-size: cover;
+	/* position the subject to the center */
+	background-position: 0 10%;
+}

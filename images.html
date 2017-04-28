@@ -444,6 +444,138 @@
 						covered in much greater detail <a href="">here</a>.
 					</p> 
 				</section>
+				<section>
+        	<h3>Image Cropping</h3>
+          <h4>Example #1: Crop, Resize, Don't keep ratio</h4>
+          <h5>HTML</h5>
+          <code>
+          	&lt;img src="images/bus.jpeg" alt="bus">
+          </code>
+          <h5>CSS</h5>
+         	<code>
+          	img {<br>
+						&nbsp;&nbsp;border: 1px solid red;<br>
+						&nbsp;&nbsp;height: 400px;<br>
+						&nbsp;&nbsp;width: 200px;<br>
+						}
+					</code>
+					<h5>Result</h5>
+        	<img id="image-crop" src="images/bus.jpeg" alt="bus">
+        	<h4>Example #2: Crop, Position, Don't resize, Keep ratio</h4>
+        	<h5>HTML</h5>
+          <code>
+          	&lt;div id="crop"><br>
+        		&nbsp;&nbsp;&lt;img src="images/bus.jpeg" alt="bus"><br>
+        		&lt;/div>
+        	</code>
+        	<h5>CSS</h5>
+         	<code>
+	         	#crop {<br>
+						&nbsp;&nbsp;border: 1px solid red;<br>
+						&nbsp;&nbsp;height: 400px;<br>
+						&nbsp;&nbsp;width: 200px;<br>
+						&nbsp;&nbsp;overflow: hidden;<br>
+						}<br>
+						<br>
+						#crop img {<br>
+						&nbsp;&nbsp;position: relative;<br>
+						&nbsp;&nbsp;left: -2500px;<br>
+						&nbsp;&nbsp;top: -1800px;<br>
+						}
+					</code>
+					<h5>Result</h5>
+        	<div id="crop-1">
+        		<img src="images/bus.jpeg" alt="bus">
+        	</div>
+        	<h4>Example #3: Crop, Position, Resize, Keep ratio, Account for portrait-oriented images</h4>
+        	<h5>HTML</h5>
+          <code>
+	          &lt;div id="crop"><br>
+	        	&nbsp;&nbsp;&lt;img src="images/bus.jpeg" alt="bus"><br>
+	        	&lt;/div>
+	        </code>
+	        <h5>CSS</h5>
+         	<code>
+	         	#crop {<br>
+						&nbsp;&nbsp;border: 1px solid red;<br>
+						&nbsp;&nbsp;height: 400px;<br>
+						&nbsp;&nbsp;width: 200px;<br>
+						&nbsp;&nbsp;overflow: hidden;<br>
+						}<br>
+						<br>
+						#crop img {<br>
+						&nbsp;&nbsp;height: 100%;<br>
+						&nbsp;&nbsp;width: auto;<br>
+						&nbsp;&nbsp;position: relative;<br>
+  					&nbsp;&nbsp;left: -170px;<br>
+						}
+					</code>
+					<h5>Result</h5>
+        	<div id="crop-2">
+        		<img src="images/bus.jpeg" alt="bus">
+        	</div>
+        	<h4>Example #4: Crop, Resize, Keep ratio, Account for landscape-oriented images</h4>
+        	<h5>HTML</h5>
+          <code>
+	          &lt;div id="crop"><br>
+	        	&nbsp;&nbsp;&lt;img src="images/bus.jpeg" alt="bus"><br>
+	        	&lt;/div>
+	        </code>
+	        <h5>CSS</h5>
+         	<code>
+	         	#crop {<br>
+						&nbsp;&nbsp;border: 1px solid red;<br>
+						&nbsp;&nbsp;height: 400px;<br>
+						&nbsp;&nbsp;width: 200px;<br>
+						&nbsp;&nbsp;overflow: hidden;<br>
+						}<br>
+						<br>
+						#crop img {<br>
+						&nbsp;&nbsp;height: auto;<br>
+						&nbsp;&nbsp;width: 100%;<br>
+						}
+					</code>
+					<h5>Result</h5>
+        	<div id="crop-3">
+        		<img src="images/bus.jpeg" alt="bus">
+        	</div>
+        	<h4>
+        		Example #5: Crop, Position, Resize, Keep ratio, Account for both 
+        		portrait-oriented & landscape-oriented images
+        	</h4>
+        	<h5>HTML</h5>
+          <code>
+		      	&lt;div id="crop-1" style="background-image: url(images/bus.jpeg)"><br>
+	        	&lt;/div><br>
+	        	&lt;div id="crop-2" style="background-image: url(images/selfie-monkey.jpeg)"><br>
+	        	&lt;/div>
+	        </code>
+	        <h5>CSS</h5>
+         	<code>
+	         	#crop-1 {<br>
+						&nbsp;&nbsp;width: 300px;<br>
+						&nbsp;&nbsp;height: 300px;<br>
+						&nbsp;&nbsp;/* resize image to fill the entire bg but keep ratio */<br>
+						&nbsp;&nbsp;background-size: cover;<br>
+						&nbsp;&nbsp;/* position the subject to the center */<br>
+						&nbsp;&nbsp;background-position: 35% 0;<br>
+						}<br>
+						<br>
+						#crop-2 {<br>
+						&nbsp;&nbsp;width: 300px;<br>
+						&nbsp;&nbsp;height: 300px;<br>
+						&nbsp;&nbsp;/* resize image to fill the entire bg but keep ratio */<br>
+						&nbsp;&nbsp;background-size: cover;<br>
+						&nbsp;&nbsp;/* position the subject to the center */<br>
+						&nbsp;&nbsp;background-position: 0 10%;<br>
+						}
+					</code>
+					<h5>Result</h5>
+        	<div id="crop-4" style="background-image: url(images/bus.jpeg)">
+        	</div>
+        	<div id="crop-5" style="background-image: url(images/selfie-monkey.jpeg)">
+        	</div>
+        </section>
 			</article>
     </main>
     <footer>

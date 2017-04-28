@@ -1547,6 +1547,52 @@ nav #current {
 	padding: 1px 0;
 }
 
+/*-------------------------- Image cropping examples -------------------------*/
+#image-crop {
+	border: 1px solid red;
+	height: 400px;
+	width: 200px;
+}
 
+#crop-1, #crop-2, #crop-3 {
+	border: 1px solid red;
+	height: 400px;
+	width: 200px;
+	overflow: hidden;
+}
 
+#crop-1 img {
+	position: relative;
+  left: -2500px;
+  top: -1800px;
+}
 
+#crop-2 img {
+	height: 100%;
+	width: auto;
+	position: relative;
+  left: -170px;
+}
+
+#crop-3 img {
+	height: auto;
+	width: 100%;
+}
+
+#crop-4 {
+	width: 300px;
+	height: 300px;
+	/* resize image to fill the entire bg but keep ratio */
+	background-size: cover;
+	/* position the subject to the center */
+	background-position: 35% 0;
+}
+
+#crop-5 {
+	width: 300px;
+	height: 300px;
+	/* resize image to fill the entire bg but keep ratio */
+	background-size: cover;
+	/* position the subject to the center */
+	background-position: 0 10%;
+}

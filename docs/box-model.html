@@ -826,6 +826,166 @@
 		        </li>
 		      </ul>
 		    </section>
+		    <section>
+		    	<h3>Margin Collapsing</h3>
+		    	<h4>Description</h4>
+          <p>
+          	Top and bottom margins of block-level elements sometimes collapse 
+          	into a single margin whose size is the largest of the margins 
+          	combined into it.
+          </p>
+          <h4>Example #1: Collapsing margins between adjacent elements</h4>
+          <h5>HTML</h5>
+          <code>
+	          &lt;div><br>
+						&nbsp;&nbsp;&lt;p>Paragraph 1&lt;/p><br>
+	         	&nbsp;&nbsp;&lt;p>Paragraph 2&lt;/p><br>
+	         	&lt;/div>
+	        </code>
+	        <h5>CSS</h5>
+	        <code>
+	        	div p {<br>
+						&nbsp;&nbsp;background-color: green;<br>
+						&nbsp;&nbsp;text-align: center;<br>
+						&nbsp;&nbsp;color: white;<br>
+						&nbsp;&nbsp;margin-top: 20px;<br>
+						&nbsp;&nbsp;margin-bottom: 40px;<br>
+						}
+					</code>
+					<h5>Result</h5>
+         	<div id="margin-collapsing-1">
+         		<p>Paragraph 1</p>
+         		<p>Paragraph 2</p>
+         	</div>
+         	<p>
+         		<b>Note:</b> We might expect a 60px margin between the two 
+         		paragraphs but the margin will end up becoming the larger of the two 
+         		values(i.e. top and bottom margins), in this case 40px.
+         	</p>
+         	<h4>Example #2a: Collapsing margins between parent and child elements</h4>
+         	<h5>HTML</h5>
+          <code>
+	          &lt;div id="margin-collapsing-2"><br>
+	         	&nbsp;&nbsp;&lt;div id="margin-collapsing-3"><br>
+	         	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="margin-collapsing-4">&lt;p>Paragraph&lt;/p>&lt;/div><br>
+	         	&nbsp;&nbsp;&lt;/div><br>
+	         	&lt;/div>
+	        </code>
+	        <h5>CSS</h5>
+	        <code>
+		        div {<br>
+						&nbsp;&nbsp;margin: 20px 0;<br>
+						}<br>
+						<br>
+						#margin-collapsing-2 {<br>
+						&nbsp;&nbsp;background-color: red;<br>
+						}<br>
+						<br>
+						#margin-collapsing-3 {<br>
+						&nbsp;&nbsp;background-color: green;<br>
+						}<br>
+						<br>
+						#margin-collapsing-4 {<br>
+						&nbsp;&nbsp;background-color: blue;<br>
+						}
+					</code>
+					<h5>Result</h5>
+         	<div id="margin-collapsing-2">
+         		<div id="margin-collapsing-3">
+         			<div id="margin-collapsing-4"><p>Paragraph</p></div>
+         		</div>
+         	</div>
+         	<h4>Example #2b: Apply border to the parent to prevent collapsing</h4>
+          <h5>HTML</h5>
+          <code>
+	          &lt;div id="margin-collapsing-5"><br>
+	         	&nbsp;&nbsp;&lt;div id="margin-collapsing-6"><br>
+	         	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="margin-collapsing-7">&lt;p>Paragraph&lt;/p>&lt;/div><br>
+	         	&nbsp;&nbsp;&lt;/div><br>
+	         	&lt;/div>
+	        </code>
+	        <h5>CSS</h5>
+	        <code>
+		        div {<br>
+						&nbsp;&nbsp;margin: 20px 0;<br>
+						}<br>
+						<br>
+						#margin-collapsing-5 {<br>
+						&nbsp;&nbsp;background-color: red;<br>
+						}<br>
+						<br>
+						#margin-collapsing-6 {<br>
+						&nbsp;&nbsp;background-color: green;<br>
+						}<br>
+						<br>
+						#margin-collapsing-7 {<br>
+						&nbsp;&nbsp;background-color: blue;<br>
+						}<br>
+						<br>
+						#margin-collapsing-5, #margin-collapsing-6 {<br>
+						&nbsp;&nbsp;border: 1px solid black;<br>
+						}
+					</code>
+					<h5>Result</h5>
+         	<div id="margin-collapsing-5">
+         		<div id="margin-collapsing-6">
+         			<div id="margin-collapsing-7"><p>Paragraph</p></div>
+         		</div>
+         	</div>
+         	<h4>Example #2c: Apply padding to the parent to prevent collapsing</h4>
+         	<h5>HTML</h5>
+          <code>
+	          &lt;div id="margin-collapsing-8"><br>
+	         	&nbsp;&nbsp;&lt;div id="margin-collapsing-9"><br>
+	         	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="margin-collapsing-10">&lt;p>Paragraph&lt;/p>&lt;/div><br>
+	         	&nbsp;&nbsp;&lt;/div><br>
+	         	&lt;/div>
+	        </code>
+	        <h5>CSS</h5>
+	        <code>
+		        div {<br>
+						&nbsp;&nbsp;margin: 20px 0;<br>
+						}<br>
+						<br>
+						#margin-collapsing-8 {<br>
+						&nbsp;&nbsp;background-color: red;<br>
+						}<br>
+						<br>
+						#margin-collapsing-9 {<br>
+						&nbsp;&nbsp;background-color: green;<br>
+						}<br>
+						<br>
+						#margin-collapsing-10 {<br>
+						&nbsp;&nbsp;background-color: blue;<br>
+						}<br>
+						<br>
+						#margin-collapsing-8, #margin-collapsing-9 {<br>
+						&nbsp;&nbsp;padding: 1px 0;<br>
+						}
+					</code>
+					<h5>Result</h5>
+         	<div id="margin-collapsing-8">
+         		<div id="margin-collapsing-9">
+         			<div id="margin-collapsing-10"><p>Paragraph</p></div>
+         		</div>
+         	</div>
+         	<h4>Important</h4>
+         	<p>
+         		Using padding or border will prevent margin to collapse 
+         		<strong>only</strong> in cases of collapsing margins between parent 
+         		and child elements (Example #2x). 
+         	</p>
+         	<p>
+         		Other properties that, once applied to the parent, can prevent 
+         		collapsing are:
+         	</p>
+         	<ul>
+         		<li>float: left/right</li>
+         		<li>position: relative/absolute</li>
+         		<li>display: inline-block</li>
+         		<li>overflow: hidden, auto</li>
+         	</ul>
+       	</section>
 			</article>
     </main>
     <footer>
