@@ -1190,6 +1190,30 @@ nav #current {
   color: red;
 }
 
+#last-child li:last-child {
+  color: blue;
+}
+
+#nth-child-1 li:nth-child(even) {
+	color: red;
+}
+
+#nth-child-1 li:nth-child(odd) {
+	color: blue;
+}
+
+#nth-child-2 li:nth-child(3n) {
+	color: red;
+}
+
+#nth-child-vs-nth-of-type p:nth-child(2) {
+	color: red;
+}
+
+#nth-child-vs-nth-of-type p:nth-of-type(2) {
+	color: blue;
+}
+
 /*-------------------------- Pseudo-element example --------------------------*/
 #first-letter::first-letter {
 	font-family: Arvo, Times, "Times New Roman"; 

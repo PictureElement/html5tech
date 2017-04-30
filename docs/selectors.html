@@ -375,13 +375,14 @@
 	         		<p>
 	         			The <i>:first-child</i> pseudo-class is applied to narrow down 
 	         			the amount of child tags selected. The style is applied only on 
-	         			the "2 eggs" line:
+	         			the first list item.
             	</p>
           		<h5>HTML</h5>
 	          	<code>
 		            &lt;ul&gt;<br>
-		            &nbsp;&nbsp;&lt;li&gt;2 egss&lt;/li&gt;<br>
-		            &nbsp;&nbsp;&lt;li&gt;1 pound of sugar&lt;/li&gt;<br>
+		            &nbsp;&nbsp;&lt;li&gt;First item&lt;/li&gt;<br>
+		            &nbsp;&nbsp;&lt;li&gt;Second item&lt;/li&gt;<br>
+		            &nbsp;&nbsp;&lt;li&gt;Last item&lt;/li&gt;<br>
 		            &lt;/ul&gt;
 		         	</code>
 							<h5>CSS</h5>
@@ -393,17 +394,152 @@
 		          <h5>Result</h5>
 		          <div class="result-wrapper">
 			       		<ul id="first-child">
-			          	<li>2 egss</li>
-			           	<li>1 pound of sugar</li>
+			          	<li>First item</li>
+			          	<li>Second item</li>
+			           	<li>Last item</li>
 			          </ul>
 			        </div>
 		        </li>
-		      </ol>
-		      <p>
+		        <li>
+	         		<p>
+	         			The <i>:last-child</i> pseudo-class is applied to narrow down 
+	         			the amount of child tags selected. The style is applied only on 
+	         			the last list item.
+            	</p>
+            	<h5>HTML</h5>
+	          	<code>
+		            &lt;ul&gt;<br>
+		            &nbsp;&nbsp;&lt;li&gt;First item&lt;/li&gt;<br>
+		            &nbsp;&nbsp;&lt;li&gt;Second item&lt;/li&gt;<br>
+		            &nbsp;&nbsp;&lt;li&gt;Last item&lt;/li&gt;<br>
+		            &lt;/ul&gt;
+		         	</code>
+							<h5>CSS</h5>
+		          <code>
+		        		ul li:last-child {<br>
+		           	&nbsp;&nbsp;color: blue;<br>
+		        		}
+		          </code>
+		          <h5>Result</h5>
+		          <div class="result-wrapper">
+			       		<ul id="last-child">
+			          	<li>First item</li>
+			          	<li>Second item</li>
+			           	<li>Last item</li>
+			          </ul>
+			        </div>
+			     	</li>
+			     	<li>
+	         		<p>
+	         			The <i>:nth-child</i> and <i>:nth-of-type</i> pseudo-classes are 
+	         			applied to narrow down the amount of child tags selected.
+            	</p>
+            	<ul>
+            		<li>
+            			<p>
+            				In this example two styles are applied, red color on even 
+            				list items and blue color on odd list items. 
+            			</p>
+		            	<h5>HTML</h5>
+		            	<code>
+				            &lt;ul&gt;<br>
+				            &nbsp;&nbsp;&lt;li&gt;First item&lt;/li&gt;<br>
+				            &nbsp;&nbsp;&lt;li&gt;Second item&lt;/li&gt;<br>
+				            &nbsp;&nbsp;&lt;li&gt;Third item&lt;/li&gt;<br>
+				            &nbsp;&nbsp;&lt;li&gt;Fourth item&lt;/li&gt;<br>
+				            &lt;/ul&gt;
+				         	</code>
+				         	<h5>CSS</h5>
+				         	<code>
+				         		ul li:nth-child(even) {<br>
+										&nbsp;&nbsp;color: red;<br>
+										}<br>
+										<br>
+										ul li:nth-child(odd) {<br>
+										&nbsp;&nbsp;color: blue;<br>
+										}
+				         	</code>
+		            	<h5>Result</h5>
+			          	<div class="result-wrapper">
+					       		<ul id="nth-child-1">
+					          	<li>First item</li>
+					          	<li>Second item</li>
+					           	<li>Third item</li>
+					           	<li>Fourth item</li>
+					          </ul>
+					        </div>
+					      </li>
+					      <li>
+					      	<p>
+            				In this example, red color is applied on every third list 
+            				item starting with third list item.
+            			</p>
+            			<h5>HTML</h5>
+            			<code>
+            				&lt;ul><br>
+					          &nbsp;&nbsp;&lt;li>First item&lt;/li><br>
+					          &nbsp;&nbsp;&lt;li>Second item&lt;/li><br>
+					          &nbsp;&nbsp;&lt;li>Third item&lt;/li><br>
+					          &nbsp;&nbsp;&lt;li>Fourth item&lt;/li><br>
+					          &nbsp;&nbsp;&lt;li>Fifth item&lt;/li><br>
+					          &nbsp;&nbsp;&lt;li>Sixth item&lt;/li><br>
+					          &lt;/ul>
+					        </code>
+					        <h5>CSS</h5>
+				         	<code>
+					         	ul li:nth-child(3n) {<br>
+										&nbsp;&nbsp;color: red;<br>
+										}
+									</code>
+			    				<h5>Result</h5>
+		            	<div class="result-wrapper">
+					       		<ul id="nth-child-2">
+					          	<li>First item</li>
+					          	<li>Second item</li>
+					           	<li>Third item</li>
+					           	<li>Fourth item</li>
+					           	<li>Fifth item</li>
+					           	<li>Sixth item</li>
+					          </ul>
+					        </div>
+					      </li>
+					      <li>
+					      	<p><b><i>:nth-child</i> vs <i>:nth-of-type</i></b></p>
+					      	<h5>HTML</h5>
+					      	<code>
+					      		&lt;div><br>
+					       		&nbsp;&nbsp;&lt;h5>Heading 1&lt;/h5><br>
+					       		&nbsp;&nbsp;&lt;p>Paragraph 1&lt;/p><br>
+					       		&nbsp;&nbsp;&lt;p>Paragraph 2&lt;/p><br>
+					          &lt;/div>
+					        </code>
+					      	<h5>CSS</h5>
+					      	<code>
+					      		div p:nth-child(2) {<br>
+										&nbsp;&nbsp;color: red;<br>
+										}<br>
+										<br>
+										div p:nth-of-type(2) {<br>
+										&nbsp;&nbsp;color: blue;<br>
+										}
+									</code>
+					 				<h5>Result</h5>
+		            	<div class="result-wrapper">
+					       		<div id="nth-child-vs-nth-of-type">
+					       			<h5>Heading 1</h5>
+					       			<p>Paragraph 1</p>
+					       			<p>Paragraph 2</p>
+					          </div>
+					        </div>
+					      </li>
+					    </ul>
+					  </li>
+					</ol>
+					<p>
 		      	<b>Note:</b> There are more pseudo-classes available and you can 
 		      	learn more <a href="https://developer.mozilla.org/en/docs/Web/CSS/Pseudo-classes">here</a>.
 		      </p>
-        </section>
+				</section>
         <section>
         	<h3>Pseudo-Elements</h3>
        		<h4>Description</h4>
