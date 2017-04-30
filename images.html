@@ -576,6 +576,223 @@
         	<div id="crop-5" style="background-image: url(images/selfie-monkey.jpeg)">
         	</div>
         </section>
+        <section>
+        	<h3>Logos</h3>
+        	<h4>Method #1: Apply logo as background</h4>
+        	<h5>HTML</h5>
+        	<code>
+        		&lt;a href="index.html" id="logo" title="Return to the homepage">Marios Sofokleous&lt;/a>
+        	</code>
+        	<h5>CSS</h5>
+        	<code>
+        		#logo {<br>
+						&nbsp;&nbsp;width: 100px;<br>
+						&nbsp;&nbsp;height: 100px;<br>
+						&nbsp;&nbsp;display: block;<br>
+						&nbsp;&nbsp;background-size: cover;<br>
+						&nbsp;&nbsp;background-image: url(images/logomakr_6AGIbQ.png);<br>
+						&nbsp;&nbsp;/* Move away text */<br>
+						&nbsp;&nbsp;text-indent: -9999px;<br>
+						}
+					</code>
+					<h5>Result</h5>
+        	<a href="index.html" id="logo-1" title="Return to the homepage">Marios Sofokleous</a>
+        	<h4>Method #2: Apply logo as image</h4>
+        	<h5>HTML</h5>
+        	<code>
+        		&lt;a href="index.html" id="logo" title="Return to the homepage"><br>
+        		&nbsp;&nbsp;&lt;img src="images/logomakr_6AGIbQ.png" alt="logo"><br>
+        		&lt;/a>
+        	</code>
+        	<h5>CSS</h5>
+        	<code>
+        		#logo img {<br>
+						&nbsp;&nbsp;width: 100px;<br>
+						&nbsp;&nbsp;height: 100px;<br>
+						}
+        	</code>
+        	<h5>Result</h5>
+        	<a href="index.html" id="logo-2" title="Return to the homepage">
+        		<img src="images/logomakr_6AGIbQ.png" alt="logo">
+        	</a>
+        	<p>
+        		<b>Note:</b> There has been much debate for a long time as to how to 
+        		mark up logos. Should your logo be applied as an image or a 
+        		background?  The correct answer is that logos are content
+        		(therefore images) not styles and should not be applied as 
+        		backgrounds.
+        	</p> 
+        </section>
+        <section>
+        	<h3>Sprites</h3>
+        	<h4>Description</h4>
+        	<p>
+        		CSS Sprites are means of combining multiple images into a single 
+        		image file to improve performance by limiting requests to the 
+        		server.
+        	</p> 
+        	<p>
+        		<b>Note:</b> The following methods, make use of the following 
+        		sprite:
+        	</p>
+       		<img src="images/sprite-1.png" id="sprite-1" alt="sprite-1">
+        	<h4>Method #1: As background</h4>
+        	<h5>HTML</h5>
+        	<code>
+        		&lt;a href="index.html" id="logo" title="Return to the homepage">Marios Sofokleous&lt;/a>
+        	</code>
+        	<h5>CSS</h5>
+        	<code>
+	        	#logo {<br>
+						&nbsp;&nbsp;width: 100px;<br>
+						&nbsp;&nbsp;height: 100px;<br>
+						&nbsp;&nbsp;display: block;<br>
+						&nbsp;&nbsp;background-size: cover;<br>
+						&nbsp;&nbsp;background-image: url(images/sprite-1.png);<br>
+						&nbsp;&nbsp;/* Move away text */<br>
+						&nbsp;&nbsp;text-indent: -9999px;<br>
+						}<br>
+						<br>
+						#logo:hover {<br>
+						&nbsp;&nbsp;background-position: 0  -100px;<br>
+						}
+					</code>
+        	<h5>Result</h5>
+        	<a href="index.html" id="logo-3" title="Return to the homepage">Marios Sofokleous</a>
+        	<h4>Method #2: As image</h4>
+        	<h5>HTML</h5>
+        	<code>
+	        	&lt;a href="index.html" id="logo" title="Return to the homepage"><br>
+						&nbsp;&nbsp;&lt;img src="images/sprite-1.png" alt="logo"><br>
+						&lt;/a>
+					</code>
+					<h5>CSS</h5>
+        	<code>
+        		#logo {<br>
+						&nbsp;&nbsp;width: 100px;<br>
+						&nbsp;&nbsp;height: 100px;<br>
+						&nbsp;&nbsp;display: block;<br>
+						&nbsp;&nbsp;overflow: hidden;<br>
+						}<br>
+						<br>
+						#logo img {<br>
+						&nbsp;&nbsp;width: 100px;<br>
+						&nbsp;&nbsp;height: auto;<br>
+						}<br>
+						<br>
+						#logo img:hover {<br>
+						&nbsp;&nbsp;object-position: 0 -100px;<br>
+						}
+        	</code>
+        	<h5>Result</h5>
+        	<a href="index.html" id="logo-4" title="Return to the homepage">
+					  <img src="images/sprite-1.png" alt="logo">
+					</a>
+					<p><b>Notes:</b></p>
+					<ol>
+						<li>
+							When an image has semantical meaning(e.g. logo, product, etc.) use 
+							the second method. Otherwise, if the image is just for decoration
+							(e.g. background of a button) use the first method.
+						</li>
+						<li>
+							We can have the same effect with the use of two separate image 
+              files(red logo, purple logo) and by having the actual background 
+              image change on hover. However, this is a disadvantage since it 
+							requires whenever* a hover state is triggered to load an image 
+							from the server. Therefore, there's going to be a flash in the 
+							transition and an extra HTTP request(overhead).
+						</li>
+          </ol>
+					<p>*With the exception of preloaded images</p> 
+          <h4>Example</h4>
+          <p>In this example the following sprite is used:</p>
+          <img src="images/sprite-2.png" id="sprite-2" alt="sprite-2">
+          <p>The sprite has the following properties:</p>
+          <ul>
+            <li>width: 924 pixels</li>
+            <li>height: 252 pixels</li>
+          </ul>
+          <p>
+            As we can infer from the sprite dimensions, each icon is 84 x 84 
+            pixels.
+          </p>
+          <h5>HTML</h5>
+          <code>
+            &lt;ul id="social-icons"><br>
+            &nbsp;&nbsp;&lt;li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="https://twitter.com" id="twitter"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/sprite-2.png" alt="social-icons-sprite"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a><br>
+            &nbsp;&nbsp;&lt;/li><br>
+            &nbsp;&nbsp;&lt;li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="https://facebook.com" id="facebook"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/sprite-2.png" alt="social-icons-sprite"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a><br>
+            &nbsp;&nbsp;&lt;/li><br>
+            &nbsp;&nbsp;&lt;li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="https://linkedin.com" id="linkedin"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/sprite-2.png" alt="social-icons-sprite"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a><br>
+            &nbsp;&nbsp;&lt;/li><br>
+            &lt;/ul>
+          </code>
+          <h5>CSS</h5>
+          <code>
+            #social-icons {<br>
+            &nbsp;&nbsp;list-style-type: none;<br>
+            }<br>
+            <br>
+            #social-icons li {<br>
+            &nbsp;&nbsp;display: inline-block;<br>
+            }<br>
+            <br>
+            #twitter, #facebook, #linkedin {<br>
+            &nbsp;&nbsp;width: 84px;<br>
+            &nbsp;&nbsp;height: 84px;<br>
+            &nbsp;&nbsp;display: block;<br>
+            &nbsp;&nbsp;overflow: hidden;<br>
+            }<br>
+            <br>
+            #twitter img {<br>
+            &nbsp;&nbsp;object-position: -672px 0;<br>
+            }<br>
+            <br>
+            #linkedin img {<br>
+            &nbsp;&nbsp;object-position: -336px 0;<br>
+            }<br>
+            <br>
+            #facebook img:hover {<br>
+            &nbsp;&nbsp;object-position: 0 -84px;<br>
+            }<br>
+            <br>
+            #twitter img:hover {<br>
+            &nbsp;&nbsp;object-position: -672px -84px;<br>
+            }<br>
+            <br>
+            #linkedin img:hover {<br>
+            &nbsp;&nbsp;object-position: -336px -84px;<br>
+            }
+          </code>
+          <h5>Result</h5>
+          <ul id="social-icons">
+            <li>
+              <a href="https://twitter.com" id="twitter">
+                <img src="images/sprite-2.png" alt="social-icons-sprite">
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com" id="facebook">
+                <img src="images/sprite-2.png" alt="social-icons-sprite">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com" id="linkedin">
+                <img src="images/sprite-2.png" alt="social-icons-sprite">
+              </a>
+            </li>
+          </ul>
+        </section>
 			</article>
     </main>
     <footer>
