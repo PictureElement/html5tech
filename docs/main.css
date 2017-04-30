@@ -1596,3 +1596,97 @@ nav #current {
 	/* position the subject to the center */
 	background-position: 0 10%;
 }
+
+/*------------------------------- Logo examples ------------------------------*/
+#logo-1 {
+	width: 100px;
+	height: 100px;
+	display: block;
+	background-size: cover;
+	background-image: url(images/logomakr_6AGIbQ.png);
+	/* Move away text */
+	text-indent: -9999px;
+}
+
+#logo-2 img {
+	width: 100px;
+	height: 100px;
+}
+
+/*------------------------------ Sprite example ------------------------------*/
+#sprite-1 {
+	width: 100px;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+
+#logo-3 {
+  width: 100px;
+  height: 100px;
+  display: block;
+  background-size: cover;
+  background-image: url(images/sprite-1.png);
+  /* Move away text */
+  text-indent: -9999px;
+}
+
+#logo-3:hover {
+	background-position: 0  -100px;
+}
+
+#logo-4 {
+	width: 100px;
+	height: 100px;
+	display: block;
+	overflow: hidden;
+}
+
+#logo-4 img {
+	width: 100px;
+	height: auto;
+}
+
+#logo-4 img:hover {
+	object-position: 0 -100px;
+}
+
+#sprite-2 {
+	width: 500px;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+
+#social-icons {
+	list-style-type: none;
+}
+
+#social-icons li {
+	display: inline-block;
+}
+
+#twitter, #facebook, #linkedin {
+	width: 84px;
+	height: 84px;
+	display: block;
+	overflow: hidden;
+}
+
+#twitter img {
+	object-position: -672px 0;	
+}
+
+#linkedin img {
+	object-position: -336px 0;	
+}
+
+#facebook img:hover {
+	object-position: 0 -84px;	
+}
+
+#twitter img:hover {
+	object-position: -672px -84px;	
+}
+
+#linkedin img:hover {
+	object-position: -336px -84px;	
+}
