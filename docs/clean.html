@@ -29,7 +29,7 @@
       <img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
       <!--
       <div class="tagline">
-        <h5>Fundamental resources about HTML5 &amp; friends</h5>
+        <h4>Fundamental resources about HTML5 &amp; friends</h4>
       </div>
       -->
       <nav>
@@ -85,7 +85,7 @@
     <main>
       <article>
         <header>
-          <h2>Clean Code</h2>
+          <h1>Clean Code</h1>
           <div class="byline-wrapper">
             <img src="images/avatar.png" alt="avatar" width="40">
             <a href="mailto:pictureelement@yandex.com">PictureElement</a>
@@ -94,17 +94,17 @@
           </div>
         </header>
         <section>
-          <h3>Staying DRY</h3>
-          <h4>Description</h4>
+          <h2>Staying DRY</h2>
+          <h3>Description</h3>
           <p><b>DRY</b> stands for <i>Don't Repeat Yourself</i></p>
-          <h4>Examples</h4>
+          <h3>Examples</h3>
           <ol>
           	<li>
           		<p>Elements that fall within the same parent container</p>
           		<ul>
           			<li>
           				<p>A clumsy solution:</p>
-				          <h5>HTML</h5>
+				          <h4>HTML</h4>
 				          <code>
 				          	&lt;section><br>
 				          	&nbsp;&nbsp;&lt;h1><i>Heading</i>&lt;/h1><br>
@@ -112,7 +112,7 @@
 				          	&nbsp;&nbsp;&lt;a><i>Link</i>&lt;/a><br>
 				          	&lt;/section>
 				          </code>
-					       	<h5>CSS</h5>
+					       	<h4>CSS</h4>
 				          <code>
 				            h1 {<br>
 				            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
@@ -132,7 +132,7 @@
 				          	A clean solution - Every element inherits the style from the 
 				          	container:
 				          </p>
-				          <h5>HTML</h5>
+				          <h4>HTML</h4>
 				          <code>
 				          	&lt;section><br>
 				          	&nbsp;&nbsp;&lt;div class="container"><br>
@@ -142,7 +142,7 @@
 				          	&nbsp;&nbsp;&lt;/div><br>
 				          	&lt;/section>
 				          </code>
-				          <h5>CSS</h5>
+				          <h4>CSS</h4>
 				          <code>
 				            .container {<br>
 				            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
@@ -153,7 +153,7 @@
 				    </li>
 				    <li>
 				    	<p>Elements that do not fall within the same parent container</p>
-		          <h5>HTML</h5>
+		          <h4>HTML</h4>
 		          <code>
 		          	&lt;header><br>
 								&nbsp;&nbsp;&lt;h1>Header&lt;/h1><br>
@@ -167,7 +167,7 @@
 		          <ul>
 								<li>          
 				          <p>A clumsy solution:</p>
-				          <h5>CSS</h5>
+				          <h4>CSS</h4>
 				          <code>
 				            h1 {<br>
 				            &nbsp;&nbsp;font-size: 15px;<br>
@@ -186,7 +186,7 @@
 		       				<p>
 				          	A clean solution - Use of multiple selectors:
 				          </p>
-				          <h5>CSS</h5>
+				          <h4>CSS</h4>
 				          <code>
 				          	h1, p, a {<br>
 				          	&nbsp;&nbsp;font-size: 15px;<br>
@@ -200,7 +200,7 @@
 				    	<ul>
 				    		<li>
 				    			<p>A clumsy solution:</p>
-				          <h5>HTML</h5>
+				          <h4>HTML</h4>
 				          <code>
 				         		&lt;header><br>
 				         		&nbsp;&nbsp;...<br>
@@ -209,7 +209,7 @@
 				         		&nbsp;&nbsp;...<br>
 				         		&lt;/footer>
 				         	</code>
-		              <h5>CSS</h5>
+		              <h4>CSS</h4>
 				          <code>
 				          	header {<br>
 										&nbsp;&nbsp;background: black;<br>
@@ -226,7 +226,7 @@
 				        </li>
 				        <li>
 				        	<p>A clean solution:</p>
-				          <h5>HTML</h5>
+				          <h4>HTML</h4>
 				          <code>
 				         		&lt;header><br>
 				         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
@@ -240,7 +240,7 @@
 				         		&nbsp;&nbsp;&lt;/div><br>
 				         		&lt;/footer>
 				         	</code>
-				        	<h5>CSS</h5>
+				        	<h4>CSS</h4>
 				        	<code>
 				        		.dark-bg {<br>
 				        		&nbsp;&nbsp;background: black;<br>
@@ -257,7 +257,7 @@
 							<ul>
 								<li>
 									<p>A clumsy solution:</p>
-									<h5>HTML</h5>
+									<h4>HTML</h4>
 				          <code>
 				         		&lt;header><br>
 				         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
@@ -271,7 +271,7 @@
 				         		&nbsp;&nbsp;&lt;/div><br>
 				         		&lt;/footer>
 				         	</code>
-				         	<h5>CSS</h5>
+				         	<h4>CSS</h4>
 				         	<code>
 				        		.dark-bg {<br>
 				        		&nbsp;&nbsp;background: black;<br>
@@ -294,7 +294,7 @@
 										<i>white-bg</i> class to be able to overwrite the background 
 										color of the <i>dark-bg</i> class.	
 									</p>
-									<h5>HTML</h5>
+									<h4>HTML</h4>
 				          <code>
 				         		&lt;header><br>
 				         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
@@ -308,7 +308,7 @@
 				         		&nbsp;&nbsp;&lt;/div><br>
 				         		&lt;/footer>
 				         	</code>
-				         	<h5>CSS</h5>
+				         	<h4>CSS</h4>
 				         	<code>
 				        		.dark-bg {<br>
 				        		&nbsp;&nbsp;background: black;<br>
@@ -327,7 +327,7 @@
 				    	<ul>
 				    		<li>
 				    			<p>A clumsy solution:</p>
-				          <h5>CSS</h5>
+				          <h4>CSS</h4>
 				          <code>
 				          	<i>.my-class</i> {<br>
 				          	&nbsp;&nbsp;margin-top: 10px;<br>
@@ -339,7 +339,7 @@
 				       	</li>
 				       	<li>
 				    			<p>A clean solution:</p>
-				          <h5>CSS</h5>
+				          <h4>CSS</h4>
 				          <code>
 				          	<i>.my-class</i> {<br>
 				          	&nbsp;&nbsp;margin: 10px 20px 10px 20px;

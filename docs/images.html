@@ -29,7 +29,7 @@
 			<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
       <!--
       <div class="tagline">
-        <h5>Fundamental resources about HTML5 &amp; friends</h5>
+        <h4>Fundamental resources about HTML5 &amp; friends</h4>
       </div>
       -->
 			<nav>
@@ -70,6 +70,17 @@
       		</div>
       	</div>
       	<div class="dropdown">
+      		<button class="dropbtn">Mobile<span class="arrow">&#9660;</span></button>
+      		<div class="dropdown-content">
+      			<a href="">1</a>
+      			<a href="">2</a>
+      			<a href="">3</a>
+      			<a href="">4</a>
+      			<a href="">5</a>
+      			<a href="">6</a>
+      		</div>
+      	</div>
+      	<div class="dropdown">
       		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
       		<div class="dropdown-content">
       			<a href="">1</a>
@@ -85,7 +96,7 @@
 		<main>
 			<article>
 				<header>
-					<h2>Images</h2>
+					<h1>Images</h1>
 					<div class="byline-wrapper">
 						<img src="images/avatar.png" alt="avatar" width="40">
 						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
@@ -94,7 +105,7 @@
 					</div>
 				</header>
 				<section>
-          <h3>Image Types</h3>
+          <h2>Image Types</h2>
           <ol>
             <li>
               <b>Content images:</b> just as necessary to the page as all of the 
@@ -111,15 +122,15 @@
           </ol>
         </section>
         <section>
-          <h3>Content Images</h3>
-          <h4>Description</h4>
+          <h2>Content Images</h2>
+          <h3>Description</h3>
           <p>
             The &lt;img&gt; element represents an image in the document. This 
             element has two required attributes: src and alt. Most browsers will 
             display the &lt;img&gt; element as <i>inline-block</i>.
           </p>
-          <h4>Basic Syntax</h4>
-          <h5>HTML</h5>
+          <h3>Basic Syntax</h3>
+          <h4>HTML</h4>
           <code>
           	&lt;img src="images/logo.png" alt="logo" height="50" width="50"&gt;
           </code>
@@ -141,29 +152,29 @@
               pixels.
             </li>
           </ul>
-          <h4>Examples</h4>
+          <h3>Examples</h3>
           <ol>
             <li>
               Insert an image
-              <h5>HTML</h5>
+              <h4>HTML</h4>
               <code>
               	&lt;img src="youtube-logo.png" alt="YouTube"&gt;
               </code>
-              <h5>Result</h5>
+              <h4>Result</h4>
               <img src="images/youtube-logo.png" alt="YouTube" width="30">
             </li>
             <li>
               Insert an image link
-              <h5>HTML</h5>
+              <h4>HTML</h4>
               <code>
               	&lt;a href="https://youtube.com&gt;YouTube&lt;img src="youtube-logo.png" alt="YouTube"&gt;&lt;/a&gt;
               </code>
-              <h5>Result</h5>
+              <h4>Result</h4>
               <a href="https://youtube.com"><img src="images/youtube-logo.png" alt="YouTube" width="30"></a>
             </li>
             <li>
               Side-by-side images
-              <h5>HTML</h5>
+              <h4>HTML</h4>
               <code>
              		&lt;ul class="images"&gt;<br>
                	&nbsp;&nbsp;&lt;li&gt;&lt;img src="images/google-logo.png" alt="Google logo"&gt;&lt;/li&gt;<br>
@@ -176,7 +187,7 @@
                 and has a bullet point. To make the images display side-by-side 
                 and remove the bullets, we need to jump over CSS.
               </p>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
              		.images {<br>
                 &nbsp;&nbsp;/* Remove bullets */<br>
@@ -193,7 +204,7 @@
                 &nbsp;&nbsp;padding-left: 10px;<br>
                 }
               </code>
-              <h5>Result</h5>
+              <h4>Result</h4>
               <ul class="images">
                 <li><img src="images/google-logo.png" alt="Google logo" width="60"></li>
                 <li><img src="images/yandex-logo.png" alt="Yandex logo" width="60"></li>
@@ -203,17 +214,17 @@
           </ol>
         </section>
         <section>
-          <h3>Layout Images</h3>
-          <h4>Description</h4>
+          <h2>Layout Images</h2>
+          <h3>Description</h3>
           <p>
             Unlike content images, layout/background images are not added in 
             HTML but only in CSS.
           </p>
-          <h4>Background Properties</h4>
+          <h3>Background Properties</h3>
           <ol>
             <li>
               <b>background-color</b>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
               	body {<br>
                 &nbsp;&nbsp;background-color: #5f5f5f;<br>
@@ -227,7 +238,7 @@
             </li>
             <li>
               <b>background-image</b>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
           			body {<br>
                 &nbsp;&nbsp;background-image: url(images/foo.png);<br>
@@ -241,7 +252,7 @@
             </li>
             <li>
               <b>background-position</b>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
              	<code>
               	body {<br>
                	&nbsp;&nbsp;background-position: <i>value</i>;<br>
@@ -269,7 +280,7 @@
             </li>
             <li>
               <b>background-repeat</b>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
               	body {<br>
                 &nbsp;&nbsp;background-position: top left;<br>
@@ -297,7 +308,7 @@
             </li>
             <li>
               <b>background-size</b>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
               	body {<br>
                	&nbsp;&nbsp;background-size: <i>width height</i> | cover | contain;<br>
@@ -320,12 +331,12 @@
               </ul>
             </li>
           </ol>
-          <h4>Background Shorthand Property</h4>
+          <h3>Background Shorthand Property</h3>
           <p>
             Background properties can be shortened into a single background 
             property:
           </p>
-          <h5>CSS</h5>
+          <h4>CSS</h4>
           <code>
            	body {<br>
           	&nbsp;&nbsp;background: <i>bg-color</i> <i>bg-image</i> <i>bg-position</i>/<i>bg-size</i> <i>bg-repeat</i>;<br>
@@ -336,7 +347,7 @@
             is the <i>bg-size</i> property, you must use a / (slash) to separate
             it from the <i>bg-position</i> property.
           </p>
-          <h4>Writing on Top of Background Images</h4>
+          <h3>Writing on Top of Background Images</h3>
           <p>
             Setup containers that display backgrounds/layout images and then add
             text tags on top of them.
@@ -345,7 +356,7 @@
             One way to do this, is to create a &lt;div&gt; container that completely 
             contains a background image, and put text tags inside of it:
           </p>
-          <h5>HTML</h5>
+          <h4>HTML</h4>
           <code>
           	&lt;div class="featured-image"&gt;<br>
            	&nbsp;&nbsp;&lt;!-- Add a text tag of your choice on top of the 
@@ -353,7 +364,7 @@
            	&nbsp;&nbsp;&lt;p&gt;Sneakers up to 30% off&lt;/p&gt;<br>
             &lt;/div&gt;
           </code>
-          <h5>CSS</h5>
+          <h4>CSS</h4>
           <code>
           	.featured-image {<br>
             &nbsp;&nbsp;/* Actual width of the &lt;div&gt; container */<br>
@@ -376,38 +387,38 @@
             &nbsp;&nbsp;text-transform: uppercase;<br>
             }
           </code>
-          <h5>Result</h5>
+          <h4>Result</h4>
           <div class="featured-image">
             <p>Sneakers up to 30% off</p>
           </div>
         </section>
         <section>
-          <h3>Floating Images</h3>
-          <h4>Description</h4>
+          <h2>Floating Images</h2>
+          <h3>Description</h3>
           <p>
           	To display an image to the side of block level tags, in other words 
           	to have an image sitting to the left/right of some text we use the 
           	<i>float</i> property.
           </p>
-          <h4>Example</h4>
-          <h5>HTML</h5>
+          <h3>Example</h3>
+          <h4>HTML</h4>
           <code>
 	        	&lt;ul class="cakes"&gt;<br>
 						&nbsp;&nbsp;&lt;li&gt;<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/strawberry-cake.jpg" alt="strawberry cake" height="90"&gt;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Strawberry Cake&lt;/h2&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Strawberry Cake&lt;/h1&gt;<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Description: This is a dangerously delicious cake!&lt;/p&gt;<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Creator: Marios Sofokleous&lt;/p&gt;<br>
 						&nbsp;&nbsp;&lt;/li&gt;<br>
 						&nbsp;&nbsp;&lt;li&gt;<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/unknown-cake.jpg" alt="unknown cake" height="90"&gt;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Unknown Cake&lt;/h2&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Unknown Cake&lt;/h1&gt;<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Description: Chocolate, strawberry, cookies, maltesers ... you name it!&lt;/p&gt;<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Creator: Marios Sofokleous&lt;/p&gt;<br>
 						&nbsp;&nbsp;&lt;/li&gt;<br>
 						&lt;/ul&gt;
 					</code>
-					<h5>CSS</h5>
+					<h4>CSS</h4>
           <code>
  						.cakes {<br>
 						&nbsp;&nbsp;/* Remove bullets */<br>
@@ -422,18 +433,18 @@
   					&nbsp;&nbsp;border: 1px solid black;<br>
  						}
  					</code>
- 					<h5>Result</h5>
+ 					<h4>Result</h4>
  					<div class="result-wrapper">
 	 					<ul class="cakes">
 						  <li>
 						    <img src="images/strawberry-cake.jpg" alt="strawberry cake" height="90">
-						    <h2>Strawberry Cake</h2>
+						    <h1>Strawberry Cake</h1>
 						    <p>Description: This is a dangerously delicious cake!</p>
 						    <p>Creator: Marios Sofokleous</p>
 						  </li>
 						  <li>
 						    <img src="images/unknown-cake.jpg" alt="unknown cake" height="90">
-						    <h2>Unknown Cake</h2>
+						    <h1>Unknown Cake</h1>
 						    <p>Description: Chocolate, strawberry, cookies, maltesers ... you name it!</p>
 						    <p>Creator: Marios Sofokleous</p>
 						  </li>
@@ -445,13 +456,13 @@
 					</p> 
 				</section>
 				<section>
-        	<h3>Image Cropping</h3>
-          <h4>Example #1: Crop, Resize, Don't keep ratio</h4>
-          <h5>HTML</h5>
+        	<h2>Image Cropping</h2>
+          <h3>Example #1: Crop, Resize, Don't keep ratio</h3>
+          <h4>HTML</h4>
           <code>
           	&lt;img src="images/bus.jpeg" alt="bus">
           </code>
-          <h5>CSS</h5>
+          <h4>CSS</h4>
          	<code>
           	img {<br>
 						&nbsp;&nbsp;border: 1px solid red;<br>
@@ -459,16 +470,16 @@
 						&nbsp;&nbsp;width: 200px;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
         	<img id="image-crop" src="images/bus.jpeg" alt="bus">
-        	<h4>Example #2: Crop, Position, Don't resize, Keep ratio</h4>
-        	<h5>HTML</h5>
+        	<h3>Example #2: Crop, Position, Don't resize, Keep ratio</h3>
+        	<h4>HTML</h4>
           <code>
           	&lt;div id="crop"><br>
         		&nbsp;&nbsp;&lt;img src="images/bus.jpeg" alt="bus"><br>
         		&lt;/div>
         	</code>
-        	<h5>CSS</h5>
+        	<h4>CSS</h4>
          	<code>
 	         	#crop {<br>
 						&nbsp;&nbsp;border: 1px solid red;<br>
@@ -483,18 +494,18 @@
 						&nbsp;&nbsp;top: -1800px;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
         	<div id="crop-1">
         		<img src="images/bus.jpeg" alt="bus">
         	</div>
-        	<h4>Example #3: Crop, Position, Resize, Keep ratio, Account for portrait-oriented images</h4>
-        	<h5>HTML</h5>
+        	<h3>Example #3: Crop, Position, Resize, Keep ratio, Account for portrait-oriented images</h3>
+        	<h4>HTML</h4>
           <code>
 	          &lt;div id="crop"><br>
 	        	&nbsp;&nbsp;&lt;img src="images/bus.jpeg" alt="bus"><br>
 	        	&lt;/div>
 	        </code>
-	        <h5>CSS</h5>
+	        <h4>CSS</h4>
          	<code>
 	         	#crop {<br>
 						&nbsp;&nbsp;border: 1px solid red;<br>
@@ -510,18 +521,18 @@
   					&nbsp;&nbsp;left: -170px;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
         	<div id="crop-2">
         		<img src="images/bus.jpeg" alt="bus">
         	</div>
-        	<h4>Example #4: Crop, Resize, Keep ratio, Account for landscape-oriented images</h4>
-        	<h5>HTML</h5>
+        	<h3>Example #4: Crop, Resize, Keep ratio, Account for landscape-oriented images</h3>
+        	<h4>HTML</h4>
           <code>
 	          &lt;div id="crop"><br>
 	        	&nbsp;&nbsp;&lt;img src="images/bus.jpeg" alt="bus"><br>
 	        	&lt;/div>
 	        </code>
-	        <h5>CSS</h5>
+	        <h4>CSS</h4>
          	<code>
 	         	#crop {<br>
 						&nbsp;&nbsp;border: 1px solid red;<br>
@@ -535,22 +546,22 @@
 						&nbsp;&nbsp;width: 100%;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
         	<div id="crop-3">
         		<img src="images/bus.jpeg" alt="bus">
         	</div>
-        	<h4>
+        	<h3>
         		Example #5: Crop, Position, Resize, Keep ratio, Account for both 
         		portrait-oriented & landscape-oriented images
-        	</h4>
-        	<h5>HTML</h5>
+        	</h3>
+        	<h4>HTML</h4>
           <code>
 		      	&lt;div id="crop-1" style="background-image: url(images/bus.jpeg)"><br>
 	        	&lt;/div><br>
 	        	&lt;div id="crop-2" style="background-image: url(images/selfie-monkey.jpeg)"><br>
 	        	&lt;/div>
 	        </code>
-	        <h5>CSS</h5>
+	        <h4>CSS</h4>
          	<code>
 	         	#crop-1 {<br>
 						&nbsp;&nbsp;width: 300px;<br>
@@ -570,20 +581,20 @@
 						&nbsp;&nbsp;background-position: 0 10%;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
         	<div id="crop-4" style="background-image: url(images/bus.jpeg)">
         	</div>
         	<div id="crop-5" style="background-image: url(images/selfie-monkey.jpeg)">
         	</div>
         </section>
         <section>
-        	<h3>Logos</h3>
-        	<h4>Method #1: Apply logo as background</h4>
-        	<h5>HTML</h5>
+        	<h2>Logos</h2>
+        	<h3>Method #1: Apply logo as background</h3>
+        	<h4>HTML</h4>
         	<code>
         		&lt;a href="index.html" id="logo" title="Return to the homepage">Marios Sofokleous&lt;/a>
         	</code>
-        	<h5>CSS</h5>
+        	<h4>CSS</h4>
         	<code>
         		#logo {<br>
 						&nbsp;&nbsp;width: 100px;<br>
@@ -595,23 +606,23 @@
 						&nbsp;&nbsp;text-indent: -9999px;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
         	<a href="index.html" id="logo-1" title="Return to the homepage">Marios Sofokleous</a>
-        	<h4>Method #2: Apply logo as image</h4>
-        	<h5>HTML</h5>
+        	<h3>Method #2: Apply logo as image</h3>
+        	<h4>HTML</h4>
         	<code>
         		&lt;a href="index.html" id="logo" title="Return to the homepage"><br>
         		&nbsp;&nbsp;&lt;img src="images/logomakr_6AGIbQ.png" alt="logo"><br>
         		&lt;/a>
         	</code>
-        	<h5>CSS</h5>
+        	<h4>CSS</h4>
         	<code>
         		#logo img {<br>
 						&nbsp;&nbsp;width: 100px;<br>
 						&nbsp;&nbsp;height: 100px;<br>
 						}
         	</code>
-        	<h5>Result</h5>
+        	<h4>Result</h4>
         	<a href="index.html" id="logo-2" title="Return to the homepage">
         		<img src="images/logomakr_6AGIbQ.png" alt="logo">
         	</a>
@@ -624,8 +635,8 @@
         	</p> 
         </section>
         <section>
-        	<h3>Sprites</h3>
-        	<h4>Description</h4>
+        	<h2>Sprites</h2>
+        	<h3>Description</h3>
         	<p>
         		CSS Sprites are means of combining multiple images into a single 
         		image file to improve performance by limiting requests to the 
@@ -636,12 +647,12 @@
         		sprite:
         	</p>
        		<img src="images/sprite-1.png" id="sprite-1" alt="sprite-1">
-        	<h4>Method #1: As background</h4>
-        	<h5>HTML</h5>
+        	<h3>Method #1: As background</h3>
+        	<h4>HTML</h4>
         	<code>
         		&lt;a href="index.html" id="logo" title="Return to the homepage">Marios Sofokleous&lt;/a>
         	</code>
-        	<h5>CSS</h5>
+        	<h4>CSS</h4>
         	<code>
 	        	#logo {<br>
 						&nbsp;&nbsp;width: 100px;<br>
@@ -657,16 +668,16 @@
 						&nbsp;&nbsp;background-position: 0  -100px;<br>
 						}
 					</code>
-        	<h5>Result</h5>
+        	<h4>Result</h4>
         	<a href="index.html" id="logo-3" title="Return to the homepage">Marios Sofokleous</a>
-        	<h4>Method #2: As image</h4>
-        	<h5>HTML</h5>
+        	<h3>Method #2: As image</h3>
+        	<h4>HTML</h4>
         	<code>
 	        	&lt;a href="index.html" id="logo" title="Return to the homepage"><br>
 						&nbsp;&nbsp;&lt;img src="images/sprite-1.png" alt="logo"><br>
 						&lt;/a>
 					</code>
-					<h5>CSS</h5>
+					<h4>CSS</h4>
         	<code>
         		#logo {<br>
 						&nbsp;&nbsp;width: 100px;<br>
@@ -684,7 +695,7 @@
 						&nbsp;&nbsp;object-position: 0 -100px;<br>
 						}
         	</code>
-        	<h5>Result</h5>
+        	<h4>Result</h4>
         	<a href="index.html" id="logo-4" title="Return to the homepage">
 					  <img src="images/sprite-1.png" alt="logo">
 					</a>
@@ -705,7 +716,7 @@
 						</li>
           </ol>
 					<p>*With the exception of preloaded images</p> 
-          <h4>Example</h4>
+          <h3>Example</h3>
           <p>In this example the following sprite is used:</p>
           <img src="images/sprite-2.png" id="sprite-2" alt="sprite-2">
           <p>The sprite has the following properties:</p>
@@ -717,7 +728,7 @@
             As we can infer from the sprite dimensions, each icon is 84 x 84 
             pixels.
           </p>
-          <h5>HTML</h5>
+          <h4>HTML</h4>
           <code>
             &lt;ul id="social-icons"><br>
             &nbsp;&nbsp;&lt;li><br>
@@ -737,7 +748,7 @@
             &nbsp;&nbsp;&lt;/li><br>
             &lt;/ul>
           </code>
-          <h5>CSS</h5>
+          <h4>CSS</h4>
           <code>
             #social-icons {<br>
             &nbsp;&nbsp;list-style-type: none;<br>
@@ -774,7 +785,7 @@
             &nbsp;&nbsp;object-position: -336px -84px;<br>
             }
           </code>
-          <h5>Result</h5>
+          <h4>Result</h4>
           <ul id="social-icons">
             <li>
               <a href="https://twitter.com" id="twitter">

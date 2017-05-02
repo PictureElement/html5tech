@@ -29,7 +29,7 @@
 			<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
       <!--
       <div class="tagline">
-        <h5>Fundamental resources about HTML5 &amp; friends</h5>
+        <h4>Fundamental resources about HTML5 &amp; friends</h4>
       </div>
       -->
 			<nav>
@@ -85,7 +85,7 @@
     <main>
       <article>
         <header>
-          <h2>Box Model</h2>
+          <h1>Box Model</h1>
           <div class="byline-wrapper">
 						<img src="images/avatar.png" alt="avatar" width="40">
 						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
@@ -94,7 +94,7 @@
 					</div>
         </header>
         <section>
-          <h3>Description</h3>
+          <h2>Description</h2>
           <p>
             Every tag shown in the body is contained in an invisible rectangle 
             called the box. The box model is a way to describe the borders and 
@@ -103,7 +103,7 @@
           </p>
         </section>
         <section>
-          <h3>Properties</h3>
+          <h2>Properties</h2>
           <ol>
             <li>
               <b>Content area:</b> actual content of the box, where text and 
@@ -124,13 +124,13 @@
             </li>
           </ol>
           <img src="images/box.png" alt="Box model" width="600">
-          <h4>When should you use padding and margin?</h4>
+          <h3>When should you use padding and margin?</h3>
           <p>
             Padding is used to control the size of a box without adjusting the 
             size of the content inside the box.
           </p>
           <p>Margin is used to control the space between boxes.</p>
-          <h4>Calculate the box size</h4>
+          <h3>Calculate the box size</h3>
           <p>
             <b>box width</b> =<br>
             content area width +<br>
@@ -144,8 +144,8 @@
             (border top + border bottom) +<br>
             (margin top + margin bottom)
           </p>
-          <h4>Apply box model properties</h4>
-          <h5>CSS</h5>
+          <h3>Apply box model properties</h3>
+          <h4>CSS</h4>
           <code>
           	h1 {<br>
             &nbsp;&nbsp;padding-top: 6px;<br>
@@ -181,19 +181,19 @@
           </code>
         </section>
         <section>
-          <h3>Browser defaults</h3>
-          <h4>Description</h4>
+          <h2>Browser defaults</h2>
+          <h3>Description</h3>
           <p>
             Browsers actually have a default styleheet for when no custom styles
             are set. To reset default styles (padding, border, margin) in order 
             to set the box model properties by yourself include each tag you 
             want to reset in CSS as shown below.
           </p>
-          <h5>CSS</h5>
+          <h4>CSS</h4>
           <code>
             /* Reset browser defaults */<br>
-            html, body, div, span, applet, object, iframe, h1, h2, h3, h4,<br> 
-            h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,<br> 
+            html, body, div, span, applet, object, iframe, h1, h1, h2, h3,<br> 
+            h4, h6, p, blockquote, pre, a, abbr, acronym, address, big,<br> 
             cite, code, del, dfn, img, ins, kbd, q, s, samp, small,<br> 
             strike, sub, sup, tt, var, u, dl, dt, dd, ol, ul, li,<br> 
             fieldset, form, label, legend, table, caption, tbody, tfoot,<br>
@@ -216,20 +216,20 @@
           </p>
         </section>
         <section>
-          <h3>Display Types</h3>
-          <h4>Description</h4>
+          <h2>Display Types</h2>
+          <h3>Description</h3>
           <p>
             The <i>display</i> property specifies the type of box used for an 
             element.
           </p>
-          <h4>Syntax</h4>
-          <h5>CSS</h5>
+          <h3>Syntax</h3>
+          <h4>CSS</h4>
           <code>
             <i>element</i> {<br>
             &nbsp;&nbsp;display: none | inline | block | inline-block<br>
             }
           </code>
-          <h4>Block Elements</h4>
+          <h3>Block Elements</h3>
           <p>
             Their content takes up the entire width of the container that they 
             are in. These type of elements can have a width and height set on 
@@ -237,7 +237,7 @@
             Examples of block-level tags are &lt;div>, &lt;p>, &lt;ul>, 
             &lt;ol>, &lt;li>, &lt;h1>, ..., &lt;h6>.
           </p>
-          <h4>Inline Elements</h4>
+          <h3>Inline Elements</h3>
           <p>
             Their content does not take up more width that it needs. These 
             elements are typically found within block-level elements. Inline 
@@ -247,7 +247,7 @@
             margin/padding. Examples of inline-level elements are &lt;span>, 
             &lt;a>, &lt;img>, &lt;input>, &lt;label>, &lt;strong>, &lt;em>. 
           </p>
-          <h4>Inline-block Elements</h4>
+          <h3>Inline-block Elements</h3>
           <p>
             Their content does not take up more width that it needs and they 
             allow other elements to sit to their left and right (same flow as 
@@ -258,33 +258,33 @@
           </p> 
         </section>
         <section>
-          <h3>Centering Content</h3>
-          <h4>Centering an entire block element</h4>
+          <h2>Centering Content</h2>
+          <h3>Centering an entire block element</h3>
           <p>
           	If you want to center an entire block-level <b>heading content</b>
           	element(e.g. h1-h6) you just need to set <i>text-align</i> to 
           	<i>center</i>.
           </p>
-          <h5>HTML</h5>
+          <h4>HTML</h4>
           <code>
           	&lt;div><br>
-          	&nbsp;&nbsp;&lt;h2>HEADING&lt;/h2><br>
+          	&nbsp;&nbsp;&lt;h1>HEADING&lt;/h1><br>
           	&lt;/div>
           </code>	
-          <h5>CSS</h5>
+          <h4>CSS</h4>
           <code>
           	div {<br>
           	&nbsp;&nbsp;border: 5px solid red;<br>
           	}<br>
           	<br>
-          	div h2 {<br>
+          	div h1 {<br>
           	&nbsp;&nbsp;color: blue;<br>
         		&nbsp;&nbsp;text-align: center;<br>
        			}
        		</code>
-       		<h5>Result</h5>
+       		<h4>Result</h4>
        		<div id=centering-1>
-       			<h2>HEADING</h2>
+       			<h1>HEADING</h1>
        		</div>
        		<p>
           	If you want to center an entire block-level <b>sectioning 
@@ -293,60 +293,60 @@
           	aware that center aligning has no effect if the width property is 
           	not set (or set to 100%).
           </p>
-          <h5>HTML</h5>
+          <h4>HTML</h4>
           <code>
           	&lt;div><br>
           	&nbsp;&nbsp;&amp;nbsp;<br>
           	&lt;/div>
           </code>	
-          <h5>CSS</h5>
+          <h4>CSS</h4>
           <code>
           	div {<br>
           	&nbsp;&nbsp;width: 50%;<br>
           	&nbsp;&nbsp;margin: 0 auto;<br>
           	}
           </code>
-          <h5>Result</h5>
+          <h4>Result</h4>
           <div id=centering-2>
 						&nbsp;
 					</div>
-   				<h4>Centering inline and inline-block elements</h4>
+   				<h3>Centering inline and inline-block elements</h3>
    				<p>
    					You can center inline and inline-block elements within a block-level 
    					parent element by setting <i>text-align</i> to <i>center</i>.
    				</p>
-   				<h5>HTML</h5>
+   				<h4>HTML</h4>
    				<code>
    					&lt;div><br>
 						&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width=50><br>
 						&lt;/div>
 					</code>
-   				<h5>CSS</h5>
+   				<h4>CSS</h4>
           <code>
           	div {<br>
 						&nbsp;&nbsp;border: 5px solid red;<br>
 						&nbsp;&nbsp;text-align: center;<br>
 						}
        	  </code>
-       	  <h5>Result</h5>
+       	  <h4>Result</h4>
        		<div id=centering-3>
   					<img src="images/avatar.png" alt="avatar" width=100>
 					</div>
        	</section>
         <section>
-          <h3>Box Sizing</h3>
-          <h4>Description</h4>
+          <h2>Box Sizing</h2>
+          <h3>Description</h3>
           <p>
             The <i>box-sizing</i> property changes the default CSS box model, 
             which is used to calculate widths and heights of given elements.
           </p>
-          <h4>Content-box(default)</h4>
-          <h5>HTML</h5>
+          <h3>Content-box(default)</h3>
+          <h4>HTML</h4>
           <code>
             &lt;div class="content-box"&gt;<br>
             &lt;/div&gt;
           </code>
-          <h5>CSS</h5>
+          <h4>CSS</h4>
           <code>
             .content-box {<br>
             &nbsp;&nbsp;border: 10px solid black;<br>
@@ -356,7 +356,7 @@
             &nbsp;&nbsp;height: 100px;
             }
           </code>
-          <h5>Result</h5>
+          <h4>Result</h4>
           <div class="content-box">
             <p>CONTENT</p>
           </div>
@@ -366,7 +366,7 @@
           <p>
             <b>rendered box height</b> = 100px(content) + 60px(padding) + 20px(border) = 180px
           </p>
-          <h4>Padding-box*</h4>
+          <h3>Padding-box*</h3>
           <code>
             &lt;div class="padding-box"&gt;<br>
             &lt;/div&gt;
@@ -381,7 +381,7 @@
             &nbsp;&nbsp;height: 100px;<br>
             }
           </code>
-          <h5>Result</h5>
+          <h4>Result</h4>
           <div class="padding-box">
             <p>CONTENT</p>
           </div>
@@ -392,7 +392,7 @@
             <b>rendered box height</b> = 100px[40px(content)+60px(padding)] + 20px(border) = 120px
           </p>
           <p>*This API is depricated and it should no longer be used.</p>
-          <h4>Border-box</h4>
+          <h3>Border-box</h3>
           <code>
             &lt;div class="border-box"&gt;<br>
             &lt;/div&gt;
@@ -407,7 +407,7 @@
             &nbsp;&nbsp;height: 100px;<br>
             }
           </code>
-          <h5>Result</h5>
+          <h4>Result</h4>
           <div class="border-box">
             <p>CONTENT</p>
           </div>
@@ -419,9 +419,9 @@
           </p>
         </section>
         <section>
-          <h3>Overflow property</h3>
-          <h4>Syntax</h4>
-          <h5>CSS</h5>
+          <h2>Overflow property</h2>
+          <h3>Syntax</h3>
+          <h4>CSS</h4>
           <code>
             overflow: visible / auto / hidden / scroll
           </code>
@@ -444,8 +444,8 @@
               needed.
             </li>
           </ul>
-          <h4>Example</h4>
-          <h5>HTML</h5>
+          <h3>Example</h3>
+          <h4>HTML</h4>
           <code>
             &lt;div><br>
             &nbsp;&nbsp;&lt;p><br>
@@ -471,7 +471,7 @@
           <ol id="overflow-list">
             <li>
               <p><i>visible</i></p>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
                 div {<br>
                 &nbsp;&nbsp;border: 1px solid red;<br>
@@ -480,7 +480,7 @@
                 &nbsp;&nbsp;overflow: visible;<br>
                 }
               </code>
-              <h5>Result</h5>
+              <h4>Result</h4>
               <div id="visible">
                 <p>
                   Sed ut perspiciatis, unde omnis iste natus error sit 
@@ -501,7 +501,7 @@
             </li>
             <li>
               <p><i>auto</i></p>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
                 div {<br>
                 &nbsp;&nbsp;border: 1px solid red;<br>
@@ -510,7 +510,7 @@
                 &nbsp;&nbsp;overflow: auto;<br>
                 }
               </code>
-              <h5>Result</h5>
+              <h4>Result</h4>
               <div id="auto">
                 <p>
                   Sed ut perspiciatis, unde omnis iste natus error sit 
@@ -531,7 +531,7 @@
             </li>
             <li>
               <p><i>hidden</i></p>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
                 div {<br>
                 &nbsp;&nbsp;border: 1px solid red;<br>
@@ -540,7 +540,7 @@
                 &nbsp;&nbsp;overflow: hidden;<br>
                 }
               </code>
-              <h5>Result</h5>
+              <h4>Result</h4>
               <div id="hidden">
                 <p>
                   Sed ut perspiciatis, unde omnis iste natus error sit 
@@ -561,7 +561,7 @@
             </li>
             <li>
               <p><i>scroll</i></p>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
                 #scroll {<br>
                 &nbsp;&nbsp;border: 1px solid red;<br>
@@ -570,7 +570,7 @@
                 &nbsp;&nbsp;overflow: scroll;<br>
                 }
               </code>
-              <h5>Result</h5>
+              <h4>Result</h4>
               <div id="scroll">
                 <p>
                   Sed ut perspiciatis, unde omnis iste natus error sit 
@@ -592,9 +592,9 @@
           </ol>
         </section>
         <section>
-          <h3>Position property</h3>
-          <h4>Syntax</h4>
-          <h5>CSS</h5>
+          <h2>Position property</h2>
+          <h3>Syntax</h3>
+          <h4>CSS</h4>
           <code>
             position: static / relative / absolute / fixed 
           </code>
@@ -623,11 +623,11 @@
             <b>Note:</b> A <b>positioned</b> element is an element whose is 
             either in relative, absolute, or fixed position. 
           </p>
-          <h4>Examples</h4>
+          <h3>Examples</h3>
           <ol>
             <li>
               <p><i>relative</i></p>
-              <h5>HTML</h5>
+              <h4>HTML</h4>
               <code>
                 &lt;div><br>
                 &nbsp;&nbsp;&lt;p><br>
@@ -636,7 +636,7 @@
                 &lt;/div>
               </code>
               <p><b>Note:</b> The &lt;sup> tag defines superscript text.</p>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
               div sup {<br>
               &nbsp;&nbsp;font-size: 75%;<br>
@@ -644,7 +644,7 @@
               &nbsp;&nbsp;top: -5px;<br>
               }
               </code>
-              <h5>Result</h5>
+              <h4>Result</h4>
               <div class="result-wrapper">
                 <div id="relative">
                   <p>
@@ -655,10 +655,10 @@
             </li>
             <li>
               <p><i>absolute</i></p>
-              <h5>HTML</h5>
+              <h4>HTML</h4>
               <code>
                 &lt;div><br>
-                &nbsp;&nbsp;&lt;h2>Samsung Galaxy S8 and S8+ Review&lt;/h2><br>
+                &nbsp;&nbsp;&lt;h1>Samsung Galaxy S8 and S8+ Review&lt;/h1><br>
                 &nbsp;&nbsp;&lt;img src="images/samsung-galaxy-s8.png" alt="samsung-galaxy-s8" width="50"><br>
                 &nbsp;&nbsp;&lt;p><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;The Samsung Galaxy S8’s beautiful hardware deserves a more unified software experience. At
@@ -670,7 +670,7 @@
                 &nbsp;&nbsp;&lt;/p><br>
                 &lt;/div>
               </code>
-              <h5>CSS</h5>
+              <h4>CSS</h4>
               <code>
                 div {<br>
                 &nbsp;&nbsp;position: relative;<br>
@@ -684,9 +684,9 @@
                 &nbsp;&nbsp;top: 5px;<br>
                 }
               </code>
-              <h5>Result</h5>
+              <h4>Result</h4>
               <div id="absolute">
-                <h2>Samsung Galaxy S8 and S8+ Review</h2>
+                <h1>Samsung Galaxy S8 and S8+ Review</h1>
                 <img src="images/samsung-galaxy-s8.png" alt="samsung-galaxy-s8" width="50">
                 <p>
                   The Samsung Galaxy S8’s beautiful hardware deserves a more 
@@ -708,7 +708,7 @@
             </li>
            	<li>
              	<p><i>fixed</i></p>
-              <h5>HTML</h5>
+              <h4>HTML</h4>
               <code>
 	              &lt;header><br>
 								&nbsp;&nbsp;&lt;img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500"><br>
@@ -717,7 +717,7 @@
 						  	&nbsp;&nbsp;&lt;/nav><br>
 								&lt;/header>
 							</code>
-							<h5>CSS</h5>
+							<h4>CSS</h4>
 							<code>
 								header {<br>
 								&nbsp;&nbsp;background:<br>
@@ -743,8 +743,8 @@
           </ol>
         </section>
         <section>
-          <h3>Z-index</h3>
-          <h4>Description</h4>
+          <h2>Z-index</h2>
+          <h3>Description</h3>
           <p>
           	By default an element that appears later in HTML, is rendered above 
           	an earlier element (cascade order). However if the earlier element 
@@ -752,13 +752,13 @@
           	<em>only</em> works on <i>positioned</i> elements 
           	(absolute, relative, fixed). 
           </p>
-          <h4>Syntax</h4>
-          <h5>CSS</h5>
+          <h3>Syntax</h3>
+          <h4>CSS</h4>
           <code>
           	z-index: <i>integer</i>
           </code>
-          <h4>Example</h4>
-          <h5>HTML</h5>
+          <h3>Example</h3>
+          <h4>HTML</h4>
           <code>
           	&lt;div id="z-index"><br>
 	          &nbsp;&nbsp;&lt;img id="img-1" src="images/number-1.png" alt="number-1" width="300"><br>
@@ -767,7 +767,7 @@
 	        </code>
 	        <ul>
 	        	<li>
-	        		<h5>CSS</h5>
+	        		<h4>CSS</h4>
 	        		<code>
 		        		#z-index {<br>
 								&nbsp;&nbsp;position: relative;<br>
@@ -789,14 +789,14 @@
 								&nbsp;&nbsp;z-index: 0;<br>
 								}
 							</code>
-							<h5>Result</h5>
+							<h4>Result</h4>
 							<div id="z-index-1">
 			        	<img id="img-1" src="images/number-1.png" alt="number-1" width="300">
 			        	<img id="img-2" src="images/number-2.png" alt="number-2" width="300">
 			        </div>
 		        </li>
 		        <li>
-		        	<h5>CSS</h5>
+		        	<h4>CSS</h4>
 		        	<code>
 		        		#z-index {<br>
 								&nbsp;&nbsp;position: relative;<br>
@@ -818,7 +818,7 @@
 								&nbsp;&nbsp;z-index: 0;<br>
 								}
 							</code>
-        			<h5>Result</h5>
+        			<h4>Result</h4>
         			<div id="z-index-2">
 			        	<img id="img-3" src="images/number-1.png" alt="number-1" width="300">
 			        	<img id="img-4" src="images/number-2.png" alt="number-2" width="300">
@@ -827,22 +827,22 @@
 		      </ul>
 		    </section>
 		    <section>
-		    	<h3>Margin Collapsing</h3>
-		    	<h4>Description</h4>
+		    	<h2>Margin Collapsing</h2>
+		    	<h3>Description</h3>
           <p>
           	Top and bottom margins of block-level elements sometimes collapse 
           	into a single margin whose size is the largest of the margins 
           	combined into it.
           </p>
-          <h4>Example #1: Collapsing margins between adjacent elements</h4>
-          <h5>HTML</h5>
+          <h3>Example #1: Collapsing margins between adjacent elements</h3>
+          <h4>HTML</h4>
           <code>
 	          &lt;div><br>
 						&nbsp;&nbsp;&lt;p>Paragraph 1&lt;/p><br>
 	         	&nbsp;&nbsp;&lt;p>Paragraph 2&lt;/p><br>
 	         	&lt;/div>
 	        </code>
-	        <h5>CSS</h5>
+	        <h4>CSS</h4>
 	        <code>
 	        	div p {<br>
 						&nbsp;&nbsp;background-color: green;<br>
@@ -852,7 +852,7 @@
 						&nbsp;&nbsp;margin-bottom: 40px;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
          	<div id="margin-collapsing-1">
          		<p>Paragraph 1</p>
          		<p>Paragraph 2</p>
@@ -862,8 +862,8 @@
          		paragraphs but the margin will end up becoming the larger of the two 
          		values(i.e. top and bottom margins), in this case 40px.
          	</p>
-         	<h4>Example #2a: Collapsing margins between parent and child elements</h4>
-         	<h5>HTML</h5>
+         	<h3>Example #2a: Collapsing margins between parent and child elements</h3>
+         	<h4>HTML</h4>
           <code>
 	          &lt;div id="margin-collapsing-2"><br>
 	         	&nbsp;&nbsp;&lt;div id="margin-collapsing-3"><br>
@@ -871,7 +871,7 @@
 	         	&nbsp;&nbsp;&lt;/div><br>
 	         	&lt;/div>
 	        </code>
-	        <h5>CSS</h5>
+	        <h4>CSS</h4>
 	        <code>
 		        div {<br>
 						&nbsp;&nbsp;margin: 20px 0;<br>
@@ -889,14 +889,14 @@
 						&nbsp;&nbsp;background-color: blue;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
          	<div id="margin-collapsing-2">
          		<div id="margin-collapsing-3">
          			<div id="margin-collapsing-4"><p>Paragraph</p></div>
          		</div>
          	</div>
-         	<h4>Example #2b: Apply border to the parent to prevent collapsing</h4>
-          <h5>HTML</h5>
+         	<h3>Example #2b: Apply border to the parent to prevent collapsing</h3>
+          <h4>HTML</h4>
           <code>
 	          &lt;div id="margin-collapsing-5"><br>
 	         	&nbsp;&nbsp;&lt;div id="margin-collapsing-6"><br>
@@ -904,7 +904,7 @@
 	         	&nbsp;&nbsp;&lt;/div><br>
 	         	&lt;/div>
 	        </code>
-	        <h5>CSS</h5>
+	        <h4>CSS</h4>
 	        <code>
 		        div {<br>
 						&nbsp;&nbsp;margin: 20px 0;<br>
@@ -926,14 +926,14 @@
 						&nbsp;&nbsp;border: 1px solid black;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
          	<div id="margin-collapsing-5">
          		<div id="margin-collapsing-6">
          			<div id="margin-collapsing-7"><p>Paragraph</p></div>
          		</div>
          	</div>
-         	<h4>Example #2c: Apply padding to the parent to prevent collapsing</h4>
-         	<h5>HTML</h5>
+         	<h3>Example #2c: Apply padding to the parent to prevent collapsing</h3>
+         	<h4>HTML</h4>
           <code>
 	          &lt;div id="margin-collapsing-8"><br>
 	         	&nbsp;&nbsp;&lt;div id="margin-collapsing-9"><br>
@@ -941,7 +941,7 @@
 	         	&nbsp;&nbsp;&lt;/div><br>
 	         	&lt;/div>
 	        </code>
-	        <h5>CSS</h5>
+	        <h4>CSS</h4>
 	        <code>
 		        div {<br>
 						&nbsp;&nbsp;margin: 20px 0;<br>
@@ -963,13 +963,13 @@
 						&nbsp;&nbsp;padding: 1px 0;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
          	<div id="margin-collapsing-8">
          		<div id="margin-collapsing-9">
          			<div id="margin-collapsing-10"><p>Paragraph</p></div>
          		</div>
          	</div>
-         	<h4>Important</h4>
+         	<h3>Important</h3>
          	<p>
          		Using padding or border will prevent margin to collapse 
          		<strong>only</strong> in cases of collapsing margins between parent 

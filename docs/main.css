@@ -24,7 +24,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 /* Reset browser defaults ("em", "i", "b", and "strong" tags not included) */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+html, body, div, span, applet, object, iframe, h1, h1, h2, h3, h4, h6, p, 
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, 
 ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, dl, dt,
 dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, 
@@ -34,13 +34,14 @@ audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 100%; /* default font size: 16px; */
 	font: inherit;
 	vertical-align: baseline;
 }
 
 body {
 	background-color: #ffffff;
+	font-size: 62.5%; /* 10px */
 }
 
 /*
@@ -55,7 +56,7 @@ h1 {
 }
 */
 
-h2 {
+h1 {
 	padding-top: 0;
 	font-size: 40px;
 	font-weight: 800;
@@ -65,7 +66,7 @@ h2 {
 	text-shadow: 0 1px 1px black;
 }
 
-h3 {
+h2 {
 	font-size: 30px;
 	font-weight: 700;
 	font-style: italic;
@@ -74,7 +75,7 @@ h3 {
 	text-shadow: 0 1px 1px #8c8c90;
 }
 
-h4 {
+h3 {
 	font-size: 20px;
 	font-weight: 300;
 	font-family: Arvo, Times, "Times New Roman"; 
@@ -84,7 +85,7 @@ h4 {
 
 }
 
-h5 {
+h4 {
 	font-size: 15px;
 	font-weight: 100;
 	font-style: italic;
@@ -1514,7 +1515,7 @@ nav #current {
   border: 5px solid red;
 }
 
-#centering-1 h2 {
+#centering-1 h1 {
 	color: blue;
 	text-align: center;
 }

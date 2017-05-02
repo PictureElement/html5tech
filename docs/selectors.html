@@ -29,7 +29,7 @@
 			<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
       <!--
       <div class="tagline">
-        <h5>Fundamental resources about HTML5 &amp; friends</h5>
+        <h4>Fundamental resources about HTML5 &amp; friends</h4>
       </div>
       -->
 			<nav>
@@ -85,7 +85,7 @@
     <main>
       <article>
         <header>
-          <h2>Selectors</h2>
+          <h1>Selectors</h1>
           <div class="byline-wrapper">
 						<img src="images/avatar.png" alt="avatar" width="40">
 						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
@@ -94,15 +94,15 @@
 					</div>
         </header>
         <section>
-          <h3>Type Selector</h3>
-          <h4>Description</h4>
+          <h2>Type Selector</h2>
+          <h3>Description</h3>
           <p>
           	This selector directly matches one or more elements based on the 
           	type of the element. A type selector for a particular node name 
           	selects all elements of that type.
           </p>
-          <h4>Example</h4>
-          <h5>CSS</h5>
+          <h3>Example</h3>
+          <h4>CSS</h4>
           <code>
 	          p {<br>
 	          &nbsp;&nbsp;color: black;<br>
@@ -110,14 +110,14 @@
 	        </code>
         </section>
         <section>
-        	<h3>Attribute Selector</h3>
-          <h4>Description</h4>
+        	<h2>Attribute Selector</h2>
+          <h3>Description</h3>
           <p>
           	This type of selector matches elements based on their attributes and 
           	attributes values.
           </p>
-          <h4>Example</h4>
-          <h5>HTML</h5>
+          <h3>Example</h3>
+          <h4>HTML</h4>
           <code>
 	          &lt;ul><br>
 	          &nbsp;&nbsp;&lt;li data-taxonomy-class>Arachnida&lt;/li><br>
@@ -142,7 +142,7 @@
 	        	&nbsp;&nbsp;...<br>
 	        	&lt;/<i>element</i>>
 	        </code>
-	        <h5>CSS</h5>
+	        <h4>CSS</h4>
 	        <code>
 	        	[data-taxonomy-class] {<br>
 						&nbsp;&nbsp;color: blue;<br>
@@ -156,7 +156,7 @@
 						&nbsp;&nbsp;background-color: red;<br>
 						}
 					</code>
-	        <h5>Result</h5>
+	        <h4>Result</h4>
 	        <div class="result-wrapper">
 		        <ul>
 		        	<li data-taxonomy-class>Arachnida</li>
@@ -172,34 +172,34 @@
 		      </div>
         </section>
         <section>
-        	<h3>Multiple Selector</h3>
-        	<h4>Description</h4>
+        	<h2>Multiple Selector</h2>
+        	<h3>Description</h3>
           <p>
           	This type of selector is used to apply the same rule to multiple 
           	sets of selected elements at once.
           </p>
-          <h4>Example</h4>
-          <h5>CSS</h5>
+          <h3>Example</h3>
+          <h4>CSS</h4>
           <code>
 	          p, a {<br>
 	          &nbsp;&nbsp;font-size: 12px;<br>
 	          &nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
 	          }<br>
 						<br>
-	          h1, h2, h3 {<br>
+	          h1, h1, h2 {<br>
 	          &nbsp;&nbsp;font-family: Arvo, Times, "Times New Roman";<br>
 	          }
 	        </code>
 	      </section>
         <section>
-          <h3>A B Combinator (a.k.a Descendant Selector)</h3>
-          <h4>Description</h4>
+          <h2>A B Combinator (a.k.a Descendant Selector)</h2>
+          <h3>Description</h3>
           <p>
             This type of selector, selects any element matching B that is inside 
             of an element matching A.
           </p>
-          <h4>Example</h4>
-          <h5>CSS</h5>
+          <h3>Example</h3>
+          <h4>CSS</h4>
           <code>
           	ul li {<br>
            	&nbsp;&nbsp;font-size: 24px;<br>
@@ -211,16 +211,16 @@
           </p>
         </section>
         <section>
-        	<h3>A + B Combinator (a.k.a Adjacent Sibling Selector)</h3>
-        	<h4>Description</h4>
+        	<h2>A + B Combinator (a.k.a Adjacent Sibling Selector)</h2>
+        	<h3>Description</h3>
         	<p>
         		This type of selector, selects <em>only</em> the element matching B 
         		that immediately follows elements matching A.
         	</p>
-        	<h4>Examples</h4>
+        	<h3>Examples</h3>
         	<ol>
         		<li>
-		        	<h5>HTML</h5>
+		        	<h4>HTML</h4>
 		        	<code>
 		        		&lt;ul><br>
 		        		&nbsp;&nbsp;&lt;li>First child&lt;/li><br>
@@ -228,13 +228,13 @@
 		        		&nbsp;&nbsp;&lt;li>Third child&lt;/li><br>
 		        		&lt;/ul>
 		        	</code>
-		        	<h5>CSS</h5>
+		        	<h4>CSS</h4>
 		        	<code>
 			        	li:first-of-type + li {<br>
 			        	&nbsp;&nbsp;color: red;<br>
 			        	}
 			        </code>
-			        <h5>Result</h5>
+			        <h4>Result</h4>
 			        <div class="result-wrapper">
 				        <ul>
 								  <li id="adj-sibling-1">First child</li>
@@ -244,7 +244,7 @@
 							</div>
 						</li>
 						<li>
-							<h5>HTML</h5>
+							<h4>HTML</h4>
 							<code>
 								&lt;div><br>
 								&nbsp;&nbsp;&lt;p>paragraph 1&lt;/p><br>
@@ -253,13 +253,13 @@
 								&lt;p>paragraph 3&lt;/p><br>
 								&lt;p>paragraph 4&lt;/p>
 							</code>
-							<h5>CSS</h5>
+							<h4>CSS</h4>
 							<code>
 								div + p {<br>
 								&nbsp;&nbsp;color: red;<br>
 								}
 							</code>
-							<h5>Result</h5>
+							<h4>Result</h4>
 							<div class="result-wrapper">
 								<div id="adj-sibling-2">
 								  <p>paragraph 1</p>
@@ -272,14 +272,14 @@
 					</ol>
 				</section>
 				<section>
-        	<h3>A > B Combinator (a.k.a Child Selector)</h3>
-        	<h4>Description</h4>
+        	<h2>A > B Combinator (a.k.a Child Selector)</h2>
+        	<h3>Description</h3>
         	<p>
         		This type of selector, selects <em>all</em> elements matching B that 
         		are immediate children of elements matching A.
         	</p>
-        	<h4>Example</h4>
-        	<h5>HTML</h5>
+        	<h3>Example</h3>
+        	<h4>HTML</h4>
         	<code>
 						&lt;div><br>
 						&nbsp;&nbsp;&lt;p>paragraph 1&lt;/p><br>
@@ -288,13 +288,13 @@
 						&lt;p>paragraph 3&lt;/p><br>
 						&lt;p>paragraph 4&lt;/p>
 					</code>
-					<h5>CSS</h5>
+					<h4>CSS</h4>
 					<code>
 						div > p {<br>
 							&nbsp;&nbsp;color: red;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
 					<div class="result-wrapper">
 						<div id="child">
 							<p>paragraph 1</p>
@@ -305,14 +305,14 @@
 					</div>
 				</section>
 				<section>
-        	<h3>A ~ B Combinator (a.k.a General Sibling Selector)</h3>
-        	<h4>Description</h4>
+        	<h2>A ~ B Combinator (a.k.a General Sibling Selector)</h2>
+        	<h3>Description</h3>
         	<p>
         		This type of selector, selects <em>all</em> elements matching B that 
         		are siblings of elements matching A.
         	</p>
-        	<h4>Example</h4>
-        	<h5>HTML</h5>
+        	<h3>Example</h3>
+        	<h4>HTML</h4>
    				<code>
 						&lt;div><br>
 						&nbsp;&nbsp;&lt;p>paragraph 1&lt;/p><br>
@@ -321,13 +321,13 @@
 						&lt;p>paragraph 3&lt;/p><br>
 						&lt;p>paragraph 4&lt;/p>
 					</code>
-					<h5>CSS</h5>
+					<h4>CSS</h4>
 					<code>
 						div ~ p {<br>
 						&nbsp;&nbsp;color: red;<br>
 						}
 					</code>
-					<h5>Result</h5>
+					<h4>Result</h4>
 					<div class="result-wrapper">
 						<div id="gen-sibling">
 						  <p>paragraph 1</p>
@@ -338,24 +338,24 @@
 					</div>
 				</section>
         <section>
-          <h3>Pseudo-Class</h3>
-          <h4>Description</h4>
+          <h2>Pseudo-Class</h2>
+          <h3>Description</h3>
           <p>
             A <i>pseudo-class</i> is a keyword that can be added to selectors to 
             match an element in a certain state. 
           </p>
-          <h4>Examples</h4>
+          <h3>Examples</h3>
           <ol>
           	<li>
           		<p>
           			The <i>:hover</i> pseudo-class is used. The rule is only going 
           			to be applied when the mouse hovers over the link:
             	</p>
-            	<h5>HTML</h5>
+            	<h4>HTML</h4>
             	<code>
             		&lt;a href="mailto:pictureelement@yandex.com">PictureElement&lt;/a>
             	</code>
-            	<h5>CSS</h5>
+            	<h4>CSS</h4>
      					<code>
 		  					a {<br>
 		           	&nbsp;&nbsp;text-decoration: none;<br>
@@ -366,7 +366,7 @@
 		           	&nbsp;&nbsp;color: red;<br>
 		            }
 		          </code>
-		          <h5>Result</h5>
+		          <h4>Result</h4>
 		          <div class="result-wrapper">
 		          	<a id="hover" href="mailto:pictureelement@yandex.com">PictureElement</a>
 		          </div>
@@ -377,7 +377,7 @@
 	         			the amount of child tags selected. The style is applied only on 
 	         			the first list item.
             	</p>
-          		<h5>HTML</h5>
+          		<h4>HTML</h4>
 	          	<code>
 		            &lt;ul&gt;<br>
 		            &nbsp;&nbsp;&lt;li&gt;First item&lt;/li&gt;<br>
@@ -385,13 +385,13 @@
 		            &nbsp;&nbsp;&lt;li&gt;Last item&lt;/li&gt;<br>
 		            &lt;/ul&gt;
 		         	</code>
-							<h5>CSS</h5>
+							<h4>CSS</h4>
 		          <code>
 		        		ul li:first-child {<br>
 		           	&nbsp;&nbsp;color: red;<br>
 		        		}
 		          </code>
-		          <h5>Result</h5>
+		          <h4>Result</h4>
 		          <div class="result-wrapper">
 			       		<ul id="first-child">
 			          	<li>First item</li>
@@ -406,7 +406,7 @@
 	         			the amount of child tags selected. The style is applied only on 
 	         			the last list item.
             	</p>
-            	<h5>HTML</h5>
+            	<h4>HTML</h4>
 	          	<code>
 		            &lt;ul&gt;<br>
 		            &nbsp;&nbsp;&lt;li&gt;First item&lt;/li&gt;<br>
@@ -414,13 +414,13 @@
 		            &nbsp;&nbsp;&lt;li&gt;Last item&lt;/li&gt;<br>
 		            &lt;/ul&gt;
 		         	</code>
-							<h5>CSS</h5>
+							<h4>CSS</h4>
 		          <code>
 		        		ul li:last-child {<br>
 		           	&nbsp;&nbsp;color: blue;<br>
 		        		}
 		          </code>
-		          <h5>Result</h5>
+		          <h4>Result</h4>
 		          <div class="result-wrapper">
 			       		<ul id="last-child">
 			          	<li>First item</li>
@@ -440,7 +440,7 @@
             				In this example two styles are applied, red color on even 
             				list items and blue color on odd list items. 
             			</p>
-		            	<h5>HTML</h5>
+		            	<h4>HTML</h4>
 		            	<code>
 				            &lt;ul&gt;<br>
 				            &nbsp;&nbsp;&lt;li&gt;First item&lt;/li&gt;<br>
@@ -449,7 +449,7 @@
 				            &nbsp;&nbsp;&lt;li&gt;Fourth item&lt;/li&gt;<br>
 				            &lt;/ul&gt;
 				         	</code>
-				         	<h5>CSS</h5>
+				         	<h4>CSS</h4>
 				         	<code>
 				         		ul li:nth-child(even) {<br>
 										&nbsp;&nbsp;color: red;<br>
@@ -459,7 +459,7 @@
 										&nbsp;&nbsp;color: blue;<br>
 										}
 				         	</code>
-		            	<h5>Result</h5>
+		            	<h4>Result</h4>
 			          	<div class="result-wrapper">
 					       		<ul id="nth-child-1">
 					          	<li>First item</li>
@@ -474,7 +474,7 @@
             				In this example, red color is applied on every third list 
             				item starting with third list item.
             			</p>
-            			<h5>HTML</h5>
+            			<h4>HTML</h4>
             			<code>
             				&lt;ul><br>
 					          &nbsp;&nbsp;&lt;li>First item&lt;/li><br>
@@ -485,13 +485,13 @@
 					          &nbsp;&nbsp;&lt;li>Sixth item&lt;/li><br>
 					          &lt;/ul>
 					        </code>
-					        <h5>CSS</h5>
+					        <h4>CSS</h4>
 				         	<code>
 					         	ul li:nth-child(3n) {<br>
 										&nbsp;&nbsp;color: red;<br>
 										}
 									</code>
-			    				<h5>Result</h5>
+			    				<h4>Result</h4>
 		            	<div class="result-wrapper">
 					       		<ul id="nth-child-2">
 					          	<li>First item</li>
@@ -505,15 +505,15 @@
 					      </li>
 					      <li>
 					      	<p><b><i>:nth-child</i> vs <i>:nth-of-type</i></b></p>
-					      	<h5>HTML</h5>
+					      	<h4>HTML</h4>
 					      	<code>
 					      		&lt;div><br>
-					       		&nbsp;&nbsp;&lt;h5>Heading 1&lt;/h5><br>
+					       		&nbsp;&nbsp;&lt;h4>Heading 1&lt;/h4><br>
 					       		&nbsp;&nbsp;&lt;p>Paragraph 1&lt;/p><br>
 					       		&nbsp;&nbsp;&lt;p>Paragraph 2&lt;/p><br>
 					          &lt;/div>
 					        </code>
-					      	<h5>CSS</h5>
+					      	<h4>CSS</h4>
 					      	<code>
 					      		div p:nth-child(2) {<br>
 										&nbsp;&nbsp;color: red;<br>
@@ -523,10 +523,10 @@
 										&nbsp;&nbsp;color: blue;<br>
 										}
 									</code>
-					 				<h5>Result</h5>
+					 				<h4>Result</h4>
 		            	<div class="result-wrapper">
 					       		<div id="nth-child-vs-nth-of-type">
-					       			<h5>Heading 1</h5>
+					       			<h4>Heading 1</h4>
 					       			<p>Paragraph 1</p>
 					       			<p>Paragraph 2</p>
 					          </div>
@@ -541,34 +541,34 @@
 		      </p>
 				</section>
         <section>
-        	<h3>Pseudo-Elements</h3>
-       		<h4>Description</h4>
+        	<h2>Pseudo-Elements</h2>
+       		<h3>Description</h3>
        		<p>
             A <i>pseudo-element</i> is a keyword that can be added to selectors 
             and allows you to style certain parts of an element.
           </p>
-          <h4>Examples</h4>
+          <h3>Examples</h3>
           <ol>
           	<li>
           		<p>
           			The <i>::first-letter</i> pseudo-element matches the first 
           			letter of the first line of an element.
           		</p>
-          		<h5>HTML</h5>
+          		<h4>HTML</h4>
           		<code>
 	          		&lt;p><br>
 	          		&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut<br> 
 	          		&nbsp;&nbsp;labore et dolore<br>
 	          		&lt;/p>
 	          	</code>
-	          	<h5>CSS</h5>
+	          	<h4>CSS</h4>
 	          	<code>
 	          		p::first-letter {<br>
 	          		&nbsp;&nbsp;font-size: 25px;<br>
 	          		&nbsp;&nbsp;color: red;<br>
 	          		}
 	          	</code>
-	          	<h5>Result</h5>
+	          	<h4>Result</h4>
 	          	<div class="result-wrapper">
 								<p id="first-letter">
 	          			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
@@ -581,7 +581,7 @@
           			The <i>::first-line</i> pseudo-element matches the first line 
           			of an element.
           		</p>
-          		<h5>HTML</h5>
+          		<h4>HTML</h4>
           		<code>
 	          		&lt;p><br>
 	          		&nbsp;&nbsp;Line 1&lt;br><br>
@@ -589,13 +589,13 @@
 	          		&nbsp;&nbsp;Line 3<br>
 	          		&lt;/p>
 	          	</code>
-	          	<h5>CSS</h5>
+	          	<h4>CSS</h4>
 	          	<code>
 	          		p::first-line {<br>
 	          		&nbsp;&nbsp;background-color: yellow;<br>
 	          		}
 	          	</code>
-          		<h5>Result</h5>
+          		<h4>Result</h4>
           		<div class="result-wrapper">
 	          		<p id="first-line">
 	          			Line 1<br>
@@ -609,12 +609,12 @@
           			The <i>::after/::before</i> pseudo-elements insert something 
           			after/before the content of the selected element.
           		</p>
-          		<h5>HTML</h5>
+          		<h4>HTML</h4>
           		<code>
 	          		&lt;p id="product">Product symbol:&lt;/p><br>
 		          	&lt;p id="sum">: Sum symbol&lt;/p>
 		          </code>
-		          <h5>CSS</h5>
+		          <h4>CSS</h4>
 		          <code>
 		          	#product::after {<br>
 		          	&nbsp;&nbsp;content: " \220F";<br>
@@ -624,7 +624,7 @@
 		          	&nbsp;&nbsp;content: "\2211";<br>
 		          	}
 		          </code>
-          		<h5>Result</h5>
+          		<h4>Result</h4>
           		<div class="result-wrapper">
 	          		<p id="product">Product symbol:</p>
 	          		<p id="sum">: Sum symbol</p>
@@ -637,7 +637,7 @@
           			example we'll add delimiters between navigation items, using 
           			the <i>::after/::before</i> pseudo-elements.
           		</p>
-          		<h5>HTML</h5>
+          		<h4>HTML</h4>
           		<code>
 	          		&lt;nav id="nav-delimiter"><br>
 	          		&nbsp;&nbsp;&lt;button class="dropbtn">Item#1&lt;/button><br>
@@ -646,15 +646,16 @@
 	          		&nbsp;&nbsp;&lt;button class="dropbtn">Item#4&lt;/button><br>
 	          		&lt;/nav>
 	          	</code>
-	          	<h5>CSS</h5>
+	          	<h4>CSS</h4>
 		          <code>
 		         		#nav-delimiter button {<br>
 								&nbsp;&nbsp;padding: 14px 16px;<br>
 								}<br>
 								<br>
 								/*<br>
-								&nbsp;&nbsp;Select all &lt;button> elements except the first and add a "|" delimiter before the content of the 
-								&nbsp;&nbsp;selected elements.<br>
+								&nbsp;&nbsp;Select all &lt;button> elements except the first and 
+								add a "|" delimiter before the content of
+								&nbsp;&nbsp;the  selected elements.<br>
 								*/<br>
 								#nav-delimiter button:not(:first-child)::before {<br>
 								&nbsp;&nbsp;content: "|";<br>
@@ -662,7 +663,7 @@
 								&nbsp;&nbsp;left: -15px;<br>
 								}
 							</code>
-	          	<h5>Result</h5>
+	          	<h4>Result</h4>
           		<div class="result-wrapper">
 	          		<nav id="nav-delimiter">
 	          			<button class="dropbtn">Item#1</button>
@@ -675,25 +676,25 @@
 	        </ol>
        	</section>
         <section>
-        	<h3>ID selector</h3>
-          <h4>Description</h4>
+        	<h2>ID selector</h2>
+          <h3>Description</h3>
           <p>An ID selector matches the element with the specified id.</p>
-          <h4>Syntax</h4>
-          <h5>CSS</h5>
+          <h3>Syntax</h3>
+          <h4>CSS</h4>
           <code>
           	#<i>id</i> {<br>
           	&nbsp;&nbsp;<i>properties</i><br>
           	}
           </code>
-          <h4>Example</h4>
-          <h5>HTML</h5>
+          <h3>Example</h3>
+          <h4>HTML</h4>
           <code>
 	          &lt;p><br>
 	          &nbsp;&nbsp;This is a basic example of ID selectors.<br>
 	          &nbsp;&nbsp;&lt;span id="highlight">This sentence is highlighted.&lt;/span><br>
 	          &lt;p>
 	        </code>
-	        <h5>CSS</h5>
+	        <h4>CSS</h4>
 	        <code>
 		        #highlight {<br>
 		        &nbsp;&nbsp;background-color: yellow;<br>
@@ -705,12 +706,12 @@
 		        &nbsp;&nbsp;background-color: yellow;<br>
 		        }
 		      </code>
-		      <h5>Result</h5>
+		      <h4>Result</h4>
 					<p>
           	This is a basic example of ID selectors. 
           	<span id="highlight">This sentence is highlighted.</span>
           </p>
-          <h4>ID's and Classes</h4>
+          <h3>ID's and Classes</h3>
 					<ul>
 						<li>Each element can have only one ID, unique to the page.</li>
 						<li>
@@ -728,23 +729,23 @@
 					</ul>
         </section>
         <section>
-          <h3>Class selector</h3>
-          <h4>Description</h4>
+          <h2>Class selector</h2>
+          <h3>Description</h3>
           <p>
           	The <i>.class</i> selector selects elements with a specific class attribute.
           </p>
-          <h4>Syntax</h4>
-          <h5>CSS</h5>
+          <h3>Syntax</h3>
+          <h4>CSS</h4>
           <code>
    					<i>.class</i> {<br>
           	&nbsp;&nbsp;<i>declarations;</i><br>
           	}
          	</code>
-          <h4>Examples</h4>
+          <h3>Examples</h3>
        		<ol>
      				<li>
      					<p>Select and style only one &lt;ul&gt;:</p>
-	     				<h5>HTML</h5>
+	     				<h4>HTML</h4>
 	     				<code>
 			       		&lt;ul class="nav"&gt;<br>
 								&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
@@ -752,7 +753,7 @@
 								&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
 					  		&lt;/ul&gt;
 					  	</code>
-				  		<h5>CSS</h5>
+				  		<h4>CSS</h4>
 				  		<code>
 				  			.nav {<br>
 				  			&nbsp;&nbsp;<i>declarations;</i><br>
@@ -764,7 +765,7 @@
 		  					Change the style of only &lt;a&gt; tags that are inside of a 
 		  					&lt;ul&gt; tag with a class of <i>nav</i>:
 		  				</p>
-			  			<h5>HTML</h5>
+			  			<h4>HTML</h4>
 	     				<code>
 			   				&lt;ul class="nav"&gt;<br>
 								&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
@@ -772,7 +773,7 @@
 								&nbsp;&nbsp;&lt;li&gt;&lt;a href="suggest.html"&gt;Suggest&lt;/a&gt;&lt;/li&gt;<br>
 					  		&lt;/ul&gt;
 					  	</code>
-					  	<h5>CSS</h5>
+					  	<h4>CSS</h4>
 				  		<code>				  	
 				  			.nav a {<br>
 								&nbsp;&nbsp;<i>declarations;</i><br>
@@ -781,7 +782,7 @@
 						</li>
 						<li>
 							<p>We want only the navigation list to display inline:</p>
-							<h5>HTML</h5>
+							<h4>HTML</h4>
 	     				<code>
 			       		&lt;ul class="nav"&gt;<br>
 								&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
@@ -795,7 +796,7 @@
 	      				&nbsp;&nbsp;&lt;li&gt;3 sticks of butter&lt;/li&gt;<br>
 								&lt;/ul&gt;
 							</code>
-							<h5>CSS</h5>
+							<h4>CSS</h4>
 	     				<code>
 			        	/*<br> 
 			        	Select &lt;li&gt; elements that are children of &lt;ul&gt; 
@@ -814,11 +815,11 @@
 						  	add a class called <i>creator</i> to each paragraph tag that 
 						  	contains the creator name:
 						  </p>
-						  <h5>HTML</h5>
+						  <h4>HTML</h4>
 	     				<code>
 	     					&lt;p class="creator"&gt;creator: Marios Sofokleous&lt;/p&gt;
 			       	</code>
-			        <h5>CSS</h5>
+			        <h4>CSS</h4>
 	     				<code>
 			        	.creator {<br>
 								&nbsp;&nbsp;<i>declarations;</i><br>
@@ -826,7 +827,7 @@
 							</code>
 						</li>
 					</ol>
-					<h4>ID's and Classes</h4>
+					<h3>ID's and Classes</h3>
 					<ul>
 						<li>Each element can have only one ID, unique to the page.</li>
 						<li>
@@ -844,10 +845,10 @@
 					</ul>
 				</section>
 				<section>
-          <h3>Cascade order</h3>
+          <h2>Cascade order</h2>
           <ol>
           	<li>
-          		<h5>HTML</h5>
+          		<h4>HTML</h4>
           		<code>
           			<i>element</i> {<br>
           			&nbsp;&nbsp;color: blue;<br>
@@ -860,7 +861,7 @@
           		<p>The second color definition(red) overrides the first(blue).</p>
           	</li>
           	<li>
-          		<h5>HTML</h5>
+          		<h4>HTML</h4>
           		<code>
           			<i>element</i> {<br>
           			&nbsp;&nbsp;color: cyan;<br>
@@ -874,7 +875,7 @@
           			Non-conflicting properties will be combined. The code section 
           			above is equivalent to the one below:
           		</p>
-          		<h5>HTML</h5>
+          		<h4>HTML</h4>
           		<code>
           			<i>element</i> {<br>
           			&nbsp;&nbsp;color: cyan;<br>
@@ -885,8 +886,8 @@
           </ol>
         </section>
         <section>
-          <h3>Inheritance</h3>
-          <h4>Description</h4>
+          <h2>Inheritance</h2>
+          <h3>Description</h3>
           <p>
           	Some nested elements inherit parent styles by default others aren't. 
           	However, inheritance is controllable. Which properties are inherited 
@@ -917,10 +918,10 @@
           	<li><i>padding</i></li>
           	<li><i>opacity</i></li>
           </ul>
-          <h4>Examples</h4>
+          <h3>Examples</h3>
           <ol>
           	<li>
-		          <h5>HTML</h5>
+		          <h4>HTML</h4>
 		          <code>
 		          	&lt;div><br>
 		          	&nbsp;&nbsp;&lt;p><br>
@@ -935,13 +936,13 @@
 		          	from its parent (&lt;div> element). This is the default 
 		          	behaviour:
 		          </p>
-		          <h5>CSS</h5>
+		          <h4>CSS</h4>
 		          <code>
 		          	div {<br>
 		          	&nbsp;&nbsp;text-shadow: 0 1px 1px black;<br>
 		          	}
 		          </code>
-		          <h5>Result</h5>
+		          <h4>Result</h4>
 		          <div class="result-wrapper">
 			          <div id="inheritance-1">
 			          	<p>
@@ -955,7 +956,7 @@
 								b) The &lt;p> element inherits the <i>text shadow</i> property 
 								defined in the browser's default style sheet:
 		          </p>
-		          <h5>CSS</h5>
+		          <h4>CSS</h4>
 		          <code>
 		          	div {<br>
 		          	&nbsp;&nbsp;text-shadow: 0 1px 1px black;<br>
@@ -975,7 +976,7 @@
 		          	&nbsp;&nbsp;text-shadow: initial;<br>
 		          	}
 		          </code>
-		          <h5>Result</h5>
+		          <h4>Result</h4>
 		          <div class="result-wrapper">
 			          <div id="inheritance-2">
 			          	<p>
@@ -987,7 +988,7 @@
 							</div>
 						</li>
 						<li>
-							<h5>HTML</h5>
+							<h4>HTML</h4>
 							<code>
 		          	&lt;div id="inheritance"><br>
 								&nbsp;&nbsp;&lt;p><br>
@@ -1011,13 +1012,13 @@
 		          	<i>border</i> property from its parent (outer &lt;div> element). 
 		          	This is the default behaviour:
 		          </p>
-		          <h5>CSS</h5>
+		          <h4>CSS</h4>
 		          <code>
 		          	#inheritance {<br>
 		          	&nbsp;&nbsp;border: 1px solid red;<br>
 		          	}
 		        	</code>
-		        	<h5>Result</h5>
+		        	<h4>Result</h4>
 		          <div class="result-wrapper">
 			          <div id="inheritance-3">
 			          	<p>
@@ -1031,7 +1032,7 @@
 		          	b) The innner &lt;div> element inherits the <i>border</i> 
 		          	property from its parent (outer &lt;div> element):
 		          </p>
-		          <h5>CSS</h5>
+		          <h4>CSS</h4>
 		          <code>
 		          	#inheritance {<br>
 		          	&nbsp;&nbsp;border: 1px solid red;<br>
@@ -1050,7 +1051,7 @@
 		          	&nbsp;&nbsp;border: inherit;<br>
 		          	}
 		        	</code>
-		        	<h5>Result</h5>
+		        	<h4>Result</h4>
 		          <div class="result-wrapper">
 			          <div id="inheritance-4">
 			          	<p>
@@ -1071,10 +1072,10 @@
 					</ol>
 				</section>
 				<section>
-          <h3>Specificity</h3>
-          <h4>Description</h4>
+          <h2>Specificity</h2>
+          <h3>Description</h3>
           <p>Specificity refers to the priority of a particular selector.</p>
-          <h4>Calculation</h4>
+          <h3>Calculation</h3>
           <p>
           	Specificity is a weight that is applied to a given CSS declaration. 
           	The following list of selector types increases in specificity:
@@ -1093,7 +1094,7 @@
           	Negation Pseudo-Class(:not()) have no effect on specificity.
           </p>
           <img id="specificity" src="images/specificity.png" alt="specificity-value" width="800">
-          <h4>Examples</h4>
+          <h3>Examples</h3>
           <ol>
           	<li>
           		<code>
@@ -1147,13 +1148,13 @@
           		</p>
           	</li>
           	<li>
-          		<h5>HTML</h5>
+          		<h4>HTML</h4>
           		<code>
           			&lt;div id="content" class="featured"><br>
 								&nbsp;&nbsp;&lt;p>Break out the cocoa.&lt;p><br>
 								&lt;/div>
 							</code>
-							<h5>CSS</h5>
+							<h4>CSS</h4>
 							<code>
 								<span style="color: blue;">/* Weight: 0,1,0,0 */</span><br>
 								#content {<br>
@@ -1175,7 +1176,7 @@
 								Give a black color to the section's content and a red color to 
 								Paragraph#1:
 							</p>
-							<h5>HTML</h5>
+							<h4>HTML</h4>
           		<code>
 								&lt;section id="content"><br>
 								&nbsp;&nbsp;&lt;p class="featured">Paragraph #1.&lt;/p><br>
@@ -1185,7 +1186,7 @@
 							</code>
 							<ul>
 								<li>
-									<h5>CSS (Wrong way)</h5>
+									<h4>CSS (Wrong way)</h4>
 									<code>
 										#content p { color: black; }  -  <span style="color: blue;">Weight: 0,1,0,1</span><br>
 										<br>
@@ -1193,7 +1194,7 @@
 									</code>
 								</li>
 								<li>
-									<h5>CSS (Method #1)</h5>
+									<h4>CSS (Method #1)</h4>
 									<code>
 										#content p { color: black; }  -  <span style="color: blue;">Weight: 0,1,0,1</span><br>
 										<br>
@@ -1205,7 +1206,7 @@
 									</p>
 								</li>
 								<li>
-									<h5>CSS (Method #2)</h5>
+									<h4>CSS (Method #2)</h4>
 									<code>
 										#content p { color: black; }  -  <span style="color: blue;">Weight: 0,1,0,1</span><br>
 										<br>
