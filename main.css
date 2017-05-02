@@ -39,26 +39,18 @@ audio, video {
 	vertical-align: baseline;
 }
 
-body {
-	background-color: #ffffff;
+html {
 	font-size: 62.5%; /* 10px */
 }
 
-/*
-h1 {
-	font-size: 55px;
-	font-weight: 900;
-	text-align: center;
-	font-family: Arvo, Times, "Times New Roman"; 
-	color: #007f7f;
-	text-shadow: 0 1px 1px #8c8c90;
-	margin-top: 20px;
+body {
+	background-color: #ffffff;
+	font-size: 1.5rem; /* 15px */
 }
-*/
 
 h1 {
 	padding-top: 0;
-	font-size: 40px;
+	font-size: 4rem;
 	font-weight: 800;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: white;
@@ -67,7 +59,7 @@ h1 {
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 3rem;
 	font-weight: 700;
 	font-style: italic;
 	font-family: Arvo, Times, "Times New Roman"; 
@@ -76,7 +68,7 @@ h2 {
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 300;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
@@ -86,7 +78,7 @@ h3 {
 }
 
 h4 {
-	font-size: 15px;
+	font-size: 1.5rem;
 	font-weight: 100;
 	font-style: italic;
 	font-family: Arvo, Times, "Times New Roman"; 
@@ -96,7 +88,6 @@ h4 {
 }
 
 p, #hover {
-	font-size: 15px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: #8c8c90;
@@ -106,7 +97,7 @@ p, #hover {
 a {
 	text-decoration: none;
 	font-style: italic;
-	font-size: 12px;
+	font-size: 1.2rem;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
@@ -157,7 +148,7 @@ footer {
 }
 
 time {
-	font-size: 12px;
+	font-size: 1.2rem;
 	font-style: italic;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
@@ -183,7 +174,6 @@ ol {
 }
 
 li {
-	font-size: 15px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: #8c8c90;
@@ -191,7 +181,6 @@ li {
 }
 
 code {
-	font-size: 15px;
 	font-weight: 100;
 	font-family: 'Roboto Mono', Courier, "Courier New";
 	color: #8c8c90;
@@ -220,7 +209,6 @@ a:hover .social-icon {
 }
 
 .result-wrapper {
-	font-size: 15px;
 	font-weight: 100;
 	font-family: 'Roboto Mono', Courier, "Courier New";
 	color: #8c8c90;
@@ -286,7 +274,7 @@ article header {
 nav a {
 	padding: 14px 16px;
 	font-style: normal;
-	font-size: 19px;
+	font-size: 2rem;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
@@ -296,7 +284,6 @@ nav a {
 }
 
 section a {
-	font-size: 15px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(0,173, 239, 0.5);
@@ -345,7 +332,7 @@ section a:hover {
 	padding: 14px 16px;
 	border: none;
 	outline: none;
-	font-size: 19px;
+	font-size: 2rem;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
@@ -387,7 +374,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 	/* Links are inline by default */
 	display: block;
 	text-align: left;
-	font-size: 15px;
+	font-size: 1.5rem;
 	transition: .3s background-color;
 	text-shadow: none;
 }
@@ -406,7 +393,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .arrow {
-	font-size: 11px;
+	font-size: 1rem;
 }
 
 /* Highlight current navigation link (Home, HTML, CSS, ...) */
@@ -443,19 +430,19 @@ nav #current {
 
 .serif p {
 	font-family: Arvo, Times, "Times New Roman"; 
-	font-size: 30px;
+	font-size: 3rem;
 	background-color: yellow;
 }
 
 .sans-serif p {
 	font-family: Lato, Helvetica, Arial;
-	font-size: 30px;
+	font-size: 3rem;
 	background-color: yellow;
 }
 
 .monospace p {
 	font-family: 'Roboto Mono', Courier, "Courier New";
-	font-size: 30px;
+	font-size: 3rem;
 	background-color: yellow;
 }
 
@@ -648,7 +635,7 @@ nav #current {
 }
 
 .copyright {
-	font-size: 12px;
+	font-size: 1.2rem;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
@@ -658,7 +645,7 @@ nav #current {
 
 .text-shadow-1 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -667,7 +654,7 @@ nav #current {
 
 .text-shadow-2 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -676,7 +663,7 @@ nav #current {
 
 .text-shadow-3 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -685,7 +672,7 @@ nav #current {
 
 .text-shadow-4 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -694,7 +681,7 @@ nav #current {
 
 .text-shadow-5 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -703,7 +690,7 @@ nav #current {
 
 .text-shadow-6 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -712,7 +699,7 @@ nav #current {
 
 .text-shadow-7 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -721,7 +708,7 @@ nav #current {
 
 .text-shadow-8 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -730,7 +717,7 @@ nav #current {
 
 .text-shadow-9 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -740,7 +727,7 @@ nav #current {
 
 .text-shadow-10 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: black;
@@ -756,7 +743,7 @@ nav #current {
 
 .text-shadow-11 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: white;
@@ -780,7 +767,7 @@ nav #current {
 
 .text-shadow-12 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(0,0,0,.3);
@@ -793,7 +780,7 @@ nav #current {
 
 .text-shadow-13 p {
 	margin: 0;
-	font-size: 100px;
+	font-size: 10rem;
 	font-weight: bold;
 	font-family: Lato, Helvetica, Arial;
 	color: white;
@@ -875,7 +862,6 @@ nav #current {
 
 .opacity-4 {
 	color: white;
-	font-size: 15px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 }
@@ -910,7 +896,6 @@ nav #current {
 
 .linear-gradient {
 	color: white;
-	font-size: 15px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 }
@@ -967,7 +952,6 @@ nav #current {
 
 .radial-gradient {
 	color: black;
-	font-size: 15px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 }
@@ -1069,7 +1053,6 @@ nav #current {
 /* Font styling & text alignment */
 .table-1 {
 	color: black;
-	font-size: 15px;
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	margin-top: 20px;
@@ -1077,7 +1060,6 @@ nav #current {
 
 .table-1 thead {
 	color: white;
-	font-size: 20px;
 	font-weight: bold;
 	font-family: Arvo, Times, "Times New Roman"; 
 	letter-spacing: 2px;
@@ -1085,7 +1067,7 @@ nav #current {
 
 .table-1 tfoot th {
 	color: black;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: bold;
 	font-family: Arvo, Times, "Times New Roman"; 
 	letter-spacing: 2px;
@@ -1151,7 +1133,7 @@ nav #current {
 .table-1 caption {
 	font-family: Arvo, Times, "Times New Roman"; 
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 1.2rem;
 	caption-side: bottom;
 	letter-spacing: 1px;
 	text-align: left;
@@ -1218,7 +1200,7 @@ nav #current {
 /*-------------------------- Pseudo-element example --------------------------*/
 #first-letter::first-letter {
 	font-family: Arvo, Times, "Times New Roman"; 
-  font-size: 30px;
+  font-size: 3rem;
   color: red;
 }
 
