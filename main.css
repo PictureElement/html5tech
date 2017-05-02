@@ -49,7 +49,6 @@ body {
 }
 
 h1 {
-	padding-top: 0;
 	font-size: 4rem;
 	font-weight: 800;
 	font-family: Arvo, Times, "Times New Roman"; 
@@ -109,23 +108,17 @@ header {
 	background: radial-gradient(circle, gainsboro 20%, lightgray 40%, silver 60%, darkgray 80%, gray 100%);
 	/*background-image: url(background.jpg);*/
 	box-shadow: 0 1px 1px black;
-	/* header in fixed position (following 3 properties)*/
-	position: fixed; 
-	width: 100%;
-	top: 0;
-	z-index: 1;
+	text-align: center;
 }
 
 main {
-	/* 
-		216px top margin from start of the page
-		30px top margin from header 
-	*/
-	margin-top: 216px;
+	width: 50%;
+	margin: auto;
+	/* Hide content that extends beyond container boundaries */
+	overflow: hidden;
 }
 
 article {
-	width: 960px;
 	margin: 0 auto 0 auto;
 }
 
@@ -133,17 +126,17 @@ section {
 	background-color: #f0f0f0;
 	margin-top: 10px;
 	border: 1px solid #000000;
-	padding: 10px 10px 10px 10px;
+	padding: 10px;
 	border-radius: 10px;
 	box-shadow: 0 1px 1px black;
 }
 
 footer {
 	background: linear-gradient(to top, #2b2d32, #3b3d42);
-	margin: 30px auto 0 auto;
+	margin: 10px auto 0 auto;
 	color: #8c8c90;
 	text-align: center;
-	padding: 20px 0 20px 0;
+	padding: 20px 0;
 	box-shadow: 0 1px 1px black;
 }
 
@@ -190,6 +183,7 @@ code {
 	padding: 10px;
 	border-left: 5px solid #007f7f;
 	display: block;
+	overflow: hidden;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -265,14 +259,15 @@ a:hover .social-icon {
 
 article header {
 	background: #2b2d32;
-	padding: 10px 0 10px 0;
+	padding: 10px 0;
+	margin: 10px auto 0 auto;
 	border-radius: 10px;
-	position: static;
+	text-align: left;
 }
 
 /* Links inside navigation bar */
 nav a {
-	padding: 14px 16px;
+	padding: 0 10px;
 	font-style: normal;
 	font-size: 2rem;
 	font-weight: 100;
@@ -311,7 +306,7 @@ section a:hover {
   /* Green font color */
   color: #008000;
   /* Adjust the padding */
-  padding: 5px 0 5px 0;
+  padding: 5px 0;
   /* Make the text all uppercase */
   text-transform: uppercase;
   text-align: center;
@@ -420,10 +415,7 @@ nav #current {
 /*----------------------------------------------------------------------------*/
 
 .website-logo {
-	display: block;
-	margin: 0 auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin: 20px auto;
 }
 
 /*----------------------------------------------------------------------------*/
