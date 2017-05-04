@@ -299,6 +299,131 @@
             }
           </code>
         </section>
+        <section>
+          <h2>Media Queries</h2>
+          <h3>Description</h3>
+          <p>
+            A media query is a block of CSS properties that are applied only if
+            a certain condition is true. Examples of such conditions are the 
+            display type, width, height, orientation and resolution. Media 
+            queries allow the application of specific styles to small screens, 
+            large screens and so on, thus providing adaptability.
+          </p>
+          <h3>Syntax</h3>
+          <h4>Method#1: CSS</h4>
+          <code>
+            @media (<i>query</i>) {<br>
+            &nbsp;&nbsp;<i>CSS properties</i><br>
+            }
+          </code>
+          <h4>Method #2: HTML</h4>
+          <code>
+            &lt;link rel="stylesheet" media="(<i>query</i>)" href="foo.css">
+          </code>
+          <p>The most commonly used items we can query on are:</p>
+          <ul>
+            <li>
+              <b>min-width:</b> rules applied for any browser width greater than 
+              the value defined in the query.
+            </li>
+            <li>
+              <b>max-width:</b> rules applied for any browser width less than 
+              the value defined in the query.
+            </li>
+            <li>
+              <b>min-height:</b> rules applied for any browser height greater 
+              than the value defined in the query.
+            </li>
+            <li>
+              <b>max-height:</b> rules applied for any browser height less than 
+              the value defined in the query.
+            </li>
+            <li>
+              <b>orientation=portrait:</b> rules applied for any browser where 
+              the height is greater than or equal to the width.
+            </li>
+            <li> 
+              <b>orientation=landscape:</b> rules applied for any browser where 
+              the width is greater than the height.
+            </li>
+          </ul>
+          <h3>Example</h3>
+          <h4>HTML: media-queries.html</h4>
+          <code>
+            &lt;!DOCTYPE html><br>
+            &lt;html lang="en"><br>
+            &nbsp;&nbsp;&lt;head><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title>Adaptive design&lt;/title><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="description" content="CSS media queries"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="author" content="PictureElement"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue">&lt;!-- Media query #1: max-600px.css applied for any browser width less than 600px --></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" media="(max-width: 600px)" href="max-600px.css"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue">&lt;!-- Media query #2: min-800px.css applied for any browser width greater than 800px --></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" media="(min-width: 800px)" href="min-800px.css"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue">&lt;!--<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Media query #3: portrait.css applied for any browser where height is greater than or equal to<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the width<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;--></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" media="(orientation: portrait)" href="portrait.css"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue">&lt;!--<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Media query #4: landscape.css applied for any browser where width is greater than the height<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;--></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" media="(orientation: landscape)" href="landscape.css"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;style><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@media (min-width: 600px) and (max-width: 800px) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#main-heading {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#browser::after {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: " 600px &lt; w &lt; 800px";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style><br>
+            &nbsp;&nbsp;&lt;/head><br>
+            &nbsp;&nbsp;&lt;body><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 id="main-heading">Media Queries&lt;/h1><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 id="browser">Browser:&lt;/h2><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 id="orientation">Orientation:&lt;/h2><br>
+            &nbsp;&nbsp;&lt;/body><br>
+            &lt;/html>
+          </code>
+          <h4>CSS: max-600px.css</h4>
+          <code>
+            #main-heading {<br>
+            &nbsp;&nbsp;color: red;<br>
+            }<br>
+            <br>
+            #browser::after {<br>
+            &nbsp;&nbsp;content: " 0 &lt; w &lt; 600px";<br>
+            }
+          </code>
+          <h4>CSS: min-800px.css</h4>
+          <code>
+            #main-heading {<br>
+            &nbsp;&nbsp;color: blue;<br>
+            }<br>
+            <br>
+            #browser::after {<br>
+            &nbsp;&nbsp;content: " w &gt; 800px";<br>
+            }
+          </code>
+          <h4>CSS: portrait.css</h4>
+          <code>
+            #orientation::after {<br>
+            &nbsp;&nbsp;content: " Portrait";<br>
+            }
+          </code>
+          <h4>CSS: landscape.css</h4>
+          <code>
+            #orientation::after {<br>
+            &nbsp;&nbsp;content: " Landscape";<br>
+            }
+          </code>
+          <a href="media-queries.html">Try it Yourself</a>
+        </section>
       </article>
     </main>
     <footer>

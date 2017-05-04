@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Adaptive design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CSS media queries">
+    <meta name="author" content="PictureElement">
+    <link rel="stylesheet" media="(max-width: 600px)" href="max-600px.css">
+    <link rel="stylesheet" media="(min-width: 800px)" href="min-800px.css">
+    <link rel="stylesheet" media="(orientation: portrait)" href="portrait.css">
+    <link rel="stylesheet" media="(orientation: landscape)" href="landscape.css">
+    <style>
+      @media (min-width: 600px) and (max-width: 800px) {
+        #main-heading {
+          color: green;
+        }
+
+        #browser::after {
+          content: " 600px < w < 800px";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-heading">Media Queries</h1>
+    <h2 id="browser">Browser:</h2>
+    <h2 id="orientation">Orientation:</h2>
+  </body>
+</html>
