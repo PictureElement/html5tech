@@ -23,14 +23,16 @@
 /* Google Web Fonts: Monospace type */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-/* Reset browser defaults ("em", "i", "b", and "strong" tags not included) */
-html, body, div, span, applet, object, iframe, h1, h1, h2, h3, h4, h6, p, 
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, 
-ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, dl, dt,
-dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, 
-thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, 
-footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, 
-audio, video {
+/* 
+	Reset browser defaults ("em", "i", "b", "strong", "h1", "h2", "h3", "h4", 
+	"h5", "h6", and "p" tags not included) 
+*/
+html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, h1, h2, 
+h3, h4, h5, h6, p, acronym, address, big, cite, code, del, dfn, img, ins, kbd, 
+q, s, samp, small, strike, sub, sup, tt, var, u, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, embed, figure, figcaption, footer, header, 
+hgroup, menu, nav, output, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -43,23 +45,24 @@ html {
 	font-size: 62.5%; /* 10px */
 }
 
-body {
+body { 
+	/* font-size/line-height font-family */
+	font: 2rem/1.5 Lato, Helvetica, Arial;
 	background-color: #ffffff;
-	font-size: 1.5rem; /* 15px */
+	color: #8c8c90;
 }
 
 h1 {
 	font-size: 4rem;
-	font-weight: 800;
+	font-weight: bold;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: white;
-	margin-left: 10px;
 	text-shadow: 0 1px 1px black;
 }
 
 h2 {
 	font-size: 3rem;
-	font-weight: 700;
+	font-weight: bold;
 	font-style: italic;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
@@ -71,9 +74,6 @@ h3 {
 	font-weight: 300;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
-	margin-top: 15px;
-	margin-bottom: 5px;
-
 }
 
 h4 {
@@ -81,23 +81,18 @@ h4 {
 	font-weight: 100;
 	font-style: italic;
 	font-family: Arvo, Times, "Times New Roman"; 
-	color: #8c8c90;
-	margin-top: 10px;
-	margin-bottom: 5px;
 }
 
 p, #hover {
-	font-weight: 100;
+	font-weight: normal;
 	font-family: Lato, Helvetica, Arial;
-	color: #8c8c90;
-	margin-top: 20px;
 }
 
 a {
 	text-decoration: none;
 	font-style: italic;
 	font-size: 1.2rem;
-	font-weight: 100;
+	font-weight: normal;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
 	/* Add transition to links when they're hovered over */
@@ -112,10 +107,11 @@ header {
 }
 
 main {
-	width: 50%;
+	width: 38%;
 	margin: auto;
 	/* Hide content that extends beyond container boundaries */
 	overflow: hidden;
+	padding: 2rem;
 }
 
 article {
@@ -124,32 +120,32 @@ article {
 
 section {
 	background-color: #f0f0f0;
-	margin-top: 10px;
-	border: 1px solid #000000;
-	padding: 10px;
-	border-radius: 10px;
+	margin-top: 2rem;
+	border: 0.2rem solid #000000;
+	border-radius: 2rem;
 	box-shadow: 0 1px 1px black;
+	padding: 1rem;
 }
 
 footer {
 	background: linear-gradient(to top, #2b2d32, #3b3d42);
-	margin: 10px auto 0 auto;
+	margin: 0 auto;
 	color: #8c8c90;
 	text-align: center;
-	padding: 20px 0;
+	padding: 3rem;
 	box-shadow: 0 1px 1px black;
 }
 
 time {
 	font-size: 1.2rem;
 	font-style: italic;
-	font-weight: 100;
+	font-weight: normal;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
 }
 
 /* Header navigation bar */
-nav {
+.main-nav {
 	background: linear-gradient(to bottom, #2b2d32, #3b3d42);
 	overflow: hidden;
 	/* center navigation menu items */
@@ -157,34 +153,40 @@ nav {
 }
 
 ul {
-	padding-left: 20px;
-	padding-right: 5px;
+	padding-left: 2rem;
 }
 
 ol {
-	padding-left: 20px;
-	padding-right: 5px;
+	padding-left: 2rem;
 }
 
 li {
-	font-weight: 100;
+	font-weight: normal;
 	font-family: Lato, Helvetica, Arial;
-	color: #8c8c90;
-	margin-top: 5px;
 }
 
 code {
-	font-weight: 100;
-	font-family: 'Roboto Mono', Courier, "Courier New";
-	color: #8c8c90;
-	margin-top: 5px;
+	font: 1.2rem/1 'Roboto Mono', Courier, "Courier New";
+	font-weight: normal;
 	background-color: #ffffff;
-	border-radius: 10px;
-	padding: 10px;
-	border-left: 5px solid #007f7f;
+	border-radius: 2rem;
+	border-left: 1rem solid #007f7f;
 	display: block;
 	overflow: hidden;
+	padding: 1rem;
 }
+
+/*----------------------------- Table of Contents ----------------------------*/
+
+.table-of-contents {
+	background-color: #007f7f;
+	margin-top: 2rem;
+	border-radius: 2rem;
+	padding: 1rem;
+	box-shadow: 0 1px 1px black;
+	border: 0.2rem solid #000000;
+}
+
 
 /*----------------------------------------------------------------------------*/
 
@@ -203,14 +205,13 @@ a:hover .social-icon {
 }
 
 .result-wrapper {
-	font-weight: 100;
-	font-family: 'Roboto Mono', Courier, "Courier New";
-	color: #8c8c90;
-	margin-top: 5px;
+	font: 1.2rem/1 'Roboto Mono', Courier, "Courier New";
+	font-weight: normal;
 	background-color: #ffffff;
-	border-radius: 10px;
-	padding: 10px;
-	border-left: 5px solid #007f7f;
+	border-radius: 2rem;
+	border-left: 1rem solid #007f7f;
+	overflow: hidden;
+	padding: 1rem;
 }
 
 .cakes {
@@ -242,31 +243,29 @@ a:hover .social-icon {
 }
 
 .byline-wrapper {
-	padding-left: 10px;
-	margin-bottom: 10px;
+
 }
 
 .byline-wrapper img {
 	float: left;
 	border-radius: 50%;
-	margin-right: 5px;
-	border: 2px solid white;
+	border: 0.5rem solid #007f7f;
 }
 
 .byline-wrapper p {
-	padding-top: 3px;
+
 }
 
 article header {
 	background: #2b2d32;
-	padding: 10px 0;
-	margin: 10px auto 0 auto;
-	border-radius: 10px;
+	border-radius: 2rem;
+	border: 0.2rem solid #000000;
 	text-align: left;
+	padding: 1rem;
 }
 
 /* Links inside navigation bar */
-nav a {
+.main-nav a {
 	padding: 0 10px;
 	font-style: normal;
 	font-size: 2rem;
@@ -282,7 +281,6 @@ section a {
 	font-weight: 100;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(0,173, 239, 0.5);
-	margin-top: 5px;
 	font-style: normal;
 }
 
@@ -341,7 +339,7 @@ section a:hover {
 	the background color of the dropdown button  when you hover the mouse over the 
 	dropdown container (that includes the dropbutton & dropdown content)
 */
-nav a:hover, .dropdown:hover .dropbtn {
+.main-nav a:hover, .dropdown:hover .dropbtn {
 	background-color: #005f5f;
 	cursor: pointer;
 	color: white;
@@ -392,7 +390,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 /* Highlight current navigation link (Home, HTML, CSS, ...) */
-nav #current {
+.main-nav #current {
 	color: white;
 }
 
@@ -415,7 +413,7 @@ nav #current {
 /*----------------------------------------------------------------------------*/
 
 .website-logo {
-	margin: 20px auto;
+	margin: 3rem auto;
 }
 
 /*----------------------------------------------------------------------------*/

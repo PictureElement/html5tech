@@ -35,7 +35,7 @@
 				<h4>Fundamental resources about HTML5 &amp; friends</h4>
 			</div>
 			-->
-			<nav>
+			<nav class="main-nav">
       	<a href="index.html">Home</a>
       	<div class="dropdown">
       		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -97,8 +97,10 @@
 						<time datetime="2017-02-23">Feb 23, 2017</time>
 					</div>
 				</header>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
 				<section>
-					<h2>Section</h2>
+					<h2 id="one">Section</h2>
 					<h3>Description</h3>
 					<p>
 						A "section" represents a generic document or application section. A 
@@ -135,7 +137,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Header</h2>
+					<h2 id="two">Header</h2>
 					<h3>Description</h3> 
 					<p>
 						A "header" represents a group of introductory content to a web page. 
@@ -168,7 +170,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Footer</h2>
+					<h2 id="three">Footer</h2>
 					<h3>Description</h3>
 					<p>
 						A "footer" represents a footer (About, Contact, Privacy Policy, Terms 
@@ -196,7 +198,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Address</h2>
+					<h2 id="four">Address</h2>
 					<h3>Description</h3>
 					<p>
 						The "address" element represents the contact information(i.e. 
@@ -217,7 +219,7 @@
 					</code>
 				</section>
 				<section>
-					<h2>Aside</h2>
+					<h2 id="five">Aside</h2>
 					<h3>Description</h3>
 					<p>
 						An "aside" is not directly related to the content surrounding it but 
@@ -252,7 +254,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Nav</h2>
+					<h2 id="six">Nav</h2>
 					<h3>Description</h3>
 					<p>
 						A "nav" represents a section of a page that links to other pages or to 
@@ -285,7 +287,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Article</h2>
+					<h2 id="seven">Article</h2>
 					<h3>Description</h3>
 					<p>
 						An "article" represents a complete or self-contained part of a 
@@ -317,7 +319,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Main</h2>
+					<h2 id="eight">Main</h2>
 					<h3>Description</h3>
 					<p>
 						"main" represents the main content of the body of a document or 
@@ -345,7 +347,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Figure</h2>
+					<h2 id="nine">Figure</h2>
 					<h3>Description</h3>
 					<p>
 						A "figure" represents a unit of self-contained content and if removed 
@@ -371,7 +373,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Figcaption</h2>
+					<h2 id="ten">Figcaption</h2>
 					<h3>Description</h3>
 					<p>
 						A "figcaption" represents a caption or legend for a figure.
@@ -391,7 +393,7 @@
 					</p>
 				</section>
 				<section>		
-					<h2>Time</h2>
+					<h2 id="eleven">Time</h2>
 					<h3>Description</h3> 
 					<p>
 						"time" represents either a time on a 24 hour clock, or a precise date.
@@ -454,5 +456,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
 	</body>
 </html>

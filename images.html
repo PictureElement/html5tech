@@ -35,7 +35,7 @@
         <h4>Fundamental resources about HTML5 &amp; friends</h4>
       </div>
       -->
-			<nav>
+			<nav class="main-nav">
       	<a href="index.html">Home</a>
       	<div class="dropdown">
       		<button id="current" class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -108,8 +108,10 @@
 						<time datetime="2017-03-16">Mar 16, 2017</time>
 					</div>
 				</header>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
 				<section>
-          <h2>Image Types</h2>
+          <h2 id="one">Image Types</h2>
           <ol>
             <li>
               <b>Content images:</b> just as necessary to the page as all of the 
@@ -126,7 +128,7 @@
           </ol>
         </section>
         <section>
-          <h2>Content Images</h2>
+          <h2 id="two">Content Images</h2>
           <h3>Description</h3>
           <p>
             The &lt;img&gt; element represents an image in the document. This 
@@ -218,7 +220,7 @@
           </ol>
         </section>
         <section>
-          <h2>Layout Images</h2>
+          <h2 id="three">Layout Images</h2>
           <h3>Description</h3>
           <p>
             Unlike content images, layout/background images are not added in 
@@ -397,7 +399,7 @@
           </div>
         </section>
         <section>
-          <h2>Floating Images</h2>
+          <h2 id="four">Floating Images</h2>
           <h3>Description</h3>
           <p>
           	To display an image to the side of block level tags, in other words 
@@ -460,7 +462,7 @@
 					</p> 
 				</section>
 				<section>
-        	<h2>Image Cropping</h2>
+        	<h2 id="five">Image Cropping</h2>
           <h3>Example #1: Crop, Resize, Don't keep ratio</h3>
           <h4>HTML</h4>
           <code>
@@ -592,7 +594,7 @@
         	</div>
         </section>
         <section>
-        	<h2>Logos</h2>
+        	<h2 id="six">Logos</h2>
         	<h3>Method #1: Apply logo as background</h3>
         	<h4>HTML</h4>
         	<code>
@@ -639,7 +641,7 @@
         	</p> 
         </section>
         <section>
-        	<h2>Sprites</h2>
+        	<h2 id="seven">Sprites</h2>
         	<h3>Description</h3>
         	<p>
         		CSS Sprites are means of combining multiple images into a single 
@@ -848,5 +850,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
   </body>
 </html>

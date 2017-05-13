@@ -35,7 +35,7 @@
         <h4>Fundamental resources about HTML5 &amp; friends</h4>
       </div>
       -->
-			<nav>
+			<nav class="main-nav">
       	<a href="index.html">Home</a>
       	<div class="dropdown">
       		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -97,8 +97,10 @@
 						<time datetime="2017-03-24">Mar 24, 2017</time>
 					</div>
 				</header>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
 				<section>
-					<h2>New Features</h2>
+					<h2 id="one">New Features</h2>
 					<ul>
 						<li>New elements & attributes</li>
 						<li>Full CSS3 support</li>
@@ -109,7 +111,7 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Improved Element Semantics</h2>
+					<h2 id="two">Improved Element Semantics</h2>
 					<h3>Description</h3>
 					<p>
 						HTML5 provides better-defined semantic roles for existing elements 
@@ -119,7 +121,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Web Application Features</h2>
+					<h2 id="three">Web Application Features</h2>
 					<h3>Description</h3>
 					<p>
 						Features that previously were only availbale through JS have been 
@@ -133,7 +135,7 @@
 					</p>
 				</section>	
 				<section>
-					<h2>Consistency in Handling Malformed Documents</h2>
+					<h2 id="four">Consistency in Handling Malformed Documents</h2>
 					<h3>Description</h3>
 					<p>
 						HTML supports "tag soup"(e.g. &lt;p&gt;This is a malformed fragment of
@@ -190,5 +192,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
 	</body>
 </html>

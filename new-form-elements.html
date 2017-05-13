@@ -35,7 +35,7 @@
 				<h4>Fundamental resources about HTML5 &amp; friends</h4>
 			</div>
 			-->
-			<nav>
+			<nav class="main-nav">
       	<a href="index.html">Home</a>
       	<div class="dropdown">
       		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -97,8 +97,10 @@
 						<time datetime="2017-02-28">Feb 28, 2017</time>
 					</div>
 				</header>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
 				<section>
-					<h2>Datalist</h2>
+					<h2 id="one">Datalist</h2>
 				 	<h3>Description</h3>
 				 	<p>
 				 		The &lt;datalist&gt; element specifies a list of pre-defined options for
@@ -141,7 +143,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Keygen</h2>
+					<h2 id="two">Keygen</h2>
 					<h3>Description</h3>
 					<p>
 						The purpose of the &lt;keygen&gt; element is to provide a secure way to 
@@ -149,7 +151,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Output</h2>
+					<h2 id="three">Output</h2>
 					<h3>Description</h3>
 					<p>
 						The &lt;output&gt; element represents the result of a 
@@ -196,5 +198,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
 	</body>
 </html>

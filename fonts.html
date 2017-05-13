@@ -35,7 +35,7 @@
         <h4>Fundamental resources about HTML5 &amp; friends</h4>
       </div>
       -->
-			<nav>
+			<nav class="main-nav">
       	<a href="index.html">Home</a>
       	<div class="dropdown">
       		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -97,8 +97,10 @@
 						<time datetime="2017-03-17">Mar 17, 2017</time>
 					</div>
         </header>
+        <!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
         <section>
-          <h2>font-family property</h2>
+          <h2 id="one">font-family property</h2>
           <h3>Description</h3>
           <p>
             font-style changes can be applied with CSS. The <i>font-family</i> 
@@ -140,7 +142,7 @@
           </code>
         </section>
         <section>
-          <h2>font-style property</h2>
+          <h2 id="two">font-style property</h2>
           <h3>Description</h3>
           <p>
             The <i>font-style</i> property is mostly used to specify italic 
@@ -160,7 +162,7 @@
           </ul>
         </section>
         <section>
-          <h2>font-weight property</h2>
+          <h2 id="three">font-weight property</h2>
           <h3>Description</h3>
           <p>The <i>font-weight</i> property specifies the weight of a font.</p>
           <h3>Usage</h3>
@@ -180,7 +182,7 @@
           </ul>
         </section>
         <section>
-          <h2>font-size property</h2>
+          <h2 id="four">font-size property</h2>
           <h3>Description</h3>
           <p>The <i>font-size</i> property specifies the size of the font.</p>
           <h3>Usage</h3>
@@ -223,7 +225,7 @@
           </ul>
 				</section>
         <section>
-          <h2>text-transform property</h2>
+          <h2 id="five">text-transform property</h2>
           <h3>Description</h3>
           <p>
             The <i>text-transform</i> property controls the capitalization of 
@@ -246,7 +248,7 @@
          	</ul>s
         </section>
         <section>
-          <h2>line-height property</h2>
+          <h2 id="six">line-height property</h2>
           <h3>Description</h3>
           <p>The <i>line-height</i> property specifies the line height.</p>
           <h3>Usage</h3>
@@ -323,7 +325,7 @@
           </div>
         </section>
         <section>
-          <h2>Web Fonts</h2>
+          <h2 id="seven">Web Fonts</h2>
           <h3>Description</h3>
           <p>
             <i>Adobe Typekit</i> and <i>Google Fonts</i> are examples of web 
@@ -421,7 +423,7 @@
          	</code>
         </section>
         <section>
-          <h2>Font Types</h2>
+          <h2 id="eight">Font Types</h2>
           <h3>Serif</h3>
           <p>
           	Serif fonts(e.g. Times) have little hooks on the ends of the 
@@ -511,5 +513,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section > h2:first-child").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
   </body>
 </html>

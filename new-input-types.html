@@ -35,7 +35,7 @@
 				<h4>Fundamental resources about HTML5 &amp; friends</h4>
 			</div>
 			-->
-			<nav>
+			<nav class="main-nav">
       	<a href="index.html">Home</a>
       	<div class="dropdown">
       		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -97,8 +97,10 @@
 						<time datetime="2017-02-24">Feb 24, 2017</time>
 					</div>
 				</header>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
 				<section>
-					<h2>Search</h2>
+					<h2 id="one">Search</h2>
 					<h3>Description</h3>
 					<p>
 						&lt;input type="search"&gt; is a one-line plain-text for entering one or 
@@ -121,7 +123,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Email</h2>
+					<h2 id="two">Email</h2>
 					<h3>Description</h3>
 					<p>
 						&lt;input type="email"&gt; is a regular text input, but with added 
@@ -144,7 +146,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>URL</h2>
+					<h2 id="three">URL</h2>
 					<h3>Description</h3>
 					<p>
 						&lt;input type="url"&gt; is a regular text input, but with added 
@@ -167,7 +169,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Tel</h2>
+					<h2 id="four">Tel</h2>
 					<h3>Description</h3> 
 					<p>
 						&lt;input type="tel"&gt; is regular text input, but with added usability
@@ -190,7 +192,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Number</h2>
+					<h2 id="five">Number</h2>
 					<h3>Description</h3>
 					<p>
 						&lt;input type="number"&gt; represents a precise control for setting the 
@@ -216,7 +218,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Range</h2>
+					<h2 id="six">Range</h2>
 					<h3>Description</h3>
 					<p>
 						&lt;input type="range"&gt; defines an imprecise control for setting the 
@@ -241,7 +243,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Month</h2>
+					<h2 id="seven">Month</h2>
 					<h3>Description</h3>
 					<p>
 						&lt;input type="month"&gt; allows the user to select a month and year. A 
@@ -264,7 +266,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Week</h2>
+					<h2 id="eight">Week</h2>
 					<h3>Description</h3>
 					<p>
 						&lt;input type="week"&gt; allows the user to select a week and year. A 
@@ -287,7 +289,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Date</h2>
+					<h2 id="nine">Date</h2>
 					<h3>Description</h3>
 					<p>
 						&lt;input type="date"&gt; is used for input fields that should contain a 
@@ -310,7 +312,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Datetime-local</h2>
+					<h2 id="ten">Datetime-local</h2>
 					<h3>Description</h3>
 					<p>
 						The &lt;input type="datetime-local"&gt; specifies a date and time input 
@@ -334,7 +336,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Datetime</h2>
+					<h2 id="eleven">Datetime</h2>
 					<h3>Description</h3>
 					<p>
 						The &lt;input type="datetime"&gt; specifies a date and time input 
@@ -363,7 +365,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Time</h2>
+					<h2 id="twelve">Time</h2>
 					<h3>Description</h3>
 					<p>
 						The &lt;input type="time"&gt; allows the user to select a 
@@ -386,7 +388,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Color</h2>
+					<h2 id="thirteen">Color</h2>
 					<h3>Description</h3>
 					<p>
 						The &lt;input type="color"&gt; is used for input fields that should 
@@ -456,5 +458,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
 	</body>
 </html>

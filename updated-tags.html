@@ -35,7 +35,7 @@
 				<h4>Fundamental resources about HTML5 &amp; friends</h4>
 			</div>
 			-->
-			<nav>
+			<nav class="main-nav">
       	<a href="index.html">Home</a>
       	<div class="dropdown">
       		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -97,8 +97,10 @@
 						<time datetime="2017-02-23">Feb 23, 2017</time>
 					</div>
 				</header>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
 				<section>
-					<h2>&lt;i&gt;</h2>
+					<h2 id="one">HTML i tag</h2>
 					<h3>Description</h3>
 					<p>
 						Represents text in an "alternate voice", mood, foreign words, 
@@ -123,7 +125,7 @@
 					</ul>
 				</section>
 				<section>
-					<h2>&lt;b&gt;</h2>
+					<h2 id="two">HTML b tag</h2>
 					<h3>Description</h3>
 					<p>
 						Represents "stylistically offset" text such as keywords and text that 
@@ -145,7 +147,7 @@
 					</ul>
 				</section>
 				<section>
-					<h2>&lt;em&gt;</h2>
+					<h2 id="three">HTML em tag</h2>
 					<h3>Description</h3>
 					<p>
 						Stress emphasis. If spoken, this stress would be emphasised 
@@ -158,7 +160,7 @@
 					</ul>
 				</section>
 				<section>
-					<h2>&lt;strong&gt;</h2>
+					<h2 id="four">HTML strong tag</h2>
 					<h3>Description</h3> 
 					<p>Strong importance.</p>
 					<h3>Examples</h3>
@@ -208,5 +210,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
 	</body>
 </html>

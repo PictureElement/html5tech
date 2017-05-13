@@ -35,7 +35,7 @@
 				<h4>Fundamental resources about HTML5 &amp; friends</h4>
 			</div>
 			-->
-			<nav>
+			<nav class="main-nav">
       	<a id="current" href="index.html">Home</a>
       	<div class="dropdown">
       		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -97,8 +97,10 @@
 						<time datetime="2017-02-28">Aprl 19, 2017</time>
 					</div>
 				</header>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
 				<section>
-					<h2>About</h2>
+					<h2 id="one">About</h2>
 					<p>
 						Welcome to <i>HTML5Tech</i>, an ever-growing website with 
 						fundamental resources about HTML5 and friends. 
@@ -114,7 +116,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Aim</h2>
+					<h2 id="two">Aim</h2>
 					<p>
 						I've decided to start this page, to help myself and other newbies in 
 						the field of web development. From this site, you can learn the 
@@ -123,7 +125,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Get involved</h2>
+					<h2 id="three">Get involved</h2>
 					<p>
 						If you're interested in contributing to the website development, 	
 						head over to the site's repository on 
@@ -171,5 +173,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
 	</body>
 </html>

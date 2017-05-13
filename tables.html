@@ -35,7 +35,7 @@
         <h4>Fundamental resources about HTML5 &amp; friends</h4>
       </div>
       -->
-      <nav>
+      <nav class="main-nav">
         <a href="index.html">Home</a>
         <div class="dropdown">
           <button id="current" class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -97,8 +97,10 @@
             <time datetime="2017-04-02">Apr. 02, 2017</time>
           </div>
         </header>
+        <!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
         <section>
-          <h2>A typical table</h2>
+          <h2 id="one">Markup</h2>
           <h3>HTML</h3>
           <code>
             &lt;table class="table-1"><br>
@@ -296,7 +298,7 @@
           </table>
         </section>
         <section>
-          <h2>Styling our table</h2>
+          <h2 id="two">Styling</h2>
           <h3>CSS</h3>
           <code>
           	<span style="color: blue;">/* Spacing & layout styling */</span><br>
@@ -574,5 +576,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
 	</body>
 </html>

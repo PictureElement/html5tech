@@ -35,7 +35,7 @@
         <h4>Fundamental resources about HTML5 &amp; friends</h4>
       </div>
       -->
-      <nav>
+      <nav class="main-nav">
         <a href="index.html">Home</a>
         <div class="dropdown">
           <button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
@@ -97,14 +97,16 @@
 						<time datetime="2017-03-25">Mar 25, 2017</time>
 					</div>
         </header>
+        <!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
         <section>
-        	<h2>Adding CSS</h2>
-        	<h4>Method #1</h4>
+        	<h2 id="one">Adding CSS</h2>
+        	<h3>Method #1</h3>
         	<h4>HTML</h4>
         	<code>
         		&lt;h1 style="color: red;"><i>Heading</i>&lt;/h1>
         	</code>
-        	<h4>Method #2</h4>
+        	<h3>Method #2</h3>
         	<h4>HTML</h4>
         	<code>
 	        	&lt;head><br>
@@ -115,7 +117,7 @@
 						&nbsp;&nbsp;&lt;/style><br>
 						&lt;/head>
 					</code>
-					<h4>Method #3</h4>
+					<h3>Method #3</h3>
 					<h4>HTML</h4>
 					<code>
 						&lt;head><br>
@@ -130,13 +132,13 @@
 					</code>
 				</section>
         <section>
-          <h2>Border Radius</h2>
-          <h4>Description</h4>
+          <h2 id="two">Border Radius</h2>
+          <h3>Description</h3>
           <p>
           	The <i>border-radius</i> property is used to add rounded corners to 
           	an element's border.
           </p>
-          <h4>Examples</h4>
+          <h3>Examples</h3>
           <ol>
           	<li>
           		<p>top-left&bottom-right&top-right&bottom-left</p>
@@ -352,7 +354,7 @@
 				  </ol>
 				</section>
 				<section>
-          <h2>Box Shadow</h2>
+          <h2 id="three">Box Shadow</h2>
           <h4>Description</h4>
           <p>
           	The <i>box-shadow</i> property enables you to cast one or more 
@@ -489,7 +491,7 @@
           </ol>
         </section>
         <section>
-          <h2>Text Shadow</h2>
+          <h2 id="four">Text Shadow</h2>
           <h4>Description</h4>
           <p>The <i>text-shadow</i> property adds shadows to text.</p>
           <h4>Syntax</h4>
@@ -813,7 +815,7 @@
           </p>
        	</section>
        	<section>
-          <h2>Multiple Backgrounds</h2>
+          <h2 id="five">Multiple Backgrounds</h2>
           <h4>Description</h4>
           <p>
             CSS3 allows you to apply multiple backgrounds to an element. 
@@ -888,7 +890,7 @@
        		</div>
        	</section>
        	<section>
-          <h2>Opacity</h2>
+          <h2 id="six">Opacity</h2>
           <h4>Description</h4>
           <p>
           	The <i>opacity</i> property specifies the opacity/transparency of an 
@@ -1038,7 +1040,7 @@
 					</ol>
 				</section>
 				<section>
-	        <h2>Gradients</h2>
+	        <h2 id="seven">Gradients</h2>
 	        <h4>Description</h4>
 	        <p>
 	        	Gradients let us create smooth transitions between two or more 
@@ -1537,5 +1539,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ul>" + "</nav>";
+			$("main").prepend(ToC);
+		</script>
 	</body>
 </html>
