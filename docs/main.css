@@ -170,7 +170,7 @@ code {
 	background: linear-gradient(to bottom, #2b2d32, #3b3d42);
 	overflow: hidden;
 	text-align: left;
-	width: 50%;
+	width: 55%;
 	margin: 0 auto;
 }
 
@@ -179,7 +179,7 @@ code {
 }
 
 #branding {
-	width: 50%;
+	width: 55%;
 	margin: 0 auto;
 }
 
@@ -202,26 +202,25 @@ code {
 	border: 0.2rem solid #000000;
 	float: right;
 	width: 16%;
+
 }
 
 .table-of-contents h3 {
-	text-align: center;
+	text-align: left;
 	text-decoration: underline;
 }
 
 /*----------------------- Set main container widths --------------------------*/
 main {
-	width: 50%;
+	width: 55%;
 }
 
 section, article header {
-	width: 73%;
+	width: 67%;
 	float: left;
-	text-align: justify;
 }
 
 /*----------------------------------------------------------------------------*/
-
 a:hover {
 	color: white;
 }
