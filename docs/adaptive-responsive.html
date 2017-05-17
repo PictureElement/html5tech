@@ -29,65 +29,68 @@
 	</head>
   <body>
     <header>
-      <img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
-      <!--
-      <div class="tagline">
-        <h4>Fundamental resources about HTML5 &amp; friends</h4>
-      </div>
-      -->
-      <nav>
-        <a id="current" href="index.html">Home</a>
-        <div class="dropdown">
-          <button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
-          <div class="dropdown-content">
-            <a href="elements.html">Elements</a>
-            <a href="images.html">Images</a>
-            <a href="html-common-mistakes.html">Common Mistakes</a>
-            <a href="forms.html">Forms</a>
-            <a href="tables.html">Tables</a>
-            <a href="">6</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
-          <div class="dropdown-content">
-            <a href="whats-new.html">What's New</a>
-            <a href="updated-tags.html">Updated Tags</a>
-            <a href="updated-elements.html">Updated Elements</a>
-            <a href="new-elements.html">New Elements</a>
-            <a href="new-input-types.html">New Input Types</a>
-            <a href="new-input-attributes.html">New Input Attributes</a>
-            <a href="new-form-elements.html">New Form Elements</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
-          <div class="dropdown-content">
-            <a href="selectors.html">Selectors</a>
-            <a href="color.html">Color</a>
-            <a href="box-model.html">Box Model</a>
-            <a href="fonts.html">Fonts</a>
-            <a href="styles.html">Styles</a>
-            <a href="float.html">Float Property</a>
-            <a href="clean.html">Clean Code</a>
-            <a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
-          <div class="dropdown-content">
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
-            <a href="">6</a>
-          </div>
-        </div>
-      </nav>
+			<div id="branding-container">
+				<div id="branding">
+					<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="300">
+				</div>
+			</div>
+			<div id="nav-container">
+	      <nav class="main-nav">
+	        <a id="current" href="index.html">Home</a>
+	        <div class="dropdown">
+	          <button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="elements.html">Elements</a>
+	            <a href="images.html">Images</a>
+	            <a href="html-common-mistakes.html">Common Mistakes</a>
+	            <a href="forms.html">Forms</a>
+	            <a href="tables.html">Tables</a>
+	            <a href="">6</a>
+	          </div>
+	        </div>
+	        <div class="dropdown">
+	          <button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="whats-new.html">What's New</a>
+	            <a href="updated-tags.html">Updated Tags</a>
+	            <a href="updated-elements.html">Updated Elements</a>
+	            <a href="new-elements.html">New Elements</a>
+	            <a href="new-input-types.html">New Input Types</a>
+	            <a href="new-input-attributes.html">New Input Attributes</a>
+	            <a href="new-form-elements.html">New Form Elements</a>
+	          </div>
+	        </div>
+	        <div class="dropdown">
+	          <button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="selectors.html">Selectors</a>
+	            <a href="color.html">Color</a>
+	            <a href="box-model.html">Box Model</a>
+	            <a href="fonts.html">Fonts</a>
+	            <a href="styles.html">Styles</a>
+	            <a href="float.html">Float Property</a>
+	            <a href="clean.html">Clean Code</a>
+	            <a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
+	          </div>
+	        </div>
+	        <div class="dropdown">
+	          <button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="">1</a>
+	            <a href="">2</a>
+	            <a href="">3</a>
+	            <a href="">4</a>
+	            <a href="">5</a>
+	            <a href="">6</a>
+	          </div>
+	        </div>
+	      </nav>
+	    </div>
     </header>
     <main>
       <article>
+      	<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
         <header>
           <h1>Adaptive & Responsive Design</h1>
           <div class="byline-wrapper">
@@ -98,13 +101,17 @@
           </div>
         </header>
         <section>
-          <h2>Description</h2>
+          <h2 id="one">Description</h2>
           <p>
             Both responsive and adaptive sites change appearance based on the 
             size of the viewport. The main difference between them, is that 
             responsive sites, respond to the size of the viewport at any given 
             point whereas adaptive sites adapt to the size of the viewport at 
-            specific points.
+            specific points. Furthermore, all responsive designs are considered 
+            adaptive but not all adaptive designs are considered responsive. 
+            Adaptive designs are great for targeted content but do not 
+            necessarily cover all of the universal web. In contrast, responsive 
+            designs are flexible and universal.
           </p>
           <p>
             Responsive/Adaptive design is not simple because there are many 
@@ -112,7 +119,7 @@
           </p>
         </section>
         <section>
-          <h2>Relative Font Sizing</h2>
+          <h2 id="two">Relative Font Sizing</h2>
           <h3>Description</h3>
           <p>
             It's recommended to use values that are relative(i.e. em, rem). If 
@@ -202,7 +209,7 @@
           </code>
         </section>
         <section>
-          <h2>Viewport</h2>
+          <h2 id="three">Viewport</h2>
           <h3>Description</h3>
           <p>
             The viewport is the visible area of a web page and varies with the 
@@ -238,7 +245,7 @@
           </ul>
         </section>
         <section>
-          <h2>Fluid Layouts</h2>
+          <h2 id="four">Fluid Layouts</h2>
           <h3>Description</h3>
           <p>
             Fluid layouts, scale based on the size of the viewport. A fluid site
@@ -300,7 +307,7 @@
           </code>
         </section>
         <section>
-          <h2>Media Queries</h2>
+          <h2 id="five">Media Queries</h2>
           <h3>Description</h3>
           <p>
             A media query is a block of CSS properties that are applied only if
@@ -424,6 +431,17 @@
           </code>
           <a href="media-queries.html">Try it Yourself</a>
         </section>
+        <section>
+        	<h2 id="six">Break Points</h2>
+          <h3>Description</h3>
+          <p>
+          	Break points define where the design breaks down. Break points 
+          	should be based on content, never on specific contexts
+          	(i.e. devices). In other words, the content itself should determine 
+          	the layout. When creating break points keep in mind that lines of 
+          	text should be kept to a maximum of around 70 or 80 characters long.
+          </p>
+        </section>
       </article>
     </main>
     <footer>
@@ -464,5 +482,21 @@
           width="100">
       </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h3>Contents</h3>" + "<ol>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ol>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
   </body>
 </html>

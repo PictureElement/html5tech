@@ -29,65 +29,68 @@
 	</head>
 	<body>
 		<header>
-			<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
-      <!--
-      <div class="tagline">
-        <h4>Fundamental resources about HTML5 &amp; friends</h4>
-      </div>
-      -->
-			<nav>
-      	<a href="index.html">Home</a>
-      	<div class="dropdown">
-      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
-      		<div class="dropdown-content">
-      			<a href="elements.html">Elements</a>
-      			<a href="images.html">Images</a>
-      			<a href="html-common-mistakes.html">Common Mistakes</a>
-      			<a href="forms.html">Forms</a>
-      			<a href="tables.html">Tables</a>
-      			<a href="">6</a>
-      		</div>
-      	</div>
-				<div class="dropdown">
-      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
-      		<div class="dropdown-content">
-            <a href="whats-new.html">What's New</a>
-      			<a href="updated-tags.html">Updated Tags</a>
-      			<a href="updated-elements.html">Updated Elements</a>
-      			<a href="new-elements.html">New Elements</a>
-      			<a href="new-input-types.html">New Input Types</a>
-      			<a href="new-input-attributes.html">New Input Attributes</a>
-      			<a href="new-form-elements.html">New Form Elements</a>
-      		</div>
-      	</div>
-      	<div class="dropdown">
-      		<button id="current" class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
-      		<div class="dropdown-content">
-      			<a href="selectors.html">Selectors</a>
-      			<a href="color.html">Color</a>
-      			<a href="box-model.html">Box Model</a>
-      			<a href="fonts.html">Fonts</a>
-      			<a href="styles.html">Styles</a>
-      			<a href="float.html">Float Property</a>
-      			<a href="clean.html">Clean Code</a>
-      			<a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
-      		</div>
-      	</div>
-      	<div class="dropdown">
-      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
-      		<div class="dropdown-content">
-      			<a href="">1</a>
-      			<a href="">2</a>
-      			<a href="">3</a>
-      			<a href="">4</a>
-      			<a href="">5</a>
-      			<a href="">6</a>
-      		</div>
-      	</div>
-  		</nav>
+			<div id="branding-container">
+				<div id="branding">
+					<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="300">
+				</div>
+			</div>
+			<div id="nav-container">
+				<nav class="main-nav">
+	      	<a href="index.html">Home</a>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="elements.html">Elements</a>
+	      			<a href="images.html">Images</a>
+	      			<a href="html-common-mistakes.html">Common Mistakes</a>
+	      			<a href="forms.html">Forms</a>
+	      			<a href="tables.html">Tables</a>
+	      			<a href="">6</a>
+	      		</div>
+	      	</div>
+					<div class="dropdown">
+	      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	            <a href="whats-new.html">What's New</a>
+	      			<a href="updated-tags.html">Updated Tags</a>
+	      			<a href="updated-elements.html">Updated Elements</a>
+	      			<a href="new-elements.html">New Elements</a>
+	      			<a href="new-input-types.html">New Input Types</a>
+	      			<a href="new-input-attributes.html">New Input Attributes</a>
+	      			<a href="new-form-elements.html">New Form Elements</a>
+	      		</div>
+	      	</div>
+	      	<div class="dropdown">
+	      		<button id="current" class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="selectors.html">Selectors</a>
+	      			<a href="color.html">Color</a>
+	      			<a href="box-model.html">Box Model</a>
+	      			<a href="fonts.html">Fonts</a>
+	      			<a href="styles.html">Styles</a>
+	      			<a href="float.html">Float Property</a>
+	      			<a href="clean.html">Clean Code</a>
+	      			<a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
+	      		</div>
+	      	</div>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="">1</a>
+	      			<a href="">2</a>
+	      			<a href="">3</a>
+	      			<a href="">4</a>
+	      			<a href="">5</a>
+	      			<a href="">6</a>
+	      		</div>
+	      	</div>
+	  		</nav>
+	  	</div>
 		</header>
     <main>
       <article>
+      	<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
         <header>
           <h1>Selectors</h1>
           <div class="byline-wrapper">
@@ -98,7 +101,7 @@
 					</div>
         </header>
         <section>
-          <h2>Type Selector</h2>
+          <h2 id="one">Type Selector</h2>
           <h3>Description</h3>
           <p>
           	This selector directly matches one or more elements based on the 
@@ -114,7 +117,7 @@
 	        </code>
         </section>
         <section>
-        	<h2>Attribute Selector</h2>
+        	<h2 id="two">Attribute Selector</h2>
           <h3>Description</h3>
           <p>
           	This type of selector matches elements based on their attributes and 
@@ -176,7 +179,7 @@
 		      </div>
         </section>
         <section>
-        	<h2>Multiple Selector</h2>
+        	<h2 id="three">Multiple Selector</h2>
         	<h3>Description</h3>
           <p>
           	This type of selector is used to apply the same rule to multiple 
@@ -196,7 +199,7 @@
 	        </code>
 	      </section>
         <section>
-          <h2>A B Combinator (a.k.a Descendant Selector)</h2>
+          <h2 id="four">A B Combinator (a.k.a Descendant Selector)</h2>
           <h3>Description</h3>
           <p>
             This type of selector, selects any element matching B that is inside 
@@ -215,7 +218,7 @@
           </p>
         </section>
         <section>
-        	<h2>A + B Combinator (a.k.a Adjacent Sibling Selector)</h2>
+        	<h2 id="five">A + B Combinator (a.k.a Adjacent Sibling Selector)</h2>
         	<h3>Description</h3>
         	<p>
         		This type of selector, selects <em>only</em> the element matching B 
@@ -276,7 +279,7 @@
 					</ol>
 				</section>
 				<section>
-        	<h2>A > B Combinator (a.k.a Child Selector)</h2>
+        	<h2 id="six">A > B Combinator (a.k.a Child Selector)</h2>
         	<h3>Description</h3>
         	<p>
         		This type of selector, selects <em>all</em> elements matching B that 
@@ -309,7 +312,7 @@
 					</div>
 				</section>
 				<section>
-        	<h2>A ~ B Combinator (a.k.a General Sibling Selector)</h2>
+        	<h2 id="seven">A ~ B Combinator (a.k.a General Sibling Selector)</h2>
         	<h3>Description</h3>
         	<p>
         		This type of selector, selects <em>all</em> elements matching B that 
@@ -342,7 +345,7 @@
 					</div>
 				</section>
         <section>
-          <h2>Pseudo-Class</h2>
+          <h2 id="eight">Pseudo-Class</h2>
           <h3>Description</h3>
           <p>
             A <i>pseudo-class</i> is a keyword that can be added to selectors to 
@@ -545,7 +548,7 @@
 		      </p>
 				</section>
         <section>
-        	<h2>Pseudo-Elements</h2>
+        	<h2 id="nine">Pseudo-Elements</h2>
        		<h3>Description</h3>
        		<p>
             A <i>pseudo-element</i> is a keyword that can be added to selectors 
@@ -680,7 +683,7 @@
 	        </ol>
        	</section>
         <section>
-        	<h2>ID selector</h2>
+        	<h2 id="ten">ID selector</h2>
           <h3>Description</h3>
           <p>An ID selector matches the element with the specified id.</p>
           <h3>Syntax</h3>
@@ -733,7 +736,7 @@
 					</ul>
         </section>
         <section>
-          <h2>Class selector</h2>
+          <h2 id="eleven">Class selector</h2>
           <h3>Description</h3>
           <p>
           	The <i>.class</i> selector selects elements with a specific class attribute.
@@ -849,7 +852,7 @@
 					</ul>
 				</section>
 				<section>
-          <h2>Cascade order</h2>
+          <h2 id="twelve">Cascade order</h2>
           <ol>
           	<li>
           		<h4>HTML</h4>
@@ -890,7 +893,7 @@
           </ol>
         </section>
         <section>
-          <h2>Inheritance</h2>
+          <h2 id="thirteen">Inheritance</h2>
           <h3>Description</h3>
           <p>
           	Some nested elements inherit parent styles by default others aren't. 
@@ -1076,7 +1079,7 @@
 					</ol>
 				</section>
 				<section>
-          <h2>Specificity</h2>
+          <h2 id="fourteen">Specificity</h2>
           <h3>Description</h3>
           <p>Specificity refers to the priority of a particular selector.</p>
           <h3>Calculation</h3>
@@ -1261,5 +1264,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h3>Contents</h3>" + "<ol>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ol>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
   </body>
 </html>

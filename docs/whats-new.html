@@ -29,65 +29,68 @@
 	</head>
 	<body>
 		<header>
-			<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="500">
-      <!--
-      <div class="tagline">
-        <h4>Fundamental resources about HTML5 &amp; friends</h4>
-      </div>
-      -->
-			<nav>
-      	<a href="index.html">Home</a>
-      	<div class="dropdown">
-      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
-      		<div class="dropdown-content">
-      			<a href="elements.html">Elements</a>
-      			<a href="images.html">Images</a>
-      			<a href="html-common-mistakes.html">Common Mistakes</a>
-      			<a href="forms.html">Forms</a>
-      			<a href="tables.html">Tables</a>
-      			<a href="">6</a>
-      		</div>
-      	</div>
-				<div class="dropdown">
-      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
-      		<div class="dropdown-content">
-      			<a href="whats-new.html">What's New</a>
-      			<a href="updated-tags.html">Updated Tags</a>
-      			<a href="updated-elements.html">Updated Elements</a>
-      			<a href="new-elements.html">New Elements</a>
-      			<a href="new-input-types.html">New Input Types</a>
-      			<a href="new-input-attributes.html">New Input Attributes</a>
-      			<a href="new-form-elements.html">New Form Elements</a>
-      		</div>
-      	</div>
-      	<div class="dropdown">
-      		<button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
-      		<div class="dropdown-content">
-      			<a href="selectors.html">Selectors</a>
-      			<a href="color.html">Color</a>
-      			<a href="box-model.html">Box Model</a>
-      			<a href="fonts.html">Fonts</a>
-      			<a href="styles.html">Styles</a>
-      			<a href="float.html">Float Property</a>
-      			<a href="clean.html">Clean Code</a>
-      			<a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
-      		</div>
-      	</div>
-      	<div class="dropdown">
-      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
-      		<div class="dropdown-content">
-      			<a href="">1</a>
-      			<a href="">2</a>
-      			<a href="">3</a>
-      			<a href="">4</a>
-      			<a href="">5</a>
-      			<a href="">6</a>
-      		</div>
-      	</div>
-  		</nav>
+			<div id="branding-container">
+				<div id="branding">
+					<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="300">
+				</div>
+			</div>
+			<div id="nav-container">
+				<nav class="main-nav">
+	      	<a href="index.html">Home</a>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="elements.html">Elements</a>
+	      			<a href="images.html">Images</a>
+	      			<a href="html-common-mistakes.html">Common Mistakes</a>
+	      			<a href="forms.html">Forms</a>
+	      			<a href="tables.html">Tables</a>
+	      			<a href="">6</a>
+	      		</div>
+	      	</div>
+					<div class="dropdown">
+	      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="whats-new.html">What's New</a>
+	      			<a href="updated-tags.html">Updated Tags</a>
+	      			<a href="updated-elements.html">Updated Elements</a>
+	      			<a href="new-elements.html">New Elements</a>
+	      			<a href="new-input-types.html">New Input Types</a>
+	      			<a href="new-input-attributes.html">New Input Attributes</a>
+	      			<a href="new-form-elements.html">New Form Elements</a>
+	      		</div>
+	      	</div>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="selectors.html">Selectors</a>
+	      			<a href="color.html">Color</a>
+	      			<a href="box-model.html">Box Model</a>
+	      			<a href="fonts.html">Fonts</a>
+	      			<a href="styles.html">Styles</a>
+	      			<a href="float.html">Float Property</a>
+	      			<a href="clean.html">Clean Code</a>
+	      			<a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
+	      		</div>
+	      	</div>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="">1</a>
+	      			<a href="">2</a>
+	      			<a href="">3</a>
+	      			<a href="">4</a>
+	      			<a href="">5</a>
+	      			<a href="">6</a>
+	      		</div>
+	      	</div>
+	  		</nav>
+	  	</div>
 		</header>
 		<main>
 			<article>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
 				<header>
 					<h1>What's New</h1>
 					<div class="byline-wrapper">
@@ -98,7 +101,7 @@
 					</div>
 				</header>
 				<section>
-					<h2>New Features</h2>
+					<h2 id="one">New Features</h2>
 					<ul>
 						<li>New elements & attributes</li>
 						<li>Full CSS3 support</li>
@@ -109,7 +112,7 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Improved Element Semantics</h2>
+					<h2 id="two">Improved Element Semantics</h2>
 					<h3>Description</h3>
 					<p>
 						HTML5 provides better-defined semantic roles for existing elements 
@@ -119,7 +122,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Web Application Features</h2>
+					<h2 id="three">Web Application Features</h2>
 					<h3>Description</h3>
 					<p>
 						Features that previously were only availbale through JS have been 
@@ -133,7 +136,7 @@
 					</p>
 				</section>	
 				<section>
-					<h2>Consistency in Handling Malformed Documents</h2>
+					<h2 id="four">Consistency in Handling Malformed Documents</h2>
 					<h3>Description</h3>
 					<p>
 						HTML supports "tag soup"(e.g. &lt;p&gt;This is a malformed fragment of
@@ -190,5 +193,21 @@
 	      	width="100">
 	    </div>
     </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h3>Contents</h3>" + "<ol>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ol>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
 	</body>
 </html>
