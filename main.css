@@ -54,7 +54,7 @@ body {
 
 h1 {
 	font-size: 4rem;
-	font-weight: bold;
+	font-weight: 800;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: white;
 	text-shadow: 0 1px 1px black;
@@ -62,7 +62,7 @@ h1 {
 
 h2 {
 	font-size: 3rem;
-	font-weight: bold;
+	font-weight: 600;
 	font-style: italic;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
@@ -71,14 +71,14 @@ h2 {
 
 h3 {
 	font-size: 2rem;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
 }
 
 h4 {
 	font-size: 1.5rem;
-	font-weight: 100;
+	font-weight: 200;
 	font-style: italic;
 	font-family: Arvo, Times, "Times New Roman"; 
 }
@@ -114,17 +114,13 @@ main {
 	padding: 2rem;
 }
 
-article {
-	margin: 0 auto 0 auto;
-}
-
 section {
 	background-color: #f0f0f0;
 	margin-top: 2rem;
 	border: 0.2rem solid #000000;
 	border-radius: 2rem;
 	box-shadow: 0 1px 1px black;
-	padding: 1rem;
+	padding: 2rem;
 }
 
 footer {
@@ -132,7 +128,7 @@ footer {
 	margin: 0 auto;
 	color: #8c8c90;
 	text-align: center;
-	padding: 3rem;
+	padding: 2rem;
 	box-shadow: 0 1px 1px black;
 }
 
@@ -173,20 +169,36 @@ code {
 	border-left: 1rem solid #007f7f;
 	display: block;
 	overflow: hidden;
-	padding: 1rem;
+	padding: 2rem;
 }
 
 /*----------------------------- Table of Contents ----------------------------*/
 
 .table-of-contents {
 	background-color: #007f7f;
-	margin-top: 2rem;
 	border-radius: 2rem;
-	padding: 1rem;
+	padding: 2rem;
 	box-shadow: 0 1px 1px black;
 	border: 0.2rem solid #000000;
+	float: right;
+	width: 16%;
 }
 
+.table-of-contents h3 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+/*----------------------- Set main container widths --------------------------*/
+main {
+	width: 50%;
+}
+
+section, article header {
+	width: 73%;
+	float: left;
+	text-align: justify;
+}
 
 /*----------------------------------------------------------------------------*/
 
@@ -261,7 +273,7 @@ article header {
 	border-radius: 2rem;
 	border: 0.2rem solid #000000;
 	text-align: left;
-	padding: 1rem;
+	padding: 2rem;
 }
 
 /* Links inside navigation bar */

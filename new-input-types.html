@@ -88,6 +88,8 @@
 		</header>
 		<main>
 			<article>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
 				<header>
 					<h1>New Input Types</h1>
 					<div class="byline-wrapper">
@@ -97,8 +99,6 @@
 						<time datetime="2017-02-24">Feb 24, 2017</time>
 					</div>
 				</header>
-				<!-- Dynamic table of contents is injected here -->
-				<div class="all-topics"></div>
 				<section>
 					<h2 id="one">Search</h2>
 					<h3>Description</h3>
@@ -360,8 +360,12 @@
 						</form>
 					</div>
 					<p>
-						<i class="notice">Notice:</i> As of Feb 23, 2017, "datetime" is not 
-						supported.
+						<i class="notice">Notice 1:</i> As of Feb 23, 2017, "datetime" is 
+						not supported.
+					</p>
+					<p>
+						<i class="notice">Notice 2:</i> If a browser doesn't support a 
+						particular input type, it defaults to "text".
 					</p>
 				</section>
 				<section>
@@ -410,14 +414,6 @@
 						</form>
 					</div>
 				</section>
-				<p>
-					<i class="notice">Notice 1:</i> If a browser doesn't support a 
-					particular input type, it defaults to "text".
-				</p>
-				<p>
-					<i class="notice">Notice 2:</i> The &lt;form&gt; tag is used to create 
-					an HTML form for user input.
-				</p>
 			</article>
 		</main>
 		<footer>
@@ -462,7 +458,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!-- Dynamic Table of Contents using JQuery -->
 		<script>
-			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h2>On this page:</h2>" + "<ul>";
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h3>Contents</h3>" + "<ol>";
 			var newLine, el, title, link;
 			$("section h2").each(function() {
 				el = $(this);
@@ -471,7 +467,7 @@
 				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
 				ToC += newLine;
 			});
-			ToC += "</ul>" + "</nav>";
+			ToC += "</ol>" + "</nav>";
 			$(".all-topics").prepend(ToC);
 		</script>
 	</body>
