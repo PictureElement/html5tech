@@ -91,330 +91,332 @@
 			<article>
 				<!-- Dynamic table of contents is injected here -->
 				<div class="all-topics"></div>
-				<header>
-					<h1>New Input Types</h1>
-					<div class="byline-wrapper">
-						<img src="images/avatar.png" alt="avatar" width="40">
-						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
-						<br>
-						<time datetime="2017-02-24">Feb 24, 2017</time>
-					</div>
-				</header>
-				<section>
-					<h2 id="one">Search</h2>
-					<h3>Description</h3>
-					<p>
-						&lt;input type="search"&gt; is a one-line plain-text for entering one or 
-						more search terms.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Search Google:<br>
-						&nbsp;&nbsp;&lt;input type="search" name="google-search"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Search Google:
-							<input type="search" name="google-search">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="two">Email</h2>
-					<h3>Description</h3>
-					<p>
-						&lt;input type="email"&gt; is a regular text input, but with added 
-						usability on mobile devices(i.e. keyboard with email-related keys).
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;E-mail:<br>
-						&nbsp;&nbsp;&lt;input type="email" name="email"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">		
-						<form>
-							E-mail:
-							<input type="email" name="email">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="three">URL</h2>
-					<h3>Description</h3>
-					<p>
-						&lt;input type="url"&gt; is a regular text input, but with added 
-						usability on mobile devices(i.e. keyboard with URL-related keys).
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>				
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Add your homepage:<br>
-						&nbsp;&nbsp;&lt;input type="url" name="homepage"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Add your homepage:
-							<input type="url" name="homepage">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="four">Tel</h2>
-					<h3>Description</h3> 
-					<p>
-						&lt;input type="tel"&gt; is regular text input, but with added usability
-						on mobile devices(keyboard with digits).
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Telephone:<br>
-						&nbsp;&nbsp;&lt;input type="tel" name="usrtel"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Telephone:
-							<input type="tel" name="usrtel">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="five">Number</h2>
-					<h3>Description</h3>
-					<p>
-						&lt;input type="number"&gt; represents a precise control for setting the 
-						element's value to a string representing a number. In the browser we 
-						get a convinient control to the right side of the input that allows us 
-						to increase or decrease the value. The keyboard on mobile devices 
-						changes to have a row of number keys at the top.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Enter a number (between 1 and 5):<br>
-						&nbsp;&nbsp;&lt;input type="number" name="number" min="1" max="5"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Enter a number (between 1 and 5):
-							<input type="number" name="number" min="1" max="5">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="six">Range</h2>
-					<h3>Description</h3>
-					<p>
-						&lt;input type="range"&gt; defines an imprecise control for setting the 
-						element's value to a string representing a number. In the browser we 
-						get a control that allows us to drag a slider to change the number 
-						value.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;&lt;p&gt;Range (0-50):&lt;/p&gt;<br>
-						&nbsp;&nbsp;&lt;input type="range" name="points" min="0" max="50"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Range (0-50):
-							<input type="range" name="points" min="0" max="50">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="seven">Month</h2>
-					<h3>Description</h3>
-					<p>
-						&lt;input type="month"&gt; allows the user to select a month and year. A 
-						date picker can show up in the input field.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Select a month:<br>
-						&nbsp;&nbsp;&lt;input type="month" name="month-year"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Select a month:
-							<input type="month" name="month-year">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="eight">Week</h2>
-					<h3>Description</h3>
-					<p>
-						&lt;input type="week"&gt; allows the user to select a week and year. A 
-						date picker can show up in the input field.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Select a week:<br>
-						&nbsp;&nbsp;&lt;input type="week" name="week-year"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Select a week:
-							<input type="week" name="week-year">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="nine">Date</h2>
-					<h3>Description</h3>
-					<p>
-						&lt;input type="date"&gt; is used for input fields that should contain a 
-						date. A date picker can show up in the input field.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Birthday:<br>
-						&nbsp;&nbsp;&lt;input type="date" name="birthday"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Birthday:
-							<input type="date" name="birthday">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="ten">Datetime-local</h2>
-					<h3>Description</h3>
-					<p>
-						The &lt;input type="datetime-local"&gt; specifies a date and time input 
-						field, with no time zone. A date picker can show up in the input 
-						field.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Exam (date and time):<br>
-						&nbsp;&nbsp;&lt;input type="datetime-local" name="exam-time"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Exam (date and time):
-							<input type="datetime-local" name="exam-time">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="eleven">Datetime</h2>
-					<h3>Description</h3>
-					<p>
-						The &lt;input type="datetime"&gt; specifies a date and time input 
-						field, with time zone. A date picker can show up in the input field.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Exam (date and time):<br>
-						&nbsp;&nbsp;&lt;input type="datetime" name="exam-time"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Exam (date and time): N/A
-							<!--
-							<input type="datetime" name="exam-time">
-							-->
-						</form>
-					</div>
-					<p>
-						<i class="notice">Notice 1:</i> As of Feb 23, 2017, "datetime" is 
-						not supported.
-					</p>
-					<p>
-						<i class="notice">Notice 2:</i> If a browser doesn't support a 
-						particular input type, it defaults to "text".
-					</p>
-				</section>
-				<section>
-					<h2 id="twelve">Time</h2>
-					<h3>Description</h3>
-					<p>
-						The &lt;input type="time"&gt; allows the user to select a 
-						time(no timezone). A time picker can show up in the input field.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Select a time:<br>
-						&nbsp;&nbsp;&lt;input type="time" name="usrtime"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Select a time:
-							<input type="time" name="usrtime">
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="thirteen">Color</h2>
-					<h3>Description</h3>
-					<p>
-						The &lt;input type="color"&gt; is used for input fields that should 
-						contain a color. A color picker can show up in the input field.
-					</p> 
-					<h3>Example</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Pick a color:<br>
-						&nbsp;&nbsp;&lt;input type="color" name="usrcolor"&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Pick a color:
-							<input type="color" name="usrcolor">
-						</form>
-					</div>
-				</section>
+				<div class="wrapper">
+					<header>
+						<h1>New Input Types</h1>
+						<div class="byline-wrapper">
+							<img src="images/avatar.png" alt="avatar" width="40">
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-02-24">Feb 24, 2017</time>
+						</div>
+					</header>
+					<section>
+						<h2 id="one">Search</h2>
+						<h3>Description</h3>
+						<p>
+							&lt;input type="search"&gt; is a one-line plain-text for entering one or 
+							more search terms.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Search Google:<br>
+							&nbsp;&nbsp;&lt;input type="search" name="google-search"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Search Google:
+								<input type="search" name="google-search">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="two">Email</h2>
+						<h3>Description</h3>
+						<p>
+							&lt;input type="email"&gt; is a regular text input, but with added 
+							usability on mobile devices(i.e. keyboard with email-related keys).
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;E-mail:<br>
+							&nbsp;&nbsp;&lt;input type="email" name="email"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">		
+							<form>
+								E-mail:
+								<input type="email" name="email">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="three">URL</h2>
+						<h3>Description</h3>
+						<p>
+							&lt;input type="url"&gt; is a regular text input, but with added 
+							usability on mobile devices(i.e. keyboard with URL-related keys).
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>				
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Add your homepage:<br>
+							&nbsp;&nbsp;&lt;input type="url" name="homepage"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Add your homepage:
+								<input type="url" name="homepage">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="four">Tel</h2>
+						<h3>Description</h3> 
+						<p>
+							&lt;input type="tel"&gt; is regular text input, but with added usability
+							on mobile devices(keyboard with digits).
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Telephone:<br>
+							&nbsp;&nbsp;&lt;input type="tel" name="usrtel"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Telephone:
+								<input type="tel" name="usrtel">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="five">Number</h2>
+						<h3>Description</h3>
+						<p>
+							&lt;input type="number"&gt; represents a precise control for setting the 
+							element's value to a string representing a number. In the browser we 
+							get a convinient control to the right side of the input that allows us 
+							to increase or decrease the value. The keyboard on mobile devices 
+							changes to have a row of number keys at the top.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Enter a number (between 1 and 5):<br>
+							&nbsp;&nbsp;&lt;input type="number" name="number" min="1" max="5"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Enter a number (between 1 and 5):
+								<input type="number" name="number" min="1" max="5">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="six">Range</h2>
+						<h3>Description</h3>
+						<p>
+							&lt;input type="range"&gt; defines an imprecise control for setting the 
+							element's value to a string representing a number. In the browser we 
+							get a control that allows us to drag a slider to change the number 
+							value.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;&lt;p&gt;Range (0-50):&lt;/p&gt;<br>
+							&nbsp;&nbsp;&lt;input type="range" name="points" min="0" max="50"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Range (0-50):
+								<input type="range" name="points" min="0" max="50">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="seven">Month</h2>
+						<h3>Description</h3>
+						<p>
+							&lt;input type="month"&gt; allows the user to select a month and year. A 
+							date picker can show up in the input field.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Select a month:<br>
+							&nbsp;&nbsp;&lt;input type="month" name="month-year"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Select a month:
+								<input type="month" name="month-year">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="eight">Week</h2>
+						<h3>Description</h3>
+						<p>
+							&lt;input type="week"&gt; allows the user to select a week and year. A 
+							date picker can show up in the input field.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Select a week:<br>
+							&nbsp;&nbsp;&lt;input type="week" name="week-year"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Select a week:
+								<input type="week" name="week-year">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="nine">Date</h2>
+						<h3>Description</h3>
+						<p>
+							&lt;input type="date"&gt; is used for input fields that should contain a 
+							date. A date picker can show up in the input field.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Birthday:<br>
+							&nbsp;&nbsp;&lt;input type="date" name="birthday"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Birthday:
+								<input type="date" name="birthday">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="ten">Datetime-local</h2>
+						<h3>Description</h3>
+						<p>
+							The &lt;input type="datetime-local"&gt; specifies a date and time input 
+							field, with no time zone. A date picker can show up in the input 
+							field.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Exam (date and time):<br>
+							&nbsp;&nbsp;&lt;input type="datetime-local" name="exam-time"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Exam (date and time):
+								<input type="datetime-local" name="exam-time">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="eleven">Datetime</h2>
+						<h3>Description</h3>
+						<p>
+							The &lt;input type="datetime"&gt; specifies a date and time input 
+							field, with time zone. A date picker can show up in the input field.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Exam (date and time):<br>
+							&nbsp;&nbsp;&lt;input type="datetime" name="exam-time"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Exam (date and time): N/A
+								<!--
+								<input type="datetime" name="exam-time">
+								-->
+							</form>
+						</div>
+						<p>
+							<i class="notice">Notice 1:</i> As of Feb 23, 2017, "datetime" is 
+							not supported.
+						</p>
+						<p>
+							<i class="notice">Notice 2:</i> If a browser doesn't support a 
+							particular input type, it defaults to "text".
+						</p>
+					</section>
+					<section>
+						<h2 id="twelve">Time</h2>
+						<h3>Description</h3>
+						<p>
+							The &lt;input type="time"&gt; allows the user to select a 
+							time(no timezone). A time picker can show up in the input field.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Select a time:<br>
+							&nbsp;&nbsp;&lt;input type="time" name="usrtime"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Select a time:
+								<input type="time" name="usrtime">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="thirteen">Color</h2>
+						<h3>Description</h3>
+						<p>
+							The &lt;input type="color"&gt; is used for input fields that should 
+							contain a color. A color picker can show up in the input field.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Pick a color:<br>
+							&nbsp;&nbsp;&lt;input type="color" name="usrcolor"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Pick a color:
+								<input type="color" name="usrcolor">
+							</form>
+						</div>
+					</section>
+				</div>
 			</article>
 		</main>
 		<footer>

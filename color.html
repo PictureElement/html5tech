@@ -91,215 +91,217 @@
       <article>
       	<!-- Dynamic table of contents is injected here -->
 				<div class="all-topics"></div>
-        <header>
-          <h1>Color</h1>
-          <div class="byline-wrapper">
-						<img src="images/avatar.png" alt="avatar" width="40">
-						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
-						<br>
-						<time datetime="2017-03-14">Mar 14, 2017</time>
-					</div>
-        </header>
-        <section>
-          <h2 id="one">RGB Color Model</h2>
-          <h3>Description</h3>
-          <p>
-            The RGB color model adds red, green, and blue together in various 
-            ways to reproduce a broad array of colors. In this model, a color is
-            described by indicating how much of each of the red, green, and blue
-            is included. The color is expressed as an RGB triplet (r,g,b). 
-            In computers, the red, green, and blue component values are stored 
-            as integer numbers in the range 0-255. These are often represented 
-            as either decimal or hexadecimal numbers. 
-          </p>
-          <h3>rgb()</h3>
-          <h4>Hexadecimal Notation</h4>
-          <p>
-            <b>#RRGGBB: six-digit RGB hex notation</b><br>
-            First two digits set the amount of red.<br>
-            Next two digits set the amount of green.<br>
-            Last two digits set the amount of blue.
-          </p>
-          <p>
-            <b>#RGB: three-digit RGB hex notation</b><br>
-            First digit sets the amount of red.<br>
-            Second digit sets the amount of green.<br>
-            Last digit sets the amount of blue.
-          </p>
-          <p>
-            #0ff and #00ffff represent the same color (Cyan).
-          </p>
-          <h4>Functional Notation</h4>
-          <p>
-            <b>rgb(<i>r,g,b</i>)</b><br>
-            <b>rgb(<i>pctr,pctg,pctb</i>)</b><br>
-          </p>
-          <p>where:</p>
-          <ul>
-          	<li>0 &le; <i>r,g,b</i> &le; 255, <i>r,g,b</i> &isin; &#8469;</li>
-            <li><i>pctr,pctg,pctb</i>: 0-100%</li>
-          </ul>
-          <h3>rgba()</h3>
-          <h4>Hexadecimal Notation</h4>
-          <p>
-            <b>#RRGGBBaa: eight-digit RGB hex notation</b><br>
-            First two digits set the amount of red.<br>
-            Second two digits set the amount of green.<br>
-            Third two digits set the amount of blue.<br>
-            Last two digits set the transparency.
-          </p>
-          <p>
-            <b>#RGBa: four-digit RGB hex notation</b><br>
-            First digit sets the amount of red.<br>
-            Second digit sets the amount of green.<br>
-            Third digit sets the amount of blue.<br>
-            Last digit sets the transparency.
-          </p>
-          <p>
-            #0ff0 and #00ffff00 represent the same color (0% opaque Cyan).<br>
-            #0fff and #00ffffff represent the same color (full opaque Cyan).
-          </p>
-          <h4>Functional Notation</h4>
-          <p>
-            <b>rgba(<i>r,g,b,a</i>)</b>
-          </p>
-          <p>where:</p>
-          <ul>
-          	<li>0 &le; <i>r,g,b</i> &le; 255, <i>r,g,b</i> &isin; &#8469;</li>
-            <li>
-            	0 &le; <i>a</i> &le; 1, <i>a</i> &isin; &real;, 
-            	<i>a</i> means opacity: 0=transparent, 1=opaque
-            </li>
-          </ul>
-          <h3>Examples</h3>
-          <ol>
-            <li>
-              <b>#7403ab</b><br>
-              Red: 7x16 + 4x1 = 112(DEC)<br>
-              Green: 0x16 + 3x1 = 3(DEC)<br>
-              Blue: 10x16 + 11x1 = 171(DEC)<br>
-              *The color is some red, almost no green and more blue than red. 
-              The color is purplish. 
-            </li>
-            <li>
-              <b>#fff = #ffffff</b><br>
-              Red: 255(DEC)<br>
-              Green: 255(DEC)<br>
-              Blue: 255(DEC)<br>
-              *The color is white.
-            </li>
-            <li>
-              <b>rgb(255,255,255)</b><br>
-              *The color is white.
-            </li>
-            <li>
-              <b>rgb(100%,100%,100%)</b><br>
-              *The color is white.
-            </li>
-            <li>
-              <b>rgba(255,255,255,1)</b><br>
-              *The color is full opaque white.
-            </li>
-            <li>
-              <b>rgba(255,255,255,0.2)</b><br>
-              *The color is 20% opaque white.
-            </li>
-          </ol>
-          <h3>Usefull Info</h3>
-          <ul>
-            <li><b>Primary colors:</b> Red, Green, Blue</li>
-            <li>
-              <b>Colors on the web:</b> 256 possible combinations for each color 
-              channel => 256 * 256 * 256 = 16777216 available colors
-            </li>
-            <li><b>Magenta(ff00ff):</b> Red + Blue</li>
-            <li><b>Yellow(ffff00):</b> Red + Green</li>
-            <li><b>Cyan(00ffff):</b> Green + Blue</li>
-            <li><b>Black(000000):</b> Absense of color</li>
-            <li>
-              <b>White(ffffff):</b> All three primary colors at maximum 
-              intensities
-            </li>
-            <li><b>Light gray:</b> #D3D3D3</li>
-            <li><b>Gray:</b> #808080</li>
-            <li><b>Dark gray:</b> #A9A9A9</li>
-          </ul>
-        </section>
-        <section>
-          <h2 id="two">HSL Color Model</h2>
-          <h3>Description</h3>
-          <p>
-          	Colors can also be defined via HUE, SATURATION, and LIGHTNESS, or 
-            HSL. Hue is represented as an angle of the color circle. By 
-            definition pure red=0(or 360), pure green=120, pure blue=240. 
-            Saturation and lightness are represented as percentages. 100% is 
-            full saturation, and 0% is a shade of gray. 100% ligthness is white, 
-            0% lightness is black, and 50% lightness is normal. 
-          </p>
-          <h3>hsl()</h3>
-         	<p><b>hsl(<i>hue,saturation,lightness</i>)</b></p>
-         	<p>where:</p>
-         	<ul>
-         		<li>0 &le; <i>hue</i> &le; 360</li>
-         		<li><i>saturation:</i> 0-100%</li>
-         		<li>
-         			<i>lightness:</i> 0-100%
-         		</li>
-         	</ul>
-         	<h3>hsla()</h3>
-         	<p><b>hsla(<i>hue,saturation,lightness,a</i>)</b></p>
-         	<p>where:</p>
-         	<ul>
-         		<li>0 &le; <i>hue</i> &le; 360</li>
-         		<li><i>saturation:</i> 0-100%</li>
-         		<li><i>lightness:</i> 0-100%</li>
-         		<li>
-            	0 &le; <i>a</i> &le; 1, <i>a</i> &isin; &real;, 
-            	<i>a</i> means opacity: 0=transparent, 1=opaque
-            </li>
-         	</ul>
-         	<h3>Color Wheel</h3>
-         	<img src="images/color-wheel.svg" alt="color wheel" width="300">
-         	<h3>Examples</h3>
-         	<ol>
-            <li>
-            	<b>hsl(0, 100%, 50%)</b><br>
-            	*The color is red
-            </li>
-            <li>
-            	<b>hsl(60, 100%, 50%)</b><br>
-            	*The color is yellow
-            </li>
-            <li>
-            	<b>hsl(120, 100%, 50%)</b><br>
-            	*The color is green.
-            </li>
-            <li>
-            	<b>hsl(180, 100%, 50%)</b><br>
-            	*The color is cyan.
-            </li>
-            <li>
-            	<b>hsl(240, 100%, 50%)</b><br>
-            	*The color is blue.
-            </li>
-            <li>
-            	<b>hsl(300, 100%, 50%)</b><br>
-            	*The color is magenta.
-            </li>
-            <li>
-            	<b>hsla(300, 100%, 50%, 0.05)</b><br>
-            	*The color is 5% opaque magenta.
-            </li>
-            <li>
-            	<b>hsla(300, 100%, 50%, 0.5)</b><br>
-            	*The color is 50% opaque magenta.
-            </li>
-            <li>
-            	<b>hsla(300, 100%, 50%, 1)</b><br>
-            	*The color is full opaque magenta.
-            </li>
-          </ol>
-     		</section>
+				<div class="wrapper">
+	        <header>
+	          <h1>Color</h1>
+	          <div class="byline-wrapper">
+							<img src="images/avatar.png" alt="avatar" width="40">
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-03-14">Mar 14, 2017</time>
+						</div>
+	        </header>
+	        <section>
+	          <h2 id="one">RGB Color Model</h2>
+	          <h3>Description</h3>
+	          <p>
+	            The RGB color model adds red, green, and blue together in various 
+	            ways to reproduce a broad array of colors. In this model, a color is
+	            described by indicating how much of each of the red, green, and blue
+	            is included. The color is expressed as an RGB triplet (r,g,b). 
+	            In computers, the red, green, and blue component values are stored 
+	            as integer numbers in the range 0-255. These are often represented 
+	            as either decimal or hexadecimal numbers. 
+	          </p>
+	          <h3>rgb()</h3>
+	          <h4>Hexadecimal Notation</h4>
+	          <p>
+	            <b>#RRGGBB: six-digit RGB hex notation</b><br>
+	            First two digits set the amount of red.<br>
+	            Next two digits set the amount of green.<br>
+	            Last two digits set the amount of blue.
+	          </p>
+	          <p>
+	            <b>#RGB: three-digit RGB hex notation</b><br>
+	            First digit sets the amount of red.<br>
+	            Second digit sets the amount of green.<br>
+	            Last digit sets the amount of blue.
+	          </p>
+	          <p>
+	            #0ff and #00ffff represent the same color (Cyan).
+	          </p>
+	          <h4>Functional Notation</h4>
+	          <p>
+	            <b>rgb(<i>r,g,b</i>)</b><br>
+	            <b>rgb(<i>pctr,pctg,pctb</i>)</b><br>
+	          </p>
+	          <p>where:</p>
+	          <ul>
+	          	<li>0 &le; <i>r,g,b</i> &le; 255, <i>r,g,b</i> &isin; &#8469;</li>
+	            <li><i>pctr,pctg,pctb</i>: 0-100%</li>
+	          </ul>
+	          <h3>rgba()</h3>
+	          <h4>Hexadecimal Notation</h4>
+	          <p>
+	            <b>#RRGGBBaa: eight-digit RGB hex notation</b><br>
+	            First two digits set the amount of red.<br>
+	            Second two digits set the amount of green.<br>
+	            Third two digits set the amount of blue.<br>
+	            Last two digits set the transparency.
+	          </p>
+	          <p>
+	            <b>#RGBa: four-digit RGB hex notation</b><br>
+	            First digit sets the amount of red.<br>
+	            Second digit sets the amount of green.<br>
+	            Third digit sets the amount of blue.<br>
+	            Last digit sets the transparency.
+	          </p>
+	          <p>
+	            #0ff0 and #00ffff00 represent the same color (0% opaque Cyan).<br>
+	            #0fff and #00ffffff represent the same color (full opaque Cyan).
+	          </p>
+	          <h4>Functional Notation</h4>
+	          <p>
+	            <b>rgba(<i>r,g,b,a</i>)</b>
+	          </p>
+	          <p>where:</p>
+	          <ul>
+	          	<li>0 &le; <i>r,g,b</i> &le; 255, <i>r,g,b</i> &isin; &#8469;</li>
+	            <li>
+	            	0 &le; <i>a</i> &le; 1, <i>a</i> &isin; &real;, 
+	            	<i>a</i> means opacity: 0=transparent, 1=opaque
+	            </li>
+	          </ul>
+	          <h3>Examples</h3>
+	          <ol>
+	            <li>
+	              <b>#7403ab</b><br>
+	              Red: 7x16 + 4x1 = 112(DEC)<br>
+	              Green: 0x16 + 3x1 = 3(DEC)<br>
+	              Blue: 10x16 + 11x1 = 171(DEC)<br>
+	              *The color is some red, almost no green and more blue than red. 
+	              The color is purplish. 
+	            </li>
+	            <li>
+	              <b>#fff = #ffffff</b><br>
+	              Red: 255(DEC)<br>
+	              Green: 255(DEC)<br>
+	              Blue: 255(DEC)<br>
+	              *The color is white.
+	            </li>
+	            <li>
+	              <b>rgb(255,255,255)</b><br>
+	              *The color is white.
+	            </li>
+	            <li>
+	              <b>rgb(100%,100%,100%)</b><br>
+	              *The color is white.
+	            </li>
+	            <li>
+	              <b>rgba(255,255,255,1)</b><br>
+	              *The color is full opaque white.
+	            </li>
+	            <li>
+	              <b>rgba(255,255,255,0.2)</b><br>
+	              *The color is 20% opaque white.
+	            </li>
+	          </ol>
+	          <h3>Usefull Info</h3>
+	          <ul>
+	            <li><b>Primary colors:</b> Red, Green, Blue</li>
+	            <li>
+	              <b>Colors on the web:</b> 256 possible combinations for each color 
+	              channel => 256 * 256 * 256 = 16777216 available colors
+	            </li>
+	            <li><b>Magenta(ff00ff):</b> Red + Blue</li>
+	            <li><b>Yellow(ffff00):</b> Red + Green</li>
+	            <li><b>Cyan(00ffff):</b> Green + Blue</li>
+	            <li><b>Black(000000):</b> Absense of color</li>
+	            <li>
+	              <b>White(ffffff):</b> All three primary colors at maximum 
+	              intensities
+	            </li>
+	            <li><b>Light gray:</b> #D3D3D3</li>
+	            <li><b>Gray:</b> #808080</li>
+	            <li><b>Dark gray:</b> #A9A9A9</li>
+	          </ul>
+	        </section>
+	        <section>
+	          <h2 id="two">HSL Color Model</h2>
+	          <h3>Description</h3>
+	          <p>
+	          	Colors can also be defined via HUE, SATURATION, and LIGHTNESS, or 
+	            HSL. Hue is represented as an angle of the color circle. By 
+	            definition pure red=0(or 360), pure green=120, pure blue=240. 
+	            Saturation and lightness are represented as percentages. 100% is 
+	            full saturation, and 0% is a shade of gray. 100% ligthness is white, 
+	            0% lightness is black, and 50% lightness is normal. 
+	          </p>
+	          <h3>hsl()</h3>
+	         	<p><b>hsl(<i>hue,saturation,lightness</i>)</b></p>
+	         	<p>where:</p>
+	         	<ul>
+	         		<li>0 &le; <i>hue</i> &le; 360</li>
+	         		<li><i>saturation:</i> 0-100%</li>
+	         		<li>
+	         			<i>lightness:</i> 0-100%
+	         		</li>
+	         	</ul>
+	         	<h3>hsla()</h3>
+	         	<p><b>hsla(<i>hue,saturation,lightness,a</i>)</b></p>
+	         	<p>where:</p>
+	         	<ul>
+	         		<li>0 &le; <i>hue</i> &le; 360</li>
+	         		<li><i>saturation:</i> 0-100%</li>
+	         		<li><i>lightness:</i> 0-100%</li>
+	         		<li>
+	            	0 &le; <i>a</i> &le; 1, <i>a</i> &isin; &real;, 
+	            	<i>a</i> means opacity: 0=transparent, 1=opaque
+	            </li>
+	         	</ul>
+	         	<h3>Color Wheel</h3>
+	         	<img src="images/color-wheel.svg" alt="color wheel" width="300">
+	         	<h3>Examples</h3>
+	         	<ol>
+	            <li>
+	            	<b>hsl(0, 100%, 50%)</b><br>
+	            	*The color is red
+	            </li>
+	            <li>
+	            	<b>hsl(60, 100%, 50%)</b><br>
+	            	*The color is yellow
+	            </li>
+	            <li>
+	            	<b>hsl(120, 100%, 50%)</b><br>
+	            	*The color is green.
+	            </li>
+	            <li>
+	            	<b>hsl(180, 100%, 50%)</b><br>
+	            	*The color is cyan.
+	            </li>
+	            <li>
+	            	<b>hsl(240, 100%, 50%)</b><br>
+	            	*The color is blue.
+	            </li>
+	            <li>
+	            	<b>hsl(300, 100%, 50%)</b><br>
+	            	*The color is magenta.
+	            </li>
+	            <li>
+	            	<b>hsla(300, 100%, 50%, 0.05)</b><br>
+	            	*The color is 5% opaque magenta.
+	            </li>
+	            <li>
+	            	<b>hsla(300, 100%, 50%, 0.5)</b><br>
+	            	*The color is 50% opaque magenta.
+	            </li>
+	            <li>
+	            	<b>hsla(300, 100%, 50%, 1)</b><br>
+	            	*The color is full opaque magenta.
+	            </li>
+	          </ol>
+	     		</section>
+	     	</div>
       </article>
     </main>
     <footer>

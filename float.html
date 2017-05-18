@@ -91,600 +91,602 @@
       <article>
       	<!-- Dynamic table of contents is injected here -->
 				<div class="all-topics"></div>
-        <header>
-          <h1>Float Property</h1>
-          <div class="byline-wrapper">
-            <img src="images/avatar.png" alt="avatar" width="40">
-            <a href="mailto:pictureelement@yandex.com">PictureElement</a>
-            <br>
-            <time datetime="2017-04-17">Apr 07, 2017</time>
-          </div>
-        </header>
-        <section>
-          <h2 id="one">Summary</h2>
-          <p>
-            With <i>float</i> you can place block elements along the left or 
-            right side of their container and make inline elements (and text) to 
-            wrap around it.  
-          </p>  
-          <h3>Examples</h3>
-          <ol>
-            <li>
-              <p>
-                The image is float to the left and the rest of the content is 
-                wrap around it.
-              </p>
-              <h4>HTML</h4>
-              <code>
-                &lt;div><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 1&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 2&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 3&lt;/p><br>
-                &nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 4&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 5&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 6&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 7&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 8&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 9&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 10&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 11&lt;/p><br>
-                &nbsp;&nbsp;&lt;p>Paragraph 12&lt;/p><br>
-                &lt;/div>
-              </code>
-              <ul>
-                <li>
-                  <h4>CSS</h4>
-                  <code>
-                    div {<br>
-                    &nbsp;&nbsp;border: 5px solid green;<br>
-                    &nbsp;&nbsp;width: 500px;<br>
-                    &nbsp;&nbsp;height: 350px;<br>
-                    }
-                  </code>
-                  <h4>Result</h4>
-                  <div id="float-1">
-                    <p>Paragraph 1</p>
-                    <p>Paragraph 2</p>
-                    <p>Paragraph 3</p>
-                    <img src="images/avatar.png" alt="avatar" width="100">
-                    <p>Paragraph 4</p>
-                    <p>Paragraph 5</p>
-                    <p>Paragraph 6</p>
-                    <p>Paragraph 7</p>
-                    <p>Paragraph 8</p>
-                    <p>Paragraph 9</p>
-                    <p>Paragraph 10</p>
-                    <p>Paragraph 11</p>
-                    <p>Paragraph 12</p>
-                  </div>
-                </li>
-                <li>
-                  <h4>CSS</h4>
-                  <code>
-                    div {<br>
-                    &nbsp;&nbsp;border: 5px solid green;<br>
-                    &nbsp;&nbsp;width: 500px;<br>
-                    &nbsp;&nbsp;height: 250px;<br>
-                    }<br>
-                    <br>
-                    img {<br>
-                    &nbsp;&nbsp;float: left;<br>
-                    }
-                  </code>
-                  <h4>Result</h4>
-                  <div id="float-2">
-                    <p>Paragraph 1</p>
-                    <p>Paragraph 2</p>
-                    <p>Paragraph 3</p>
-                    <img src="images/avatar.png" alt="avatar" width="100">
-                    <p>Paragraph 4</p>
-                    <p>Paragraph 5</p>
-                    <p>Paragraph 6</p>
-                    <p>Paragraph 7</p>
-                    <p>Paragraph 8</p>
-                    <p>Paragraph 9</p>
-                    <p>Paragraph 10</p>
-                    <p>Paragraph 11</p>
-                    <p>Paragraph 12</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <p>
-                Floated elements (in this case &lt;li> elements) stack up to 
-                their parent's edge. If the parent's width becomes too small to 
-                contain all of the list items, the third list item is going to 
-                break down to a new line.
-              </p>
-              <h4>HTML</h4>
-              <code>
-                &lt;ul><br>
-                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
-                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
-                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
-                &lt;/ul>
-              </code>
-              <ul>
-                <li>
-                  <h4>CSS</h4>
-                  <code>
-                    ul {<br>
-                    &nbsp;&nbsp;width: 500px;<br>
-                    &nbsp;&nbsp;height: 250px;<br>
-                    &nbsp;&nbsp;border: 5px solid green;<br>
-                    &nbsp;&nbsp;list-style-type: none;<br>
-                    }<br>
-                    <br>
-                    li {<br>
-                    &nbsp;&nbsp;float: left;<br>
-                    }
-                  </code>
-                  <h4>Result</h4>
-                  <ul id="float-3">
-                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                  </ul>
-                </li>
-                <li>
-                  <h4>CSS</h4>
-                  <code>
-                    ul {<br>
-                    &nbsp;&nbsp;width: 500px;<br>
-                    &nbsp;&nbsp;height: 250px;<br>
-                    &nbsp;&nbsp;border: 5px solid green;<br>
-                    &nbsp;&nbsp;list-style-type: none;<br>
-                    }<br>
-                    <br>
-                    li {<br>
-                    &nbsp;&nbsp;float: right;<br>
-                    }
-                  </code>
-                  <h4>Result</h4>
-                  <ul id="float-4">
-                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                  </ul>
-                </li>
-                <li>
-                  <h4>CSS</h4>
-                  <code>
-                    ul {<br>
-                    &nbsp;&nbsp;width: 250px;<br>
-                    &nbsp;&nbsp;height: 250px;<br>
-                    &nbsp;&nbsp;border: 5px solid green;<br>
-                    &nbsp;&nbsp;list-style-type: none;<br>
-                    }<br>
-                    <br>
-                    li {<br>
-                    &nbsp;&nbsp;float: left;<br>
-                    }
-                  </code>
-                  <h4>Result</h4>
-                  <ul id="float-5">
-                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <p>
-                Take care with elements that have different heights - the first 
-                available edge isn't always exactly below.
-              </p>
-              <h4>HTML</h4>
-              <code>
-                &lt;ul><br>
-                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
-                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
-                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="250">&lt;/li><br>
-                &lt;/ul>
-              </code>
-              <h4>CSS</h4>
-              <code>
-                ul {<br>
-                &nbsp;&nbsp;width: 250px;<br>
-                &nbsp;&nbsp;height: 350px;<br>
-                &nbsp;&nbsp;border: 5px solid green;<br>
-                &nbsp;&nbsp;list-style-type: none;<br>
-                }<br>
-                <br>
-                li {<br>
-                &nbsp;&nbsp;float: left;<br>
-                }
-              </code>
-              <h4>Result</h4>
-              <ul id="float-6">
-                <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                <li><img src="images/avatar.png" alt="avatar" width="100"></li>
-                <li><img src="images/avatar.png" alt="avatar" width="250"></li>
-              </ul>
-            </li>
-          </ol>
-        </section>
-        <section>
-          <h2 id="two">Clearing Floats</h2>
-          <h3>Description</h3>
-          <p> 
-            An element that has the <i>clear</i> property set on it, will not 
-            move adjacent to the float like the float desires, but will move 
-            itself down past the float.
-          </p>  
-          <h3>Syntax</h3>
-          <h4>CSS</h4>
-          <code>
-            clear: left|right|both;
-          </code>
-          <p>where:</p>
-          <ul>
-            <li><i>left</i>: clear any floats coming from the left.</li>
-            <li><i>right</i>: clear any floats coming from the right.</li>
-            <li><i>both</i>: clear any floats coming from both (left and right) sides.</li>
-          </ul>
-          <h3>Examples</h3>
-          <ol>
-            <li>
-              <p>How float clearing works</p>
-              <h4>HTML</h4>
-              <code>
-                &lt;div><br>
-                &nbsp;&nbsp;&lt;img id="float-image-1" src="images/avatar.png" alt="avatar" width="150"><br>
-                &nbsp;&nbsp;&lt;img id="float-image-2" src="images/avatar.png" alt="avatar" width="100"><br>
-                &nbsp;&nbsp;&lt;p><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                &nbsp;&nbsp;&lt;/p><br>
-                &lt;/div>
-              </code>
-              <h4>CSS</h4>
-              <code>
-                div {<br>
-                  &nbsp;&nbsp;padding: 0;<br>
-                  &nbsp;&nbsp;margin: 0;<br>
-                  &nbsp;&nbsp;width: 500px;<br>
-                  &nbsp;&nbsp;height: 250px;<br>
-                  &nbsp;&nbsp;border: 5px solid green;<br>
-                }<br>
-                <br>
-                #float-image-1 {<br>
-                  &nbsp;&nbsp;float: left;<br>
-                }<br>
-                <br>
-                #float-image-2 {<br>
-                  &nbsp;&nbsp;float: right;<br>
-                }
-              </code>
-              <ul>
-                <li> 
-                  <p>
-                    The &lt;p> element has no <i>clear</i> property set on it. 
-                    The element will move adjacent to the floats like the floats 
-                    desire.
-                  </p>
-                  <h4>Result</h4>
-                  <div id="float-7">
-                    <img id="float-image-1" src="images/avatar.png" alt="avatar" width="150">
-                    <img id="float-image-2" src="images/avatar.png" alt="avatar" width="100">
-                    <p>
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <p>
-                    The &lt;p> element has the <i>clear</i> property set on it. 
-                    The element will clear any floats coming from the left.
-                  </p>
-                  <h4>CSS</h4>
-                  <code>
-                    div p {<br>
-                    &nbsp;&nbsp;clear: left;<br>
-                    }
-                  </code>
-                  <h4>Result</h4>
-                  <div id="float-8">
-                    <img id="float-image-3" src="images/avatar.png" alt="avatar" width="150">
-                    <img id="float-image-4" src="images/avatar.png" alt="avatar" width="100">
-                    <p>
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <p>
-                    The &lt;p> element has the <i>clear</i> property set on it. 
-                    The element will clear any floats coming from the right.
-                  </p>
-                  <h4>CSS</h4>
-                  <code>
-                    div p {<br>
-                    &nbsp;&nbsp;clear: right;<br>
-                    }
-                  </code>
-                  <h4>Result</h4>
-                  <div id="float-9">
-                    <img id="float-image-5" src="images/avatar.png" alt="avatar" width="150">
-                    <img id="float-image-6" src="images/avatar.png" alt="avatar" width="100">
-                    <p>
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <p>
-                Float clearing techniques
-              </p>
-              <ul>
-                <li>
-                  <p>No <i>clear</i> specified</p>
-                  <h4>HTML</h4>
-                  <code>
-                    &lt;div><br>
-                    &nbsp;&nbsp;&lt;img id="float-image-7" src="images/avatar.png" alt="avatar" width="150"><br>
-                    &nbsp;&nbsp;&lt;p><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&lt;/p><br>
-                    &lt;/div>
-                  </code>
-                  <h4>CSS</h4>
-                  <code>
-                    div {<br>
-                    &nbsp;&nbsp;padding: 0;<br>
-                    &nbsp;&nbsp;margin: 0;<br>
-                    &nbsp;&nbsp;border: 5px solid green;<br>
-                    }<br>
-                    <br>
-                    #float-image-7 {<br>
-                    &nbsp;&nbsp;float: left;<br>
-                    }<br>
-                  </code>
-                  <h4>Result</h4>
-                  <div id="float-10">
-                    <img id="float-image-7" src="images/avatar.png" alt="avatar" width="150">
-                    <p>
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                    </p>
-                  </div>
-                  <div class="target">
-                    <p><b>Disadvantages:</b></p>
-                    <ol>
-                      <li>Background/border does not extend without clearing.</li>
-                      <li>Requires sequence to stay intact otherwise it breaks.</li>
-                    </ol>
-                  </div>
-                </li>
-                <li>
-                  <p>Clearing method #1:</p>
-                  <h4>HTML</h4>
-                  <code>
-                    &lt;div><br>
-                    &nbsp;&nbsp;&lt;img id="float-image-8" src="images/avatar.png" alt="avatar" width="150"><br>
-                    &nbsp;&nbsp;&lt;p><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&lt;/p><br>
-                    &lt;/div>
-                  </code>
-                  <h4>CSS</h4>
-                  <code>
-                    div {<br>
-                    &nbsp;&nbsp;padding: 0;<br>
-                    &nbsp;&nbsp;margin: 0;<br>
-                    &nbsp;&nbsp;border: 5px solid green;<br>
-                    }<br>
-                    <br>
-                    #float-image-8 {<br>
-                    &nbsp;&nbsp;float: left;<br>
-                    }<br>
-                    <br>
-                    div p {<br>
-                    &nbsp;&nbsp;clear: left;<br>
-                    }
-                  </code>
-                  <h4>Result</h4>
-                  <div id="float-11">
-                    <img id="float-image-8" src="images/avatar.png" alt="avatar" width="150">
-                    <p>
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                    </p>
-                  </div>
-                  <p>
-                    <b>Advantage:</b> Background/border extends automatically.<br>
-                    <b>Disadvantage:</b> This method is not ideal if you want text next to an image.
-                  </p>
-                </li>
-                <li>
-                  <p>Clearing method #2:</p>
-                  <h4>HTML</h4>
-                  <code>
-                    &lt;div><br>
-                    &nbsp;&nbsp;&lt;img id="float-image-9" src="images/avatar.png" alt="avatar" width="150"><br>
-                    &nbsp;&nbsp;&lt;p><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&lt;/p><br>
-                    &nbsp;&nbsp;&lt;div id="clear-1">&lt;/div><br>
-                    &lt;/div>
-                  </code>
-                  <h4>CSS</h4>
-                  <code>
-                    div {<br>
-                    &nbsp;&nbsp;padding: 0;<br>
-                    &nbsp;&nbsp;margin: 0;<br>
-                    &nbsp;&nbsp;border: 5px solid green;<br>
-                    }<br>
-                    <br>
-                    #float-image-9 {<br>
-                    &nbsp;&nbsp;float: left;<br>
-                    }<br>
-                    <br>
-                    #clear-1 {<br>
-                    &nbsp;&nbsp;border: 5px solid red;<br>
-                    &nbsp;&nbsp;clear: both;<br>
-                    }
-                  </code>
-                  <h4>Result</h4>
-                  <div id="float-12">
-                    <img id="float-image-9" src="images/avatar.png" alt="avatar" width="150">
-                    <p>
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                    </p>
-                    <div id="clear-1"></div>
-                  </div>
-                  <p>
-                    <b>Advantage:</b> Background/border extends to the height of the floated element.<br>
-                    <b>Disadvantage:</b> This method requires an empty &lt;div> element to achieve the clear.
-                  </p>
-                </li>
-                <li>
-                  <p>Clearing method #3 (Recommended):</p>
-                  <h4>HTML</h4>
-                  <code>
-                    &lt;div id="group"><br>
-                    &nbsp;&nbsp;&lt;img id="float-image-10" src="images/avatar.png" alt="avatar" width="150"><br>
-                    &nbsp;&nbsp;&lt;p><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
-                    &nbsp;&nbsp;&lt;/p><br>
-                    &lt;/div>
-                  </code>
-                  <h4>CSS</h4>
-                  <code>
-                    #group {<br>
-                    &nbsp;&nbsp;padding: 0;<br>
-                    &nbsp;&nbsp;margin: 0;<br>
-                    &nbsp;&nbsp;border: 5px solid green;<br>
-                    }<br>
-                    <br>
-                    float-image-10 {<br>
-                    &nbsp;&nbsp;float: left;<br>
-                    }<br>
-                    <br>
-                    #group:after {<br>
-                    &nbsp;&nbsp;content: "";<br>
-                    &nbsp;&nbsp;display: table;<br>
-                    &nbsp;&nbsp;clear: both;<br>
-                    }
-                  </code>
-                  <p>where:</p>
-                  <ul>
-                    <li>
-                      <i>::after</i> - pseudo element that inserts something 
-                      after the content of the selected element(s). 
-                    </li>
-                    <li>
-                      <i>content</i> - property to specify the content to 
-                      insert.
-                    </li>
-                    <li>
-                      <i>display</i> - specifies the type of rendering box to be 
-                      used for the selected element.
-                    </li>
-                  </ul>
-                  <h4>Result</h4>
-                  <div id="group">
-                    <img id="float-image-10" src="images/avatar.png" alt="avatar" width="150">
-                    <p>
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                      The quick brown fox jumps over the lazy dog.
-                    </p>
-                  </div>
-                  <p><b>Advantages:</b></p>
-                  <ol>
-                    <li>Background/border extends to the height of the floated element.</li>
-                    <li>This method does not require an empty &lt;div> element to achieve the clear.</li>
-                  </ol>
-                </li>
-              </ul>
-            </li>
-          </ol>
-        </section>
+				<div class="wrapper">
+	        <header>
+	          <h1>Float Property</h1>
+	          <div class="byline-wrapper">
+	            <img src="images/avatar.png" alt="avatar" width="40">
+	            <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+	            <br>
+	            <time datetime="2017-04-17">Apr 07, 2017</time>
+	          </div>
+	        </header>
+	        <section>
+	          <h2 id="one">Summary</h2>
+	          <p>
+	            With <i>float</i> you can place block elements along the left or 
+	            right side of their container and make inline elements (and text) to 
+	            wrap around it.  
+	          </p>  
+	          <h3>Examples</h3>
+	          <ol>
+	            <li>
+	              <p>
+	                The image is float to the left and the rest of the content is 
+	                wrap around it.
+	              </p>
+	              <h4>HTML</h4>
+	              <code>
+	                &lt;div><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 1&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 2&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 3&lt;/p><br>
+	                &nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 4&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 5&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 6&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 7&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 8&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 9&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 10&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 11&lt;/p><br>
+	                &nbsp;&nbsp;&lt;p>Paragraph 12&lt;/p><br>
+	                &lt;/div>
+	              </code>
+	              <ul>
+	                <li>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    div {<br>
+	                    &nbsp;&nbsp;border: 5px solid green;<br>
+	                    &nbsp;&nbsp;width: 500px;<br>
+	                    &nbsp;&nbsp;height: 350px;<br>
+	                    }
+	                  </code>
+	                  <h4>Result</h4>
+	                  <div id="float-1">
+	                    <p>Paragraph 1</p>
+	                    <p>Paragraph 2</p>
+	                    <p>Paragraph 3</p>
+	                    <img src="images/avatar.png" alt="avatar" width="100">
+	                    <p>Paragraph 4</p>
+	                    <p>Paragraph 5</p>
+	                    <p>Paragraph 6</p>
+	                    <p>Paragraph 7</p>
+	                    <p>Paragraph 8</p>
+	                    <p>Paragraph 9</p>
+	                    <p>Paragraph 10</p>
+	                    <p>Paragraph 11</p>
+	                    <p>Paragraph 12</p>
+	                  </div>
+	                </li>
+	                <li>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    div {<br>
+	                    &nbsp;&nbsp;border: 5px solid green;<br>
+	                    &nbsp;&nbsp;width: 500px;<br>
+	                    &nbsp;&nbsp;height: 250px;<br>
+	                    }<br>
+	                    <br>
+	                    img {<br>
+	                    &nbsp;&nbsp;float: left;<br>
+	                    }
+	                  </code>
+	                  <h4>Result</h4>
+	                  <div id="float-2">
+	                    <p>Paragraph 1</p>
+	                    <p>Paragraph 2</p>
+	                    <p>Paragraph 3</p>
+	                    <img src="images/avatar.png" alt="avatar" width="100">
+	                    <p>Paragraph 4</p>
+	                    <p>Paragraph 5</p>
+	                    <p>Paragraph 6</p>
+	                    <p>Paragraph 7</p>
+	                    <p>Paragraph 8</p>
+	                    <p>Paragraph 9</p>
+	                    <p>Paragraph 10</p>
+	                    <p>Paragraph 11</p>
+	                    <p>Paragraph 12</p>
+	                  </div>
+	                </li>
+	              </ul>
+	            </li>
+	            <li>
+	              <p>
+	                Floated elements (in this case &lt;li> elements) stack up to 
+	                their parent's edge. If the parent's width becomes too small to 
+	                contain all of the list items, the third list item is going to 
+	                break down to a new line.
+	              </p>
+	              <h4>HTML</h4>
+	              <code>
+	                &lt;ul><br>
+	                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
+	                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
+	                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
+	                &lt;/ul>
+	              </code>
+	              <ul>
+	                <li>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    ul {<br>
+	                    &nbsp;&nbsp;width: 500px;<br>
+	                    &nbsp;&nbsp;height: 250px;<br>
+	                    &nbsp;&nbsp;border: 5px solid green;<br>
+	                    &nbsp;&nbsp;list-style-type: none;<br>
+	                    }<br>
+	                    <br>
+	                    li {<br>
+	                    &nbsp;&nbsp;float: left;<br>
+	                    }
+	                  </code>
+	                  <h4>Result</h4>
+	                  <ul id="float-3">
+	                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                  </ul>
+	                </li>
+	                <li>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    ul {<br>
+	                    &nbsp;&nbsp;width: 500px;<br>
+	                    &nbsp;&nbsp;height: 250px;<br>
+	                    &nbsp;&nbsp;border: 5px solid green;<br>
+	                    &nbsp;&nbsp;list-style-type: none;<br>
+	                    }<br>
+	                    <br>
+	                    li {<br>
+	                    &nbsp;&nbsp;float: right;<br>
+	                    }
+	                  </code>
+	                  <h4>Result</h4>
+	                  <ul id="float-4">
+	                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                  </ul>
+	                </li>
+	                <li>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    ul {<br>
+	                    &nbsp;&nbsp;width: 250px;<br>
+	                    &nbsp;&nbsp;height: 250px;<br>
+	                    &nbsp;&nbsp;border: 5px solid green;<br>
+	                    &nbsp;&nbsp;list-style-type: none;<br>
+	                    }<br>
+	                    <br>
+	                    li {<br>
+	                    &nbsp;&nbsp;float: left;<br>
+	                    }
+	                  </code>
+	                  <h4>Result</h4>
+	                  <ul id="float-5">
+	                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                    <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                  </ul>
+	                </li>
+	              </ul>
+	            </li>
+	            <li>
+	              <p>
+	                Take care with elements that have different heights - the first 
+	                available edge isn't always exactly below.
+	              </p>
+	              <h4>HTML</h4>
+	              <code>
+	                &lt;ul><br>
+	                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
+	                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="100">&lt;/li><br>
+	                &nbsp;&nbsp;&lt;li>&lt;img src="images/avatar.png" alt="avatar" width="250">&lt;/li><br>
+	                &lt;/ul>
+	              </code>
+	              <h4>CSS</h4>
+	              <code>
+	                ul {<br>
+	                &nbsp;&nbsp;width: 250px;<br>
+	                &nbsp;&nbsp;height: 350px;<br>
+	                &nbsp;&nbsp;border: 5px solid green;<br>
+	                &nbsp;&nbsp;list-style-type: none;<br>
+	                }<br>
+	                <br>
+	                li {<br>
+	                &nbsp;&nbsp;float: left;<br>
+	                }
+	              </code>
+	              <h4>Result</h4>
+	              <ul id="float-6">
+	                <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                <li><img src="images/avatar.png" alt="avatar" width="100"></li>
+	                <li><img src="images/avatar.png" alt="avatar" width="250"></li>
+	              </ul>
+	            </li>
+	          </ol>
+	        </section>
+	        <section>
+	          <h2 id="two">Clearing Floats</h2>
+	          <h3>Description</h3>
+	          <p> 
+	            An element that has the <i>clear</i> property set on it, will not 
+	            move adjacent to the float like the float desires, but will move 
+	            itself down past the float.
+	          </p>  
+	          <h3>Syntax</h3>
+	          <h4>CSS</h4>
+	          <code>
+	            clear: left|right|both;
+	          </code>
+	          <p>where:</p>
+	          <ul>
+	            <li><i>left</i>: clear any floats coming from the left.</li>
+	            <li><i>right</i>: clear any floats coming from the right.</li>
+	            <li><i>both</i>: clear any floats coming from both (left and right) sides.</li>
+	          </ul>
+	          <h3>Examples</h3>
+	          <ol>
+	            <li>
+	              <p>How float clearing works</p>
+	              <h4>HTML</h4>
+	              <code>
+	                &lt;div><br>
+	                &nbsp;&nbsp;&lt;img id="float-image-1" src="images/avatar.png" alt="avatar" width="150"><br>
+	                &nbsp;&nbsp;&lt;img id="float-image-2" src="images/avatar.png" alt="avatar" width="100"><br>
+	                &nbsp;&nbsp;&lt;p><br>
+	                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                &nbsp;&nbsp;&lt;/p><br>
+	                &lt;/div>
+	              </code>
+	              <h4>CSS</h4>
+	              <code>
+	                div {<br>
+	                  &nbsp;&nbsp;padding: 0;<br>
+	                  &nbsp;&nbsp;margin: 0;<br>
+	                  &nbsp;&nbsp;width: 500px;<br>
+	                  &nbsp;&nbsp;height: 250px;<br>
+	                  &nbsp;&nbsp;border: 5px solid green;<br>
+	                }<br>
+	                <br>
+	                #float-image-1 {<br>
+	                  &nbsp;&nbsp;float: left;<br>
+	                }<br>
+	                <br>
+	                #float-image-2 {<br>
+	                  &nbsp;&nbsp;float: right;<br>
+	                }
+	              </code>
+	              <ul>
+	                <li> 
+	                  <p>
+	                    The &lt;p> element has no <i>clear</i> property set on it. 
+	                    The element will move adjacent to the floats like the floats 
+	                    desire.
+	                  </p>
+	                  <h4>Result</h4>
+	                  <div id="float-7">
+	                    <img id="float-image-1" src="images/avatar.png" alt="avatar" width="150">
+	                    <img id="float-image-2" src="images/avatar.png" alt="avatar" width="100">
+	                    <p>
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                    </p>
+	                  </div>
+	                </li>
+	                <li>
+	                  <p>
+	                    The &lt;p> element has the <i>clear</i> property set on it. 
+	                    The element will clear any floats coming from the left.
+	                  </p>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    div p {<br>
+	                    &nbsp;&nbsp;clear: left;<br>
+	                    }
+	                  </code>
+	                  <h4>Result</h4>
+	                  <div id="float-8">
+	                    <img id="float-image-3" src="images/avatar.png" alt="avatar" width="150">
+	                    <img id="float-image-4" src="images/avatar.png" alt="avatar" width="100">
+	                    <p>
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                    </p>
+	                  </div>
+	                </li>
+	                <li>
+	                  <p>
+	                    The &lt;p> element has the <i>clear</i> property set on it. 
+	                    The element will clear any floats coming from the right.
+	                  </p>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    div p {<br>
+	                    &nbsp;&nbsp;clear: right;<br>
+	                    }
+	                  </code>
+	                  <h4>Result</h4>
+	                  <div id="float-9">
+	                    <img id="float-image-5" src="images/avatar.png" alt="avatar" width="150">
+	                    <img id="float-image-6" src="images/avatar.png" alt="avatar" width="100">
+	                    <p>
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                    </p>
+	                  </div>
+	                </li>
+	              </ul>
+	            </li>
+	            <li>
+	              <p>
+	                Float clearing techniques
+	              </p>
+	              <ul>
+	                <li>
+	                  <p>No <i>clear</i> specified</p>
+	                  <h4>HTML</h4>
+	                  <code>
+	                    &lt;div><br>
+	                    &nbsp;&nbsp;&lt;img id="float-image-7" src="images/avatar.png" alt="avatar" width="150"><br>
+	                    &nbsp;&nbsp;&lt;p><br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&lt;/p><br>
+	                    &lt;/div>
+	                  </code>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    div {<br>
+	                    &nbsp;&nbsp;padding: 0;<br>
+	                    &nbsp;&nbsp;margin: 0;<br>
+	                    &nbsp;&nbsp;border: 5px solid green;<br>
+	                    }<br>
+	                    <br>
+	                    #float-image-7 {<br>
+	                    &nbsp;&nbsp;float: left;<br>
+	                    }<br>
+	                  </code>
+	                  <h4>Result</h4>
+	                  <div id="float-10">
+	                    <img id="float-image-7" src="images/avatar.png" alt="avatar" width="150">
+	                    <p>
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                    </p>
+	                  </div>
+	                  <div class="target">
+	                    <p><b>Disadvantages:</b></p>
+	                    <ol>
+	                      <li>Background/border does not extend without clearing.</li>
+	                      <li>Requires sequence to stay intact otherwise it breaks.</li>
+	                    </ol>
+	                  </div>
+	                </li>
+	                <li>
+	                  <p>Clearing method #1:</p>
+	                  <h4>HTML</h4>
+	                  <code>
+	                    &lt;div><br>
+	                    &nbsp;&nbsp;&lt;img id="float-image-8" src="images/avatar.png" alt="avatar" width="150"><br>
+	                    &nbsp;&nbsp;&lt;p><br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&lt;/p><br>
+	                    &lt;/div>
+	                  </code>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    div {<br>
+	                    &nbsp;&nbsp;padding: 0;<br>
+	                    &nbsp;&nbsp;margin: 0;<br>
+	                    &nbsp;&nbsp;border: 5px solid green;<br>
+	                    }<br>
+	                    <br>
+	                    #float-image-8 {<br>
+	                    &nbsp;&nbsp;float: left;<br>
+	                    }<br>
+	                    <br>
+	                    div p {<br>
+	                    &nbsp;&nbsp;clear: left;<br>
+	                    }
+	                  </code>
+	                  <h4>Result</h4>
+	                  <div id="float-11">
+	                    <img id="float-image-8" src="images/avatar.png" alt="avatar" width="150">
+	                    <p>
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                    </p>
+	                  </div>
+	                  <p>
+	                    <b>Advantage:</b> Background/border extends automatically.<br>
+	                    <b>Disadvantage:</b> This method is not ideal if you want text next to an image.
+	                  </p>
+	                </li>
+	                <li>
+	                  <p>Clearing method #2:</p>
+	                  <h4>HTML</h4>
+	                  <code>
+	                    &lt;div><br>
+	                    &nbsp;&nbsp;&lt;img id="float-image-9" src="images/avatar.png" alt="avatar" width="150"><br>
+	                    &nbsp;&nbsp;&lt;p><br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&lt;/p><br>
+	                    &nbsp;&nbsp;&lt;div id="clear-1">&lt;/div><br>
+	                    &lt;/div>
+	                  </code>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    div {<br>
+	                    &nbsp;&nbsp;padding: 0;<br>
+	                    &nbsp;&nbsp;margin: 0;<br>
+	                    &nbsp;&nbsp;border: 5px solid green;<br>
+	                    }<br>
+	                    <br>
+	                    #float-image-9 {<br>
+	                    &nbsp;&nbsp;float: left;<br>
+	                    }<br>
+	                    <br>
+	                    #clear-1 {<br>
+	                    &nbsp;&nbsp;border: 5px solid red;<br>
+	                    &nbsp;&nbsp;clear: both;<br>
+	                    }
+	                  </code>
+	                  <h4>Result</h4>
+	                  <div id="float-12">
+	                    <img id="float-image-9" src="images/avatar.png" alt="avatar" width="150">
+	                    <p>
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                    </p>
+	                    <div id="clear-1"></div>
+	                  </div>
+	                  <p>
+	                    <b>Advantage:</b> Background/border extends to the height of the floated element.<br>
+	                    <b>Disadvantage:</b> This method requires an empty &lt;div> element to achieve the clear.
+	                  </p>
+	                </li>
+	                <li>
+	                  <p>Clearing method #3 (Recommended):</p>
+	                  <h4>HTML</h4>
+	                  <code>
+	                    &lt;div id="group"><br>
+	                    &nbsp;&nbsp;&lt;img id="float-image-10" src="images/avatar.png" alt="avatar" width="150"><br>
+	                    &nbsp;&nbsp;&lt;p><br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;The quick brown fox jumps over the lazy dog.<br>
+	                    &nbsp;&nbsp;&lt;/p><br>
+	                    &lt;/div>
+	                  </code>
+	                  <h4>CSS</h4>
+	                  <code>
+	                    #group {<br>
+	                    &nbsp;&nbsp;padding: 0;<br>
+	                    &nbsp;&nbsp;margin: 0;<br>
+	                    &nbsp;&nbsp;border: 5px solid green;<br>
+	                    }<br>
+	                    <br>
+	                    float-image-10 {<br>
+	                    &nbsp;&nbsp;float: left;<br>
+	                    }<br>
+	                    <br>
+	                    #group:after {<br>
+	                    &nbsp;&nbsp;content: "";<br>
+	                    &nbsp;&nbsp;display: table;<br>
+	                    &nbsp;&nbsp;clear: both;<br>
+	                    }
+	                  </code>
+	                  <p>where:</p>
+	                  <ul>
+	                    <li>
+	                      <i>::after</i> - pseudo element that inserts something 
+	                      after the content of the selected element(s). 
+	                    </li>
+	                    <li>
+	                      <i>content</i> - property to specify the content to 
+	                      insert.
+	                    </li>
+	                    <li>
+	                      <i>display</i> - specifies the type of rendering box to be 
+	                      used for the selected element.
+	                    </li>
+	                  </ul>
+	                  <h4>Result</h4>
+	                  <div id="group">
+	                    <img id="float-image-10" src="images/avatar.png" alt="avatar" width="150">
+	                    <p>
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                      The quick brown fox jumps over the lazy dog.
+	                    </p>
+	                  </div>
+	                  <p><b>Advantages:</b></p>
+	                  <ol>
+	                    <li>Background/border extends to the height of the floated element.</li>
+	                    <li>This method does not require an empty &lt;div> element to achieve the clear.</li>
+	                  </ol>
+	                </li>
+	              </ul>
+	            </li>
+	          </ol>
+	        </section>
+	      </div>
       </article>
     </main>
     <footer>

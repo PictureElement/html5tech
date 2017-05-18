@@ -91,74 +91,76 @@
 			<article>
 				<!-- Dynamic table of contents is injected here -->
 				<div class="all-topics"></div>
-				<header>
-					<h1>New Form Elements</h1>
-					<div class="byline-wrapper">
-						<img src="images/avatar.png" alt="avatar" width="40">
-						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
-						<br>
-						<time datetime="2017-02-28">Feb 28, 2017</time>
-					</div>
-				</header>
-				<section>
-					<h2 id="one">Datalist</h2>
-				 	<h3>Description</h3>
-				 	<p>
-				 		The &lt;datalist&gt; element specifies a list of pre-defined options for
-				 		an &lt;input&gt; element. Users will see a drop-down list of pre-defined 
-				 		options and auto-complete suggestions as they input data.
-					</p> 
-					<h3>Example:</h3>
-					<h4>HTML5</h4>
-					<code>
-						&lt;form&gt;<br>
-						&nbsp;&nbsp;Choose an OS:<br>
-						&nbsp;&nbsp;&lt;input list="operating-systems"&gt;<br>
-						&nbsp;&nbsp;&lt;datalist id="operating-systems"&gt;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Windows"&gt;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="macOS"&gt;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Linux"&gt;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Solaris"&gt;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="FreeBSD"&gt;<br>
-						&nbsp;&nbsp;&lt;/datalist&gt;<br>
-						&lt;/form&gt;
-					</code>
-					<p>
-						<i class="notice">Notice:</i> The "list" and "id" attributes need to 
-						be the same. The &lt;input&gt; element needs to know about the 
-						&lt;datalist&gt; options.
-					</p>
-					<h4>Result</h4>
-					<div class="result-wrapper">
-						<form>
-							Choose an OS:
-							<input list="operating-systems">
-							<datalist id="operating-systems">
-								<option value="Windows"></option>
-								<option value="macOS"></option>
-								<option value="Linux"></option>
-								<option value="Solaris"></option>
-								<option value="FreeBSD"></option>
-							</datalist>
-						</form>
-					</div>
-				</section>
-				<section>
-					<h2 id="two">Keygen</h2>
-					<h3>Description</h3>
-					<p>
-						The purpose of the &lt;keygen&gt; element is to provide a secure way to 
-						authenticate users.
-					</p>
-				</section>
-				<section>
-					<h2 id="three">Output</h2>
-					<h3>Description</h3>
-					<p>
-						The &lt;output&gt; element represents the result of a 
-						calculation(like one performed by a script).
-					</p> 
-				</section>
+				<div class="wrapper">
+					<header>
+						<h1>New Form Elements</h1>
+						<div class="byline-wrapper">
+							<img src="images/avatar.png" alt="avatar" width="40">
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-02-28">Feb 28, 2017</time>
+						</div>
+					</header>
+					<section>
+						<h2 id="one">Datalist</h2>
+					 	<h3>Description</h3>
+					 	<p>
+					 		The &lt;datalist&gt; element specifies a list of pre-defined options for
+					 		an &lt;input&gt; element. Users will see a drop-down list of pre-defined 
+					 		options and auto-complete suggestions as they input data.
+						</p> 
+						<h3>Example:</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Choose an OS:<br>
+							&nbsp;&nbsp;&lt;input list="operating-systems"&gt;<br>
+							&nbsp;&nbsp;&lt;datalist id="operating-systems"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Windows"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="macOS"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Linux"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Solaris"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="FreeBSD"&gt;<br>
+							&nbsp;&nbsp;&lt;/datalist&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<p>
+							<i class="notice">Notice:</i> The "list" and "id" attributes need to 
+							be the same. The &lt;input&gt; element needs to know about the 
+							&lt;datalist&gt; options.
+						</p>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Choose an OS:
+								<input list="operating-systems">
+								<datalist id="operating-systems">
+									<option value="Windows"></option>
+									<option value="macOS"></option>
+									<option value="Linux"></option>
+									<option value="Solaris"></option>
+									<option value="FreeBSD"></option>
+								</datalist>
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="two">Keygen</h2>
+						<h3>Description</h3>
+						<p>
+							The purpose of the &lt;keygen&gt; element is to provide a secure way to 
+							authenticate users.
+						</p>
+					</section>
+					<section>
+						<h2 id="three">Output</h2>
+						<h3>Description</h3>
+						<p>
+							The &lt;output&gt; element represents the result of a 
+							calculation(like one performed by a script).
+						</p> 
+					</section>
+				</div>
 			</article>
 		</main>
 		<footer>

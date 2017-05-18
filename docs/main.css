@@ -53,8 +53,8 @@ body {
 }
 
 h1 {
-	font-size: 4rem;
-	font-weight: 800;
+	font-size: 3.5rem;
+	font-weight: bold;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: white;
 	text-shadow: 0 1px 1px black;
@@ -62,25 +62,25 @@ h1 {
 
 h2 {
 	font-size: 3rem;
-	font-weight: 600;
-	font-style: italic;
+	font-weight: bold;
 	font-family: Arvo, Times, "Times New Roman"; 
 	color: #2b2d32;
 	text-shadow: 0 1px 1px #8c8c90;
 }
 
 h3 {
-	font-size: 2rem;
-	font-weight: 400;
+	font-size: 2.5rem;
+	font-weight: bold;
 	font-family: Arvo, Times, "Times New Roman"; 
-	color: #2b2d32;
+	color: #8c8c90;
 }
 
 h4 {
-	font-size: 1.5rem;
-	font-weight: 200;
+	font-size: 2rem;
+	font-weight: normal;
 	font-style: italic;
 	font-family: Arvo, Times, "Times New Roman"; 
+	color: #8c8c90;
 }
 
 p, #hover {
@@ -90,8 +90,7 @@ p, #hover {
 
 a {
 	text-decoration: none;
-	font-style: italic;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	font-weight: normal;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
@@ -106,7 +105,7 @@ header {
 }
 
 main {
-	width: 38%;
+	width: 55%;
 	margin: auto;
 	/* Hide content that extends beyond container boundaries */
 	overflow: hidden;
@@ -132,8 +131,7 @@ footer {
 }
 
 time {
-	font-size: 1.2rem;
-	font-style: italic;
+	font-size: 1.5rem;
 	font-weight: normal;
 	font-family: Lato, Helvetica, Arial;
 	color: rgba(255, 255, 255, 0.5);
@@ -163,8 +161,13 @@ code {
 	padding: 2rem;
 }
 
-/*--------------------------- Main header styling ----------------------------*/
+.wrapper {
+	float: right;
+	width: 70%;
+	overflow: hidden;
+}
 
+/*--------------------------- Main header styling ----------------------------*/
 /* Header navigation bar */
 .main-nav {
 	background: linear-gradient(to bottom, #2b2d32, #3b3d42);
@@ -193,31 +196,117 @@ code {
 }
 
 /*----------------------------- Table of Contents ----------------------------*/
-
 .table-of-contents {
 	background-color: #007f7f;
 	border-radius: 2rem;
 	padding: 2rem;
 	box-shadow: 0 1px 1px black;
 	border: 0.2rem solid #000000;
-	float: right;
-	width: 16%;
-
+	float: left;	
+	width: 20%;
+	overflow: hidden;
 }
 
 .table-of-contents h3 {
 	text-align: left;
 	text-decoration: underline;
+	color: black;
 }
 
-/*----------------------- Set main container widths --------------------------*/
-main {
-	width: 55%;
+/*------------------------------- Media queries ------------------------------*/
+@media (max-width: 1602px) {
+	main, .main-nav, #branding {
+		width: 63%;
+	}
 }
 
-section, article header {
-	width: 67%;
-	float: left;
+@media (max-width: 1399px) {
+	main, .main-nav, #branding {
+		width: 74%;
+	}
+}
+
+@media (max-width: 1191px) {
+	main, .main-nav, #branding {
+		width: 84%;
+	}
+}
+
+@media (max-width: 1036px) {
+	main, .main-nav, #branding {
+		width: 96%;
+	}
+}
+
+/* Remove floats */
+@media (max-width: 918px) {
+	.wrapper, .table-of-contents {
+		float: none;
+		margin: 0 auto;
+		width: inherit;
+	}
+
+	.table-of-contents {
+		margin-bottom: 2rem;
+	}
+
+	.main-nav {
+		text-align: center;
+	}
+
+	.website-logo {
+		margin: 0 auto;
+	}
+
+	main, .main-nav, #branding {
+		width: 76%;
+	}
+}
+
+@media (max-width: 811px) {
+	main, .main-nav, #branding {
+		width: 92%;
+	}
+}
+
+@media (max-width: 670px) {
+	main, .main-nav, #branding {
+		width: 96%;
+	}
+}
+
+@media (max-width: 642px) {
+	html {
+		font-size: 46.875%; /* 7.5px */
+	}
+	main, .main-nav, #branding {
+		width: 86%;
+	}
+}
+
+@media (max-width: 547px) {
+	main, .main-nav, #branding {
+		width: 96%;
+	}
+}
+
+@media (max-width: 490px) {
+	html {
+		font-size: 37.5%; /* 6px */
+	}
+	main, .main-nav, #branding {
+		width: 86%;
+	}
+}
+
+@media (max-width: 433px) {
+	main, .main-nav, #branding {
+		width: 96%;
+	}
+}
+
+@media (max-width: 388px) {
+
 }
 
 /*----------------------------------------------------------------------------*/

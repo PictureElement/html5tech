@@ -91,1415 +91,1417 @@
       <article>
       	<!-- Dynamic table of contents is injected here -->
 				<div class="all-topics"></div>
-        <header>
-          <h1>Styles</h1>
-          <div class="byline-wrapper">
-						<img src="images/avatar.png" alt="avatar" width="40">
-						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
-						<br>
-						<time datetime="2017-03-25">Mar 25, 2017</time>
-					</div>
-        </header>
-        <section>
-        	<h2 id="one">Adding CSS</h2>
-        	<h3>Method #1</h3>
-        	<h4>HTML</h4>
-        	<code>
-        		&lt;h1 style="color: red;"><i>Heading</i>&lt;/h1>
-        	</code>
-        	<h3>Method #2</h3>
-        	<h4>HTML</h4>
-        	<code>
-	        	&lt;head><br>
-						&nbsp;&nbsp;&lt;style><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;h1 {<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-						&nbsp;&nbsp;&lt;/style><br>
-						&lt;/head>
-					</code>
-					<h3>Method #3</h3>
-					<h4>HTML</h4>
-					<code>
-						&lt;head><br>
-						&nbsp;&nbsp;&lt;link rel="stylesheet" href="main.css"><br>
-						&lt;/head>
-					</code>
-					<h4>CSS</h4>
-					<code>
-						h1 {<br>
-						&nbsp;&nbsp;color: red;<br>
-						}
-					</code>
-				</section>
-        <section>
-          <h2 id="two">Border Radius</h2>
-          <h3>Description</h3>
-          <p>
-          	The <i>border-radius</i> property is used to add rounded corners to 
-          	an element's border.
-          </p>
-          <h3>Examples</h3>
-          <ol>
-          	<li>
-          		<p>top-left&bottom-right&top-right&bottom-left</p>
-		          <h4>HTML</h4>
-		          <code>
-		          	&lt;div class="border-radius-1"&gt;<br>
-					     	&lt;/div&gt;
-				      </code>
-				      <h4>CSS</h4>
-				      <code>
-				      	.border-radius-1 {<br>
-								&nbsp;&nbsp;height: 100px;<br>
-								&nbsp;&nbsp;width: 200px;<br>
-								&nbsp;&nbsp;border: 5px solid red;<br>
-								&nbsp;&nbsp;border-radius: 25px;<br>
-								}
-							</code>
-		          <h4>Result</h4>
-		          <div class="result-wrapper">
-			          <div class="border-radius-1">
-				      	</div>
-				      </div>
-				    </li>
-				    <li>
-				    	<p>top-left&bottom-right | top-right&bottom-left</p>
-		          <h4>HTML</h4>
-		          <code>
-		          	&lt;div class="border-radius-2"&gt;<br>
-					      &lt;/div&gt;
-				      </code>
-				      <h4>CSS</h4>
-				      <code>
-				      	.border-radius-2 {<br>
-								&nbsp;&nbsp;height: 100px;<br>
-								&nbsp;&nbsp;width: 200px;<br>
-								&nbsp;&nbsp;border: 5px solid red;<br>
-								&nbsp;&nbsp;border-radius: 25px 50px;<br>
-								}
-							</code>
-							<h4>Result</h4>
-		          <div class="result-wrapper">
-			          <div class="border-radius-2">
-				      	</div>
-				      </div>
-				    </li>
-				    <li>
-				    	<p>top-left | top-right&bottom-left | bottom-right</p>
-		          <h4>HTML</h4>
-		          <code>
-		          	&lt;div class="border-radius-3"&gt;<br>
-					     	&lt;/div&gt;
-				      </code>
-				      <h4>CSS</h4>
-				      <code>
-				      	.border-radius-3 {<br>
-								&nbsp;&nbsp;height: 100px;<br>
-								&nbsp;&nbsp;width: 200px;<br>
-								&nbsp;&nbsp;border: 5px solid red;<br>
-								&nbsp;&nbsp;border-radius: 20px 40px 60px;<br>
-								}
-							</code>
-							<h4>Result</h4>
-		          <div class="result-wrapper">
-			          <div class="border-radius-3">
-				      	</div>
-				      </div>
-				    </li>
-				    <li>
-				    	<p>top-left | top-right | bottom-right | bottom-left</p>
-		          <h4>HTML</h4>
-		          <code>
-				      	&lt;div class="border-radius-4"&gt;<br>
-					     	&lt;/div&gt;
-				      </code>
-				      <h4>CSS</h4>
-				      <code>
-				     		.border-radius-4 {<br>
-								&nbsp;&nbsp;height: 100px;<br>
-								&nbsp;&nbsp;width: 200px;<br>
-								&nbsp;&nbsp;border: 5px solid red;<br>
-								&nbsp;&nbsp;border-radius: 10px 20px 30px 40px;<br>
-								}<br>
-								<br>
-								<b>/* equivalent to: */</b><br>
-								<br>
-								.border-radius-4 {<br>
-								&nbsp;&nbsp;border-top-left-radius: 10px;<br>
-								&nbsp;&nbsp;border-top-right-radius: 20px;<br>
-								&nbsp;&nbsp;border-bottom-right-radius: 30px;<br>
-								&nbsp;&nbsp;border-bottom-left-radius: 40px;<br>
-								}
-							</code>
-							<h4>Result</h4>
-		          <div class="result-wrapper">
-			          <div class="border-radius-4">
-				      	</div>
-				      </div>
-				    </li>
-				    <li>
-				    	<p>
-				    		top-left&bottom-right&top-right&bottom-left<b>(horizontal radii)</b>/
-				    		top-left&bottom-right&top-right&bottom-left<b>(vertical radii)</b>
-				    	</p>
-				    	<img src="images/30-60.png" alt="border-radius slash syntax 1" width="300">
-		          <h4>HTML</h4>
-		          <code>
-		          	&lt;div class="border-radius-5"&gt;<br>
-					     	&lt;/div&gt;
-				      </code>
-				      <h4>CSS</h4>
-				      <code>
-				      	.border-radius-5 {<br>
-								&nbsp;&nbsp;height: 100px;<br>
-								&nbsp;&nbsp;width: 200px;<br>
-								&nbsp;&nbsp;border: 5px solid red;<br>
-								&nbsp;&nbsp;border-radius: 30px/60px;<br>
-								}<br>
-								<br>
-								<b>equivalent to:</b><br>
-								<br>
-								.border-radius-5 {<br>
-								&nbsp;&nbsp;border-top-left-radius: 30px 60px;<br>
-								&nbsp;&nbsp;border-top-right-radius: 30px 60px;<br>
-								&nbsp;&nbsp;border-bottom-right-radius: 30px 60px;<br>
-								&nbsp;&nbsp;border-bottom-left-radius: 30px 60px;<br>
-								}
-							</code>
-							<h4>Result</h4>
-		          <div class="result-wrapper">
-			          <div class="border-radius-5">
-				      	</div>
-				      </div>
-				    </li>
-				    <li>
-				    	<p>
-				    		top-left&bottom-right&top-right&bottom-left<b>(horizontal radii)</b>/
-				    		top-left&bottom-right&top-right&bottom-left<b>(vertical radii)</b>
-				    	</p>
-				    	 <img src="images/60-30.png" alt="border-radius slash syntax 2" width="300">
-		          <h4>HTML</h4>
-		          <code>
-		          	&lt;div class="border-radius-6"&gt;<br>
-					      &lt;/div&gt;
-				      </code>
-				      <h4>CSS</h4>
-				      <code>
-				      	.border-radius-6 {<br>
-								&nbsp;&nbsp;height: 100px;<br>
-								&nbsp;&nbsp;width: 200px;<br>
-								&nbsp;&nbsp;border: 5px solid red;<br>
-								&nbsp;&nbsp;border-radius: 60px/30px;<br>
-								}<br>
-								<br>
-								<b>equivalent to:</b><br>
-								<br>
-								.border-radius-6 {<br>
-								&nbsp;&nbsp;border-top-left-radius: 60px 30px;<br>
-								&nbsp;&nbsp;border-top-right-radius: 60px 30px;<br>
-								&nbsp;&nbsp;border-bottom-right-radius: 60px 30px;<br>
-								&nbsp;&nbsp;border-bottom-left-radius: 60px 30px;<br>
-								}
-							</code>
-							<h4>Result</h4>
-		          <div class="result-wrapper">
-			          <div class="border-radius-6">
-				      	</div>
-				      </div>
-				    </li>
-				    <li>
-				    	<p>Oval shape</p>
-		          <h4>HTML</h4>
-		          <code>
-				      	&lt;div class="border-radius-7"&gt;<br>
-					     	&lt;/div&gt;
-				      </code>
-				      <h4>CSS</h4>
-				      <code>
-				      	.border-radius-7 {<br>
-								&nbsp;&nbsp;height: 100px;<br>
-								&nbsp;&nbsp;width: 200px;<br>
-								&nbsp;&nbsp;border: 5px solid red;<br>
-								&nbsp;&nbsp;border-radius: 50%;<br>
-								}
-							</code>
-							<h4>Result</h4>
-		          <div class="result-wrapper">
-			          <div class="border-radius-7">
-				      	</div>
-				      </div>
-				    </li>
-				    <li>
-				    	<p>Circle shape</p>
-		          <h4>HTML</h4>
-		          <code>
-		          	&lt;div class="border-radius-8"&gt;<br>
-					      &lt;/div&gt;
-				     	</code>
-				      <h4>CSS</h4>
-				      <code>
-				      	.border-radius-8 {<br>
-								&nbsp;&nbsp;height: 200px;<br>
-								&nbsp;&nbsp;width: 200px;<br>
-								&nbsp;&nbsp;border: 5px solid red;<br>
-								&nbsp;&nbsp;border-radius: 50%;<br>
-								}
-							</code>
-							<h4>Result</h4>
-		          <div class="result-wrapper">
-			          <div class="border-radius-8">
-				      	</div>
-				      </div>
-				    </li>
-				  </ol>
-				</section>
-				<section>
-          <h2 id="three">Box Shadow</h2>
-          <h4>Description</h4>
-          <p>
-          	The <i>box-shadow</i> property enables you to cast one or more 
-          	shadows from the frame of almost any element.
-          </p>
-          <h4>Syntax</h4>
-          <code>
-         		box-shadow: inset <i>offset-x offset-y blur-radius spread-radius color</i>
-          </code>
-          <p>where:</p>
-          <ul>
-          	<li>
-          		inset (optional): if not specified (default), a drop shadow is 
-          		created rather than an inset shadow.
-          	</li>
-          	<li>
-          		<i>offset-x</i>: moves the shadow along the x-axis (left & right).
-          	</li>
-          	<li>
-          		<i>offset-y</i>: moves the shadow along the y-axis (up & down).
-          	</li>
-          	<li>
-          		<i>blur-radius</i> (optional): changes the blur amount of the 
-          		shadow. The larger the value, the bigger the blur, so the shadow 
-          		becomes bigger and lighter. Negative values are not allowed. If 
-          		not specified the value will be 0 (shadow's edge is sharp).
-          	</li>
-          	<li>
-          		<i>spread-radius</i> (optional): causes the shadow to expand 
-          		(grow bigger) or shrink. In other words, it changes the size of 
-          		the shadow.
-          	</li>
-          	<li>
-          		<i>color</i> (optional): specifies the color of the shadow.
-          	</li>
-          </ul>
-          <h4>Examples</h4>
-          <ol>
-          	<li>
-          		<p>Sharp shadow edge (no blur):</p>
-          		<code>
-          			box-shadow: 5px 10px black;
-          		</code>
-          		<div class="box-shadow-1">
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow edge (no blur):</p>
-          		<code>
-          			box-shadow: -5px 10px black;
-          		</code>
-          		<div class="box-shadow-2">
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow edge (no blur):</p>
-          		<code>
-          			box-shadow: 5px -10px black;
-          		</code>
-          		<div class="box-shadow-3">
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow edge (no blur):</p>
-          		<code>
-          			box-shadow: -5px -10px black;
-          		</code>
-          		<div class="box-shadow-4">
-          		</div>
-          	</li>
-          	<li>
-          		<p>Specify a blur radius:</p>
-          		<code>
-          			box-shadow: 5px 10px 5px black;
-          		</code>
-          		<div class="box-shadow-5">
-          		</div>
-          	</li>
-          	<li>
-          		<p>Specify a spread radius (expand shadow):</p>
-          		<code>
-          			box-shadow: 5px 10px 5px 5px black;
-          		</code>
-          		<div class="box-shadow-6">
-          		</div>
-          	</li>
-          	<li>
-          		<p>Specify a spread radius (shrink shadow):</p>
-          		<code>
-          			box-shadow: 5px 10px 5px -5px black;
-          		</code>
-          		<div class="box-shadow-7">
-          		</div>
-          	</li>
-          	<li>
-          		<p>Specify a spread radius instead of blur-radius:</p>
-          		<code>
-          			box-shadow: 5px 10px 0 5px black;
-          		</code>
-          		<div class="box-shadow-8">
-          		</div>
-          	</li>
-          	<li>
-          		<p>
-          			Inset and outset/drop shadow combination:
-          		</p>
-          		<code>
-          			box-shadow:<br>
-								&nbsp;&nbsp;inset 5px 10px 5px gray,<br>
-								&nbsp;&nbsp;5px 10px 5px black;
-							</code>
-          		<div class="box-shadow-9">
-          		</div>
-          	</li>
-          	<li>
-          		<p>
-          			Specify multiple box shadows:
-          		</p>
-          		<code>
-       					box-shadow:<br>
-          			&nbsp;&nbsp;0 0 10px black,<br>
-								&nbsp;&nbsp;/* x: right, y: down */<br>
-								&nbsp;&nbsp;10px 5px yellow,<br>
-								&nbsp;&nbsp;/* x: left, y: down */<br>
-								&nbsp;&nbsp;-10px 5px red,<br>
-								&nbsp;&nbsp;/* x: left, y: up */<br>
-								&nbsp;&nbsp;-10px -5px blue,<br>
-								&nbsp;&nbsp;/* x: right, y: up */<br>
-								&nbsp;&nbsp;10px -5px lime;
-							</code>
-          		<div class="box-shadow-10">
-          		</div>
-          	</li>
-          </ol>
-        </section>
-        <section>
-          <h2 id="four">Text Shadow</h2>
-          <h4>Description</h4>
-          <p>The <i>text-shadow</i> property adds shadows to text.</p>
-          <h4>Syntax</h4>
-          <code>
-         		text-shadow: <i>offset-x offset-y blur-radius color</i><br>
-         		/* OR */<br>
-         		text-shadow: <i>color offset-x offset-y blur-radius</i>
-          </code>
-          <p>where:</p>
-          <ul>
-          	<li>
-          		<i>offset-x</i>: position of horizontal shadow.
-          	</li>
-          	<li>
-          		<i>offset-y</i>: position of vertical shadow.
-          	</li>
-          	<li>
-          		<i>blur-radius</i> (optional): controls the blur amount. The 
-          		higher this value, the bigger the blur and the shadow becomes 
-          		wider and lighter.
-          	</li>
-          	<li>
-          		<i>color</i> (optional): specifies the color of the shadow. This 
-          		value can be specified either before or after the offset values.
-          	</li>
-          </ul>
-          <p>
-          	<b>Note:</b> You can apply multiple text shadows, using a 
-          	comma-separated list.
-          </p>
-          <h4>Examples</h4>
-          <ol>
-          	<li>
-          		<p>Sharp shadow (no blur):</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow: 5px 5px #a0a0a0;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-1">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow (no blur):</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow: -5px 5px #a0a0a0;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-2">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow (no blur):</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow: 5px -5px #a0a0a0;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-3">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow (no blur):</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow: -5px -5px #a0a0a0;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-4">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow (no blur):</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow: 0 5px #a0a0a0;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-5">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow (no blur):</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow: 0 -5px #a0a0a0;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-6">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow (no blur):</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow: 5px 0 #a0a0a0;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-7">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Sharp shadow (no blur):</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow: -5px 0 #a0a0a0;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-8">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Shadow with a blur effect:</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow: -5px 0 10px #a0a0a0;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-9">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Multiple shadows:</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;h1&gt;Testing&lt;/h1&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: black;<br>
-          			&nbsp;&nbsp;text-shadow:<br>
-          			&nbsp;&nbsp;&nbsp;&nbsp;-5px 5px #505050,<br>
-          			&nbsp;&nbsp;&nbsp;&nbsp;-10px 10px #707070,<br>
-          			&nbsp;&nbsp;&nbsp;&nbsp;-15px 15px #909090;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-10">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Complex shadow (multiple shadows, blur effect):</p>
-          		<h4>HTML</h4>
-          		<code>
-          			&lt;div class="text-shadow"&gt;<br>
-          			&lt;h1&gt;Testing&lt;/h1&gt;<br>
-          			&lt;/div&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			.text-shadow {<br>
-								&nbsp;&nbsp;background: #0e8dbc;<br>
-								}<br>
-								<br>
-          			.text-shadow h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-          			&nbsp;&nbsp;color: white;<br>
-          			&nbsp;&nbsp;text-shadow:<br>
-          			&nbsp;&nbsp;&nbsp;&nbsp;/* Shades of gray (make the character feel 3D) */<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;0 1px 0 #d0d0d0,<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;0 2px 0 #c0c0c0,<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;0 3px 0 #b0b0b0,<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;0 4px 0 #a0a0a0,<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;0 5px 0 #909090,<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;/* Black shadows (cast character shadows) */<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;0 6px 1px rgba(0,0,0,.1),<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;0 5px  10px  rgba(0,0,0,.25),<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;0 10px 10px rgba(0,0,0,.2),<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;0 20px 20px rgba(0,0,0,.15);<br>
-								}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-11">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Inset Text:</p>
-          		<h4>HTML</h4>
-          		<code>
-	          		&lt;div class="text-shadow"&gt;<br>
-	          		&nbsp;&nbsp;&lt;h1&gt;Testing&lt;/h1&gt;<br>
-	          		&lt;/div&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			.text-shadow {<br>
-								&nbsp;&nbsp;background: #404040;<br>
-								}<br>
-								<br>
-          			.text-shadow h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: rgba(0,0,0,.3);<br>
-								&nbsp;&nbsp;text-shadow: 2px 2px 2px rgba(255,255,255,.1);<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-12">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          	<li>
-          		<p>Inset Text:</p>
-          		<h4>HTML</h4>
-          		<code>
-	          		&lt;div class="text-shadow"&gt;<br>
-	          		&nbsp;&nbsp;&lt;h1&gt;Testing&lt;/h1&gt;<br>
-	          		&lt;/div&gt;
-          		</code>
-          		<h4>CSS</h4>
-          		<code>
-          			.text-shadow {<br>
-								&nbsp;&nbsp;background: aqua;<br>
-								}<br>
-								<br>
-          			.text-shadow h1 {<br>
-          			&nbsp;&nbsp;font-weight: bold;<br>
-								&nbsp;&nbsp;color: white;<br>
-								&nbsp;&nbsp;text-shadow:<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;-5px 5px #00eeee,<br>
-   							&nbsp;&nbsp;&nbsp;&nbsp;-10px 10px #00dddd,<br>
-   							&nbsp;&nbsp;&nbsp;&nbsp;-15px 15px #00cccc;<br>
-          			}
-          		</code>
-          		<h4>Result</h4>
-          		<div class="text-shadow-13">
-          			<p>Testing</p>
-          		</div>
-          	</li>
-          </ol>
-          <h4>Conclusion</h4>
-          <p>
-          	Using a comma separated list you can stack multiple shadows on top 
-          	of each other and create some remarkable effects. Just use your 
-          	creativity and the possibilties are endless!
-          </p>
-       	</section>
-       	<section>
-          <h2 id="five">Multiple Backgrounds</h2>
-          <h4>Description</h4>
-          <p>
-            CSS3 allows you to apply multiple backgrounds to an element. 
-            Backgrounds are stacked on top of each other. The first background 
-            you provide is on top of the stack and the last background listed in 
-            the back.
-          </p>
-          <h4>Syntax</h4>
-          <ol>
-          	<li>
-							Specify individual properties:
-							<h4>CSS</h4>
-							<code>
-								<i>.myclass</i> {<br>
-								&nbsp;&nbsp;background-image: <i>value1, ..., valueN;</i><br>
-								&nbsp;&nbsp;background-position: <i>value1, ..., valueN;</i><br>
-								&nbsp;&nbsp;background-size: <i>value1, ..., valueN;</i><br>
-								&nbsp;&nbsp;background-repeat: <i>value1, ..., valueN;</i><br>
-								}
-							</code>
-						</li>
-						<li>
-							Shorthand:
-							<h4>CSS</h4>
-							<code>
-								<i>.myclass</i> {<br>
-								&nbsp;&nbsp; background:<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;<i>bg-image1 bg-position1 bg-size1 bg-repeat1 bg-color1,</i><br>
-								&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;<i>bg-imageN bg-positionN/bg-sizeN bg-repeatN bg-colorN;</i><br>
-								}
-							</code>
-              <p>
-                <b>Note:</b> If one of the properties in the shorthand syntax is 
-                the <i>bg-size</i> property, you must use a slash(/) to separate
-                it from the <i>bg-position</i> property (e.g. 10px 20px/50px 
-                40px, top/cover, etc.)
-              </p>
-						</li>
-					</ol>
-          <h4>Example</h4>
-         	<h4>HTML</h4>
-       		<code>
-       			&lt;div class="mult-bg-1"&gt;<br>
-       			&lt;/div&gt;
-       		</code>
-       		<h4>CSS</h4>
-       		<code>
-            .mult-bg-1 {<br>
-            &nbsp;&nbsp;border: 5px solid black;<br>
-            &nbsp;&nbsp;height: 300px;<br>
-            &nbsp;&nbsp;background-image:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;url(images/avatar.png),<br> 
-            &nbsp;&nbsp;&nbsp;&nbsp;url(images/lightning.svg),<br> 
-            &nbsp;&nbsp;&nbsp;&nbsp;linear-gradient(to left, #dc2424, #4a569d);<br>
-            &nbsp;&nbsp;background-position: 50% 20%, center, center;<br>
-            &nbsp;&nbsp;background-size: 150px, contain, contain;<br>
-            &nbsp;&nbsp;background-repeat: no-repeat, no-repeat, no-repeat;<br>
-            }<br>
-						/* OR (Shorthand) */<br>
-						.mult-bg-1 {<br>
-            &nbsp;&nbsp;border: 5px solid black;<br>
-            &nbsp;&nbsp;height: 300px;<br>
-            &nbsp;&nbsp;background:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;url(images/avatar.png) 50% 20%/150px no-repeat,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;url(images/lightning.svg) center/contain no-repeat,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;linear-gradient(to left, #dc2424, #4a569d) center/contain no-repeat;<br>
-            }
-       		</code>
-       		<h4>Result</h4>
-       		<div class="mult-bg-1">
-       		</div>
-       	</section>
-       	<section>
-          <h2 id="six">Opacity</h2>
-          <h4>Description</h4>
-          <p>
-          	The <i>opacity</i> property specifies the opacity/transparency of an 
-          	element.
-          </p>
-          <h4>Syntax</h4>
-          <h4>CSS</h4>
-					<code>
-						<i>.myclass</i> {<br>
-						&nbsp;&nbsp;opacity: value;<br>
-						}
-					</code>
-					<p>where: 0 &le; <i>value</i> &le; 1, <i>value</i> &isin; &real;</p>
-					<p>
-						<b>Note:</b> when using the <i>opacity</i> property on an element, 
-						all of its child elements inherit the same transparency. If you want
-						a transparent box but you don't want to apply opacity to text isnide 
-						that box, use <b>rgba()</b>.
-					</p>
-					<h4>Examples</h4>
-					<ol>
-						<li>
-							<h4>HTML</h4>
-							<code>
-								&lt;div class="opacity-1"&gt;<br>
-								&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"&gt;<br>
-								&lt;/div&gt;
-							</code>
-							<h4>CSS</h4>
-							<code>
-								.opacity-1 img {<br>
-								&nbsp;&nbsp;opacity: 0.1;<br>
-								}
-							</code>
-							<h4>Result</h4>
-							<div class="opacity-1">
-								<img src="images/avatar.png" alt="avatar" width="200">
-							</div>
-							<h4>HTML</h4>
-							<code>
-								&lt;div class="opacity-2"&gt;<br>
-								&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"&gt;<br>
-								&lt;/div&gt;
-							</code>
-							<h4>CSS</h4>
-							<code>
-								.opacity-2 img {<br>
-								&nbsp;&nbsp;opacity: 0.5;<br>
-								}
-							</code>
-							<h4>Result</h4>
-							<div class="opacity-2">
-								<img src="images/avatar.png" alt="avatar" width="200">
-							</div>
-							<h4>HTML</h4>
-							<code>
-								&lt;div class="opacity-3"&gt;<br>
-								&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"&gt;<br>
-								&lt;/div&gt;
-							</code>
-							<h4>CSS</h4>
-							<code>
-								.opacity-3 img {<br>
-								&nbsp;&nbsp;opacity: 1.0;<br>
-								}
-							</code>
-							<h4>Result</h4>
-							<div class="opacity-3">
-								<img src="images/avatar.png" alt="avatar" width="200">
-							</div>
-						</li>
-						<li>
-							<h4>HTML</h4>
-							<code>
-								&lt;div class="opacity-4"&gt;<br>
-								&nbsp;&nbsp;&lt;div class="first"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.2<br>
-								&nbsp;&nbsp;&lt;/div&gt;<br>
-								&nbsp;&nbsp;&lt;div class="second"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.4<br>
-								&nbsp;&nbsp;&lt;/div&gt;<br>
-								&nbsp;&nbsp;&lt;div class="third"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.6<br>
-								&nbsp;&nbsp;&lt;/div&gt;<br>
-								&nbsp;&nbsp;&lt;div class="fourth"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.8<br>
-								&nbsp;&nbsp;&lt;/div&gt;<br>
-								&nbsp;&nbsp;&lt;div class="fifth"&gt;<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;opacity = 1.0<br>
-								&nbsp;&nbsp;&lt;/div&gt;<br>
-								&lt;div&gt;
-							</code>
-							<h4>CSS</h4>
-							<code>
-								.opacity-4 {<br>
-                &nbsp;&nbsp;color: white;<br>
-                &nbsp;&nbsp;font-size: 15px;<br>
-                &nbsp;&nbsp;font-weight: 100;<br>
-                &nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
-                }<br>
-                <br>
-                .opacity-4 .first, .opacity-4 .second, .opacity-4 .third,<br>
-                .opacity-4 .fourth, .opacity-4 .fifth {<br>
-                &nbsp;&nbsp;background-color: #007f7f;<br>
-                &nbsp;&nbsp;padding: 20px;<br>
-                }<br>
-								<br>
-								.opacity-4 .first {<br>
-								&nbsp;&nbsp;opacity: 0.2;<br>
-								}<br>
-								<br>
-								.opacity-4 .second {<br>
-								&nbsp;&nbsp;opacity: 0.4;<br>
-								}<br>
-								<br>
-								.opacity-4 .third {<br>
-								&nbsp;&nbsp;opacity: 0.6;<br>
-								}<br>
-								<br>
-								.opacity-4 .fourth {<br>
-								&nbsp;&nbsp;opacity: 0.8;<br>
-								}<br>
-								<br>
-								.opacity-4 .fifth {<br>
-								&nbsp;&nbsp;opacity: 1.0;<br>
-								}
-							</code>
-							<h4>Result</h4>
-							<div class="opacity-4">
-								<div class="first">
-								  opacity = 0.2
+				<div class="wrapper">
+	        <header>
+	          <h1>Styles</h1>
+	          <div class="byline-wrapper">
+							<img src="images/avatar.png" alt="avatar" width="40">
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-03-25">Mar 25, 2017</time>
+						</div>
+	        </header>
+	        <section>
+	        	<h2 id="one">Adding CSS</h2>
+	        	<h3>Method #1</h3>
+	        	<h4>HTML</h4>
+	        	<code>
+	        		&lt;h1 style="color: red;"><i>Heading</i>&lt;/h1>
+	        	</code>
+	        	<h3>Method #2</h3>
+	        	<h4>HTML</h4>
+	        	<code>
+		        	&lt;head><br>
+							&nbsp;&nbsp;&lt;style><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;h1 {<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+							&nbsp;&nbsp;&lt;/style><br>
+							&lt;/head>
+						</code>
+						<h3>Method #3</h3>
+						<h4>HTML</h4>
+						<code>
+							&lt;head><br>
+							&nbsp;&nbsp;&lt;link rel="stylesheet" href="main.css"><br>
+							&lt;/head>
+						</code>
+						<h4>CSS</h4>
+						<code>
+							h1 {<br>
+							&nbsp;&nbsp;color: red;<br>
+							}
+						</code>
+					</section>
+	        <section>
+	          <h2 id="two">Border Radius</h2>
+	          <h3>Description</h3>
+	          <p>
+	          	The <i>border-radius</i> property is used to add rounded corners to 
+	          	an element's border.
+	          </p>
+	          <h3>Examples</h3>
+	          <ol>
+	          	<li>
+	          		<p>top-left&bottom-right&top-right&bottom-left</p>
+			          <h4>HTML</h4>
+			          <code>
+			          	&lt;div class="border-radius-1"&gt;<br>
+						     	&lt;/div&gt;
+					      </code>
+					      <h4>CSS</h4>
+					      <code>
+					      	.border-radius-1 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 25px;<br>
+									}
+								</code>
+			          <h4>Result</h4>
+			          <div class="result-wrapper">
+				          <div class="border-radius-1">
+					      	</div>
+					      </div>
+					    </li>
+					    <li>
+					    	<p>top-left&bottom-right | top-right&bottom-left</p>
+			          <h4>HTML</h4>
+			          <code>
+			          	&lt;div class="border-radius-2"&gt;<br>
+						      &lt;/div&gt;
+					      </code>
+					      <h4>CSS</h4>
+					      <code>
+					      	.border-radius-2 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 25px 50px;<br>
+									}
+								</code>
+								<h4>Result</h4>
+			          <div class="result-wrapper">
+				          <div class="border-radius-2">
+					      	</div>
+					      </div>
+					    </li>
+					    <li>
+					    	<p>top-left | top-right&bottom-left | bottom-right</p>
+			          <h4>HTML</h4>
+			          <code>
+			          	&lt;div class="border-radius-3"&gt;<br>
+						     	&lt;/div&gt;
+					      </code>
+					      <h4>CSS</h4>
+					      <code>
+					      	.border-radius-3 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 20px 40px 60px;<br>
+									}
+								</code>
+								<h4>Result</h4>
+			          <div class="result-wrapper">
+				          <div class="border-radius-3">
+					      	</div>
+					      </div>
+					    </li>
+					    <li>
+					    	<p>top-left | top-right | bottom-right | bottom-left</p>
+			          <h4>HTML</h4>
+			          <code>
+					      	&lt;div class="border-radius-4"&gt;<br>
+						     	&lt;/div&gt;
+					      </code>
+					      <h4>CSS</h4>
+					      <code>
+					     		.border-radius-4 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 10px 20px 30px 40px;<br>
+									}<br>
+									<br>
+									<b>/* equivalent to: */</b><br>
+									<br>
+									.border-radius-4 {<br>
+									&nbsp;&nbsp;border-top-left-radius: 10px;<br>
+									&nbsp;&nbsp;border-top-right-radius: 20px;<br>
+									&nbsp;&nbsp;border-bottom-right-radius: 30px;<br>
+									&nbsp;&nbsp;border-bottom-left-radius: 40px;<br>
+									}
+								</code>
+								<h4>Result</h4>
+			          <div class="result-wrapper">
+				          <div class="border-radius-4">
+					      	</div>
+					      </div>
+					    </li>
+					    <li>
+					    	<p>
+					    		top-left&bottom-right&top-right&bottom-left<b>(horizontal radii)</b>/
+					    		top-left&bottom-right&top-right&bottom-left<b>(vertical radii)</b>
+					    	</p>
+					    	<img src="images/30-60.png" alt="border-radius slash syntax 1" width="300">
+			          <h4>HTML</h4>
+			          <code>
+			          	&lt;div class="border-radius-5"&gt;<br>
+						     	&lt;/div&gt;
+					      </code>
+					      <h4>CSS</h4>
+					      <code>
+					      	.border-radius-5 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 30px/60px;<br>
+									}<br>
+									<br>
+									<b>equivalent to:</b><br>
+									<br>
+									.border-radius-5 {<br>
+									&nbsp;&nbsp;border-top-left-radius: 30px 60px;<br>
+									&nbsp;&nbsp;border-top-right-radius: 30px 60px;<br>
+									&nbsp;&nbsp;border-bottom-right-radius: 30px 60px;<br>
+									&nbsp;&nbsp;border-bottom-left-radius: 30px 60px;<br>
+									}
+								</code>
+								<h4>Result</h4>
+			          <div class="result-wrapper">
+				          <div class="border-radius-5">
+					      	</div>
+					      </div>
+					    </li>
+					    <li>
+					    	<p>
+					    		top-left&bottom-right&top-right&bottom-left<b>(horizontal radii)</b>/
+					    		top-left&bottom-right&top-right&bottom-left<b>(vertical radii)</b>
+					    	</p>
+					    	 <img src="images/60-30.png" alt="border-radius slash syntax 2" width="300">
+			          <h4>HTML</h4>
+			          <code>
+			          	&lt;div class="border-radius-6"&gt;<br>
+						      &lt;/div&gt;
+					      </code>
+					      <h4>CSS</h4>
+					      <code>
+					      	.border-radius-6 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 60px/30px;<br>
+									}<br>
+									<br>
+									<b>equivalent to:</b><br>
+									<br>
+									.border-radius-6 {<br>
+									&nbsp;&nbsp;border-top-left-radius: 60px 30px;<br>
+									&nbsp;&nbsp;border-top-right-radius: 60px 30px;<br>
+									&nbsp;&nbsp;border-bottom-right-radius: 60px 30px;<br>
+									&nbsp;&nbsp;border-bottom-left-radius: 60px 30px;<br>
+									}
+								</code>
+								<h4>Result</h4>
+			          <div class="result-wrapper">
+				          <div class="border-radius-6">
+					      	</div>
+					      </div>
+					    </li>
+					    <li>
+					    	<p>Oval shape</p>
+			          <h4>HTML</h4>
+			          <code>
+					      	&lt;div class="border-radius-7"&gt;<br>
+						     	&lt;/div&gt;
+					      </code>
+					      <h4>CSS</h4>
+					      <code>
+					      	.border-radius-7 {<br>
+									&nbsp;&nbsp;height: 100px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 50%;<br>
+									}
+								</code>
+								<h4>Result</h4>
+			          <div class="result-wrapper">
+				          <div class="border-radius-7">
+					      	</div>
+					      </div>
+					    </li>
+					    <li>
+					    	<p>Circle shape</p>
+			          <h4>HTML</h4>
+			          <code>
+			          	&lt;div class="border-radius-8"&gt;<br>
+						      &lt;/div&gt;
+					     	</code>
+					      <h4>CSS</h4>
+					      <code>
+					      	.border-radius-8 {<br>
+									&nbsp;&nbsp;height: 200px;<br>
+									&nbsp;&nbsp;width: 200px;<br>
+									&nbsp;&nbsp;border: 5px solid red;<br>
+									&nbsp;&nbsp;border-radius: 50%;<br>
+									}
+								</code>
+								<h4>Result</h4>
+			          <div class="result-wrapper">
+				          <div class="border-radius-8">
+					      	</div>
+					      </div>
+					    </li>
+					  </ol>
+					</section>
+					<section>
+	          <h2 id="three">Box Shadow</h2>
+	          <h4>Description</h4>
+	          <p>
+	          	The <i>box-shadow</i> property enables you to cast one or more 
+	          	shadows from the frame of almost any element.
+	          </p>
+	          <h4>Syntax</h4>
+	          <code>
+	         		box-shadow: inset <i>offset-x offset-y blur-radius spread-radius color</i>
+	          </code>
+	          <p>where:</p>
+	          <ul>
+	          	<li>
+	          		inset (optional): if not specified (default), a drop shadow is 
+	          		created rather than an inset shadow.
+	          	</li>
+	          	<li>
+	          		<i>offset-x</i>: moves the shadow along the x-axis (left & right).
+	          	</li>
+	          	<li>
+	          		<i>offset-y</i>: moves the shadow along the y-axis (up & down).
+	          	</li>
+	          	<li>
+	          		<i>blur-radius</i> (optional): changes the blur amount of the 
+	          		shadow. The larger the value, the bigger the blur, so the shadow 
+	          		becomes bigger and lighter. Negative values are not allowed. If 
+	          		not specified the value will be 0 (shadow's edge is sharp).
+	          	</li>
+	          	<li>
+	          		<i>spread-radius</i> (optional): causes the shadow to expand 
+	          		(grow bigger) or shrink. In other words, it changes the size of 
+	          		the shadow.
+	          	</li>
+	          	<li>
+	          		<i>color</i> (optional): specifies the color of the shadow.
+	          	</li>
+	          </ul>
+	          <h4>Examples</h4>
+	          <ol>
+	          	<li>
+	          		<p>Sharp shadow edge (no blur):</p>
+	          		<code>
+	          			box-shadow: 5px 10px black;
+	          		</code>
+	          		<div class="box-shadow-1">
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow edge (no blur):</p>
+	          		<code>
+	          			box-shadow: -5px 10px black;
+	          		</code>
+	          		<div class="box-shadow-2">
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow edge (no blur):</p>
+	          		<code>
+	          			box-shadow: 5px -10px black;
+	          		</code>
+	          		<div class="box-shadow-3">
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow edge (no blur):</p>
+	          		<code>
+	          			box-shadow: -5px -10px black;
+	          		</code>
+	          		<div class="box-shadow-4">
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Specify a blur radius:</p>
+	          		<code>
+	          			box-shadow: 5px 10px 5px black;
+	          		</code>
+	          		<div class="box-shadow-5">
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Specify a spread radius (expand shadow):</p>
+	          		<code>
+	          			box-shadow: 5px 10px 5px 5px black;
+	          		</code>
+	          		<div class="box-shadow-6">
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Specify a spread radius (shrink shadow):</p>
+	          		<code>
+	          			box-shadow: 5px 10px 5px -5px black;
+	          		</code>
+	          		<div class="box-shadow-7">
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Specify a spread radius instead of blur-radius:</p>
+	          		<code>
+	          			box-shadow: 5px 10px 0 5px black;
+	          		</code>
+	          		<div class="box-shadow-8">
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>
+	          			Inset and outset/drop shadow combination:
+	          		</p>
+	          		<code>
+	          			box-shadow:<br>
+									&nbsp;&nbsp;inset 5px 10px 5px gray,<br>
+									&nbsp;&nbsp;5px 10px 5px black;
+								</code>
+	          		<div class="box-shadow-9">
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>
+	          			Specify multiple box shadows:
+	          		</p>
+	          		<code>
+	       					box-shadow:<br>
+	          			&nbsp;&nbsp;0 0 10px black,<br>
+									&nbsp;&nbsp;/* x: right, y: down */<br>
+									&nbsp;&nbsp;10px 5px yellow,<br>
+									&nbsp;&nbsp;/* x: left, y: down */<br>
+									&nbsp;&nbsp;-10px 5px red,<br>
+									&nbsp;&nbsp;/* x: left, y: up */<br>
+									&nbsp;&nbsp;-10px -5px blue,<br>
+									&nbsp;&nbsp;/* x: right, y: up */<br>
+									&nbsp;&nbsp;10px -5px lime;
+								</code>
+	          		<div class="box-shadow-10">
+	          		</div>
+	          	</li>
+	          </ol>
+	        </section>
+	        <section>
+	          <h2 id="four">Text Shadow</h2>
+	          <h4>Description</h4>
+	          <p>The <i>text-shadow</i> property adds shadows to text.</p>
+	          <h4>Syntax</h4>
+	          <code>
+	         		text-shadow: <i>offset-x offset-y blur-radius color</i><br>
+	         		/* OR */<br>
+	         		text-shadow: <i>color offset-x offset-y blur-radius</i>
+	          </code>
+	          <p>where:</p>
+	          <ul>
+	          	<li>
+	          		<i>offset-x</i>: position of horizontal shadow.
+	          	</li>
+	          	<li>
+	          		<i>offset-y</i>: position of vertical shadow.
+	          	</li>
+	          	<li>
+	          		<i>blur-radius</i> (optional): controls the blur amount. The 
+	          		higher this value, the bigger the blur and the shadow becomes 
+	          		wider and lighter.
+	          	</li>
+	          	<li>
+	          		<i>color</i> (optional): specifies the color of the shadow. This 
+	          		value can be specified either before or after the offset values.
+	          	</li>
+	          </ul>
+	          <p>
+	          	<b>Note:</b> You can apply multiple text shadows, using a 
+	          	comma-separated list.
+	          </p>
+	          <h4>Examples</h4>
+	          <ol>
+	          	<li>
+	          		<p>Sharp shadow (no blur):</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow: 5px 5px #a0a0a0;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-1">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow (no blur):</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow: -5px 5px #a0a0a0;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-2">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow (no blur):</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow: 5px -5px #a0a0a0;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-3">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow (no blur):</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow: -5px -5px #a0a0a0;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-4">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow (no blur):</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow: 0 5px #a0a0a0;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-5">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow (no blur):</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow: 0 -5px #a0a0a0;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-6">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow (no blur):</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow: 5px 0 #a0a0a0;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-7">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Sharp shadow (no blur):</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow: -5px 0 #a0a0a0;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-8">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Shadow with a blur effect:</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow: -5px 0 10px #a0a0a0;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-9">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Multiple shadows:</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: black;<br>
+	          			&nbsp;&nbsp;text-shadow:<br>
+	          			&nbsp;&nbsp;&nbsp;&nbsp;-5px 5px #505050,<br>
+	          			&nbsp;&nbsp;&nbsp;&nbsp;-10px 10px #707070,<br>
+	          			&nbsp;&nbsp;&nbsp;&nbsp;-15px 15px #909090;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-10">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Complex shadow (multiple shadows, blur effect):</p>
+	          		<h4>HTML</h4>
+	          		<code>
+	          			&lt;div class="text-shadow"&gt;<br>
+	          			&lt;h1&gt;Testing&lt;/h1&gt;<br>
+	          			&lt;/div&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			.text-shadow {<br>
+									&nbsp;&nbsp;background: #0e8dbc;<br>
+									}<br>
+									<br>
+	          			.text-shadow h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+	          			&nbsp;&nbsp;color: white;<br>
+	          			&nbsp;&nbsp;text-shadow:<br>
+	          			&nbsp;&nbsp;&nbsp;&nbsp;/* Shades of gray (make the character feel 3D) */<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;0 1px 0 #d0d0d0,<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;0 2px 0 #c0c0c0,<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;0 3px 0 #b0b0b0,<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;0 4px 0 #a0a0a0,<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;0 5px 0 #909090,<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;/* Black shadows (cast character shadows) */<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;0 6px 1px rgba(0,0,0,.1),<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;0 5px  10px  rgba(0,0,0,.25),<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;0 10px 10px rgba(0,0,0,.2),<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;0 20px 20px rgba(0,0,0,.15);<br>
+									}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-11">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Inset Text:</p>
+	          		<h4>HTML</h4>
+	          		<code>
+		          		&lt;div class="text-shadow"&gt;<br>
+		          		&nbsp;&nbsp;&lt;h1&gt;Testing&lt;/h1&gt;<br>
+		          		&lt;/div&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			.text-shadow {<br>
+									&nbsp;&nbsp;background: #404040;<br>
+									}<br>
+									<br>
+	          			.text-shadow h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: rgba(0,0,0,.3);<br>
+									&nbsp;&nbsp;text-shadow: 2px 2px 2px rgba(255,255,255,.1);<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-12">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          	<li>
+	          		<p>Inset Text:</p>
+	          		<h4>HTML</h4>
+	          		<code>
+		          		&lt;div class="text-shadow"&gt;<br>
+		          		&nbsp;&nbsp;&lt;h1&gt;Testing&lt;/h1&gt;<br>
+		          		&lt;/div&gt;
+	          		</code>
+	          		<h4>CSS</h4>
+	          		<code>
+	          			.text-shadow {<br>
+									&nbsp;&nbsp;background: aqua;<br>
+									}<br>
+									<br>
+	          			.text-shadow h1 {<br>
+	          			&nbsp;&nbsp;font-weight: bold;<br>
+									&nbsp;&nbsp;color: white;<br>
+									&nbsp;&nbsp;text-shadow:<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;-5px 5px #00eeee,<br>
+	   							&nbsp;&nbsp;&nbsp;&nbsp;-10px 10px #00dddd,<br>
+	   							&nbsp;&nbsp;&nbsp;&nbsp;-15px 15px #00cccc;<br>
+	          			}
+	          		</code>
+	          		<h4>Result</h4>
+	          		<div class="text-shadow-13">
+	          			<p>Testing</p>
+	          		</div>
+	          	</li>
+	          </ol>
+	          <h4>Conclusion</h4>
+	          <p>
+	          	Using a comma separated list you can stack multiple shadows on top 
+	          	of each other and create some remarkable effects. Just use your 
+	          	creativity and the possibilties are endless!
+	          </p>
+	       	</section>
+	       	<section>
+	          <h2 id="five">Multiple Backgrounds</h2>
+	          <h4>Description</h4>
+	          <p>
+	            CSS3 allows you to apply multiple backgrounds to an element. 
+	            Backgrounds are stacked on top of each other. The first background 
+	            you provide is on top of the stack and the last background listed in 
+	            the back.
+	          </p>
+	          <h4>Syntax</h4>
+	          <ol>
+	          	<li>
+								Specify individual properties:
+								<h4>CSS</h4>
+								<code>
+									<i>.myclass</i> {<br>
+									&nbsp;&nbsp;background-image: <i>value1, ..., valueN;</i><br>
+									&nbsp;&nbsp;background-position: <i>value1, ..., valueN;</i><br>
+									&nbsp;&nbsp;background-size: <i>value1, ..., valueN;</i><br>
+									&nbsp;&nbsp;background-repeat: <i>value1, ..., valueN;</i><br>
+									}
+								</code>
+							</li>
+							<li>
+								Shorthand:
+								<h4>CSS</h4>
+								<code>
+									<i>.myclass</i> {<br>
+									&nbsp;&nbsp; background:<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<i>bg-image1 bg-position1 bg-size1 bg-repeat1 bg-color1,</i><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<i>bg-imageN bg-positionN/bg-sizeN bg-repeatN bg-colorN;</i><br>
+									}
+								</code>
+	              <p>
+	                <b>Note:</b> If one of the properties in the shorthand syntax is 
+	                the <i>bg-size</i> property, you must use a slash(/) to separate
+	                it from the <i>bg-position</i> property (e.g. 10px 20px/50px 
+	                40px, top/cover, etc.)
+	              </p>
+							</li>
+						</ol>
+	          <h4>Example</h4>
+	         	<h4>HTML</h4>
+	       		<code>
+	       			&lt;div class="mult-bg-1"&gt;<br>
+	       			&lt;/div&gt;
+	       		</code>
+	       		<h4>CSS</h4>
+	       		<code>
+	            .mult-bg-1 {<br>
+	            &nbsp;&nbsp;border: 5px solid black;<br>
+	            &nbsp;&nbsp;height: 300px;<br>
+	            &nbsp;&nbsp;background-image:<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;url(images/avatar.png),<br> 
+	            &nbsp;&nbsp;&nbsp;&nbsp;url(images/lightning.svg),<br> 
+	            &nbsp;&nbsp;&nbsp;&nbsp;linear-gradient(to left, #dc2424, #4a569d);<br>
+	            &nbsp;&nbsp;background-position: 50% 20%, center, center;<br>
+	            &nbsp;&nbsp;background-size: 150px, contain, contain;<br>
+	            &nbsp;&nbsp;background-repeat: no-repeat, no-repeat, no-repeat;<br>
+	            }<br>
+							/* OR (Shorthand) */<br>
+							.mult-bg-1 {<br>
+	            &nbsp;&nbsp;border: 5px solid black;<br>
+	            &nbsp;&nbsp;height: 300px;<br>
+	            &nbsp;&nbsp;background:<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;url(images/avatar.png) 50% 20%/150px no-repeat,<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;url(images/lightning.svg) center/contain no-repeat,<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;linear-gradient(to left, #dc2424, #4a569d) center/contain no-repeat;<br>
+	            }
+	       		</code>
+	       		<h4>Result</h4>
+	       		<div class="mult-bg-1">
+	       		</div>
+	       	</section>
+	       	<section>
+	          <h2 id="six">Opacity</h2>
+	          <h4>Description</h4>
+	          <p>
+	          	The <i>opacity</i> property specifies the opacity/transparency of an 
+	          	element.
+	          </p>
+	          <h4>Syntax</h4>
+	          <h4>CSS</h4>
+						<code>
+							<i>.myclass</i> {<br>
+							&nbsp;&nbsp;opacity: value;<br>
+							}
+						</code>
+						<p>where: 0 &le; <i>value</i> &le; 1, <i>value</i> &isin; &real;</p>
+						<p>
+							<b>Note:</b> when using the <i>opacity</i> property on an element, 
+							all of its child elements inherit the same transparency. If you want
+							a transparent box but you don't want to apply opacity to text isnide 
+							that box, use <b>rgba()</b>.
+						</p>
+						<h4>Examples</h4>
+						<ol>
+							<li>
+								<h4>HTML</h4>
+								<code>
+									&lt;div class="opacity-1"&gt;<br>
+									&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"&gt;<br>
+									&lt;/div&gt;
+								</code>
+								<h4>CSS</h4>
+								<code>
+									.opacity-1 img {<br>
+									&nbsp;&nbsp;opacity: 0.1;<br>
+									}
+								</code>
+								<h4>Result</h4>
+								<div class="opacity-1">
+									<img src="images/avatar.png" alt="avatar" width="200">
 								</div>
-								<div class="second">
-								  opacity = 0.4
+								<h4>HTML</h4>
+								<code>
+									&lt;div class="opacity-2"&gt;<br>
+									&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"&gt;<br>
+									&lt;/div&gt;
+								</code>
+								<h4>CSS</h4>
+								<code>
+									.opacity-2 img {<br>
+									&nbsp;&nbsp;opacity: 0.5;<br>
+									}
+								</code>
+								<h4>Result</h4>
+								<div class="opacity-2">
+									<img src="images/avatar.png" alt="avatar" width="200">
 								</div>
-								<div class="third">
-								  opacity = 0.6
+								<h4>HTML</h4>
+								<code>
+									&lt;div class="opacity-3"&gt;<br>
+									&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="100"&gt;<br>
+									&lt;/div&gt;
+								</code>
+								<h4>CSS</h4>
+								<code>
+									.opacity-3 img {<br>
+									&nbsp;&nbsp;opacity: 1.0;<br>
+									}
+								</code>
+								<h4>Result</h4>
+								<div class="opacity-3">
+									<img src="images/avatar.png" alt="avatar" width="200">
 								</div>
-								<div class="fourth">
-							    opacity = 0.8
+							</li>
+							<li>
+								<h4>HTML</h4>
+								<code>
+									&lt;div class="opacity-4"&gt;<br>
+									&nbsp;&nbsp;&lt;div class="first"&gt;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.2<br>
+									&nbsp;&nbsp;&lt;/div&gt;<br>
+									&nbsp;&nbsp;&lt;div class="second"&gt;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.4<br>
+									&nbsp;&nbsp;&lt;/div&gt;<br>
+									&nbsp;&nbsp;&lt;div class="third"&gt;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.6<br>
+									&nbsp;&nbsp;&lt;/div&gt;<br>
+									&nbsp;&nbsp;&lt;div class="fourth"&gt;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;opacity = 0.8<br>
+									&nbsp;&nbsp;&lt;/div&gt;<br>
+									&nbsp;&nbsp;&lt;div class="fifth"&gt;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;opacity = 1.0<br>
+									&nbsp;&nbsp;&lt;/div&gt;<br>
+									&lt;div&gt;
+								</code>
+								<h4>CSS</h4>
+								<code>
+									.opacity-4 {<br>
+	                &nbsp;&nbsp;color: white;<br>
+	                &nbsp;&nbsp;font-size: 15px;<br>
+	                &nbsp;&nbsp;font-weight: 100;<br>
+	                &nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+	                }<br>
+	                <br>
+	                .opacity-4 .first, .opacity-4 .second, .opacity-4 .third,<br>
+	                .opacity-4 .fourth, .opacity-4 .fifth {<br>
+	                &nbsp;&nbsp;background-color: #007f7f;<br>
+	                &nbsp;&nbsp;padding: 20px;<br>
+	                }<br>
+									<br>
+									.opacity-4 .first {<br>
+									&nbsp;&nbsp;opacity: 0.2;<br>
+									}<br>
+									<br>
+									.opacity-4 .second {<br>
+									&nbsp;&nbsp;opacity: 0.4;<br>
+									}<br>
+									<br>
+									.opacity-4 .third {<br>
+									&nbsp;&nbsp;opacity: 0.6;<br>
+									}<br>
+									<br>
+									.opacity-4 .fourth {<br>
+									&nbsp;&nbsp;opacity: 0.8;<br>
+									}<br>
+									<br>
+									.opacity-4 .fifth {<br>
+									&nbsp;&nbsp;opacity: 1.0;<br>
+									}
+								</code>
+								<h4>Result</h4>
+								<div class="opacity-4">
+									<div class="first">
+									  opacity = 0.2
+									</div>
+									<div class="second">
+									  opacity = 0.4
+									</div>
+									<div class="third">
+									  opacity = 0.6
+									</div>
+									<div class="fourth">
+								    opacity = 0.8
+									</div>
+									<div class="fifth">
+									  opacity = 1.0
+									</div>
 								</div>
-								<div class="fifth">
-								  opacity = 1.0
-								</div>
-							</div>
-						</li>
-					</ol>
-				</section>
-				<section>
-	        <h2 id="seven">Gradients</h2>
-	        <h4>Description</h4>
-	        <p>
-	        	Gradients let us create smooth transitions between two or more 
-	        	specified colors. There are two types of gradients: linear gradients 
-	        	and radial gradients.
-	        </p>
-	        <h4>Linear gradients</h4>
-	        <p>A linear gradient is a straight/linear progression.</p>
-	        <h4>CSS</h4>
-	        <code>
-	          background: linear-gradient(<i>direction, color-stop1, ..., 
-	          color-stopN</i>);
-	        </code>
-	        <p>where:</p>
-	        <ul>
-	        	<li>
-	        	  <i>direction</i> describes the direction of the gradient and can be 
-	            specified by a <i>side-or-corner</i> or an <i>angle</i>.
-	        	</li>
-	        	<li>
-	        	  <i>color-stop</i> is a point along the gradient line that has a 
-	            specific color at that location. A color-stop value is comprised of 
-	            a <i>color</i> value, followed by an optional <i>stop position</i>.
-	        	</li>
-	        </ul>
-	       	<p>where:</p>
-	       	<ul>
-	        	<li>
-	            <i>side-or-corner</i> is optional and equals to:
-	        		<ul>
-	        			<li><b>to right</b> (gradients runs from left to right)</li>
-	        			<li><b>to left</b> (gradients runs from right to left)</li>
-	        			<li><b>to top</b> (gradients runs from bottom to top)</li>
-	        			<li><b>to bottom</b> (gradients runs from top to bottom)</li>
-	        			<li><b>to top left</b> (gradient runs diagonally)</li>
-	        			<li><b>to top right</b> (gradient runs diagonally)</li>
-	        			<li><b>to bottom left</b> (gradient runs diagonally)</li>
-	        			<li><b>to bottom right</b> (gradient runs diagonally)</li>
-	        		</ul>
-	            <div class="note">
-	              <b>Note:</b> The order is not relevant(e.g. to top left = to left top)
-	            </div>
-	          </li>
-	        	<li>
-	        	  <i>angle</i> is optional and  is specified as an angle between a 
-	            vertical line and the gradient line. Some examples are:
-	        		<ul>
-	        			<li><b>90deg</b> (similar to: to right)</li>
-	        			<li><b>-90deg</b> (similar to: to left)</li>
-	        			<li><b>0</b> (similar to: to top)</li>
-	        			<li><b>180deg</b> (similar to: to bottom)</li>
-	        		</ul>
-	        	</li>
-	        	<li>
-	            <i>color</i> can be specified in any of the following ways:
-	        		<ul>
-	        			<li><b><i>#RRGGBB</i></b></li>
-	        			<li><b><i>#RGB</i></b></li>
-	        			<li><b><i>#RRGGBBaa</i></b></li>
-	        			<li><b><i>#RGBa</i></b></li>
-	        			<li><b>rgb(<i>r,g,b</i>)</b></li>
-	        			<li><b>rgb(<i>pctr,pctg,pctb</i>)</b></li>
-	        			<li><b>rgba(<i>r,g,b,a</i>)</b></li>
-	        			<li><b>hsl(<i>hue,saturation,lightness</i>)</b></li>
-	        			<li><b>hsla(<i>hue,saturation,lightness,a</i>)</b></li>
-	        		</ul>
-	        	</li>
-	        	<li>
-	            <i>stop position</i> is optional and can be specified as either a 
-	            percentage, or as a length. For example, the starting point is 
-	            represented with 0% (or a length of 0) and the ending point with 
-	            100%.
-	        	</li> 
-	        </ul>
-	        <h4>Example</h4>
-	        <h4>HTML</h4>
-	        <code>
-	          &lt;div class="linear-gradient"><br>
-	          &nbsp;&nbsp;&lt;div class="first"><br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;1. Gradient runs from left to right 
-	          (stop positions: darkblue-0%,darkmagenta-100%)<br>
-	          &nbsp;&nbsp;&lt;/div><br>
-	          &nbsp;&nbsp;&lt;div class="second"><br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;2. Gradient runs from bottom to top 
-	          (stop positions: palegreen-0%, crimson-100%)<br>
-	          &nbsp;&nbsp;&lt;/div><br>
-	          &nbsp;&nbsp;&lt;div class="third"><br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;3. Gradient runs diagonally 
-	          (stop positions: orangered-0%, slateblue-100%)<br>
-	          &nbsp;&nbsp;&lt;/div><br>
-	          &nbsp;&nbsp;&lt;div class="fourth"><br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;4. Gradient runs from top to bottom 
-	          (stop positions: lightcoral-0%, cyan-100%)<br>
-	          &nbsp;&nbsp;&lt;/div><br>
-	          &nbsp;&nbsp;&lt;div class="fifth"><br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;5. Three color stops (stop positions: 
-	          lightseagreen-0%, black-80%, mediumorchid-100%)<br>
-	          &nbsp;&nbsp;&lt;/div><br>
-	          &nbsp;&nbsp;&lt;div class="sixth"><br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;6. Evenly spaced color stops<br>
-	          &nbsp;&nbsp;&lt;/div><br>
-	          &nbsp;&nbsp;&lt;div class="seventh"><br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;7. Using transparency 
-	          (stop positions: black-0%, transparent-100%)<br>
-	          &nbsp;&nbsp;&lt;/div><br>
-	          &nbsp;&nbsp;&lt;div class="eighth"><br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;8. Using transparency 
-	          (stop positions: 0%_transparent_image-0%, 
-	          full_transparent_image-100%)<br>
-	          &nbsp;&nbsp;&lt;/div><br>
-	          &lt;/div>
-	        </code>
-	        <h4>CSS</h4>
-	        <code>
-	          .linear-gradient {<br>
-	          &nbsp;&nbsp;color: white;<br>
-	          &nbsp;&nbsp;font-size: 15px;<br>
-	          &nbsp;&nbsp;font-weight: 100;<br>
-	          &nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
-	          }<br>
-	          <br>
-	          .note {<br>
-	          &nbsp;&nbsp;color: #8c8c90;<br>
-	          }<br>
-	          <br>
-	          .linear-gradient .first, .linear-gradient .second, .linear-gradient 
-	          .third,<br>
-	          .linear-gradient .fourth,.linear-gradient .fifth, .linear-gradient 
-	          .sixth,<br>
-	          .linear-gradient .seventh, .linear-gradient .eighth {<br>
-	          &nbsp;&nbsp;border: 1px solid black;<br>
-	          &nbsp;&nbsp;padding: 20px;<br>
-	          &nbsp;&nbsp;margin-bottom: 10px;<br>
-	          }<br>
-	          <br>
-	          .linear-gradient .first {<br>
-	          &nbsp;&nbsp;background: linear-gradient(to right, darkblue, 
-	          darkmagenta);<br>
-	          }<br>
-	          <br>
-	          .linear-gradient .second {<br>
-	          &nbsp;&nbsp;background: linear-gradient(to top, palegreen, 
-	          crimson);<br>
-	          }<br>
-	          <br>
-	          .linear-gradient .third {<br>
-	          &nbsp;&nbsp;background: linear-gradient(to bottom left, orangered, 
-	          slateblue);<br>
-	          }<br>
-	          <br>
-	          .linear-gradient .fourth {<br>
-	          &nbsp;&nbsp;background: linear-gradient(180deg, lightcoral, cyan);<br>
-	          }<br>
-	          <br>
-	          .linear-gradient .fifth {<br>
-	          &nbsp;&nbsp;background: linear-gradient(to left, lightseagreen, 
-	          black 80%, mediumorchid);<br>
-	          }<br>
-	          <br>
-	          .linear-gradient .sixth {<br>
-	          &nbsp;&nbsp;background: linear-gradient(to left, red, orange, yellow, 
-	          green, blue, indigo, violet);<br>
-	          }<br>
-	          <br>
-	          .linear-gradient .seventh {<br>
-	          &nbsp;&nbsp;background: linear-gradient(to right, black, 
-	          transparent);<br>
-	          }<br>
-	          <br>
-	          .linear-gradient .eighth {<br>
-	          &nbsp;&nbsp;background:<br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)),<br>
-	          &nbsp;&nbsp;&nbsp;&nbsp;url("images/wallpaper.jpg") top left/cover no-repeat;<br>
-	          }
-	        </code>
-	        <h4>Result</h4>
-	        <div class="linear-gradient">
-	          <div class="first">
-	            1. Gradient runs from left to right (stop positions: darkblue-0%, 
-	            darkmagenta-100%)
-	          </div>
-	          <div class="second">
-	            2. Gradient runs from bottom to top (stop positions: palegreen-0%, 
-	            crimson-100%)
-	          </div>
-	          <div class="third">
-	            3. Gradient runs diagonally (stop positions: orangered-0%, 
-	            slateblue-100%)
-	          </div>
-	          <div class="fourth">
-	            4. Gradient runs from top to bottom (stop positions: lightcoral-0%, 
-	            cyan-100%)
-	          </div>
-	          <div class="fifth">
-	            5. Three color stops (stop positions: lightseagreen-0%, black-80%, 
-	            mediumorchid-100%)
-	          </div>
-	          <div class="sixth">
-	            6. Evenly spaced color stops
-	          </div>
-	          <div class="seventh">
-	            7. Using transparency (stop positions: black-0%, transparent-100%)
-	          </div>
-	          <div class="eighth">
-	            8. Using transparency (stop positions: 0%_transparent_image-0%, 
-	            full_transparent_image-100%)
-	          </div>
-	          <div class="note">
-	            <b>Note:</b> The <i>transparent</i> keyword represents a fully 
-	            transparent color and is a shortcut for rgba(0,0,0,0).
-	          </div>
-	        </div>
-	        <h4>Radial gradients</h4>
-	        <p>
-	          A radial gradient is a circular or elliptic progression. This type of 
-	          gradient, creates a gradient that extends from an origin 
-	          (i.e.the center of the element), extending outward in a circular or 
-	          elliptical pattern.
-	        </p>
-	        <h4>CSS</h4>
-	        <code>
-	          background: radial-gradient(<i>&lt;shape&gt; &lt;size&gt;</i> &lt;at <i>position&gt;, color-stop1, 
-	          ..., color-stopN</i>);
-	        </code>
-	        <p>where:</p>
-	        <ul>
-	          <li>
-	            <i>shape</i> is optional, defines the shape of the gradient, and 
-	            equals to:
-	            <ul>
-	              <li><b>circle</b></li>
-	              <li><b>ellipse</b> (default)</li>
-	            </ul>
-	          </li>
-	          <li>
-	            <i>size</i> is optional, defines the size of the ending shape, and 
-	            equals to:
-	            <ul>
-	              <li><b>closest-side</b></li>
-	              <li><b>farthest-side</b></li>
-	              <li><b>closest-corner</b></li>
-	              <li><b>farthest-corner</b> (default)</li>
-	            </ul>
-	          </li>
-	          <li>
-	            <i>position</i> is optional, defines the position of the gradient, 
-	            and equals to:
-	            <ul>
-	              <li><b>left</b></li>
-	              <li><b>center</b> (default)</li>
-	              <li><b>right</b></li>
-	              <li><b>top</b></li>
-	              <li><b>bottom</b></li>
-	              <li><b>left top</b></li>
-	              <li><b>left center</b></li>
-	              <li><b>left bottom</b></li>
-	              <li><b>center top</b></li>
-	              <li><b>center center</b></li>
-	              <li><b>center bottom</b></li>
-	              <li><b>right top</b></li>
-	              <li><b>right center</b></li>
-	              <li><b>right bottom</b></li>
-	              <li><b>top left</b></li>
-	              <li><b>top center</b></li>
-	              <li><b>top right</b></li>
-	              <li><b>bottom left</b></li>
-	              <li><b>bottom center</b></li>
-	              <li><b>bottom right</b></li>
-	            </ul>
-	            <div class="note">
-	              <b>Note:</b> left, center, right, top, and bottom are identical to 
-	              left center, center center, right center, top center, and bottom 
-	              center respectively.
-	            </div>
-	          </li>
-	          <li>
-	            <i>color-stop</i> is a point along the gradient line that has a 
-	            specific color at that location. A color-stop value is comprised of 
-	            a <i>color</i> value, followed by an optional <i>stop position</i>
-	          </li>
-	        </ul>
-	        <p>where:</p>
-	        <ul>
-	          <li>
-	            <i>color</i> can be specified in any of the following ways:
-	            <ul>
-	              <li><b><i>#RRGGBB</i></b></li>
-	              <li><b><i>#RGB</i></b></li>
-	              <li><b><i>#RRGGBBaa</i></b></li>
-	              <li><b><i>#RGBa</i></b></li>
-	              <li><b>rgb(<i>r,g,b</i>)</b></li>
-	              <li><b>rgb(<i>pctr,pctg,pctb</i>)</b></li>
-	              <li><b>rgba(<i>r,g,b,a</i>)</b></li>
-	              <li><b>hsl(<i>hue,saturation,lightness</i>)</b></li>
-	              <li><b>hsla(<i>hue,saturation,lightness,a</i>)</b></li>
-	            </ul>
-	          </li>
-	          <li>
-	            <i>stop position</i> is optional and can be specified as either a 
-	            percentage, or as a length. For example, the center of the gradient
-	            is represented with 0% (or a length of 0).
-	          </li> 
-	        </ul>
-	        <h4>Example</h4>
-	        <h4>HTML</h4>
-	        <code>
-		        &lt;div class="radial-gradient"><br>
-		        &nbsp;&nbsp;&lt;div class="first"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;1. Evenly spaced color stops, &lt;i>shape:&lt;/i> circle<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="second"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;2. Evenly spaced color stops, &lt;i>shape:&lt;/i> ellipse<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="third"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;3. Differently spaced color stops (baseline)<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="fourth"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;4. Differently spaced color stops<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="fifth"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;5. Differently spaced color stops<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="sixth"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;6. Differently spaced color stops<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="seventh"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;7. &lt;i>size:&lt;/i> closest-side<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="eighth"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;8. &lt;i>size:&lt;/i> closest-corner<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="ninth"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;9. &lt;i>size:&lt;/i> farthest-side<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="tenth"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;10. &lt;i>size:&lt;/i> farthest-corner<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="eleventh"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;11. &lt;i>position:&lt;/i> top left<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &nbsp;&nbsp;&lt;div class="twelfth"><br>
-		        &nbsp;&nbsp;&nbsp;&nbsp;12. &lt;i>position:&lt;/i> 50% 0%<br>
-		        &nbsp;&nbsp;&lt;/div><br>
-		        &lt;/div>
-		      </code>
-		      <h4>CSS</h4>
-		      <code>
-			      .radial-gradient {<br>
-						&nbsp;&nbsp;color: black;<br>
-						&nbsp;&nbsp;font-size: 15px;<br>
-						&nbsp;&nbsp;font-weight: 100;<br>
-						&nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
-						}<br>
-						<br>
-						.radial-gradient .first, .radial-gradient .second, .radial-gradient .third,<br>
-						.radial-gradient .fourth, .radial-gradient .fifth, .radial-gradient .sixth,<br> 
-						.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth,<br> 
-						.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {<br>
-						&nbsp;&nbsp;border: 1px solid black;<br>
-						&nbsp;&nbsp;height: 200px;<br>
-						&nbsp;&nbsp;padding: 20px;<br>
-						&nbsp;&nbsp;margin-bottom: 10px;<br>
-						}<br>
-						<br>
-						.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth,<br> 
-						.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {<br>
-						&nbsp;&nbsp;border: 1px solid black;<br>
-						&nbsp;&nbsp;width: 200px;<br>
-						}<br>
-						<br>
-						.radial-gradient .first {<br>
-						&nbsp;&nbsp;background: radial-gradient(circle, red, yellow, green);<br>
-						}<br>
-						<br>
-						.radial-gradient .second {<br>
-						&nbsp;&nbsp;background: radial-gradient(red, yellow, green);<br>
-						}<br>
-						<br>
-						.radial-gradient .third {<br>
-						&nbsp;&nbsp;background: radial-gradient(blue 5%, cyan 30%, magenta 60%);<br>
-						}<br>
-						<br>
-						.radial-gradient .fourth {<br>
-						&nbsp;&nbsp;background: radial-gradient(blue 15%, cyan 30%, magenta 60%);<br>
-						}<br>
-						<br>
-						.radial-gradient .fifth {<br>
-						&nbsp;&nbsp;background: radial-gradient(blue 5%, cyan 40%, magenta 60%);<br>
-						}<br>
-						<br>
-						.radial-gradient .sixth {<br>
-						&nbsp;&nbsp;background: radial-gradient(blue 5%, cyan 30%, magenta 70%);<br>
-						}<br>
-						<br>
-						.radial-gradient .seventh {<br>
-						&nbsp;&nbsp;background: radial-gradient(circle closest-side at 30% 40%, black 5%, yellow 30%, red 70%);<br>
-						}<br>
-						<br>
-						.radial-gradient .eighth {<br>
-						&nbsp;&nbsp;background: radial-gradient(circle closest-corner at 30% 40%, black 5%, yellow 30%, red 70%);<br>
-						}<br>
-						<br>
-						.radial-gradient .ninth {<br>
-						&nbsp;&nbsp;background: radial-gradient(circle farthest-side at 30% 40%, black 5%, yellow 30%, red 70%);<br>
-						}<br>
-						<br>
-						.radial-gradient .tenth {<br>
-						&nbsp;&nbsp;background: radial-gradient(circle farthest-corner at 30% 40%, black 5%, yellow 30%, red 70%);<br>
-						}<br>
-						<br>
-						.radial-gradient .eleventh {<br>
-						&nbsp;&nbsp;background: radial-gradient(circle at top left, blue, greenyellow, tomato);<br>
-						}<br>
-						<br>
-						.radial-gradient .twelfth {<br>
-						&nbsp;&nbsp;background: radial-gradient(circle at 50% 0%, blue, greenyellow, tomato);<br>
-						}
-					</code>
-	        <h4>Result</h4>
-	        <div class="radial-gradient">
-	          <div class="first">
-	            1. Evenly spaced color stops, <i>shape:</i> circle
-	          </div>
-	          <div class="second">
-	            2. Evenly spaced color stops, <i>shape:</i> ellipse
-	          </div>
-	          <div class="third">
-	            3. Differently spaced color stops (baseline)
-	          </div>
-	          <div class="fourth">
-	            4. Differently spaced color stops
-	          </div>
-	          <div class="fifth">
-	            5. Differently spaced color stops
-	          </div>
-	          <div class="sixth">
-	            6. Differently spaced color stops
-	          </div>
-	          <div class="seventh">
-	            7. <i>size:</i> closest-side
-	          </div>
-	          <div class="eighth">
-	            8. <i>size:</i> closest-corner
-	          </div>
-	          <div class="ninth"> 
-	            9. <i>size:</i> farthest-side
-	          </div>
-	          <div class="tenth">
-	            10. <i>size:</i> farthest-corner
-	          </div>
-	          <div class="eleventh">
-	            11. <i>position:</i> top left
-	          </div>
-	          <div class="twelfth">
-	            12. <i>position:</i> 50% 0%
-	          </div>
-	        </div>
-      	</section>
+							</li>
+						</ol>
+					</section>
+					<section>
+		        <h2 id="seven">Gradients</h2>
+		        <h4>Description</h4>
+		        <p>
+		        	Gradients let us create smooth transitions between two or more 
+		        	specified colors. There are two types of gradients: linear gradients 
+		        	and radial gradients.
+		        </p>
+		        <h4>Linear gradients</h4>
+		        <p>A linear gradient is a straight/linear progression.</p>
+		        <h4>CSS</h4>
+		        <code>
+		          background: linear-gradient(<i>direction, color-stop1, ..., 
+		          color-stopN</i>);
+		        </code>
+		        <p>where:</p>
+		        <ul>
+		        	<li>
+		        	  <i>direction</i> describes the direction of the gradient and can be 
+		            specified by a <i>side-or-corner</i> or an <i>angle</i>.
+		        	</li>
+		        	<li>
+		        	  <i>color-stop</i> is a point along the gradient line that has a 
+		            specific color at that location. A color-stop value is comprised of 
+		            a <i>color</i> value, followed by an optional <i>stop position</i>.
+		        	</li>
+		        </ul>
+		       	<p>where:</p>
+		       	<ul>
+		        	<li>
+		            <i>side-or-corner</i> is optional and equals to:
+		        		<ul>
+		        			<li><b>to right</b> (gradients runs from left to right)</li>
+		        			<li><b>to left</b> (gradients runs from right to left)</li>
+		        			<li><b>to top</b> (gradients runs from bottom to top)</li>
+		        			<li><b>to bottom</b> (gradients runs from top to bottom)</li>
+		        			<li><b>to top left</b> (gradient runs diagonally)</li>
+		        			<li><b>to top right</b> (gradient runs diagonally)</li>
+		        			<li><b>to bottom left</b> (gradient runs diagonally)</li>
+		        			<li><b>to bottom right</b> (gradient runs diagonally)</li>
+		        		</ul>
+		            <div class="note">
+		              <b>Note:</b> The order is not relevant(e.g. to top left = to left top)
+		            </div>
+		          </li>
+		        	<li>
+		        	  <i>angle</i> is optional and  is specified as an angle between a 
+		            vertical line and the gradient line. Some examples are:
+		        		<ul>
+		        			<li><b>90deg</b> (similar to: to right)</li>
+		        			<li><b>-90deg</b> (similar to: to left)</li>
+		        			<li><b>0</b> (similar to: to top)</li>
+		        			<li><b>180deg</b> (similar to: to bottom)</li>
+		        		</ul>
+		        	</li>
+		        	<li>
+		            <i>color</i> can be specified in any of the following ways:
+		        		<ul>
+		        			<li><b><i>#RRGGBB</i></b></li>
+		        			<li><b><i>#RGB</i></b></li>
+		        			<li><b><i>#RRGGBBaa</i></b></li>
+		        			<li><b><i>#RGBa</i></b></li>
+		        			<li><b>rgb(<i>r,g,b</i>)</b></li>
+		        			<li><b>rgb(<i>pctr,pctg,pctb</i>)</b></li>
+		        			<li><b>rgba(<i>r,g,b,a</i>)</b></li>
+		        			<li><b>hsl(<i>hue,saturation,lightness</i>)</b></li>
+		        			<li><b>hsla(<i>hue,saturation,lightness,a</i>)</b></li>
+		        		</ul>
+		        	</li>
+		        	<li>
+		            <i>stop position</i> is optional and can be specified as either a 
+		            percentage, or as a length. For example, the starting point is 
+		            represented with 0% (or a length of 0) and the ending point with 
+		            100%.
+		        	</li> 
+		        </ul>
+		        <h4>Example</h4>
+		        <h4>HTML</h4>
+		        <code>
+		          &lt;div class="linear-gradient"><br>
+		          &nbsp;&nbsp;&lt;div class="first"><br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;1. Gradient runs from left to right 
+		          (stop positions: darkblue-0%,darkmagenta-100%)<br>
+		          &nbsp;&nbsp;&lt;/div><br>
+		          &nbsp;&nbsp;&lt;div class="second"><br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;2. Gradient runs from bottom to top 
+		          (stop positions: palegreen-0%, crimson-100%)<br>
+		          &nbsp;&nbsp;&lt;/div><br>
+		          &nbsp;&nbsp;&lt;div class="third"><br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;3. Gradient runs diagonally 
+		          (stop positions: orangered-0%, slateblue-100%)<br>
+		          &nbsp;&nbsp;&lt;/div><br>
+		          &nbsp;&nbsp;&lt;div class="fourth"><br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;4. Gradient runs from top to bottom 
+		          (stop positions: lightcoral-0%, cyan-100%)<br>
+		          &nbsp;&nbsp;&lt;/div><br>
+		          &nbsp;&nbsp;&lt;div class="fifth"><br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;5. Three color stops (stop positions: 
+		          lightseagreen-0%, black-80%, mediumorchid-100%)<br>
+		          &nbsp;&nbsp;&lt;/div><br>
+		          &nbsp;&nbsp;&lt;div class="sixth"><br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;6. Evenly spaced color stops<br>
+		          &nbsp;&nbsp;&lt;/div><br>
+		          &nbsp;&nbsp;&lt;div class="seventh"><br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;7. Using transparency 
+		          (stop positions: black-0%, transparent-100%)<br>
+		          &nbsp;&nbsp;&lt;/div><br>
+		          &nbsp;&nbsp;&lt;div class="eighth"><br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;8. Using transparency 
+		          (stop positions: 0%_transparent_image-0%, 
+		          full_transparent_image-100%)<br>
+		          &nbsp;&nbsp;&lt;/div><br>
+		          &lt;/div>
+		        </code>
+		        <h4>CSS</h4>
+		        <code>
+		          .linear-gradient {<br>
+		          &nbsp;&nbsp;color: white;<br>
+		          &nbsp;&nbsp;font-size: 15px;<br>
+		          &nbsp;&nbsp;font-weight: 100;<br>
+		          &nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+		          }<br>
+		          <br>
+		          .note {<br>
+		          &nbsp;&nbsp;color: #8c8c90;<br>
+		          }<br>
+		          <br>
+		          .linear-gradient .first, .linear-gradient .second, .linear-gradient 
+		          .third,<br>
+		          .linear-gradient .fourth,.linear-gradient .fifth, .linear-gradient 
+		          .sixth,<br>
+		          .linear-gradient .seventh, .linear-gradient .eighth {<br>
+		          &nbsp;&nbsp;border: 1px solid black;<br>
+		          &nbsp;&nbsp;padding: 20px;<br>
+		          &nbsp;&nbsp;margin-bottom: 10px;<br>
+		          }<br>
+		          <br>
+		          .linear-gradient .first {<br>
+		          &nbsp;&nbsp;background: linear-gradient(to right, darkblue, 
+		          darkmagenta);<br>
+		          }<br>
+		          <br>
+		          .linear-gradient .second {<br>
+		          &nbsp;&nbsp;background: linear-gradient(to top, palegreen, 
+		          crimson);<br>
+		          }<br>
+		          <br>
+		          .linear-gradient .third {<br>
+		          &nbsp;&nbsp;background: linear-gradient(to bottom left, orangered, 
+		          slateblue);<br>
+		          }<br>
+		          <br>
+		          .linear-gradient .fourth {<br>
+		          &nbsp;&nbsp;background: linear-gradient(180deg, lightcoral, cyan);<br>
+		          }<br>
+		          <br>
+		          .linear-gradient .fifth {<br>
+		          &nbsp;&nbsp;background: linear-gradient(to left, lightseagreen, 
+		          black 80%, mediumorchid);<br>
+		          }<br>
+		          <br>
+		          .linear-gradient .sixth {<br>
+		          &nbsp;&nbsp;background: linear-gradient(to left, red, orange, yellow, 
+		          green, blue, indigo, violet);<br>
+		          }<br>
+		          <br>
+		          .linear-gradient .seventh {<br>
+		          &nbsp;&nbsp;background: linear-gradient(to right, black, 
+		          transparent);<br>
+		          }<br>
+		          <br>
+		          .linear-gradient .eighth {<br>
+		          &nbsp;&nbsp;background:<br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)),<br>
+		          &nbsp;&nbsp;&nbsp;&nbsp;url("images/wallpaper.jpg") top left/cover no-repeat;<br>
+		          }
+		        </code>
+		        <h4>Result</h4>
+		        <div class="linear-gradient">
+		          <div class="first">
+		            1. Gradient runs from left to right (stop positions: darkblue-0%, 
+		            darkmagenta-100%)
+		          </div>
+		          <div class="second">
+		            2. Gradient runs from bottom to top (stop positions: palegreen-0%, 
+		            crimson-100%)
+		          </div>
+		          <div class="third">
+		            3. Gradient runs diagonally (stop positions: orangered-0%, 
+		            slateblue-100%)
+		          </div>
+		          <div class="fourth">
+		            4. Gradient runs from top to bottom (stop positions: lightcoral-0%, 
+		            cyan-100%)
+		          </div>
+		          <div class="fifth">
+		            5. Three color stops (stop positions: lightseagreen-0%, black-80%, 
+		            mediumorchid-100%)
+		          </div>
+		          <div class="sixth">
+		            6. Evenly spaced color stops
+		          </div>
+		          <div class="seventh">
+		            7. Using transparency (stop positions: black-0%, transparent-100%)
+		          </div>
+		          <div class="eighth">
+		            8. Using transparency (stop positions: 0%_transparent_image-0%, 
+		            full_transparent_image-100%)
+		          </div>
+		          <div class="note">
+		            <b>Note:</b> The <i>transparent</i> keyword represents a fully 
+		            transparent color and is a shortcut for rgba(0,0,0,0).
+		          </div>
+		        </div>
+		        <h4>Radial gradients</h4>
+		        <p>
+		          A radial gradient is a circular or elliptic progression. This type of 
+		          gradient, creates a gradient that extends from an origin 
+		          (i.e.the center of the element), extending outward in a circular or 
+		          elliptical pattern.
+		        </p>
+		        <h4>CSS</h4>
+		        <code>
+		          background: radial-gradient(<i>&lt;shape&gt; &lt;size&gt;</i> &lt;at <i>position&gt;, color-stop1, 
+		          ..., color-stopN</i>);
+		        </code>
+		        <p>where:</p>
+		        <ul>
+		          <li>
+		            <i>shape</i> is optional, defines the shape of the gradient, and 
+		            equals to:
+		            <ul>
+		              <li><b>circle</b></li>
+		              <li><b>ellipse</b> (default)</li>
+		            </ul>
+		          </li>
+		          <li>
+		            <i>size</i> is optional, defines the size of the ending shape, and 
+		            equals to:
+		            <ul>
+		              <li><b>closest-side</b></li>
+		              <li><b>farthest-side</b></li>
+		              <li><b>closest-corner</b></li>
+		              <li><b>farthest-corner</b> (default)</li>
+		            </ul>
+		          </li>
+		          <li>
+		            <i>position</i> is optional, defines the position of the gradient, 
+		            and equals to:
+		            <ul>
+		              <li><b>left</b></li>
+		              <li><b>center</b> (default)</li>
+		              <li><b>right</b></li>
+		              <li><b>top</b></li>
+		              <li><b>bottom</b></li>
+		              <li><b>left top</b></li>
+		              <li><b>left center</b></li>
+		              <li><b>left bottom</b></li>
+		              <li><b>center top</b></li>
+		              <li><b>center center</b></li>
+		              <li><b>center bottom</b></li>
+		              <li><b>right top</b></li>
+		              <li><b>right center</b></li>
+		              <li><b>right bottom</b></li>
+		              <li><b>top left</b></li>
+		              <li><b>top center</b></li>
+		              <li><b>top right</b></li>
+		              <li><b>bottom left</b></li>
+		              <li><b>bottom center</b></li>
+		              <li><b>bottom right</b></li>
+		            </ul>
+		            <div class="note">
+		              <b>Note:</b> left, center, right, top, and bottom are identical to 
+		              left center, center center, right center, top center, and bottom 
+		              center respectively.
+		            </div>
+		          </li>
+		          <li>
+		            <i>color-stop</i> is a point along the gradient line that has a 
+		            specific color at that location. A color-stop value is comprised of 
+		            a <i>color</i> value, followed by an optional <i>stop position</i>
+		          </li>
+		        </ul>
+		        <p>where:</p>
+		        <ul>
+		          <li>
+		            <i>color</i> can be specified in any of the following ways:
+		            <ul>
+		              <li><b><i>#RRGGBB</i></b></li>
+		              <li><b><i>#RGB</i></b></li>
+		              <li><b><i>#RRGGBBaa</i></b></li>
+		              <li><b><i>#RGBa</i></b></li>
+		              <li><b>rgb(<i>r,g,b</i>)</b></li>
+		              <li><b>rgb(<i>pctr,pctg,pctb</i>)</b></li>
+		              <li><b>rgba(<i>r,g,b,a</i>)</b></li>
+		              <li><b>hsl(<i>hue,saturation,lightness</i>)</b></li>
+		              <li><b>hsla(<i>hue,saturation,lightness,a</i>)</b></li>
+		            </ul>
+		          </li>
+		          <li>
+		            <i>stop position</i> is optional and can be specified as either a 
+		            percentage, or as a length. For example, the center of the gradient
+		            is represented with 0% (or a length of 0).
+		          </li> 
+		        </ul>
+		        <h4>Example</h4>
+		        <h4>HTML</h4>
+		        <code>
+			        &lt;div class="radial-gradient"><br>
+			        &nbsp;&nbsp;&lt;div class="first"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;1. Evenly spaced color stops, &lt;i>shape:&lt;/i> circle<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="second"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;2. Evenly spaced color stops, &lt;i>shape:&lt;/i> ellipse<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="third"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;3. Differently spaced color stops (baseline)<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="fourth"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;4. Differently spaced color stops<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="fifth"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;5. Differently spaced color stops<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="sixth"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;6. Differently spaced color stops<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="seventh"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;7. &lt;i>size:&lt;/i> closest-side<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="eighth"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;8. &lt;i>size:&lt;/i> closest-corner<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="ninth"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;9. &lt;i>size:&lt;/i> farthest-side<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="tenth"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;10. &lt;i>size:&lt;/i> farthest-corner<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="eleventh"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;11. &lt;i>position:&lt;/i> top left<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &nbsp;&nbsp;&lt;div class="twelfth"><br>
+			        &nbsp;&nbsp;&nbsp;&nbsp;12. &lt;i>position:&lt;/i> 50% 0%<br>
+			        &nbsp;&nbsp;&lt;/div><br>
+			        &lt;/div>
+			      </code>
+			      <h4>CSS</h4>
+			      <code>
+				      .radial-gradient {<br>
+							&nbsp;&nbsp;color: black;<br>
+							&nbsp;&nbsp;font-size: 15px;<br>
+							&nbsp;&nbsp;font-weight: 100;<br>
+							&nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+							}<br>
+							<br>
+							.radial-gradient .first, .radial-gradient .second, .radial-gradient .third,<br>
+							.radial-gradient .fourth, .radial-gradient .fifth, .radial-gradient .sixth,<br> 
+							.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth,<br> 
+							.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {<br>
+							&nbsp;&nbsp;border: 1px solid black;<br>
+							&nbsp;&nbsp;height: 200px;<br>
+							&nbsp;&nbsp;padding: 20px;<br>
+							&nbsp;&nbsp;margin-bottom: 10px;<br>
+							}<br>
+							<br>
+							.radial-gradient .seventh, .radial-gradient .eighth, .radial-gradient .ninth,<br> 
+							.radial-gradient .tenth, .radial-gradient .eleventh, .radial-gradient .twelfth {<br>
+							&nbsp;&nbsp;border: 1px solid black;<br>
+							&nbsp;&nbsp;width: 200px;<br>
+							}<br>
+							<br>
+							.radial-gradient .first {<br>
+							&nbsp;&nbsp;background: radial-gradient(circle, red, yellow, green);<br>
+							}<br>
+							<br>
+							.radial-gradient .second {<br>
+							&nbsp;&nbsp;background: radial-gradient(red, yellow, green);<br>
+							}<br>
+							<br>
+							.radial-gradient .third {<br>
+							&nbsp;&nbsp;background: radial-gradient(blue 5%, cyan 30%, magenta 60%);<br>
+							}<br>
+							<br>
+							.radial-gradient .fourth {<br>
+							&nbsp;&nbsp;background: radial-gradient(blue 15%, cyan 30%, magenta 60%);<br>
+							}<br>
+							<br>
+							.radial-gradient .fifth {<br>
+							&nbsp;&nbsp;background: radial-gradient(blue 5%, cyan 40%, magenta 60%);<br>
+							}<br>
+							<br>
+							.radial-gradient .sixth {<br>
+							&nbsp;&nbsp;background: radial-gradient(blue 5%, cyan 30%, magenta 70%);<br>
+							}<br>
+							<br>
+							.radial-gradient .seventh {<br>
+							&nbsp;&nbsp;background: radial-gradient(circle closest-side at 30% 40%, black 5%, yellow 30%, red 70%);<br>
+							}<br>
+							<br>
+							.radial-gradient .eighth {<br>
+							&nbsp;&nbsp;background: radial-gradient(circle closest-corner at 30% 40%, black 5%, yellow 30%, red 70%);<br>
+							}<br>
+							<br>
+							.radial-gradient .ninth {<br>
+							&nbsp;&nbsp;background: radial-gradient(circle farthest-side at 30% 40%, black 5%, yellow 30%, red 70%);<br>
+							}<br>
+							<br>
+							.radial-gradient .tenth {<br>
+							&nbsp;&nbsp;background: radial-gradient(circle farthest-corner at 30% 40%, black 5%, yellow 30%, red 70%);<br>
+							}<br>
+							<br>
+							.radial-gradient .eleventh {<br>
+							&nbsp;&nbsp;background: radial-gradient(circle at top left, blue, greenyellow, tomato);<br>
+							}<br>
+							<br>
+							.radial-gradient .twelfth {<br>
+							&nbsp;&nbsp;background: radial-gradient(circle at 50% 0%, blue, greenyellow, tomato);<br>
+							}
+						</code>
+		        <h4>Result</h4>
+		        <div class="radial-gradient">
+		          <div class="first">
+		            1. Evenly spaced color stops, <i>shape:</i> circle
+		          </div>
+		          <div class="second">
+		            2. Evenly spaced color stops, <i>shape:</i> ellipse
+		          </div>
+		          <div class="third">
+		            3. Differently spaced color stops (baseline)
+		          </div>
+		          <div class="fourth">
+		            4. Differently spaced color stops
+		          </div>
+		          <div class="fifth">
+		            5. Differently spaced color stops
+		          </div>
+		          <div class="sixth">
+		            6. Differently spaced color stops
+		          </div>
+		          <div class="seventh">
+		            7. <i>size:</i> closest-side
+		          </div>
+		          <div class="eighth">
+		            8. <i>size:</i> closest-corner
+		          </div>
+		          <div class="ninth"> 
+		            9. <i>size:</i> farthest-side
+		          </div>
+		          <div class="tenth">
+		            10. <i>size:</i> farthest-corner
+		          </div>
+		          <div class="eleventh">
+		            11. <i>position:</i> top left
+		          </div>
+		          <div class="twelfth">
+		            12. <i>position:</i> 50% 0%
+		          </div>
+		        </div>
+	      	</section>
+	      </div>
     	</article>
 		</main>
 		<footer>

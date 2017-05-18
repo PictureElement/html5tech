@@ -91,298 +91,300 @@
       <article>
       	<!-- Dynamic table of contents is injected here -->
 				<div class="all-topics"></div>
-        <header>
-          <h1>Clean Code</h1>
-          <div class="byline-wrapper">
-            <img src="images/avatar.png" alt="avatar" width="40">
-            <a href="mailto:pictureelement@yandex.com">PictureElement</a>
-            <br>
-            <time datetime="2017-04-27">Apr 27, 2017</time>
-          </div>
-        </header>
-        <section>
-          <h2 id="one">Staying DRY</h2>
-          <h3>Description</h3>
-          <p><b>DRY</b> stands for <i>Don't Repeat Yourself</i></p>
-          <h3>Examples</h3>
-          <ol>
-          	<li>
-          		<p>Elements that fall within the same parent container</p>
-          		<ul>
-          			<li>
-          				<p>A clumsy solution:</p>
-				          <h4>HTML</h4>
-				          <code>
-				          	&lt;section><br>
-				          	&nbsp;&nbsp;&lt;h1><i>Heading</i>&lt;/h1><br>
-				          	&nbsp;&nbsp;&lt;p><i>Paragraph</i>&lt;/p><br>
-				          	&nbsp;&nbsp;&lt;a><i>Link</i>&lt;/a><br>
-				          	&lt;/section>
-				          </code>
-					       	<h4>CSS</h4>
-				          <code>
-				            h1 {<br>
-				            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
-				            }<br>
-				            <br>
-				            p {<br>
-				            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
-				            }<br>
-				            <br>
-				            <i>a</i> {<br>
-				            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
-				            }
-				          </code>
-				        </li>
-				        <li>
-		       				<p>
-				          	A clean solution - Every element inherits the style from the 
-				          	container:
-				          </p>
-				          <h4>HTML</h4>
-				          <code>
-				          	&lt;section><br>
-				          	&nbsp;&nbsp;&lt;div class="container"><br>
-				          	&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1><i>Heading</i>&lt;/h1><br>
-				          	&nbsp;&nbsp;&nbsp;&nbsp;&lt;p><i>Paragraph</i>&lt;/p><br>
-				          	&nbsp;&nbsp;&nbsp;&nbsp;&lt;a><i>Link</i>&lt;/a><br>
-				          	&nbsp;&nbsp;&lt;/div><br>
-				          	&lt;/section>
-				          </code>
-				          <h4>CSS</h4>
-				          <code>
-				            .container {<br>
-				            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
-				            }
-				          </code>
-				        </li>
-				      </ul>
-				    </li>
-				    <li>
-				    	<p>Elements that do not fall within the same parent container</p>
-		          <h4>HTML</h4>
-		          <code>
-		          	&lt;header><br>
-								&nbsp;&nbsp;&lt;h1>Header&lt;/h1><br>
-		         		&lt;section><br>
-		         		&nbsp;&nbsp;&lt;p>Paragraph&lt;/p><br>
-		         		&lt;/section><br>
-		         		&lt;aside><br>
-		         		&nbsp;&nbsp;&lt;a>Link&lt;/a><br>
-		         		&lt;/aside>
-		          </code>
-		          <ul>
-								<li>          
-				          <p>A clumsy solution:</p>
-				          <h4>CSS</h4>
-				          <code>
-				            h1 {<br>
-				            &nbsp;&nbsp;font-size: 15px;<br>
-				            }<br>
-				            <br>
-				            p {<br>
-				           	&nbsp;&nbsp;font-size: 15px;<br>
-				            }<br>
-				            <br>
-				            <i>a</i> {<br>
-				            &nbsp;&nbsp;font-size: 15px;<br>
-				            }
-				          </code>
-				        </li>
-				        <li>
-		       				<p>
-				          	A clean solution - Use of multiple selectors:
-				          </p>
-				          <h4>CSS</h4>
-				          <code>
-				          	h1, p, a {<br>
-				          	&nbsp;&nbsp;font-size: 15px;<br>
-				          	}
-				          </code>
-				        </li>
-				      </ul>
-				    </li>
-				    <li>
-				    	<p>Selector abstraction 1</p>
-				    	<ul>
-				    		<li>
-				    			<p>A clumsy solution:</p>
-				          <h4>HTML</h4>
-				          <code>
-				         		&lt;header><br>
-				         		&nbsp;&nbsp;...<br>
-				         		&lt;/header><br>
-				         		&lt;footer><br>
-				         		&nbsp;&nbsp;...<br>
-				         		&lt;/footer>
-				         	</code>
-		              <h4>CSS</h4>
-				          <code>
-				          	header {<br>
-										&nbsp;&nbsp;background: black;<br>
-										&nbsp;&nbsp;...<br>
-										&nbsp;&nbsp;color: white;<br>
-				          	}<br>
-										<br>
-				          	footer {<br>
-				          	&nbsp;&nbsp;background: black;<br>
-				          	&nbsp;&nbsp;...<br>
-										&nbsp;&nbsp;color: white;<br>
-				          	}
-				          </code>
-				        </li>
-				        <li>
-				        	<p>A clean solution:</p>
-				          <h4>HTML</h4>
-				          <code>
-				         		&lt;header><br>
-				         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
-				         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				         		&nbsp;&nbsp;&lt;/div><br>
-				         		&lt;/header><br>
-				         		<br>
-				         		&lt;footer><br>
-				         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
-				         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				         		&nbsp;&nbsp;&lt;/div><br>
-				         		&lt;/footer>
-				         	</code>
-				        	<h4>CSS</h4>
-				        	<code>
-				        		.dark-bg {<br>
-				        		&nbsp;&nbsp;background: black;<br>
-				        		&nbsp;&nbsp;...<br>
-										&nbsp;&nbsp;color: white;<br>
-										}
-									</code>
-								</li>
-							</ul>
-							<p>
-								What if we want the footer to inherit the same properties
-								(.dark-bg class) as the header except the background color? 
-							</p>
-							<ul>
-								<li>
-									<p>A clumsy solution:</p>
-									<h4>HTML</h4>
-				          <code>
-				         		&lt;header><br>
-				         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
-				         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				         		&nbsp;&nbsp;&lt;/div><br>
-				         		&lt;/header><br>
-				         		<br>
-				         		&lt;footer><br>
-				         		&nbsp;&nbsp;&lt;div class="white-bg"><br>
-				         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				         		&nbsp;&nbsp;&lt;/div><br>
-				         		&lt;/footer>
-				         	</code>
-				         	<h4>CSS</h4>
-				         	<code>
-				        		.dark-bg {<br>
-				        		&nbsp;&nbsp;background: black;<br>
-				        		&nbsp;&nbsp;...<br>
-										&nbsp;&nbsp;color: white;<br>
-										}<br>
-										.white-bg {<br>
-				        		&nbsp;&nbsp;background: white;<br>
-				        		&nbsp;&nbsp;...<br>
-										&nbsp;&nbsp;color: white;<br>
-										}
-									</code>
-								</li>
-								<li>
-									<p>
-										A clean solution: The footer element will be pulling its 
-										styles from both the <i>dark-bg</i> class and the 
-										<i>white-bg</i> subclass. It's important to note that 
-										<b>order matters</b> here (cascade order) in order for the 
-										<i>white-bg</i> class to be able to overwrite the background 
-										color of the <i>dark-bg</i> class.	
-									</p>
-									<h4>HTML</h4>
-				          <code>
-				         		&lt;header><br>
-				         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
-				         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				         		&nbsp;&nbsp;&lt;/div><br>
-				         		&lt;/header><br>
-				         		<br>
-				         		&lt;footer><br>
-				         		&nbsp;&nbsp;&lt;div class="dark-bg white-bg"><br>
-				         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				         		&nbsp;&nbsp;&lt;/div><br>
-				         		&lt;/footer>
-				         	</code>
-				         	<h4>CSS</h4>
-				         	<code>
-				        		.dark-bg {<br>
-				        		&nbsp;&nbsp;background: black;<br>
-				        		&nbsp;&nbsp;...<br>
-										&nbsp;&nbsp;color: white;<br>
-										}<br>
-										.white-bg {<br>
-				        		&nbsp;&nbsp;background: white;<br>
-										}
-									</code>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<p>Use of shorthand properties</p>
-				    	<ul>
-				    		<li>
-				    			<p>A clumsy solution:</p>
-				          <h4>CSS</h4>
-				          <code>
-				          	<i>.my-class</i> {<br>
-				          	&nbsp;&nbsp;margin-top: 10px;<br>
-				          	&nbsp;&nbsp;margin-right: 20px;<br>
-				          	&nbsp;&nbsp;margin-bottom: 10px;<br>
-				          	&nbsp;&nbsp;margin-left: 20px;<br>
-				          	}
-				          </code>
-				       	</li>
-				       	<li>
-				    			<p>A clean solution:</p>
-				          <h4>CSS</h4>
-				          <code>
-				          	<i>.my-class</i> {<br>
-				          	&nbsp;&nbsp;margin: 10px 20px 10px 20px;
-				          </code>
-				        </li>
-				      </ul>
-				      <p>Property shorthands:</p>
-					   	<ul>
-					    	<li>
-						    	<span style="color: blue">font: <i>size/line-height weight style font-family;</i></span><br>
-						      font: 15px/20px bold italic arial;
-					      </li>
-					      <li>
-					      	<span style="color: blue">background: <i>color image repeat x-pos y-pos;</i></span><br>
-					      	background: black url(img.png) no-repeat center top;
-					      </li>
-					      <li>
-					      	<span style="color: blue">list-style: <i>bullet-style position image;</i></span><br>
-					      	list-style: disc inside none;
-					      </li>
-					      <li>
-					      	<span style="color: blue">margin/padding: <i>top right bottom left;</i></span><br>
-					      	margin/padding: 10px 20px 0 15px;<br>
-					      	<span style="color: blue">margin/padding: <i>top&bottom right&amp;left;</i></span><br>
-					      	margin/padding: 10px 20px;<br>
-					      	<span style="color: blue">margin/padding: <i>top right&amp;left bottom;</i></span><br>
-					      	margin/padding: 10px 20px 10px;
-					      </li>
-					      <li>
-					      	<span style="color: blue">border: <i>width line-style color;</i></span><br>
-					      	border: 1px solid black;
-					      </li>
-							</ul>
-				    </li>
-				  </ol>
-				</section>
+				<div class="wrapper">
+	        <header>
+	          <h1>Clean Code</h1>
+	          <div class="byline-wrapper">
+	            <img src="images/avatar.png" alt="avatar" width="40">
+	            <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+	            <br>
+	            <time datetime="2017-04-27">Apr 27, 2017</time>
+	          </div>
+	        </header>
+	        <section>
+	          <h2 id="one">Staying DRY</h2>
+	          <h3>Description</h3>
+	          <p><b>DRY</b> stands for <i>Don't Repeat Yourself</i></p>
+	          <h3>Examples</h3>
+	          <ol>
+	          	<li>
+	          		<p>Elements that fall within the same parent container</p>
+	          		<ul>
+	          			<li>
+	          				<p>A clumsy solution:</p>
+					          <h4>HTML</h4>
+					          <code>
+					          	&lt;section><br>
+					          	&nbsp;&nbsp;&lt;h1><i>Heading</i>&lt;/h1><br>
+					          	&nbsp;&nbsp;&lt;p><i>Paragraph</i>&lt;/p><br>
+					          	&nbsp;&nbsp;&lt;a><i>Link</i>&lt;/a><br>
+					          	&lt;/section>
+					          </code>
+						       	<h4>CSS</h4>
+					          <code>
+					            h1 {<br>
+					            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
+					            }<br>
+					            <br>
+					            p {<br>
+					            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
+					            }<br>
+					            <br>
+					            <i>a</i> {<br>
+					            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
+					            }
+					          </code>
+					        </li>
+					        <li>
+			       				<p>
+					          	A clean solution - Every element inherits the style from the 
+					          	container:
+					          </p>
+					          <h4>HTML</h4>
+					          <code>
+					          	&lt;section><br>
+					          	&nbsp;&nbsp;&lt;div class="container"><br>
+					          	&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1><i>Heading</i>&lt;/h1><br>
+					          	&nbsp;&nbsp;&nbsp;&nbsp;&lt;p><i>Paragraph</i>&lt;/p><br>
+					          	&nbsp;&nbsp;&nbsp;&nbsp;&lt;a><i>Link</i>&lt;/a><br>
+					          	&nbsp;&nbsp;&lt;/div><br>
+					          	&lt;/section>
+					          </code>
+					          <h4>CSS</h4>
+					          <code>
+					            .container {<br>
+					            &nbsp;&nbsp;font-family: Arial, Helvetica;<br>
+					            }
+					          </code>
+					        </li>
+					      </ul>
+					    </li>
+					    <li>
+					    	<p>Elements that do not fall within the same parent container</p>
+			          <h4>HTML</h4>
+			          <code>
+			          	&lt;header><br>
+									&nbsp;&nbsp;&lt;h1>Header&lt;/h1><br>
+			         		&lt;section><br>
+			         		&nbsp;&nbsp;&lt;p>Paragraph&lt;/p><br>
+			         		&lt;/section><br>
+			         		&lt;aside><br>
+			         		&nbsp;&nbsp;&lt;a>Link&lt;/a><br>
+			         		&lt;/aside>
+			          </code>
+			          <ul>
+									<li>          
+					          <p>A clumsy solution:</p>
+					          <h4>CSS</h4>
+					          <code>
+					            h1 {<br>
+					            &nbsp;&nbsp;font-size: 15px;<br>
+					            }<br>
+					            <br>
+					            p {<br>
+					           	&nbsp;&nbsp;font-size: 15px;<br>
+					            }<br>
+					            <br>
+					            <i>a</i> {<br>
+					            &nbsp;&nbsp;font-size: 15px;<br>
+					            }
+					          </code>
+					        </li>
+					        <li>
+			       				<p>
+					          	A clean solution - Use of multiple selectors:
+					          </p>
+					          <h4>CSS</h4>
+					          <code>
+					          	h1, p, a {<br>
+					          	&nbsp;&nbsp;font-size: 15px;<br>
+					          	}
+					          </code>
+					        </li>
+					      </ul>
+					    </li>
+					    <li>
+					    	<p>Selector abstraction 1</p>
+					    	<ul>
+					    		<li>
+					    			<p>A clumsy solution:</p>
+					          <h4>HTML</h4>
+					          <code>
+					         		&lt;header><br>
+					         		&nbsp;&nbsp;...<br>
+					         		&lt;/header><br>
+					         		&lt;footer><br>
+					         		&nbsp;&nbsp;...<br>
+					         		&lt;/footer>
+					         	</code>
+			              <h4>CSS</h4>
+					          <code>
+					          	header {<br>
+											&nbsp;&nbsp;background: black;<br>
+											&nbsp;&nbsp;...<br>
+											&nbsp;&nbsp;color: white;<br>
+					          	}<br>
+											<br>
+					          	footer {<br>
+					          	&nbsp;&nbsp;background: black;<br>
+					          	&nbsp;&nbsp;...<br>
+											&nbsp;&nbsp;color: white;<br>
+					          	}
+					          </code>
+					        </li>
+					        <li>
+					        	<p>A clean solution:</p>
+					          <h4>HTML</h4>
+					          <code>
+					         		&lt;header><br>
+					         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
+					         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					         		&nbsp;&nbsp;&lt;/div><br>
+					         		&lt;/header><br>
+					         		<br>
+					         		&lt;footer><br>
+					         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
+					         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					         		&nbsp;&nbsp;&lt;/div><br>
+					         		&lt;/footer>
+					         	</code>
+					        	<h4>CSS</h4>
+					        	<code>
+					        		.dark-bg {<br>
+					        		&nbsp;&nbsp;background: black;<br>
+					        		&nbsp;&nbsp;...<br>
+											&nbsp;&nbsp;color: white;<br>
+											}
+										</code>
+									</li>
+								</ul>
+								<p>
+									What if we want the footer to inherit the same properties
+									(.dark-bg class) as the header except the background color? 
+								</p>
+								<ul>
+									<li>
+										<p>A clumsy solution:</p>
+										<h4>HTML</h4>
+					          <code>
+					         		&lt;header><br>
+					         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
+					         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					         		&nbsp;&nbsp;&lt;/div><br>
+					         		&lt;/header><br>
+					         		<br>
+					         		&lt;footer><br>
+					         		&nbsp;&nbsp;&lt;div class="white-bg"><br>
+					         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					         		&nbsp;&nbsp;&lt;/div><br>
+					         		&lt;/footer>
+					         	</code>
+					         	<h4>CSS</h4>
+					         	<code>
+					        		.dark-bg {<br>
+					        		&nbsp;&nbsp;background: black;<br>
+					        		&nbsp;&nbsp;...<br>
+											&nbsp;&nbsp;color: white;<br>
+											}<br>
+											.white-bg {<br>
+					        		&nbsp;&nbsp;background: white;<br>
+					        		&nbsp;&nbsp;...<br>
+											&nbsp;&nbsp;color: white;<br>
+											}
+										</code>
+									</li>
+									<li>
+										<p>
+											A clean solution: The footer element will be pulling its 
+											styles from both the <i>dark-bg</i> class and the 
+											<i>white-bg</i> subclass. It's important to note that 
+											<b>order matters</b> here (cascade order) in order for the 
+											<i>white-bg</i> class to be able to overwrite the background 
+											color of the <i>dark-bg</i> class.	
+										</p>
+										<h4>HTML</h4>
+					          <code>
+					         		&lt;header><br>
+					         		&nbsp;&nbsp;&lt;div class="dark-bg"><br>
+					         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					         		&nbsp;&nbsp;&lt;/div><br>
+					         		&lt;/header><br>
+					         		<br>
+					         		&lt;footer><br>
+					         		&nbsp;&nbsp;&lt;div class="dark-bg white-bg"><br>
+					         		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					         		&nbsp;&nbsp;&lt;/div><br>
+					         		&lt;/footer>
+					         	</code>
+					         	<h4>CSS</h4>
+					         	<code>
+					        		.dark-bg {<br>
+					        		&nbsp;&nbsp;background: black;<br>
+					        		&nbsp;&nbsp;...<br>
+											&nbsp;&nbsp;color: white;<br>
+											}<br>
+											.white-bg {<br>
+					        		&nbsp;&nbsp;background: white;<br>
+											}
+										</code>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p>Use of shorthand properties</p>
+					    	<ul>
+					    		<li>
+					    			<p>A clumsy solution:</p>
+					          <h4>CSS</h4>
+					          <code>
+					          	<i>.my-class</i> {<br>
+					          	&nbsp;&nbsp;margin-top: 10px;<br>
+					          	&nbsp;&nbsp;margin-right: 20px;<br>
+					          	&nbsp;&nbsp;margin-bottom: 10px;<br>
+					          	&nbsp;&nbsp;margin-left: 20px;<br>
+					          	}
+					          </code>
+					       	</li>
+					       	<li>
+					    			<p>A clean solution:</p>
+					          <h4>CSS</h4>
+					          <code>
+					          	<i>.my-class</i> {<br>
+					          	&nbsp;&nbsp;margin: 10px 20px 10px 20px;
+					          </code>
+					        </li>
+					      </ul>
+					      <p>Property shorthands:</p>
+						   	<ul>
+						    	<li>
+							    	<span style="color: blue">font: <i>size/line-height weight style font-family;</i></span><br>
+							      font: 15px/20px bold italic arial;
+						      </li>
+						      <li>
+						      	<span style="color: blue">background: <i>color image repeat x-pos y-pos;</i></span><br>
+						      	background: black url(img.png) no-repeat center top;
+						      </li>
+						      <li>
+						      	<span style="color: blue">list-style: <i>bullet-style position image;</i></span><br>
+						      	list-style: disc inside none;
+						      </li>
+						      <li>
+						      	<span style="color: blue">margin/padding: <i>top right bottom left;</i></span><br>
+						      	margin/padding: 10px 20px 0 15px;<br>
+						      	<span style="color: blue">margin/padding: <i>top&bottom right&amp;left;</i></span><br>
+						      	margin/padding: 10px 20px;<br>
+						      	<span style="color: blue">margin/padding: <i>top right&amp;left bottom;</i></span><br>
+						      	margin/padding: 10px 20px 10px;
+						      </li>
+						      <li>
+						      	<span style="color: blue">border: <i>width line-style color;</i></span><br>
+						      	border: 1px solid black;
+						      </li>
+								</ul>
+					    </li>
+					  </ol>
+					</section>
+				</div>
 			</article>
 		</main>
 		<footer>

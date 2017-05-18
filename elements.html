@@ -91,54 +91,56 @@
 			<article>
 				<!-- Dynamic table of contents is injected here -->
 				<div class="all-topics"></div>
-				<header>
-					<h1>Elements</h1>
-					<div class="byline-wrapper">
-						<img src="images/avatar.png" alt="avatar" width="40">
-						<a href="mailto:pictureelement@yandex.com">PictureElement</a>
-						<br>
-						<time datetime="2017-03-15">Mar 15, 2017</time>
-					</div>
-				</header>
-				<section>
-					<h2 id="one">Division</h2>
-					<h3>Description</h3>
-					<p>
-						The &lt;div&gt; element is a generic block-level container used to 
-						group related content. This element does not inherently represent 
-						anything, in other words it hasn't got any semantic meaning. The 
-						&lt;div&gt; element should be used <em>only</em> when no other 
-						semantic element(e.g. &lt;article&gt;, &lt;section&gt;) is 
-						appropriate. This element is mainly used for styling purposes.
-					</p>
-					<h3>Example</h3>
-					<p>Style the byline(author, date, avatar) of an article:</p>
-					<h4>HTML</h4>
-					<code>
-						&lt;div class="byline-wrapper"&gt;<br>
-						&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="40px"&gt;<br>
-						&nbsp;&nbsp;&lt;p><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="mailto:pictureelement@yandex.com">PictureElement&lt;/a&gt;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&gt;<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&lt;time datetime="2017-02-28">Feb 28, 2017&lt;/time&gt;<br>
-						&nbsp;&nbsp;&lt;/p&gt;<br>
-						&lt;/div&gt;
-					</code>
-					<h4>CSS</h4>
-					<code>
-						.byline-wrapper {<br>
-						&nbsp;&nbsp;<i>declarations;</i><br>
-						}<br>
-						<br>
-						.byline-wrapper img {<br>
-						&nbsp;&nbsp;<i>declarations;</i><br>
-						}<br>
-						<br>
-						.byline-wrapper p {<br>
-						&nbsp;&nbsp;<i>declarations;</i><br>
-						}
-					</code>
-				</section>
+				<div class="wrapper">
+					<header>
+						<h1>Elements</h1>
+						<div class="byline-wrapper">
+							<img src="images/avatar.png" alt="avatar" width="40">
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-03-15">Mar 15, 2017</time>
+						</div>
+					</header>
+					<section>
+						<h2 id="one">Division</h2>
+						<h3>Description</h3>
+						<p>
+							The &lt;div&gt; element is a generic block-level container used to 
+							group related content. This element does not inherently represent 
+							anything, in other words it hasn't got any semantic meaning. The 
+							&lt;div&gt; element should be used <em>only</em> when no other 
+							semantic element(e.g. &lt;article&gt;, &lt;section&gt;) is 
+							appropriate. This element is mainly used for styling purposes.
+						</p>
+						<h3>Example</h3>
+						<p>Style the byline(author, date, avatar) of an article:</p>
+						<h4>HTML</h4>
+						<code>
+							&lt;div class="byline-wrapper"&gt;<br>
+							&nbsp;&nbsp;&lt;img src="images/avatar.png" alt="avatar" width="40px"&gt;<br>
+							&nbsp;&nbsp;&lt;p><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="mailto:pictureelement@yandex.com">PictureElement&lt;/a&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;time datetime="2017-02-28">Feb 28, 2017&lt;/time&gt;<br>
+							&nbsp;&nbsp;&lt;/p&gt;<br>
+							&lt;/div&gt;
+						</code>
+						<h4>CSS</h4>
+						<code>
+							.byline-wrapper {<br>
+							&nbsp;&nbsp;<i>declarations;</i><br>
+							}<br>
+							<br>
+							.byline-wrapper img {<br>
+							&nbsp;&nbsp;<i>declarations;</i><br>
+							}<br>
+							<br>
+							.byline-wrapper p {<br>
+							&nbsp;&nbsp;<i>declarations;</i><br>
+							}
+						</code>
+					</section>
+				</div>
 			</article>
 		</main>
 		<footer>
