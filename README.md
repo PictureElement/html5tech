@@ -1,3 +1,7 @@
+## Status
+
+Pending
+
 ## Synopsis
 
 This project is an ever-changing website dedicated to front-end fundamentals.
@@ -50,7 +54,7 @@ Each topic/concept is an HTML document by itself organized as follows:
 ```
 ## Page Samples
 
-As of Apr. 05, 2017 the web page looks like:
+As of Apr. 05, 2017 the website looks like:
 
 ![sample1 page](samples/sample1.png)
 
