@@ -338,8 +338,12 @@ footer {
 }
 
 /* Responsive typography */
-@media (max-width: 450px) { 
+@media (max-width: 470px) { 
   html {
     font-size: 0.7rem;
+  }
+
+  #tagline {
+    display: none;
   }
 }
