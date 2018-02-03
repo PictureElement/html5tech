@@ -73,9 +73,8 @@ improvement is more than welcomed.
 
 ## License
 
-&copy; 2017 Marios Sofokleous
-
-Licensed under the [GNU General Public License v3.0](LICENSE)
+- Documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)
+- Source code is licensed under the [GNU Affero General Public License v3.0](LICENSE)
 
 Please note that the files in the following directories have their own copyright
 and license information:
