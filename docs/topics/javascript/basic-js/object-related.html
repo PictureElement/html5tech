@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JavaScript/Object-related</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <!-- 
+    Load the JavaScript and CSS for prettify via one URL. Specify a 
+    skin parameter to load the 'sunburst/default/desert/doxy' skin.
+    -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?"></script>
+    <style>
+    
+    </style>
+  </head>
+  <body>
+    <!-- RETURN TO TOP BUTTON -->
+    <button id="return-to-top" title="Return to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+    <!-- SITE NAVIGATION -->
+    <header class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">HTML5<span>Tech</span></a>
+      <!-- Items -->
+      <div class="flex-row">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CSS</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">JAVASCRIPT <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">JQUERY</a>
+          </li>
+        </ul>
+      </div>
+      <!--
+      <form class="flex-nowrap form-inline my-2 my-lg-0 ml-md-auto">
+        <input class="form-control form-control-sm mr-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+      -->
+    </header>
+    <div class="container-fluid">
+      <div class="row d-flex">
+
+        <div class="sidebar col-12 col-md-3 col-xl-2">
+          <div class="text-center">
+            <button class="more-btn btn btn-link d-md-none" type="button" data-toggle="collapse" data-target="#sidebarContent" aria-controls="sidebarContent" aria-label="Toggle sidebar navigation">
+              MORE
+            </button>
+          </div>
+          <nav class="sidebar-links collapse" id="sidebarContent">
+            <div>
+              <h5 class="sb-topic">Basic JS</h5>
+              <ol class="sb-list">
+                <li><a href="data-related.html">Data-related</a></li>
+                <li><a href="dom.html">Document Object Model</a></li>
+                <li><a id="current" href="object-related.html">Object-related</a></li>
+                <li><a href="flow-control.html">Flow control</a></li>
+                <li><a href="function-related.html">Function-related</a></li>
+                <li><a href="expressions-and-operators.html">Expressions &amp; operators</a></li>
+              </ol>
+            </div>
+            <div>
+              <h5 class="sb-topic">Object-Oriented JS</h5>
+              <ol class="sb-list">
+                <li><a href="../object-oriented-js/objects.html">Objects</a></li>
+                <li><a href="../object-oriented-js/functions.html">Functions</a></li> 
+                <li><a href="../object-oriented-js/classes.html">Classes</a></li>
+              </ol>
+            </div>
+          </nav>
+        </div>
+        <!-- MAIN -->
+        <main class="col-12 col-md-6 col-xl-8">
+          <h1 class="text-left">Object-related</h1>
+          <hr>
+          <!-- CONTENT -->
+          <div class="card content-card">
+            <div class="card-header" role="tab" id="headingOne">
+              <h5 data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="false" aria-controls="collapseOne" class="c-header mb-0">
+                <i style="font-size:15px;" class="fa fa-th-list" aria-hidden="true"></i> Contents
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <ol class="content-nav">
+                  <li><a href="#1">Object literal notation</a></li>
+                  <li>
+                    <a href="#2">Dot notation vs bracket notation</a>
+                    <ol>
+                      <li><a href="#2-1">Introduction</a></li>
+                      <li><a href="#2-2">Example</a></li>
+                    </ol>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- SECTION 1 -->
+          <section>
+            <h2 id="1" data-toggle="collapse" role="button" href="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
+              Object literal notation
+            </h2>
+            <hr>
+            <div id="accordion-1" class="collapse show">
+              <p><mark>Example</mark></p>
+              <pre class="prettyprint linenums"><code>// "bio" OBJECT
+var bio = {
+    // string
+    "name": "Marios Sofokleous",
+    // sring
+    "role": "Web Developer",
+    // object
+    "contact": {
+        "mobile": "99-111844",
+        "email": "marios.sofokleous@yandex.com",
+        "github": "PictureElement",
+        "location": "Pafos"
+    },
+    // string
+    "pic": "http://via.placeholder.com/100x100",
+    // array
+    "skills": ["HTML", "CSS", "JavaScript", "WordPress.org"]
+};
+
+// "work" OBJECT
+var work = {};
+// dot notation
+work.position = "Web Developer";
+work.employer = "Linux Foundation";
+work.yearsOfEmployment = 2;
+work.city = "Los Angeles";
+
+// "education" OBJECT
+var education = {};
+// bracket notation
+education["university"] = "University of Cyprus";
+education["degree"] = "Computer Engineering";
+education["yearsOfAttendance"] = 5;</code></pre>
+            </div>
+          </section>
+          <!-- SECTION 2 -->
+          <section>
+            <h2 id="2" data-toggle="collapse" role="button" href="#accordion-2" aria-expanded="true" aria-controls="accordion-2">
+              Dot notation vs bracket notation
+            </h2>
+            <hr>
+            <div id="accordion-2" class="collapse show">
+              <h3 id="2-1">Introduction</h3>
+              <p>
+                Bracket notation always works. Dot notation requires properties
+                that begin with a letter and do not include special characters.
+              </p>
+              <h3 id="2-2">Example</h3>
+              <p>
+                Using <code>console.log()</code> we're going to figure out if 
+                dot and/or bracket notation will work to access the properties 
+                below. "True" indicates a valid statement and "False" indicates
+                an invalid statement.
+              </p>
+              <pre class="prettyprint linenums"><code>var weirdObject = {
+    "property": "Lorem ipsum dolor sit amet 0",
+    "property1": "Lorem ipsum dolor sit amet 1",<
+    "property-2": "Lorem ipsum dolor sit amet 2",
+    "property 3": "Lorem ipsum dolor sit amet 3",
+    "property$": "Lorem ipsum dolor sit amet 4",
+    " property": "Lorem ipsum dolor sit amet 5",
+    "property()": "Lorem ipsum dolor sit amet 6",
+    "property[]": "Lorem ipsum dolor sit amet 7",
+    "8property": "Lorem ipsum dolor sit amet 8"
+};
+
+console.log(weirdObject.property); //true
+console.log(weirdObject["property"]); //true
+
+console.log(weirdObject.property1); //true
+console.log(weirdObject["property1"]); //true
+
+console.log(weirdObject.property-2); //false
+console.log(weirdObject["property-2"]); //true
+
+console.log(weirdObject.property 3); //false
+console.log(weirdObject["property 3"]); //true
+
+console.log(weirdObject.property$); //true
+console.log(weirdObject["property$"]); //true
+
+console.log(weirdObject. property); //false
+console.log(weirdObject[" property"]); //true
+
+console.log(weirdObject.property()); //false
+console.log(weirdObject["property()"]); //true
+
+console.log(weirdObject.property[]); //false
+console.log(weirdObject["property[]"]); //true
+
+console.log(weirdObject.8property); //false
+console.log(weirdObject["8property"]); //true</code></pre>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div> <!-- END OF CONTAINER -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script>
+      /* Initialize function */
+      (function init () {
+        let viewportW = $(window).width();
+
+        if(viewportW >= 768) {
+          $('.sidebar-links').collapse('show');
+          $('header').addClass("sticky-top");
+        }
+        else {
+          $('.sidebar-links').collapse('hide');
+          $('.sidebar').addClass("sticky-top");
+        }
+      })();
+
+      /* Collapse state on different viewport sizes */
+      $(window).resize(function() { 
+        let viewportW = $(window).width();
+        if(viewportW >= 768) {
+          $('.sidebar-links').collapse('show');
+          $('header').addClass("sticky-top");
+          $('.sidebar').removeClass("sticky-top");
+        }
+        else {
+          $('.sidebar-links').collapse('hide');
+          $('header').removeClass("sticky-top");
+          $('.sidebar').addClass("sticky-top");
+        }
+      });
+
+      /* 
+        jQuery Methods
+        --------------
+        .click(): Bind an event handler to the "click" JavaScript event, or trigger that event on an element.
+        .scroll(): Bind an event handler to the "scroll" JavaScript event, or trigger that event on an element.
+        .scrollTop(): Get the current vertical position of the scroll bar for the first element in the set of matched elements.
+        .fadeIn(): Display the matched elements by fading them to opaque.
+        .fadeOut(): Hide the matched elements by fading them to transparent.
+        .animate(): Perform a custom animation of a set of CSS properties.
+      */
+      /* Display/Hide return to top button */
+      $(window).scroll(function() {
+        /* Height (in pixels) of the browser window viewport including, if rendered, the horizontal scrollbar */
+        var intViewportHeight = window.innerHeight;
+        if($(this).scrollTop() > intViewportHeight) {
+          $('#return-to-top').fadeIn(200);
+        }
+        else {
+          $('#return-to-top').fadeOut(200);
+        }
+      });
+
+      /* Return to top */
+      $('#return-to-top').click(function() {
+        $('html').animate({
+          // scrollTop is a property of the DOM object */
+          // Return the scrollTop property: element.scrollTop
+          // Set the scrollTop property: element.scrollTop = pixels
+          scrollTop: 0
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
