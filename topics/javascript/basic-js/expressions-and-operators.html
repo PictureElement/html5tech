@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JavaScript/Expressions &amp; operators</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <!-- 
+    Load the JavaScript and CSS for prettify via one URL. Specify a 
+    skin parameter to load the 'sunburst/default/desert/doxy' skin.
+    -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?"></script>
+    <style>
+    
+    </style>
+  </head>
+  <body>
+    <!-- RETURN TO TOP BUTTON -->
+    <button id="return-to-top" title="Return to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+    <!-- SITE NAVIGATION -->
+    <header class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">HTML5<span>Tech</span></a>
+      <!-- Items -->
+      <div class="flex-row">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CSS</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">JAVASCRIPT <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">JQUERY</a>
+          </li>
+        </ul>
+      </div>
+      <!--
+      <form class="flex-nowrap form-inline my-2 my-lg-0 ml-md-auto">
+        <input class="form-control form-control-sm mr-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+      -->
+    </header>
+    <div class="container-fluid">
+      <div class="row d-flex">
+
+        <div class="sidebar col-12 col-md-3 col-xl-2">
+          <div class="text-center">
+            <button class="more-btn btn btn-link d-md-none" type="button" data-toggle="collapse" data-target="#sidebarContent" aria-controls="sidebarContent" aria-label="Toggle sidebar navigation">
+              MORE
+            </button>
+          </div>
+          <nav class="sidebar-links collapse" id="sidebarContent">
+            <div>
+              <h5 class="sb-topic">Basic JS</h5>
+              <ol class="sb-list">
+                <li><a href="data-related.html">Data-related</a></li>
+                <li><a href="dom.html">Document Object Model</a></li>
+                <li><a href="object-related.html">Object-related</a></li>
+                <li><a href="flow-control.html">Flow control</a></li>
+                <li><a href="function-related.html">Function-related</a></li>
+                <li><a id="current" href="expressions-and-operators.html">Expressions &amp; operators</a></li>
+              </ol>
+            </div>
+            <div>
+              <h5 class="sb-topic">Object-Oriented JS</h5>
+              <ol class="sb-list">
+                <li><a href="../object-oriented-js/objects.html">Objects</a></li>
+                <li><a href="../object-oriented-js/functions.html">Functions</a></li> 
+                <li><a href="../object-oriented-js/classes.html">Classes</a></li>
+              </ol>
+            </div>
+          </nav>
+        </div>
+        <!-- MAIN -->
+        <main class="col-12 col-md-6 col-xl-8">
+          <h1 class="text-left">Expressions &amp; operators</h1>
+          <hr>
+          <!-- CONTENT -->
+          <div class="card content-card">
+            <div class="card-header" role="tab" id="headingOne">
+              <h5 data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="false" aria-controls="collapseOne" class="c-header mb-0">
+                <i style="font-size:15px;" class="fa fa-th-list" aria-hidden="true"></i> Contents
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <ol class="content-nav">
+                  <li><a href="#1">Equality operators</a></li>
+                  <li><a href="#2">Relational operators</a></li>
+                  <li>
+                    <a href="#3">Falsy &amp; truthy values</a>
+                    <ol>
+                      <li><a href="#3-1">Primitives</a></li>
+                      <li><a href="#3-2">Falsy values</a></li>
+                      <li><a href="#3-3">Truthy values</a></li>
+                      <li><a href="#3-4">Tricky examples</a></li>
+                    </ol>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- SECTION 1 -->
+          <section>
+            <h2 id="1" data-toggle="collapse" role="button" href="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
+              Equality operators
+            </h2>
+            <hr>
+            <div id="accordion-1" class="collapse show">
+              <p><u>Equality: ==</u></p>
+              <pre class="prettyprint linenums"><code>console.log(1 == 1);
+// true
+
+console.log('1' == 1);
+// true</code></pre>
+              <p><u>Strict equality: ===</u></p>
+              <pre class="prettyprint linenums"><code>console.log(1 === 1);
+// true
+
+console.log('1' === 1);
+// false</code></pre>
+              <p><u>Iequality: !=</u></p>
+              <pre class="prettyprint linenums"><code>console.log(1 != 2);
+// true
+
+console.log(1 != '1');
+// false
+
+console.log(1 != "1");
+// false
+
+console.log(1 != true);
+// false
+
+console.log(0 != false);
+// false</code></pre>
+              <p><u>Strict iequality: !=</u></p>
+              <pre class="prettyprint linenums"><code>console.log(1 !== 2);
+// true
+
+console.log(1 !== '1');
+// true
+
+console.log(1 !== "1");
+// true
+
+console.log(1 !== true);
+// true
+
+console.log(0 !== false);
+// true</code></pre>
+            </div>
+          </section>
+          <!-- SECTION 2 -->
+          <section>
+            <h2 id="2" data-toggle="collapse" role="button" href="#accordion-2" aria-expanded="true" aria-controls="accordion-2">
+              Relational operators
+            </h2>
+            <hr>
+            <div id="accordion-2" class="collapse show">
+              <p><u>Greater than operator: &gt;</u></p>
+              <pre class="prettyprint linenums"><code>console.log(3 > 2);
+// true
+
+console.log(1 > 5);
+// false</code></pre>
+              <p><u>Greater than or equal operator: &gt;=</u></p>
+              <pre class="prettyprint linenums"><code>console.log(3 >= 2);
+// true
+
+console.log(5 >= 10);
+// false
+
+console.log(7 >= 7);
+// true</code></pre>
+              <p><u>Less than operator: &lt;</u></p>
+              <pre class="prettyprint linenums"><code>console.log(3 < 2);
+// false
+
+console.log(1 < 5);
+// true</code></pre>
+              <p><u>Less than or equal operator: &lt;=</u></p>
+              <pre class="prettyprint linenums"><code>console.log(3 <= 2);
+// false
+
+console.log(5 <= 10);
+// true
+
+console.log(7 <= 7);
+// true</code></pre>
+              <p><u>Example</u></p>
+              <p>
+                Write a function called <code>getRelationship(x,y)</code>, 
+                which should return a string representing whether x is &gt;, 
+                &lt; or = y. The function parameters sould be numeric data 
+                types in the double-precision 64-bit floating point format 
+                (IEEE 754).
+              </p>
+              <pre class="prettyprint linenums"><code>function getRelationship(x, y) {
+    
+    // Expecting "number" type
+    let isNumberX = true;
+    let isNumberY = true;
+
+    // x is not a "number" type or has a value of NaN
+    if ((typeof x != "number") || isNaN(x)) {
+        isNumberX = false;
+    }
+
+    // y is not a "number" type or has a value of NaN
+    if (typeof y != "number" || y == NaN) {
+        isNumberY = false;
+    }
+
+    // x and y are "number" types
+    if (isNumberX &amp;&amp; isNumberY == true) {
+        if (x > y) {
+            console.log(">");
+        }
+        else if (x < y) {
+            console.log("<");
+        }
+        else {
+            console.log("=");
+        }
+    }
+    // x is not a "number" type or has a value of NaN
+    // y is a "number" type
+    else if (isNumberX == false &amp;&amp; isNumberY == true) {
+        console.log("Can't compare relationships because " + "'" + x + "'" + " is not a number.");
+    }
+    // y is not a "number" type or has a value of NaN
+    // x is a "number" type
+    else if (isNumberX == true &amp;&amp; isNumberY == false) {
+        console.log("Can't compare relationships because " + "'" + y + "'" + " is not a number.");
+    }
+    // x is not a "number" type or has a value of NaN
+    // y is not a "number" type or has a value of NaN
+    else {
+        console.log("Can't compare relationships because " + "'" + x + "'" + " and " + "'" + y + "'" + " are not numbers.");
+    }
+};
+
+console.log(getRelationship(1,4)); 
+// <
+
+console.log(getRelationship(1,1)); 
+// =
+
+console.log(getRelationship("that",2)); 
+// Can't compare relationships because 'that' is not a number.
+
+console.log(getRelationship("this","something else")); 
+// Can't compare relationships because 'this' and 'something else' are not numbers.
+
+console.log(getRelationship(3)); 
+// Can't compare relationships because 'undefined' is not a number.
+
+console.log(getRelationship("hi")); 
+// Can't compare relationships because 'hi' and 'undefined' are not numbers.
+
+console.log(getRelationship(NaN)); 
+// Can't compare relationships because 'NaN' and 'undefined' are not numbers.
+
+console.log(getRelationship(NaN, 2)); 
+// Can't compare relationships because 'NaN' is not a number.
+
+console.log(getRelationship(NaN, undefined)); 
+// Can't compare relationships because 'NaN' and 'undefined' are not numbers.</code></pre>
+            </div>
+          </section>
+          <!-- SECTION 3 -->
+          <section>
+            <h2 id="3" data-toggle="collapse" role="button" href="#accordion-3" aria-expanded="true" aria-controls="accordion-3">
+              Falsy &amp; truthy values
+            </h2>
+            <hr>
+            <div id="accordion-3" class="collapse show">
+              <h3 id="3-1">Primitives</h3>
+              <p>JavaScript has the following primitive data types:</p>
+              <ul>
+                <li>string</li>
+                <li>number</li>
+                <li>boolean</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>symbol (ECMAScript 2015)</li>
+              </ul>
+              <p>
+                To determine the type of an operand we can use the              
+                <code>typeof</code> operator:
+              </p>
+              <pre class="prettyprint linenums"><code>typeof(false);
+// "boolean"
+
+typeof(0);
+// "number"
+
+typeof(undefined);
+// "undefined"
+
+typeof(NaN);
+// "number"
+
+typeof(Infinity);
+// "number"
+
+typeof([]);
+// "object"
+
+typeof({});
+// "object"
+
+typeof("mario");
+// "string"
+
+typeof('');
+// "string"
+
+typeof("");
+// "string"</code></pre>
+              <h3 id="3-2">Falsy values</h3>
+              <p>
+                The following examples will translate to <code>false</code>:
+              </p>
+              <pre class="prettyprint linenums"><code>if(false) {}
+if(0) {}
+if("") {}
+if('') {}
+if(null) {}
+if(undefined) {}
+if(NaN) {}</code></pre>
+              <h3 id="3-3">Truthy values</h3>
+              <p>
+                The following examples will translate to <code>true</code>:
+              </p>
+              <pre class="prettyprint linenums"><code>if(true) {}
+if(1) {}
+if(0.2) {}
+if(-0.2) {}
+if("mario") {}
+if('mario') {}
+if(Infinity) {}
+if(-Infinity) {}
+if([]) {}
+if({}) {}</code></pre>
+              <h3 id="3-4">Tricky examples</h3>
+              <pre class="prettyprint linenums"><code>if(null == undefined) {} // true
+if([] == true) {} // false
+if(false == null) {} // false
+if(NaN == NaN) {} // false
+if(Infinity == true) {} // false
+if(-Infinity == true) {} // false
+if(null == undefined) {} // true
+if(0 == "") {} // true
+if(false == 0) {} //true</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+          </section>
+        </main>
+      </div>
+    </div> <!-- END OF CONTAINER -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script>
+      /* Initialize function */
+      (function init () {
+        let viewportW = $(window).width();
+
+        if(viewportW >= 768) {
+          $('.sidebar-links').collapse('show');
+          $('header').addClass("sticky-top");
+        }
+        else {
+          $('.sidebar-links').collapse('hide');
+          $('.sidebar').addClass("sticky-top");
+        }
+      })();
+
+      /* Collapse state on different viewport sizes */
+      $(window).resize(function() { 
+        let viewportW = $(window).width();
+        if(viewportW >= 768) {
+          $('.sidebar-links').collapse('show');
+          $('header').addClass("sticky-top");
+          $('.sidebar').removeClass("sticky-top");
+        }
+        else {
+          $('.sidebar-links').collapse('hide');
+          $('header').removeClass("sticky-top");
+          $('.sidebar').addClass("sticky-top");
+        }
+      });
+
+      /* 
+        jQuery Methods
+        --------------
+        .click(): Bind an event handler to the "click" JavaScript event, or trigger that event on an element.
+        .scroll(): Bind an event handler to the "scroll" JavaScript event, or trigger that event on an element.
+        .scrollTop(): Get the current vertical position of the scroll bar for the first element in the set of matched elements.
+        .fadeIn(): Display the matched elements by fading them to opaque.
+        .fadeOut(): Hide the matched elements by fading them to transparent.
+        .animate(): Perform a custom animation of a set of CSS properties.
+      */
+      /* Display/Hide return to top button */
+      $(window).scroll(function() {
+        /* Height (in pixels) of the browser window viewport including, if rendered, the horizontal scrollbar */
+        var intViewportHeight = window.innerHeight;
+        if($(this).scrollTop() > intViewportHeight) {
+          $('#return-to-top').fadeIn(200);
+        }
+        else {
+          $('#return-to-top').fadeOut(200);
+        }
+      });
+
+      /* Return to top */
+      $('#return-to-top').click(function() {
+        $('html').animate({
+          // scrollTop is a property of the DOM object */
+          // Return the scrollTop property: element.scrollTop
+          // Set the scrollTop property: element.scrollTop = pixels
+          scrollTop: 0
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JavaScript/Document Object Model</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <!-- 
+    Load the JavaScript and CSS for prettify via one URL. Specify a 
+    skin parameter to load the 'sunburst/default/desert/doxy' skin.
+    -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?"></script>
+    <style>
+    
+    </style>
+  </head>
+  <body>
+    <!-- RETURN TO TOP BUTTON -->
+    <button id="return-to-top" title="Return to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+    <!-- SITE NAVIGATION -->
+    <header class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">HTML5<span>Tech</span></a>
+      <!-- Items -->
+      <div class="flex-row">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CSS</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">JAVASCRIPT <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">JQUERY</a>
+          </li>
+        </ul>
+      </div>
+      <!--
+      <form class="flex-nowrap form-inline my-2 my-lg-0 ml-md-auto">
+        <input class="form-control form-control-sm mr-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+      -->
+    </header>
+    <div class="container-fluid">
+      <div class="row d-flex">
+
+        <div class="sidebar col-12 col-md-3 col-xl-2">
+          <div class="text-center">
+            <button class="more-btn btn btn-link d-md-none" type="button" data-toggle="collapse" data-target="#sidebarContent" aria-controls="sidebarContent" aria-label="Toggle sidebar navigation">
+              MORE
+            </button>
+          </div>
+          <nav class="sidebar-links collapse" id="sidebarContent">
+            <div>
+              <h5 class="sb-topic">Basic JS</h5>
+              <ol class="sb-list">
+                <li><a href="data-related.html">Data-related</a></li>
+                <li><a id="current" href="dom.html">Document Object Model</a></li>
+                <li><a href="object-related.html">Object-related</a></li>
+                <li><a href="flow-control.html">Flow control</a></li>
+                <li><a href="function-related.html">Function-related</a></li>
+                <li><a href="expressions-and-operators.html">Expressions &amp; operators</a></li>
+              </ol>
+            </div>
+            <div>
+              <h5 class="sb-topic">Object-Oriented JS</h5>
+              <ol class="sb-list">
+                <li><a href="../object-oriented-js/objects.html">Objects</a></li>
+                <li><a href="../object-oriented-js/functions.html">Functions</a></li> 
+                <li><a href="../object-oriented-js/classes.html">Classes</a></li>
+              </ol>
+            </div>
+          </nav>
+        </div>
+        <!-- MAIN -->
+        <main class="col-12 col-md-6 col-xl-8">
+          <h1 class="text-left">Document Object Model</h1>
+          <hr>
+          <!-- CONTENT -->
+          <div class="card content-card">
+            <div class="card-header" role="tab" id="headingOne">
+              <h5 data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="false" aria-controls="collapseOne" class="c-header mb-0">
+                <i style="font-size:15px;" class="fa fa-th-list" aria-hidden="true"></i> Contents
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <ol class="content-nav">
+                  <li><a href="#1">Introduction</a></li>
+                  <li><a href="#2">Core DOM interfaces</a></li>
+                  <li><a href="#3">Commonly used methods and properties</a></li>
+                  <li><a href="#4">DOM manipulation</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- SECTION 1 -->
+          <section>
+            <h2 id="1" data-toggle="collapse" role="button" href="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
+              Introduction
+            </h2>
+            <hr>
+            <div id="accordion-1" class="collapse show">
+              <p>
+                The Document Object Model (DOM) is a programming interface 
+                for HTML documents, an object-oriented representation of the
+                web page itself. The DOM represents the document as nodes and 
+                objects thus allowing page modifications via a scripting 
+                language such as JavaScript. Different browsers have different 
+                implementations of the DOM, however they all comply with 
+                certain web standards.
+              </p>
+            </div>
+          </section>
+          <!-- SECTION 2 -->
+          <section>
+            <h2 id="2" data-toggle="collapse" role="button" href="#accordion-2" aria-expanded="true" aria-controls="accordion-2">
+              Core DOM interfaces
+            </h2>
+            <hr>
+            <div id="accordion-2" class="collapse show">
+              <h3>"document" object</h3>
+              <p>
+                The <code>document</code> object represents the web page 
+                itself.
+              </p>
+              <h3>"window" object</h3>
+              <p>
+                The <code>window</code> object represents a window containing a
+                DOM document.
+              </p>
+              <h3>"element" object</h3>
+              <p>The <code>element</code> object represents an HTML element.</p>
+            </div>
+          </section>
+          <!-- SECTION 3 -->
+          <section>
+            <h2 id="3" data-toggle="collapse" role="button" href="#accordion-3" aria-expanded="true" aria-controls="accordion-3">
+              Commonly used methods and properties
+            </h2>
+            <hr>
+            <div id="accordion-3" class="collapse show">
+              <dl>
+                <dt><code>document.getElementById("idname");</code>
+                <dd>Select all elements with the specified id name</dd>
+                <dt><code>document.getElementsByClassName("classname");</code></dt>
+                <dd>Select all elements with the specified class name</dd>
+                <dt><code>document.getElementsByTagName("tagname");</code></dt>
+                <dd>Select all elements in the document with the specified tag name</dd>
+                <dt><code>element.addEventListener(event, callback);</code></dt>
+                <dd>Attach an event handler to the specified element</dd>
+                <dt><code>element.attributes;</code></dt>
+                <dd>
+                  Return a live collection of all attribute nodes registered 
+                  to the specified node.
+                </dd>
+                <dt><code>element.getAttribute("attributename");</code></dt>
+                <dd>Return the specified attribute value of an element</dd>
+                <dt><code>element.removeAttribute("attributename");</code></dt>
+                <dd>Remove the specified attribute from an element</dd>
+                <dt><code>element.setAttribute("attributename", "value");</code></dt>
+                <dd>Set or change the specified attribute, to the specified value</dd>
+                <dt><code>element.hasAttribute("atributename");</code></dt>
+                <dd>Return true if an element has the specified attribute, otherwise false</dd>
+                <dt><code>element.classList;</code></dt>
+                <dd>Get the class name(s) of an element</dd>
+                <dt><code>element.classList.toggle("classname");</code></dt>
+                <dd>Toggle class for an element</dd>
+                <dt><code>element.classList.remove("classname1", "classname2", "classname3");</code></dt>
+                <dd>Remove classes from an element</dd>
+                <dt><code>element.classList.add("classname1", "classname2", "classname3");</code></dt>
+                <dd>Add classes to an element</dd>
+                <dt><code>element.click();</code></dt>
+                <dd>Simulate a mouse-click on an element</dd>
+                <dt><code>element.id</code></dt>
+                <dd>Get the id of an element</dd>
+                <dt><code>element.innerHTML;</code></dt>
+                <dd>Set or return the content of an element</dd></dt>
+                <dt><code>element.style;</code></dt>
+                <dd>Access a specified element's style object</dd>
+                <dt><code>element.style.backgroundColor = "blue";</code></dt>
+                <dd>Set the style properties of an existing element</dd>
+                <dt><code>window.alert("Welcome");</code></dt>
+                <dd>Displays an alert box with a message and an OK button</dd>
+                <dt><code>window.close();</code></dt>
+                <dd>Close the current window</dd>
+                <dt><code>window.open("url");</code></dt>
+                <dd>Open a new browser window</dd>
+                <dt><code>window.print();</code></dt>
+                <dd>Print the content of the current window</dd>
+                <dt><code>window.scrollBy(xnum, ynum);</code></dt>
+                <dd>Scroll the document by the specified number of pixels</dd>
+                <dt><code>window.scrollTo(xpos, ypos)</code></dt>
+                <dd>Scroll the document to the specified coordinates in pixels</dd>
+                <dt><code>window.innerHeight;</code></dt>
+                <dd>
+                  Get the height (in pixels) of the browser window viewport 
+                  including, if rendered, the horizontal scrollbar
+                </dd>
+                <dt><code>window.innerWidth</code></dt>
+                <dd>
+                  Get the width (in pixels) of the browser window viewport 
+                  including, if rendered, the horizontal scrollbar
+                </dd>
+              </dl>
+              <div>
+                <p class="warning align-middle">
+                  JavaScript syntax for setting CSS properties is slightly 
+                  different than CSS (backgroundColor instead of 
+                  background-color). For a list of all available properties, 
+                  follow <a href="https://www.w3schools.com/jsref/dom_obj_style.asp">this</a> link.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- SECTION 4 -->
+          <section>
+            <h2 id="4" data-toggle="collapse" role="button" href="#accordion-4" aria-expanded="true" aria-controls="accordion-4">
+              DOM manipulation
+            </h2>
+            <hr>
+            <div id="accordion-4" class="collapse show">
+              <p><mark>Example 1: Styling</mark></p>
+              <p><u>HTML</u></p>
+              <pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+        &lt;meta charset="utf-8">
+        &lt;title>Basic JS&lt;/title>
+    &lt;/head>
+    &lt;body>
+        &lt;div id="main">
+            &lt;div id="header">
+                &lt;h2>Header&lt;/h2>
+            &lt;/div>
+            &lt;div id="workExperience">
+                &lt;h2>Work Experience&lt;/h2>
+            &lt;/div>
+            &lt;div id="projects">
+                &lt;h2>Projects&lt;/h2>
+            &lt;/div>
+            &lt;div id="education">
+                &lt;h2>Education&lt;/h2>
+            &lt;/div>
+            &lt;div id="mapDiv">
+                &lt;h2>Where I've Lived and Worked&lt;/h2>
+            &lt;/div>
+            &lt;div id="lets-connect">
+                &lt;h2>Let's Connect&lt;/h2>
+            &lt;/div>
+        &lt;/div>
+    &lt;/body>
+&lt;/html></code></pre>               
+              <p><u>Result</u></p>
+              <iframe height="310px" width="100%" src="demos/1-1.html">
+                <p>Your browser does not support iframes.</p>
+              </iframe>
+              <p><u>JavaScript</u></p>
+              <p>
+                We're going to place the following &lt;script> tag last in the 
+                body:
+              </p>
+              <pre class="prettyprint linenums"><code>&lt;script>
+    document.getElementById("header").style.backgroundColor = "red";
+    document.getElementById("workExperience").style.backgroundColor = "green";
+    document.getElementById("projects").style.backgroundColor = "blue";
+    document.getElementById("education").style.backgroundColor = "cyan";
+    document.getElementById("mapDiv").style.backgroundColor = "yellow";
+    document.getElementById("lets-connect").style.backgroundColor = "gray";
+&lt;/script></code></pre>
+              <p><u>Result</u></p>
+              <iframe height="310px" width="100%" src="demos/1-2.html">
+                <p>Your browser does not support iframes.</p>
+              </iframe>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div> <!-- END OF CONTAINER -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script>
+      /* Initialize function */
+      (function init () {
+        let viewportW = $(window).width();
+
+        if(viewportW >= 768) {
+          $('.sidebar-links').collapse('show');
+          $('header').addClass("sticky-top");
+        }
+        else {
+          $('.sidebar-links').collapse('hide');
+          $('.sidebar').addClass("sticky-top");
+        }
+      })();
+
+      /* Collapse state on different viewport sizes */
+      $(window).resize(function() { 
+        let viewportW = $(window).width();
+        if(viewportW >= 768) {
+          $('.sidebar-links').collapse('show');
+          $('header').addClass("sticky-top");
+          $('.sidebar').removeClass("sticky-top");
+        }
+        else {
+          $('.sidebar-links').collapse('hide');
+          $('header').removeClass("sticky-top");
+          $('.sidebar').addClass("sticky-top");
+        }
+      });
+
+      /* 
+        jQuery Methods
+        --------------
+        .click(): Bind an event handler to the "click" JavaScript event, or trigger that event on an element.
+        .scroll(): Bind an event handler to the "scroll" JavaScript event, or trigger that event on an element.
+        .scrollTop(): Get the current vertical position of the scroll bar for the first element in the set of matched elements.
+        .fadeIn(): Display the matched elements by fading them to opaque.
+        .fadeOut(): Hide the matched elements by fading them to transparent.
+        .animate(): Perform a custom animation of a set of CSS properties.
+      */
+      /* Display/Hide return to top button */
+      $(window).scroll(function() {
+        /* Height (in pixels) of the browser window viewport including, if rendered, the horizontal scrollbar */
+        var intViewportHeight = window.innerHeight;
+        if($(this).scrollTop() > intViewportHeight) {
+          $('#return-to-top').fadeIn(200);
+        }
+        else {
+          $('#return-to-top').fadeOut(200);
+        }
+      });
+
+      /* Return to top */
+      $('#return-to-top').click(function() {
+        $('html').animate({
+          // scrollTop is a property of the DOM object */
+          // Return the scrollTop property: element.scrollTop
+          // Set the scrollTop property: element.scrollTop = pixels
+          scrollTop: 0
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
