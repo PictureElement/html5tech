@@ -4,14 +4,21 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Roboto Slab', serif; 
-  font-weight: 100;
+  font-family: 'Roboto Slab', serif;
   color: #333333;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2, h3, h4, h5 {
+  font-weight: 300;
 }
 
 #tagline {
@@ -111,6 +118,7 @@ button#return-to-top i {
 /* HEADER */
 header {
   z-index: 100;
+  background: #fafaff;
 }
 
 header .nav-link {
@@ -137,7 +145,7 @@ a.navbar-brand span {
 
 /* SIDEBAR */
 div.sidebar {
-  background-color: #f1f1f1;
+  background-color: #eef0f2;
 }
 
 ol.sb-list {
@@ -163,6 +171,7 @@ ol.sb-list a {
 h5.sb-topic {
   font-size: 1rem;
   color: #333333;
+  font-weight: 400;
 }
 
 /* MAIN CONTENT */
@@ -216,7 +225,7 @@ div.content-card {
 }
 
 div.content-card .card-header {
-  background: #f1f1f1;
+  background: #eef0f2;
 }
 
 div.content-card .card-body li, div.content-card .card-body a {
@@ -226,6 +235,7 @@ div.content-card .card-body li, div.content-card .card-body a {
 h5.c-header {
   cursor: pointer;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 h5.c-header[aria-expanded="true"]::after {
@@ -255,10 +265,20 @@ footer a:hover {
   color: #007f7f;
 }
 
-
-footer .license, footer .copyright {
-  padding: 1rem;
+footer .license {
+  background: #414347;
+  padding: 1.5rem;
 }
+
+footer .license div:last-child {
+  margin-top: .75rem;
+}
+
+footer .copyright {
+  background: #fafaff;
+  padding: 1.5rem;
+}
+
 
 
 
@@ -306,6 +326,7 @@ section {
   .more-btn {
     color: rgb(0,127,127);
     text-decoration: none;
+
   }
 
   .more-btn[aria-expanded="true"]::before {
