@@ -1,6 +1,6 @@
 /* BASIC ELEMENTS */
 html {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 body {
@@ -118,7 +118,7 @@ header .nav-link {
 }
 
 a.navbar-brand {
-  font-size: 2.5rem;
+  font-size: 40px;
   font-family: 'Audiowide', cursive;
   color: #007f7f !important;
   text-shadow: 0 1px 0 #006666,
@@ -244,30 +244,25 @@ h5.c-header[aria-expanded="false"]::after {
 footer {
   z-index: 100 !important;
   position: relative;
+  font-size: .875rem;
 }
 
-.footer-wrapper {
-  width: 75%;
-  font-size: .7rem;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-.footer-wrapper div:first-child {
-  padding-bottom: 10px;
-}
-
-.footer-wrapper hr {
-  margin: 20px 0;
-}
-
-.footer-wrapper a {
+footer a {
   color: #007f7f;
 }
 
-.footer-wrapper a:hover {
+footer a:hover {
   color: #007f7f;
 }
+
+
+footer .license, footer .copyright {
+  padding: 1rem;
+}
+
+
+
+/*------------------------------*/
 
 section {
   overflow: hidden;
@@ -338,16 +333,16 @@ section {
   }
 }
 
-/* Responsive typography */
-@media (min-width: 480px) {
-    html {
-      font-size: 18px;
-    }
-}
-
 /* Extra large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
     main {
         margin-left: 16.66666667%;
+    }
+}
+
+/* Responsive typography */
+@media (min-width: 480px) {
+    html {
+      font-size: 18px;
     }
 }
