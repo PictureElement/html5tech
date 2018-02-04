@@ -1,6 +1,6 @@
 /* BASIC ELEMENTS */
 html {
-  font-size: 1rem;
+  font-size: 12px;
 }
 
 body {
@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5 {
   font-family: 'Roboto Slab', serif; 
   font-weight: 100;
   color: #333333;
+}
+
+#tagline {
+  font-family: 'Audiowide', cursive;
 }
 
 /* CODE SECTIONS */
@@ -114,7 +118,7 @@ header .nav-link {
 }
 
 a.navbar-brand {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-family: 'Audiowide', cursive;
   color: #007f7f !important;
   text-shadow: 0 1px 0 #006666,
@@ -244,7 +248,7 @@ footer {
 
 .footer-wrapper {
   width: 75%;
-  font-size: 12px;
+  font-size: .7rem;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -265,12 +269,17 @@ footer {
   color: #007f7f;
 }
 
+section {
+  overflow: hidden;
+}
+
 /* MEDIA QUERIES */
 
 /* Apply style if the viewport width is 768 pixels wide or wider */
 @media screen and (min-width: 768px) {
   main {
-    padding: 1rem 1rem 1rem 3rem !important;
+    padding: 1rem 1rem 1rem 2rem !important;
+    margin-left: 25%;
   }
   div.sidebar {
     padding: 1rem !important;
@@ -279,17 +288,11 @@ footer {
     height: 100%;
     z-index: 1;
   }
-  main {
-    margin-left: 25%;
+  div.ad-space {
+    padding: 1rem;
   }
   header {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  main {
-    margin-left: 16.66666667%;
   }
 }
 
@@ -320,14 +323,6 @@ footer {
     content: "\f0c9";
   }
 
-  ol.sb-list li {
-    /*color: rgba(255,255,255,.65);*/
-  }
-
-  ol.sb-list a {
-    /*color: rgba(255,255,255,.65);*/
-  }
-
   main h1 {
     margin-top: .5rem;
   }
@@ -337,13 +332,22 @@ footer {
   }
 }
 
-/* Responsive typography */
-@media (max-width: 470px) { 
-  html {
-    font-size: 0.7rem;
-  }
-
-  #tagline {
+@media (max-width: 700px) { 
+    #tagline {
     display: none;
   }
+}
+
+/* Responsive typography */
+@media (min-width: 480px) {
+    html {
+      font-size: 18px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    main {
+        margin-left: 16.66666667%;
+    }
 }
