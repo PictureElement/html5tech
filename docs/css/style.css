@@ -241,22 +241,30 @@ div.content-card .card-body li, div.content-card .card-body a {
   color: #007f7f;
 }
 
-h5.c-header {
+.card-header {
+  padding: 0;
+}
+
+button.content-btn {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 300;
+  color: rgb(0,127,127);
 }
 
-h5.c-header[aria-expanded="true"]::after {
-  font-family: 'FontAwesome';
-  content: "\f106";
-  float: right;
-}
+button.content-btn:hover {
+    color: rgb(0,127,127);
+    text-decoration: none;
+  }
 
-h5.c-header[aria-expanded="false"]::after {
+button.content-btn[aria-expanded="true"]::before {
   font-family: 'FontAwesome';
-  content: "\f107";
-  float: right;
+  content:"\f00d";
+  }
+
+button.content-btn[aria-expanded="false"]::before {
+  font-family: 'FontAwesome';
+  content: "\f0c9";
 }
 
 /* FOOTER */
