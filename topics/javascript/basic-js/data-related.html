@@ -12,8 +12,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+    <!-- Sans Serif -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,700" rel="stylesheet">
+    <!-- Serif -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400" rel="stylesheet">
+    <!-- Display -->
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <!-- 
     Load the JavaScript and CSS for prettify via one URL. Specify a 
@@ -68,7 +71,7 @@
             <div>
               <h5 class="sb-topic">Basic JS</h5>
               <ol class="sb-list">
-                <li><a id="current" href="data-related.html">Data-related</a></li>
+                <li id="current"><a href="data-related.html">Data-related</a></li>
                 <li><a href="dom.html">Document Object Model</a></li>
                 <li><a href="object-related.html">Object-related</a></li>
                 <li><a href="flow-control.html">Flow control</a></li>
@@ -86,16 +89,17 @@
             </div>
           </nav>
         </div>
+
         <!-- MAIN -->
-        <main class="col-12 col-md-6 col-xl-8">
+        <main class="col-12 col-md-9 col-xl-8">
           <h1 class="text-left">Data-related</h1>
           <hr>
           <!-- CONTENT -->
           <div class="card content-card">
             <div class="card-header" role="tab" id="headingOne">
-              <h5 data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="false" aria-controls="collapseOne" class="c-header mb-0">
-                <i style="font-size:15px;" class="fa fa-th-list" aria-hidden="true"></i> Contents
-              </h5>
+              <button class="content-btn btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne" aria-label="Toggle content" aria-expanded="false">
+                Contents
+              </button>
             </div>
             <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
@@ -653,25 +657,41 @@ console.log(myObj); // {name: "Marios", age: "27", country: "Brazil"}</code></pr
             </div>
           </section>
         </main>
+        <!-- d-none d-xl-block d-xl-2: Hide the element for all screen sizes except on xlarge devices -->
+        <div class="ad-space d-none d-xl-block col-xl-2">
+          <div class="text-center">
+            <h5>Ad1</h5>
+            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <h5>Ad2</h5>
+            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <h5>Ad3</h5>
+            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <h5>Ad4</h5>
+            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <h5>Ad5</h5>
+            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <h5>Ad6</h5>
+            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+          </div>
+        </div>
       </div>
     </div> <!-- END OF CONTAINER -->
 
     <!-- FOOTER -->
-    <footer class="bg-dark text-center text-muted">
-      <div class="footer-wrapper">
-        <div class="footer-item">
-          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="100px" alt="CC BY-SA 4.0 License" style="border-width:0" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" /></a><br>The HTML5Tech documentation is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    <footer class="text-center text-muted">
+        <div class="license">
+          <div>
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="100px" alt="CC BY-SA 4.0 License" style="border-width:0" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" /></a><br>Documentation is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+          </div>
+          <div>
+              <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0"><img width="80px" alt="GNU AGPLv3 License" style="border-width:0" src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" /></a><br><a href="https://github.com/PictureElement/html5tech">Source code</a> is licensed under the <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0">AGPL v3 License</a>.
+          </div>
         </div>
-        <div class="footer-item">
-          <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0"><img width="80px" alt="GNU AGPLv3 License" style="border-width:0" src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" /></a><br>The HTML5Tech <a href="#">source code</a> is licensed under the <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0">GNU Affero General Public License v3.0</a>.
+        <div class="copyright">
+            Design &amp; development by 
+            <a href="https://pictureelement.github.io/portfolio-2">
+            PictureElement</a> (Marios Sofokleous).
         </div>
-        <hr class="border-secondary">
-        <div class="footer-item">
-          Design &amp; development by 
-          <a href="https://pictureelement.github.io/portfolio-2-html5/">
-          PictureElement</a> (Marios Sofokleous).
-        </div>
-      </div>
     </footer>
 
     <!-- Optional JavaScript -->

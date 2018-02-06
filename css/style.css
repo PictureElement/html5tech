@@ -162,6 +162,7 @@ ol.sb-list {
 ol.sb-list li {
   color: #007f7f;
   font-size: .875rem;
+  font-weight: 200; 
 }
 
 ol.sb-list a {
@@ -170,7 +171,7 @@ ol.sb-list a {
   font-weight: 200;
 }
 
-#current {
+li#current, li#current a {
   font-style: italic;
   color: #333333;
 }
