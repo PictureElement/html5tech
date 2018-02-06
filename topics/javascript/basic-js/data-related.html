@@ -738,6 +738,8 @@ console.log(myObj); // {name: "Marios", age: "27", country: "Brazil"}</code></pr
         .fadeIn(): Display the matched elements by fading them to opaque.
         .fadeOut(): Hide the matched elements by fading them to transparent.
         .animate(): Perform a custom animation of a set of CSS properties.
+        .attr(): Get the value of an attribute for the first element in the set of matched elements
+        .offset(): Get the current coordinates of the first element in the set of matched elements, relative to the document.
       */
       /* Display/Hide return to top button */
       $(window).scroll(function() {
@@ -759,6 +761,24 @@ console.log(myObj); // {name: "Marios", age: "27", country: "Brazil"}</code></pr
           // Set the scrollTop property: element.scrollTop = pixels
           scrollTop: 0
         }, 500);
+      });
+
+      /* Smooth scrolling (content navigation) */
+      $('.content-nav li a').click(function() {
+        let viewportW = $(window).width();
+        if(viewportW >= 768) {
+          $('html').animate({
+            /* .offset() returns an object containing the properties 'top' and 'left' */
+            /* -100 to adjust for sticky header */
+            scrollTop: $($(this).attr('href')).offset().top - 100
+          }, 500);
+        }
+        else {
+          $('html').animate({
+            /* -60 to adjust for sticky sidebar */
+            scrollTop: $($(this).attr('href')).offset().top - 60
+          }, 500);
+        }
       });
     </script>
   </body>
