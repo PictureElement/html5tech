@@ -508,7 +508,7 @@ var bio = {
         "location": "Pafos"
     },
     // string
-    "pic": "http://via.placeholder.com/100x100",
+    "pic": "https://via.placeholder.com/100x100",
     // array
     "skills": ["HTML", "CSS", "JavaScript", "WordPress.org"]
 };
@@ -565,11 +565,11 @@ $("#education").append("Years of Attendance: " + education["yearsOfAttendance"])
                 you're building a webapp that takes in data (JSON) from other 
                 users on the Internet and turns it into a resume that they can 
                 use. Imagine someone sets their name equal to some malicious 
-                script: <code>&lt;script src="http://hackyourwebsite.com/eviljavascript.js">&lt;/script></code>.
+                script: <code>&lt;script src="https://hackyourwebsite.com/eviljavascript.js">&lt;/script></code>.
                 To make sure your site doesn't run the malicious script, you 
                 must replace the '<' and '>':
               </p>
-              <pre class="prettyprint linenums"><code>var html = '&lt;script src="http://hackyourwebsite.com/eviljavascript.js">&lt;/script>';
+              <pre class="prettyprint linenums"><code>var html = '&lt;script src="https://hackyourwebsite.com/eviljavascript.js">&lt;/script>';
 
 // string.replace(old, new): only replaces the first instance of old
 // string.replace(/old/g, new): replaces every instance of old
@@ -583,7 +583,7 @@ var charEscape = function(_html) {
     return newHTML;
 };
 
-console.log(charEscape(html)); // '&lt;script src="http://hackyourwebsite.com/eviljavascript.js"&gt;&lt;/script&gt;'</code></pre>
+console.log(charEscape(html)); // '&lt;script src="https://hackyourwebsite.com/eviljavascript.js"&gt;&lt;/script&gt;'</code></pre>
             </div>
           </section>
           <!-- SECTION 4 -->
@@ -614,14 +614,14 @@ console.log(charEscape(html)); // '&lt;script src="http://hackyourwebsite.com/ev
         "city": "Nicosia",
         "degree": "BEng",
         "major": "Computer Engineering",
-        "url": "http://www.ucy.ac.cy"
+        "url": "https://www.ucy.ac.cy"
     },
     {
         "name": "University of California, Berkeley",
         "city": "Berkeley",
         "degree": "MSc",
         "major": "Computer Science",
-        "url": "http://www.berkeley.edu/"
+        "url": "https://www.berkeley.edu/"
     }],
     "onlineCourses": [
     {
@@ -662,17 +662,17 @@ console.log(myObj); // {name: "Marios", age: "27", country: "Brazil"}</code></pr
         <div class="ad-space d-none d-xl-block col-xl-2">
           <div class="text-center">
             <h5>Ad1</h5>
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150x100"></a>
             <h5>Ad2</h5>
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150x100"></a>
             <h5>Ad3</h5>
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150x100"></a>
             <h5>Ad4</h5>
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150x100"></a>
             <h5>Ad5</h5>
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150x100"></a>
             <h5>Ad6</h5>
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x100"></a>
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150x100"></a>
           </div>
         </div>
       </div>
@@ -682,7 +682,7 @@ console.log(myObj); // {name: "Marios", age: "27", country: "Brazil"}</code></pr
     <footer class="text-center text-muted">
         <div class="license">
           <div>
-              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="100px" alt="CC BY-SA 4.0 License" style="border-width:0" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" /></a><br>Documentation is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+              <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img width="100px" alt="CC BY-SA 4.0 License" style="border-width:0" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" /></a><br>Documentation is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
           </div>
           <div>
               <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0"><img width="80px" alt="GNU AGPLv3 License" style="border-width:0" src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" /></a><br><a href="https://github.com/PictureElement/html5tech">Source code</a> is licensed under the <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0">AGPL v3 License</a>.
