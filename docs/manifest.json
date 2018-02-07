@@ -1,0 +1,15 @@
+{
+  "name": "HTML5Tech",
+  "short_name": "HTML5Tech",
+  "icons": [
+    {
+      "src": "media/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ff0000",
+  "theme_color": "#00ff00"
+}
