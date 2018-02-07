@@ -4,28 +4,32 @@
     <title>jQuery/DOM manipulation</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="../../../css/style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Google fonts -->
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    
+    <!-- Web app manifest -->
+    <link rel="manifest" href="../../../manifest.json">
+
     <!-- Sans Serif -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,700" rel="stylesheet">
     <!-- Serif -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400" rel="stylesheet">
     <!-- Display -->
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-    <!-- 
-    Load the JavaScript and CSS for prettify via one URL. Specify a 
-    skin parameter to load the 'sunburst/default/desert/doxy' skin.
-    -->
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?"></script>
-    <style>
     
-    </style>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" defer></script>
+    <script src="../../../site.js" defer></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?" defer></script>
   </head>
   <body>
     <!-- RETURN TO TOP BUTTON -->
@@ -1027,91 +1031,5 @@ Largest car manufacturers (2016)
             PictureElement</a> (Marios Sofokleous).
         </div>
     </footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <script>
-      /* Initialize function */
-      (function init () {
-        let viewportW = $(window).width();
-
-        if(viewportW >= 768) {
-          $('.sidebar-links').collapse('show');
-          $('header').addClass("sticky-top");
-        }
-        else {
-          $('.sidebar-links').collapse('hide');
-          $('.sidebar').addClass("sticky-top");
-        }
-      })();
-
-      /* Collapse state on different viewport sizes */
-      $(window).resize(function() { 
-        let viewportW = $(window).width();
-        if(viewportW >= 768) {
-          $('.sidebar-links').collapse('show');
-          $('header').addClass("sticky-top");
-          $('.sidebar').removeClass("sticky-top");
-        }
-        else {
-          $('.sidebar-links').collapse('hide');
-          $('header').removeClass("sticky-top");
-          $('.sidebar').addClass("sticky-top");
-        }
-      });
-
-      /* 
-        jQuery Methods
-        --------------
-        .click(): Bind an event handler to the "click" JavaScript event, or trigger that event on an element.
-        .scroll(): Bind an event handler to the "scroll" JavaScript event, or trigger that event on an element.
-        .scrollTop(): Get the current vertical position of the scroll bar for the first element in the set of matched elements.
-        .fadeIn(): Display the matched elements by fading them to opaque.
-        .fadeOut(): Hide the matched elements by fading them to transparent.
-        .animate(): Perform a custom animation of a set of CSS properties.
-      */
-      /* Display/Hide return to top button */
-      $(window).scroll(function() {
-        /* Height (in pixels) of the browser window viewport including, if rendered, the horizontal scrollbar */
-        var intViewportHeight = window.innerHeight;
-        if($(this).scrollTop() > intViewportHeight) {
-          $('#return-to-top').fadeIn(200);
-        }
-        else {
-          $('#return-to-top').fadeOut(200);
-        }
-      });
-
-      /* Return to top */
-      $('#return-to-top').click(function() {
-        $('html').animate({
-          // scrollTop is a property of the DOM object */
-          // Return the scrollTop property: element.scrollTop
-          // Set the scrollTop property: element.scrollTop = pixels
-          scrollTop: 0
-        }, 500);
-      });
-
-      /* Smooth scrolling (content navigation) */
-      $('.content-nav li a').click(function() {
-        let viewportW = $(window).width();
-        if(viewportW >= 768) {
-          $('html').animate({
-            /* .offset() returns an object containing the properties 'top' and 'left' */
-            /* -100 to adjust for sticky header */
-            scrollTop: $($(this).attr('href')).offset().top - 100
-          }, 500);
-        }
-        else {
-          $('html').animate({
-            /* -60 to adjust for sticky sidebar */
-            scrollTop: $($(this).attr('href')).offset().top - 60
-          }, 500);
-        }
-      });
-    </script>
   </body>
 </html>
