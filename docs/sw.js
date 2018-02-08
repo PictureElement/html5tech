@@ -54,3 +54,18 @@ self.addEventListener('activate', function(e) {
   );
   return self.clients.claim();
 });
+
+// We've cached the app shell components, but we still need to load them from 
+// the local cache.
+self.addEventListener('fetch', function(e) {
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  e.respondWith(
+    // Evaluate the web request to see if it's available in the cache. It then 
+    // either responds with the cached version, or uses fetch to get a copy from 
+    // the network. The response is passed back to the web page with 
+    // e.respondWith().
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
+});
