@@ -2,11 +2,13 @@
   Register the service worker
   ---------------------------
   This code checks to see if the service worker API is available, and if it is, 
-  the service worker at /sw.js is registered once the page is loaded.
+  the service worker at /sw.js is registered once the page is loaded. After the 
+  service worker has been registered, the browser will run the service worker 
+  script(sw.js) in the background.
 */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    navigator.serviceWorker.register('../sw.js').then(function(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
