@@ -4,7 +4,7 @@
   "description": "Fundamental resources about HTML5 & friends",
   "icons": [
     {
-      "src": "media/icon-256x256.png",
+      "src": "images/icon-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     }

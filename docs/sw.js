@@ -5,7 +5,9 @@ var CACHE_NAME = 'my-site-cache-v1';
 /* Files to be cached */
 var urlsToCache = [
   '/css/style.css',
-  '/script/site.js'
+  '/script/site.js',
+  './data-realated.html',
+  './introduction.html'
 ];
 
 /* 
