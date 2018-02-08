@@ -49,9 +49,9 @@ var filesToCache = [
   'https://fonts.googleapis.com/css?family=Audiowide|Montserrat:200,200i,300,400|Roboto+Slab:100,300,400',
   'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js',
-  'https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg',
-  'https://img.shields.io/badge/License-AGPL%20v3-blue.svg',
-  'https://via.placeholder.com/150x100'
+  '/html5tech/images/150x100.png',
+  '/html5tech/images/agpl-v3.svg',
+  '/html5tech/images/cc-by-sa-4.svg'
 ];
 
 // When the service worker is registered, an 'install' event is triggered the 
