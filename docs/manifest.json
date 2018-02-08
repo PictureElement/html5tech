@@ -1,0 +1,16 @@
+{
+  "name": "HTML5Tech",
+  "short_name": "HTML5Tech",
+  "description": "Fundamental resources about HTML5 & friends",
+  "icons": [
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#007f7f",
+  "theme_color": "#007f7f"
+}
