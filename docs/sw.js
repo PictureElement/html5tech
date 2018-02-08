@@ -22,7 +22,8 @@ self.addEventListener('install', function(e) {
   );
 });
 
-/* The 'activate' event is fired when the service worker starts up */
+/*
+// The 'activate' event is fired when the service worker starts up
 self.addEventListener('activate', function(e) {
   console.log('[ServiceWorker] Activate');
   // Logic to update the cache whenever any of the app shell files change
@@ -53,3 +54,4 @@ self.addEventListener('fetch', function(e) {
     })
   );
 });
+*/
