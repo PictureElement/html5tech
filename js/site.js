@@ -91,9 +91,9 @@
   // Check if the browser supports service workers, and if it does, register the 
   // service worker
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./sw.js')
-             .then(function() { console.log('Service Worker Registered'); });
+    navigator.serviceWorker.register('./sw.js').then(function() { 
+      console.log('Service Worker Registered'); 
+    });
   }
 
 })();

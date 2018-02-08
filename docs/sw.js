@@ -22,7 +22,6 @@ self.addEventListener('install', function(e) {
   );
 });
 
-/*
 // The 'activate' event is fired when the service worker starts up
 self.addEventListener('activate', function(e) {
   console.log('[ServiceWorker] Activate');
@@ -54,4 +53,3 @@ self.addEventListener('fetch', function(e) {
     })
   );
 });
-*/
