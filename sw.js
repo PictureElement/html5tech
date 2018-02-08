@@ -1,26 +1,10 @@
-/* SERVICE WORKER SCRIPT */ 
+// SERVICE WORKER SCRIPT
 
 var cacheName = 'html5tech-cache';
 
 // Files to cache
-// Beware that index.html may also be requested as /.
-var filesToCache = [
-  '/',
-  '/index.html',
-  '/classes.html',           
-  '/introduction.html',
-  '/expressions-and-operators.html',
-  '/data-related.html',      
-  '/flow-control.html',             
-  '/function-related.html',           
-  '/functions.html',                  
-  '/object-related.html',
-  '/dom.html',
-  '/objects.html',
-  '/dom-manipulation.html',
-  '/js/site.js',
-  '/css/style.css'
-];
+// Beware that index.html may also be requested as /
+var filesToCache = ['/', '/index.html'];
 
 // When the service worker is registered, an 'install' event is triggered the 
 // first time the user visits the page
