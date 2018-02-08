@@ -4,7 +4,7 @@ var cacheName = 'html5tech-cache';
 
 // Files to cache
 // Beware that index.html may also be requested as /
-var filesToCache = ['html5tech/', 'html5tech/index.html'];
+var filesToCache = ['/index.html'];
 
 // When the service worker is registered, an 'install' event is triggered the 
 // first time the user visits the page
