@@ -19,3 +19,20 @@ self.addEventListener('install', function(e) {
     })
   );
 });
+
+/* The 'activate' event is fired when the service worker starts up */
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
+  // Logic to update the cache whenever any of the app shell files change
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+  return self.clients.claim();
+});
