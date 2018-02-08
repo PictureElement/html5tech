@@ -43,7 +43,15 @@ var filesToCache = [
   '/html5tech/demos/12-1.html',
   '/html5tech/demos/12-2.html',
   '/html5tech/demos/13-1.html',
-  '/html5tech/demos/13-2.html'
+  '/html5tech/demos/13-2.html',
+  'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+  'https://fonts.googleapis.com/css?family=Audiowide|Montserrat:200,200i,300,400|Roboto+Slab:100,300,400',
+  'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js',
+  'https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg',
+  'https://img.shields.io/badge/License-AGPL%20v3-blue.svg',
+  'https://via.placeholder.com/150x100'
 ];
 
 // When the service worker is registered, an 'install' event is triggered the 
