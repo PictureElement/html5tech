@@ -21,6 +21,7 @@ var filesToCache = [
 
 
   '/html5tech/css/style.css',
+  '/html5tech/css/prettify.css',
   '/html5tech/css/bootstrap.min.css',
   '/html5tech/css/font-awesome.min.css',
 
