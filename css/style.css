@@ -446,7 +446,7 @@ section {
 
   .more-btn[aria-expanded="true"]::before {
     font-family: 'FontAwesome';
-    content:"\f00d";
+    content:"\f441";
   }
 
   .more-btn[aria-expanded="false"]::before {
