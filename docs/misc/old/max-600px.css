@@ -1,7 +1,0 @@
-#main-heading {
-  color: red;
-}
-
-#browser::after {
-  content: " 0 < w < 600px";
-}

@@ -1,7 +1,0 @@
-#main-heading {
-  color: blue;
-}
-
-#browser::after {
-  content: " w > 800px";
-}

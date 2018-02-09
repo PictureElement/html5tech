@@ -1,5 +1,3 @@
-@import url("../web-fonts-with-css/css/fontawesome-all.min.css");
-
 /* roboto-slab-100 - latin */
 @font-face {
   font-family: 'Roboto Slab';
@@ -269,16 +267,6 @@ section h2 {
   text-decoration: none;
 }
 
-section h2[aria-expanded="true"]::before {
-  font-family: 'FontAwesome';
-  content: "\f106";
-}
-
-section h2[aria-expanded="false"]::before {
-  font-family: 'FontAwesome';
-  content: "\f107";
-}
-
 /* CONTENT COLLAPSE */
 
 /* Create outlined list */
@@ -334,16 +322,6 @@ button.content-btn:hover {
     color: rgb(0,127,127);
     text-decoration: none;
   }
-
-button.content-btn[aria-expanded="true"]::before {
-  font-family: 'FontAwesome';
-  content:"\f00d";
-  }
-
-button.content-btn[aria-expanded="false"]::before {
-  font-family: 'FontAwesome';
-  content: "\f0c9";
-}
 
 ol.sb-list {
     list-style-type: none;
@@ -444,16 +422,6 @@ section {
   .more-btn:hover {
     color: #eee;
     text-decoration: none;
-  }
-
-  .more-btn[aria-expanded="true"]::before {
-    font-family: 'Font Awesome 5 Free';
-    content:"\f441";
-  }
-
-  .more-btn[aria-expanded="false"]::before {
-    font-family: 'FontAwesome';
-    content: "\f0c9";
   }
 
   main h1 {
