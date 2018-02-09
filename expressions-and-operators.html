@@ -25,6 +25,41 @@
     <script src="js/site.js" defer></script>
     <script src="js/run_prettify.js" defer></script>
     <script src="svg-with-js/js/fontawesome-all.min.js" defer></script>
+
+    <style>
+      /* audiowide-regular - latin */
+      @font-face {
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/audiowide-v6-latin-regular.eot'); /* IE9 Compat Modes */
+        src: local('Audiowide Regular'), local('Audiowide-Regular'),
+             url('../fonts/audiowide-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url('../fonts/audiowide-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+             url('../fonts/audiowide-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+             url('../fonts/audiowide-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+             url('../fonts/audiowide-v6-latin-regular.svg#Audiowide') format('svg'); /* Legacy iOS */
+      }
+      a.navbar-brand {
+        font-size: 40px;
+        font-family: 'Audiowide', cursive;
+        color: #007f7f !important;
+        text-shadow: 0 1px 0 #006666,
+                     0 2px 0 #004d4d,
+                     0 1px 3px rgba(0,0,0,.4),
+                     0 2px 4px rgba(0,0,0,.3);
+      }
+      a.navbar-brand span {
+        color: #5f5f5f;
+        text-shadow: 0 1px 0 #4d4d4d,
+                     0 2px 0 #404040,
+                     0 1px 3px rgba(0,0,0,.4),
+                     0 2px 4px rgba(0,0,0,.3);
+      }
+      #tagline {
+        font-family: 'Audiowide', cursive;
+      }
+    </style>
   </head>
   <body>
     <!-- RETURN TO TOP BUTTON -->
