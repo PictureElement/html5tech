@@ -1,0 +1,401 @@
+<!--
+	This file is part of HTML5Tech.
+ 	
+  HTML5Tech is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  HTML5Tech program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with HTML5Tech; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+-->  
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+    <title>HTML|Forms</title>
+    <meta name="description" content="Fundamental resources about HTML5 and friends">
+    <meta name="keywords" content="HTML5Tech, HTML, CSS, HTML5, CSS3, JavaScript">
+    <meta name="author" content="Marios Sofokleous">
+  </head>
+  <body>
+    <header>
+			<div id="branding-container">
+				<div id="branding">
+					<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="300">
+				</div>
+			</div>
+			<div id="nav-container">
+	      <nav class="main-nav">
+	        <a href="index.html">Home</a>
+	        <div class="dropdown">
+	          <button id="current" class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="elements.html">Elements</a>
+	            <a href="images.html">Images</a>
+	            <a href="html-common-mistakes.html">Common Mistakes</a>
+	            <a href="forms.html">Forms</a>
+	            <a href="tables.html">Tables</a>
+	            <a href="">6</a>
+	          </div>
+	        </div>
+	        <div class="dropdown">
+	          <button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="whats-new.html">What's New</a>
+	            <a href="updated-tags.html">Updated Tags</a>
+	            <a href="updated-elements.html">Updated Elements</a>
+	            <a href="new-elements.html">New Elements</a>
+	            <a href="new-input-types.html">New Input Types</a>
+	            <a href="new-input-attributes.html">New Input Attributes</a>
+	            <a href="new-form-elements.html">New Form Elements</a>
+	          </div>
+	        </div>
+	        <div class="dropdown">
+	          <button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="selectors.html">Selectors</a>
+	            <a href="color.html">Color</a>
+	            <a href="box-model.html">Box Model</a>
+	            <a href="fonts.html">Fonts</a>
+	            <a href="styles.html">Styles</a>
+	            <a href="float.html">Float Property</a>
+	            <a href="clean.html">Clean Code</a>
+	            <a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
+	          </div>
+	        </div>
+	        <div class="dropdown">
+	          <button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="">1</a>
+	            <a href="">2</a>
+	            <a href="">3</a>
+	            <a href="">4</a>
+	            <a href="">5</a>
+	            <a href="">6</a>
+	          </div>
+	        </div>
+	      </nav>
+	    </div>
+    </header>
+    <main>
+      <article>
+      	<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
+				<div class="wrapper">
+	        <header>
+	          <h1>Forms</h1>
+	          <div class="byline-wrapper">
+							<img src="images/avatar.png" alt="avatar" width="40">
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-03-23">Mar 23, 2017</time>
+						</div>
+	        </header>
+	        <section>
+	        	<h2 id="one">Markup</h2>
+	          <h3>Description</h3>
+	          <p>
+	            HTML forms are main points of interaction between a user and a web
+	            site. These forms are a way for a web page to get input from the 
+	            user. Usually the input data is sent to the server, but sometimes 
+	            can be intercepted by the web page itself.
+	            How to setup a server to receive and process the user data is beyond 
+	            the scope of this article. We can still design how the from will 
+	            look in the browser.
+	          </p>
+	          <h3>Design</h3>
+	          <p>
+	            The bigger the form, the more you risk losing users. Keep it simple
+	            and stay focused. Only ask for important data you need.
+	          </p>
+	          <p>A simple contact form may look like this:</p>
+	          <img src="images/form1.png" alt="html-form" width="300">
+	          <h3>Implementation</h3>
+	          <h4>HTML</h4>
+	         	<code>
+	          	&lt;form class="myform" action="/handler-page" method="post"&gt;<br>
+	            &nbsp;&nbsp;&lt;fieldset&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Contact Us&lt;/legend&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name">Name:&lt;/label&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="name" name="user-name"&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="mail">E-mail:&lt;/label&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="mail" name="user-mail"&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="msg">Message:&lt;/label&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea id="msg" name="user-message"&gt;&lt;/textarea&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="button"&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&lt;button type="submit"&gt;SEND EMAIL&lt;/button&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	            &nbsp;&nbsp;&lt;/fieldset&gt;<br>
+	            &lt;/form&gt;
+	          </code>
+	          <ul>
+	          	<li>
+	          		The <b>&lt;form&gt;</b> element defines a form for collecting user 
+	          		input.
+	          	</li>
+	          	<li>
+	          		The <b>action</b> attribute defines the location (<i>URL</i>) 
+	          		where the form's collected data should be sent when it is 
+	          		submitted. In the example above, the form data is sent to a page 
+	          		on the server called "/handler-page". This page contains a 
+	          		server-side script(e.g. PHP, Python ...) that handles the form 
+	          		data.
+	          	</li>
+	          	<li>
+	          		The <b>method</b> attribute defines which HTTP method(GET or POST) 
+	          		to send the data with.
+	          	</li>
+	          	<li>
+	          		The <b>&lt;fieldset&gt;</b> tag is used to group related form 
+	          		elements.
+	          	</li>
+	          	<li>
+	          		The <b>&lt;legend&gt;</b> tag defines a caption for the 
+	          		<i>&lt;fieldset&gt;</i> element.
+	          	</li>
+	 						<li>
+	          		The <b>&lt;label&gt;</b> tag defines a label for an 
+	          		<i>&lt;input&gt;</i> element. In other words, it describes what 
+	          		the user should enter for that input. 
+	          	</li>
+	          	<li>
+	          		The <b>for</b> attribute in the <i>&lt;label&gt;</i> tag should be 
+	          		the same as the value of the <b>id</b> attribute in an 
+	          		<i>&lt;input&gt;</i> tag. We do this to associate a label with an 
+	          		input.
+	          	</li>
+	   					<li>
+	          		The <b>&lt;input&gt;</b> tag specifies an input field where the 
+	          		user can enter data. The <i>&lt;input&gt;</i> element can be 
+	          		displayed in several ways depending on the <i>type</i> attribute. 
+	          		To define the default value of an <i>&lt;input&gt;</i> element you 
+	          		have to use the <b>value</b> attribute like this:<br>
+	          		&lt;input type="text" value="Name"&gt;<br>
+	          		&lt;input type="text" value="Surname"&gt;
+	          	</li>
+	    				<li>
+	    					The <b>type</b> attribute defines the way the <i>&lt;input&gt;</i> 
+	    					element behaves. In other words it specifies the type of input.
+	          		Common examples of input types are:<br>
+			          <ul>
+			          	<li>&lt;input type="text"&gt; - single-line text field</li>
+									<li>&lt;input type="checkbox"&gt; - checkbox</li>
+									<li>&lt;input type="radio"&gt; - radio button</li>
+									<li>&lt;input type="file"&gt; - file selection field for uploads</li>
+									<li>&lt;input type="password"&gt; - password field</li>
+									<li>&lt;input type="submit"&gt; - submit button</li>
+								</ul>
+							</li>
+							<li>
+								The <b>name</b> attribute specifies the name of an
+								<i>&lt;input&gt;</i> element. Used to reference elements in 
+								JavaScript.
+							</li>
+	         		<li>
+	         			The <b>&lt;textarea&gt;</b> tag defines a multi-line text input 
+	         			control. Unlike <i>&lt;input&gt;</i>, <i>&lt;textarea&gt;</i> is 
+	         			not an empty element, therefore it needs an opening and closing 
+	         			tag. To define the default value of a <i>&lt;textarea&gt;</i> 
+	         			element you have to put the defaut value between the starting and 
+	         			ending tag like this:<br>
+	         			&lt;textarea&gt;<i>default message</i>&lt;/textarea&gt; 
+	         		</li>
+	     				<li>The <b>&lt;button&gt;</b> tag defines a clickable button.</li>
+	         		<li>
+	         			The <b>type</b> attribute specifies the type of button. It accepts 
+	         			three values: <i>button</i>, <i>submit</i>, or <i>reset</i>.<br>
+	         			<ul>
+			         		<li>
+			         			<b>button:</b> A click on a <i>button</i> button does whatever 
+			         			was designed for. This is type is used for building custom 
+			         			buttons with JavaScript.
+			         		</li>
+			         		<li>
+			         			<b>submit:</b> A click on a <i>submit</i> button, sends the 
+			         			forms data to the web page defined by the <i>action</i> 
+			         			attribute.
+			         		</li>
+			         		<li>
+			         			<b>reset:</b> A click on a <i>reset</i> button, resets all the 
+			         			form elements to their default value.
+			         		</li>  
+	         			</ul>
+	         		</li>
+	         	</ul>
+	         	<p>
+	         		<b>Note:</b> The main difference between 
+	         		<b>&lt;input type="submit"&gt;</b> and 
+	         		<b>&lt;button type="submit"&gt;</b> is that the former only allows 
+	         		plain text as its label whereas the latter allows full HTML content.
+	         	</p>
+	          <h4>Result</h4>
+	          <div class="result-wrapper">
+	          	<img src="images/form2.png" alt="html-form" width="300">
+	          </div>
+	        </section>
+	        <section>
+	        	<h2 id="two">Styling</h2>
+	          <h4>CSS</h4>
+	          <code>
+							.myform fieldset {<br>
+							&nbsp;&nbsp;<i>/* Form width */</i><br>
+							&nbsp;&nbsp;width: 400px;<br>
+							&nbsp;&nbsp;<i>/* Outline of the form */</i><br>
+							&nbsp;&nbsp;border: 1px solid #ccc;<br>
+							&nbsp;&nbsp;border-radius: 10px;<br>
+							&nbsp;&nbsp;padding: 20px;<br>
+							}<br>
+							<br>
+							<i>/* Add space between inputs */</i><br>
+							.myform fieldset div + div {<br>
+							&nbsp;&nbsp;margin-top: 20px;<br>
+							}<br>
+							<br>
+							.myform label {<br>
+							&nbsp;&nbsp;<i>/* Set to inline-block in order to set a width */</i><br>
+							&nbsp;&nbsp;display: inline-block;<br>
+							&nbsp;&nbsp;<i>/* Same size for all labels */</i><br>
+							&nbsp;&nbsp;width: 90px;<br>
+							&nbsp;&nbsp;<i>/* Align label to the right */</i><br>
+							&nbsp;&nbsp;text-align: right;<br>
+							}<br>
+							<br>
+							.myform input, .myform textarea {<br>
+							&nbsp;&nbsp;<i>/*<br> 
+							&nbsp;&nbsp;&nbsp;&nbsp;By default &lt;input&gt; fields use a sans-serif font and<br> 
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea&gt; fields use a monospace font. Make sure that all<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;text fields use the same font<br>
+							&nbsp;&nbsp;*/</i><br>
+							&nbsp;&nbsp;font-family: Lato, Helvetica, Arial;<br>
+							&nbsp;&nbsp;<i>/* Make sure all text fields are the same size */</i><br>
+							&nbsp;&nbsp;width: 300px;<br>
+							&nbsp;&nbsp;<i>*/<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;With border-box, the width & height properties includes content,<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;padding and border, but not the margin<br>
+							&nbsp;&nbsp;*/</i><br>
+							&nbsp;&nbsp;box-sizing: border-box;<br>
+							&nbsp;&nbsp;<i>/* Set the same border style as the outline of the form */</i><br>
+							&nbsp;&nbsp;border: 1px solid #ccc;<br>
+							}<br>
+							<br>
+							<i>/* Select and style input field when it get focus */</i><br>
+							.myform input:focus, .myform textarea:focus {<br>
+							&nbsp;&nbsp;background-color: #ccc;<br>
+							}<br>
+							<br>
+							.myform textarea {<br>
+							&nbsp;&nbsp;<i>/*<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;Align the top of the textarea with the top of the tallest element<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;on the line(i.e. label)<br>
+							&nbsp;&nbsp;*/</i><br>
+							&nbsp;&nbsp;vertical-align: top;<br>
+							&nbsp;&nbsp;height: 100px;<br>
+							}<br>
+							<br>
+							<i>/* Align button with text fields */</i><br>
+							.button {<br>
+							&nbsp;&nbsp;<i>/* Same size as the width of the labels */</i><br>
+							&nbsp;&nbsp;padding-left: 90px;<br>
+							&nbsp;&nbsp;<i>/* Represents the space between a label and the text field */</i><br>
+							&nbsp;&nbsp;margin-left: .5em;<br>
+							}<br>
+						</code>
+						<h4>Result</h4>
+	          <div class="result-wrapper">
+	          	<form class="myform" action="handler-page" method="post">
+	             	<fieldset>
+		             	<legend>Contact Us</legend>
+		             	<div>
+		              	<label for="name">Name:</label>
+		               	<input type="text" id="name" name="user-name">
+		            	</div>
+		            	<div>
+		              	<label for="mail">E-mail:</label>
+		               	<input type="email" id="mail" name="user-mail">
+		             	</div>
+		             	<div>
+		               	<label for="msg">Message:</label>
+		               	<textarea id="msg" name="user-message"></textarea>
+		             	</div>
+		            	<div class="button">
+							    	<button type="submit">SEND EMAIL</button>
+							 		</div>
+							 	</fieldset>
+	           	</form>
+	          </div>
+	        </section>
+	      </div>
+     	</article>
+   	</main>
+   	<footer>
+			<div class="follow-us">
+	      <a href="">
+	        <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
+	      </a>
+	    </div>
+      <div class="footer-nav">
+     		<a href="credits.html">Credits</a>
+      	<a href="terms.html">Terms of Use</a>
+      	<a href="privacy.html">Privacy Policy</a>
+      	<a href="advertise.html">Advertise</a>
+      </div>
+      <div class="copyright">
+	    	&copy; 2017 <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+	    </div>
+	    <div class="page-conformity">
+	      <img 
+	      	src="images/valid-css.svg"
+	      	alt="valid CSS logo"
+	      	width="100">
+	      <img 
+	      	src="images/GPLv3-logo.svg"
+	      	alt="GPLv3 license logo"
+	      	width="100">
+	    </div>
+    </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h3>Contents</h3>" + "<ol>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ol>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
+  </body>
+</html>

@@ -1,0 +1,873 @@
+<!--
+	This file is part of HTML5Tech.
+ 	
+  HTML5Tech is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  HTML5Tech program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with HTML5Tech; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+    <title>HTML|Images</title>
+    <meta name="description" content="Fundamental resources about HTML5 and friends">
+    <meta name="keywords" content="HTML5Tech, HTML, CSS, HTML5, CSS3, JavaScript">
+    <meta name="author" content="Marios Sofokleous">
+  </head>
+	<body>
+		<header>
+			<div id="branding-container">
+				<div id="branding">
+					<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="300">
+				</div>
+			</div>
+			<div id="nav-container">
+				<nav class="main-nav">
+	      	<a href="index.html">Home</a>
+	      	<div class="dropdown">
+	      		<button id="current" class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="elements.html">Elements</a>
+	      			<a href="images.html">Images</a>
+	      			<a href="html-common-mistakes.html">Common Mistakes</a>
+	      			<a href="forms.html">Forms</a>
+	      			<a href="tables.html">Tables</a>
+	      			<a href="">6</a>
+	      		</div>
+	      	</div>
+					<div class="dropdown">
+	      		<button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	            <a href="whats-new.html">What's New</a>
+	      			<a href="updated-tags.html">Updated Tags</a>
+	      			<a href="updated-elements.html">Updated Elements</a>
+	      			<a href="new-elements.html">New Elements</a>
+	      			<a href="new-input-types.html">New Input Types</a>
+	      			<a href="new-input-attributes.html">New Input Attributes</a>
+	      			<a href="new-form-elements.html">New Form Elements</a>
+	      		</div>
+	      	</div>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="selectors.html">Selectors</a>
+	      			<a href="color.html">Color</a>
+	      			<a href="box-model.html">Box Model</a>
+	      			<a href="fonts.html">Fonts</a>
+	      			<a href="styles.html">Styles</a>
+	      			<a href="float.html">Float Property</a>
+	      			<a href="clean.html">Clean Code</a>
+	            <a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
+	      		</div>
+	      	</div>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">Mobile<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="">1</a>
+	      			<a href="">2</a>
+	      			<a href="">3</a>
+	      			<a href="">4</a>
+	      			<a href="">5</a>
+	      			<a href="">6</a>
+	      		</div>
+	      	</div>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="">1</a>
+	      			<a href="">2</a>
+	      			<a href="">3</a>
+	      			<a href="">4</a>
+	      			<a href="">5</a>
+	      			<a href="">6</a>
+	      		</div>
+	      	</div>
+	  		</nav>
+	  	</div>
+		</header>
+		<main>
+			<article>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
+				<div class="wrapper">
+					<header>
+						<h1>Images</h1>
+						<div class="byline-wrapper">
+							<img src="images/avatar.png" alt="avatar" width="40">
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-03-16">Mar 16, 2017</time>
+						</div>
+					</header>
+					<section>
+	          <h2 id="one">Image Types</h2>
+	          <ol>
+	            <li>
+	              <b>Content images:</b> just as necessary to the page as all of the 
+	              text(e.g. product images).
+	            </li>
+	            <li>
+	              <b>Layout images:</b> not necessary to understand the content of 
+	              the page(e.g. background images).
+	            </li>
+	            <li>
+	              <b>User interface images:</b> assist with the interface of the web
+	              page, but are not required to understand the content of the page.
+	            </li>
+	          </ol>
+	        </section>
+	        <section>
+	          <h2 id="two">Content Images</h2>
+	          <h3>Description</h3>
+	          <p>
+	            The &lt;img&gt; element represents an image in the document. This 
+	            element has two required attributes: src and alt. Most browsers will 
+	            display the &lt;img&gt; element as <i>inline-block</i>.
+	          </p>
+	          <h3>Basic Syntax</h3>
+	          <h4>HTML</h4>
+	          <code>
+	          	&lt;img src="images/logo.png" alt="logo" height="50" width="50"&gt;
+	          </code>
+	          <p>
+	            It is recommended to place the image files in a separate folder, not
+	            in the main site folder which includes all of our HTML and CSS.
+	          </p>
+	          <p>where:</p>
+	          <ul>
+	            <li>
+	              <i>src</i>: specify the URL of an image.
+	            </li>
+	            <li>
+	              <i>alt</i>: specify an alternate text for an image for 
+	              accessibility reasons.
+	            </li>
+	            <li>
+	              <i>height/width</i>: specify the height/width of an image in 
+	              pixels.
+	            </li>
+	          </ul>
+	          <h3>Examples</h3>
+	          <ol>
+	            <li>
+	              Insert an image
+	              <h4>HTML</h4>
+	              <code>
+	              	&lt;img src="youtube-logo.png" alt="YouTube"&gt;
+	              </code>
+	              <h4>Result</h4>
+	              <img src="images/youtube-logo.png" alt="YouTube" width="30">
+	            </li>
+	            <li>
+	              Insert an image link
+	              <h4>HTML</h4>
+	              <code>
+	              	&lt;a href="https://youtube.com&gt;YouTube&lt;img src="youtube-logo.png" alt="YouTube"&gt;&lt;/a&gt;
+	              </code>
+	              <h4>Result</h4>
+	              <a href="https://youtube.com"><img src="images/youtube-logo.png" alt="YouTube" width="30"></a>
+	            </li>
+	            <li>
+	              Side-by-side images
+	              <h4>HTML</h4>
+	              <code>
+	             		&lt;ul class="images"&gt;<br>
+	               	&nbsp;&nbsp;&lt;li&gt;&lt;img src="images/google-logo.png" alt="Google logo"&gt;&lt;/li&gt;<br>
+	               	&nbsp;&nbsp;&lt;li&gt;&lt;img src="images/yandex-logo.png" alt="Yandex logo"&gt;&lt;/li&gt;<br>
+	               	&nbsp;&nbsp;&lt;li&gt;&lt;img src="images/amazon-logo.jpg" alt="Amazon logo"&gt;&lt;/li&gt;<br>
+	                &lt;/ul&gt;
+	              </code>
+	              <p>
+	                Without CSS, each one of the images displays on top of each other 
+	                and has a bullet point. To make the images display side-by-side 
+	                and remove the bullets, we need to jump over CSS.
+	              </p>
+	              <h4>CSS</h4>
+	              <code>
+	             		.images {<br>
+	                &nbsp;&nbsp;/* Remove bullets */<br>
+	                &nbsp;&nbsp;list-style-type: none;<br>
+	                &nbsp;&nbsp;/* Remove padding */<br>
+	                &nbsp;&nbsp;padding: 0;<br>
+	                }<br>
+	                <br>
+	                .images li {<br>
+	                &nbsp;&nbsp;/* Display images inline */<br>
+	               	&nbsp;&nbsp;display: inline;<br>
+	                &nbsp;&nbsp;/* Add a padding on the left so all images aren't 
+	                just pushed right against each other. */<br>
+	                &nbsp;&nbsp;padding-left: 10px;<br>
+	                }
+	              </code>
+	              <h4>Result</h4>
+	              <ul class="images">
+	                <li><img src="images/google-logo.png" alt="Google logo" width="60"></li>
+	                <li><img src="images/yandex-logo.png" alt="Yandex logo" width="60"></li>
+	                <li><img src="images/amazon-logo.jpg" alt="Amazon logo" width="60"></li>
+	              </ul>
+	            </li>
+	          </ol>
+	        </section>
+	        <section>
+	          <h2 id="three">Layout Images</h2>
+	          <h3>Description</h3>
+	          <p>
+	            Unlike content images, layout/background images are not added in 
+	            HTML but only in CSS.
+	          </p>
+	          <h3>Background Properties</h3>
+	          <ol>
+	            <li>
+	              <b>background-color</b>
+	              <h4>CSS</h4>
+	              <code>
+	              	body {<br>
+	                &nbsp;&nbsp;background-color: #5f5f5f;<br>
+	                }
+	              </code>
+	              <p>
+	                Tip: you should always set a background color in case the 
+	                background image fails to load. If the background image is dark, 
+	                set the background to a dark color as well.
+	              </p>
+	            </li>
+	            <li>
+	              <b>background-image</b>
+	              <h4>CSS</h4>
+	              <code>
+	          			body {<br>
+	                &nbsp;&nbsp;background-image: url(images/foo.png);<br>
+	                }
+	              </code>
+	              <p>
+	                Tip: check 
+	                <a href="https://www.toptal.com/designers/subtlepatterns/">here</a>
+	                for free background images/patterns.
+	              </p>
+	            </li>
+	            <li>
+	              <b>background-position</b>
+	              <h4>CSS</h4>
+	             	<code>
+	              	body {<br>
+	               	&nbsp;&nbsp;background-position: <i>value</i>;<br>
+	                }
+	              </code>
+	              <p>where:</p>
+	              <ul>
+	                <li>
+	                  <i>value</i> = <i>keyword/x% y%/xpos ypos</i>
+	                </li>
+	                <li>
+	                  <i>keyword</i> = left top, left center, left bottom, 
+	                  right top, right center, right bottom, center top, 
+	                  center center, center bottom.
+	                </li>
+	                <li>
+	                  <i>x% y%</i>: top left corner is 0% 0%, right bottom corner is 
+	                  100% 100%.
+	                </li>
+	                <li>
+	                  <i>xpos ypos</i>: top left corner is 0 0, units can be any CSS 
+	                  units(e.g. px, em, etc.).
+	                </li>
+	              </ul>
+	            </li>
+	            <li>
+	              <b>background-repeat</b>
+	              <h4>CSS</h4>
+	              <code>
+	              	body {<br>
+	                &nbsp;&nbsp;background-position: top left;<br>
+	                &nbsp;&nbsp;background-repeat: repeat/repeat-x/repeat-y/no-repeat;<br>
+	                }
+	              </code>
+	              <p>where:</p>
+	              <ul>
+	                <li>
+	                  <i>repeat</i>: repeat background image both vertically and 
+	                  horizontally(default).
+	                </li>
+	                <li>
+	                  <i>repeat-x</i>: repeat background image just in the 
+	                  x-directon.
+	                </li>
+	                <li>
+	                  <i>repeat-y</i>: repeat background image just in the 
+	                  y-directon.
+	                </li>
+	                <li>
+	                  <i>no-repeat</i>: don't repeat at all.
+	                </li>
+	              </ul>
+	            </li>
+	            <li>
+	              <b>background-size</b>
+	              <h4>CSS</h4>
+	              <code>
+	              	body {<br>
+	               	&nbsp;&nbsp;background-size: <i>width height</i> | cover | contain;<br>
+	                }
+	             	</code>
+	              <p>where:</p>
+	              <ul>
+	                <li>
+	                  <i>width height</i>: set the image dimensions.
+	                </li>
+	                <li>
+	                  cover: scale the background image to be as large as possible 
+	                  so that the background area is completely covered by the 
+	                  background image.
+	                </li>
+	                <li>
+	                  contain: scale the image to the largest size such that both 
+	                  its width and its height can fit inside the content area.
+	                </li>
+	              </ul>
+	            </li>
+	          </ol>
+	          <h3>Background Shorthand Property</h3>
+	          <p>
+	            Background properties can be shortened into a single background 
+	            property:
+	          </p>
+	          <h4>CSS</h4>
+	          <code>
+	           	body {<br>
+	          	&nbsp;&nbsp;background: <i>bg-color</i> <i>bg-image</i> <i>bg-position</i>/<i>bg-size</i> <i>bg-repeat</i>;<br>
+	            }
+	         	</code>
+	          <p>
+	            <b>Note</b>: If one of the properties in the shorthand declaration 
+	            is the <i>bg-size</i> property, you must use a / (slash) to separate
+	            it from the <i>bg-position</i> property.
+	          </p>
+	          <h3>Writing on Top of Background Images</h3>
+	          <p>
+	            Setup containers that display backgrounds/layout images and then add
+	            text tags on top of them.
+	          </p>
+	          <p>  
+	            One way to do this, is to create a &lt;div&gt; container that completely 
+	            contains a background image, and put text tags inside of it:
+	          </p>
+	          <h4>HTML</h4>
+	          <code>
+	          	&lt;div class="featured-image"&gt;<br>
+	           	&nbsp;&nbsp;&lt;!-- Add a text tag of your choice on top of the 
+	           	featured image --&gt;<br>
+	           	&nbsp;&nbsp;&lt;p&gt;Sneakers up to 30% off&lt;/p&gt;<br>
+	            &lt;/div&gt;
+	          </code>
+	          <h4>CSS</h4>
+	          <code>
+	          	.featured-image {<br>
+	            &nbsp;&nbsp;/* Actual width of the &lt;div&gt; container */<br>
+	            &nbsp;&nbsp;width: 200px;<br>
+	            &nbsp;&nbsp;/* Actual height of the &lt;div&gt; container */<br>
+	            &nbsp;&nbsp;height: 100px;<br>
+	            &nbsp;&nbsp;/* Background image properties */<br>
+	            &nbsp;&nbsp;background: #ffffff url(images/sneakers.jpg) 0 0/200px 100px no-repeat;<br>
+	            }<br>
+	            <br>
+	            /* Style the &lt;p&gt; tag by setting various properties */<br>
+	            .featured-image p {<br>
+	            &nbsp;&nbsp;/* Pink background color */<br>
+	            &nbsp;&nbsp;background-color: #ffc0cb;<br>
+	            &nbsp;&nbsp;/* Green font color */<br>
+	            &nbsp;&nbsp;color: #008000;<br>
+	            &nbsp;&nbsp;/* Adjust the padding */<br>
+	            &nbsp;&nbsp;padding: 5px 0 5px 0;<br>
+	            &nbsp;&nbsp;/* Make the text all uppercase */<br>
+	            &nbsp;&nbsp;text-transform: uppercase;<br>
+	            }
+	          </code>
+	          <h4>Result</h4>
+	          <div class="featured-image">
+	            <p>Sneakers up to 30% off</p>
+	          </div>
+	        </section>
+	        <section>
+	          <h2 id="four">Floating Images</h2>
+	          <h3>Description</h3>
+	          <p>
+	          	To display an image to the side of block level tags, in other words 
+	          	to have an image sitting to the left/right of some text we use the 
+	          	<i>float</i> property.
+	          </p>
+	          <h3>Example</h3>
+	          <h4>HTML</h4>
+	          <code>
+		        	&lt;ul class="cakes"&gt;<br>
+							&nbsp;&nbsp;&lt;li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/strawberry-cake.jpg" alt="strawberry cake" height="90"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Strawberry Cake&lt;/h1&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Description: This is a dangerously delicious cake!&lt;/p&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Creator: Marios Sofokleous&lt;/p&gt;<br>
+							&nbsp;&nbsp;&lt;/li&gt;<br>
+							&nbsp;&nbsp;&lt;li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/unknown-cake.jpg" alt="unknown cake" height="90"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Unknown Cake&lt;/h1&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Description: Chocolate, strawberry, cookies, maltesers ... you name it!&lt;/p&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Creator: Marios Sofokleous&lt;/p&gt;<br>
+							&nbsp;&nbsp;&lt;/li&gt;<br>
+							&lt;/ul&gt;
+						</code>
+						<h4>CSS</h4>
+	          <code>
+	 						.cakes {<br>
+							&nbsp;&nbsp;/* Remove bullets */<br>
+							&nbsp;&nbsp;list-style-type: none;<br>
+							}<br>
+							<br>
+							.cakes img {<br>
+	 						&nbsp;&nbsp;/* Float image to the left in order to wrap text around it */<br>
+							&nbsp;&nbsp;float: left;<br>
+							&nbsp;&nbsp;margin-top: 2px;<br>
+	  					&nbsp;&nbsp;border-radius: 50%;<br>
+	  					&nbsp;&nbsp;border: 1px solid black;<br>
+	 						}
+	 					</code>
+	 					<h4>Result</h4>
+	 					<div class="result-wrapper">
+		 					<ul class="cakes">
+							  <li>
+							    <img src="images/strawberry-cake.jpg" alt="strawberry cake" height="90">
+							    <h1>Strawberry Cake</h1>
+							    <p>Description: This is a dangerously delicious cake!</p>
+							    <p>Creator: Marios Sofokleous</p>
+							  </li>
+							  <li>
+							    <img src="images/unknown-cake.jpg" alt="unknown cake" height="90">
+							    <h1>Unknown Cake</h1>
+							    <p>Description: Chocolate, strawberry, cookies, maltesers ... you name it!</p>
+							    <p>Creator: Marios Sofokleous</p>
+							  </li>
+							</ul>
+						</div>
+						<p>
+							<b>Note:</b> in reality <i>float</i> is a tricky property, and is 
+							covered in much greater detail <a href="">here</a>.
+						</p> 
+					</section>
+					<section>
+	        	<h2 id="five">Image Cropping</h2>
+	          <h3>Example #1: Crop, Resize, Don't keep ratio</h3>
+	          <h4>HTML</h4>
+	          <code>
+	          	&lt;img src="images/bus.jpeg" alt="bus">
+	          </code>
+	          <h4>CSS</h4>
+	         	<code>
+	          	img {<br>
+							&nbsp;&nbsp;border: 1px solid red;<br>
+							&nbsp;&nbsp;height: 400px;<br>
+							&nbsp;&nbsp;width: 200px;<br>
+							}
+						</code>
+						<h4>Result</h4>
+	        	<img id="image-crop" src="images/bus.jpeg" alt="bus">
+	        	<h3>Example #2: Crop, Position, Don't resize, Keep ratio</h3>
+	        	<h4>HTML</h4>
+	          <code>
+	          	&lt;div id="crop"><br>
+	        		&nbsp;&nbsp;&lt;img src="images/bus.jpeg" alt="bus"><br>
+	        		&lt;/div>
+	        	</code>
+	        	<h4>CSS</h4>
+	         	<code>
+		         	#crop {<br>
+							&nbsp;&nbsp;border: 1px solid red;<br>
+							&nbsp;&nbsp;height: 400px;<br>
+							&nbsp;&nbsp;width: 200px;<br>
+							&nbsp;&nbsp;overflow: hidden;<br>
+							}<br>
+							<br>
+							#crop img {<br>
+							&nbsp;&nbsp;position: relative;<br>
+							&nbsp;&nbsp;left: -2500px;<br>
+							&nbsp;&nbsp;top: -1800px;<br>
+							}
+						</code>
+						<h4>Result</h4>
+	        	<div id="crop-1">
+	        		<img src="images/bus.jpeg" alt="bus">
+	        	</div>
+	        	<h3>Example #3: Crop, Position, Resize, Keep ratio, Account for portrait-oriented images</h3>
+	        	<h4>HTML</h4>
+	          <code>
+		          &lt;div id="crop"><br>
+		        	&nbsp;&nbsp;&lt;img src="images/bus.jpeg" alt="bus"><br>
+		        	&lt;/div>
+		        </code>
+		        <h4>CSS</h4>
+	         	<code>
+		         	#crop {<br>
+							&nbsp;&nbsp;border: 1px solid red;<br>
+							&nbsp;&nbsp;height: 400px;<br>
+							&nbsp;&nbsp;width: 200px;<br>
+							&nbsp;&nbsp;overflow: hidden;<br>
+							}<br>
+							<br>
+							#crop img {<br>
+							&nbsp;&nbsp;height: 100%;<br>
+							&nbsp;&nbsp;width: auto;<br>
+							&nbsp;&nbsp;position: relative;<br>
+	  					&nbsp;&nbsp;left: -170px;<br>
+							}
+						</code>
+						<h4>Result</h4>
+	        	<div id="crop-2">
+	        		<img src="images/bus.jpeg" alt="bus">
+	        	</div>
+	        	<h3>Example #4: Crop, Resize, Keep ratio, Account for landscape-oriented images</h3>
+	        	<h4>HTML</h4>
+	          <code>
+		          &lt;div id="crop"><br>
+		        	&nbsp;&nbsp;&lt;img src="images/bus.jpeg" alt="bus"><br>
+		        	&lt;/div>
+		        </code>
+		        <h4>CSS</h4>
+	         	<code>
+		         	#crop {<br>
+							&nbsp;&nbsp;border: 1px solid red;<br>
+							&nbsp;&nbsp;height: 400px;<br>
+							&nbsp;&nbsp;width: 200px;<br>
+							&nbsp;&nbsp;overflow: hidden;<br>
+							}<br>
+							<br>
+							#crop img {<br>
+							&nbsp;&nbsp;height: auto;<br>
+							&nbsp;&nbsp;width: 100%;<br>
+							}
+						</code>
+						<h4>Result</h4>
+	        	<div id="crop-3">
+	        		<img src="images/bus.jpeg" alt="bus">
+	        	</div>
+	        	<h3>
+	        		Example #5: Crop, Position, Resize, Keep ratio, Account for both 
+	        		portrait-oriented & landscape-oriented images
+	        	</h3>
+	        	<h4>HTML</h4>
+	          <code>
+			      	&lt;div id="crop-1" style="background-image: url(images/bus.jpeg)"><br>
+		        	&lt;/div><br>
+		        	&lt;div id="crop-2" style="background-image: url(images/selfie-monkey.jpeg)"><br>
+		        	&lt;/div>
+		        </code>
+		        <h4>CSS</h4>
+	         	<code>
+		         	#crop-1 {<br>
+							&nbsp;&nbsp;width: 300px;<br>
+							&nbsp;&nbsp;height: 300px;<br>
+							&nbsp;&nbsp;/* resize image to fill the entire bg but keep ratio */<br>
+							&nbsp;&nbsp;background-size: cover;<br>
+							&nbsp;&nbsp;/* position the subject to the center */<br>
+							&nbsp;&nbsp;background-position: 35% 0;<br>
+							}<br>
+							<br>
+							#crop-2 {<br>
+							&nbsp;&nbsp;width: 300px;<br>
+							&nbsp;&nbsp;height: 300px;<br>
+							&nbsp;&nbsp;/* resize image to fill the entire bg but keep ratio */<br>
+							&nbsp;&nbsp;background-size: cover;<br>
+							&nbsp;&nbsp;/* position the subject to the center */<br>
+							&nbsp;&nbsp;background-position: 0 10%;<br>
+							}
+						</code>
+						<h4>Result</h4>
+	        	<div id="crop-4" style="background-image: url(images/bus.jpeg)">
+	        	</div>
+	        	<div id="crop-5" style="background-image: url(images/selfie-monkey.jpeg)">
+	        	</div>
+	        </section>
+	        <section>
+	        	<h2 id="six">Logos</h2>
+	        	<h3>Method #1: Apply logo as background</h3>
+	        	<h4>HTML</h4>
+	        	<code>
+	        		&lt;a href="index.html" id="logo" title="Return to the homepage">Marios Sofokleous&lt;/a>
+	        	</code>
+	        	<h4>CSS</h4>
+	        	<code>
+	        		#logo {<br>
+							&nbsp;&nbsp;width: 100px;<br>
+							&nbsp;&nbsp;height: 100px;<br>
+							&nbsp;&nbsp;display: block;<br>
+							&nbsp;&nbsp;background-size: cover;<br>
+							&nbsp;&nbsp;background-image: url(images/logomakr_6AGIbQ.png);<br>
+							&nbsp;&nbsp;/* Move away text */<br>
+							&nbsp;&nbsp;text-indent: -9999px;<br>
+							}
+						</code>
+						<h4>Result</h4>
+	        	<a href="index.html" id="logo-1" title="Return to the homepage">Marios Sofokleous</a>
+	        	<h3>Method #2: Apply logo as image</h3>
+	        	<h4>HTML</h4>
+	        	<code>
+	        		&lt;a href="index.html" id="logo" title="Return to the homepage"><br>
+	        		&nbsp;&nbsp;&lt;img src="images/logomakr_6AGIbQ.png" alt="logo"><br>
+	        		&lt;/a>
+	        	</code>
+	        	<h4>CSS</h4>
+	        	<code>
+	        		#logo img {<br>
+							&nbsp;&nbsp;width: 100px;<br>
+							&nbsp;&nbsp;height: 100px;<br>
+							}
+	        	</code>
+	        	<h4>Result</h4>
+	        	<a href="index.html" id="logo-2" title="Return to the homepage">
+	        		<img src="images/logomakr_6AGIbQ.png" alt="logo">
+	        	</a>
+	        	<p>
+	        		<b>Note:</b> There has been much debate for a long time as to how to 
+	        		mark up logos. Should your logo be applied as an image or a 
+	        		background?  The correct answer is that logos are content
+	        		(therefore images) not styles and should not be applied as 
+	        		backgrounds.
+	        	</p> 
+	        </section>
+	        <section>
+	        	<h2 id="seven">Sprites</h2>
+	        	<h3>Description</h3>
+	        	<p>
+	        		CSS Sprites are means of combining multiple images into a single 
+	        		image file to improve performance by limiting requests to the 
+	        		server.
+	        	</p> 
+	        	<p>
+	        		<b>Note:</b> The following methods, make use of the following 
+	        		sprite:
+	        	</p>
+	       		<img src="images/sprite-1.png" id="sprite-1" alt="sprite-1">
+	        	<h3>Method #1: As background</h3>
+	        	<h4>HTML</h4>
+	        	<code>
+	        		&lt;a href="index.html" id="logo" title="Return to the homepage">Marios Sofokleous&lt;/a>
+	        	</code>
+	        	<h4>CSS</h4>
+	        	<code>
+		        	#logo {<br>
+							&nbsp;&nbsp;width: 100px;<br>
+							&nbsp;&nbsp;height: 100px;<br>
+							&nbsp;&nbsp;display: block;<br>
+							&nbsp;&nbsp;background-size: cover;<br>
+							&nbsp;&nbsp;background-image: url(images/sprite-1.png);<br>
+							&nbsp;&nbsp;/* Move away text */<br>
+							&nbsp;&nbsp;text-indent: -9999px;<br>
+							}<br>
+							<br>
+							#logo:hover {<br>
+							&nbsp;&nbsp;background-position: 0  -100px;<br>
+							}
+						</code>
+	        	<h4>Result</h4>
+	        	<a href="index.html" id="logo-3" title="Return to the homepage">Marios Sofokleous</a>
+	        	<h3>Method #2: As image</h3>
+	        	<h4>HTML</h4>
+	        	<code>
+		        	&lt;a href="index.html" id="logo" title="Return to the homepage"><br>
+							&nbsp;&nbsp;&lt;img src="images/sprite-1.png" alt="logo"><br>
+							&lt;/a>
+						</code>
+						<h4>CSS</h4>
+	        	<code>
+	        		#logo {<br>
+							&nbsp;&nbsp;width: 100px;<br>
+							&nbsp;&nbsp;height: 100px;<br>
+							&nbsp;&nbsp;display: block;<br>
+							&nbsp;&nbsp;overflow: hidden;<br>
+							}<br>
+							<br>
+							#logo img {<br>
+							&nbsp;&nbsp;width: 100px;<br>
+							&nbsp;&nbsp;height: auto;<br>
+							}<br>
+							<br>
+							#logo img:hover {<br>
+							&nbsp;&nbsp;object-position: 0 -100px;<br>
+							}
+	        	</code>
+	        	<h4>Result</h4>
+	        	<a href="index.html" id="logo-4" title="Return to the homepage">
+						  <img src="images/sprite-1.png" alt="logo">
+						</a>
+						<p><b>Notes:</b></p>
+						<ol>
+							<li>
+								When an image has semantical meaning(e.g. logo, product, etc.) use 
+								the second method. Otherwise, if the image is just for decoration
+								(e.g. background of a button) use the first method.
+							</li>
+							<li>
+								We can have the same effect with the use of two separate image 
+	              files(red logo, purple logo) and by having the actual background 
+	              image change on hover. However, this is a disadvantage since it 
+								requires whenever* a hover state is triggered to load an image 
+								from the server. Therefore, there's going to be a flash in the 
+								transition and an extra HTTP request(overhead).
+							</li>
+	          </ol>
+						<p>*With the exception of preloaded images</p> 
+	          <h3>Example</h3>
+	          <p>In this example the following sprite is used:</p>
+	          <img src="images/sprite-2.png" id="sprite-2" alt="sprite-2">
+	          <p>The sprite has the following properties:</p>
+	          <ul>
+	            <li>width: 924 pixels</li>
+	            <li>height: 252 pixels</li>
+	          </ul>
+	          <p>
+	            As we can infer from the sprite dimensions, each icon is 84 x 84 
+	            pixels.
+	          </p>
+	          <h4>HTML</h4>
+	          <code>
+	            &lt;ul id="social-icons"><br>
+	            &nbsp;&nbsp;&lt;li><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="https://twitter.com" id="twitter"><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/sprite-2.png" alt="social-icons-sprite"><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a><br>
+	            &nbsp;&nbsp;&lt;/li><br>
+	            &nbsp;&nbsp;&lt;li><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="https://facebook.com" id="facebook"><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/sprite-2.png" alt="social-icons-sprite"><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a><br>
+	            &nbsp;&nbsp;&lt;/li><br>
+	            &nbsp;&nbsp;&lt;li><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="https://linkedin.com" id="linkedin"><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/sprite-2.png" alt="social-icons-sprite"><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a><br>
+	            &nbsp;&nbsp;&lt;/li><br>
+	            &lt;/ul>
+	          </code>
+	          <h4>CSS</h4>
+	          <code>
+	            #social-icons {<br>
+	            &nbsp;&nbsp;list-style-type: none;<br>
+	            }<br>
+	            <br>
+	            #social-icons li {<br>
+	            &nbsp;&nbsp;display: inline-block;<br>
+	            }<br>
+	            <br>
+	            #twitter, #facebook, #linkedin {<br>
+	            &nbsp;&nbsp;width: 84px;<br>
+	            &nbsp;&nbsp;height: 84px;<br>
+	            &nbsp;&nbsp;display: block;<br>
+	            &nbsp;&nbsp;overflow: hidden;<br>
+	            }<br>
+	            <br>
+	            #twitter img {<br>
+	            &nbsp;&nbsp;object-position: -672px 0;<br>
+	            }<br>
+	            <br>
+	            #linkedin img {<br>
+	            &nbsp;&nbsp;object-position: -336px 0;<br>
+	            }<br>
+	            <br>
+	            #facebook img:hover {<br>
+	            &nbsp;&nbsp;object-position: 0 -84px;<br>
+	            }<br>
+	            <br>
+	            #twitter img:hover {<br>
+	            &nbsp;&nbsp;object-position: -672px -84px;<br>
+	            }<br>
+	            <br>
+	            #linkedin img:hover {<br>
+	            &nbsp;&nbsp;object-position: -336px -84px;<br>
+	            }
+	          </code>
+	          <h4>Result</h4>
+	          <ul id="social-icons">
+	            <li>
+	              <a href="https://twitter.com" id="twitter">
+	                <img src="images/sprite-2.png" alt="social-icons-sprite">
+	              </a>
+	            </li>
+	            <li>
+	              <a href="https://facebook.com" id="facebook">
+	                <img src="images/sprite-2.png" alt="social-icons-sprite">
+	              </a>
+	            </li>
+	            <li>
+	              <a href="https://www.linkedin.com" id="linkedin">
+	                <img src="images/sprite-2.png" alt="social-icons-sprite">
+	              </a>
+	            </li>
+	          </ul>
+	        </section>
+	      </div>
+			</article>
+    </main>
+    <footer>
+			<div class="follow-us">
+	      <a href="">
+	        <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
+	      </a>
+	    </div>
+      <div class="footer-nav">
+     		<a href="credits.html">Credits</a>
+      	<a href="terms.html">Terms of Use</a>
+      	<a href="privacy.html">Privacy Policy</a>
+      	<a href="advertise.html">Advertise</a>
+      </div>
+      <div class="copyright">
+	    	&copy; 2017 <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+	    </div>
+	    <div class="page-conformity">
+	      <img 
+	      	src="images/valid-css.svg"
+	      	alt="valid CSS logo"
+	      	width="100">
+	      <img 
+	      	src="images/GPLv3-logo.svg"
+	      	alt="GPLv3 license logo"
+	      	width="100">
+	    </div>
+    </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h3>Contents</h3>" + "<ol>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ol>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
+  </body>
+</html>

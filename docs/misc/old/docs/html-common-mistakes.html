@@ -1,0 +1,210 @@
+<!--
+	This file is part of HTML5Tech.
+ 	
+  HTML5Tech is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  HTML5Tech program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with HTML5Tech; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+    <title>HTML|Common Mistakes</title>
+    <meta name="description" content="Fundamental resources about HTML5 and friends">
+    <meta name="keywords" content="HTML5Tech, HTML, CSS, HTML5, CSS3, JavaScript">
+    <meta name="author" content="Marios Sofokleous">
+  </head>
+  <body>
+  	<header>
+			<div id="branding-container">
+				<div id="branding">
+					<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="300">
+				</div>
+			</div>
+			<div id="nav-container">
+	      <nav class="main-nav">
+	        <a href="index.html">Home</a>
+	        <div class="dropdown">
+	          <button id="current" class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="elements.html">Elements</a>
+	            <a href="images.html">Images</a>
+	            <a href="html-common-mistakes.html">Common Mistakes</a>
+	            <a href="forms.html">Forms</a>
+	            <a href="tables.html">Tables</a>
+	            <a href="">6</a>
+	          </div>
+	        </div>
+	        <div class="dropdown">
+	          <button class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="whats-new.html">What's New</a>
+	            <a href="updated-tags.html">Updated Tags</a>
+	            <a href="updated-elements.html">Updated Elements</a>
+	            <a href="new-elements.html">New Elements</a>
+	            <a href="new-input-types.html">New Input Types</a>
+	            <a href="new-input-attributes.html">New Input Attributes</a>
+	            <a href="new-form-elements.html">New Form Elements</a>
+	          </div>
+	        </div>
+	        <div class="dropdown">
+	          <button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="selectors.html">Selectors</a>
+	            <a href="color.html">Color</a>
+	            <a href="box-model.html">Box Model</a>
+	            <a href="fonts.html">Fonts</a>
+	            <a href="styles.html">Styles</a>
+	            <a href="float.html">Float Property</a>
+	            <a href="clean.html">Clean Code</a>
+	            <a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
+	          </div>
+	        </div>
+	        <div class="dropdown">
+	          <button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+	          <div class="dropdown-content">
+	            <a href="">1</a>
+	            <a href="">2</a>
+	            <a href="">3</a>
+	            <a href="">4</a>
+	            <a href="">5</a>
+	            <a href="">6</a>
+	          </div>
+	        </div>
+	      </nav>
+	    </div>
+    </header>
+    <main>
+      <article>
+      	<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
+				<div class="wrapper">
+	        <header>
+	          <h1>Common Mistakes</h1>
+	          <div class="byline-wrapper">
+							<img src="images/avatar.png" alt="avatar" width="40">
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-03-21">Mar 21, 2017</time>
+						</div>
+	        </header>
+	        <section>
+	          <h2 id="one">Using an element other than li inside a ul element</h2>
+	          <h4>HTML</h4>
+	          <code>
+	          	&lt;ul&gt;<br>
+	           	&nbsp;&nbsp;&lt;h1&gt;...&lt;/h1&gt;<br>
+	           	&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+	           	&nbsp;&nbsp;&lt;p&gt;...&lt;/p&gt;<br>
+	           	&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+	           	&lt;/ul&gt;
+	          </code>
+	          <p>You can however, put any element inside &lt;li&gt;, like so:</p>
+	          <h4>HTML</h4>
+	          <code>
+	          	&lt;ul&gt;<br>
+	            &nbsp;&nbsp;&lt;li&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;h1&gt;...&lt;/h1&gt;<br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;p&gt;...&lt;/p&gt;<br>
+	            &nbsp;&nbsp;&lt;/li&gt;<br>
+	            &nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+	            &lt;/ul&gt;
+	          </code>
+	        </section>
+	        <section>
+	          <h2 id="two">Nesting a block-level element inside a p tag</h2>
+	          <h4>HTML</h4>
+	          <code>
+	          	&lt;p><br>
+	            &nbsp;&nbsp;&lt;ul><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+	            &nbsp;&nbsp;&lt;/ul><br>
+	            &lt;/p>
+	          </code>
+	          <h4>HTML</h4>
+	          <code>
+	          	&lt;p><br>
+	            &nbsp;&nbsp;&lt;div><br>
+	            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+	            &nbsp;&nbsp;&lt;/div><br>
+	            &lt;/p>
+	          </code>
+	          <p>
+	            You can only nest inline elements such as &lt;span&gt;, &lt;a&gt;, 
+	            &lt;b&gt;, &lt;strong&gt;, and &lt;img&gt; inside &lt;p&gt; tag. The
+	            &lt;p&gt; tag represents a paragraph. It cannot contain block-level
+	            elements including &lt;p&gt; itself.
+	          </p>
+	        </section>
+	      </div>
+      </article>
+    </main>
+    <footer>
+			<div class="follow-us">
+	      <a href="">
+	        <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
+	      </a>
+	    </div>
+      <div class="footer-nav">
+     		<a href="credits.html">Credits</a>
+      	<a href="terms.html">Terms of Use</a>
+      	<a href="privacy.html">Privacy Policy</a>
+      	<a href="advertise.html">Advertise</a>
+      </div>
+      <div class="copyright">
+	    	&copy; 2017 <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+	    </div>
+	    <div class="page-conformity">
+	      <img 
+	      	src="images/valid-css.svg"
+	      	alt="valid CSS logo"
+	      	width="100">
+	      <img 
+	      	src="images/GPLv3-logo.svg"
+	      	alt="GPLv3 license logo"
+	      	width="100">
+	    </div>
+    </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h3>Contents</h3>" + "<ol>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ol>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
+  </body>
+</html>

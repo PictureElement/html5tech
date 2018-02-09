@@ -1,0 +1,305 @@
+<!--
+	This file is part of HTML5Tech.
+ 	
+  HTML5Tech is free software; you can redistribute it and/or modify it under 
+  the terms of the GNU General Public License as published by the Free Software 
+  Foundation; either version 3 of the License, or (at your option) any later 
+  version. 
+  
+  HTML5Tech program is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+  details. 
+
+  You should have received a copy of the GNU General Public License
+  along with HTML5Tech; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width">
+  	<link rel="stylesheet" href="main.css">
+		<title>HTML5|New Input Attributes</title>
+		<meta name="description" content="Fundamental resources about HTML5 and friends">
+		<meta name="keywords" content="HTML5Tech, HTML, CSS, HTML5, CSS3, JavaScript">
+		<meta name="author" content="Marios Sofokleous">
+	</head>
+	<body>
+		<header>
+			<div id="branding-container">
+				<div id="branding">
+					<img class="website-logo" src="images/logomakr_9fa58h.png" alt="website logo" width="300">
+				</div>
+			</div>
+			<div id="nav-container">
+				<nav class="main-nav">
+	      	<a href="index.html">Home</a>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">HTML<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="elements.html">Elements</a>
+	      			<a href="images.html">Images</a>
+	      			<a href="html-common-mistakes.html">Common Mistakes</a>
+	      			<a href="forms.html">Forms</a>
+	      			<a href="tables.html">Tables</a>
+	      			<a href="">6</a>
+	      		</div>
+	      	</div>
+					<div class="dropdown">
+	      		<button id="current" class="dropbtn">HTML5<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="whats-new.html">What's New</a>
+	      			<a href="updated-tags.html">Updated Tags</a>
+	      			<a href="updated-elements.html">Updated Elements</a>
+	      			<a href="new-elements.html">New Elements</a>
+	      			<a href="new-input-types.html">New Input Types</a>
+	      			<a href="new-input-attributes.html">New Input Attributes</a>
+	      			<a href="new-form-elements.html">New Form Elements</a>
+	      		</div>
+	      	</div>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">CSS<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="selectors.html">Selectors</a>
+	      			<a href="color.html">Color</a>
+	      			<a href="box-model.html">Box Model</a>
+	      			<a href="fonts.html">Fonts</a>
+	      			<a href="styles.html">Styles</a>
+	      			<a href="float.html">Float Property</a>
+	      			<a href="clean.html">Clean Code</a>
+	      			<a href="adaptive-responsive.html">Adaptive & Responsive Design</a>
+	      		</div>
+	      	</div>
+	      	<div class="dropdown">
+	      		<button class="dropbtn">JavaScript<span class="arrow">&#9660;</span></button>
+	      		<div class="dropdown-content">
+	      			<a href="">1</a>
+	      			<a href="">2</a>
+	      			<a href="">3</a>
+	      			<a href="">4</a>
+	      			<a href="">5</a>
+	      			<a href="">6</a>
+	      		</div>
+	      	</div>
+	  		</nav>
+	  	</div>
+		</header>
+		<main>
+			<article>
+				<!-- Dynamic table of contents is injected here -->
+				<div class="all-topics"></div>
+				<div class="wrapper">
+					<header>
+						<h1>New Input Attributes</h1>
+						<div class="byline-wrapper">
+							<img src="images/avatar.png" alt="avatar" width="40">
+							<a href="mailto:pictureelement@yandex.com">PictureElement</a>
+							<br>
+							<time datetime="2017-02-28">Feb 28, 2017</time>
+						</div>
+					</header>
+					<section>
+						<h3>HTML5 added the following attributes for the &lt;input&gt; element:</h3>
+						<ul>
+							<li>autocomplete</li>
+							<li><b class="covered">autofocus</b></li>
+							<li>form</li>
+							<li>formaction</li>
+							<li>formenctype</li>
+							<li>formmethod</li>
+							<li>formnovalidate</li>
+							<li>formtarget</li>
+							<li>height</li>
+							<li>width</li>
+							<li>list</li>
+							<li>min</li>
+							<li>max</li>
+							<li>multiple</li>
+							<li><b class="covered">pattern</b></li>
+							<li><b class="covered">placeholder</b></li>
+							<li><b class="covered">required</b></li>
+							<li>step</li>
+						</ul>
+						<h3>HTML5 added the following attributes for the &lt;form&gt; element:</h3>
+						<ul>
+							<li>autocomplete</li>
+							<li>novalidate</li>
+						</ul>
+					</section>
+					<section>
+						<h2 id="one">Placeholder</h2>
+						<h3>Description</h3>
+						<p>
+							The "placeholder" attribute specifies a hint that describes the 
+							expected value of an input field. The hint is shown inside the input 
+							field and hidden when the user starts typing.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>						
+							&lt;input type="text" name="first-name" 
+							placeholder="First name"&gt;<br>
+							&lt;input type="text" name="last-name" placeholder="Last name"&gt;<br>
+							&lt;input type="text" name="mail" placeholder="E-mail"&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								<input type="text" name="first-name" placeholder="First name">
+								<input type="text" name="last-name" placeholder="Last name">
+								<input type="text" name="mail" placeholder="E-mail">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="two">Autofocus</h2>
+						<h3>Description</h3>
+						<p>
+							The "autofocus" attribute specifies that the input field should 
+							automatically get focus(active cursor) when the page loads.
+						</p> 
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Username:&lt;input type="text" name="username" 
+							autofocus&gt;<br>
+							&nbsp;&nbsp;Password:&lt;input type="password" name=:"psw"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Username:<input type="text" name="username" autofocus>
+								Password:<input type="password" name="userpsw">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="three">Required</h2>
+						<h3>Description</h3>
+						<p>
+							The "required" attribute specifies that an input field must be filled 
+							out before submitting the form. It works with the following input 
+							types: "text", "search", "url", "tel", "email", "password", 
+							"date pickers", "number", "checkbox", "radio" and "file".
+						</p>
+						<h3>Example</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+					  	&nbsp;&nbsp;Username: &lt;input type="text" name="username" 
+					  	required&gt;<br>
+					  	&nbsp;&nbsp;&lt;input type="submit"&gt;<br>
+					  	&nbsp;&nbsp;Password: &lt;input type="password" name="userpsw" 
+					  	required&gt;<br>
+					  	&nbsp;&nbsp;&lt;input type="submit"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+					  		Username: <input type="text" name="username" required>
+					  		<input type="submit">
+					  		Password: <input type="password" name="userpsw" required>
+					  		<input type="submit">
+							</form>
+						</div>
+					</section>
+					<section>
+						<h2 id="four">Pattern</h2>
+						<h3>Description</h3>
+						<p>
+							Accepts a JS regular expression that can be used to validate a form 
+							field to match the pattern.
+						</p>
+						<h3>Example #1</h3>
+						<h4>HTML5</h4>
+						<code>
+							&lt;form&gt;<br>
+							&nbsp;&nbsp;Country code:<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" 
+							name="two-letter_country_code" pattern="[A-Za-z]{2}"<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;title="Two-letter country code"&gt;<br>
+							&nbsp;&nbsp;Telephone:<br> 
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="tel" name="tel_number" 
+							pattern="[0-9]{10}" title="10-digit tel. number"&gt;<br>
+							&lt;/form&gt;
+						</code>
+						<h4>Result</h4>
+						<div class="result-wrapper">
+							<form>
+								Country code: <input type="text" name="country_code" pattern="[A-Za-z]{2}" title="Two-letter country code">
+								<input type="submit">
+								Telephone: <input type="tel" name="tel_number" pattern="[0-9]{10}" title="10-digit tel. number">
+								<input type="submit">
+							</form>
+						</div>
+						<p>
+							When the form is submitted and the user's entry doesn't match the 
+							pattern, the user gets notified with an error message(i.e. "Please 
+							match the requested format").
+						</p>
+					</section>
+				</div>
+			</article>
+		</main>
+		<footer>
+			<div class="follow-us">
+	      <a href="">
+	        <img src="images/googleplus-logo.png" alt="google plus logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/fb-logo.png" alt="facebook logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/instagram-logo.png" alt="instagram logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/linkedin-logo.png" alt="linkedin logo" width="30" class="social-icon">
+	      </a>
+	      <a href="">
+	        <img src="images/twitter-logo.png" alt="twitter logo" width="30" class="social-icon">
+	      </a>
+	    </div>
+      <div class="footer-nav">
+     		<a href="credits.html">Credits</a>
+      	<a href="terms.html">Terms of Use</a>
+      	<a href="privacy.html">Privacy Policy</a>
+      	<a href="advertise.html">Advertise</a>
+      </div>
+      <div class="copyright">
+	    	&copy; 2017 <a href="mailto:pictureelement@yandex.com">PictureElement</a>
+	    </div>
+	    <div class="page-conformity">
+	      <img 
+	      	src="images/valid-css.svg"
+	      	alt="valid CSS logo"
+	      	width="100">
+	      <img 
+	      	src="images/GPLv3-logo.svg"
+	      	alt="GPLv3 license logo"
+	      	width="100">
+	    </div>
+    </footer>
+    <!-- Include JQuery library from Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Dynamic Table of Contents using JQuery -->
+		<script>
+			var ToC = "<nav role='navigation' class='table-of-contents'>" + "<h3>Contents</h3>" + "<ol>";
+			var newLine, el, title, link;
+			$("section h2").each(function() {
+				el = $(this);
+				title = el.text();
+				link = "#" + el.attr("id");
+				newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+				ToC += newLine;
+			});
+			ToC += "</ol>" + "</nav>";
+			$(".all-topics").prepend(ToC);
+		</script>
+	</body>
+</html>
