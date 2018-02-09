@@ -445,7 +445,7 @@ section {
   }
 
   .more-btn[aria-expanded="true"]::before {
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Free';
     content:"\f441";
   }
 
