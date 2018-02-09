@@ -9,7 +9,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/html5tech/",
   "display": "standalone",
   "background_color": "#007f7f",
   "theme_color": "#007f7f"
