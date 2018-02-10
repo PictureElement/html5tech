@@ -305,6 +305,7 @@ section {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     border-top: 1px solid rgba(0,0,0,.1);
     background: #414347;
+    top: -1px;
   }
 
   ol.sb-list li {
@@ -340,25 +341,25 @@ section {
 /* Responsive typography */
 @media screen and (min-width: 380px) {
     html {
-      font-size: 14px;
+      font-size: 87.5%; /* 14px */
     }
 }
 
 @media screen and (min-width: 610px) {
     html {
-      font-size: 16px;
+      font-size: 100%;
     }
 }
 
 @media screen and (min-width: 700px) {
     html {
-      font-size: 18px;
+      font-size: 112.5%; /* 18px */
     }
 }
 
 @media screen and (min-width: 1090px) {
     html {
-      font-size: 20px;
+      font-size: 125%; /* 20px */
     }
 }
 
