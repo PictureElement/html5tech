@@ -303,7 +303,7 @@ section {
   div.sidebar {
     padding: .5rem 0 .5rem 1rem;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-    /*border-top: 1px solid rgba(0,0,0,.1);*/
+    border-top: 1px solid rgba(0,0,0,.1);
     background: #414347;
   }
 
