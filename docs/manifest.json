@@ -10,7 +10,7 @@
     }
   ],
   "start_url": "/html5tech/",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#007f7f",
   "theme_color": "#007f7f"
 }
