@@ -1,6 +1,6 @@
 /* BASIC ELEMENTS */
 html {
-  font-size: 12px;
+  font-size: 75%; /* 12px */
 }
 
 *, ::after, ::before {
