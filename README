@@ -1,7 +1,6 @@
--1. Start with an empty dist/ directory
+-2. Start with an empty dist/ directory
 
-0. Copy the following from src/ to dist/:
-
+-1. Copy the following from src/ to dist/:
 css  
 demos  
 fonts  
@@ -11,6 +10,10 @@ manifest.json
 svg-with-js  
 sw.js
 
+0. If grunt is not installed in your project directory:
+Run: $ npm install grunt --save-dev
+
+Assuming you have Gruntfile.js and package.json run:
 
 1. grunt clean
 
