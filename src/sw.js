@@ -61,11 +61,10 @@ var filesToCache = [
   '/html5tech/images/cc-by-sa-4.svg',
 
   '/html5tech/fonts/audiowide-v6-latin-regular.eot',
-  '/html5tech/fonts/audiowide-v6-latin-regular.eot?#iefix',
   '/html5tech/fonts/audiowide-v6-latin-regular.woff2',
   '/html5tech/fonts/audiowide-v6-latin-regular.woff',
   '/html5tech/fonts/audiowide-v6-latin-regular.ttf',
-  '/html5tech/fonts/audiowide-v6-latin-regular.svg#Audiowide',
+  '/html5tech/fonts/audiowide-v6-latin-regular.svg',
 
   '/html5tech/svg-with-js/css/fa-svg-with-js.css',
   '/html5tech/svg-with-js/js/fontawesome-all.min.js'
