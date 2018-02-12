@@ -1,6 +1,6 @@
-1. Start with an empty dist/ directory
+-1. Start with an empty dist/ directory
 
-2. Copy the following from src/ to dist/:
+0. Copy the following from src/ to dist/:
 
 css  
 demos  
@@ -109,6 +109,8 @@ var filesToCache = [
 9. Open dist/js/run_pretify.js
    
    Change: push("css/prettify.css") to push("css/purestyles.min.css")
+
+10. Replace "../dist/fonts" to "fonts" from every page in dist/
 
 
 
