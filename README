@@ -112,7 +112,7 @@ var filesToCache = [
 
 10.Open dist/demos/js/2.js
    
-   Change: "pic": "../../images/100x100.png" to "pic": "images/100x100.png"
+   Change: "pic": "../../images/100x100.png" to "pic": "../images/100x100.png"
 
 
 
