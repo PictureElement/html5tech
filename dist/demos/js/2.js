@@ -12,7 +12,7 @@ var bio = {
         "location": "Pafos"
     },
     // string
-    "pic": "../../images/100x100.png",
+    "pic": "images/100x100.png",
     // array
     "skills": ["HTML", "CSS", "JavaScript", "WordPress.org"]
 };

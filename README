@@ -107,4 +107,14 @@ var filesToCache = [
   '/html5tech/svg-with-js/js/fontawesome-all.min.js'
 ];
 
+9. Open dist/js/run_pretify.js
+   
+   Change: push("css/prettify.css") to push("css/purestyles.min.css")
+
+10.Open dist/demos/js/2.js
+   
+   Change: "pic": "../../images/100x100.png" to "pic": "images/100x100.png"
+
+
+
 
