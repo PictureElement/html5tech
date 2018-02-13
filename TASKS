@@ -120,7 +120,7 @@ var filesToCache = [
 14. Open dist/js/output.min.js
 
 Replace: push("css/prettify.css")
-With: push("css/purestyles.min.css")
+With: push("/html5tech/css/purestyles.min.css")
 
 15. Do the following in every page in dist/: 
 
