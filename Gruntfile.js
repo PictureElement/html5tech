@@ -32,7 +32,14 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'dist/js/output.min.js': ['src/js/*.js', 'src/svg-with-js/js/fa-solid.js']
+          'dist/js/output.min.js': [
+            'src/js/jquery.min.js', 
+            'src/js/popper.min.js', 
+            'src/js/bootstrap.min.js',
+            'src/js/site.js',
+            'src/js/run_prettify.js',
+            'src/svg-with-js/js/fa-solid.js'
+          ]
         }
       }
     },
