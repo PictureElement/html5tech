@@ -1,0 +1,133 @@
+1. Start with an empty dist/ directory
+
+2. Create these empty directories:
+css
+js
+
+3. Copy the following from src/ to dist/:
+demos  
+fonts  
+images    
+manifest.json  
+sw.js
+
+4. If npm is not installed in your project directory, run $ npm install, to 
+install all modules listed as dependencies in package.json.
+
+5. grunt clean
+
+6. grunt purifycss
+
+7. grunt cssmin
+
+8. grunt uglify
+
+9. grunt copy
+
+10. Visit dist/, do the following for every page:
+
+Replace:
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<!-- Main stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Web app manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Scripts -->
+<script src="js/jquery.min.js" defer></script>
+<script src="js/popper.min.js" defer></script>
+<script src="js/bootstrap.min.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/run_prettify.js" defer></script>
+<script src="svg-with-js/js/fa-solid.js" defer></script>
+ 
+With:
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="css/purestyles.min.css">
+<!-- Web app manifest -->
+<link rel="manifest" href="manifest.json">
+<!-- Script -->
+<script src="js/output.min.js" defer></script>
+
+11. grunt critical:t1
+    ...
+    grunt critical:t12
+
+12. grunt htmlmin
+
+13. Open sw.js and add the following in place of the old one:
+
+var filesToCache = [
+  '/html5tech/',
+  '/html5tech/index.html',
+  '/html5tech/classes.html',
+  '/html5tech/data-related.html',
+  '/html5tech/dom.html',
+  '/html5tech/dom-manipulation.html',
+  '/html5tech/expressions-and-operators.html',
+  '/html5tech/flow-control.html',
+  '/html5tech/function-related.html',
+  '/html5tech/functions.html',
+  '/html5tech/introduction.html',
+  '/html5tech/object-related.html',
+  '/html5tech/objects.html',
+
+  '/html5tech/css/purestyles.min.css',
+
+  '/html5tech/js/output.min.js',
+
+  '/html5tech/demos/js/2.js',
+  '/html5tech/demos/js/3.js',
+  '/html5tech/demos/js/5.js',
+  '/html5tech/demos/1-1.html',
+  '/html5tech/demos/1-2.html',
+  '/html5tech/demos/2-1.html',
+  '/html5tech/demos/2-2.html',
+  '/html5tech/demos/3.html',
+  '/html5tech/demos/4.html',
+  '/html5tech/demos/5.html',
+  '/html5tech/demos/6-1.html',
+  '/html5tech/demos/6-2.html',
+  '/html5tech/demos/7-1.html',
+  '/html5tech/demos/7-2.html',
+  '/html5tech/demos/8-1.html',
+  '/html5tech/demos/8-2.html',
+  '/html5tech/demos/9-1.html',
+  '/html5tech/demos/9-2.html',
+  '/html5tech/demos/10.html',
+  '/html5tech/demos/11.html',
+  '/html5tech/demos/12-1.html',
+  '/html5tech/demos/12-2.html',
+  '/html5tech/demos/13-1.html',
+  '/html5tech/demos/13-2.html',
+
+  '/html5tech/images/150x100.png',
+  '/html5tech/images/100x100.png',
+  '/html5tech/images/agpl-v3.svg',
+  '/html5tech/images/cc-by-sa-4.svg',
+
+  '/html5tech/fonts/audiowide-v6-latin-regular.eot',
+  '/html5tech/fonts/audiowide-v6-latin-regular.woff2',
+  '/html5tech/fonts/audiowide-v6-latin-regular.woff',
+  '/html5tech/fonts/audiowide-v6-latin-regular.ttf',
+  '/html5tech/fonts/audiowide-v6-latin-regular.svg'
+];
+
+14. Open dist/js/output.min.js
+
+Replace: push("css/prettify.css")
+With: push("css/purestyles.min.css")
+
+15. Do the following in every page in dist/: 
+
+Replace: "../dist/fonts"
+With: "fonts"
+
+16. Do the following in every page in demos/: 
+
+Replace: "../js/jquery.min.js"
+With: "../js/output.min.js"

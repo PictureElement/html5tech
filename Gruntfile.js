@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     purifycss: {
       options: {},
       target: {
-        src: ['src/*.html', 'src/js/*.js', 'src/svg-with-js/js/fontawesome-all.min.js'],
+        src: ['src/*.html', 'src/js/*.js', 'src/svg-with-js/js/fa-solid.js'],
         css: ['src/css/*.css', 'src/svg-with-js/css/fa-svg-with-js.css'],
         dest: 'src/css/purestyles.css'
       },
