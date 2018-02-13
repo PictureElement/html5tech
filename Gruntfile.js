@@ -30,12 +30,12 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-    my_target: {
+      my_target: {
         files: {
-          'dest/output.min.js': ['src/*.js', 'src/input2.js']
+          'dist/js/output.min.js': ['src/js/*.js', 'src/svg-with-js/js/fa-solid.js']
         }
       }
-    }
+    },
 
     copy: {
       main: {

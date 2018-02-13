@@ -67,7 +67,7 @@ var filesToCache = [
   '/html5tech/fonts/audiowide-v6-latin-regular.svg',
 
   '/html5tech/svg-with-js/css/fa-svg-with-js.css',
-  '/html5tech/svg-with-js/js/fontawesome-all.min.js'
+  '/html5tech/svg-with-js/js/fa-solid.js'
 ];
 
 // When the service worker is registered, an 'install' event is triggered the 

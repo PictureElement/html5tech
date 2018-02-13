@@ -18,7 +18,7 @@
 
   /* INITIALIZATION */
 
-  let viewportW = $(window).width();
+  var viewportW = $(window).width();
 
   if(viewportW >= 768) {
     $('.sidebar-links').collapse('show');
@@ -33,7 +33,7 @@
 
   /* Collapse state on different viewport sizes */
   $(window).resize(function() { 
-    let viewportW = $(window).width();
+    var viewportW = $(window).width();
     if(viewportW >= 768) {
       $('.sidebar-links').collapse('show');
       $('header').addClass("sticky-top");
@@ -70,7 +70,7 @@
 
   /* Smooth scrolling (content navigation) */
   $('.content-nav li a').click(function() {
-    let viewportW = $(window).width();
+    var viewportW = $(window).width();
     if(viewportW >= 768) {
       $('html').animate({
         /* .offset() returns an object containing the properties 'top' and 'left' */
