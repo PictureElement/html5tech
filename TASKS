@@ -122,6 +122,9 @@ var filesToCache = [
 Replace: push("css/prettify.css")
 With: push("/html5tech/css/purestyles.min.css")
 
+Replace: ./sw.js
+With: /html5tech/sw.js
+
 15. Do the following in every page in dist/: 
 
 Replace: "../dist/fonts"
