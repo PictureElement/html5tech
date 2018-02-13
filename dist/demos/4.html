@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Basic JQuery</title>
+    </head>
+    <body>
+        <div id="javascript">
+        </div>
+        <div id="jquery">
+        </div>
+        <script src="../js/output.min.js"></script>
+        <script>
+            // Vanillia JavaScript
+            var element = document.createElement("p"); 
+            var content = document.createTextNode("Vanilla JavaScript DOM Manipulation"); 
+            element.appendChild(content);
+            var parent = document.getElementById("javascript"); 
+            parent.appendChild(element);
+            // jQuery
+            $('#jquery').append("<p>jQuery DOM Manipulation</p>");
+        </script>
+    </body>
+</html>
