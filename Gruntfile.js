@@ -29,6 +29,14 @@ module.exports = function(grunt) {
       }
     },
 
+    uglify: {
+    my_target: {
+        files: {
+          'dest/output.min.js': ['src/*.js', 'src/input2.js']
+        }
+      }
+    }
+
     copy: {
       main: {
         expand: true,
@@ -277,6 +285,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   
   // Default task(s).
   //grunt.registerTask('default', ['clean']);

@@ -25,23 +25,23 @@ Assuming you have Gruntfile.js and package.json run:
 
 3. grunt cssmin
 
+4. grunt uglify
+
 4. grunt copy
 
 5. Visit dist/, do the following for every page:
 
-   5.1 Change:
+   5.1 Replace:
 
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
    <!-- Main stylesheet -->
    <link rel="stylesheet" href="css/style.css">
    
-   To:
+   with:
 
    <!-- Main stylesheet -->
    <link rel="stylesheet" href="css/purestyles.min.css">
-
-   5.2 Remove:
-   <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 6. grunt critical:t1
    ...
