@@ -65,7 +65,6 @@ perl -0pi -e "s/js\/output.min.js/\/html5tech\/js\/output.min.js/" dist/*.html
 # step 13
 grunt htmlmin
 
-push("css/prettify.css")
 # step 14
 perl -0pi -e "s/css\/prettify.css/\/html5tech\/css\/purestyles.min.css/g" dist/js/output.min.js
 perl -0pi -e "s/.\/sw.js/\/html5tech\/sw.js/g" dist/js/output.min.js

@@ -2956,6 +2956,12 @@ tbody.collapse.show {
   color: #868e96;
 }
 
+.nav-fill .nav-item {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
 .tab-content>.active {
   display: block;
 }
@@ -4049,6 +4055,17 @@ tbody.collapse.show {
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   border: 0;
+}
+
+.sr-only-focusable:active,.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  -webkit-clip-path: none;
+  clip-path: none;
 }
 
 .w-25 {
@@ -6154,11 +6171,11 @@ svg:not(:root).svg-inline--fa {
   float: right;
 }
 
-.fa.fa-pull-left,.fas.fa-pull-left,.far.fa-pull-left {
+.fa.fa-pull-left,.fas.fa-pull-left,.far.fa-pull-left,.fal.fa-pull-left,.fab.fa-pull-left {
   margin-right: .3em;
 }
 
-.fa.fa-pull-right,.fas.fa-pull-right,.far.fa-pull-right {
+.fa.fa-pull-right,.fas.fa-pull-right,.far.fa-pull-right,.fal.fa-pull-right,.fab.fa-pull-right {
   margin-left: .3em;
 }
 
@@ -6276,4 +6293,13 @@ svg:not(:root).svg-inline--fa {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.sr-only-focusable:active,.sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
