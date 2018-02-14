@@ -47,11 +47,11 @@ Replace:
 With:
 
 <!-- Stylesheet -->
-<link rel="stylesheet" href="css/purestyles.min.css">
+<link rel="stylesheet" href="/html5tech/css/purestyles.min.css">
 <!-- Web app manifest -->
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="/html5tech/manifest.json">
 <!-- Script -->
-<script src="js/output.min.js" defer></script>
+<script src="/html5tech/js/output.min.js" defer></script>
 
 11. grunt critical:t1
     ...
@@ -128,9 +128,9 @@ With: /html5tech/sw.js
 15. Do the following in every page in dist/: 
 
 Replace: "../dist/fonts"
-With: "fonts"
+With: "/html5tech/fonts"
 
 16. Do the following in every page in demos/: 
 
 Replace: "../js/jquery.min.js"
-With: "../js/output.min.js"
+With: "/html5tech/js/output.min.js"
