@@ -53,7 +53,7 @@ perl -0pi -e "s/    <link rel='stylesheet' href='css\/bootstrap.min.css'.*\n.*\n
 for((c=0;c<12;c++))
 do
   grunt critical:t$c
-  sleep 5
+  sleep 10
 done
 
 # step 12
