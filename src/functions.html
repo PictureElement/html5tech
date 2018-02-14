@@ -1,130 +1,130 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
     <title>JavaScript/Functions</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fundamental resources about HTML5 & friends.">
-    <meta name="author" content="PictureElement (Marios Sofokleous)">
-    <meta name="theme-color" content="#007f7f">
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json">
-    <script src="js/jquery.min.js" defer></script>
-    <script src="js/popper.min.js" defer></script>
-    <script src="js/bootstrap.min.js" defer></script>
-    <script src="js/site.js" defer></script>
-    <script src="js/run_prettify.js" defer></script>
-    <script src="svg-with-js/js/fa-solid.js" defer></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Fundamental resources about HTML5 & friends.'>
+    <meta name='author' content='PictureElement (Marios Sofokleous)'>
+    <meta name='theme-color' content='#007f7f'>
+    <link rel='stylesheet' href='css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='manifest' href='manifest.json'>
+    <script src='js/jquery.min.js' defer></script>
+    <script src='js/popper.min.js' defer></script>
+    <script src='js/bootstrap.min.js' defer></script>
+    <script src='js/site.js' defer></script>
+    <script src='js/run_prettify.js' defer></script>
+    <script src='svg-with-js/js/fa-solid.js' defer></script>
   </head>
   <body>
     <!-- RETURN TO TOP BUTTON -->
-    <button id="return-to-top" title="Return to top"><i style="color:white" class="fas fa-chevron-up"></i></button>
+    <button id='return-to-top' title='Return to top'><i style='color:white' class='fas fa-chevron-up'></i></button>
     <!-- SITE NAVIGATION -->
-    <header class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row">
+    <header class='navbar navbar-expand navbar-light bg-light flex-column flex-md-row'>
       <!-- LOGO -->
-      <a class="navbar-brand" href="index.html">HTML5<span>Tech</span></a>
-      <div class="flex-row">
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item">
-            <a class="nav-link" href="#">HTML</a>
+      <a class='navbar-brand' href='index.html'>HTML5<span>Tech</span></a>
+      <div class='flex-row'>
+        <ul class='navbar-nav flex-row'>
+          <li class='nav-item'>
+            <a class='nav-link' href='#'>HTML</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">CSS</a>
+          <li class='nav-item'>
+            <a class='nav-link' href='#'>CSS</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">JAVASCRIPT <span class="sr-only">(current)</span></a>
+          <li class='nav-item active'>
+            <a class='nav-link' href='#'>JAVASCRIPT <span class='sr-only'>(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="introduction.html">JQUERY</a>
+          <li class='nav-item'>
+            <a class='nav-link' href='introduction.html'>JQUERY</a>
           </li>
         </ul>
       </div>
     </header>
-    <div class="container-fluid">
-      <div class="row d-flex">
-        <div class="sidebar col-12 col-md-3 col-xl-2">
-          <div class="text-center">
-            <button class="more-btn btn btn-link d-md-none" type="button" data-toggle="collapse" data-target="#sidebarContent" aria-controls="sidebarContent" aria-label="Toggle sidebar navigation">
+    <div class='container-fluid'>
+      <div class='row d-flex'>
+        <div class='sidebar col-12 col-md-3 col-xl-2'>
+          <div class='text-center'>
+            <button class='more-btn btn btn-link d-md-none' type='button' data-toggle='collapse' data-target='#sidebarContent' aria-controls='sidebarContent' aria-label='Toggle sidebar navigation'>
               MORE
             </button>
           </div>
-          <nav class="sidebar-links collapse" id="sidebarContent">
+          <nav class='sidebar-links collapse' id='sidebarContent'>
             <div>
-              <h5 class="sb-topic">Basic JS</h5>
-              <ol class="sb-list">
-                <li><a href="data-related.html">Data-related</a></li>
-                <li><a href="dom.html">Document Object Model</a></li>
-                <li><a href="object-related.html">Object-related</a></li>
-                <li><a href="flow-control.html">Flow control</a></li>
-                <li><a href="function-related.html">Function-related</a></li>
-                <li><a href="expressions-and-operators.html">Expressions &amp; operators</a></li>
+              <h5 class='sb-topic'>Basic JS</h5>
+              <ol class='sb-list'>
+                <li><a href='data-related.html'>Data-related</a></li>
+                <li><a href='dom.html'>Document Object Model</a></li>
+                <li><a href='object-related.html'>Object-related</a></li>
+                <li><a href='flow-control.html'>Flow control</a></li>
+                <li><a href='function-related.html'>Function-related</a></li>
+                <li><a href='expressions-and-operators.html'>Expressions &amp; operators</a></li>
               </ol>
             </div>
             <div>
-              <h5 class="sb-topic">Object-Oriented JS</h5>
-              <ol class="sb-list">
-                <li><a href="objects.html">Objects</a></li>
-                <li id="current"><a href="functions.html">Functions</a></li> 
-                <li><a href="classes.html">Classes</a></li>
+              <h5 class='sb-topic'>Object-Oriented JS</h5>
+              <ol class='sb-list'>
+                <li><a href='objects.html'>Objects</a></li>
+                <li id='current'><a href='functions.html'>Functions</a></li> 
+                <li><a href='classes.html'>Classes</a></li>
               </ol>
             </div>
           </nav>
         </div>
         <!-- MAIN -->
-        <main class="col-12 col-md-9 col-xl-8">
-          <h1 class="text-left">Functions</h1>
+        <main class='col-12 col-md-9 col-xl-8'>
+          <h1 class='text-left'>Functions</h1>
           <hr>
           <!-- CONTENT -->
-          <div class="card content-card">
-            <div class="card-header" id="headingOne">
-              <button class="content-btn btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne" aria-label="Toggle content" aria-expanded="false">
+          <div class='card content-card'>
+            <div class='card-header' id='headingOne'>
+              <button class='content-btn btn btn-link' type='button' data-toggle='collapse' data-target='#collapseOne' aria-controls='collapseOne' aria-label='Toggle content' aria-expanded='false'>
                 Contents
               </button>
             </div>
-            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">
-                <ol class="content-nav">
-                  <li><a href="#1">First-class functions</a></li>
-                  <li><a href="#2">Functions are objects</a></li>
-                  <li><a href="#3">Higher-order functions</a></li>
+            <div id='collapseOne' class='collapse' role='tabpanel' aria-labelledby='headingOne' data-parent='#accordion'>
+              <div class='card-body'>
+                <ol class='content-nav'>
+                  <li><a href='#1'>First-class functions</a></li>
+                  <li><a href='#2'>Functions are objects</a></li>
+                  <li><a href='#3'>Higher-order functions</a></li>
                   <li>
-                    <a href="#4">Callback functions</a>
+                    <a href='#4'>Callback functions</a>
                     <ol>
-                      <li><a href="#4-1">Introduction</a></li>
-                      <li><a href="#4-2">"forEach()" method</a></li>
-                      <li><a href="#4-3">"map()" method</a></li>
-                      <li><a href="#4-4">"filter()" method</a></li>
+                      <li><a href='#4-1'>Introduction</a></li>
+                      <li><a href='#4-2'>'forEach()' method</a></li>
+                      <li><a href='#4-3'>'map()' method</a></li>
+                      <li><a href='#4-4'>'filter()' method</a></li>
                     </ol>
                   </li>
                   <li>
-                    <a href="#5">Function scope</a>
+                    <a href='#5'>Function scope</a>
                     <ol>
-                      <li><a href="#5-1">Runtime scope</a></li>
-                      <li><a href="#5-2">Variable scope</a></li>
+                      <li><a href='#5-1'>Runtime scope</a></li>
+                      <li><a href='#5-2'>Variable scope</a></li>
                       <li>
-                        <a href="#5-3">Closures</a>
+                        <a href='#5-3'>Closures</a>
                         <ol>
-                          <li><a href="#5-3-1">Definition</a></li>
-                          <li><a href="#5-3-2">Examples</a></li>
-                          <li><a href="#5-3-3">Garbage collection</a></li>
+                          <li><a href='#5-3-1'>Definition</a></li>
+                          <li><a href='#5-3-2'>Examples</a></li>
+                          <li><a href='#5-3-3'>Garbage collection</a></li>
                         </ol>
                       </li>
                     </ol>
                   </li>
                   <li>
-                    <a href="#6">Immediately-invoked function expressions</a>
+                    <a href='#6'>Immediately-invoked function expressions</a>
                     <ol>
-                      <li><a href="#6-1">Function types</a></li>
-                      <li><a href="#6-2">Function declarations</a></li>
-                      <li><a href="#6-3">Function expressions</a></li>
-                      <li><a href="#6-4">Immediately-invoked function expressions</a></li>
-                      <li><a href="#6-5">Passing arguments to IIFE's</a></li>
-                      <li><a href="#6-6">IIFE's &amp; private scope</a></li>
-                      <li><a href="#6-7">What's true about IIFE's</a></li>
-                      <li><a href="#6-8">IIFE's, private scope &amp; event handling</a></li>
-                      <li><a href="#6-9">Summary</a></li>
+                      <li><a href='#6-1'>Function types</a></li>
+                      <li><a href='#6-2'>Function declarations</a></li>
+                      <li><a href='#6-3'>Function expressions</a></li>
+                      <li><a href='#6-4'>Immediately-invoked function expressions</a></li>
+                      <li><a href='#6-5'>Passing arguments to IIFE's</a></li>
+                      <li><a href='#6-6'>IIFE's &amp; private scope</a></li>
+                      <li><a href='#6-7'>What's true about IIFE's</a></li>
+                      <li><a href='#6-8'>IIFE's, private scope &amp; event handling</a></li>
+                      <li><a href='#6-9'>Summary</a></li>
                     </ol>
                   </li>
                 </ol>
@@ -134,12 +134,12 @@
           <!-- SECTION 1 -->
           <section>
             <h2>
-              <a id="1" data-toggle="collapse" role="button" href="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
+              <a id='1' data-toggle='collapse' role='button' href='#accordion-1' aria-expanded='true' aria-controls='accordion-1'>
                 First-class functions
               </a>
             </h2>
             <hr>
-            <div id="accordion-1" class="collapse show">
+            <div id='accordion-1' class='collapse show'>
               <p>
                 With first-class functions you can do just about anything that 
                 you can do with other elements, such as numbers, strings, and 
@@ -158,12 +158,12 @@
           <!-- SECTION 2 -->
           <section>
             <h2>
-              <a id="2" data-toggle="collapse" role="button" href="#accordion-2" aria-expanded="true" aria-controls="accordion-2">
+              <a id='2' data-toggle='collapse' role='button' href='#accordion-2' aria-expanded='true' aria-controls='accordion-2'>
                 Functions are objects
               </a>
             </h2>
             <hr>
-            <div id="accordion-2" class="collapse show">
+            <div id='accordion-2' class='collapse show'>
               <p>
                 In JavaScript functions can be treated as objects. A key 
                 difference between a function and an object is that functions 
@@ -171,73 +171,73 @@
                 cannot.
               </p>
               <p>The following example is a proof that functions are indeed objects:</p>
-              <pre class="prettyprint linenums"><code>function average(n1, n2, n3) {
+              <pre class='prettyprint linenums'><code>function average(n1, n2, n3) {
     return (n1 + n2 + n3) / 3;
 }
 
 average.length; // 3
-average.name; // "average"</code></pre>
+average.name; // 'average'</code></pre>
             </div>
           </section>
           <!-- SECTION 3 -->
           <section>
             <h2>
-              <a id="3" data-toggle="collapse" role="button" href="#accordion-3" aria-expanded="true" aria-controls="accordion-3">
+              <a id='3' data-toggle='collapse' role='button' href='#accordion-3' aria-expanded='true' aria-controls='accordion-3'>
                 Higher-order functions
               </a>
             </h2>
             <hr>
-            <div id="accordion-3" class="collapse show">
+            <div id='accordion-3' class='collapse show'>
               <p>
                 A function that returns another function or takes other 
                 functions as arguments is known as higher-order function. 
               </p>
-              <pre class="prettyprint linenums"><code>function foo() {
-    alert("Hello 1");
+              <pre class='prettyprint linenums'><code>function foo() {
+    alert('Hello 1');
     return function() {
-        alert("Hello 2");
+        alert('Hello 2');
     };
 }
 
 foo();
-// Alerts "Hello 1"
+// Alerts 'Hello 1'
 
 const innerFunction = foo();
 
 innerFunction();
-// Alerts "Hello 2"
+// Alerts 'Hello 2'
 
 foo()(); 
-// Alerts "Hello 1" followed by "Hello 2"
+// Alerts 'Hello 1' followed by 'Hello 2'
 
 function hoo() {
-    alert("Hello 1");
+    alert('Hello 1');
     function print() {
-        alert("Hello 2");
+        alert('Hello 2');
     };
     return print();
 }
 
 hoo();
-// Alerts "Hello 1" followed by "Hello 2"</code></pre>
+// Alerts 'Hello 1' followed by 'Hello 2'</code></pre>
             </div>
           </section>
           <!-- SECTION 4 -->
           <section>
             <h2>
-              <a id="4" data-toggle="collapse" role="button" href="#accordion-4" aria-expanded="true" aria-controls="accordion-4">
+              <a id='4' data-toggle='collapse' role='button' href='#accordion-4' aria-expanded='true' aria-controls='accordion-4'>
                 Callback functions
               </a>
             </h2>
             <hr>
-            <div id="accordion-4" class="collapse show">
-              <h3 id="4-1">Introduction</h3>
+            <div id='accordion-4' class='collapse show'>
+              <h3 id='4-1'>Introduction</h3>
               <p>
                 A function that is passed as an argument into another function 
                 is called a callback function. Callbacks are possible in JS 
                 because functions are first-class functions.
               </p>
-              <pre class="prettyprint linenums"><code>// Higher-order function
+              <pre class='prettyprint linenums'><code>// Higher-order function
 function foo(n, callback) {
     return n + callback();   
 }
@@ -248,12 +248,12 @@ function hoo() {
 }
 
 foo(5, hoo); // 7</code></pre>
-              <h3 id="4-2">"forEach()" method</h3>
+              <h3 id='4-2'>'forEach()' method</h3>
               <p>
                 The <code>forEach()</code> method executes a provided function 
                 once for each array element.
               </p>
-              <pre class="prettyprint linenums"><code>// Array
+              <pre class='prettyprint linenums'><code>// Array
 const numArray = [1,2,3,4,5,6,7,8,9];
 
 // Callback
@@ -282,14 +282,14 @@ numArray.forEach(logIfEven);
 //4
 //6
 //8</code></pre>
-              <h3 id="4-3">"map()" method</h3>
+              <h3 id='4-3'>'map()' method</h3>
               <p>
                 The <code>map()</code> method creates a new array with the 
                 results of calling a provided function on every element in the 
                 calling array. The method returns a new array; it does not 
                 modify the original array.
               </p>
-              <pre class="prettyprint linenums"><code>// Array
+              <pre class='prettyprint linenums'><code>// Array
 const numArray = [1,2,3,4,5,6,7,8,9];
 
 // Callback
@@ -316,7 +316,7 @@ const evenNumbers2 = numArray.map(logIfEven);
 console.log(evenNumbers2); 
 
 // [2,4,6,8]</code></pre>
-              <pre class="prettyprint linenums"><code>/* Using map()
+              <pre class='prettyprint linenums'><code>/* Using map()
  *
  * Using the musicData array and map():
  *   - Return a string for each item in the array in the following format:
@@ -344,29 +344,29 @@ const musicData = [
 ];
 
 const albumSalesStrings = musicData.map(function(item) {
-    return item.name + ' by ' + item.artist + " sold " + item.sales + ' copies';
+    return item.name + ' by ' + item.artist + ' sold ' + item.sales + ' copies';
 });
 
 console.log(albumSalesStrings);
 
-// ["25 by Adele sold 1731000 copies", 
-//  "Views by Drake sold 1608000 copies", 
-//  "Lemonade by Beyonce sold 1554000 copies", 
-//  "Traveller by Chris Stapleton sold 1085000 copies", 
-//  "A Pentatonix Christmas by Pentatonix sold 904000 copies", 
-//  "Hamilton: An American Musical by Original Broadway Cast Recording sold 820000 copies", 
-//  "Blurryface by Twenty One Pilots sold 738000 copies", 
-//  "The Very Best of Prince by Prince sold 668000 copies", 
-//  "Anti by Rihanna sold 603000 copies", 
-//  "Purpose by Justin Bieber sold 554000 copies"]</code></pre>
-              <h3 id="4-4">"filter()" method</h3>
+// ['25 by Adele sold 1731000 copies', 
+//  'Views by Drake sold 1608000 copies', 
+//  'Lemonade by Beyonce sold 1554000 copies', 
+//  'Traveller by Chris Stapleton sold 1085000 copies', 
+//  'A Pentatonix Christmas by Pentatonix sold 904000 copies', 
+//  'Hamilton: An American Musical by Original Broadway Cast Recording sold 820000 copies', 
+//  'Blurryface by Twenty One Pilots sold 738000 copies', 
+//  'The Very Best of Prince by Prince sold 668000 copies', 
+//  'Anti by Rihanna sold 603000 copies', 
+//  'Purpose by Justin Bieber sold 554000 copies']</code></pre>
+              <h3 id='4-4'>'filter()' method</h3>
               <p>
                 The <code>filter()</code> method is similar to the 
                 <code>map()</code> method. The difference is that the callback 
                 function is used as a test, and only items in the array that 
                 pass the test are included in the new array.
               </p>
-              <pre class="prettyprint linenums"><code>const numArray = [1,2,3,4,5,6,7,8,9];
+              <pre class='prettyprint linenums'><code>const numArray = [1,2,3,4,5,6,7,8,9];
 
 // filter() invokes the anonymous function for each element in the array
 const evenNumbers = numArray.filter(function(n) {
@@ -378,7 +378,7 @@ const evenNumbers = numArray.filter(function(n) {
 console.log(evenNumbers); 
 
 // [2,4,6,8]</code></pre>
-              <pre class="prettyprint linenums"><code>/* Using filter()
+              <pre class='prettyprint linenums'><code>/* Using filter()
  *
  * Using the musicData array and filter():
  *   - Return only album objects where the album's name is
@@ -410,21 +410,21 @@ const results = musicData.filter(function(item) {
 
 console.log(results);
 
-//[{artist: "Pentatonix", name: "A Pentatonix Christmas", sales: 904000}, 
-// {artist: "Twenty One Pilots", name: "Blurryface", sales: 738000},
-// {artist: "Prince", name: "The Very Best of Prince", sales: 668000}]</code></pre>
+//[{artist: 'Pentatonix', name: 'A Pentatonix Christmas', sales: 904000}, 
+// {artist: 'Twenty One Pilots', name: 'Blurryface', sales: 738000},
+// {artist: 'Prince', name: 'The Very Best of Prince', sales: 668000}]</code></pre>
             </div>
           </section>
           <!-- SECTION 5 -->
           <section>
             <h2>
-              <a id="5" data-toggle="collapse" role="button" href="#accordion-5" aria-expanded="true" aria-controls="accordion-5">
+              <a id='5' data-toggle='collapse' role='button' href='#accordion-5' aria-expanded='true' aria-controls='accordion-5'>
                 Function scope
               </a>
             </h2>
             <hr>
-            <div id="accordion-5" class="collapse show">
-              <h3 id="5-1">Runtime scope</h3>
+            <div id='accordion-5' class='collapse show'>
+              <h3 id='5-1'>Runtime scope</h3>
               <p>
                 Runtime scope refers to the context of the function, or more 
                 specifically, the set of variables available for the function 
@@ -438,7 +438,7 @@ console.log(results);
                 <li>Variables from its parent function's scope</li>
               </ol>
               <p>Consider the <code>child()</code> function below:</p>
-              <pre class="prettyprint linenums"><code>// Global variable
+              <pre class='prettyprint linenums'><code>// Global variable
     var global = 10;
     function parent() {
         // Variable from the parent scope
@@ -457,9 +457,9 @@ console.log(results);
                 <code>global</code>, <code>parentLocal</code>, and 
                 <code>childLocal</code> variables.
               </p>
-              <h3 id="5-2">Variable scope</h3>
+              <h3 id='5-2'>Variable scope</h3>
               <p><mark>Example 1</mark></p>
-              <pre class="prettyprint linenums"><code>/*
+              <pre class='prettyprint linenums'><code>/*
 var globalScoped = 100; // Available everywhere
 
 function foo() {
@@ -472,7 +472,7 @@ function foo() {
 
         functionScoped += 1;
 
-        console.log("functionScoped:" + functionScoped + " " + blockScoped:" + blockScoped);
+        console.log('functionScoped:' + functionScoped + ' ' + blockScoped:' + blockScoped);
         // functionScoped:1 blockScoped:2
         // functionScoped:2 blockScoped:2
         // functionScoped:3 blockScoped:2
@@ -485,12 +485,12 @@ function foo() {
         // functionScoped:10 blockScoped:2
     }
 
-    console.log("blockScoped:" + blockScoped);
+    console.log('blockScoped:' + blockScoped);
     // Uncaught ReferenceError: blockScoped is not defined
 
     globalScoped += 1;
 
-    console.log("globalScoped:" + globalScoped);
+    console.log('globalScoped:' + globalScoped);
     // globalScoped:101
 
 }
@@ -514,7 +514,7 @@ console.log(blockScoped);
                 while the for loop is running and are not longer accessible 
                 once the for loop finishes.
               </p>
-              <pre class="prettyprint linenums"><code>//----------------- Code 1 -----------------
+              <pre class='prettyprint linenums'><code>//----------------- Code 1 -----------------
 for (var x = 0; x &lt; 10; x++) {}
 console.log(x);
 // 10
@@ -537,7 +537,7 @@ console.log(y);
                 the search will continue looking up what is called the 
                 <strong>scope chain</strong>.
               </p>
-              <pre class="prettyprint linenums"><code>function one() {
+              <pre class='prettyprint linenums'><code>function one() {
     two();
     function two() {
         three();
@@ -550,7 +550,7 @@ console.log(y);
 one();</code></pre>
               <p>
                 <code>three()</code> will not only have access to the variables 
-                and functions "above" it (i.e., those of <code>two()</code> and 
+                and functions 'above' it (i.e., those of <code>two()</code> and 
                 <code>one()</code>) - <code>three()</code> will also have 
                 access to any global variables defined outside 
                 <code>one()</code>.
@@ -580,10 +580,10 @@ one();</code></pre>
               <p>
                 JavaScript won't throw an error or otherwise prevent you from 
                 creating that extra variable. In fact, the variable with local 
-                scope will just temporarily "shadow" the variable in the outer 
+                scope will just temporarily 'shadow' the variable in the outer 
                 scope. This is called <strong>variable shadowing</strong>. 
               </p>
-              <pre class="prettyprint linenums"><code>const symbol = '¥';
+              <pre class='prettyprint linenums'><code>const symbol = '¥';
 
 function displayPrice(price) {
     const symbol = '$';
@@ -594,7 +594,7 @@ displayPrice('80');
 // '$80'</code></pre>
               <p>
                 Since the variable pointing to '$' is declared inside a 
-                function (i.e., the "inner" scope), it will override any 
+                function (i.e., the 'inner' scope), it will override any 
                 variables of the same name that belong in an outer scope -- 
                 such as the global variable pointing to '¥''. As a result, 
                 '$80' is displayed rather than '¥80'.
@@ -604,7 +604,7 @@ displayPrice('80');
                 When the following code runs, what is the output of the first, 
                 second, and third logs to the console (respectively)?
               </p>
-              <pre class="prettyprint linenums"><code>let n = 8;
+              <pre class='prettyprint linenums'><code>let n = 8;
 
 function functionOne() {
     let n = 9;
@@ -623,13 +623,13 @@ functionOne();
 
 console.log(n);  // Third log</code></pre>
               <p>The answer is: <mark>10, 9, 8</mark></p>
-              <h3 id="5-3">Closures</h3>
-              <h4 id="5-3-1">Definition</h4>
+              <h3 id='5-3'>Closures</h3>
+              <h4 id='5-3-1'>Definition</h4>
               <p>
                 A closure is the combination of a function and the lexical 
                 environment within which that function was declared.
               </p>
-              <h4 id="5-3-2">Examples</h4>
+              <h4 id='5-3-2'>Examples</h4>
               <p><mark>Example 1</mark></p>
               <p>
                 After <code>remember(5)</code> is executed and returned, the 
@@ -646,7 +646,7 @@ console.log(n);  // Third log</code></pre>
                 its parent function (i.e. <code>remember()</code>) has 
                 returned.
               </p>
-              <pre class="prettyprint linenums"><code>function remember(number) {
+              <pre class='prettyprint linenums'><code>function remember(number) {
     return function() {
         return number;
     }
@@ -669,7 +669,7 @@ console.log( returnedFunction() );
                 <code>otherNumber</code> is private and no method outside the 
                 closure can alter it.
               </p>
-              <pre class="prettyprint linenums"><code>const number = 5;
+              <pre class='prettyprint linenums'><code>const number = 5;
 function foo() {
     const otherNumber = 3;
     function logger() {
@@ -702,7 +702,7 @@ otherNumber;</code></pre>
                 <code>count</code> is private and no method outside the closure 
                 can alter it.
               </p>
-              <pre class="prettyprint linenums"><code>function myCounter() {
+              <pre class='prettyprint linenums'><code>function myCounter() {
     let count = 0;
     return function() {
         count += 1;
@@ -750,7 +750,7 @@ count;
                   <code>myArray</code>
                 </li>
               </ul>
-              <pre class="prettyprint linenums"><code>function expandArray() {
+              <pre class='prettyprint linenums'><code>function expandArray() {
     const myArray = [1,1,1];
     return function() {
         myArray.push(1);
@@ -768,19 +768,19 @@ array();
 
 array();
 // [1, 1, 1, 1, 1, 1]</code></pre>
-              <h4 id="5-3-3">Garbage collection</h4>
+              <h4 id='5-3-3'>Garbage collection</h4>
               <p>
                 JavaScript manages memory with automatic garbage collection. 
                 This means that when data is no longer referable (i.e., there 
                 are no remaining references to that data available for 
-                executable code), it is "garbage collected" and will be 
+                executable code), it is 'garbage collected' and will be 
                 destroyed at some later point in time. This frees up the 
                 resources (i.e., computer memory) that the data had once 
                 consumed, making those resources available for re-use. As such, 
                 referenceable variables in JavaScript are not garbage 
                 collected!
               </p>
-              <pre class="prettyprint linenums"><code>function myCounter() {
+              <pre class='prettyprint linenums'><code>function myCounter() {
     let count = 0;
     return function() {
         count += 1;
@@ -798,24 +798,24 @@ array();
           <!-- SECTION 6 -->
           <section>
             <h2>
-              <a id="6" data-toggle="collapse" role="button" href="#accordion-6" aria-expanded="true" aria-controls="accordion-6">
+              <a id='6' data-toggle='collapse' role='button' href='#accordion-6' aria-expanded='true' aria-controls='accordion-6'>
                 Immediately-invoked function expressions
               </a>
             </h2>
             <hr>
-            <div id="accordion-6" class="collapse show">
-              <h3 id="6-1">Function types</h3>
+            <div id='accordion-6' class='collapse show'>
+              <h3 id='6-1'>Function types</h3>
               <ol>
                 <li>Function Declarations</li>
                 <li>Function Expressions</li>
                 <li>Immediately-Invoked Function Expressions</li>
               </ol>
-              <h3 id="6-2">Function declarations</h3>
-              <pre class="prettyprint linenums"><code>function foo() {
+              <h3 id='6-2'>Function declarations</h3>
+              <pre class='prettyprint linenums'><code>function foo() {
     return 'Hello World!';
 }</code></pre>
-              <h3 id="6-3">Function expressions</h3>
-              <pre class="prettyprint linenums"><code>// Anonymous
+              <h3 id='6-3'>Function expressions</h3>
+              <pre class='prettyprint linenums'><code>// Anonymous
 const myFunct = function() {
     return 'Hello World!';
 };
@@ -824,12 +824,12 @@ const myFunct = function() {
 const myFunct = function foo() {
     return 'Hello World!';
 };</code></pre>
-              <h3 id="6-4">Immediately-invoked function expressions</h3>
+              <h3 id='6-4'>Immediately-invoked function expressions</h3>
               <p>
                 A function that is called immediately after it is defined is 
                 called an Immediately-Invoked Function Expression (IIFE)
               </p>
-              <pre class="prettyprint linenums"><code>// Method #1
+              <pre class='prettyprint linenums'><code>// Method #1
 
 // Anonymous
 (function() {
@@ -856,8 +856,8 @@ const myFunct = function foo() {
                 All we're doing is wrapping a function in parentheses, then 
                 adding a pair of parentheses at the end of that to invoke it.
               </p>
-              <h3 id="6-5">Passing arguments to IIFE's</h3>
-              <pre class="prettyprint linenums"><code>(function(name) {
+              <h3 id='6-5'>Passing arguments to IIFE's</h3>
+              <pre class='prettyprint linenums'><code>(function(name) {
     console.log(`Hello ${name}`);
 })('Marios');
 
@@ -869,12 +869,12 @@ const myFunct = function foo() {
                 arguments that the function may need.
               </p>
               <p>
-                <i class="fas fa-exclamation-triangle"></i>
+                <i class='fas fa-exclamation-triangle'></i>
                 <code>(`Hello ${name}`)</code> is different from 
                 <code>('Hello ${name}')</code>
               </p>
-              <h3 id="6-6">IIFE's &amp; private scope</h3>
-              <pre class="prettyprint linenums"><code>const myFunction = (
+              <h3 id='6-6'>IIFE's &amp; private scope</h3>
+              <pre class='prettyprint linenums'><code>const myFunction = (
     function() {
         const hi = 'Hi!';
         return function() {
@@ -893,12 +893,12 @@ myFunction();
                 maintains a private, mutable state that cannot be accessed 
                 outside the function.
               </p>
-              <h3 id="6-7">What's true about IIFE's</h3>
+              <h3 id='6-7'>What's true about IIFE's</h3>
               <ol>
                 <li>IIFE's can be used to create private scope.</li>
                 <li>IIFE's are closely related to scope and closures.</li>
               </ol>
-              <h3 id="6-8">IIFE's, private scope &amp; event handling</h3>
+              <h3 id='6-8'>IIFE's, private scope &amp; event handling</h3>
               <p>
                 Let's check out another example of an IIFE -- this time in the 
                 context of handling an event. Say that we want to create a 
@@ -922,7 +922,7 @@ myFunction();
                 prevents any accidental mutations or unwanted side-effects from 
                 inadvertently altering the count.
               </p>
-              <pre class="prettyprint linenums"><code>&lt;html>
+              <pre class='prettyprint linenums'><code>&lt;html>
     &lt;body>
 
         &lt;button id='button'>Click me!&lt;/button>
@@ -965,7 +965,7 @@ myFunction();
                 <li>Callback is invoked</li>
                 <li>The returned function that has access to <code>count</code> is immediately invoked</li>
               </ol>
-              <button type="button" style="margin-bottom:1rem;" class="btn btn-secondary" id='button'>Click me!</button>
+              <button type='button' style='margin-bottom:1rem;' class='btn btn-secondary' id='button'>Click me!</button>
               <script>
                 // Grab the button element
                 const button = document.getElementById('button');
@@ -987,7 +987,7 @@ myFunction();
                   };
                 })());
               </script>
-              <h3 id="6-9">Summary</h3>
+              <h3 id='6-9'>Summary</h3>
               <p>
                 Utilizing an <strong>IIFE alongside closures</strong> allows 
                 for a private scope, which maintains privacy for variables 
@@ -1007,36 +1007,36 @@ myFunction();
           </section>
         </main>
         <!-- d-none d-xl-block d-xl-2: Hide the element for all screen sizes except on xlarge devices -->
-        <div class="ad-space d-none d-xl-block col-xl-2">
-          <div class="text-center">
+        <div class='ad-space d-none d-xl-block col-xl-2'>
+          <div class='text-center'>
             <h5>Ad1</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad2</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad3</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad4</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad5</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad6</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
           </div>
         </div>
       </div>
     </div> <!-- END OF CONTAINER -->
     <!-- FOOTER -->
-    <footer class="text-center text-muted">
-      <div class="license">
+    <footer class='text-center text-muted'>
+      <div class='license'>
         <div>
-          <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img width="100" alt="CC BY-SA 4.0 License" style="border-width:0" src="images/cc-by-sa-4.svg" /></a><br>Documentation is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+          <a rel='license' href='https://creativecommons.org/licenses/by-sa/4.0/'><img width='100' alt='CC BY-SA 4.0 License' style='border-width:0' src='images/cc-by-sa-4.svg' /></a><br>Documentation is licensed under the <a rel='license' href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0 License</a>.
         </div>
         <div>
-          <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0"><img width="80" alt="GNU AGPLv3 License" style="border-width:0" src="images/agpl-v3.svg" /></a><br><a href="https://github.com/PictureElement/html5tech">Source code</a> is licensed under the <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0">AGPL v3 License</a>.
+          <a rel='license' href='https://www.gnu.org/licenses/agpl-3.0'><img width='80' alt='GNU AGPLv3 License' style='border-width:0' src='images/agpl-v3.svg' /></a><br><a href='https://github.com/PictureElement/html5tech'>Source code</a> is licensed under the <a rel='license' href='https://www.gnu.org/licenses/agpl-3.0'>AGPL v3 License</a>.
         </div>
       </div>
-      <div class="copyright">
-        Design &amp; development by <a href="https://pictureelement.github.io/portfolio-2">PictureElement</a> (Marios Sofokleous).
+      <div class='copyright'>
+        Design &amp; development by <a href='https://pictureelement.github.io/portfolio-2'>PictureElement</a> (Marios Sofokleous).
       </div>
     </footer>
   </body>

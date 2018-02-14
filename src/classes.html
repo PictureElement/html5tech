@@ -1,131 +1,131 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
     <title>JavaScript/Classes</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fundamental resources about HTML5 & friends.">
-    <meta name="author" content="PictureElement (Marios Sofokleous)">
-    <meta name="theme-color" content="#007f7f">
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json">
-    <script src="js/jquery.min.js" defer></script>
-    <script src="js/popper.min.js" defer></script>
-    <script src="js/bootstrap.min.js" defer></script>
-    <script src="js/site.js" defer></script>
-    <script src="js/run_prettify.js" defer></script>
-    <script src="svg-with-js/js/fa-solid.js" defer></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Fundamental resources about HTML5 & friends.'>
+    <meta name='author' content='PictureElement (Marios Sofokleous)'>
+    <meta name='theme-color' content='#007f7f'>
+    <link rel='stylesheet' href='css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='manifest' href='manifest.json'>
+    <script src='js/jquery.min.js' defer></script>
+    <script src='js/popper.min.js' defer></script>
+    <script src='js/bootstrap.min.js' defer></script>
+    <script src='js/site.js' defer></script>
+    <script src='js/run_prettify.js' defer></script>
+    <script src='svg-with-js/js/fa-solid.js' defer></script>
   </head>
   <body>
     <!-- RETURN TO TOP BUTTON -->
-    <button id="return-to-top" title="Return to top"><i style="color:white" class="fas fa-chevron-up"></i></button>
+    <button id='return-to-top' title='Return to top'><i style='color:white' class='fas fa-chevron-up'></i></button>
     <!-- SITE NAVIGATION -->
-    <header class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row">
+    <header class='navbar navbar-expand navbar-light bg-light flex-column flex-md-row'>
       <!-- LOGO -->
-      <a class="navbar-brand" href="index.html">HTML5<span>Tech</span></a>
-      <div class="flex-row">
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item">
-            <a class="nav-link" href="#">HTML</a>
+      <a class='navbar-brand' href='index.html'>HTML5<span>Tech</span></a>
+      <div class='flex-row'>
+        <ul class='navbar-nav flex-row'>
+          <li class='nav-item'>
+            <a class='nav-link' href='#'>HTML</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">CSS</a>
+          <li class='nav-item'>
+            <a class='nav-link' href='#'>CSS</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">JAVASCRIPT <span class="sr-only">(current)</span></a>
+          <li class='nav-item active'>
+            <a class='nav-link' href='#'>JAVASCRIPT <span class='sr-only'>(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="introduction.html">JQUERY</a>
+          <li class='nav-item'>
+            <a class='nav-link' href='introduction.html'>JQUERY</a>
           </li>
         </ul>
       </div>
     </header>
-    <div class="container-fluid">
-      <div class="row d-flex">
-        <div class="sidebar col-12 col-md-3 col-xl-2">
-          <div class="text-center">
-            <button class="more-btn btn btn-link d-md-none" type="button" data-toggle="collapse" data-target="#sidebarContent" aria-controls="sidebarContent" aria-label="Toggle sidebar navigation">
+    <div class='container-fluid'>
+      <div class='row d-flex'>
+        <div class='sidebar col-12 col-md-3 col-xl-2'>
+          <div class='text-center'>
+            <button class='more-btn btn btn-link d-md-none' type='button' data-toggle='collapse' data-target='#sidebarContent' aria-controls='sidebarContent' aria-label='Toggle sidebar navigation'>
               MORE
             </button>
           </div>
-          <nav class="sidebar-links collapse" id="sidebarContent">
+          <nav class='sidebar-links collapse' id='sidebarContent'>
             <div>
-              <h5 class="sb-topic">Basic JS</h5>
-              <ol class="sb-list">
-                <li><a href="data-related.html">Data-related</a></li>
-                <li><a href="dom.html">Document Object Model</a></li>
-                <li><a href="object-related.html">Object-related</a></li>
-                <li><a href="flow-control.html">Flow control</a></li>
-                <li><a href="function-related.html">Function-related</a></li>
-                <li><a href="expressions-and-operators.html">Expressions &amp; operators</a></li>
+              <h5 class='sb-topic'>Basic JS</h5>
+              <ol class='sb-list'>
+                <li><a href='data-related.html'>Data-related</a></li>
+                <li><a href='dom.html'>Document Object Model</a></li>
+                <li><a href='object-related.html'>Object-related</a></li>
+                <li><a href='flow-control.html'>Flow control</a></li>
+                <li><a href='function-related.html'>Function-related</a></li>
+                <li><a href='expressions-and-operators.html'>Expressions &amp; operators</a></li>
               </ol>
             </div>
             <div>
-              <h5 class="sb-topic">Object-Oriented JS</h5>
-              <ol class="sb-list">
-                <li><a href="objects.html">Objects</a></li>
-                <li><a href="functions.html">Functions</a></li> 
-                <li id="current"><a href="classes.html">Classes</a></li>
+              <h5 class='sb-topic'>Object-Oriented JS</h5>
+              <ol class='sb-list'>
+                <li><a href='objects.html'>Objects</a></li>
+                <li><a href='functions.html'>Functions</a></li> 
+                <li id='current'><a href='classes.html'>Classes</a></li>
               </ol>
             </div>
           </nav>
         </div>
         <!-- MAIN -->
-        <main class="col-12 col-md-9 col-xl-8">
-          <h1 class="text-left">Classes</h1>
+        <main class='col-12 col-md-9 col-xl-8'>
+          <h1 class='text-left'>Classes</h1>
           <hr>
           <!-- CONTENT -->
-          <div class="card content-card">
-            <div class="card-header" id="headingOne">
-              <button class="content-btn btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne" aria-label="Toggle content" aria-expanded="false">
+          <div class='card content-card'>
+            <div class='card-header' id='headingOne'>
+              <button class='content-btn btn btn-link' type='button' data-toggle='collapse' data-target='#collapseOne' aria-controls='collapseOne' aria-label='Toggle content' aria-expanded='false'>
                 Contents
               </button>
             </div>
-            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">
-                <ol class="content-nav">
+            <div id='collapseOne' class='collapse' role='tabpanel' aria-labelledby='headingOne' data-parent='#accordion'>
+              <div class='card-body'>
+                <ol class='content-nav'>
                   <li>
-                    <a href="#1">Constructor functions</a>
+                    <a href='#1'>Constructor functions</a>
                     <ol>
-                      <li><a href="#1-1">Introduction</a></li>
-                      <li><a href="#1-2">Creating objects</a></li>
-                      <li><a href="#1-3">Ctor functions can have parameters</a></li>
-                      <li><a href="#1-4">Seeing an object's ctor</a></li>
+                      <li><a href='#1-1'>Introduction</a></li>
+                      <li><a href='#1-2'>Creating objects</a></li>
+                      <li><a href='#1-3'>Ctor functions can have parameters</a></li>
+                      <li><a href='#1-4'>Seeing an object's ctor</a></li>
                     </ol>
                   </li>
                   <li>
-                    <a href="#2">"this" keyword</a>
+                    <a href='#2'>'this' keyword</a>
                     <ol>
-                      <li><a href="#2-1">In object methods</a></li>
-                      <li><a href="#2-2">In ctor functions</a></li>
+                      <li><a href='#2-1'>In object methods</a></li>
+                      <li><a href='#2-2'>In ctor functions</a></li>
                       <li>
-                        <a href="#2-3">Setting our own "this"</a>
+                        <a href='#2-3'>Setting our own 'this'</a>
                         <ol>
-                          <li><a href="#2-3-1">"call()" method</a></li>
-                          <li><a href="#2-3-2">"apply()" method</a></li>
-                          <li><a href="#2-3-3">"bind()" method</a></li>
-                          <li><a href="#2-3-4">Examples</a></li>
+                          <li><a href='#2-3-1'>'call()' method</a></li>
+                          <li><a href='#2-3-2'>'apply()' method</a></li>
+                          <li><a href='#2-3-3'>'bind()' method</a></li>
+                          <li><a href='#2-3-4'>Examples</a></li>
                         </ol>
                       </li>
                     </ol>
                   </li>
                   <li>
-                    <a href="#3">Prototypal inheritance</a>
+                    <a href='#3'>Prototypal inheritance</a>
                     <ol>
-                      <li><a href="#3-1">Introduction</a></li>
-                      <li><a href="#3-2">Adding methods to the ctor funtion's prototype</a></li>
-                      <li><a href="#3-3">Replacing the prototype</a></li>
-                      <li><a href="#3-4">Standard built-in objects &amp; their prototypes</a></li>
+                      <li><a href='#3-1'>Introduction</a></li>
+                      <li><a href='#3-2'>Adding methods to the ctor funtion's prototype</a></li>
+                      <li><a href='#3-3'>Replacing the prototype</a></li>
+                      <li><a href='#3-4'>Standard built-in objects &amp; their prototypes</a></li>
                       <li>
-                        <a href="#3-5">Checking an object's properties</a>
+                        <a href='#3-5'>Checking an object's properties</a>
                         <ol>
-                          <li><a href="#3-5-1">Introduction</a></li>
-                          <li><a href="#3-5-2">"hasOwnProperty()" method</a></li>
-                          <li><a href="#3-5-3">"isPrototypeOf()" method</a></li>
-                          <li><a href="#3-5-4">"Object.getPrototypeOf()" method</a></li>
-                          <li><a href="#3-5-5">"constructor" property</a></li>
+                          <li><a href='#3-5-1'>Introduction</a></li>
+                          <li><a href='#3-5-2'>'hasOwnProperty()' method</a></li>
+                          <li><a href='#3-5-3'>'isPrototypeOf()' method</a></li>
+                          <li><a href='#3-5-4'>'Object.getPrototypeOf()' method</a></li>
+                          <li><a href='#3-5-5'>'constructor' property</a></li>
                         </ol>
                       </li>
                     </ol>
@@ -137,14 +137,14 @@
           <!-- SECTION 1 -->
           <section>
             <h2>
-              <a id="1" data-toggle="collapse" href="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
+              <a id='1' data-toggle='collapse' href='#accordion-1' aria-expanded='true' aria-controls='accordion-1'>
                 Constructor functions
               </a>
             </h2>
             <hr>
-            <div id="accordion-1" class="collapse show">
-              <h3 id="1-1">Introduction</h3>
-              <pre class="prettyprint linenums"><code>// Ctor function
+            <div id='accordion-1' class='collapse show'>
+              <h3 id='1-1'>Introduction</h3>
+              <pre class='prettyprint linenums'><code>// Ctor function
 function Automobile() {
     this.brand = 'BMW';
 }</code></pre>
@@ -158,14 +158,14 @@ function Automobile() {
                 written with the first letter capitalized to visually 
                 distinguish it from a regular function. 
               </p>
-              <h3 id="1-2">Creating objects</h3>
-              <pre class="prettyprint linenums"><code>// Using the JS keyword 'new'
+              <h3 id='1-2'>Creating objects</h3>
+              <pre class='prettyprint linenums'><code>// Using the JS keyword 'new'
 let car1 = new Automobile();
 
 // Using an object literal
 let car2 = { brand: 'BMW'};</code></pre>
-              <h3 id="1-3">Ctor functions can have parameters</h3>
-              <pre class="prettyprint linenums"><code>// Ctor function
+              <h3 id='1-3'>Ctor functions can have parameters</h3>
+              <pre class='prettyprint linenums'><code>// Ctor function
 function Automobile(model, color) {
     this.brand = 'Audi';
     this.model = model;
@@ -194,13 +194,13 @@ car2.description();
                 We can use the same constructor function to create as many 
                 objects as we'd like!
               </p>
-              <h3 id="1-4">Seeing an object's ctor</h3>
+              <h3 id='1-4'>Seeing an object's ctor</h3>
               <p>
                 What if we want to see if an object was created with a 
                 constructor function in the first place? We can use the 
                 <code>instanceOf</code> to give us some insight.
               </p>
-              <pre class="prettyprint linenums"><code>// Ctor function
+              <pre class='prettyprint linenums'><code>// Ctor function
 function Person(name) {
     this.name = name;
 }
@@ -220,14 +220,14 @@ woman instanceof Person;
           <!-- SECTION 2 -->
           <section>
             <h2>
-              <a id="2" data-toggle="collapse" role="button" href="#accordion-2" aria-expanded="true" aria-controls="accordion-2">
-                "this" keyword
+              <a id='2' data-toggle='collapse' role='button' href='#accordion-2' aria-expanded='true' aria-controls='accordion-2'>
+                'this' keyword
               </a>
             </h2>
             <hr>
-            <div id="accordion-2" class="collapse show">
-              <h3 id="2-1">In object methods</h3>
-              <pre class="prettyprint linenums"><code>// Create object
+            <div id='accordion-2' class='collapse show'>
+              <h3 id='2-1'>In object methods</h3>
+              <pre class='prettyprint linenums'><code>// Create object
 const man = {
     name: 'Marios',
     sayHello: function () {
@@ -248,8 +248,8 @@ man.greetings();
                 the <code>man</code> object, which contains the 
                 <code>sayHello()</code> method.
               </p>
-              <h3 id="2-2">In ctor functions</h3>
-              <pre class="prettyprint linenums"><code>// Ctor function
+              <h3 id='2-2'>In ctor functions</h3>
+              <pre class='prettyprint linenums'><code>// Ctor function
 function Person(name) {
     this.name = name;
     this.sayHello = function () {
@@ -270,9 +270,9 @@ man.greetings();
                 Calling the ctor function with the <code>new</code> keyword 
                 sets he value of <code>this</code> to the newly-created object.
               </p>
-              <h3 id="2-3">Setting our own "this"</h3>
-              <h4 id="2-3-1">"call()" method</h4>
-              <pre class="prettyprint linenums"><code>function.call(thisArg, arg1, arg2, ...)</code></pre>
+              <h3 id='2-3'>Setting our own 'this'</h3>
+              <h4 id='2-3-1'>'call()' method</h4>
+              <pre class='prettyprint linenums'><code>function.call(thisArg, arg1, arg2, ...)</code></pre>
               <dl>
                 <dt><code>thisArg</code></dt>
                 <dd>Value to be set as <code>this</code></dd>
@@ -281,15 +281,15 @@ man.greetings();
               </dl>
               <p>
                 Using <code>call()</code> to invoke a method, allows us to 
-                "borrow" a method from one object and then use it for another 
+                'borrow' a method from one object and then use it for another 
                 object!
               </p>
-              <pre class="prettyprint linenums"><code>
+              <pre class='prettyprint linenums'><code>
 // Create object
 const car1 = {
-    brand: "Audi",
-    model: "A4",
-    color: "blue",
+    brand: 'Audi',
+    model: 'A4',
+    color: 'blue',
     describe: function () {
         // 'this' refers to the 'car1' object
         console.log(`${this.brand} ${this.model} ${this.color} car`); 
@@ -298,9 +298,9 @@ const car1 = {
 
 // Create object
 const car2 = {
-    brand: "VW",
-    model: "Golf",
-    color: "red"
+    brand: 'VW',
+    model: 'Golf',
+    color: 'red'
 };
 
 car1.describe();
@@ -311,8 +311,8 @@ car2.describe();
 
 car1.describe.call(car2);
 // VW Golf red car</code></pre>
-              <h4 id="2-3-2">"apply()" method</h4>
-              <pre class="prettyprint linenums"><code>function.apply(thisArg, [argsArray])</code></pre>
+              <h4 id='2-3-2'>'apply()' method</h4>
+              <pre class='prettyprint linenums'><code>function.apply(thisArg, [argsArray])</code></pre>
               <dl>
                 <dt><code>thisArg</code></dt>
                 <dd>Value to be set as <code>this</code></dd>
@@ -320,7 +320,7 @@ car1.describe.call(car2);
                 <dd>Arguments of <code>function()</code></dd>
               </dl>
               <div>
-                <p class="warning align-middle">
+                <p class='warning align-middle'>
                   <strong>Note</strong>: While the syntax of this function is 
                   almost identical to that of <code>call()</code>, the 
                   fundamental difference is that <code>call()</code> accepts 
@@ -328,13 +328,13 @@ car1.describe.call(car2);
                   array of arguments.
                 </p>
               </div>
-              <h4 id="2-3-3">"bind()" method</h4>
+              <h4 id='2-3-3'>'bind()' method</h4>
               <p>
                 The value of <code>this</code> has some potential scope issues 
                 when callback functions are involved, and things can get a bit 
                 tricky.
               </p> 
-              <pre class="prettyprint linenums"><code>// Function
+              <pre class='prettyprint linenums'><code>// Function
 function foo(callback) {
     // If a function is simply invoked, 'this' is set to 'window'
     callback();
@@ -366,7 +366,7 @@ dog.age;
                 the global object and not the <code>dog</code> object.
               </p>
               <div>
-                <p class="danger align-middle">
+                <p class='danger align-middle'>
                   <strong>Note</strong>: If a constructor function is called 
                   with the <code>new</code> operator, the value of 
                   <code>this</code> is set to the newly-created object. If a 
@@ -381,7 +381,7 @@ dog.age;
                 One way to resolve this issue is to use an <strong>anonymous 
                 closure</strong> to close over the <code>dog</code> object:
               </p>
-              <pre class="prettyprint linenums"><code>// Function
+              <pre class='prettyprint linenums'><code>// Function
 function foo(callback) {
     callback();
     callback();
@@ -409,7 +409,7 @@ dog.age;
                 method.
               </p>
               <p>The <code>bind()</code> Method</p>
-              <pre class="prettyprint linenums"><code>function.bind(thisArg [,arg1[,arg2[,argN]]])</code></pre>
+              <pre class='prettyprint linenums'><code>function.bind(thisArg [,arg1[,arg2[,argN]]])</code></pre>
               <dl>
                 <dt><code>thisArg</code></dt>
                 <dd>Value to be set as <code>this</code></dd>
@@ -422,7 +422,7 @@ dog.age;
                 the <code>dog.grow()</code>'s <code>this</code> value to the 
                 <code>dog</code> object:
               </p>
-              <pre class="prettyprint linenums"><code>// Function
+              <pre class='prettyprint linenums'><code>// Function
 function foo(callback) {
     // If a function is simply invoked, 'this' is set to 'window', unless the 
     // function's 'this' value is explicitly set to another value
@@ -446,10 +446,10 @@ foo(growCopy);
 
 dog.age;
 // 7</code></pre>
-              <h4 id="2-3-4">Examples</h4>
+              <h4 id='2-3-4'>Examples</h4>
               <p><mark>Example 1: bind()</mark></p>
               <p>Consider the following <code>driver</code> and <code>car</code> objects:</p>
-              <pre class="prettyprint linenums"><code>const driver = {
+              <pre class='prettyprint linenums'><code>const driver = {
     name: 'Danica',
     displayName: function () {
         console.log(`Name: ${this.name}`);
@@ -461,17 +461,17 @@ const car = {
 };</code></pre>
               <p>
                 Write an expression using <code>bind()</code> that allows us to 
-                "borrow" the <code>displayName()</code> method from 
+                'borrow' the <code>displayName()</code> method from 
                 <code>driver</code> for the <code>car</code> object to use:
               </p>
-              <pre class="prettyprint linenums"><code>const displayNameCopy = driver.displayName.bind(car);
+              <pre class='prettyprint linenums'><code>const displayNameCopy = driver.displayName.bind(car);
 
 displayName();
 // Name: Fusion</code></pre>
               <p><mark>Example 2: call() &amp; apply()</mark></p>
-              <pre class="prettyprint linenums"><code>// Create object
+              <pre class='prettyprint linenums'><code>// Create object
 const cow = {
-    name: "Dolly"
+    name: 'Dolly'
 };
 
 // Create function
@@ -487,19 +487,19 @@ sayHello('Hello from');
 
 // 'this' refers to 'cow' object
 sayHello.call(cow, 'Hello from');
-// {name: "Dolly"} 
+// {name: 'Dolly'} 
 // Hello from, Dolly
 
 // 'this' refers to 'cow' object
 sayHello.apply(cow, ['Hello from']);
-// {name: "Dolly"} 
+// {name: 'Dolly'} 
 // Hello from, Dolly</code></pre>
               <p><mark>Example 3: call()</mark></p>
               <p>
                 Consider the following <code>Andrew</code> and 
                 <code>Richard</code> objects:
               </p>
-              <pre class="prettyprint linenums"><code>const Andrew = {
+              <pre class='prettyprint linenums'><code>const Andrew = {
     name: 'Andrew',
     introduce: function () {
         console.log(`Hi, my name is ${this.name}!`);
@@ -520,7 +520,7 @@ const Richard = {
               </p>
               <p><mark>Example 4: call()</mark></p>
               <p>Consider the following:</p>
-              <pre class="prettyprint linenums"><code>const andrew = {
+              <pre class='prettyprint linenums'><code>const andrew = {
     name: 'Andrew'
 };
 
@@ -538,15 +538,15 @@ function introduce(language) {
           <!-- SECTION 3 -->
           <section>
             <h2>
-              <a id="3" data-toggle="collapse" role="button" href="#accordion-3" aria-expanded="true" aria-controls="accordion-3">
+              <a id='3' data-toggle='collapse' role='button' href='#accordion-3' aria-expanded='true' aria-controls='accordion-3'>
                 Prototypal inheritance
               </a>
             </h2>
             <hr>
-            <div id="accordion-3" class="collapse show">
-              <h3 id="3-1">Introduction</h3>
+            <div id='accordion-3' class='collapse show'>
+              <h3 id='3-1'>Introduction</h3>
               <p>Consider the following example:</p>
-              <pre class="prettyprint linenums"><code>// Ctor function
+              <pre class='prettyprint linenums'><code>// Ctor function
 function Cat(name, age) {
     this.name = name;
     this.age = age;
@@ -568,7 +568,7 @@ bob.meow();
                 Let's go ahead and remove <code>meow()</code> from the 
                 <code>Cat</code> ctor and add it to its prototype:
               </p>
-              <pre class="prettyprint linenums"><code>// Ctor function
+              <pre class='prettyprint linenums'><code>// Ctor function
 function Cat(name, age) {
     this.name = name;
     this.age = age;
@@ -598,7 +598,7 @@ bob.meow();
                 for a match.
               </p>
               <div>
-                <p class="warning align-middle"> 
+                <p class='warning align-middle'> 
                   <strong>Note</strong>: In cases where the property doesn't 
                   exist in the prototype, the JS engine will continue looking up 
                   the <strong>prototype chain</strong>. At the very end of the 
@@ -608,7 +608,7 @@ bob.meow();
                 </p>
               </div>
               <div>
-                <p class="warning align-middle">
+                <p class='warning align-middle'>
                   <strong>Note</strong>: Each function has a 
                   <code>prototype</code> property, which is really just an 
                   object. All objects created by a ctor function keep a 
@@ -616,21 +616,21 @@ bob.meow();
                   properties as their own! 
                 </p>
               </div>
-              <h3 id="3-2">Adding methods to the ctor funtion's prototype</h3>
+              <h3 id='3-2'>Adding methods to the ctor funtion's prototype</h3>
               <p>
                 To <strong>save memory</strong> and 
                 <strong>keep things DRY</strong>, we can add methods to the 
                 ctor function's <code>prototype</code>.
               </p>
               <p>Consider the following two code snippets below:</p>
-              <pre class="prettyprint linenums"><code>// A
+              <pre class='prettyprint linenums'><code>// A
 function Cat(name) {
     this.name = name;
     this.meow = function () {
         console.log(`Meow! My name is ${this.name}`);
     }
 }</code></pre>
-              <pre class="prettyprint linenums"><code>// B
+              <pre class='prettyprint linenums'><code>// B
 function Cat(name) {
     this.name = name;
 }
@@ -652,20 +652,20 @@ Cat.prototype.meow = function () {
                 that <strong>meow</strong> points to does not need to be 
                 recreated each time a <code>Cat</code> object is created.
               </p> 
-              <h3 id="3-3">Replacing the prototype</h3>
-              <pre class="prettyprint linenums"><code>// Ctor function
+              <h3 id='3-3'>Replacing the prototype</h3>
+              <pre class='prettyprint linenums'><code>// Ctor function
 function Parrot(name) {
     this.name = name;
 }
 
 // Create objects
-const charly = new Parrot("Charly");
-const ricky = new Parrot("Ricky");
+const charly = new Parrot('Charly');
+const ricky = new Parrot('Ricky');
 
 // Even after we make the new objects, 'charly' &amp; 'ricky', we can still add 
 // properties to the prototype
 Parrot.prototype.speak = function () {
-    console.log("Hellooooooo");
+    console.log('Hellooooooo');
 };
 
 charly.speak();
@@ -679,7 +679,7 @@ ricky.speak();
                 updated prototype's properties; they just retain their secret 
                 link to the old prototype:
               </p>
-              <pre class="prettyprint linenums"><code>// Replace 'prototype'
+              <pre class='prettyprint linenums'><code>// Replace 'prototype'
 Parrot.prototype = {
     isCockatoo: true,
     color: 'white'
@@ -694,8 +694,8 @@ console.log(ricky.isCockatoo);
                 As it turns out, any new <code>Parrot</code> objects created 
                 moving forward will use the updated prototype:
               </p>
-              <pre class="prettyprint linenums"><code>// Create object
-const erik = new Parrot("Erik");
+              <pre class='prettyprint linenums'><code>// Create object
+const erik = new Parrot('Erik');
 
 erik.speak();
 // TypeError: erik.speak is not a function
@@ -705,7 +705,7 @@ console.log(erik.color);
 
 console.log(erik.isCockatoo)
 // true</code></pre>
-              <h3 id="3-4">Standard built-in objects &amp; their prototypes</h3>
+              <h3 id='3-4'>Standard built-in objects &amp; their prototypes</h3>
               <p>Instances (objects) inherit from their ctor's prototype.</p>
               <p>Ctors and their respective prototypes:</p>
               <ul>
@@ -715,7 +715,7 @@ console.log(erik.isCockatoo)
                 <li><code>Boolean/Boolean.prototype</code></li>
                 <li><code>Date/Date.prototype</code></li>
               </ul>
-              <pre class="prettyprint linenums"><code>// Create 'Array' objects
+              <pre class='prettyprint linenums'><code>// Create 'Array' objects
 var myArray1 = [1, 2, 3];
 var myArray2 = ['a', 'b', 'c'];
 
@@ -733,7 +733,7 @@ myArra2.push('d');
                 new methods and properties to extend all <code>Array</code> 
                 objects.
               </p>
-              <pre class="prettyprint linenums"><code>
+              <pre class='prettyprint linenums'><code>
 Array.prototype.myReverse = function () {
     var res = new Array;
     for(let i = this.length - 1; i >= 0; i--) {
@@ -747,28 +747,28 @@ myArray1 = myArray1.myReverse();
 
 myArray2 = myArray2.myReverse();
 // ['d', 'c', 'b', 'a']</code></pre>
-              <h3 id="3-5">Checking an object's properties</h3>
-              <h4 id="3-5-1">Introduction</h4>
+              <h3 id='3-5'>Checking an object's properties</h3>
+              <h4 id='3-5-1'>Introduction</h4>
               <p>
                 If an object doesn't have a particular property of its own, it 
                 can access one somewhere along the prototype chain. In this 
                 section, we'll cover a few useful methods that can help us 
                 determine where a particular property is coming from.
               </p>
-              <h4 id="3-5-2">"hasOwnProperty()" method</h4>
+              <h4 id='3-5-2'>'hasOwnProperty()' method</h4>
               <p>
                 The <code>hasOwnProperty()</code> method returns a boolean 
                 indicating whether the object has the specified property as own
                 (not inherited) property.
               </p>
-              <pre class="prettyprint linenums"><code>// Ctor
+              <pre class='prettyprint linenums'><code>// Ctor
 function Foo() {
     // Own property
-    this.property1 = "1234";
+    this.property1 = '1234';
 }
 
 // Inherited property
-Foo.prototype.property2 = "5678";
+Foo.prototype.property2 = '5678';
 
 // Crteate object
 const myFoo = new Foo();
@@ -778,17 +778,17 @@ console.log(myFoo.hasOwnProperty('property1'));
 
 console.log(myFoo.hasOwnProperty('property2'));
 // false</code></pre>
-              <h4 id="3-5-3">"isPrototypeOf()" method</h4>
+              <h4 id='3-5-3'>'isPrototypeOf()' method</h4>
               <p>
                 The <code>isPrototypeOf()</code> method checks if an object 
                 exists in another object's prototype chain. Using this method, 
                 you can confirm if a particular object serves as the prototype 
                 of another object. 
               </p>
-              <pre class="prettyprint linenums"><code>// Prototype
+              <pre class='prettyprint linenums'><code>// Prototype
 const motorVehicle = {
     move: function() {
-        console.log("I am moving!");
+        console.log('I am moving!');
     }
 }
 
@@ -806,7 +806,7 @@ const myCar = new Car('Suzuki Jimny', 1.3);
 
 // model: own property
 console.log(myCar.model);
-// "Suzuki Jimny"
+// 'Suzuki Jimny'
 
 // move(): inherited property
 myCar.move();
@@ -816,19 +816,19 @@ myCar.move();
 console.log(motorVehicle.isPrototypeOf(myCar));
 // true</code></pre>
               <div>
-                <p class="warning align-middle">
+                <p class='warning align-middle'>
                   <strong>Note</strong>: <code>isPrototypeOf()</code> works 
                   well, but keep in mind that in order use it, you must have 
                   that prototype object at hand in the first place.
                 </p>
               </div>
-              <h4 id="3-5-4">"Object.getPrototypeOf()" method</h4>
+              <h4 id='3-5-4'>'Object.getPrototypeOf()' method</h4>
               <p>
                 The <code>Object.getPrototypeOf()</code> method returns the 
                 prototype of the specified object.
               </p>
               <p>Continuing from the previous example:</p>
-              <pre class="prettyprint linenums"><code>const myPrototype = Object.getPrototypeOf(myCar);
+              <pre class='prettyprint linenums'><code>const myPrototype = Object.getPrototypeOf(myCar);
 
 console.log(myPrototype);
 // {move: ƒ}</code></pre>
@@ -837,7 +837,7 @@ console.log(myPrototype);
                 following object, <code>capitals</code>, using the 
                 <strong>literal notation</strong>:
               </p>
-              <pre class="prettyprint linenums"><code>const capitals = {
+              <pre class='prettyprint linenums'><code>const capitals = {
     California: 'Sacramento',
     Washington: 'Olympia',
     Oregon: 'Salem',
@@ -857,9 +857,9 @@ console.log(myPrototype);
                 <i>Answer:</i> A reference to <code>Object()</code>'s 
                 prototype.
               </p>
-              <pre class="prettyprint linenums"><code>Object.getPrototypeOf(capitals) === Object.prototype
+              <pre class='prettyprint linenums'><code>Object.getPrototypeOf(capitals) === Object.prototype
 // true</code></pre>
-              <h4 id="3-5-5">"constructor" property</h4>
+              <h4 id='3-5-5'>'constructor' property</h4>
               <p>
                 Each time an object is created, a special property is assigned 
                 to it under the hood: <code>constructor</code>. Accessing an 
@@ -867,7 +867,7 @@ console.log(myPrototype);
                 to the constructor function that created that object in the 
                 first place! 
               </p>
-              <pre class="prettyprint linenums"><code>// Ctor
+              <pre class='prettyprint linenums'><code>// Ctor
 function Longboard() {
     this.material = 'bamboo';
 }
@@ -885,9 +885,9 @@ console.log(board.constructor);
                 notation</strong>, its constructor is the built-in 
                 <code>Object()</code> constructor function!
               </p>
-              <pre class="prettyprint linenums"><code>const foo = {
-    description: "foo object",
-    message: "hello world!"
+              <pre class='prettyprint linenums'><code>const foo = {
+    description: 'foo object',
+    message: 'hello world!'
 }
 
 console.log(foo.constructor);
@@ -897,46 +897,46 @@ console.log(foo.constructor);
           <!-- SECTION 4 -->
           <section>
             <h2>
-              <a data-toggle="collapse" role="button" href="#accordion-4" aria-expanded="true" aria-controls="accordion-4">
+              <a data-toggle='collapse' role='button' href='#accordion-4' aria-expanded='true' aria-controls='accordion-4'>
                 ------------------------
               </a>
             </h2>
             <hr>
-            <div id="accordion-4" class="collapse show">
+            <div id='accordion-4' class='collapse show'>
             </div>
           </section>
         </main>
         <!-- d-none d-xl-block d-xl-2: Hide the element for all screen sizes except on xlarge devices -->
-        <div class="ad-space d-none d-xl-block col-xl-2">
-          <div class="text-center">
+        <div class='ad-space d-none d-xl-block col-xl-2'>
+          <div class='text-center'>
             <h5>Ad1</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad2</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad3</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad4</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad5</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad6</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
           </div>
         </div>
       </div>
     </div> <!-- END OF CONTAINER -->
     <!-- FOOTER -->
-    <footer class="text-center text-muted">
-      <div class="license">
+    <footer class='text-center text-muted'>
+      <div class='license'>
         <div>
-          <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img width="100" alt="CC BY-SA 4.0 License" style="border-width:0" src="images/cc-by-sa-4.svg" /></a><br>Documentation is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+          <a rel='license' href='https://creativecommons.org/licenses/by-sa/4.0/'><img width='100' alt='CC BY-SA 4.0 License' style='border-width:0' src='images/cc-by-sa-4.svg' /></a><br>Documentation is licensed under the <a rel='license' href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0 License</a>.
         </div>
         <div>
-          <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0"><img width="80" alt="GNU AGPLv3 License" style="border-width:0" src="images/agpl-v3.svg" /></a><br><a href="https://github.com/PictureElement/html5tech">Source code</a> is licensed under the <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0">AGPL v3 License</a>.
+          <a rel='license' href='https://www.gnu.org/licenses/agpl-3.0'><img width='80' alt='GNU AGPLv3 License' style='border-width:0' src='images/agpl-v3.svg' /></a><br><a href='https://github.com/PictureElement/html5tech'>Source code</a> is licensed under the <a rel='license' href='https://www.gnu.org/licenses/agpl-3.0'>AGPL v3 License</a>.
         </div>
       </div>
-      <div class="copyright">
-        Design &amp; development by <a href="https://pictureelement.github.io/portfolio-2">PictureElement</a> (Marios Sofokleous).
+      <div class='copyright'>
+        Design &amp; development by <a href='https://pictureelement.github.io/portfolio-2'>PictureElement</a> (Marios Sofokleous).
       </div>
     </footer>
   </body>

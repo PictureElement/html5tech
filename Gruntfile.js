@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
     
     clean: {
@@ -54,9 +53,8 @@ module.exports = function(grunt) {
     },
     
     critical: {
-      t1: {
+      t0: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -71,9 +69,8 @@ module.exports = function(grunt) {
         src: 'dist/classes.html',
         dest: 'dist/classes.html'
       },
-      t2: {
+      t1: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -88,9 +85,8 @@ module.exports = function(grunt) {
         src: 'dist/data-related.html',
         dest: 'dist/data-related.html'
       },
-      t3: {
+      t2: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -105,9 +101,8 @@ module.exports = function(grunt) {
         src: 'dist/dom.html',
         dest: 'dist/dom.html'
       },
-      t4: {
+      t3: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -122,9 +117,8 @@ module.exports = function(grunt) {
         src: 'dist/dom-manipulation.html',
         dest: 'dist/dom-manipulation.html'
       },
-      t5: {
+      t4: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -139,9 +133,8 @@ module.exports = function(grunt) {
         src: 'dist/expressions-and-operators.html',
         dest: 'dist/expressions-and-operators.html'
       },
-      t6: {
+      t5: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -156,9 +149,8 @@ module.exports = function(grunt) {
         src: 'dist/flow-control.html',
         dest: 'dist/flow-control.html'
       },
-      t7: {
+      t6: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -173,9 +165,8 @@ module.exports = function(grunt) {
         src: 'dist/function-related.html',
         dest: 'dist/function-related.html'
       },
-      t8: {
+      t7: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -190,9 +181,8 @@ module.exports = function(grunt) {
         src: 'dist/functions.html',
         dest: 'dist/functions.html'
       },
-      t9: {
+      t8: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -207,9 +197,8 @@ module.exports = function(grunt) {
         src: 'dist/index.html',
         dest: 'dist/index.html'
       },
-      t10: {
+      t9: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -224,9 +213,8 @@ module.exports = function(grunt) {
         src: 'dist/introduction.html',
         dest: 'dist/introduction.html'
       },
-      t11: {
+      t10: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -241,9 +229,8 @@ module.exports = function(grunt) {
         src: 'dist/object-related.html',
         dest: 'dist/object-related.html'
       },
-      t12: {
+      t11: {
         options: {
-          base: './',
           dimensions: [
             {
               width: 1300,
@@ -267,7 +254,7 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         files: {
-          'dist/classes.html': 'dist/classes.html', // 'destination': 'source' 
+          'dist/classes.html': 'dist/classes.html',
           'dist/data-related.html': 'dist/data-related.html',
           'dist/dom.html': 'dist/dom.html',
           'dist/dom-manipulation.html': 'dist/dom-manipulation.html',

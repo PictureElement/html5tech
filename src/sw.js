@@ -18,18 +18,8 @@ var filesToCache = [
   '/html5tech/introduction.html',
   '/html5tech/object-related.html',
   '/html5tech/objects.html',
-
-
-  '/html5tech/css/style.css',
-  '/html5tech/css/prettify.css',
-  '/html5tech/css/bootstrap.min.css',
-
-  '/html5tech/js/site.js',
-  '/html5tech/js/bootstrap.min.js',
-  '/html5tech/js/jquery.min.js',
-  '/html5tech/js/popper.min.js',
-  '/html5tech/js/run_prettify.js',
-
+  '/html5tech/css/purestyles.min.css',
+  '/html5tech/js/output.min.js',
   '/html5tech/demos/js/2.js',
   '/html5tech/demos/js/3.js',
   '/html5tech/demos/js/5.js',
@@ -54,20 +44,15 @@ var filesToCache = [
   '/html5tech/demos/12-2.html',
   '/html5tech/demos/13-1.html',
   '/html5tech/demos/13-2.html',
-
   '/html5tech/images/150x100.png',
   '/html5tech/images/100x100.png',
   '/html5tech/images/agpl-v3.svg',
   '/html5tech/images/cc-by-sa-4.svg',
-
   '/html5tech/fonts/audiowide-v6-latin-regular.eot',
   '/html5tech/fonts/audiowide-v6-latin-regular.woff2',
   '/html5tech/fonts/audiowide-v6-latin-regular.woff',
   '/html5tech/fonts/audiowide-v6-latin-regular.ttf',
-  '/html5tech/fonts/audiowide-v6-latin-regular.svg',
-
-  '/html5tech/svg-with-js/css/fa-svg-with-js.css',
-  '/html5tech/svg-with-js/js/fa-solid.js'
+  '/html5tech/fonts/audiowide-v6-latin-regular.svg'
 ];
 
 // When the service worker is registered, an 'install' event is triggered the 

@@ -1,100 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
     <title>JavaScript/Expressions &amp; operators</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fundamental resources about HTML5 & friends.">
-    <meta name="author" content="PictureElement (Marios Sofokleous)">
-    <meta name="theme-color" content="#007f7f">
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json">
-    <script src="js/jquery.min.js" defer></script>
-    <script src="js/popper.min.js" defer></script>
-    <script src="js/bootstrap.min.js" defer></script>
-    <script src="js/site.js" defer></script>
-    <script src="js/run_prettify.js" defer></script>
-    <script src="svg-with-js/js/fa-solid.js" defer></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Fundamental resources about HTML5 & friends.'>
+    <meta name='author' content='PictureElement (Marios Sofokleous)'>
+    <meta name='theme-color' content='#007f7f'>
+    <link rel='stylesheet' href='css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='manifest' href='manifest.json'>
+    <script src='js/jquery.min.js' defer></script>
+    <script src='js/popper.min.js' defer></script>
+    <script src='js/bootstrap.min.js' defer></script>
+    <script src='js/site.js' defer></script>
+    <script src='js/run_prettify.js' defer></script>
+    <script src='svg-with-js/js/fa-solid.js' defer></script>
   </head>
   <body>
     <!-- RETURN TO TOP BUTTON -->
-    <button id="return-to-top" title="Return to top"><i style="color:white" class="fas fa-chevron-up"></i></button>
+    <button id='return-to-top' title='Return to top'><i style='color:white' class='fas fa-chevron-up'></i></button>
     <!-- SITE NAVIGATION -->
-    <header class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row">
+    <header class='navbar navbar-expand navbar-light bg-light flex-column flex-md-row'>
       <!-- LOGO -->
-      <a class="navbar-brand" href="index.html">HTML5<span>Tech</span></a>
-      <div class="flex-row">
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item">
-            <a class="nav-link" href="#">HTML</a>
+      <a class='navbar-brand' href='index.html'>HTML5<span>Tech</span></a>
+      <div class='flex-row'>
+        <ul class='navbar-nav flex-row'>
+          <li class='nav-item'>
+            <a class='nav-link' href='#'>HTML</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">CSS</a>
+          <li class='nav-item'>
+            <a class='nav-link' href='#'>CSS</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">JAVASCRIPT <span class="sr-only">(current)</span></a>
+          <li class='nav-item active'>
+            <a class='nav-link' href='#'>JAVASCRIPT <span class='sr-only'>(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="introduction.html">JQUERY</a>
+          <li class='nav-item'>
+            <a class='nav-link' href='introduction.html'>JQUERY</a>
           </li>
         </ul>
       </div>
     </header>
-    <div class="container-fluid">
-      <div class="row d-flex">
-        <div class="sidebar col-12 col-md-3 col-xl-2">
-          <div class="text-center">
-            <button class="more-btn btn btn-link d-md-none" type="button" data-toggle="collapse" data-target="#sidebarContent" aria-controls="sidebarContent" aria-label="Toggle sidebar navigation">
+    <div class='container-fluid'>
+      <div class='row d-flex'>
+        <div class='sidebar col-12 col-md-3 col-xl-2'>
+          <div class='text-center'>
+            <button class='more-btn btn btn-link d-md-none' type='button' data-toggle='collapse' data-target='#sidebarContent' aria-controls='sidebarContent' aria-label='Toggle sidebar navigation'>
               MORE
             </button>
           </div>
-          <nav class="sidebar-links collapse" id="sidebarContent">
+          <nav class='sidebar-links collapse' id='sidebarContent'>
             <div>
-              <h5 class="sb-topic">Basic JS</h5>
-              <ol class="sb-list">
-                <li><a href="data-related.html">Data-related</a></li>
-                <li><a href="dom.html">Document Object Model</a></li>
-                <li><a href="object-related.html">Object-related</a></li>
-                <li><a href="flow-control.html">Flow control</a></li>
-                <li><a href="function-related.html">Function-related</a></li>
-                <li id="current"><a href="expressions-and-operators.html">Expressions &amp; operators</a></li>
+              <h5 class='sb-topic'>Basic JS</h5>
+              <ol class='sb-list'>
+                <li><a href='data-related.html'>Data-related</a></li>
+                <li><a href='dom.html'>Document Object Model</a></li>
+                <li><a href='object-related.html'>Object-related</a></li>
+                <li><a href='flow-control.html'>Flow control</a></li>
+                <li><a href='function-related.html'>Function-related</a></li>
+                <li id='current'><a href='expressions-and-operators.html'>Expressions &amp; operators</a></li>
               </ol>
             </div>
             <div>
-              <h5 class="sb-topic">Object-Oriented JS</h5>
-              <ol class="sb-list">
-                <li><a href="objects.html">Objects</a></li>
-                <li><a href="functions.html">Functions</a></li> 
-                <li><a href="classes.html">Classes</a></li>
+              <h5 class='sb-topic'>Object-Oriented JS</h5>
+              <ol class='sb-list'>
+                <li><a href='objects.html'>Objects</a></li>
+                <li><a href='functions.html'>Functions</a></li> 
+                <li><a href='classes.html'>Classes</a></li>
               </ol>
             </div>
           </nav>
         </div>
         <!-- MAIN -->
-        <main class="col-12 col-md-9 col-xl-8">
-          <h1 class="text-left">Expressions &amp; operators</h1>
+        <main class='col-12 col-md-9 col-xl-8'>
+          <h1 class='text-left'>Expressions &amp; operators</h1>
           <hr>
           <!-- CONTENT -->
-          <div class="card content-card">
-            <div class="card-header" id="headingOne">
-              <button class="content-btn btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne" aria-label="Toggle content" aria-expanded="false">
+          <div class='card content-card'>
+            <div class='card-header' id='headingOne'>
+              <button class='content-btn btn btn-link' type='button' data-toggle='collapse' data-target='#collapseOne' aria-controls='collapseOne' aria-label='Toggle content' aria-expanded='false'>
                 Contents
               </button>
             </div>
-            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">
-                <ol class="content-nav">
-                  <li><a href="#1">Equality operators</a></li>
-                  <li><a href="#2">Relational operators</a></li>
+            <div id='collapseOne' class='collapse' role='tabpanel' aria-labelledby='headingOne' data-parent='#accordion'>
+              <div class='card-body'>
+                <ol class='content-nav'>
+                  <li><a href='#1'>Equality operators</a></li>
+                  <li><a href='#2'>Relational operators</a></li>
                   <li>
-                    <a href="#3">Falsy &amp; truthy values</a>
+                    <a href='#3'>Falsy &amp; truthy values</a>
                     <ol>
-                      <li><a href="#3-1">Primitives</a></li>
-                      <li><a href="#3-2">Falsy values</a></li>
-                      <li><a href="#3-3">Truthy values</a></li>
-                      <li><a href="#3-4">Tricky examples</a></li>
+                      <li><a href='#3-1'>Primitives</a></li>
+                      <li><a href='#3-2'>Falsy values</a></li>
+                      <li><a href='#3-3'>Truthy values</a></li>
+                      <li><a href='#3-4'>Tricky examples</a></li>
                     </ol>
                   </li>
                 </ol>
@@ -104,32 +104,32 @@
           <!-- SECTION 1 -->
           <section>
             <h2>
-              <a id="1" data-toggle="collapse" role="button" href="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
+              <a id='1' data-toggle='collapse' role='button' href='#accordion-1' aria-expanded='true' aria-controls='accordion-1'>
                 Equality operators
               </a>
             </h2>
             <hr>
-            <div id="accordion-1" class="collapse show">
+            <div id='accordion-1' class='collapse show'>
               <p><u>Equality: ==</u></p>
-              <pre class="prettyprint linenums"><code>console.log(1 == 1);
+              <pre class='prettyprint linenums'><code>console.log(1 == 1);
 // true
 
 console.log('1' == 1);
 // true</code></pre>
               <p><u>Strict equality: ===</u></p>
-              <pre class="prettyprint linenums"><code>console.log(1 === 1);
+              <pre class='prettyprint linenums'><code>console.log(1 === 1);
 // true
 
 console.log('1' === 1);
 // false</code></pre>
               <p><u>Iequality: !=</u></p>
-              <pre class="prettyprint linenums"><code>console.log(1 != 2);
+              <pre class='prettyprint linenums'><code>console.log(1 != 2);
 // true
 
 console.log(1 != '1');
 // false
 
-console.log(1 != "1");
+console.log(1 != '1');
 // false
 
 console.log(1 != true);
@@ -138,13 +138,13 @@ console.log(1 != true);
 console.log(0 != false);
 // false</code></pre>
               <p><u>Strict iequality: !=</u></p>
-              <pre class="prettyprint linenums"><code>console.log(1 !== 2);
+              <pre class='prettyprint linenums'><code>console.log(1 !== 2);
 // true
 
 console.log(1 !== '1');
 // true
 
-console.log(1 !== "1");
+console.log(1 !== '1');
 // true
 
 console.log(1 !== true);
@@ -157,20 +157,20 @@ console.log(0 !== false);
           <!-- SECTION 2 -->
           <section>
             <h2>
-              <a id="2" data-toggle="collapse" role="button" href="#accordion-2" aria-expanded="true" aria-controls="accordion-2">
+              <a id='2' data-toggle='collapse' role='button' href='#accordion-2' aria-expanded='true' aria-controls='accordion-2'>
                 Relational operators
               </a>
             </h2>
             <hr>
-            <div id="accordion-2" class="collapse show">
+            <div id='accordion-2' class='collapse show'>
               <p><u>Greater than operator: &gt;</u></p>
-              <pre class="prettyprint linenums"><code>console.log(3 > 2);
+              <pre class='prettyprint linenums'><code>console.log(3 > 2);
 // true
 
 console.log(1 > 5);
 // false</code></pre>
               <p><u>Greater than or equal operator: &gt;=</u></p>
-              <pre class="prettyprint linenums"><code>console.log(3 >= 2);
+              <pre class='prettyprint linenums'><code>console.log(3 >= 2);
 // true
 
 console.log(5 >= 10);
@@ -179,13 +179,13 @@ console.log(5 >= 10);
 console.log(7 >= 7);
 // true</code></pre>
               <p><u>Less than operator: &lt;</u></p>
-              <pre class="prettyprint linenums"><code>console.log(3 &lt; 2);
+              <pre class='prettyprint linenums'><code>console.log(3 &lt; 2);
 // false
 
 console.log(1 &lt; 5);
 // true</code></pre>
               <p><u>Less than or equal operator: &lt;=</u></p>
-              <pre class="prettyprint linenums"><code>console.log(3 &lt;= 2);
+              <pre class='prettyprint linenums'><code>console.log(3 &lt;= 2);
 // false
 
 console.log(5 &lt;= 10);
@@ -201,48 +201,48 @@ console.log(7 &lt;= 7);
                 types in the double-precision 64-bit floating point format 
                 (IEEE 754).
               </p>
-              <pre class="prettyprint linenums"><code>function getRelationship(x, y) {
+              <pre class='prettyprint linenums'><code>function getRelationship(x, y) {
     
-    // Expecting "number" type
+    // Expecting 'number' type
     let isNumberX = true;
     let isNumberY = true;
 
-    // x is not a "number" type or has a value of NaN
-    if ((typeof x != "number") || isNaN(x)) {
+    // x is not a 'number' type or has a value of NaN
+    if ((typeof x != 'number') || isNaN(x)) {
         isNumberX = false;
     }
 
-    // y is not a "number" type or has a value of NaN
-    if (typeof y != "number" || y == NaN) {
+    // y is not a 'number' type or has a value of NaN
+    if (typeof y != 'number' || y == NaN) {
         isNumberY = false;
     }
 
-    // x and y are "number" types
+    // x and y are 'number' types
     if (isNumberX &amp;&amp; isNumberY == true) {
         if (x > y) {
-            console.log(">");
+            console.log('>');
         }
         else if (x &lt; y) {
-            console.log("&lt;");
+            console.log('&lt;');
         }
         else {
-            console.log("=");
+            console.log('=');
         }
     }
-    // x is not a "number" type or has a value of NaN
-    // y is a "number" type
+    // x is not a 'number' type or has a value of NaN
+    // y is a 'number' type
     else if (isNumberX == false &amp;&amp; isNumberY == true) {
-        console.log("Can't compare relationships because " + "'" + x + "'" + " is not a number.");
+        console.log('Can't compare relationships because ' + ''' + x + ''' + ' is not a number.');
     }
-    // y is not a "number" type or has a value of NaN
-    // x is a "number" type
+    // y is not a 'number' type or has a value of NaN
+    // x is a 'number' type
     else if (isNumberX == true &amp;&amp; isNumberY == false) {
-        console.log("Can't compare relationships because " + "'" + y + "'" + " is not a number.");
+        console.log('Can't compare relationships because ' + ''' + y + ''' + ' is not a number.');
     }
-    // x is not a "number" type or has a value of NaN
-    // y is not a "number" type or has a value of NaN
+    // x is not a 'number' type or has a value of NaN
+    // y is not a 'number' type or has a value of NaN
     else {
-        console.log("Can't compare relationships because " + "'" + x + "'" + " and " + "'" + y + "'" + " are not numbers.");
+        console.log('Can't compare relationships because ' + ''' + x + ''' + ' and ' + ''' + y + ''' + ' are not numbers.');
     }
 };
 
@@ -252,16 +252,16 @@ console.log(getRelationship(1,4));
 console.log(getRelationship(1,1)); 
 // =
 
-console.log(getRelationship("that",2)); 
+console.log(getRelationship('that',2)); 
 // Can't compare relationships because 'that' is not a number.
 
-console.log(getRelationship("this","something else")); 
+console.log(getRelationship('this','something else')); 
 // Can't compare relationships because 'this' and 'something else' are not numbers.
 
 console.log(getRelationship(3)); 
 // Can't compare relationships because 'undefined' is not a number.
 
-console.log(getRelationship("hi")); 
+console.log(getRelationship('hi')); 
 // Can't compare relationships because 'hi' and 'undefined' are not numbers.
 
 console.log(getRelationship(NaN)); 
@@ -277,13 +277,13 @@ console.log(getRelationship(NaN, undefined));
           <!-- SECTION 3 -->
           <section>
             <h2>
-              <a id="3" data-toggle="collapse" role="button" href="#accordion-3" aria-expanded="true" aria-controls="accordion-3">
+              <a id='3' data-toggle='collapse' role='button' href='#accordion-3' aria-expanded='true' aria-controls='accordion-3'>
                 Falsy &amp; truthy values
               </a>
             </h2>
             <hr>
-            <div id="accordion-3" class="collapse show">
-              <h3 id="3-1">Primitives</h3>
+            <div id='accordion-3' class='collapse show'>
+              <h3 id='3-1'>Primitives</h3>
               <p>JavaScript has the following primitive data types:</p>
               <ul>
                 <li>string</li>
@@ -297,104 +297,104 @@ console.log(getRelationship(NaN, undefined));
                 To determine the type of an operand we can use the              
                 <code>typeof</code> operator:
               </p>
-              <pre class="prettyprint linenums"><code>typeof(false);
-// "boolean"
+              <pre class='prettyprint linenums'><code>typeof(false);
+// 'boolean'
 
 typeof(0);
-// "number"
+// 'number'
 
 typeof(undefined);
-// "undefined"
+// 'undefined'
 
 typeof(NaN);
-// "number"
+// 'number'
 
 typeof(Infinity);
-// "number"
+// 'number'
 
 typeof([]);
-// "object"
+// 'object'
 
 typeof({});
-// "object"
+// 'object'
 
-typeof("mario");
-// "string"
+typeof('mario');
+// 'string'
 
 typeof('');
-// "string"
+// 'string'
 
-typeof("");
-// "string"</code></pre>
-              <h3 id="3-2">Falsy values</h3>
+typeof('');
+// 'string'</code></pre>
+              <h3 id='3-2'>Falsy values</h3>
               <p>
                 The following examples will translate to <code>false</code>:
               </p>
-              <pre class="prettyprint linenums"><code>if(false) {}
+              <pre class='prettyprint linenums'><code>if(false) {}
 if(0) {}
-if("") {}
+if('') {}
 if('') {}
 if(null) {}
 if(undefined) {}
 if(NaN) {}</code></pre>
-              <h3 id="3-3">Truthy values</h3>
+              <h3 id='3-3'>Truthy values</h3>
               <p>
                 The following examples will translate to <code>true</code>:
               </p>
-              <pre class="prettyprint linenums"><code>if(true) {}
+              <pre class='prettyprint linenums'><code>if(true) {}
 if(1) {}
 if(0.2) {}
 if(-0.2) {}
-if("mario") {}
+if('mario') {}
 if('mario') {}
 if(Infinity) {}
 if(-Infinity) {}
 if([]) {}
 if({}) {}</code></pre>
-              <h3 id="3-4">Tricky examples</h3>
-              <pre class="prettyprint linenums"><code>if(null == undefined) {} // true
+              <h3 id='3-4'>Tricky examples</h3>
+              <pre class='prettyprint linenums'><code>if(null == undefined) {} // true
 if([] == true) {} // false
 if(false == null) {} // false
 if(NaN == NaN) {} // false
 if(Infinity == true) {} // false
 if(-Infinity == true) {} // false
 if(null == undefined) {} // true
-if(0 == "") {} // true
+if(0 == '') {} // true
 if(false == 0) {} //true</code></pre>
             </div>
           </section>
         </main>
         <!-- d-none d-xl-block d-xl-2: Hide the element for all screen sizes except on xlarge devices -->
-        <div class="ad-space d-none d-xl-block col-xl-2">
-          <div class="text-center">
+        <div class='ad-space d-none d-xl-block col-xl-2'>
+          <div class='text-center'>
             <h5>Ad1</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad2</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad3</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad4</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad5</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
             <h5>Ad6</h5>
-            <img src="images/150x100.png" alt="advertisement">
+            <img src='images/150x100.png' alt='advertisement'>
           </div>
         </div>
       </div>
     </div> <!-- END OF CONTAINER -->
     <!-- FOOTER -->
-    <footer class="text-center text-muted">
-      <div class="license">
+    <footer class='text-center text-muted'>
+      <div class='license'>
         <div>
-          <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img width="100" alt="CC BY-SA 4.0 License" style="border-width:0" src="images/cc-by-sa-4.svg" /></a><br>Documentation is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+          <a rel='license' href='https://creativecommons.org/licenses/by-sa/4.0/'><img width='100' alt='CC BY-SA 4.0 License' style='border-width:0' src='images/cc-by-sa-4.svg' /></a><br>Documentation is licensed under the <a rel='license' href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0 License</a>.
         </div>
         <div>
-          <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0"><img width="80" alt="GNU AGPLv3 License" style="border-width:0" src="images/agpl-v3.svg" /></a><br><a href="https://github.com/PictureElement/html5tech">Source code</a> is licensed under the <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0">AGPL v3 License</a>.
+          <a rel='license' href='https://www.gnu.org/licenses/agpl-3.0'><img width='80' alt='GNU AGPLv3 License' style='border-width:0' src='images/agpl-v3.svg' /></a><br><a href='https://github.com/PictureElement/html5tech'>Source code</a> is licensed under the <a rel='license' href='https://www.gnu.org/licenses/agpl-3.0'>AGPL v3 License</a>.
         </div>
       </div>
-      <div class="copyright">
-        Design &amp; development by <a href="https://pictureelement.github.io/portfolio-2">PictureElement</a> (Marios Sofokleous).
+      <div class='copyright'>
+        Design &amp; development by <a href='https://pictureelement.github.io/portfolio-2'>PictureElement</a> (Marios Sofokleous).
       </div>
     </footer>
   </body>
