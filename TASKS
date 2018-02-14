@@ -63,8 +63,8 @@ Replace: ./sw.js With: /html5tech/sw.js
 
 15. Do the following in every page in dist/: 
 
-Replace: "../dist/fonts" With: "/html5tech/fonts"
+Replace: ../dist/fonts With: /html5tech/fonts
 
 16. Do the following in every page in demos/: 
 
-Replace: "../js/jquery.min.js" With: "/html5tech/js/output.min.js"
+Replace: ../js/jquery.min.js With: /html5tech/js/output.min.js

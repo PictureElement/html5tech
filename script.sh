@@ -74,4 +74,4 @@ perl -0pi -e "s/.\/sw.js/\/html5tech\/sw.js/g" dist/js/output.min.js
 perl -0pi -e "s/..\/dist\/fonts/\/html5tech\/fonts/g" dist/*.html
 
 #step 16
-perl -0pi -e "s/..\/js\/jquery.min.js/\/html5tech\/js\/output.min.js/" demos/*.html
+perl -0pi -e "s/..\/js\/jquery.min.js/\/html5tech\/js\/output.min.js/" dist/demos/*.html
