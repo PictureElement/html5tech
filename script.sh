@@ -1,11 +1,11 @@
 # Author: PictureElement (Marios Sofokleous)
 # Date: 14.02.2017
 # Description: Create and populate dist using the following optimization tools:
-#   1. purifycss: Get only the used CSS
-#   2. cssmin: Minify CSS
+#   1. purifycss: Get only the used CSS.
+#   2. cssmin: Minify CSS.
 #   3. uglify: Compress all javascript files into one file and minify it.
 #   4. critical: Extract & inline critical-path CSS from html files.
-#   5. htmlmin: Minify all html files
+#   5. htmlmin: Minify all html files.
 
 #!/bin/bash
 
