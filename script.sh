@@ -47,7 +47,7 @@ grunt copy
 # one-liner: perl -i -pe 's/match/replace/' filename
 # escape / with \/
 # 0: set line separator to null
-perl -0pi -e "s/    <link rel='stylesheet' href='css\/bootstrap.min.css'.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n/    <link rel='stylesheet' href='css\/purestyles.min.css'>\n    <link rel='manifest' href='manifest.json'>\n    <script src='js\/output.min.js' defer><\/script>\n/" dist/*.html
+perl -0pi -e "s/    <link rel='stylesheet' href='css\/bootstrap.min.css'.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n/    <link rel='stylesheet' href='css\/purestyles.min.css'>\n    <link rel='manifest' href='manifest.json'>\n    <script src='js\/output.min.js' defer><\/script>\n/" dist/*.html
 
 # step 11
 for((c=0;c<12;c++))
