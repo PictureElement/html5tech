@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     purifycss: {
       options: {},
       target: {
-        src: ['src/*.html', 'src/js/*.js', 'src/svg-with-js/js/fa-solid.js'],
+        src: ['src/*.html', 'src/js/*.js', 'src/svg-with-js/js/*.js'],
         css: ['src/css/*.css', 'src/svg-with-js/css/fa-svg-with-js.css'],
         dest: 'src/css/purestyles.css'
       },
@@ -37,7 +37,8 @@ module.exports = function(grunt) {
             'src/js/bootstrap.min.js',
             'src/js/site.js',
             'src/js/run_prettify.js',
-            'src/svg-with-js/js/fa-solid.js'
+            'src/svg-with-js/js/fa-solid.js',
+            'src/svg-with-js/js/fontawesome.js'
           ]
         }
       }
