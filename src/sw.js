@@ -48,13 +48,34 @@ var filesToCache = [
   '/html5tech/images/100x100.png',
   '/html5tech/images/agpl-v3.svg',
   '/html5tech/images/cc-by-sa-4.svg',
-  '/html5tech/images/logo.png',
   '/html5tech/fonts/audiowide-v6-latin-regular.eot',
   '/html5tech/fonts/audiowide-v6-latin-regular.woff2',
   '/html5tech/fonts/audiowide-v6-latin-regular.woff',
   '/html5tech/fonts/audiowide-v6-latin-regular.ttf',
   '/html5tech/fonts/audiowide-v6-latin-regular.svg'
 ];
+
+// Get device pixel ratio in order to cache the appropriate image
+var value = Math.round(window.devicePixelRatio);
+
+// Cache the appropriate image based on pixel ratio
+switch(value) {
+  case 1:
+    filesToCache.push('/html5tech/images/logo-1x.png');
+    break;
+  case 2:
+    filesToCache.push('/html5tech/images/logo-2x.png');
+    break;
+  case 3:
+    filesToCache.push('/html5tech/images/logo-3x.png');
+    break;
+  case 4:
+    filesToCache.push('/html5tech/images/logo-4x.png');
+    break;
+  default:
+    filesToCache.push('/html5tech/images/logo-1x.png');
+    break;
+}
 
 // When the service worker is registered, an 'install' event is triggered the 
 // first time the user visits the page
