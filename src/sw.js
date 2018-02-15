@@ -48,6 +48,7 @@ var filesToCache = [
   '/html5tech/images/100x100.png',
   '/html5tech/images/agpl-v3.svg',
   '/html5tech/images/cc-by-sa-4.svg',
+  '/html5tech/images/logo.png',
   '/html5tech/fonts/audiowide-v6-latin-regular.eot',
   '/html5tech/fonts/audiowide-v6-latin-regular.woff2',
   '/html5tech/fonts/audiowide-v6-latin-regular.woff',
