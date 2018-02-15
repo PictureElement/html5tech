@@ -58,12 +58,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -74,12 +74,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -90,12 +90,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -106,12 +106,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -122,12 +122,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -138,12 +138,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -154,12 +154,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -170,12 +170,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -186,12 +186,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -202,12 +202,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -218,12 +218,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
@@ -234,12 +234,12 @@ module.exports = function(grunt) {
         options: {
           dimensions: [
             {
-              width: 1300,
-              height: 900
+              width: 1920,
+              height: 1080
             },
             {
               width: 500,
-              height: 900
+              height: 1080
             }
           ]
         },
