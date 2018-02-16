@@ -18,7 +18,8 @@ html {
 }
 
 *, ::after, ::before {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -125,6 +126,7 @@ button#return-to-top {
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 2;
 }
@@ -292,7 +294,8 @@ section {
     padding: 1rem;
   }
   header {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
   }
   /* SIDEBAR */
   div.sidebar {
@@ -327,7 +330,8 @@ section {
 /* Apply style if the viewport width is 767.99 pixels wide or narrower */
 @media screen and (max-width: 767.99px) {
   header {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .more-btn {
     color: #eee;
@@ -344,7 +348,8 @@ section {
   /* SIDEBAR */
   div.sidebar {
     padding: .5rem 0 .5rem 1rem;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     border-top: 1px solid rgba(0,0,0,.1);
     background: #414347;
     top: -1px;
