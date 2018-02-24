@@ -67,8 +67,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/classes.html',
-        dest: 'dist/classes.html'
+        src: 'dist/js-classes.html',
+        dest: 'dist/js-classes.html'
       },
       t1: {
         options: {
@@ -83,8 +83,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/data-related.html',
-        dest: 'dist/data-related.html'
+        src: 'dist/js-data-related.html',
+        dest: 'dist/js-data-related.html'
       },
       t2: {
         options: {
@@ -99,8 +99,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/dom.html',
-        dest: 'dist/dom.html'
+        src: 'dist/js-dom.html',
+        dest: 'dist/js-dom.html'
       },
       t3: {
         options: {
@@ -115,8 +115,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/dom-manipulation.html',
-        dest: 'dist/dom-manipulation.html'
+        src: 'dist/jquery-dom-manipulation.html',
+        dest: 'dist/jquery-dom-manipulation.html'
       },
       t4: {
         options: {
@@ -131,8 +131,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/expressions-and-operators.html',
-        dest: 'dist/expressions-and-operators.html'
+        src: 'dist/js-expressions-and-operators.html',
+        dest: 'dist/js-expressions-and-operators.html'
       },
       t5: {
         options: {
@@ -147,8 +147,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/flow-control.html',
-        dest: 'dist/flow-control.html'
+        src: 'dist/js-flow-control.html',
+        dest: 'dist/js-flow-control.html'
       },
       t6: {
         options: {
@@ -163,8 +163,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/function-related.html',
-        dest: 'dist/function-related.html'
+        src: 'dist/js-function-related.html',
+        dest: 'dist/js-function-related.html'
       },
       t7: {
         options: {
@@ -179,8 +179,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/functions.html',
-        dest: 'dist/functions.html'
+        src: 'dist/js-functions.html',
+        dest: 'dist/js-functions.html'
       },
       t8: {
         options: {
@@ -211,8 +211,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/introduction.html',
-        dest: 'dist/introduction.html'
+        src: 'dist/jquery-introduction.html',
+        dest: 'dist/jquery-introduction.html'
       },
       t10: {
         options: {
@@ -227,8 +227,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/object-related.html',
-        dest: 'dist/object-related.html'
+        src: 'dist/js-object-related.html',
+        dest: 'dist/js-object-related.html'
       },
       t11: {
         options: {
@@ -243,8 +243,24 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/objects.html',
-        dest: 'dist/objects.html'
+        src: 'dist/canvas-introduction.html',
+        dest: 'dist/canvas-introduction.html'
+      },
+      t12: {
+        options: {
+          dimensions: [
+            {
+              width: 1920,
+              height: 1080
+            },
+            {
+              width: 500,
+              height: 1080
+            }
+          ]
+        },
+        src: 'dist/js-objects.html',
+        dest: 'dist/js-objects.html'
       }
     },
 
@@ -255,18 +271,19 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         files: {
-          'dist/classes.html': 'dist/classes.html',
-          'dist/data-related.html': 'dist/data-related.html',
-          'dist/dom.html': 'dist/dom.html',
-          'dist/dom-manipulation.html': 'dist/dom-manipulation.html',
-          'dist/expressions-and-operators.html': 'dist/expressions-and-operators.html',
-          'dist/flow-control.html': 'dist/flow-control.html',
-          'dist/function-related.html': 'dist/function-related.html',
-          'dist/functions.html': 'dist/functions.html',
+          'dist/js-classes.html': 'dist/js-classes.html',
+          'dist/js-data-related.html': 'dist/js-data-related.html',
+          'dist/js-dom.html': 'dist/js-dom.html',
+          'dist/jquery-dom-manipulation.html': 'dist/jquery-dom-manipulation.html',
+          'dist/js-expressions-and-operators.html': 'dist/js-expressions-and-operators.html',
+          'dist/js-flow-control.html': 'dist/js-flow-control.html',
+          'dist/js-function-related.html': 'dist/js-function-related.html',
+          'dist/js-functions.html': 'dist/js-functions.html',
           'dist/index.html': 'dist/index.html',
-          'dist/introduction.html': 'dist/introduction.html',
-          'dist/object-related.html': 'dist/object-related.html',
-          'dist/objects.html': 'dist/objects.html'
+          'dist/jquery-introduction.html': 'dist/jquery-introduction.html',
+          'dist/js-object-related.html': 'dist/js-object-related.html',
+          'dist/js-objects.html': 'dist/js-objects.html',
+          'dist/canvas-introduction.html': 'dist/canvas-introduction.html'
         }
       }
     }

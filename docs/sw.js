@@ -7,17 +7,18 @@ var cacheName = 'html5tech-cache';
 var filesToCache = [
   '/html5tech/',
   '/html5tech/index.html',
-  '/html5tech/classes.html',
-  '/html5tech/data-related.html',
-  '/html5tech/dom.html',
-  '/html5tech/dom-manipulation.html',
-  '/html5tech/expressions-and-operators.html',
-  '/html5tech/flow-control.html',
-  '/html5tech/function-related.html',
-  '/html5tech/functions.html',
-  '/html5tech/introduction.html',
-  '/html5tech/object-related.html',
-  '/html5tech/objects.html',
+  '/html5tech/js-classes.html',
+  '/html5tech/canvas-introduction.html',
+  '/html5tech/js-data-related.html',
+  '/html5tech/js-dom.html',
+  '/html5tech/jquery-dom-manipulation.html',
+  '/html5tech/js-expressions-and-operators.html',
+  '/html5tech/js-flow-control.html',
+  '/html5tech/js-function-related.html',
+  '/html5tech/js-functions.html',
+  '/html5tech/jquery-introduction.html',
+  '/html5tech/js-object-related.html',
+  '/html5tech/js-objects.html',
   '/html5tech/css/purestyles.min.css',
   '/html5tech/js/output.min.js',
   '/html5tech/demos/js/2.js',
@@ -59,7 +60,7 @@ var filesToCache = [
   '/html5tech/fonts/audiowide-v6-latin-regular.svg'
 ];
 
-// When the service worker is registered, an 'install' event is triggered the 
+// When the service worker is registered, an 'install' event is triggered the
 // first time the user visits the page
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
@@ -67,8 +68,8 @@ self.addEventListener('install', function(e) {
     // Open cache
     caches.open(cacheName).then(function(cache) {
       console.log('[ServiceWorker] Caching app shell');
-      // Takes a list of URLs, then fetches them from the server and adds the 
-      // response to the cache. This method is atomic and if any of the files 
+      // Takes a list of URLs, then fetches them from the server and adds the
+      // response to the cache. This method is atomic and if any of the files
       // fail, the entire cache step fails
       return cache.addAll(filesToCache);
     })
@@ -92,14 +93,14 @@ self.addEventListener('activate', function(e) {
   return self.clients.claim();
 });
 
-// We've cached the app shell components, but we still need to load them from 
+// We've cached the app shell components, but we still need to load them from
 // the local cache.
 self.addEventListener('fetch', function(e) {
   console.log('[ServiceWorker] Fetch', e.request.url);
   e.respondWith(
-    // Evaluate the web request to see if it's available in the cache. It then 
-    // either responds with the cached version, or uses fetch to get a copy from 
-    // the network. The response is passed back to the web page with 
+    // Evaluate the web request to see if it's available in the cache. It then
+    // either responds with the cached version, or uses fetch to get a copy from
+    // the network. The response is passed back to the web page with
     // e.respondWith().
     caches.match(e.request).then(function(response) {
       return response || fetch(e.request);
