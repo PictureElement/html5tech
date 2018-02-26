@@ -36,13 +36,13 @@
           <li class='nav-item'>
             <a class='nav-link' href='#'>CSS</a>
           </li>
-          <li class='nav-item active'>
+          <li class='nav-item'>
             <a class='nav-link' href='js-data-related.html'>JAVASCRIPT</a>
           </li>
           <li class='nav-item'>
             <a class='nav-link' href='jquery-introduction.html'>JQUERY</a>
           </li>
-          <li class='nav-item'>
+          <li class='nav-item active'>
             <a class='nav-link' href='canvas-introduction.html'>HTML5 CANVAS<span class='sr-only'>(current)</span></a>
           </li>
         </ul>
@@ -103,33 +103,155 @@
           <section>
             <h2>
               <a id='1' data-toggle='collapse' role='button' href='#accordion-1' aria-expanded='true' aria-controls='accordion-1'>
-                SECTION 1
+                Creating a Canvas
               </a>
             </h2>
             <hr>
             <div id='accordion-1' class='collapse show'>
+              <p>
+                HTML5 Canvas is used to draw graphics on a webpage via scripting
+                in JavaScript. It can be used to draw graphs and animations.
+              <p>
+                To create a canvas we just use the &lt;canvas> element as shown
+                below:
+              </p>
+              <p><u>HTML</u></p>
+              <pre class='prettyprint linenums'><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;!-- Create a fixed-size drawing surface -->
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      description of content
+    &lt;/canvas>
+  &lt;/body>
+&lt;/html></code></pre>
+              <p>
+                It's always a good idea to provide fallback content for browsers
+                that do not support canvas. In the example above we have
+                provided a text description of the canvas content but we could
+                have also provided a static image of the dynamically rendered
+                content.
+              </p>
+              <p><u>Result</u></p>
+              <iframe height="320" src="demos/14.html" title="result"></iframe>
+              <p>
+                To use the canvas we have to access it via JavaScript as shown
+                below:
+              </p>
+              <pre class='prettyprint linenums'><code>&lt;script>
+  var canvas = document.getElementById('c');
+  // Check for support
+  if (canvas.getContext) {
+    // Access the rendering context
+    var context = canvas.getContext("2d");
+  }
+&lt;/script></code></pre>
+              <p>
+                To display something on the canvas, we first need to access the
+                rendering context. In this tutorial, we focus on the 2D
+                rendering context but there are other contexts available. An
+                <code>if</code> statement is included to check support
+                programmatically.
+              </p>
+              <p>
+                The 2d rendering context in canvas uses a Cartesian coordinate
+                system, with the origin point (0, 0) at the top left:
+              </p>
+              <img src="images/grid.png" alt="2D grid">
             </div>
           </section>
           <!-- SECTION 2 -->
           <section>
             <h2>
               <a id='2' data-toggle='collapse' role='button' href='#accordion-2' aria-expanded='true' aria-controls='accordion-2'>
-                SECTION 2
+                Draw images onto canvas
               </a>
             </h2>
             <hr>
             <div id='accordion-2' class='collapse show'>
+              <p><mark>Example 1</mark></p>
+              <p><u>HTML</u></p>
+              <pre class='prettyprint linenums'><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;!-- Create a fixed-size drawing surface -->
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Image composition
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for support
+      if (canvas.getContext) {
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+        // Create image
+        var img = new Image();
+        // Set the image source
+        img.src = '../images/400x400.png';
+        // When the resource is loaded
+        img.onload = function () {
+          console.log('Image has been loaded');
+          // Draw image onto canvas
+          context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        }
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre>
+              <p><u>Result</u></p>
+              <iframe height="320" src="demos/15.html" title="result"></iframe>
+              <p><mark>Example 2</mark></p>
+              <p><u>HTML</u></p>
+              <pre class='prettyprint linenums'><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;!-- Create a fixed-size drawing surface -->
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Image composition
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for support
+      if (canvas.getContext) {
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+        // Create image
+        var img = new Image();
+        // Set the image source
+        img.src = '../images/400x400.png';
+        // When the resource is loaded
+        img.onload = function () {
+          console.log('Image has been loaded');
+          // Draw images onto canvas
+          context.drawImage(img, 0, 0, canvas.width/2, canvas.height/2);
+          context.drawImage(img, canvas.width/2, 0, canvas.width/2, canvas.height/2);
+          context.drawImage(img, 0, canvas.height/2, canvas.width/2, canvas.height/2);
+          context.drawImage(img, canvas.width/2, canvas.height/2, canvas.width/2, canvas.height/2);
+        }
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre>
+              <p><u>Result</u></p>
+              <iframe height="320" src="demos/16.html" title="result"></iframe>
             </div>
           </section>
           <!-- SECTION 3 -->
           <section>
             <h2>
               <a id='3' data-toggle='collapse' role='button' href='#accordion-3' aria-expanded='true' aria-controls='accordion-3'>
-                SECTION 3
+                Loading Images
               </a>
             </h2>
             <hr>
             <div id='accordion-3' class='collapse show'>
+
             </div>
           </section>
           <!-- SECTION 4 -->
