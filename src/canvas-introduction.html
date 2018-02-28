@@ -714,8 +714,8 @@ context.fillStyle = 'rgba(0,0,255,1)'</code></pre>
         context.save();
 
         // Grid of rectangles with a random color
-        for (let i = 0; i < 10; i++) {
-          for (let j = 0; j < 10; j++) {
+        for (let i = 0; i &lt; 10; i++) {
+          for (let j = 0; j &lt; 10; j++) {
             context.fillStyle = 'rgb(' + getRandomInt(256) + ',' + getRandomInt(256) + ',' + getRandomInt(256) + ')';
             context.fillRect(j*20,i*20,20,20);
           }
@@ -749,7 +749,7 @@ context.fillStyle = 'rgba(0,0,255,1)'</code></pre>
 
         // Shades of gray
         var transparencyValue = 0.1;
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i &lt; 10; i++) {
           context.globalAlpha = transparencyValue;
           context.fillRect(i*20,0,20,200);
           transparencyValue += 0.1;
@@ -797,7 +797,7 @@ context.fillStyle = 'rgba(0,0,255,1)'</code></pre>
         context3.save();
 
         // Draw lines with increasing line widths
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i &lt; 10; i++) {
 
           // Set the current line thickness
           context1.lineWidth = i + 1;
@@ -904,7 +904,7 @@ context.fillStyle = 'rgba(0,0,255,1)'</code></pre>
                 <dd>Set directionality</dd>
               </dl>
               <p><u>HTML</u></p>
-              <pre class='prettyprint linenums'><code><!DOCTYPE html>
+              <pre class='prettyprint linenums'><code>&lt;!DOCTYPE html>
 &lt;html>
   &lt;head>
   &lt;/head>
