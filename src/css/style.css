@@ -109,13 +109,13 @@ code.syntax {
 }
 
 /* RETURN TO TOP BUTTON */
-button#return-to-top {  
+button#return-to-top {
   display: none;
   /*
-    The button is positioned relative to the screen's viewport and doesn't move 
-    when scrolled. Its final position is determined by the values of top, 
+    The button is positioned relative to the screen's viewport and doesn't move
+    when scrolled. Its final position is determined by the values of top,
     right, bottom, and left.
-  */ 
+  */
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -153,6 +153,16 @@ header .nav-link {
   letter-spacing: 1px;
 }
 
+.dropdown-menu {
+  z-index: 1021;
+}
+
+.navbar-brand, .navbar-nav {
+  position: relative;
+  top: 10px;
+  padding: 0;
+}
+
 /* MAIN CONTENT */
 main section:first-of-type {
   margin-top: 1rem !important;
@@ -177,7 +187,7 @@ h2 a:hover {
 /* Create outlined list */
 div.card-body ol {
   counter-reset: section; /* Set a counter named 'section', and it`s initial value is 0. */
-  list-style-type: none; 
+  list-style-type: none;
   padding-left: 20px;
 }
 div.card-body li::before {
@@ -306,7 +316,7 @@ section {
   ol.sb-list li {
     color: #007f7f;
     font-size: .7rem;
-    font-weight: 200; 
+    font-weight: 200;
   }
 
   ol.sb-list a {
@@ -333,9 +343,15 @@ section {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+
   .more-btn {
     color: #eee;
   }
+
   .more-btn:hover {
     color: #eee;
     text-decoration: none;
@@ -358,7 +374,7 @@ section {
   ol.sb-list li {
     color: #80ffff;
     font-size: .7rem;
-    font-weight: 200; 
+    font-weight: 200;
   }
 
   ol.sb-list a {
@@ -379,7 +395,7 @@ section {
   }
 }
 
-@media (max-width: 700px) { 
+@media (max-width: 700px) {
     #tagline {
     display: none;
   }
