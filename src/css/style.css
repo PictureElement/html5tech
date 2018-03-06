@@ -90,6 +90,12 @@ pre.prettyprint {
   border-left: 5px solid #4caf50;
 }
 
+.math {
+  padding: 1rem;
+  border: 1px solid #888;
+  margin-bottom: 1rem;
+}
+
 /*
 .syntax {
   padding: 1rem;

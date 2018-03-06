@@ -259,8 +259,8 @@ module.exports = function(grunt) {
             }
           ]
         },
-        src: 'dist/canvas-animations.html',
-        dest: 'dist/canvas-animations.html'
+        src: 'dist/canvas-pixel-manipulation-and-animations.html',
+        dest: 'dist/canvas-pixel-manipulation-and-animations.html'
       },
       t13: {
         options: {
@@ -300,7 +300,7 @@ module.exports = function(grunt) {
           'dist/js-object-related.html': 'dist/js-object-related.html',
           'dist/js-objects.html': 'dist/js-objects.html',
           'dist/canvas-introduction.html': 'dist/canvas-introduction.html',
-          'dist/canvas-animations.html': 'dist/canvas-animations.html'
+          'dist/canvas-pixel-manipulation-and-animations.html': 'dist/canvas-pixel-manipulation-and-animations.html'
         }
       }
     }
