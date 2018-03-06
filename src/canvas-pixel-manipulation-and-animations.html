@@ -119,7 +119,7 @@
                   data for the area of the canvas.
                 </dd>
                 <dt><code><i>ctx</i>.putImageData(<i>imagedata</i>, <i>dx</i>, <i>dy</i>);</code></dt>
-                <dt><code><i>ctx</i>.putImageData(<i>imagedata</i>, <i>dx</i>, <i>dy</i>, <i>dirtyX</i>, <i>dirtyY</i>, <i>dirtyW</i>, <i></i>dirtyH</i>);</code></dt>
+                <dt><code><i>ctx</i>.putImageData(<i>imagedata</i>, <i>dx</i>, <i>dy</i>, <i>dirtyX</i>, <i>dirtyY</i>, <i>dirtyW</i>, <i>dirtyH</i>);</code></dt>
                 <dd>
                   Paint data from the given <i>ImageData</i> object onto the
                   bitmap.
@@ -151,7 +151,7 @@
                 10th pixel to a solid green color:
               </p>
               <p><u>HTML</u></p>
-              <pre class='prettyprint linenums'>&lt;!DOCTYPE html>
+              <pre class='prettyprint linenums'><code>&lt;!DOCTYPE html>
 &lt;html>
   &lt;head>
   &lt;/head>
@@ -199,7 +199,7 @@
                 grayscale and the process of color-inversion using simple
                 techniques.
               </p>
-              </p>
+              <p>
                 Averaging is the fastest and easiest grayscale conversion
                 technique and it works like this:
               </p>
@@ -216,7 +216,7 @@
                 <var>newB</var> = 255 - <var>B</var>
               </div>
               <p><u>HTML</u></p>
-              <pre class='prettyprint linenums'>&lt;!DOCTYPE html>
+              <pre class='prettyprint linenums'><code>&lt;!DOCTYPE html>
 &lt;html>
   &lt;head>
     &lt;style>
@@ -321,6 +321,15 @@
 &lt;/html></code></pre>
               <p><u>Result</u></p>
               <iframe height="260" src="demos/28.html" title="result"></iframe>
+              <div>
+                <p class="info align-middle">
+                  <strong>Note:</strong> For more info on image processing 
+                  please visit 
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">MDN</a> 
+                  and 
+                  <a href="http://www.tannerhelland.com/programming-directory/">Tanner Helland</a>.
+                </p>
+              </div>
             </div>
           </section>
           <!-- SECTION 2 -->
