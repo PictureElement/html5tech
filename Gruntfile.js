@@ -259,6 +259,22 @@ module.exports = function(grunt) {
             }
           ]
         },
+        src: 'dist/canvas-animations.html',
+        dest: 'dist/canvas-animations.html'
+      },
+      t13: {
+        options: {
+          dimensions: [
+            {
+              width: 1920,
+              height: 1080
+            },
+            {
+              width: 500,
+              height: 1080
+            }
+          ]
+        },
         src: 'dist/js-objects.html',
         dest: 'dist/js-objects.html'
       }
@@ -283,7 +299,8 @@ module.exports = function(grunt) {
           'dist/jquery-introduction.html': 'dist/jquery-introduction.html',
           'dist/js-object-related.html': 'dist/js-object-related.html',
           'dist/js-objects.html': 'dist/js-objects.html',
-          'dist/canvas-introduction.html': 'dist/canvas-introduction.html'
+          'dist/canvas-introduction.html': 'dist/canvas-introduction.html',
+          'dist/canvas-animations.html': 'dist/canvas-animations.html'
         }
       }
     }

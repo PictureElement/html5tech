@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>HTML5 Canvas/Animations</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Fundamental resources about HTML5 & friends.'>
+    <meta name='author' content='PictureElement (Marios Sofokleous)'>
+    <meta name='theme-color' content='#007f7f'>
+    <link rel='stylesheet' href='css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='manifest' href='manifest.json'>
+    <script src='js/jquery.min.js' defer></script>
+    <script src='js/popper.min.js' defer></script>
+    <script src='js/bootstrap.min.js' defer></script>
+    <script src='js/site.js' defer></script>
+    <script src='js/run_prettify.js' defer></script>
+    <script src='svg-with-js/js/fa-solid.js' defer></script>
+    <script src='svg-with-js/js/fontawesome.js' defer></script>
+  </head>
+  <body>
+    <!-- RETURN TO TOP BUTTON -->
+    <button id='return-to-top' title='Return to top'><i style='color:white' class='fas fa-chevron-up'></i></button>
+    <!-- SITE NAVIGATION -->
+    <header class='navbar navbar-expand navbar-light bg-light flex-column flex-md-row'>
+      <!-- LOGO -->
+      <a class='navbar-brand' href='index.html'>
+        <img src="images/logo-1x.png" srcset="images/logo-1x.png 1x, images/logo-2x.png 2x, images/logo-3x.png 3x, images/logo-4x.png 4x" class="d-inline-block align-top" alt="HTML5Tech logo">
+      </a>
+      <div class='flex-row'>
+        <ul class='navbar-nav flex-row'>
+          <li class='nav-item'>
+            <a class='nav-link' href='#'>HTML</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='#'>CSS</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              JAVASCRIPT
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href='js-data-related.html'>Vanilla</a>
+              <a class="dropdown-item" href='jquery-introduction.html'>jQuery</a>
+              <a class="dropdown-item" href='canvas-introduction.html'>Canvas API<span class='sr-only'>(current)</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class='container-fluid'>
+      <div class='row d-flex'>
+        <div class='sidebar col-12 col-md-3 col-xl-2'>
+          <div class='text-center'>
+            <button class='more-btn btn btn-link d-md-none' type='button' data-toggle='collapse' data-target='#sidebarContent' aria-controls='sidebarContent' aria-label='Toggle sidebar navigation'>
+              MORE
+            </button>
+          </div>
+          <nav class='sidebar-links collapse' id='sidebarContent'>
+            <div>
+              <h5 class='sb-topic'>Basic Canvas</h5>
+              <ol class='sb-list'>
+                <li><a href='canvas-introduction.html'>Introduction</a></li>
+                <li id='current'><a href='#'>Animations</a></li>
+              </ol>
+            </div>
+          </nav>
+        </div>
+        <!-- MAIN -->
+        <main class='col-12 col-md-9 col-xl-8'>
+          <h1 class='text-left'>Animations</h1>
+          <hr>
+          <!-- CONTENT -->
+          <div class='card content-card'>
+            <div class='card-header' id='headingOne'>
+              <button class='content-btn btn btn-link' type='button' data-toggle='collapse' data-target='#collapseOne' aria-controls='collapseOne' aria-label='Toggle content' aria-expanded='false'>
+                Contents
+              </button>
+            </div>
+            <div id='collapseOne' class='collapse' role='tabpanel' aria-labelledby='headingOne' data-parent='#accordion'>
+              <div class='card-body'>
+                <ol class='content-nav'>
+                  <li><a href='#1'></a></li>
+                  <li><a href='#2'></a></li>
+                  <li><a href='#3'></a></li>
+                  <li><a href='#4'></a></li>
+                  <li><a href='#5'></a></li>
+                  <li><a href='#6'></a></li>
+                  <li><a href='#7'></a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- SECTION 1 -->
+          <section>
+            <h2>
+              <a id='1' data-toggle='collapse' role='button' href='#accordion-1' aria-expanded='true' aria-controls='accordion-1'>
+                Creating a Canvas
+              </a>
+            </h2>
+            <hr>
+            <div id='accordion-1' class='collapse show'>
+
+            </div>
+          </section>
+          <!-- SECTION 2 -->
+          <section>
+            <h2>
+              <a id='2' data-toggle='collapse' role='button' href='#accordion-2' aria-expanded='true' aria-controls='accordion-2'>
+                Draw images onto Canvas
+              </a>
+            </h2>
+            <hr>
+            <div id='accordion-2' class='collapse show'>
+
+            </div>
+          </section>
+          <!-- SECTION 3 -->
+          <section>
+            <h2>
+              <a id='3' data-toggle='collapse' role='button' href='#accordion-3' aria-expanded='true' aria-controls='accordion-3'>
+                Drawing rectangles
+              </a>
+            </h2>
+            <hr>
+            <div id='accordion-3' class='collapse show'>
+
+            </div>
+          </section>
+          <!-- SECTION 4 -->
+          <section>
+            <h2>
+              <a id='4' data-toggle='collapse' role='button' href='#accordion-4' aria-expanded='true' aria-controls='accordion-4'>
+                Drawing paths
+              </a>
+            </h2>
+            <hr>
+            <div id='accordion-4' class='collapse show'>
+
+            </div>
+          </section>
+          <!-- SECTION 5 -->
+          <section>
+            <h2>
+              <a id='5' data-toggle='collapse' role='button' href='#accordion-5' aria-expanded='true' aria-controls='accordion-5'>
+                Canvas drawing state
+              </a>
+            </h2>
+            <hr>
+            <div id='accordion-5' class='collapse show'>
+
+            </div>
+          </section>
+          <!-- SECTION 6 -->
+          <section>
+            <h2>
+              <a id='6' data-toggle='collapse' role='button' href='#accordion-6' aria-expanded='true' aria-controls='accordion-6'>
+                Transformations
+              </a>
+            </h2>
+            <hr>
+            <div id='accordion-6' class='collapse show'>
+
+            </div>
+          </section>
+          <!-- SECTION 7 -->
+          <section>
+            <h2>
+              <a id='7' data-toggle='collapse' role='button' href='#accordion-7' aria-expanded='true' aria-controls='accordion-7'>
+                Style &amp; colors
+              </a>
+            </h2>
+            <hr>
+            <div id='accordion-7' class='collapse show'>
+
+            </div>
+          </section>
+          <!-- SECTION 8 -->
+          <section>
+            <h2>
+              <a id='8' data-toggle='collapse' role='button' href='#accordion-8' aria-expanded='true' aria-controls='accordion-8'>
+                Text
+              </a>
+            </h2>
+            <hr>
+            <div id='accordion-8' class='collapse show'>
+
+            </div>
+          </section>
+        </main>
+        <!-- d-none d-xl-block d-xl-2: Hide the element for all screen sizes except on xlarge devices -->
+        <div class='ad-space d-none d-xl-block col-xl-2'>
+          <div class='text-center'>
+            <h5>Ad1</h5>
+            <img src='images/150x100.png' alt='advertisement'>
+            <h5>Ad2</h5>
+            <img src='images/150x100.png' alt='advertisement'>
+            <h5>Ad3</h5>
+            <img src='images/150x100.png' alt='advertisement'>
+            <h5>Ad4</h5>
+            <img src='images/150x100.png' alt='advertisement'>
+            <h5>Ad5</h5>
+            <img src='images/150x100.png' alt='advertisement'>
+            <h5>Ad6</h5>
+            <img src='images/150x100.png' alt='advertisement'>
+          </div>
+        </div>
+      </div>
+    </div> <!-- END OF CONTAINER -->
+    <!-- FOOTER -->
+    <footer class='text-center text-muted'>
+      <div class='license'>
+        <div>
+          <a rel='license' href='https://creativecommons.org/licenses/by-sa/4.0/'><img width='100' alt='CC BY-SA 4.0 License' style='border-width:0' src='images/cc-by-sa-4.svg' /></a><br>Documentation is licensed under the <a rel='license' href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0 License</a>.
+        </div>
+        <div>
+          <a rel='license' href='https://www.gnu.org/licenses/agpl-3.0'><img width='80' alt='GNU AGPLv3 License' style='border-width:0' src='images/agpl-v3.svg' /></a><br><a href='https://github.com/PictureElement/html5tech'>Source code</a> is licensed under the <a rel='license' href='https://www.gnu.org/licenses/agpl-3.0'>AGPL v3 License</a>.
+        </div>
+      </div>
+      <div class='copyright'>
+        Design &amp; development by <a href='https://pictureelement.github.io/portfolio-2'>PictureElement</a> (Marios Sofokleous).
+      </div>
+    </footer>
+  </body>
+</html>

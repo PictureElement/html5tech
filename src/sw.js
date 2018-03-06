@@ -9,6 +9,7 @@ var filesToCache = [
   '/html5tech/index.html',
   '/html5tech/js-classes.html',
   '/html5tech/canvas-introduction.html',
+  '/html5tech/canvas-animations.html',
   '/html5tech/js-data-related.html',
   '/html5tech/js-dom.html',
   '/html5tech/jquery-dom-manipulation.html',

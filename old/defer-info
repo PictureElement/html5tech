@@ -1,3 +1,0 @@
-The loading and execution of scripts that are not necessary for the initial page 
-render may be deferred until after the initial render or other critical parts of 
-the page have finished loading.
