@@ -5844,6 +5844,12 @@ pre.prettyprint {
   border-left: 5px solid #4caf50;
 }
 
+.math {
+  padding: 1rem;
+  border: 1px solid #888;
+  margin-bottom: 1rem;
+}
+
 /*
 .syntax {
   padding: 1rem;
@@ -5867,9 +5873,8 @@ code.syntax {
 button#return-to-top {
   display: none;
   /*
-    The button is positioned relative to the screen's viewport and doesn't move 
-    when scrolled. Its final position is determined by the values of top, 
-    right, bottom, and left.
+    The button is positioned relative to the screen's viewport and doesn't move
+    when scrolled. Its final position is determined by the values of top,    right, bottom, and left.
   */
   position: fixed;
   bottom: 20px;
@@ -5907,6 +5912,16 @@ header {
 
 header .nav-link {
   letter-spacing: 1px;
+}
+
+.dropdown-menu {
+  z-index: 1021;
+}
+
+.navbar-brand,.navbar-nav {
+  position: relative;
+  top: 10px;
+  padding: 0;
 }
 
 /* MAIN CONTENT */
@@ -6102,6 +6117,10 @@ section {
   header {
     -webkit-box-shadow: none;
     box-shadow: none;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
   }
 
   .more-btn {
