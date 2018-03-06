@@ -1,0 +1,576 @@
+<!doctype html><html lang="en"><head><title>HTML5 Canvas/Introduction</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Fundamental resources about HTML5 & friends."><meta name="author" content="PictureElement (Marios Sofokleous)"><meta name="theme-color" content="#007f7f"><style type="text/css">@-ms-viewport{width:device-width}@media (min-width:768px){.col-md-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-md-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.d-md-none{display:none!important}}@media (min-width:1200px){.col-xl-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-xl-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.d-xl-block{display:block!important}}@media (min-width:768px){.flex-md-row{-ms-flex-direction:row!important;flex-direction:row!important}}@media screen and (min-width:768px){main{padding:1rem 1rem 1rem 2rem!important}div.ad-space{padding:1rem}header{-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)}div.sidebar{margin:1rem 0;padding:0 1rem;border-right:1px solid #eee}ol.sb-list li{color:#007f7f;font-size:.7rem;font-weight:200}ol.sb-list a{display:block;color:#007f7f;font-weight:200}li#current,li#current a{font-style:italic;color:#333}h5.sb-topic{font-size:.8rem;color:#333;font-weight:300}}@media screen and (min-width:610px){html{font-size:100%}}@media screen and (min-width:700px){html{font-size:112.5%}}@media screen and (min-width:1090px){html{font-size:125%}}@media screen and (min-width:1300px){.container-fluid{max-width:1300px}}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#868e96;--gray-dark:#343a40;--primary:#007bff;--secondary:#868e96;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--font-family-monospace:"SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar}header,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}hr{box-sizing:content-box;height:0;overflow:visible}h1,h2,h5{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}ol,ul{margin-top:0;margin-bottom:1rem}a{color:#007bff;text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects}code,pre{font-family:monospace,monospace;font-size:1em}pre{margin-top:0;margin-bottom:1rem;overflow:auto;-ms-overflow-style:scrollbar}img{vertical-align:middle;border-style:none}[role=button],a,button{-ms-touch-action:manipulation;touch-action:manipulation}button{border-radius:0}button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button{overflow:visible}button{text-transform:none}button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}h1,h2,h5{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}h1{font-size:2.5rem}h2{font-size:2rem}h5{font-size:1.25rem}hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:1px solid rgba(0,0,0,.1)}code,pre{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}code{padding:.2rem .4rem;font-size:90%;color:#bd4147;background-color:#f8f9fa;border-radius:.25rem}pre{display:block;margin-top:0;margin-bottom:1rem;font-size:90%;color:#212529}pre code{padding:0;font-size:inherit;color:inherit;background-color:transparent;border-radius:0}.container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-12,.col-md-3,.col-md-9,.col-xl-2,.col-xl-8{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.col-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.btn{display:inline-block;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem}.btn-link{font-weight:400;color:#007bff;background-color:transparent}.collapse{display:none}.collapse.show{display:block}.dropdown{position:relative}.dropdown-toggle::after{display:inline-block;width:0;height:0;margin-left:.255em;vertical-align:.255em;content:"";border-top:.3em solid;border-right:.3em solid transparent;border-bottom:0;border-left:.3em solid transparent}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:10rem;padding:.5rem 0;margin:.125rem 0 0;font-size:1rem;color:#212529;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}.dropdown-item{display:block;width:100%;padding:.25rem 1.5rem;clear:both;font-weight:400;color:#212529;text-align:inherit;white-space:nowrap;background:0 0;border:0}.nav-link{display:block;padding:.5rem 1rem}.navbar{position:relative;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:.5rem 1rem}.navbar-brand{display:inline-block;padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;line-height:inherit;white-space:nowrap}.navbar-nav{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}.navbar-nav .nav-link{padding-right:0;padding-left:0}.navbar-nav .dropdown-menu{position:static;float:none}.navbar-expand{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand .navbar-nav{-ms-flex-direction:row;flex-direction:row}.navbar-expand .navbar-nav .dropdown-menu{position:absolute}.navbar-expand .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-light .navbar-brand{color:rgba(0,0,0,.9)}.navbar-light .navbar-nav .nav-link{color:rgba(0,0,0,.5)}.navbar-light .navbar-nav .active>.nav-link{color:rgba(0,0,0,.9)}.card{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}.card-body{-ms-flex:1 1 auto;flex:1 1 auto;padding:1.25rem}.card-header{padding:.75rem 1.25rem;margin-bottom:0;background-color:rgba(0,0,0,.03);border-bottom:1px solid rgba(0,0,0,.125)}.card-header:first-child{border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0}.align-top{vertical-align:top!important}.bg-light{background-color:#f8f9fa!important}.d-none{display:none!important}.d-inline-block{display:inline-block!important}.d-flex{display:-ms-flexbox!important;display:flex!important}.flex-row{-ms-flex-direction:row!important;flex-direction:row!important}.flex-column{-ms-flex-direction:column!important;flex-direction:column!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;-webkit-clip-path:inset(50%);clip-path:inset(50%);border:0}.text-left{text-align:left!important}.text-center{text-align:center!important}pre.prettyprint{padding:2px;border:1px solid #888}html{font-size:75%}*,::after,::before{-webkit-box-sizing:border-box;box-sizing:border-box}body{font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-weight:400;margin:0;color:#333;text-align:left;font-size:1rem}h1{font-weight:300}h2,h5{font-weight:300}pre.prettyprint{width:100%;border-left:5px solid #007f7f!important;background:#eef0f2;padding-top:1rem!important;padding-bottom:1rem!important}button#return-to-top{display:none;position:fixed;bottom:20px;right:20px;border:none;outline:0;background-color:rgba(0,127,127,.8);width:48px;height:48px;border-radius:50%;z-index:2}button#return-to-top i{color:#fff;font-size:20px}header{background:#fafaff}header .nav-link{letter-spacing:1px}.dropdown-menu{z-index:1021}.navbar-brand,.navbar-nav{position:relative;top:10px;padding:0}main section:first-of-type{margin-top:1rem!important}section h2{text-decoration:none}h2 a{color:#333}div.card-body ol{counter-reset:section;list-style-type:none;padding-left:20px}div.card-body li::before{counter-increment:section;content:counters(section,".") " "}ol.content-nav{padding-left:0!important}div.card-body ol li{color:rgba(0,0,0,.65);font-size:.7rem;font-weight:200}div.card-body ol li a{color:rgba(0,0,0,.65);font-weight:200}div.content-card{max-width:450px}div.content-card .card-header{background:#eef0f2}div.content-card .card-body a,div.content-card .card-body li{color:#007f7f}.card-header{padding:0}button.content-btn{font-size:.8rem;font-weight:300;color:#007f7f}ol.sb-list{list-style-type:none;padding:0}ol.sb-list li:not(:last-child){padding-bottom:5px}ol.sb-list li a{line-height:1;display:inline-block}iframe{width:100%;border:1px solid #888;border-left:5px solid #007f7f}section{overflow:hidden}@media screen and (max-width:767.99px){header{-webkit-box-shadow:none;box-shadow:none}.navbar-brand{margin-right:0}.more-btn{color:#eee}main h1{margin-top:2rem}div.sidebar{padding:.5rem 0 .5rem 1rem;-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);border-top:1px solid rgba(0,0,0,.1);background:#414347;top:-1px}ol.sb-list li{color:#80ffff;font-size:.7rem;font-weight:200}ol.sb-list a{display:block;color:#80ffff;font-weight:200}li#current,li#current a{font-style:italic;color:#eee}h5.sb-topic{font-size:.8rem;color:#eee;font-weight:300}}@media screen and (min-width:380px){html{font-size:87.5%}}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}</style><link rel="preload" href="/html5tech/css/purestyles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/html5tech/css/purestyles.min.css"></noscript><script>!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script><link rel="manifest" href="/html5tech/manifest.json"><script src="/html5tech/js/output.min.js" defer="defer"></script></head><body><button id="return-to-top" title="Return to top"><i style="color:white" class="fas fa-chevron-up"></i></button><header class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row"><a class="navbar-brand" href="index.html"><img src="images/logo-1x.png" srcset="images/logo-1x.png, images/logo-2x.png 2x, images/logo-3x.png 3x, images/logo-4x.png 4x" class="d-inline-block align-top" alt="HTML5Tech logo"></a><div class="flex-row"><ul class="navbar-nav flex-row"><li class="nav-item"><a class="nav-link" href="#">HTML</a></li><li class="nav-item"><a class="nav-link" href="#">CSS</a></li><li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">JAVASCRIPT</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="js-data-related.html">Vanilla</a> <a class="dropdown-item" href="jquery-introduction.html">jQuery</a> <a class="dropdown-item" href="canvas-introduction.html">Canvas API<span class="sr-only">(current)</span></a></div></li></ul></div></header><div class="container-fluid"><div class="row d-flex"><div class="sidebar col-12 col-md-3 col-xl-2"><div class="text-center"><button class="more-btn btn btn-link d-md-none" type="button" data-toggle="collapse" data-target="#sidebarContent" aria-controls="sidebarContent" aria-label="Toggle sidebar navigation">MORE</button></div><nav class="sidebar-links collapse" id="sidebarContent"><div><h5 class="sb-topic">Basic Canvas</h5><ol class="sb-list"><li id="current"><a href="#">Introduction</a></li><li><a href="canvas-pixel-manipulation-and-animations.html">Pixel manipulation &amp; Animations</a></li></ol></div></nav></div><main class="col-12 col-md-9 col-xl-8"><h1 class="text-left">Introduction</h1><hr><div class="card content-card"><div class="card-header" id="headingOne"><button class="content-btn btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne" aria-label="Toggle content" aria-expanded="false">Contents</button></div><div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion"><div class="card-body"><ol class="content-nav"><li><a href="#1">Creating a Canvas</a></li><li><a href="#2">Draw images onto Canvas</a></li><li><a href="#3">Drawing rectangles</a></li><li><a href="#4">Drawing paths</a></li><li><a href="#5">Canvas drawing state</a></li><li><a href="#6">Transformations</a></li><li><a href="#7">Style &amp; colors</a></li></ol></div></div></div><section><h2><a id="1" data-toggle="collapse" role="button" href="#accordion-1" aria-expanded="true" aria-controls="accordion-1">Creating a Canvas</a></h2><hr><div id="accordion-1" class="collapse show"><p>HTML5 Canvas is used to draw graphics on a webpage via scripting in JavaScript. It can be used to draw graphs and animations.</p><p>To create a canvas we just use the &lt;canvas> element as shown below:</p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;!-- Create a fixed-size drawing surface -->
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Description of content
+    &lt;/canvas>
+  &lt;/body>
+&lt;/html></code></pre><p>It's always a good idea to provide fallback content for browsers that do not support canvas. In the example above we have provided a text description of the canvas content but we could have also provided a static image of the dynamically rendered content.</p><p><u>Result</u></p><iframe height="250" src="demos/14.html" title="result"></iframe><p>To use the canvas we have to access it via JavaScript as shown below:</p><pre class="prettyprint linenums"><code>&lt;script>
+  var canvas = document.getElementById('c');
+  // Check for canvas support
+  if (canvas.getContext) {
+    // Access the rendering context
+    var context = canvas.getContext("2d");
+  }
+&lt;/script></code></pre><p>To display something on the canvas, we first need to access the rendering context. In this tutorial, we focus on the 2D rendering context but there are other contexts available. An <code>if</code> statement is included to check support programmatically.</p><p>The 2d rendering context in canvas uses a Cartesian coordinate system, with the origin point (0, 0) at the top left:</p><img src="images/grid.png" alt="2D grid"></div></section><section><h2><a id="2" data-toggle="collapse" role="button" href="#accordion-2" aria-expanded="true" aria-controls="accordion-2">Draw images onto Canvas</a></h2><hr><div id="accordion-2" class="collapse show"><p><mark>Example 1</mark></p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;!-- Create a fixed-size drawing surface -->
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Draw images
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+        // Create image
+        var img = new Image();
+        // Set the image source
+        img.src = '../images/400x400.png';
+        // When the resource is loaded
+        img.onload = function () {
+          console.log('Image has been loaded');
+          // Draw image onto canvas
+          context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        }
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="250" src="demos/15.html" title="result"></iframe><p><mark>Example 2</mark></p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;!-- Create a fixed-size drawing surface -->
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Draw images
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+        // Create image
+        var img = new Image();
+        // Set the image source
+        img.src = '../images/400x400.png';
+        // When the resource is loaded
+        img.onload = function () {
+          console.log('Image has been loaded');
+          // Draw images onto canvas
+          context.drawImage(img, 0, 0, canvas.width/2, canvas.height/2);
+          context.drawImage(img, canvas.width/2, 0, canvas.width/2, canvas.height/2);
+          context.drawImage(img, 0, canvas.height/2, canvas.width/2, canvas.height/2);
+          context.drawImage(img, canvas.width/2, canvas.height/2, canvas.width/2, canvas.height/2);
+        }
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="250" src="demos/16.html" title="result"></iframe></div></section><section><h2><a id="3" data-toggle="collapse" role="button" href="#accordion-3" aria-expanded="true" aria-controls="accordion-3">Drawing rectangles</a></h2><hr><div id="accordion-3" class="collapse show"><dl><dt><code>fillRect(<i>x</i>, <i>y</i>, <i>width</i>, <i>height</i>)</code></dt><dd>Draw a filled rectangle.</dd><dt><code>strokeRect(<i>x</i>, <i>y</i>, <i>width</i>, <i>height</i>)</code></dt><dd>Draw a rectangular outline.</dd><dt><code>clearRect(<i>x</i>, <i>y</i>, <i>width</i>, <i>height</i>)</code></dt><dd>Clear the specified rectangular area, making it fully transparent.</dd><dt><code><i>context</i>.fillStyle = <i>color</i>;</code></dt><dt><code><i>context</i>.fillStyle = <i>gradient</i>;</code></dt><dt><code><i>context</i>.fillStyle = <i>pattern</i>;</code></dt><dd>Specify the color or style to use inside shapes.</dd><dt><code><i>context</i>.strokeStyle = <i>color</i>;</code></dt><dt><code><i>context</i>.strokeStyle = <i>gradient</i>;</code></dt><dt><code><i>context</i>.strokeStyle = <i>pattern</i>;</code></dt><dd>Specify the color or style to use for the lines around shapes.</dd></dl><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Rectangles using fillRect() &amp; strokeRect()
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+        // Specify the color or style to use inside shapes
+        context.fillStyle = "#007f7f";
+        // Draw a filled rectangle
+        context.fillRect(0, 0, 200, 200);
+        // Clear the specified rectangular area (left eye)
+        context.clearRect(35, 35, 50, 50);
+        // Draw a rectangular outline (left eye)
+        context.strokeRect(45, 45, 30, 30);
+        // Clear the specified rectangular area (right eye)
+        context.clearRect(115, 35, 50, 50);
+        // Draw a rectangular outline (right eye)
+        context.strokeRect(125, 45, 30, 30);
+        // Clear the specified rectangular area (mouth)
+        context.clearRect(35, 140, 130, 30);
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><div><p class="info align-middle"><strong>Note:</strong> To erase the entire canvas, you could call: <code>context.clearRect(0, 0, c.width, c.height);</code></p></div><p><u>Result</u></p><iframe height="250" src="demos/17.html" title="result"></iframe></div></section><section><h2><a id="4" data-toggle="collapse" role="button" href="#accordion-4" aria-expanded="true" aria-controls="accordion-4">Drawing paths</a></h2><hr><div id="accordion-4" class="collapse show"><dl><dt><code><i>context</i>.beginPath()</code></dt><dd>Create a new path for future drawing commands.</dd><dt><code><i>context</i>.closePath()</code></dt><dd>Create a path from the current point back to the starting point.</dd><dt><code><i>context</i>.moveTo()</code></dt><dd>Move the starting point of a new sub-path to the (x, y) coordinates.</dd><dt><code><i>context</i>.lineTo()</code></dt><dd>Connect the last point in the sub-path to the x, y coordinates with a straight line.</dd><dt><code><i>context</i>.arc(<i>x</i>, <i>y</i>, <i>radius</i>, <i>startAngle</i>, <i>endAngle</i> [, <i>anticlockwise</i>]);</code></dt><dd>Add an arc to the path which is centered at (x, y) position with radius r starting at startAngle and ending at endAngle. Angles area measured in radians (radians = (PI/180)*degrees).</dd><dt><code><i>context</i>.fill()</code></dt><dd>Draw a solid shape by filling the path's content area.</dd><dt><code><i>context</i>.stroke()</code></dt><dd>Draw the shape by stroking its outline.</dd></dl><p><mark>Example 1</mark></p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Rectangles using paths
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+        // Specify the color or style to use inside shapes
+        context.fillStyle = "#007f7f";
+
+        // Create a new path
+        context.beginPath();
+        // Path
+        context.moveTo(10, 10);
+        context.lineTo(110, 10);
+        context.lineTo(110, 60);
+        context.lineTo(10, 60);
+        // Create a path from the current point back to the starting point from (10, 60) to (10, 10)
+        context.closePath();
+        // Draw
+        context.stroke();
+
+        // Create a new path
+        context.beginPath();
+        // Path
+        context.moveTo(10, 70);
+        context.lineTo(110, 70);
+        context.lineTo(110, 120);
+        context.lineTo(10, 120);
+        // Create a path from the current point back to the starting point from (10, 120) to (10, 70)
+        context.closePath();
+        // Draw
+        context.fill();
+
+        // Create a new path
+        context.beginPath();
+        // Clockwise arc (default)
+        context.arc(40, 160, 30, 0, Math.PI);
+        // Draw semicircle
+        context.fill();
+        // Anticlockwise arc
+        var anticlockwise = true;
+        context.arc(100, 160, 30, 0, Math.PI, anticlockwise);
+        // Draw semicircle
+        context.stroke();
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="250" src="demos/18.html" title="result"></iframe><p><mark>Example 2</mark></p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Smiley face using arc()
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+        // Specify the color or style to use inside shapes
+        context.fillStyle = "#007f7f";
+
+        // Create a new path
+        context.beginPath();
+        // Head
+        context.arc(100, 100, 75, 0, Math.PI * 2);
+        context.moveTo(150, 100);
+        // Mouth
+        context.arc(100, 100, 50, 0, Math.PI);
+        context.moveTo(140, 80);
+        // Right eye
+        context.arc(130, 80, 10, 0, Math.PI * 2);
+        context.moveTo(80, 80);
+        // Left eye
+        context.arc(70, 80, 10, 0, Math.PI * 2);
+        context.stroke();
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="250" src="demos/19.html" title="result"></iframe></div></section><section><h2><a id="5" data-toggle="collapse" role="button" href="#accordion-5" aria-expanded="true" aria-controls="accordion-5">Canvas drawing state</a></h2><hr><div id="accordion-5" class="collapse show"><dl><dt><code><i>context</i>.save()</code></dt><dd>Save the entire state of the canvas.</dd><dt><code><i>context</i>.restore()</code></dt><dd>Restore the most recently saved canvas state.</dd></dl><p>Canvas drawing states are stored on a stack. A drawing state consists of <code>translate</code>, <code>rotate</code>, <code>scale</code>, <code>strokeStyle</code>, <code>fillStyle</code>, <code>globalAlpha</code>, <code>lineWidth</code>, <code>lineCap</code>, <code>lineJoin</code>, <code>miterLimit</code>, <code>lineDashOffset</code>, <code>shadowOffsetX</code>, <code>shadowOffsetY</code>, <code>shadowBlur</code>, <code>shadowColor</code>, <code>globalCompositeOperation</code>, <code>font</code>, <code>textAlign</code>, <code>textBaseline</code>, <code>direction</code>, <code>imageSmoothingEnabled</code>.</p><p><mark>Example</mark></p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      save() and restore()
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+
+        // Specify the color or style to use inside shapes.
+        context.fillStyle = "blue";
+        // Draw a filled rectangle.
+        context.fillRect(0,0,50,50);
+
+        // Specify the color or style to use inside shapes.
+        context.fillStyle = "green"
+        // Draw a filled rectangle.
+        context.fillRect(50,50,50,50);
+
+        // Specify the color or style to use inside shapes.
+        context.fillStyle = "blue"
+        // Draw a filled rectangle.
+        context.fillRect(100,100,50,50);
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>HTML (Save &amp; restore state)</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      save() and restore()
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+
+        // Specify the color or style to use inside shapes.
+        context.fillStyle = "blue";
+        // Draw a filled rectangle.
+        context.fillRect(0,0,50,50);
+        // Save state with blue fill
+        context.save();
+
+        // Specify the color or style to use inside shapes.
+        context.fillStyle = "green"
+        // Draw a filled rectangle.
+        context.fillRect(50,50,50,50);
+
+        // Restore to blue fill
+        context.restore();
+        // Draw a filled rectangle.
+        context.fillRect(100,100,50,50);
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="250" src="demos/20.html" title="result"></iframe></div></section><section><h2><a id="6" data-toggle="collapse" role="button" href="#accordion-6" aria-expanded="true" aria-controls="accordion-6">Transformations</a></h2><hr><div id="accordion-6" class="collapse show"><dl><dt><code><i>context</i>.scale(<i>x</i>, <i>y</i>)</code></dt><dd>Scale the canvas horizontally and vertically by a given factor.</dd><dt><code><i>context</i>.translate(<i>x</i>, <i>y</i>)</code></dt><dd>Move the canvas and its origin on the grid.</dd><dt><code><i>context</i>.rotate(<i>angle</i>)</code></dt><dd>Rotate the canvas clockwise around the current origin by the angle number of radians.</dd></dl><div><p class="warning align-middle"><strong>Note:</strong> Transformations apply on all subsequent objects unless the drawing state is restored. It's a good idea to save the canvas state before doing any transformations.</p></div><p><mark>Example</mark></p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Transformations
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+
+        // Save state before doing any transformations
+        context.save();
+        // Specify the color or style to use inside shapes.
+        context.fillStyle = "blue";
+        // Scale (1 horizontal unit = 2px, 1 vertical unit = 4px)
+        context.scale(2, 4);
+        // Draw a filled rectangle: pos(20px,40px), 40px(w)x80px(h)
+        context.fillRect(10,10,20,20);
+
+        // Restore previous state (undo scale, undo fillStyle)
+        context.restore();
+        // Save state before doing any transformations
+        context.save();
+        // Specify the color or style to use for the lines around shapes.
+        context.strokeStyle = "red";
+        // Move: origin(100px,100px)
+        context.translate(100,100);
+        // Draw a rectangular outline: pos(0,0), 20px(w)x20px(h)
+        context.strokeRect(0,0,20,20);
+
+        // Restore previous state (undo translate, undo strokeStyle)
+        context.restore();
+        // Save state before doing any transformations
+        context.save();
+        // Specify the color or style to use inside shapes.
+        context.fillStyle = "green";
+        // Move: origin((150px, 150px), origin is the rotation center
+        context.translate(150,150);
+        // Rotate 45 degrees clockwise
+        context.rotate(Math.PI/4);
+        // Draw a filled rectangle: pos(150px,150px), 30px(w)x30px(h)
+        context.fillRect(0,0,30,30);
+
+        // Restore previous state (undo translate, undo strokeStyle)
+        context.restore();
+        // Save state before doing any transformations
+        context.save();
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="250" src="demos/21.html" title="result"></iframe></div></section><section><h2><a id="7" data-toggle="collapse" role="button" href="#accordion-7" aria-expanded="true" aria-controls="accordion-7">Style &amp; colors</a></h2><hr><div id="accordion-7" class="collapse show"><h3>Colors</h3><dl><dt><code><i>context</i>.fillStyle = <i>color</i>;</code></dt><dd>Specify the color or style to use inside shapes.</dd><dt><code><i>context</i>.strokeStyle = <i>color</i>;</code></dt><dd>Specify the color or style to use for the lines around shapes.</dd></dl><p>Just like CSS, there are several ways to specify color:</p><pre class="prettyprint linenums"><code>context.fillStyle = 'blue';
+context.fillStyle = '#0000ff';
+context.fillStyle = 'rgb(0,0,255)';
+context.fillStyle = 'rgba(0,0,255,1)'</code></pre><h3>Transparency</h3><dl><dt><code><i>context</i>.globalAlpha = <i>transparencyValue</i></code></dt><dd>Apply the specified transparency value to all future shapes drawn on the canvas. 0.0 means full transparency and 1.0 means full opacity. The default value is 1.0.</dd><dt><code><i>context</i>.strokeStyle = 'rgba(255, 0, 0, 0.5)';</code></dt><dt><code><i>context</i>.fillStyle = 'rgba(255, 0, 0, 0.5)';</code></dt><dd>Assing transparent colors to stroke and fill style</dd></dl><h3>Line styles</h3><dl><dt><code><i>context</i>.lineWidth = <i>value</i></code></dt><dd>Sets the width of lines drawn in the future.</dd><dt><code><i>context</i>.lineCap = <i>type</i></code></dt><dd>Sets the appearance of the ends of lines.</dd></dl><h3>Examples</h3><p><mark>Example 1</mark></p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Grid of rectangles with a random color
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+
+        // Expected output: 0, 1, 2, ..., max-1
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+
+        // Save state before doing any transformations
+        context.save();
+
+        // Grid of rectangles with a random color
+        for (let i = 0; i &lt; 10; i++) {
+          for (let j = 0; j &lt; 10; j++) {
+            context.fillStyle = 'rgb(' + getRandomInt(256) + ',' + getRandomInt(256) + ',' + getRandomInt(256) + ')';
+            context.fillRect(j*20,i*20,20,20);
+          }
+        }
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="250" src="demos/22.html" title="result"></iframe><p><mark>Example 2</mark></p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Shades of gray
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+
+        // Save state before doing any transformations
+        context.save();
+
+        // Shades of gray
+        var transparencyValue = 0.1;
+        for (let i = 0; i &lt; 10; i++) {
+          context.globalAlpha = transparencyValue;
+          context.fillRect(i*20,0,20,200);
+          transparencyValue += 0.1;
+        }
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="250" src="demos/23.html" title="result"></iframe><p><mark>Example 3</mark></p><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;h2>&lt;u>Crisp even-width lines&lt;/u>&lt;/h2>
+    &lt;canvas style="display:block;" id="c1" width="200", height="200" style="border:1px solid #000;">
+      Lines with increasing line widths
+    &lt;/canvas>
+    &lt;h2>&lt;u>Crisp odd-width lines&lt;/u>&lt;/h2>
+    &lt;canvas style="display:block;" id="c2" width="200", height="200" style="border:1px solid #000;">
+      Lines with increasing line widths
+    &lt;/canvas>
+    &lt;h2>&lt;u>Crisp lines&lt;/u>&lt;/h2>
+    &lt;canvas style="display:block;" id="c3" width="200", height="200" style="border:1px solid #000;">
+      Lines with increasing line widths
+    &lt;/canvas>
+    &lt;script>
+      var canvas1 = document.getElementById('c1');
+      var canvas2 = document.getElementById('c2');
+      var canvas3 = document.getElementById('c3');
+
+      // Check for canvas support
+      if (canvas1.getContext) {
+        // Access the rendering contexts
+        var context1 = canvas1.getContext('2d');
+        var context2 = canvas2.getContext('2d');
+        var context3 = canvas3.getContext('2d');
+
+        // Save states before doing any transformations
+        context1.save();
+        context2.save();
+        context3.save();
+
+        // Draw lines with increasing line widths
+        for (let i = 0; i &lt; 10; i++) {
+
+          // Set the current line thickness
+          context1.lineWidth = i + 1;
+          context2.lineWidth = i + 1;
+          context3.lineWidth = i + 1;
+
+          // Create a new path
+          context1.beginPath();
+          context2.beginPath();
+          context3.beginPath();
+
+          // Canvas 1 (only the even-width lines look crisp)
+          context1.moveTo(i*20+10,10);
+          context1.lineTo(i*20+10,190);
+
+          // Canvas 2 (only the odd-width lines look crisp)
+          context2.moveTo(i*20+10.5,10);
+          context2.lineTo(i*20+10.5,190);
+
+          // Canvas 3 (every line looks crisp)
+          // even-width lines
+          if (context3.lineWidth % 2 === 0) {
+            context3.moveTo(i*20+10,10);
+            context3.lineTo(i*20+10,190);
+          }
+          // odd-width lines
+          else {
+            context3.moveTo(i*20+10.5,10);
+            context3.lineTo(i*20+10.5,190);
+          }
+
+          // Draw
+          context1.stroke();
+          context2.stroke();
+          context3.stroke();
+        }
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="820" src="demos/24.html" title="result"></iframe></div></section><section><h2><a id="8" data-toggle="collapse" role="button" href="#accordion-8" aria-expanded="true" aria-controls="accordion-8">Text</a></h2><hr><div id="accordion-8" class="collapse show"><h3>Drawing</h3><dl><dt><code><i>context</i>.fillText(<i>text</i>, <i>x</i>, <i>y</i> [, <i>maxWidth</i>])</code></dt><dd>Fill the specified text at the given position.</dd><dt><code><i>context</i>.strokeText(<i>text</i>, <i>x</i>, <i>y</i> [, <i>maxWidth</i>])</code></dt><dd>Stroke the specified text at the given position.</dd></dl><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="200", height="200" style="border:1px solid #000;">
+      Drawing text
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+
+        // Set text style
+        context.font = '30px sans-serif';
+        // Draw stroke text
+        context.strokeText('Hello World', 10, 30);
+        // Set text style
+        context.font = '30px serif';
+        // Draw fill text
+        context.fillText('Hello World', 10, 60);
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="250" src="demos/25.html" title="result"></iframe><h3>Styling</h3><dl><dt><code>font = <i>value</i></code></dt><dd>Set text style.</dd><dt><code>textAlign = <i>value</i></code></dt><dd>Set text alignment. Beware that the alignment is based on the <i>x</i> value of the <i>fillText()</i> method.</dd><dt><code>textBaseline = <i>value</i></code></dt><dd>Set baseline alignment</dd><dt><code>direction = <i>value</i></code></dt><dd>Set directionality</dd></dl><p><u>HTML</u></p><pre class="prettyprint linenums"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;canvas id="c" width="260", height="450" style="border:1px solid #000;">
+      Styling text
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      // Check for canvas support
+      if (canvas.getContext) {
+        // Access the rendering context
+        var context = canvas.getContext('2d');
+
+        /* TEXT STYLING EXAMPLE */
+
+        // Specify the color to use for the lines around shapes.
+        context.strokeStyle = '#007f7f';
+        // Set text style
+        context.font = 'italic small-caps bold 30px Arial, Helvetica, sans-serif';
+        // Set text alignment
+        context.textAlign = 'center';
+        // Draw stroke text
+        context.strokeText('Lorem ipsum', canvas.width / 2, 30);
+
+        /* TEXT ALIGNMENT EXAMPLE */
+
+        context.strokeStyle = 'red';
+        // Start a new path
+        context.beginPath();
+        // Move the starting point of a new sub-path to the (x, y) coordinates.
+        context.moveTo(canvas.width / 2, 50);
+        // Connect the last point in the sub-path to the x, y coordinates with a straight line.
+        context.lineTo(canvas.width / 2, 180);
+        // Draw the shape by stroking its outline.
+        context.stroke();
+
+        context.font = '20px Arial, Helvetica, sans-serif';
+        var alignments = ['left', 'center', 'right', 'start', 'end'];
+        var startX = canvas.width / 2;
+        var startY = 80;
+        var margin = 20;
+        alignments.forEach(function (alignment) {
+          context.textAlign = alignment;
+          // Draw fill text
+          context.fillText(alignment, startX, startY);
+          startY += margin;
+        });
+
+        /* BASELINE ALIGNMENT EXAMPLE */
+
+        // Default text alignment
+        context.textAlign = 'start';
+
+        var baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
+        startX = 10;
+        startY = 200;
+        margin = 40;
+        baselines.forEach(function (baseline) {
+          // Set baseline alignment
+          context.textBaseline = baseline;
+          context.beginPath();
+          context.moveTo(startX, startY);
+          context.lineTo(canvas.width - startX, startY);
+          context.stroke();
+          context.fillText('Lorem ipsum (' + baseline + ')', startX, startY);
+          startY += margin;
+        });
+
+        /* ANOTHER STYLING EXAMPLE */
+
+        context.font = '30px Impact';
+        context.textAlign = 'center';
+
+        context.strokeStyle = 'black';
+        // Sets the width of lines drawn in the future.
+        context.lineWidth = 3;
+        context.strokeText('LOREM IPSUM', canvas.width / 2, startY);
+
+        context.fillStyle = 'white';
+        context.fillText('LOREM IPSUM', canvas.width / 2, startY);
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre><p><u>Result</u></p><iframe height="475" src="demos/26.html" title="result"></iframe></div></section></main><div class="ad-space d-none d-xl-block col-xl-2"><div class="text-center"><h5>Ad1</h5><img src="images/150x100.png" alt="advertisement"><h5>Ad2</h5><img src="images/150x100.png" alt="advertisement"><h5>Ad3</h5><img src="images/150x100.png" alt="advertisement"><h5>Ad4</h5><img src="images/150x100.png" alt="advertisement"><h5>Ad5</h5><img src="images/150x100.png" alt="advertisement"><h5>Ad6</h5><img src="images/150x100.png" alt="advertisement"></div></div></div></div><footer class="text-center text-muted"><div class="license"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img width="100" alt="CC BY-SA 4.0 License" style="border-width:0" src="images/cc-by-sa-4.svg"></a><br>Documentation is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.</div><div><a rel="license" href="https://www.gnu.org/licenses/agpl-3.0"><img width="80" alt="GNU AGPLv3 License" style="border-width:0" src="images/agpl-v3.svg"></a><br><a href="https://github.com/PictureElement/html5tech">Source code</a> is licensed under the <a rel="license" href="https://www.gnu.org/licenses/agpl-3.0">AGPL v3 License</a>.</div></div><div class="copyright">Design &amp; development by <a href="https://pictureelement.github.io/portfolio-2">PictureElement</a> (Marios Sofokleous).</div></footer></body></html>
