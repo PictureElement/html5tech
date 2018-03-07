@@ -20,6 +20,7 @@ mkdir dist/js
 cp -r src/demos dist/
 cp -r src/fonts dist/
 cp -r src/images dist/
+cp -r src/videos dist/
 cp src/manifest.json dist/
 cp src/sw.js dist/
 
