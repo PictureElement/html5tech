@@ -73,7 +73,7 @@ var filesToCache = [
   '/html5tech/images/logo-3x.png',
   '/html5tech/images/logo-4x.png',
   '/html5tech/images/grid.png',
-  '/html5tech/images/image-1.png',
+  '/html5tech/images/image-1.jpg',
   '/html5tech/videos/people.mp4',
   '/html5tech/fonts/audiowide-v6-latin-regular.eot',
   '/html5tech/fonts/audiowide-v6-latin-regular.woff2',
