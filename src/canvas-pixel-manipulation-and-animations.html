@@ -81,13 +81,20 @@
             <div id='collapseOne' class='collapse' role='tabpanel' aria-labelledby='headingOne' data-parent='#accordion'>
               <div class='card-body'>
                 <ol class='content-nav'>
-                  <li><a href='#1'></a></li>
-                  <li><a href='#2'></a></li>
-                  <li><a href='#3'></a></li>
-                  <li><a href='#4'></a></li>
-                  <li><a href='#5'></a></li>
-                  <li><a href='#6'></a></li>
-                  <li><a href='#7'></a></li>
+                  <li>
+                    <a href='#1'>The ImageData interface</a>
+                    <ol>
+                      <li><a href='#1-1'>Introduction</a></li>
+                      <li><a href='#1-2'>Pixel manipulation</a></li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href='#2'>requestAnimationFrame()</a>
+                    <ol>
+                      <li><a href='#2-1'>Introduction</a></li>
+                      <li><a href='#2-2'>Examples</a></li>
+                    </ol>
+                  </li>
                 </ol>
               </div>
             </div>
@@ -101,7 +108,7 @@
             </h2>
             <hr>
             <div id='accordion-1' class='collapse show'>
-              <h3>Introduction</h3>
+              <h3 id="1-1">Introduction</h3>
               <p>
                 The <code>ImageData</code> interface represents the pixel data
                 on the <code>&lt;canvas></code> element.
@@ -141,8 +148,8 @@
                   [r<sub>0</sub>, g<sub>0</sub>, b<sub>0</sub>, a<sub>0</sub>, r<sub>1</sub>, g<sub>1</sub>, b<sub>1</sub>, a<sub>1</sub>, ..., r<sub>n</sub>, g<sub>n</sub>, b<sub>n</sub>, a<sub>n</sub>]
                 </p>
               </div>
-              <h3>Pixel manipulation</h3>
-              <h4>Example 1</h4>
+              <h3 id="1-2">Pixel manipulation</h3>
+              <p><mark>Example 1</mark></p>
               <p>
                 This program creates a 2D Canvas and uses
                 <code><i>ctx</i>.getImageData</code> to retrieve the
@@ -193,7 +200,7 @@
 &lt;/html></code></pre>
               <p><u>Result</u></p>
               <iframe height="250" src="demos/27.html" title="result"></iframe>
-              <h4>Example 2</h4>
+              <p><mark>Example 2</mark></p>
               <p>
                 This program demonstrates the process of converting images to
                 grayscale and the process of color-inversion using simple
@@ -323,10 +330,10 @@
               <iframe height="260" src="demos/28.html" title="result"></iframe>
               <div>
                 <p class="info align-middle">
-                  <strong>Note:</strong> For more info on image processing 
-                  please visit 
-                  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">MDN</a> 
-                  and 
+                  <strong>Note:</strong> For more info on image processing
+                  please visit
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">MDN</a>
+                  and
                   <a href="http://www.tannerhelland.com/programming-directory/">Tanner Helland</a>.
                 </p>
               </div>
@@ -336,84 +343,204 @@
           <section>
             <h2>
               <a id='2' data-toggle='collapse' role='button' href='#accordion-2' aria-expanded='true' aria-controls='accordion-2'>
-                Section 2
+                requestAnimationFrame()
               </a>
             </h2>
             <hr>
             <div id='accordion-2' class='collapse show'>
+              <h3 id="2-1">Introduction</h3>
+              <p>
+        				Traditionally to create an animation in JavaScript, we relied
+        				on <code>setTimeout()</code> called recursively or
+                <code>setInterval()</code> to repeatedly execute some code to
+                make changes to an element frame by frame, such as once every 50
+                milliseconds. The delay inside these functions is often not
+                honored due to changes in user system resources at the time,
+                leading to inconsistent delay intervals between animation
+                frames.
+        			</p>
+              <p>
+                The <code>window.requestAnimationFrame()</code> method tells the
+                browser that you wish to perform an animation and requests that
+                the browser call a specified function to update an animation
+                before the next repaint.
+              </p>
+              <p>The <code>window.requestAnimationFrame()</code> method is:</p>
+        			<ol>
+        				<li>Synchronized with browser repaint</li>
+        				<li>Optimized for animations</li>
+        				<li>Runs as fast as the screen will allow</li>
+        				<li>Battery Saver</li>
+        			</ol>
+        			<p>
+        				Is recommended not to use use <code>setInterval()</code> or
+                <code>setTimeOut()</code> for animations, use
+                <code>requestAnimationFrame()</code> instead.
+        			</p>
+              <h3 id="2-2">Examples</h3>
+              <p><mark>Example 1</mark></p>
+              <p>
+                This example demonstrates a simple animation loop using
+                <code>window.requestAnimationFrame()</code>.
+              </p>
+              <p><u>HTML</u></p>
+              <pre class='prettyprint linenums'><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      div {
+        overflow: hidden;
+      }
+      p {
+        /* Relative positioning moves an element RELATIVE to its original position */
+        position: relative;
+        border: none;
+        border-radius: .25rem;
+        background: blue;
+        color: white;
+        height: 50px;
+        text-align: center;
+      }
+    &lt;/style>
+  &lt;/head>
+  &lt;body>
+    &lt;div id="area">
+      &lt;p id="box">&lt;/p>
+    &lt;/div>
+    &lt;script>
+      // Select &lt;p> element
+      var box = document.getElementById("box");
+      // Set the width of the &lt;p> element
+      box.style.width = "10%";
+      // Set the width of the &lt;div> element
+      document.getElementById("area").style.width = "100%";
+      // &lt;p> is just outside the left side of the &lt;div> element
+      var currentPos = -10;
 
-            </div>
-          </section>
-          <!-- SECTION 3 -->
-          <section>
-            <h2>
-              <a id='3' data-toggle='collapse' role='button' href='#accordion-3' aria-expanded='true' aria-controls='accordion-3'>
-                Section 3
-              </a>
-            </h2>
-            <hr>
-            <div id='accordion-3' class='collapse show'>
+      // Animation loop (recursive)
+      function animationLoop() {
+        box.style.left = currentPos + "%";
+        currentPos++;
+        // &lt;p> is just outside the right side of the &lt;div> element
+        if(currentPos === 100) {
+          currentPos = -10;
+        }
+        window.requestAnimationFrame(animationLoop);
+      }
 
-            </div>
-          </section>
-          <!-- SECTION 4 -->
-          <section>
-            <h2>
-              <a id='4' data-toggle='collapse' role='button' href='#accordion-4' aria-expanded='true' aria-controls='accordion-4'>
-                Section 4
-              </a>
-            </h2>
-            <hr>
-            <div id='accordion-4' class='collapse show'>
+      animationLoop();
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre>
+              <p><u>Result</u></p>
+              <iframe height="84" src="demos/29.html" title="result"></iframe>
+              <p><mark>Example 2</mark></p>
+              <p>
+                This example shows how we can play videos on canvas and
+                specifically how to play a video in sync with the source video.
+              </p>
+              <p>
+                <code>context.drawImage()</code> is used to draw each video
+                frame onto the canvas. The method is called recursively for each
+                frame.
+              </p>
+              <p><u>HTML</u></p>
+              <pre class='prettyprint linenums'><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;style>
+      canvas {
+        max-width: 200px;
+        border:1px solid #000;
+        display: block;
+      }
+    &lt;/style>
+  &lt;/head>
+  &lt;body>
+    &lt;video id="v" controls loop width="200" height="200" src="../videos/people.mp4">
+      Sorry, your browser doesn't support embedded videos!
+    &lt;/video>
+    &lt;canvas id="c">
+      Playing video in canvas.
+    &lt;/canvas>
+    &lt;script>
+      var canvas = document.getElementById('c');
+      var video = document.getElementById('v');
 
-            </div>
-          </section>
-          <!-- SECTION 5 -->
-          <section>
-            <h2>
-              <a id='5' data-toggle='collapse' role='button' href='#accordion-5' aria-expanded='true' aria-controls='accordion-5'>
-                Section 5
-              </a>
-            </h2>
-            <hr>
-            <div id='accordion-5' class='collapse show'>
+      // Check for canvas support
+      if (canvas.getContext) {
+        // Access the rendering context
+        var ctx = canvas.getContext("2d");
 
-            </div>
-          </section>
-          <!-- SECTION 6 -->
-          <section>
-            <h2>
-              <a id='6' data-toggle='collapse' role='button' href='#accordion-6' aria-expanded='true' aria-controls='accordion-6'>
-                Section 6
-              </a>
-            </h2>
-            <hr>
-            <div id='accordion-6' class='collapse show'>
+        // The loadedmetadata event is fired when the metadata has been loaded.
+        video.addEventListener("loadedmetadata", function() {
+          canvas.width = this.videoWidth;
+          canvas.height = this.videoHeight;
+        });
 
-            </div>
-          </section>
-          <!-- SECTION 7 -->
-          <section>
-            <h2>
-              <a id='7' data-toggle='collapse' role='button' href='#accordion-7' aria-expanded='true' aria-controls='accordion-7'>
-                Section 7
-              </a>
-            </h2>
-            <hr>
-            <div id='accordion-7' class='collapse show'>
+        // Draw image onto canvas
+        function draw () {
+          ctx.drawImage(video, 0, 0);
+          // Tell the browser that you wish to perform an animation and request
+          // that the browser calls the specified function to update an
+          // animation before the next repaint.
+          window.requestAnimationFrame(draw)
+        }
 
-            </div>
-          </section>
-          <!-- SECTION 8 -->
-          <section>
-            <h2>
-              <a id='8' data-toggle='collapse' role='button' href='#accordion-8' aria-expanded='true' aria-controls='accordion-8'>
-                Section 8
-              </a>
-            </h2>
-            <hr>
-            <div id='accordion-8' class='collapse show'>
+        // The play event is fired when playback has begun.
+        video.addEventListener("play", function() {
+          draw();
+        });
+      }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre>
+              <p><u>Result</u></p>
+              <iframe height="380" src="demos/30.html" title="result"></iframe>
+              <div>
+                <p class="danger align-middle">
+                  <strong>DO NOT</strong> use <code>setInterval()</code> or
+                  <code>setTimeOut()</code> for animations, use
+                  <code>requestAnimationFrame()</code> instead.
+                  <code>requestAnimationFrame()</code> only sends a request if
+                  the last frame is already finished drawing.
+                  With <code>setInterval()</code> and <code>setTimeOut()</code>,
+                  If the drawing takes a really long time to finish a single
+                  frame, and the interval is too small it can cause the browser
+                  to slow down, drop frames or crash.
+                </p>
+              </div>
+              <div>
+                <p class="info align-middle">
+                  This example can be extended to process videos in real-time
+                  applying image processing techniques on each video frame.
+                </p>
+              </div>
+              <p><mark>Example 3</mark></p>
+              <p>
+                <code>requestAnimationFrame()</code> is also used in game loops
+                and ensures that game programs run smoothly. The game loop is
+                the overall flow control for the game program. It's a sequence
+                of events that run continuously. A simple game loop may look
+                like the following:
+              </p>
+              <p><u>JavaScript</u></p>
+              <pre class='prettyprint linenums'><code>;(function () {
+  function gameLoop() {
+    // Run code frame-by-frame
+    window.requestAnimationFrame(gameLoop);
+    // Your game loop contents
+    processInput();
+    moveObjectsAndEnemies();
+    drawAllTheThings();
+  }
 
+  gameLoop(); // Start the cycle
+})();</code></pre>
             </div>
           </section>
         </main>

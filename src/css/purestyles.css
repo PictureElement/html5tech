@@ -5931,25 +5931,24 @@ main {
 }
 
 .jumbotron {
-  background: #eff1f5;
   -webkit-box-shadow: 0 0.4rem 0.8rem -0.1rem rgba(0,32,128,.1), 0 0 0 1px #f0f2f7;
   box-shadow: 0 0.4rem 0.8rem -0.1rem rgba(0,32,128,.1), 0 0 0 1px #f0f2f7;
 }
 
 .jumbotron-1,.jumbotron-5 {
-  background: #f06529;
+  background: rgba(240,101,41,.7);
 }
 
 .jumbotron-2 {
-  background: #2965f1;
+  background: rgba(41,101,241,.7);
 }
 
 .jumbotron-3 {
-  background: #f7df1e;
+  background: rgba(247,223,30,.7);
 }
 
 .jumbotron-4 {
-  background: #7acef4;
+  background: rgba(122,206,244,.7);
 }
 
 main section:first-of-type {
